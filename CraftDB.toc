@@ -1,0 +1,14 @@
+## Interface: 20504
+## Title: CraftDB
+## Notes: Comprehensive crafting recipe database for WoW addons
+## Author: kaldown
+## Version: 0.1.0
+## SavedVariables: CraftDBDB
+
+# Core
+Core/Constants.lua
+Core/Init.lua
+
+# Data - TBC
+Data/TBC/FirstAid/Recipes.lua
+Data/TBC/Cooking/Recipes.lua
