@@ -13,9 +13,8 @@
 *.swo
 *~
 
-# Design docs (not distributed)
-docs/plans/
-docs/agents/
+# Private docs (ideas, plans, agents)
+docs/
 
 # Build artifacts
 *.zip

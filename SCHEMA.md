@@ -228,10 +228,6 @@ local function FindOrangeRecipes(professionKey, skillLevel)
 end
 ```
 
-## Adding New Data
-
-See `docs/agents/CONTRIBUTING.md` for data contribution guidelines.
-
 ## Version History
 
 - **0.1.1** - Enhanced source data with NPC IDs, locations, and faction info (Issue #1)
