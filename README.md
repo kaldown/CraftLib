@@ -17,6 +17,7 @@ Comprehensive crafting recipe database and API for World of Warcraft addon devel
 |------------|--------|
 | Cooking | Complete |
 | First Aid | Complete |
+| Mining | Complete (smelting) |
 | Alchemy | In Progress |
 | Blacksmithing | In Progress |
 | Enchanting | In Progress |

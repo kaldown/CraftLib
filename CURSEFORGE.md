@@ -15,6 +15,7 @@ CraftLib is a standalone library addon providing a complete crafting recipe data
 |------------|--------|
 | Cooking | Complete |
 | First Aid | Complete |
+| Mining | Complete (smelting) |
 | Alchemy | In Progress |
 | Blacksmithing | In Progress |
 | Enchanting | In Progress |
