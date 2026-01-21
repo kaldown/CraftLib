@@ -13,8 +13,11 @@
 *.swo
 *~
 
-# Private docs (ideas, plans, agents)
-docs/
+# Agent-specific files (local context only)
+docs/agents/
+
+# Plans are local working documents
+docs/plans/
 
 # Build artifacts
 *.zip
