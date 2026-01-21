@@ -2,6 +2,8 @@
 
 Comprehensive crafting recipe database and API for World of Warcraft addon developers.
 
+**Download:** [CurseForge](https://www.curseforge.com/wow/addons/craftlib)
+
 ## Features
 
 - Complete recipe data with skill levels, reagents, and difficulty thresholds
