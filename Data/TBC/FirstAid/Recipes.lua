@@ -1,5 +1,6 @@
 -- Data/TBC/FirstAid/Recipes.lua
 -- First Aid recipes for TBC Classic (includes Vanilla recipes)
+-- Updated: 2026-01-21 - Fixed source data per issue #1
 local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
@@ -14,7 +15,10 @@ local recipes = {
         reagents = {
             { itemId = 2589, name = "Linen Cloth", count = 1 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any First Aid Trainer",
+        },
         expansion = C.EXPANSION.VANILLA,
     },
     -- Heavy Linen Bandage (Vanilla)
@@ -27,7 +31,10 @@ local recipes = {
         reagents = {
             { itemId = 2589, name = "Linen Cloth", count = 2 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any First Aid Trainer",
+        },
         expansion = C.EXPANSION.VANILLA,
     },
     -- Wool Bandage (Vanilla)
@@ -40,7 +47,10 @@ local recipes = {
         reagents = {
             { itemId = 2592, name = "Wool Cloth", count = 1 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any First Aid Trainer",
+        },
         expansion = C.EXPANSION.VANILLA,
     },
     -- Heavy Wool Bandage (Vanilla)
@@ -53,7 +63,10 @@ local recipes = {
         reagents = {
             { itemId = 2592, name = "Wool Cloth", count = 2 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any First Aid Trainer",
+        },
         expansion = C.EXPANSION.VANILLA,
     },
     -- Silk Bandage (Vanilla)
@@ -66,7 +79,10 @@ local recipes = {
         reagents = {
             { itemId = 4306, name = "Silk Cloth", count = 1 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any First Aid Trainer",
+        },
         expansion = C.EXPANSION.VANILLA,
     },
     -- Heavy Silk Bandage (Vanilla)
@@ -79,7 +95,10 @@ local recipes = {
         reagents = {
             { itemId = 4306, name = "Silk Cloth", count = 2 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any First Aid Trainer",
+        },
         expansion = C.EXPANSION.VANILLA,
     },
     -- Mageweave Bandage (Vanilla)
@@ -92,7 +111,10 @@ local recipes = {
         reagents = {
             { itemId = 4338, name = "Mageweave Cloth", count = 1 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any First Aid Trainer",
+        },
         expansion = C.EXPANSION.VANILLA,
     },
     -- Heavy Mageweave Bandage (Vanilla)
@@ -105,7 +127,10 @@ local recipes = {
         reagents = {
             { itemId = 4338, name = "Mageweave Cloth", count = 2 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any First Aid Trainer",
+        },
         expansion = C.EXPANSION.VANILLA,
     },
     -- Runecloth Bandage (Vanilla)
@@ -118,7 +143,10 @@ local recipes = {
         reagents = {
             { itemId = 14047, name = "Runecloth", count = 1 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any First Aid Trainer",
+        },
         expansion = C.EXPANSION.VANILLA,
     },
     -- Heavy Runecloth Bandage (Vanilla)
@@ -131,7 +159,10 @@ local recipes = {
         reagents = {
             { itemId = 14047, name = "Runecloth", count = 2 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any First Aid Trainer",
+        },
         expansion = C.EXPANSION.VANILLA,
     },
     -- Netherweave Bandage (TBC)
@@ -144,7 +175,15 @@ local recipes = {
         reagents = {
             { itemId = 21877, name = "Netherweave Cloth", count = 1 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 21992, -- Manual: Netherweave Bandage
+            vendors = {
+                { npcId = 18990, npcName = "Burko", location = "Hellfire Peninsula (Temple of Telhamat)", faction = "Alliance" },
+                { npcId = 18991, npcName = "Aresella", location = "Hellfire Peninsula (Falcon Watch)", faction = "Horde" },
+            },
+            cost = 20000, -- 2g
+        },
         expansion = C.EXPANSION.TBC,
     },
     -- Heavy Netherweave Bandage (TBC)
@@ -157,7 +196,15 @@ local recipes = {
         reagents = {
             { itemId = 21877, name = "Netherweave Cloth", count = 2 },
         },
-        source = { type = C.SOURCE_TYPE.TRAINER },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 21993, -- Manual: Heavy Netherweave Bandage
+            vendors = {
+                { npcId = 18990, npcName = "Burko", location = "Hellfire Peninsula (Temple of Telhamat)", faction = "Alliance" },
+                { npcId = 18991, npcName = "Aresella", location = "Hellfire Peninsula (Falcon Watch)", faction = "Horde" },
+            },
+            cost = 30000, -- 3g
+        },
         expansion = C.EXPANSION.TBC,
     },
 }
