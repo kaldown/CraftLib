@@ -30,5 +30,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Moved SCHEMA.md from docs/ to root for public access
 
-[Unreleased]: https://github.com/kaldown/CraftDB/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/kaldown/CraftDB/releases/tag/v0.1.0
+[Unreleased]: https://github.com/kaldown/CraftLib/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/kaldown/CraftLib/releases/tag/v0.1.0

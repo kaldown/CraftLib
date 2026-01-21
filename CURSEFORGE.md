@@ -1,6 +1,6 @@
-CraftDB is a standalone library addon providing a complete crafting recipe database for World of Warcraft addon developers.
+CraftLib is a standalone library addon providing a complete crafting recipe database for World of Warcraft addon developers.
 
-> **This is a developer library** - It has no UI on its own. Other addons (like [LazyProf](https://www.curseforge.com/wow/addons/lazyprof)) use CraftDB for recipe data.
+> **This is a developer library** - It has no UI on its own. Other addons (like [LazyProf](https://www.curseforge.com/wow/addons/lazyprof)) use CraftLib for recipe data.
 
 ## What's Included
 
@@ -25,31 +25,31 @@ CraftDB is a standalone library addon providing a complete crafting recipe datab
 
 ## For Addon Developers
 
-Add CraftDB as a dependency in your `.toc` file:
+Add CraftLib as a dependency in your `.toc` file:
 
 ```
-## Dependencies: CraftDB
+## Dependencies: CraftLib
 ```
 
 ### API Example
 
 ```lua
-local recipes = CraftDB:GetRecipes("Cooking")
-local available = CraftDB:GetAvailableRecipes("Cooking", 225)
-local recipe = CraftDB:GetRecipeBySpellId("Cooking", 33359)
-local difficulty = CraftDB:GetRecipeDifficulty(recipe, 300)
+local recipes = CraftLib:GetRecipes("Cooking")
+local available = CraftLib:GetAvailableRecipes("Cooking", 225)
+local recipe = CraftLib:GetRecipeBySpellId("Cooking", 33359)
+local difficulty = CraftLib:GetRecipeDifficulty(recipe, 300)
 ```
 
 ### Available Functions
 
-- `CraftDB:IsReady()` - Check if database has loaded
-- `CraftDB:GetProfessions()` - Get all registered professions
-- `CraftDB:GetRecipes(key)` - Get all recipes for a profession
-- `CraftDB:GetAvailableRecipes(key, skillLevel)` - Filter by skill level
-- `CraftDB:GetRecipeBySpellId(key, spellId)` - Lookup by spell ID
-- `CraftDB:GetRecipeByItemId(itemId)` - Lookup by crafted item ID
-- `CraftDB:GetRecipeDifficulty(recipe, skillLevel)` - Get difficulty color
+- `CraftLib:IsReady()` - Check if database has loaded
+- `CraftLib:GetProfessions()` - Get all registered professions
+- `CraftLib:GetRecipes(key)` - Get all recipes for a profession
+- `CraftLib:GetAvailableRecipes(key, skillLevel)` - Filter by skill level
+- `CraftLib:GetRecipeBySpellId(key, spellId)` - Lookup by spell ID
+- `CraftLib:GetRecipeByItemId(itemId)` - Lookup by crafted item ID
+- `CraftLib:GetRecipeDifficulty(recipe, skillLevel)` - Get difficulty color
 
-## Addons Using CraftDB
+## Addons Using CraftLib
 
 - [LazyProf](https://www.curseforge.com/wow/addons/lazyprof) - Profession leveling optimizer

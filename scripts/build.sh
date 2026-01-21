@@ -1,16 +1,16 @@
 #!/bin/bash
-# Build script for CraftDB CurseForge release
+# Build script for CraftLib CurseForge release
 
 set -e
 
 # Get version from TOC file
-VERSION=$(grep '## Version:' CraftDB.toc | sed 's/## Version: //' | tr -d '\r')
+VERSION=$(grep '## Version:' CraftLib.toc | sed 's/## Version: //' | tr -d '\r')
 if [ -z "$VERSION" ]; then
-    echo "Error: Could not read version from CraftDB.toc"
+    echo "Error: Could not read version from CraftLib.toc"
     exit 1
 fi
 
-ADDON_NAME="CraftDB"
+ADDON_NAME="CraftLib"
 ZIP_NAME="${ADDON_NAME}-${VERSION}.zip"
 BUILD_DIR="/tmp/claude/${ADDON_NAME}-build"
 
@@ -21,7 +21,7 @@ rm -rf "$BUILD_DIR"
 mkdir -p "$BUILD_DIR/${ADDON_NAME}"
 
 # Copy addon files
-cp -r CraftDB.toc "$BUILD_DIR/${ADDON_NAME}/"
+cp -r CraftLib.toc "$BUILD_DIR/${ADDON_NAME}/"
 cp -r Core "$BUILD_DIR/${ADDON_NAME}/"
 cp -r Data "$BUILD_DIR/${ADDON_NAME}/"
 

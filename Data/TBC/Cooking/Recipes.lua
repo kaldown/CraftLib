@@ -2,8 +2,8 @@
 -- Cooking recipes for TBC Classic (includes Vanilla recipes)
 -- Sources: wowhead.com/tbc, wow-professions.com
 -- Updated: 2026-01-20 - Fixed source data per issue #1
-local ADDON_NAME, CraftDB = ...
-local C = CraftDB.Constants
+local ADDON_NAME, CraftLib = ...
+local C = CraftLib.Constants
 
 local recipes = {
     --------------------------------------------------------------------------------
@@ -732,8 +732,8 @@ local recipes = {
     },
 }
 
--- Register with CraftDB
-CraftDB:RegisterProfession("cooking", {
+-- Register with CraftLib
+CraftLib:RegisterProfession("cooking", {
     id = C.PROFESSION_ID.COOKING,
     name = "Cooking",
     expansion = C.EXPANSION.TBC,

@@ -1,4 +1,4 @@
-# CraftDB
+# CraftLib
 
 Comprehensive crafting recipe database and API for World of Warcraft addon developers.
 
@@ -25,31 +25,31 @@ Comprehensive crafting recipe database and API for World of Warcraft addon devel
 
 ## Usage
 
-Add CraftDB as a dependency in your `.toc` file:
+Add CraftLib as a dependency in your `.toc` file:
 
 ```
-## Dependencies: CraftDB
+## Dependencies: CraftLib
 ```
 
 ### API
 
 ```lua
 -- Check if database is ready
-if CraftDB:IsReady() then
+if CraftLib:IsReady() then
     -- Get all recipes for a profession
-    local recipes = CraftDB:GetRecipes("Cooking")
+    local recipes = CraftLib:GetRecipes("Cooking")
 
     -- Filter by skill level
-    local available = CraftDB:GetAvailableRecipes("Cooking", 225)
+    local available = CraftLib:GetAvailableRecipes("Cooking", 225)
 
     -- Look up by spell ID
-    local recipe = CraftDB:GetRecipeBySpellId("Cooking", 33359)
+    local recipe = CraftLib:GetRecipeBySpellId("Cooking", 33359)
 
     -- Look up by crafted item ID
-    local recipe = CraftDB:GetRecipeByItemId(27667)
+    local recipe = CraftLib:GetRecipeByItemId(27667)
 
     -- Get difficulty color (orange/yellow/green/gray)
-    local difficulty = CraftDB:GetRecipeDifficulty(recipe, 300)
+    local difficulty = CraftLib:GetRecipeDifficulty(recipe, 300)
 end
 ```
 
@@ -80,6 +80,6 @@ Each recipe contains:
 | `reagents` | List of `{itemId, count}` pairs |
 | `source` | How to obtain (trainer, vendor, quest, drop, reputation) |
 
-## Addons Using CraftDB
+## Addons Using CraftLib
 
 - [LazyProf](https://www.curseforge.com/wow/addons/lazyprof) - Profession leveling optimizer

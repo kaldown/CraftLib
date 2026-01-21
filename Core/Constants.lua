@@ -1,8 +1,8 @@
 -- Core/Constants.lua
--- CraftDB shared constants
-local ADDON_NAME, CraftDB = ...
+-- CraftLib shared constants
+local ADDON_NAME, CraftLib = ...
 
-CraftDB.Constants = {
+CraftLib.Constants = {
     -- Game expansions
     EXPANSION = {
         VANILLA = 1,

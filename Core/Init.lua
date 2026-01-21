@@ -1,14 +1,14 @@
 -- Core/Init.lua
--- CraftDB public API
-local ADDON_NAME, CraftDB = ...
+-- CraftLib public API
+local ADDON_NAME, CraftLib = ...
 
 -- Version info
-CraftDB.version = "0.1.0"
-CraftDB.dataVersion = 1
+CraftLib.version = "0.1.0"
+CraftLib.dataVersion = 1
 
 -- Internal storage
-CraftDB.professions = {}
-CraftDB.items = {}
+CraftLib.professions = {}
+CraftLib.items = {}
 
 --------------------------------------------------------------------------------
 -- Profession Registration API
@@ -17,7 +17,7 @@ CraftDB.items = {}
 --- Register a profession's recipe data
 -- @param professionKey string Unique key (e.g., "firstAid", "cooking")
 -- @param data table Profession data table
-function CraftDB:RegisterProfession(professionKey, data)
+function CraftLib:RegisterProfession(professionKey, data)
     if self.professions[professionKey] then
         -- Merge data if already exists (allows multi-file registration)
         local existing = self.professions[professionKey]
@@ -48,21 +48,21 @@ end
 
 --- Get all registered professions
 -- @return table Map of professionKey -> profession data
-function CraftDB:GetProfessions()
+function CraftLib:GetProfessions()
     return self.professions
 end
 
 --- Get a specific profession by key
 -- @param professionKey string
 -- @return table|nil Profession data or nil if not found
-function CraftDB:GetProfession(professionKey)
+function CraftLib:GetProfession(professionKey)
     return self.professions[professionKey]
 end
 
 --- Get all recipes for a profession
 -- @param professionKey string
 -- @return table Array of recipe data
-function CraftDB:GetRecipes(professionKey)
+function CraftLib:GetRecipes(professionKey)
     local profession = self.professions[professionKey]
     return profession and profession.recipes or {}
 end
@@ -71,7 +71,7 @@ end
 -- @param professionKey string
 -- @param skillLevel number Current skill level
 -- @return table Array of available recipes
-function CraftDB:GetAvailableRecipes(professionKey, skillLevel)
+function CraftLib:GetAvailableRecipes(professionKey, skillLevel)
     local recipes = self:GetRecipes(professionKey)
     local available = {}
 
@@ -88,7 +88,7 @@ end
 -- @param professionKey string
 -- @param spellId number
 -- @return table|nil Recipe data or nil
-function CraftDB:GetRecipeBySpellId(professionKey, spellId)
+function CraftLib:GetRecipeBySpellId(professionKey, spellId)
     local recipes = self:GetRecipes(professionKey)
 
     for _, recipe in ipairs(recipes) do
@@ -103,7 +103,7 @@ end
 --- Get recipe by crafted item ID
 -- @param itemId number
 -- @return table|nil Recipe data or nil
-function CraftDB:GetRecipeByItemId(itemId)
+function CraftLib:GetRecipeByItemId(itemId)
     return self.items[itemId]
 end
 
@@ -111,7 +111,7 @@ end
 -- @param recipe table Recipe data
 -- @param skillLevel number Current skill level
 -- @return string "orange", "yellow", "green", or "gray"
-function CraftDB:GetRecipeDifficulty(recipe, skillLevel)
+function CraftLib:GetRecipeDifficulty(recipe, skillLevel)
     local range = recipe.skillRange
     if not range then return "gray" end
 
@@ -126,9 +126,9 @@ function CraftDB:GetRecipeDifficulty(recipe, skillLevel)
     end
 end
 
---- Check if CraftDB is loaded and has data
+--- Check if CraftLib is loaded and has data
 -- @return boolean
-function CraftDB:IsReady()
+function CraftLib:IsReady()
     return next(self.professions) ~= nil
 end
 
@@ -136,5 +136,5 @@ end
 -- Global access
 --------------------------------------------------------------------------------
 
--- Make CraftDB globally accessible
-_G.CraftDB = CraftDB
+-- Make CraftLib globally accessible
+_G.CraftLib = CraftLib

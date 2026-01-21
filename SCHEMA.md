@@ -1,13 +1,13 @@
-# CraftDB Schema Documentation
+# CraftLib Schema Documentation
 
-CraftDB provides a comprehensive crafting recipe database for WoW addons.
+CraftLib provides a comprehensive crafting recipe database for WoW addons.
 
 ## Quick Start
 
 ```lua
--- Check if CraftDB is available
-if CraftDB and CraftDB:IsReady() then
-    local recipes = CraftDB:GetRecipes("firstAid")
+-- Check if CraftLib is available
+if CraftLib and CraftLib:IsReady() then
+    local recipes = CraftLib:GetRecipes("firstAid")
     for _, recipe in ipairs(recipes) do
         print(recipe.name, recipe.skillRequired)
     end
@@ -20,14 +20,14 @@ end
 
 | Function | Returns | Description |
 |----------|---------|-------------|
-| `CraftDB:IsReady()` | boolean | Check if CraftDB has loaded data |
-| `CraftDB:GetProfessions()` | table | All registered professions |
-| `CraftDB:GetProfession(key)` | table/nil | Single profession by key |
-| `CraftDB:GetRecipes(key)` | table | All recipes for a profession |
-| `CraftDB:GetAvailableRecipes(key, level)` | table | Recipes available at skill level |
-| `CraftDB:GetRecipeBySpellId(key, id)` | table/nil | Find recipe by spell ID |
-| `CraftDB:GetRecipeByItemId(itemId)` | table/nil | Find recipe by crafted item ID |
-| `CraftDB:GetRecipeDifficulty(recipe, level)` | string | "orange"/"yellow"/"green"/"gray" |
+| `CraftLib:IsReady()` | boolean | Check if CraftLib has loaded data |
+| `CraftLib:GetProfessions()` | table | All registered professions |
+| `CraftLib:GetProfession(key)` | table/nil | Single profession by key |
+| `CraftLib:GetRecipes(key)` | table | All recipes for a profession |
+| `CraftLib:GetAvailableRecipes(key, level)` | table | Recipes available at skill level |
+| `CraftLib:GetRecipeBySpellId(key, id)` | table/nil | Find recipe by spell ID |
+| `CraftLib:GetRecipeByItemId(itemId)` | table/nil | Find recipe by crafted item ID |
+| `CraftLib:GetRecipeDifficulty(recipe, level)` | string | "orange"/"yellow"/"green"/"gray" |
 
 ### Profession Keys
 
@@ -172,27 +172,27 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
 
 ## Constants
 
-Access via `CraftDB.Constants`:
+Access via `CraftLib.Constants`:
 
 ```lua
 -- Expansions
-CraftDB.Constants.EXPANSION.VANILLA  -- 1
-CraftDB.Constants.EXPANSION.TBC      -- 2
-CraftDB.Constants.EXPANSION.WOTLK    -- 3
+CraftLib.Constants.EXPANSION.VANILLA  -- 1
+CraftLib.Constants.EXPANSION.TBC      -- 2
+CraftLib.Constants.EXPANSION.WOTLK    -- 3
 -- ... etc
 
 -- Source types
-CraftDB.Constants.SOURCE_TYPE.TRAINER
-CraftDB.Constants.SOURCE_TYPE.VENDOR
-CraftDB.Constants.SOURCE_TYPE.DROP
-CraftDB.Constants.SOURCE_TYPE.REPUTATION
-CraftDB.Constants.SOURCE_TYPE.QUEST
-CraftDB.Constants.SOURCE_TYPE.DISCOVERY
-CraftDB.Constants.SOURCE_TYPE.WORLD_DROP
+CraftLib.Constants.SOURCE_TYPE.TRAINER
+CraftLib.Constants.SOURCE_TYPE.VENDOR
+CraftLib.Constants.SOURCE_TYPE.DROP
+CraftLib.Constants.SOURCE_TYPE.REPUTATION
+CraftLib.Constants.SOURCE_TYPE.QUEST
+CraftLib.Constants.SOURCE_TYPE.DISCOVERY
+CraftLib.Constants.SOURCE_TYPE.WORLD_DROP
 
 -- Profession IDs
-CraftDB.Constants.PROFESSION_ID.FIRST_AID  -- 3273
-CraftDB.Constants.PROFESSION_ID.COOKING    -- 2550
+CraftLib.Constants.PROFESSION_ID.FIRST_AID  -- 3273
+CraftLib.Constants.PROFESSION_ID.COOKING    -- 2550
 -- ... etc
 ```
 
@@ -200,7 +200,7 @@ CraftDB.Constants.PROFESSION_ID.COOKING    -- 2550
 
 ```lua
 local function GetRecipeMaterials(professionKey, spellId)
-    local recipe = CraftDB:GetRecipeBySpellId(professionKey, spellId)
+    local recipe = CraftLib:GetRecipeBySpellId(professionKey, spellId)
     if not recipe then return nil end
 
     local materials = {}
@@ -215,11 +215,11 @@ end
 
 ```lua
 local function FindOrangeRecipes(professionKey, skillLevel)
-    local recipes = CraftDB:GetAvailableRecipes(professionKey, skillLevel)
+    local recipes = CraftLib:GetAvailableRecipes(professionKey, skillLevel)
     local orange = {}
 
     for _, recipe in ipairs(recipes) do
-        if CraftDB:GetRecipeDifficulty(recipe, skillLevel) == "orange" then
+        if CraftLib:GetRecipeDifficulty(recipe, skillLevel) == "orange" then
             table.insert(orange, recipe)
         end
     end

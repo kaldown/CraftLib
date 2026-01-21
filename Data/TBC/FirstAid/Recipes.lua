@@ -1,7 +1,7 @@
 -- Data/TBC/FirstAid/Recipes.lua
 -- First Aid recipes for TBC Classic (includes Vanilla recipes)
-local ADDON_NAME, CraftDB = ...
-local C = CraftDB.Constants
+local ADDON_NAME, CraftLib = ...
+local C = CraftLib.Constants
 
 local recipes = {
     -- Linen Bandage (Vanilla)
@@ -162,8 +162,8 @@ local recipes = {
     },
 }
 
--- Register with CraftDB
-CraftDB:RegisterProfession("firstAid", {
+-- Register with CraftLib
+CraftLib:RegisterProfession("firstAid", {
     id = C.PROFESSION_ID.FIRST_AID,
     name = "First Aid",
     expansion = C.EXPANSION.TBC,
