@@ -149,8 +149,13 @@ local recipes = {
             { itemId = 4338, name = "Mageweave Cloth", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 16113, -- Manual: Mageweave Bandage
+            vendors = {
+                { npcId = 2805, npcName = "Deneb Walker", location = "Arathi Highlands (Stromgarde Keep)", faction = "Alliance" },
+                { npcId = 13476, npcName = "Balai Lok'Wein", location = "Dustwallow Marsh (Brackenwall Village)", faction = "Horde" },
+            },
+            cost = 5000, -- 50s
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -166,7 +171,7 @@ local recipes = {
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
+            npcName = "Doctor Gustaf VanHowzen / Doctor Gregory Victor",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -182,7 +187,7 @@ local recipes = {
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
+            npcName = "Doctor Gustaf VanHowzen / Doctor Gregory Victor",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -198,7 +203,7 @@ local recipes = {
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
+            npcName = "Doctor Gustaf VanHowzen / Doctor Gregory Victor",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -213,8 +218,12 @@ local recipes = {
             { itemId = 19441, name = "Huge Venom Sac", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 529,
+            factionName = "Argent Dawn",
+            level = "Honored",
+            itemId = 19442,
+            cost = 100000, -- 10g
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -246,8 +255,14 @@ local recipes = {
             { itemId = 21877, name = "Netherweave Cloth", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 21992, -- Manual: Netherweave Bandage
+            vendors = {
+                { npcId = 18991, npcName = "Burko", location = "Hellfire Peninsula (Temple of Telhamat)", faction = "Alliance" },
+                { npcId = 19184, npcName = "Medic Helaina", location = "Hellfire Peninsula (Honor Hold)", faction = "Alliance" },
+                { npcId = 18993, npcName = "Aresella", location = "Hellfire Peninsula (Falcon Watch)", faction = "Horde" },
+            },
+            cost = 20000, -- 2g
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -262,8 +277,14 @@ local recipes = {
             { itemId = 21877, name = "Netherweave Cloth", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 21993, -- Manual: Heavy Netherweave Bandage
+            vendors = {
+                { npcId = 18991, npcName = "Burko", location = "Hellfire Peninsula (Temple of Telhamat)", faction = "Alliance" },
+                { npcId = 19184, npcName = "Medic Helaina", location = "Hellfire Peninsula (Honor Hold)", faction = "Alliance" },
+                { npcId = 18993, npcName = "Aresella", location = "Hellfire Peninsula (Falcon Watch)", faction = "Horde" },
+            },
+            cost = 40000, -- 4g
         },
         expansion = C.EXPANSION.TBC,
     },
