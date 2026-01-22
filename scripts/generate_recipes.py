@@ -65,6 +65,72 @@ def load_all_data(data_dir: Path) -> dict:
     return data
 
 
+def build_indexes(data: dict) -> dict:
+    """Build lookup indexes from raw data."""
+    indexes = {}
+
+    # Spell names: spell_id -> name
+    indexes["spell_names"] = {
+        row["ID"]: row.get("Name_lang", "")
+        for row in data["SpellName"]
+        if row.get("Name_lang")
+    }
+
+    # Item names: item_id -> name
+    indexes["item_names"] = {
+        row["ID"]: row.get("Display_lang", "")
+        for row in data["ItemSparse"]
+        if row.get("Display_lang")
+    }
+
+    # Item details: item_id -> full row
+    indexes["item_details"] = {
+        row["ID"]: row
+        for row in data["ItemSparse"]
+    }
+
+    # Faction names: faction_id -> name
+    indexes["faction_names"] = {
+        row["ID"]: row.get("Name_lang", "")
+        for row in data["Faction"]
+        if row.get("Name_lang")
+    }
+
+    # Spell reagents: spell_id -> [(item_id, count), ...]
+    indexes["spell_reagents"] = {}
+    for row in data["SpellReagents"]:
+        spell_id = row.get("SpellID") or row.get("ID")
+        if not spell_id:
+            continue
+        reagents = []
+        for i in range(8):
+            item_id = row.get(f"Reagent_{i}", "0")
+            count = row.get(f"ReagentCount_{i}", "0")
+            if item_id and item_id != "0" and count and count != "0":
+                reagents.append((item_id, int(count)))
+        if reagents:
+            indexes["spell_reagents"][spell_id] = reagents
+
+    # Spell effects - crafted items: spell_id -> item_id (Effect=24)
+    indexes["crafted_items"] = {}
+    for row in data["SpellEffect"]:
+        if row.get("Effect") == "24":  # SPELL_EFFECT_CREATE_ITEM
+            spell_id = row.get("SpellID")
+            item_id = row.get("EffectItemType", "0")
+            if spell_id and item_id and item_id != "0":
+                indexes["crafted_items"][spell_id] = item_id
+
+    # Recipe items: spell_id -> item_id (items that teach spells)
+    indexes["recipe_items"] = {}
+    for row in data["ItemEffect"]:
+        spell_id = row.get("SpellID")
+        item_id = row.get("ParentItemID")
+        if spell_id and item_id and item_id != "0":
+            indexes["recipe_items"][spell_id] = item_id
+
+    return indexes
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate CraftLib recipes from DB2")
     parser.add_argument("--version", required=True, help="Build version (e.g., 2.5.5.65463)")
@@ -84,6 +150,12 @@ def main() -> int:
 
     # Load all data
     data = load_all_data(data_dir)
+
+    # Build indexes
+    indexes = build_indexes(data)
+    print(f"Built indexes: {len(indexes['spell_names'])} spells, "
+          f"{len(indexes['item_names'])} items, "
+          f"{len(indexes['recipe_items'])} recipe items", file=sys.stderr)
 
     print(f"\nData loaded successfully.", file=sys.stderr)
     return 0
