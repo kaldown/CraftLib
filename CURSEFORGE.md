@@ -11,18 +11,7 @@ CraftLib is a standalone library addon providing a complete crafting recipe data
 
 ## Profession Coverage
 
-| Profession | Status |
-|------------|--------|
-| Cooking | Complete |
-| First Aid | Complete |
-| Mining | Complete (smelting) |
-| Engineering | Complete |
-| Alchemy | In Progress |
-| Blacksmithing | In Progress |
-| Enchanting | In Progress |
-| Jewelcrafting | In Progress |
-| Leatherworking | In Progress |
-| Tailoring | In Progress |
+See the [up-to-date profession coverage list on GitHub](https://github.com/kaldown/CraftLib#profession-coverage).
 
 ## For Addon Developers
 
