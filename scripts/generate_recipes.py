@@ -210,10 +210,24 @@ def extract_recipes(data: dict, indexes: dict, skill_line_id: int) -> list[dict]
         trivial_high = int(row.get("TrivialSkillLineRankHigh", "0"))
 
         # Calculate skill range
-        orange = min_skill if min_skill > 0 else 1
-        yellow = trivial_low if trivial_low > 0 else orange
-        gray = trivial_high if trivial_high > 0 else yellow + 20
+        # Note: MinSkillLineRank is often unreliable (always 1 for some professions like First Aid)
+        # TrivialSkillLineRankLow (yellow point) is when you can learn the recipe
+        # Orange range is typically 30 skill points before yellow
+        yellow = trivial_low if trivial_low > 0 else 1
+        gray = trivial_high if trivial_high > 0 else yellow + 60
         green = (yellow + gray) // 2
+
+        # Calculate orange point and skill required
+        # If min_skill is reliable (> 1), use it; otherwise derive from yellow
+        if min_skill > 1:
+            skill_required = min_skill
+            orange = min_skill
+        else:
+            # Orange starts 30 points before yellow (standard WoW mechanic)
+            orange = max(1, yellow - 30)
+            # Starter recipes (orange = 1) are learnable at skill 1
+            # Other recipes are learnable at their yellow point
+            skill_required = 1 if orange == 1 else yellow
 
         # Get reagents
         reagents = []
@@ -224,15 +238,27 @@ def extract_recipes(data: dict, indexes: dict, skill_line_id: int) -> list[dict]
                 "count": count,
             })
 
-        # Determine expansion
-        expansion = "TBC" if min_skill >= 300 else "VANILLA"
+        # Determine expansion based on skill required
+        # Vanilla: 1-300, TBC: 301-375, WotLK: 376-450, Cata: 451-525, MoP: 526-600
+        if skill_required <= 300:
+            expansion = "VANILLA"
+        elif skill_required <= 375:
+            expansion = "TBC"
+        elif skill_required <= 450:
+            expansion = "WOTLK"
+        elif skill_required <= 525:
+            expansion = "CATA"
+        elif skill_required <= 600:
+            expansion = "MOP"
+        else:
+            raise ValueError(f"Unknown expansion for skill_required={skill_required} (spell {spell_id})")
 
         recipe = {
             "id": int(spell_id),
             "name": indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}"),
             "itemId": int(item_id),
             "itemName": indexes["item_names"].get(item_id, f"Unknown-{item_id}"),
-            "skillRequired": min_skill,
+            "skillRequired": skill_required,
             "skillRange": {
                 "orange": orange,
                 "yellow": yellow,
