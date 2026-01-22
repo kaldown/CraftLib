@@ -34,6 +34,11 @@ REP_LEVELS = {
 }
 
 
+def escape_lua_string(s: str) -> str:
+    """Escape special characters for Lua string literals."""
+    return s.replace("\\", "\\\\").replace('"', '\\"')
+
+
 def detect_source(recipe: dict, indexes: dict) -> dict:
     """Detect recipe source (trainer/vendor/drop/reputation)."""
     recipe_item_id = recipe.get("recipe_item")
@@ -248,6 +253,99 @@ def extract_recipes(data: dict, indexes: dict, skill_line_id: int) -> list[dict]
     recipes.sort(key=lambda r: (r["skillRequired"], r["id"]))
 
     return recipes
+
+
+def generate_lua(recipes: list[dict], profession: dict, expansion: int) -> str:
+    """Generate Lua code for recipes."""
+    exp_name = {1: "Classic", 2: "TBC", 3: "WotLK", 4: "Cata"}.get(expansion, "TBC")
+    prof_name = profession["name"]
+    prof_key = profession["key"]
+    prof_constant = profession["constant"]
+
+    lines = [
+        f"-- Data/{exp_name}/{prof_name.replace(' ', '')}/Recipes.lua",
+        f"-- {prof_name} recipes for {exp_name} Classic",
+        f"-- Generated from DB2 data",
+        "local ADDON_NAME, CraftLib = ...",
+        "local C = CraftLib.Constants",
+        "",
+        "local recipes = {",
+    ]
+
+    for recipe in recipes:
+        # Reagents (escape names for Lua strings)
+        reagent_lines = []
+        for r in recipe["reagents"]:
+            escaped_name = escape_lua_string(r["name"])
+            reagent_lines.append(
+                f'            {{ itemId = {r["itemId"]}, name = "{escaped_name}", count = {r["count"]} }},'
+            )
+        reagents_str = "\n".join(reagent_lines) if reagent_lines else ""
+
+        # Source
+        source = recipe["source"]
+        source_lines = [f'            type = C.SOURCE_TYPE.{source["type"]},']
+        if source["type"] == "TRAINER":
+            source_lines.append(f'            npcName = "Any {prof_name} Trainer",')
+        elif source["type"] == "REPUTATION":
+            escaped_faction = escape_lua_string(source["factionName"])
+            source_lines.append(f'            factionId = {source["factionId"]},')
+            source_lines.append(f'            factionName = "{escaped_faction}",')
+            source_lines.append(f'            level = "{source["level"]}",')
+            source_lines.append(f'            itemId = {source["itemId"]},')
+            source_lines.append(f'            cost = {source["cost"]},')
+        elif source["type"] == "VENDOR":
+            source_lines.append(f'            itemId = {source["itemId"]},')
+            source_lines.append(f'            cost = {source["cost"]},')
+        elif source["type"] == "DROP":
+            source_lines.append(f'            itemId = {source["itemId"]},')
+        source_str = "\n".join(source_lines)
+
+        # Skill range
+        sr = recipe["skillRange"]
+
+        # Escape recipe name for Lua strings
+        escaped_recipe_name = escape_lua_string(recipe["name"])
+
+        lines.append(f"    -- {recipe['name']} ({recipe['skillRequired']})")
+        lines.append("    {")
+        lines.append(f"        id = {recipe['id']},")
+        lines.append(f'        name = "{escaped_recipe_name}",')
+        lines.append(f"        itemId = {recipe['itemId']},")
+        lines.append(f"        skillRequired = {recipe['skillRequired']},")
+        lines.append(f"        skillRange = {{ orange = {sr['orange']}, yellow = {sr['yellow']}, green = {sr['green']}, gray = {sr['gray']} }},")
+        lines.append("        reagents = {")
+        if reagents_str:
+            lines.append(reagents_str)
+        lines.append("        },")
+        lines.append("        source = {")
+        lines.append(source_str)
+        lines.append("        },")
+        lines.append(f"        expansion = C.EXPANSION.{recipe['expansion']},")
+        lines.append("    },")
+
+    lines.append("}")
+    lines.append("")
+
+    # Milestones based on expansion
+    if expansion == 2:
+        milestones = "{ 75, 150, 225, 300, 375 }"
+    else:
+        milestones = "{ 75, 150, 225, 300 }"
+
+    # Highest expansion in recipes
+    max_exp = "TBC" if any(r["expansion"] == "TBC" for r in recipes) else "VANILLA"
+
+    lines.append(f'CraftLib:RegisterProfession("{prof_key}", {{')
+    lines.append(f"    id = C.PROFESSION_ID.{prof_constant},")
+    lines.append(f'    name = "{prof_name}",')
+    lines.append(f"    expansion = C.EXPANSION.{max_exp},")
+    lines.append(f"    milestones = {milestones},")
+    lines.append("    recipes = recipes,")
+    lines.append("})")
+    lines.append("")
+
+    return "\n".join(lines)
 
 
 def main() -> int:
