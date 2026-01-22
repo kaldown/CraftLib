@@ -88,29 +88,25 @@ Each recipe contains:
 | `source` | How to obtain (trainer, vendor, quest, drop, reputation) |
 | `yield` | Items produced per craft (optional, default: 1) |
 
-## Development
+## Data Generation
 
-CraftLib uses [db2-parser](vendor/db2-parser) to extract base recipe data from WoW's DB2 tables.
+CraftLib recipe data is generated from Blizzard's DB2 tables via [wago.tools](https://wago.tools/db2).
 
-### Fetching DB2 Data
+### Update Recipe Data
 
 ```bash
-# Fetch latest TBC data
+# Fetch latest DB2 data and generate recipes
+make update-data EXPANSION=2
+
+# Or step by step:
 make fetch-data EXPANSION=2
+make generate VERSION=2.5.5.65463
 ```
 
-### Extracting Recipes
+### Data Source
 
-Generate a draft Lua file for a profession:
-
-```bash
-make extract-recipes VERSION=2.5.5.65463 PROFESSION="Alchemy"
-```
-
-The generated file contains DB2 data (spell IDs, names, reagents) but requires manual curation for:
-- `skillRange` thresholds (orange/yellow/green/gray)
-- `source` information (trainer, vendor, quest, etc.)
-- `expansion` tags
+- **DB2 Tables:** Spell, SpellName, SpellEffect, SpellReagents, Item, ItemSparse, SkillLine, SkillLineAbility, ItemEffect, Faction
+- **Fetcher:** [db2-parser](vendor/db2-parser) submodule
 
 ## Addons Using CraftLib
 

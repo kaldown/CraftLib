@@ -9,10 +9,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Automated recipe generation from DB2 data (`scripts/generate_recipes.py`)
+- `make update-data` command for one-step data refresh
+- Full skillRange values extracted from DB2 (no more manual curation)
+- Source detection: trainer, vendor, drop, reputation
 - `GetRecipeByProduct(itemId)` API - Reverse lookup to find all recipes that produce a given item
 - `yield` field in recipe schema - Number of items produced per craft (defaults to 1)
 - Mining profession (smelting recipes) - Vanilla and TBC ore-to-bar conversions
 - Engineering profession - Complete with ~100 recipes covering Vanilla and TBC, including Gnomish and Goblin specializations
+
+### Changed
+
+- Recipe data now generated from DB2 instead of manual curation
+- Replaced `extract_recipes.py` with `generate_recipes.py`
 
 ### Fixed
 
