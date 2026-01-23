@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CraftLib Recipe Sources",
+  "description": "Verified source data for profession recipes",
+  "type": "object",
+  "required": ["profession", "version", "generated", "recipes"],
+  "properties": {
+    "profession": {
+      "type": "string",
+      "description": "Profession key (e.g., 'firstAid')"
+    },
+    "version": {
+      "type": "string",
+      "description": "DB2 build version used for extraction"
+    },
+    "generated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date sources were generated/updated"
+    },
+    "recipes": {
+      "type": "object",
+      "description": "Map of spell_id to source data",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["name", "source"],
+        "properties": {
+          "name": { "type": "string" },
+          "source": {
+            "type": "object",
+            "required": ["type", "certainty"],
+            "properties": {
+              "type": { "enum": ["TRAINER", "VENDOR", "DROP", "QUEST", "REPUTATION"] },
+              "certainty": { "enum": ["DB2", "WOWHEAD", "PENDING"] },
+              "itemId": { "type": "integer" },
+              "cost": { "type": "integer" },
+              "factionId": { "type": "integer" },
+              "factionName": { "type": "string" },
+              "level": { "type": "string" },
+              "vendors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "npcId": { "type": "integer" },
+                    "name": { "type": "string" },
+                    "zone": { "type": "string" },
+                    "faction": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
