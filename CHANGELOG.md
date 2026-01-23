@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-01-23
+
 ### Added
 
 - Automated recipe generation from DB2 data (`scripts/generate_recipes.py`)
@@ -17,25 +19,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `yield` field in recipe schema - Number of items produced per craft (defaults to 1)
 - Mining profession (smelting recipes) - Vanilla and TBC ore-to-bar conversions
 - Engineering profession - Complete with ~100 recipes covering Vanilla and TBC, including Gnomish and Goblin specializations
-- `scripts/validate_sources.py` - Validation script to detect suspicious recipe sources (e.g., high-skill recipes incorrectly marked as TRAINER)
+- `scripts/validate_sources.py` - Validation script to detect suspicious recipe sources
 - `scripts/extract_db2_sources.py` - Extract certain sources (TRAINER, REPUTATION, QUEST) from DB2
 - `scripts/fetch_wowhead_sources.py` - Verify uncertain sources (VENDOR vs DROP) via Wowhead
-- `Data/Sources/` - Verified source data files with certainty tracking
 - Makefile targets: `extract-sources`, `verify-sources`, `update-profession`
 
 ### Changed
 
 - Recipe data now generated from DB2 instead of manual curation
-- Replaced `extract_recipes.py` with `generate_recipes.py`
-- `skillRequired` now derived from yellow point when DB2 `MinSkillLineRank` is unreliable (fixes recipes showing as learnable at skill 1)
 - Recipe source detection now uses verified data instead of heuristics
-- First Aid sources verified against Wowhead with certainty tracking
+- First Aid and Cooking sources verified against Wowhead
+- Cooking recipes corrected: 99 recipes changed from TRAINER to accurate sources (VENDOR/QUEST/DROP)
 
 ### Fixed
 
-- First Aid source data now includes NPC names (vanilla: "Any First Aid Trainer", TBC: specific vendors with NPC IDs, locations, and faction info)
-- First Aid recipe sources corrected: Heavy Silk Bandage, Mageweave Bandage, Netherweave Bandage, Heavy Netherweave Bandage now correctly marked as VENDOR; Powerful Anti-Venom marked as REPUTATION (Argent Dawn)
-- First Aid trainer names updated for 240+ recipes (Doctor Gustaf VanHowzen / Doctor Gregory Victor)
+- First Aid recipe sources corrected: Heavy Silk Bandage, Mageweave Bandage, etc. now correctly marked as VENDOR
+- Cooking recipe sources corrected: All 116 recipes now have accurate source types
 
 ## [0.1.0] - 2026-01-21
 
@@ -60,5 +59,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Moved SCHEMA.md from docs/ to root for public access
 
-[Unreleased]: https://github.com/kaldown/CraftLib/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/kaldown/CraftLib/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/kaldown/CraftLib/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/kaldown/CraftLib/releases/tag/v0.1.0
