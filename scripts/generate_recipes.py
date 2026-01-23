@@ -7,6 +7,7 @@ Usage:
 
 import argparse
 import csv
+import json
 import sys
 from pathlib import Path
 
@@ -39,22 +40,66 @@ def escape_lua_string(s: str) -> str:
     return s.replace("\\", "\\\\").replace('"', '\\"')
 
 
-def detect_source(recipe: dict, indexes: dict) -> dict:
-    """Detect recipe source (trainer/vendor/drop/reputation)."""
+def load_source_overrides(scripts_dir: Path) -> dict:
+    """Load manual source overrides from JSON file.
+
+    Returns dict mapping recipe_item_id (str) to source type (str).
+    """
+    overrides_file = scripts_dir / "source_overrides.json"
+    if not overrides_file.exists():
+        return {}
+
+    with open(overrides_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Flatten all categories into a single lookup
+    overrides = {}
+    for source_type, item_ids in data.get("overrides", {}).items():
+        for item_id in item_ids:
+            overrides[str(item_id)] = source_type
+
+    return overrides
+
+
+def detect_source(recipe: dict, indexes: dict, overrides: dict = None) -> dict:
+    """Detect recipe source (trainer/vendor/drop/reputation/quest).
+
+    Detection logic:
+    1. No recipe item → TRAINER (learned directly from NPC)
+    2. Recipe item exists:
+       a. Check manual overrides first (for known drops/quests)
+       b. MinFactionID > 0 → REPUTATION vendor
+       c. BuyPrice=0 AND SellPrice=0 → QUEST reward (untradeable)
+       d. BuyPrice > 0 → VENDOR (default for tradeable items)
+
+    The DB2 data cannot distinguish vendor vs drop items reliably.
+    Use source_overrides.json to manually specify known drops.
+    """
     recipe_item_id = recipe.get("recipe_item")
+    overrides = overrides or {}
 
     # No recipe item = trainer
     if not recipe_item_id:
         return {"type": "TRAINER"}
 
+    recipe_item_str = str(recipe_item_id)
+
+    # Check manual overrides first
+    if recipe_item_str in overrides:
+        override_type = overrides[recipe_item_str]
+        return {
+            "type": override_type,
+            "itemId": int(recipe_item_id),
+        }
+
     # Get item details
-    item = indexes["item_details"].get(recipe_item_id, {})
+    item = indexes["item_details"].get(recipe_item_str, {})
     buy_price = int(item.get("BuyPrice", "0"))
+    sell_price = int(item.get("SellPrice", "0"))
     min_faction = int(item.get("MinFactionID", "0"))
     min_rep = int(item.get("MinReputation", "0"))
-    bonding = item.get("Bonding", "0")
 
-    # Reputation vendor
+    # Reputation vendor (has faction requirement)
     if min_faction > 0:
         faction_name = indexes["faction_names"].get(str(min_faction), f"Faction-{min_faction}")
         rep_level = REP_LEVELS.get(min_rep, f"Rep-{min_rep}")
@@ -67,22 +112,16 @@ def detect_source(recipe: dict, indexes: dict) -> dict:
             "cost": buy_price,
         }
 
-    # Vendor (high buy price)
-    if buy_price >= 5000:  # >= 50 silver
+    # Quest reward (untradeable - no buy or sell price)
+    if buy_price == 0 and sell_price == 0:
         return {
-            "type": "VENDOR",
-            "itemId": int(recipe_item_id),
-            "cost": buy_price,
-        }
-
-    # Drop (low buy price, unbound)
-    if bonding == "0":
-        return {
-            "type": "DROP",
+            "type": "QUEST",
             "itemId": int(recipe_item_id),
         }
 
-    # Fallback: vendor
+    # Default to VENDOR for tradeable items with prices
+    # Note: DB2 cannot distinguish vendor vs world drop reliably.
+    # Known drops should be added to source_overrides.json
     return {
         "type": "VENDOR",
         "itemId": int(recipe_item_id),
@@ -187,7 +226,7 @@ def build_indexes(data: dict) -> dict:
     return indexes
 
 
-def extract_recipes(data: dict, indexes: dict, skill_line_id: int) -> list[dict]:
+def extract_recipes(data: dict, indexes: dict, skill_line_id: int, overrides: dict = None) -> list[dict]:
     """Extract recipes for a profession from SkillLineAbility."""
     recipes = []
 
@@ -271,7 +310,7 @@ def extract_recipes(data: dict, indexes: dict, skill_line_id: int) -> list[dict]
         }
 
         # Detect source
-        recipe["source"] = detect_source(recipe, indexes)
+        recipe["source"] = detect_source(recipe, indexes, overrides)
 
         recipes.append(recipe)
 
@@ -324,6 +363,8 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int) -> str:
             source_lines.append(f'            itemId = {source["itemId"]},')
             source_lines.append(f'            cost = {source["cost"]},')
         elif source["type"] == "DROP":
+            source_lines.append(f'            itemId = {source["itemId"]},')
+        elif source["type"] == "QUEST":
             source_lines.append(f'            itemId = {source["itemId"]},')
         source_str = "\n".join(source_lines)
 
@@ -400,6 +441,12 @@ def main() -> int:
           f"{len(indexes['item_names'])} items, "
           f"{len(indexes['recipe_items'])} recipe items", file=sys.stderr)
 
+    # Load source overrides
+    scripts_dir = Path(__file__).parent
+    overrides = load_source_overrides(scripts_dir)
+    if overrides:
+        print(f"Loaded {len(overrides)} source overrides", file=sys.stderr)
+
     # Expansion name for output path
     exp_name = {1: "Classic", 2: "TBC", 3: "WotLK", 4: "Cata"}.get(args.expansion, "TBC")
 
@@ -417,7 +464,7 @@ def main() -> int:
 
     # Generate for each profession
     for skill_line_id, profession in professions_to_generate:
-        recipes = extract_recipes(data, indexes, skill_line_id)
+        recipes = extract_recipes(data, indexes, skill_line_id, overrides)
 
         if not recipes:
             print(f"No recipes found for {profession['name']}", file=sys.stderr)
