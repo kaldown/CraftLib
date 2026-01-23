@@ -54,14 +54,17 @@ def fetch_wowhead_item(item_id: int, expansion: str = "tbc") -> dict | None:
         return None
 
     # Parse source from JSON embedded in XML
-    # Look for: <json><![CDATA[{...}]]></json>
+    # Look for: <json><![CDATA["key":value,...]]></json>
+    # Note: Wowhead returns JSON object contents WITHOUT outer braces
     json_match = re.search(r'<json><!\[CDATA\[(.+?)\]\]></json>', content, re.DOTALL)
     if not json_match:
         print(f"  No JSON data found for item {item_id}", file=sys.stderr)
         return None
 
     try:
-        data = json.loads(json_match.group(1))
+        # Wrap with braces since Wowhead returns object contents without them
+        json_content = "{" + json_match.group(1) + "}"
+        data = json.loads(json_content)
     except json.JSONDecodeError as e:
         print(f"  JSON parse error for item {item_id}: {e}", file=sys.stderr)
         return None
