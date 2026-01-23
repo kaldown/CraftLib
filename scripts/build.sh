@@ -26,6 +26,9 @@ cp -r Core "$BUILD_DIR/${ADDON_NAME}/"
 cp -r Data "$BUILD_DIR/${ADDON_NAME}/"
 cp icon.tga "$BUILD_DIR/${ADDON_NAME}/"
 
+# Remove development-only data (not needed at runtime)
+rm -rf "$BUILD_DIR/${ADDON_NAME}/Data/Sources"
+
 # Copy user-facing docs only
 cp SCHEMA.md "$BUILD_DIR/${ADDON_NAME}/"
 

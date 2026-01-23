@@ -19,6 +19,9 @@ docs/agents/
 # Plans are local working documents
 docs/plans/
 
+# Verified sources (local development data, not for release)
+Data/Sources/*.json
+
 # Build artifacts
 *.zip
 *.tar.gz
