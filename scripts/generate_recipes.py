@@ -61,6 +61,25 @@ def load_source_overrides(scripts_dir: Path) -> dict:
     return overrides
 
 
+def load_verified_sources(sources_dir: Path, profession_name: str) -> dict | None:
+    """Load verified sources from Sources/{Profession}.json.
+
+    Returns dict mapping spell_id (str) to source dict, or None if file doesn't exist.
+    """
+    sources_file = sources_dir / f"{profession_name.replace(' ', '')}.json"
+    if not sources_file.exists():
+        return None
+
+    with open(sources_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Convert to spell_id -> source lookup
+    return {
+        spell_id: recipe["source"]
+        for spell_id, recipe in data.get("recipes", {}).items()
+    }
+
+
 def detect_source(recipe: dict, indexes: dict, overrides: dict = None) -> dict:
     """Detect recipe source (trainer/vendor/drop/reputation/quest).
 
@@ -226,7 +245,13 @@ def build_indexes(data: dict) -> dict:
     return indexes
 
 
-def extract_recipes(data: dict, indexes: dict, skill_line_id: int, overrides: dict = None) -> list[dict]:
+def extract_recipes(
+    data: dict,
+    indexes: dict,
+    skill_line_id: int,
+    overrides: dict = None,
+    verified_sources: dict = None,
+) -> list[dict]:
     """Extract recipes for a profession from SkillLineAbility."""
     recipes = []
 
@@ -309,8 +334,19 @@ def extract_recipes(data: dict, indexes: dict, skill_line_id: int, overrides: di
             "recipe_item": indexes["recipe_items"].get(spell_id),
         }
 
-        # Detect source
-        recipe["source"] = detect_source(recipe, indexes, overrides)
+        # Detect source - prefer verified sources, fall back to heuristics
+        if verified_sources and spell_id in verified_sources:
+            source = verified_sources[spell_id]
+            # Check for PENDING sources
+            if source.get("certainty") == "PENDING":
+                raise ValueError(
+                    f"Recipe '{recipe['name']}' (spell {spell_id}) has PENDING source. "
+                    f"Run fetch_wowhead_sources.py to verify."
+                )
+            recipe["source"] = source
+        else:
+            # Fall back to heuristic detection (for professions without verified sources)
+            recipe["source"] = detect_source(recipe, indexes, overrides)
 
         recipes.append(recipe)
 
@@ -447,6 +483,9 @@ def main() -> int:
     if overrides:
         print(f"Loaded {len(overrides)} source overrides", file=sys.stderr)
 
+    # Load verified sources (per-profession)
+    sources_dir = Path(__file__).parent.parent / "Data" / "Sources"
+
     # Expansion name for output path
     exp_name = {1: "Classic", 2: "TBC", 3: "WotLK", 4: "Cata"}.get(args.expansion, "TBC")
 
@@ -464,7 +503,16 @@ def main() -> int:
 
     # Generate for each profession
     for skill_line_id, profession in professions_to_generate:
-        recipes = extract_recipes(data, indexes, skill_line_id, overrides)
+        # Load verified sources for this profession
+        verified_sources = load_verified_sources(sources_dir, profession["name"])
+        if verified_sources:
+            print(f"Loaded {len(verified_sources)} verified sources for {profession['name']}", file=sys.stderr)
+
+        try:
+            recipes = extract_recipes(data, indexes, skill_line_id, overrides, verified_sources)
+        except ValueError as e:
+            print(f"ERROR: {e}", file=sys.stderr)
+            return 2
 
         if not recipes:
             print(f"No recipes found for {profession['name']}", file=sys.stderr)
