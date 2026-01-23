@@ -1,0 +1,134 @@
+{
+  "profession": "firstAid",
+  "version": "2.5.5.65463",
+  "generated": "2026-01-23",
+  "recipes": {
+    "3275": {
+      "name": "Linen Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "3276": {
+      "name": "Heavy Linen Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "3277": {
+      "name": "Wool Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "3278": {
+      "name": "Heavy Wool Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "7928": {
+      "name": "Silk Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "7929": {
+      "name": "Heavy Silk Bandage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 16112,
+        "cost": 2200
+      }
+    },
+    "7934": {
+      "name": "Anti-Venom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "7935": {
+      "name": "Strong Anti-Venom",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 6454
+      }
+    },
+    "10840": {
+      "name": "Mageweave Bandage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 16113,
+        "cost": 5000
+      }
+    },
+    "10841": {
+      "name": "Heavy Mageweave Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "18629": {
+      "name": "Runecloth Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "18630": {
+      "name": "Heavy Runecloth Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "23787": {
+      "name": "Powerful Anti-Venom",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "DB2",
+        "itemId": 19442,
+        "factionId": 529,
+        "factionName": "Argent Dawn",
+        "level": "Honored",
+        "cost": 100000
+      }
+    },
+    "27032": {
+      "name": "Netherweave Bandage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 21992,
+        "cost": 20000
+      }
+    },
+    "27033": {
+      "name": "Heavy Netherweave Bandage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 21993,
+        "cost": 40000
+      }
+    },
+    "30021": {
+      "name": "Crystal Infused Bandage",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 23689
+      }
+    }
+  }
+}
