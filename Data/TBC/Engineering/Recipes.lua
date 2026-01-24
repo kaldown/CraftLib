@@ -5,6 +5,142 @@ local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
 local recipes = {
+    -- Crafted Light Shot (0)
+    {
+        id = 3920,
+        name = "Crafted Light Shot",
+        itemId = 8067,
+        skillRequired = 0,
+        skillRange = { orange = 0, yellow = 30, green = 45, gray = 60 },
+        reagents = {
+            { itemId = 4357, name = "Rough Blasting Powder", count = 1 },
+            { itemId = 2840, name = "Copper Bar", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Goblin Mortar (0)
+    {
+        id = 12716,
+        name = "Goblin Mortar",
+        itemId = 10577,
+        skillRequired = 0,
+        skillRange = { orange = 0, yellow = 225, green = 235, gray = 245 },
+        reagents = {
+            { itemId = 10559, name = "Mithril Tube", count = 2 },
+            { itemId = 3860, name = "Mithril Bar", count = 4 },
+            { itemId = 10505, name = "Solid Blasting Powder", count = 5 },
+            { itemId = 10558, name = "Gold Power Core", count = 1 },
+            { itemId = 7068, name = "Elemental Fire", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- The Mortar: Reloaded (0)
+    {
+        id = 13240,
+        name = "The Mortar: Reloaded",
+        itemId = 10577,
+        skillRequired = 0,
+        skillRange = { orange = 0, yellow = 0, green = 0, gray = 205 },
+        reagents = {
+            { itemId = 10577, name = "Goblin Mortar", count = 1 },
+            { itemId = 3860, name = "Mithril Bar", count = 1 },
+            { itemId = 10505, name = "Solid Blasting Powder", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Dimensional Ripper - Everlook (0)
+    {
+        id = 23486,
+        name = "Dimensional Ripper - Everlook",
+        itemId = 18984,
+        skillRequired = 0,
+        skillRange = { orange = 0, yellow = 285, green = 295, gray = 305 },
+        reagents = {
+            { itemId = 3860, name = "Mithril Bar", count = 10 },
+            { itemId = 18631, name = "Truesilver Transformer", count = 1 },
+            { itemId = 7077, name = "Heart of Fire", count = 4 },
+            { itemId = 7910, name = "Star Ruby", count = 2 },
+            { itemId = 10586, name = "The Big One", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Ultrasafe Transporter - Gadgetzan (0)
+    {
+        id = 23489,
+        name = "Ultrasafe Transporter - Gadgetzan",
+        itemId = 18986,
+        skillRequired = 0,
+        skillRange = { orange = 0, yellow = 285, green = 295, gray = 305 },
+        reagents = {
+            { itemId = 3860, name = "Mithril Bar", count = 12 },
+            { itemId = 18631, name = "Truesilver Transformer", count = 2 },
+            { itemId = 7075, name = "Core of Earth", count = 4 },
+            { itemId = 7079, name = "Globe of Water", count = 2 },
+            { itemId = 7909, name = "Aquamarine", count = 4 },
+            { itemId = 9060, name = "Inlaid Mithril Cylinder", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Dimensional Ripper - Area 52 (0)
+    {
+        id = 36954,
+        name = "Dimensional Ripper - Area 52",
+        itemId = 30542,
+        skillRequired = 0,
+        skillRange = { orange = 0, yellow = 350, green = 360, gray = 370 },
+        reagents = {
+            { itemId = 23784, name = "Adamantite Frame", count = 1 },
+            { itemId = 21884, name = "Primal Fire", count = 2 },
+            { itemId = 23826, name = "The Bigger One", count = 2 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
+            { itemId = 23786, name = "Khorium Power Core", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Ultrasafe Transporter - Toshley's Station (0)
+    {
+        id = 36955,
+        name = "Ultrasafe Transporter - Toshley's Station",
+        itemId = 30544,
+        skillRequired = 0,
+        skillRange = { orange = 0, yellow = 350, green = 360, gray = 370 },
+        reagents = {
+            { itemId = 23784, name = "Adamantite Frame", count = 1 },
+            { itemId = 22451, name = "Primal Air", count = 2 },
+            { itemId = 23787, name = "Felsteel Stabilizer", count = 2 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
+            { itemId = 23786, name = "Khorium Power Core", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Rough Blasting Powder (1)
     {
         id = 3918,
@@ -31,41 +167,6 @@ local recipes = {
         reagents = {
             { itemId = 4357, name = "Rough Blasting Powder", count = 2 },
             { itemId = 2589, name = "Linen Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Crafted Light Shot (1)
-    {
-        id = 3920,
-        name = "Crafted Light Shot",
-        itemId = 8067,
-        skillRequired = 1,
-        skillRange = { orange = 1, yellow = 30, green = 45, gray = 60 },
-        reagents = {
-            { itemId = 4357, name = "Rough Blasting Powder", count = 1 },
-            { itemId = 2840, name = "Copper Bar", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- The Mortar: Reloaded (1)
-    {
-        id = 13240,
-        name = "The Mortar: Reloaded",
-        itemId = 10577,
-        skillRequired = 1,
-        skillRange = { orange = 1, yellow = 1, green = 1, gray = 1 },
-        reagents = {
-            { itemId = 10577, name = "Goblin Mortar", count = 1 },
-            { itemId = 3860, name = "Mithril Bar", count = 1 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 3 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -159,41 +260,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Large Copper Bomb (55)
-    {
-        id = 3937,
-        name = "Large Copper Bomb",
-        itemId = 4370,
-        skillRequired = 55,
-        skillRange = { orange = 55, yellow = 105, green = 130, gray = 155 },
-        reagents = {
-            { itemId = 2840, name = "Copper Bar", count = 3 },
-            { itemId = 4364, name = "Coarse Blasting Powder", count = 4 },
-            { itemId = 4404, name = "Silver Contact", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Bronze Tube (55)
-    {
-        id = 3938,
-        name = "Bronze Tube",
-        itemId = 4371,
-        skillRequired = 55,
-        skillRange = { orange = 55, yellow = 105, green = 130, gray = 155 },
-        reagents = {
-            { itemId = 2841, name = "Bronze Bar", count = 2 },
-            { itemId = 2880, name = "Weak Flux", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Crude Scope (60)
     {
         id = 3977,
@@ -223,25 +289,6 @@ local recipes = {
             { itemId = 4359, name = "Handful of Copper Bolts", count = 2 },
             { itemId = 2840, name = "Copper Bar", count = 1 },
             { itemId = 2589, name = "Linen Cloth", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Small Bronze Bomb (70)
-    {
-        id = 3941,
-        name = "Small Bronze Bomb",
-        itemId = 4374,
-        skillRequired = 70,
-        skillRange = { orange = 70, yellow = 120, green = 145, gray = 170 },
-        reagents = {
-            { itemId = 4364, name = "Coarse Blasting Powder", count = 4 },
-            { itemId = 2841, name = "Bronze Bar", count = 2 },
-            { itemId = 4404, name = "Silver Contact", count = 1 },
-            { itemId = 2592, name = "Wool Cloth", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -318,56 +365,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Whirring Bronze Gizmo (75)
-    {
-        id = 3942,
-        name = "Whirring Bronze Gizmo",
-        itemId = 4375,
-        skillRequired = 75,
-        skillRange = { orange = 75, yellow = 125, green = 150, gray = 175 },
-        reagents = {
-            { itemId = 2841, name = "Bronze Bar", count = 2 },
-            { itemId = 2592, name = "Wool Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Flame Deflector (75)
-    {
-        id = 3944,
-        name = "Flame Deflector",
-        itemId = 4376,
-        skillRequired = 75,
-        skillRange = { orange = 75, yellow = 125, green = 150, gray = 175 },
-        reagents = {
-            { itemId = 4375, name = "Whirring Bronze Gizmo", count = 1 },
-            { itemId = 4402, name = "Small Flame Sac", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 4411,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Silver Contact (80)
-    {
-        id = 3973,
-        name = "Silver Contact",
-        itemId = 4404,
-        skillRequired = 80,
-        skillRange = { orange = 80, yellow = 110, green = 125, gray = 140 },
-        reagents = {
-            { itemId = 2842, name = "Silver Bar", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Target Dummy (85)
     {
         id = 3932,
@@ -387,35 +384,15 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Big Bronze Bomb (90)
+    -- Silver Contact (90)
     {
-        id = 3950,
-        name = "Big Bronze Bomb",
-        itemId = 4380,
+        id = 3973,
+        name = "Silver Contact",
+        itemId = 4404,
         skillRequired = 90,
-        skillRange = { orange = 90, yellow = 140, green = 165, gray = 190 },
+        skillRange = { orange = 90, yellow = 110, green = 125, gray = 140 },
         reagents = {
-            { itemId = 4377, name = "Heavy Blasting Powder", count = 2 },
-            { itemId = 2841, name = "Bronze Bar", count = 3 },
-            { itemId = 4404, name = "Silver Contact", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Bronze Framework (95)
-    {
-        id = 3953,
-        name = "Bronze Framework",
-        itemId = 4382,
-        skillRequired = 95,
-        skillRange = { orange = 95, yellow = 145, green = 170, gray = 195 },
-        reagents = {
-            { itemId = 2841, name = "Bronze Bar", count = 2 },
-            { itemId = 2319, name = "Medium Leather", count = 1 },
-            { itemId = 2592, name = "Wool Cloth", count = 1 },
+            { itemId = 2842, name = "Silver Bar", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -494,57 +471,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Small Blue Rocket (100)
-    {
-        id = 26416,
-        name = "Small Blue Rocket",
-        itemId = 21558,
-        skillRequired = 100,
-        skillRange = { orange = 100, yellow = 125, green = 137, gray = 150 },
-        reagents = {
-            { itemId = 4364, name = "Coarse Blasting Powder", count = 1 },
-            { itemId = 2319, name = "Medium Leather", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 21724,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Small Green Rocket (100)
-    {
-        id = 26417,
-        name = "Small Green Rocket",
-        itemId = 21559,
-        skillRequired = 100,
-        skillRange = { orange = 100, yellow = 125, green = 137, gray = 150 },
-        reagents = {
-            { itemId = 4364, name = "Coarse Blasting Powder", count = 1 },
-            { itemId = 2319, name = "Medium Leather", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 21725,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Small Red Rocket (100)
-    {
-        id = 26418,
-        name = "Small Red Rocket",
-        itemId = 21557,
-        skillRequired = 100,
-        skillRange = { orange = 100, yellow = 125, green = 137, gray = 150 },
-        reagents = {
-            { itemId = 4364, name = "Coarse Blasting Powder", count = 1 },
-            { itemId = 2319, name = "Medium Leather", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 21726,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Deadly Blunderbuss (105)
     {
         id = 3936,
@@ -564,15 +490,17 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Heavy Blasting Powder (105)
+    -- Large Copper Bomb (105)
     {
-        id = 3945,
-        name = "Heavy Blasting Powder",
-        itemId = 4377,
+        id = 3937,
+        name = "Large Copper Bomb",
+        itemId = 4370,
         skillRequired = 105,
-        skillRange = { orange = 105, yellow = 125, green = 135, gray = 145 },
+        skillRange = { orange = 105, yellow = 105, green = 130, gray = 155 },
         reagents = {
-            { itemId = 2838, name = "Heavy Stone", count = 1 },
+            { itemId = 2840, name = "Copper Bar", count = 3 },
+            { itemId = 4364, name = "Coarse Blasting Powder", count = 4 },
+            { itemId = 4404, name = "Silver Contact", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -580,33 +508,16 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Heavy Dynamite (105)
+    -- Bronze Tube (105)
     {
-        id = 3946,
-        name = "Heavy Dynamite",
-        itemId = 4378,
+        id = 3938,
+        name = "Bronze Tube",
+        itemId = 4371,
         skillRequired = 105,
-        skillRange = { orange = 105, yellow = 125, green = 135, gray = 145 },
+        skillRange = { orange = 105, yellow = 105, green = 130, gray = 155 },
         reagents = {
-            { itemId = 4377, name = "Heavy Blasting Powder", count = 2 },
-            { itemId = 2592, name = "Wool Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Crafted Solid Shot (105)
-    {
-        id = 3947,
-        name = "Crafted Solid Shot",
-        itemId = 8069,
-        skillRequired = 105,
-        skillRange = { orange = 105, yellow = 125, green = 135, gray = 145 },
-        reagents = {
-            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
-            { itemId = 2841, name = "Bronze Bar", count = 1 },
+            { itemId = 2841, name = "Bronze Bar", count = 2 },
+            { itemId = 2880, name = "Weak Flux", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -624,22 +535,6 @@ local recipes = {
         reagents = {
             { itemId = 4371, name = "Bronze Tube", count = 1 },
             { itemId = 1206, name = "Moss Agate", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Gold Power Core (110)
-    {
-        id = 12584,
-        name = "Gold Power Core",
-        itemId = 10558,
-        skillRequired = 110,
-        skillRange = { orange = 110, yellow = 150, green = 170, gray = 190 },
-        reagents = {
-            { itemId = 3577, name = "Gold Bar", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -684,24 +579,106 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Goblin Jumper Cables (120)
+    -- Small Bronze Bomb (120)
     {
-        id = 9273,
-        name = "Goblin Jumper Cables",
-        itemId = 7148,
+        id = 3941,
+        name = "Small Bronze Bomb",
+        itemId = 4374,
         skillRequired = 120,
-        skillRange = { orange = 120, yellow = 160, green = 180, gray = 200 },
+        skillRange = { orange = 120, yellow = 120, green = 145, gray = 170 },
         reagents = {
-            { itemId = 3575, name = "Iron Bar", count = 6 },
-            { itemId = 4375, name = "Whirring Bronze Gizmo", count = 2 },
-            { itemId = 814, name = "Flask of Oil", count = 2 },
-            { itemId = 4306, name = "Silk Cloth", count = 2 },
-            { itemId = 1210, name = "Shadowgem", count = 2 },
-            { itemId = 7191, name = "Fused Wiring", count = 1 },
+            { itemId = 4364, name = "Coarse Blasting Powder", count = 4 },
+            { itemId = 2841, name = "Bronze Bar", count = 2 },
+            { itemId = 4404, name = "Silver Contact", count = 1 },
+            { itemId = 2592, name = "Wool Cloth", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Whirring Bronze Gizmo (125)
+    {
+        id = 3942,
+        name = "Whirring Bronze Gizmo",
+        itemId = 4375,
+        skillRequired = 125,
+        skillRange = { orange = 125, yellow = 125, green = 150, gray = 175 },
+        reagents = {
+            { itemId = 2841, name = "Bronze Bar", count = 2 },
+            { itemId = 2592, name = "Wool Cloth", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Flame Deflector (125)
+    {
+        id = 3944,
+        name = "Flame Deflector",
+        itemId = 4376,
+        skillRequired = 125,
+        skillRange = { orange = 125, yellow = 125, green = 150, gray = 175 },
+        reagents = {
+            { itemId = 4375, name = "Whirring Bronze Gizmo", count = 1 },
+            { itemId = 4402, name = "Small Flame Sac", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.DROP,
-            itemId = 7561,
+            itemId = 4411,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Heavy Blasting Powder (125)
+    {
+        id = 3945,
+        name = "Heavy Blasting Powder",
+        itemId = 4377,
+        skillRequired = 125,
+        skillRange = { orange = 125, yellow = 125, green = 135, gray = 145 },
+        reagents = {
+            { itemId = 2838, name = "Heavy Stone", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Heavy Dynamite (125)
+    {
+        id = 3946,
+        name = "Heavy Dynamite",
+        itemId = 4378,
+        skillRequired = 125,
+        skillRange = { orange = 125, yellow = 125, green = 135, gray = 145 },
+        reagents = {
+            { itemId = 4377, name = "Heavy Blasting Powder", count = 2 },
+            { itemId = 2592, name = "Wool Cloth", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Crafted Solid Shot (125)
+    {
+        id = 3947,
+        name = "Crafted Solid Shot",
+        itemId = 8069,
+        skillRequired = 125,
+        skillRange = { orange = 125, yellow = 125, green = 135, gray = 145 },
+        reagents = {
+            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
+            { itemId = 2841, name = "Bronze Bar", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -725,57 +702,54 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Red Firework (125)
+    -- Small Blue Rocket (125)
     {
-        id = 23066,
-        name = "Red Firework",
-        itemId = 9318,
+        id = 26416,
+        name = "Small Blue Rocket",
+        itemId = 21558,
         skillRequired = 125,
-        skillRange = { orange = 125, yellow = 150, green = 162, gray = 175 },
+        skillRange = { orange = 125, yellow = 125, green = 137, gray = 150 },
         reagents = {
-            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
-            { itemId = 4234, name = "Heavy Leather", count = 1 },
+            { itemId = 4364, name = "Coarse Blasting Powder", count = 1 },
+            { itemId = 2319, name = "Medium Leather", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 18647,
-            cost = 1800,
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21724,
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Blue Firework (125)
+    -- Small Green Rocket (125)
     {
-        id = 23067,
-        name = "Blue Firework",
-        itemId = 9312,
+        id = 26417,
+        name = "Small Green Rocket",
+        itemId = 21559,
         skillRequired = 125,
-        skillRange = { orange = 125, yellow = 150, green = 162, gray = 175 },
+        skillRange = { orange = 125, yellow = 125, green = 137, gray = 150 },
         reagents = {
-            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
-            { itemId = 4234, name = "Heavy Leather", count = 1 },
+            { itemId = 4364, name = "Coarse Blasting Powder", count = 1 },
+            { itemId = 2319, name = "Medium Leather", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 18649,
-            cost = 1800,
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21725,
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Green Firework (125)
+    -- Small Red Rocket (125)
     {
-        id = 23068,
-        name = "Green Firework",
-        itemId = 9313,
+        id = 26418,
+        name = "Small Red Rocket",
+        itemId = 21557,
         skillRequired = 125,
-        skillRange = { orange = 125, yellow = 150, green = 162, gray = 175 },
+        skillRange = { orange = 125, yellow = 125, green = 137, gray = 150 },
         reagents = {
-            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
-            { itemId = 4234, name = "Heavy Leather", count = 1 },
+            { itemId = 4364, name = "Coarse Blasting Powder", count = 1 },
+            { itemId = 2319, name = "Medium Leather", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 18648,
-            cost = 1800,
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21726,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -791,78 +765,6 @@ local recipes = {
             { itemId = 4375, name = "Whirring Bronze Gizmo", count = 2 },
             { itemId = 4400, name = "Heavy Stock", count = 1 },
             { itemId = 2842, name = "Silver Bar", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Gyrochronatom (130)
-    {
-        id = 3961,
-        name = "Gyrochronatom",
-        itemId = 4389,
-        skillRequired = 130,
-        skillRange = { orange = 130, yellow = 170, green = 190, gray = 210 },
-        reagents = {
-            { itemId = 3575, name = "Iron Bar", count = 1 },
-            { itemId = 10558, name = "Gold Power Core", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Aquadynamic Fish Attractor (130)
-    {
-        id = 9271,
-        name = "Aquadynamic Fish Attractor",
-        itemId = 6533,
-        skillRequired = 130,
-        skillRange = { orange = 130, yellow = 150, green = 160, gray = 170 },
-        reagents = {
-            { itemId = 2841, name = "Bronze Bar", count = 2 },
-            { itemId = 6530, name = "Nightcrawlers", count = 1 },
-            { itemId = 4364, name = "Coarse Blasting Powder", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Iron Grenade (135)
-    {
-        id = 3962,
-        name = "Iron Grenade",
-        itemId = 4390,
-        skillRequired = 135,
-        skillRange = { orange = 135, yellow = 175, green = 195, gray = 215 },
-        reagents = {
-            { itemId = 3575, name = "Iron Bar", count = 1 },
-            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
-            { itemId = 4306, name = "Silk Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Compact Harvest Reaper Kit (135)
-    {
-        id = 3963,
-        name = "Compact Harvest Reaper Kit",
-        itemId = 4391,
-        skillRequired = 135,
-        skillRange = { orange = 135, yellow = 175, green = 195, gray = 215 },
-        reagents = {
-            { itemId = 4387, name = "Iron Strut", count = 2 },
-            { itemId = 4382, name = "Bronze Framework", count = 1 },
-            { itemId = 4389, name = "Gyrochronatom", count = 2 },
-            { itemId = 4234, name = "Heavy Leather", count = 4 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -889,15 +791,17 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Gyromatic Micro-Adjustor (135)
+    -- Big Bronze Bomb (140)
     {
-        id = 12590,
-        name = "Gyromatic Micro-Adjustor",
-        itemId = 10498,
-        skillRequired = 135,
-        skillRange = { orange = 135, yellow = 175, green = 195, gray = 215 },
+        id = 3950,
+        name = "Big Bronze Bomb",
+        itemId = 4380,
+        skillRequired = 140,
+        skillRange = { orange = 140, yellow = 140, green = 165, gray = 190 },
         reagents = {
-            { itemId = 3859, name = "Steel Bar", count = 4 },
+            { itemId = 4377, name = "Heavy Blasting Powder", count = 2 },
+            { itemId = 2841, name = "Bronze Bar", count = 3 },
+            { itemId = 4404, name = "Silver Contact", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -925,15 +829,17 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Iron Strut (140)
+    -- Bronze Framework (145)
     {
-        id = 3958,
-        name = "Iron Strut",
-        itemId = 4387,
-        skillRequired = 140,
-        skillRange = { orange = 140, yellow = 160, green = 170, gray = 180 },
+        id = 3953,
+        name = "Bronze Framework",
+        itemId = 4382,
+        skillRequired = 145,
+        skillRange = { orange = 145, yellow = 145, green = 170, gray = 195 },
         reagents = {
-            { itemId = 3575, name = "Iron Bar", count = 2 },
+            { itemId = 2841, name = "Bronze Bar", count = 2 },
+            { itemId = 2319, name = "Medium Leather", count = 1 },
+            { itemId = 2592, name = "Wool Cloth", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -957,43 +863,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 4412,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Advanced Target Dummy (145)
-    {
-        id = 3965,
-        name = "Advanced Target Dummy",
-        itemId = 4392,
-        skillRequired = 145,
-        skillRange = { orange = 145, yellow = 185, green = 205, gray = 225 },
-        reagents = {
-            { itemId = 4387, name = "Iron Strut", count = 1 },
-            { itemId = 4382, name = "Bronze Framework", count = 1 },
-            { itemId = 4389, name = "Gyrochronatom", count = 1 },
-            { itemId = 4234, name = "Heavy Leather", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Flash Bomb (145)
-    {
-        id = 8243,
-        name = "Flash Bomb",
-        itemId = 4852,
-        skillRequired = 145,
-        skillRange = { orange = 145, yellow = 185, green = 205, gray = 225 },
-        reagents = {
-            { itemId = 4611, name = "Blue Pearl", count = 1 },
-            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
-            { itemId = 4306, name = "Silk Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 6672,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1034,17 +903,17 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Big Iron Bomb (150)
+    -- Aquadynamic Fish Attractor (150)
     {
-        id = 3967,
-        name = "Big Iron Bomb",
-        itemId = 4394,
+        id = 9271,
+        name = "Aquadynamic Fish Attractor",
+        itemId = 6533,
         skillRequired = 150,
-        skillRange = { orange = 150, yellow = 190, green = 210, gray = 230 },
+        skillRange = { orange = 150, yellow = 150, green = 160, gray = 170 },
         reagents = {
-            { itemId = 3575, name = "Iron Bar", count = 3 },
-            { itemId = 4377, name = "Heavy Blasting Powder", count = 3 },
-            { itemId = 4404, name = "Silver Contact", count = 1 },
+            { itemId = 2841, name = "Bronze Bar", count = 2 },
+            { itemId = 6530, name = "Nightcrawlers", count = 1 },
+            { itemId = 4364, name = "Coarse Blasting Powder", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -1052,73 +921,73 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Snowmaster 9000 (150)
+    -- Gold Power Core (150)
     {
-        id = 21940,
-        name = "Snowmaster 9000",
-        itemId = 17716,
+        id = 12584,
+        name = "Gold Power Core",
+        itemId = 10558,
         skillRequired = 150,
-        skillRange = { orange = 150, yellow = 190, green = 210, gray = 230 },
+        skillRange = { orange = 150, yellow = 150, green = 170, gray = 190 },
         reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 8 },
-            { itemId = 4389, name = "Gyrochronatom", count = 4 },
-            { itemId = 17202, name = "Snowball", count = 4 },
-            { itemId = 3829, name = "Frost Oil", count = 1 },
+            { itemId = 3577, name = "Gold Bar", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 17720,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Large Blue Rocket (150)
+    -- Red Firework (150)
     {
-        id = 26420,
-        name = "Large Blue Rocket",
-        itemId = 21589,
+        id = 23066,
+        name = "Red Firework",
+        itemId = 9318,
         skillRequired = 150,
-        skillRange = { orange = 150, yellow = 175, green = 187, gray = 200 },
+        skillRange = { orange = 150, yellow = 150, green = 162, gray = 175 },
         reagents = {
             { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
             { itemId = 4234, name = "Heavy Leather", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 21727,
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 18647,
+            cost = 1800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Large Green Rocket (150)
+    -- Blue Firework (150)
     {
-        id = 26421,
-        name = "Large Green Rocket",
-        itemId = 21590,
+        id = 23067,
+        name = "Blue Firework",
+        itemId = 9312,
         skillRequired = 150,
-        skillRange = { orange = 150, yellow = 175, green = 187, gray = 200 },
+        skillRange = { orange = 150, yellow = 150, green = 162, gray = 175 },
         reagents = {
             { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
             { itemId = 4234, name = "Heavy Leather", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 21728,
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 18649,
+            cost = 1800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Large Red Rocket (150)
+    -- Green Firework (150)
     {
-        id = 26422,
-        name = "Large Red Rocket",
-        itemId = 21592,
+        id = 23068,
+        name = "Green Firework",
+        itemId = 9313,
         skillRequired = 150,
-        skillRange = { orange = 150, yellow = 175, green = 187, gray = 200 },
+        skillRange = { orange = 150, yellow = 150, green = 162, gray = 175 },
         reagents = {
             { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
             { itemId = 4234, name = "Heavy Leather", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 21729,
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 18648,
+            cost = 1800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1140,48 +1009,15 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Solid Blasting Powder (155)
+    -- Iron Strut (160)
     {
-        id = 12585,
-        name = "Solid Blasting Powder",
-        itemId = 10505,
-        skillRequired = 155,
-        skillRange = { orange = 155, yellow = 175, green = 185, gray = 195 },
+        id = 3958,
+        name = "Iron Strut",
+        itemId = 4387,
+        skillRequired = 160,
+        skillRange = { orange = 160, yellow = 160, green = 170, gray = 180 },
         reagents = {
-            { itemId = 7912, name = "Solid Stone", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Solid Dynamite (155)
-    {
-        id = 12586,
-        name = "Solid Dynamite",
-        itemId = 10507,
-        skillRequired = 155,
-        skillRange = { orange = 155, yellow = 175, green = 185, gray = 195 },
-        reagents = {
-            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
-            { itemId = 4306, name = "Silk Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Mithril Tube (155)
-    {
-        id = 12589,
-        name = "Mithril Tube",
-        itemId = 10559,
-        skillRequired = 155,
-        skillRange = { orange = 155, yellow = 195, green = 215, gray = 235 },
-        reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 3 },
+            { itemId = 3575, name = "Iron Bar", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -1208,60 +1044,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Large Seaforium Charge (160)
-    {
-        id = 3972,
-        name = "Large Seaforium Charge",
-        itemId = 4398,
-        skillRequired = 160,
-        skillRange = { orange = 160, yellow = 200, green = 220, gray = 240 },
-        reagents = {
-            { itemId = 10505, name = "Solid Blasting Powder", count = 2 },
-            { itemId = 4234, name = "Heavy Leather", count = 2 },
-            { itemId = 159, name = "Refreshing Spring Water", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 4417,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Unstable Trigger (160)
-    {
-        id = 12591,
-        name = "Unstable Trigger",
-        itemId = 10560,
-        skillRequired = 160,
-        skillRange = { orange = 160, yellow = 200, green = 220, gray = 240 },
-        reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 1 },
-            { itemId = 4338, name = "Mageweave Cloth", count = 1 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Mechanical Repair Kit (160)
-    {
-        id = 15255,
-        name = "Mechanical Repair Kit",
-        itemId = 11590,
-        skillRequired = 160,
-        skillRange = { orange = 160, yellow = 200, green = 220, gray = 240 },
-        reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 1 },
-            { itemId = 4338, name = "Mageweave Cloth", count = 1 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Portable Bronze Mortar (165)
     {
         id = 3960,
@@ -1281,21 +1063,24 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Goblin Sapper Charge (165)
+    -- Goblin Jumper Cables (165)
     {
-        id = 12760,
-        name = "Goblin Sapper Charge",
-        itemId = 10646,
+        id = 9273,
+        name = "Goblin Jumper Cables",
+        itemId = 7148,
         skillRequired = 165,
-        skillRange = { orange = 165, yellow = 205, green = 225, gray = 245 },
+        skillRange = { orange = 165, yellow = 165, green = 180, gray = 200 },
         reagents = {
-            { itemId = 4338, name = "Mageweave Cloth", count = 1 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 3 },
-            { itemId = 10560, name = "Unstable Trigger", count = 1 },
+            { itemId = 3575, name = "Iron Bar", count = 6 },
+            { itemId = 4375, name = "Whirring Bronze Gizmo", count = 2 },
+            { itemId = 814, name = "Flask of Oil", count = 2 },
+            { itemId = 4306, name = "Silk Cloth", count = 2 },
+            { itemId = 1210, name = "Shadowgem", count = 2 },
+            { itemId = 7191, name = "Fused Wiring", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 7561,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1317,16 +1102,16 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Hi-Impact Mithril Slugs (170)
+    -- Gyrochronatom (170)
     {
-        id = 12596,
-        name = "Hi-Impact Mithril Slugs",
-        itemId = 10512,
+        id = 3961,
+        name = "Gyrochronatom",
+        itemId = 4389,
         skillRequired = 170,
-        skillRange = { orange = 170, yellow = 210, green = 230, gray = 250 },
+        skillRange = { orange = 170, yellow = 170, green = 190, gray = 210 },
         reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 1 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
+            { itemId = 3575, name = "Iron Bar", count = 1 },
+            { itemId = 10558, name = "Gold Power Core", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -1352,6 +1137,76 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Iron Grenade (175)
+    {
+        id = 3962,
+        name = "Iron Grenade",
+        itemId = 4390,
+        skillRequired = 175,
+        skillRange = { orange = 175, yellow = 175, green = 195, gray = 215 },
+        reagents = {
+            { itemId = 3575, name = "Iron Bar", count = 1 },
+            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
+            { itemId = 4306, name = "Silk Cloth", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Compact Harvest Reaper Kit (175)
+    {
+        id = 3963,
+        name = "Compact Harvest Reaper Kit",
+        itemId = 4391,
+        skillRequired = 175,
+        skillRange = { orange = 175, yellow = 175, green = 195, gray = 215 },
+        reagents = {
+            { itemId = 4387, name = "Iron Strut", count = 2 },
+            { itemId = 4382, name = "Bronze Framework", count = 1 },
+            { itemId = 4389, name = "Gyrochronatom", count = 2 },
+            { itemId = 4234, name = "Heavy Leather", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Solid Blasting Powder (175)
+    {
+        id = 12585,
+        name = "Solid Blasting Powder",
+        itemId = 10505,
+        skillRequired = 175,
+        skillRange = { orange = 175, yellow = 175, green = 185, gray = 195 },
+        reagents = {
+            { itemId = 7912, name = "Solid Stone", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Solid Dynamite (175)
+    {
+        id = 12586,
+        name = "Solid Dynamite",
+        itemId = 10507,
+        skillRequired = 175,
+        skillRange = { orange = 175, yellow = 175, green = 185, gray = 195 },
+        reagents = {
+            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
+            { itemId = 4306, name = "Silk Cloth", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Bright-Eye Goggles (175)
     {
         id = 12587,
@@ -1369,15 +1224,15 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Mithril Casing (175)
+    -- Gyromatic Micro-Adjustor (175)
     {
-        id = 12599,
-        name = "Mithril Casing",
-        itemId = 10561,
+        id = 12590,
+        name = "Gyromatic Micro-Adjustor",
+        itemId = 10498,
         skillRequired = 175,
-        skillRange = { orange = 175, yellow = 215, green = 235, gray = 255 },
+        skillRange = { orange = 175, yellow = 175, green = 195, gray = 215 },
         reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 3 },
+            { itemId = 3859, name = "Steel Bar", count = 4 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -1385,21 +1240,54 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Mithril Frag Bomb (175)
+    -- Large Blue Rocket (175)
     {
-        id = 12603,
-        name = "Mithril Frag Bomb",
-        itemId = 10514,
+        id = 26420,
+        name = "Large Blue Rocket",
+        itemId = 21589,
         skillRequired = 175,
-        skillRange = { orange = 175, yellow = 215, green = 235, gray = 255 },
+        skillRange = { orange = 175, yellow = 175, green = 187, gray = 200 },
         reagents = {
-            { itemId = 10561, name = "Mithril Casing", count = 1 },
-            { itemId = 10560, name = "Unstable Trigger", count = 1 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
+            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
+            { itemId = 4234, name = "Heavy Leather", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21727,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Large Green Rocket (175)
+    {
+        id = 26421,
+        name = "Large Green Rocket",
+        itemId = 21590,
+        skillRequired = 175,
+        skillRange = { orange = 175, yellow = 175, green = 187, gray = 200 },
+        reagents = {
+            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
+            { itemId = 4234, name = "Heavy Leather", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21728,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Large Red Rocket (175)
+    {
+        id = 26422,
+        name = "Large Red Rocket",
+        itemId = 21592,
+        skillRequired = 175,
+        skillRange = { orange = 175, yellow = 175, green = 187, gray = 200 },
+        reagents = {
+            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
+            { itemId = 4234, name = "Heavy Leather", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21729,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1422,21 +1310,22 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- EZ-Thro Dynamite II (180)
+    -- Advanced Target Dummy (185)
     {
-        id = 23069,
-        name = "EZ-Thro Dynamite II",
-        itemId = 18588,
-        skillRequired = 180,
-        skillRange = { orange = 180, yellow = 200, green = 210, gray = 220 },
+        id = 3965,
+        name = "Advanced Target Dummy",
+        itemId = 4392,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
         reagents = {
-            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
-            { itemId = 4338, name = "Mageweave Cloth", count = 2 },
+            { itemId = 4387, name = "Iron Strut", count = 1 },
+            { itemId = 4382, name = "Bronze Framework", count = 1 },
+            { itemId = 4389, name = "Gyrochronatom", count = 1 },
+            { itemId = 4234, name = "Heavy Leather", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 18650,
-            cost = 5000,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1457,23 +1346,94 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Goblin Bomb Dispenser (190)
+    -- Flash Bomb (185)
     {
-        id = 12755,
-        name = "Goblin Bomb Dispenser",
-        itemId = 10587,
-        skillRequired = 190,
-        skillRange = { orange = 190, yellow = 230, green = 250, gray = 270 },
+        id = 8243,
+        name = "Flash Bomb",
+        itemId = 4852,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
         reagents = {
-            { itemId = 10561, name = "Mithril Casing", count = 2 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 4 },
-            { itemId = 6037, name = "Truesilver Bar", count = 6 },
-            { itemId = 10560, name = "Unstable Trigger", count = 1 },
-            { itemId = 4407, name = "Accurate Scope", count = 2 },
+            { itemId = 4611, name = "Blue Pearl", count = 1 },
+            { itemId = 4377, name = "Heavy Blasting Powder", count = 1 },
+            { itemId = 4306, name = "Silk Cloth", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 6672,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Fel Iron Bomb (185)
+    {
+        id = 30310,
+        name = "Fel Iron Bomb",
+        itemId = 23736,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
+            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Adamantite Grenade (185)
+    {
+        id = 30311,
+        name = "Adamantite Grenade",
+        itemId = 23737,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 23446, name = "Adamantite Bar", count = 4 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
+            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Big Iron Bomb (190)
+    {
+        id = 3967,
+        name = "Big Iron Bomb",
+        itemId = 4394,
+        skillRequired = 190,
+        skillRange = { orange = 190, yellow = 190, green = 210, gray = 230 },
+        reagents = {
+            { itemId = 3575, name = "Iron Bar", count = 3 },
+            { itemId = 4377, name = "Heavy Blasting Powder", count = 3 },
+            { itemId = 4404, name = "Silver Contact", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Snowmaster 9000 (190)
+    {
+        id = 21940,
+        name = "Snowmaster 9000",
+        itemId = 17716,
+        skillRequired = 190,
+        skillRange = { orange = 190, yellow = 190, green = 210, gray = 230 },
+        reagents = {
+            { itemId = 3860, name = "Mithril Bar", count = 8 },
+            { itemId = 4389, name = "Gyrochronatom", count = 4 },
+            { itemId = 17202, name = "Snowball", count = 4 },
+            { itemId = 3829, name = "Frost Oil", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 17720,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1495,36 +1455,15 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Hi-Explosive Bomb (195)
+    -- Mithril Tube (195)
     {
-        id = 12619,
-        name = "Hi-Explosive Bomb",
-        itemId = 10562,
+        id = 12589,
+        name = "Mithril Tube",
+        itemId = 10559,
         skillRequired = 195,
-        skillRange = { orange = 195, yellow = 235, green = 255, gray = 275 },
+        skillRange = { orange = 195, yellow = 195, green = 215, gray = 235 },
         reagents = {
-            { itemId = 10561, name = "Mithril Casing", count = 2 },
-            { itemId = 10560, name = "Unstable Trigger", count = 1 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- The Big One (195)
-    {
-        id = 12754,
-        name = "The Big One",
-        itemId = 10586,
-        skillRequired = 195,
-        skillRange = { orange = 195, yellow = 235, green = 255, gray = 275 },
-        reagents = {
-            { itemId = 10561, name = "Mithril Casing", count = 1 },
-            { itemId = 9061, name = "Goblin Rocket Fuel", count = 1 },
-            { itemId = 10507, name = "Solid Dynamite", count = 6 },
-            { itemId = 10560, name = "Unstable Trigger", count = 1 },
+            { itemId = 3860, name = "Mithril Bar", count = 3 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -1573,54 +1512,75 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Blue Rocket Cluster (200)
+    -- Large Seaforium Charge (200)
     {
-        id = 26423,
-        name = "Blue Rocket Cluster",
-        itemId = 21571,
+        id = 3972,
+        name = "Large Seaforium Charge",
+        itemId = 4398,
         skillRequired = 200,
-        skillRange = { orange = 200, yellow = 225, green = 237, gray = 250 },
+        skillRange = { orange = 200, yellow = 200, green = 220, gray = 240 },
         reagents = {
-            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
-            { itemId = 4304, name = "Thick Leather", count = 1 },
+            { itemId = 10505, name = "Solid Blasting Powder", count = 2 },
+            { itemId = 4234, name = "Heavy Leather", count = 2 },
+            { itemId = 159, name = "Refreshing Spring Water", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.DROP,
-            itemId = 21730,
+            itemId = 4417,
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Green Rocket Cluster (200)
+    -- Unstable Trigger (200)
     {
-        id = 26424,
-        name = "Green Rocket Cluster",
-        itemId = 21574,
+        id = 12591,
+        name = "Unstable Trigger",
+        itemId = 10560,
         skillRequired = 200,
-        skillRange = { orange = 200, yellow = 225, green = 237, gray = 250 },
+        skillRange = { orange = 200, yellow = 200, green = 220, gray = 240 },
         reagents = {
+            { itemId = 3860, name = "Mithril Bar", count = 1 },
+            { itemId = 4338, name = "Mageweave Cloth", count = 1 },
             { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
-            { itemId = 4304, name = "Thick Leather", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 21731,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Red Rocket Cluster (200)
+    -- Mechanical Repair Kit (200)
     {
-        id = 26425,
-        name = "Red Rocket Cluster",
-        itemId = 21576,
+        id = 15255,
+        name = "Mechanical Repair Kit",
+        itemId = 11590,
         skillRequired = 200,
-        skillRange = { orange = 200, yellow = 225, green = 237, gray = 250 },
+        skillRange = { orange = 200, yellow = 200, green = 220, gray = 240 },
         reagents = {
+            { itemId = 3860, name = "Mithril Bar", count = 1 },
+            { itemId = 4338, name = "Mageweave Cloth", count = 1 },
             { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
-            { itemId = 4304, name = "Thick Leather", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 21732,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- EZ-Thro Dynamite II (200)
+    {
+        id = 23069,
+        name = "EZ-Thro Dynamite II",
+        itemId = 18588,
+        skillRequired = 200,
+        skillRange = { orange = 200, yellow = 200, green = 210, gray = 220 },
+        reagents = {
+            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
+            { itemId = 4338, name = "Mageweave Cloth", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 18650,
+            cost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1663,23 +1623,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Mithril Gyro-Shot (205)
-    {
-        id = 12621,
-        name = "Mithril Gyro-Shot",
-        itemId = 10513,
-        skillRequired = 205,
-        skillRange = { orange = 205, yellow = 245, green = 265, gray = 285 },
-        reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 2 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Goblin Rocket Fuel Recipe (205)
     {
         id = 12715,
@@ -1690,26 +1633,6 @@ local recipes = {
         reagents = {
             { itemId = 10648, name = "Blank Parchment", count = 1 },
             { itemId = 10647, name = "Engineer's Ink", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Goblin Mortar (205)
-    {
-        id = 12716,
-        name = "Goblin Mortar",
-        itemId = 10577,
-        skillRequired = 205,
-        skillRange = { orange = 205, yellow = 225, green = 235, gray = 245 },
-        reagents = {
-            { itemId = 10559, name = "Mithril Tube", count = 2 },
-            { itemId = 3860, name = "Mithril Bar", count = 4 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 5 },
-            { itemId = 10558, name = "Gold Power Core", count = 1 },
-            { itemId = 7068, name = "Elemental Fire", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -1746,6 +1669,24 @@ local recipes = {
             { itemId = 3860, name = "Mithril Bar", count = 8 },
             { itemId = 3864, name = "Citrine", count = 1 },
             { itemId = 7068, name = "Elemental Fire", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Goblin Sapper Charge (205)
+    {
+        id = 12760,
+        name = "Goblin Sapper Charge",
+        itemId = 10646,
+        skillRequired = 205,
+        skillRange = { orange = 205, yellow = 205, green = 225, gray = 245 },
+        reagents = {
+            { itemId = 4338, name = "Mageweave Cloth", count = 1 },
+            { itemId = 10505, name = "Solid Blasting Powder", count = 3 },
+            { itemId = 10560, name = "Unstable Trigger", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -1829,6 +1770,23 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Hi-Impact Mithril Slugs (210)
+    {
+        id = 12596,
+        name = "Hi-Impact Mithril Slugs",
+        itemId = 10512,
+        skillRequired = 210,
+        skillRange = { orange = 210, yellow = 210, green = 230, gray = 250 },
+        reagents = {
+            { itemId = 3860, name = "Mithril Bar", count = 1 },
+            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Deadly Scope (210)
     {
         id = 12597,
@@ -1881,6 +1839,40 @@ local recipes = {
             { itemId = 4337, name = "Thick Spider's Silk", count = 4 },
             { itemId = 10505, name = "Solid Blasting Powder", count = 2 },
             { itemId = 3860, name = "Mithril Bar", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Mithril Casing (215)
+    {
+        id = 12599,
+        name = "Mithril Casing",
+        itemId = 10561,
+        skillRequired = 215,
+        skillRange = { orange = 215, yellow = 215, green = 235, gray = 255 },
+        reagents = {
+            { itemId = 3860, name = "Mithril Bar", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Mithril Frag Bomb (215)
+    {
+        id = 12603,
+        name = "Mithril Frag Bomb",
+        itemId = 10514,
+        skillRequired = 215,
+        skillRange = { orange = 215, yellow = 215, green = 235, gray = 255 },
+        reagents = {
+            { itemId = 10561, name = "Mithril Casing", count = 1 },
+            { itemId = 10560, name = "Unstable Trigger", count = 1 },
+            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -2079,6 +2071,57 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Blue Rocket Cluster (225)
+    {
+        id = 26423,
+        name = "Blue Rocket Cluster",
+        itemId = 21571,
+        skillRequired = 225,
+        skillRange = { orange = 225, yellow = 225, green = 237, gray = 250 },
+        reagents = {
+            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
+            { itemId = 4304, name = "Thick Leather", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21730,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Green Rocket Cluster (225)
+    {
+        id = 26424,
+        name = "Green Rocket Cluster",
+        itemId = 21574,
+        skillRequired = 225,
+        skillRange = { orange = 225, yellow = 225, green = 237, gray = 250 },
+        reagents = {
+            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
+            { itemId = 4304, name = "Thick Leather", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21731,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Red Rocket Cluster (225)
+    {
+        id = 26425,
+        name = "Red Rocket Cluster",
+        itemId = 21576,
+        skillRequired = 225,
+        skillRange = { orange = 225, yellow = 225, green = 237, gray = 250 },
+        reagents = {
+            { itemId = 10505, name = "Solid Blasting Powder", count = 1 },
+            { itemId = 4304, name = "Thick Leather", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21732,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Firework Launcher (225)
     {
         id = 26442,
@@ -2136,6 +2179,26 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Goblin Bomb Dispenser (230)
+    {
+        id = 12755,
+        name = "Goblin Bomb Dispenser",
+        itemId = 10587,
+        skillRequired = 230,
+        skillRange = { orange = 230, yellow = 230, green = 250, gray = 270 },
+        reagents = {
+            { itemId = 10561, name = "Mithril Casing", count = 2 },
+            { itemId = 10505, name = "Solid Blasting Powder", count = 4 },
+            { itemId = 6037, name = "Truesilver Bar", count = 6 },
+            { itemId = 10560, name = "Unstable Trigger", count = 1 },
+            { itemId = 4407, name = "Accurate Scope", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Gnomish Battle Chicken (230)
     {
         id = 12906,
@@ -2157,16 +2220,17 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Dense Dynamite (230)
+    -- Hi-Explosive Bomb (235)
     {
-        id = 23070,
-        name = "Dense Dynamite",
-        itemId = 18641,
-        skillRequired = 230,
-        skillRange = { orange = 230, yellow = 250, green = 260, gray = 270 },
+        id = 12619,
+        name = "Hi-Explosive Bomb",
+        itemId = 10562,
+        skillRequired = 235,
+        skillRange = { orange = 235, yellow = 235, green = 255, gray = 275 },
         reagents = {
-            { itemId = 15992, name = "Dense Blasting Powder", count = 2 },
-            { itemId = 14047, name = "Runecloth", count = 3 },
+            { itemId = 10561, name = "Mithril Casing", count = 2 },
+            { itemId = 10560, name = "Unstable Trigger", count = 1 },
+            { itemId = 10505, name = "Solid Blasting Powder", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -2174,22 +2238,22 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Snake Burst Firework (230)
+    -- The Big One (235)
     {
-        id = 23507,
-        name = "Snake Burst Firework",
-        itemId = 19026,
-        skillRequired = 230,
-        skillRange = { orange = 230, yellow = 250, green = 260, gray = 270 },
+        id = 12754,
+        name = "The Big One",
+        itemId = 10586,
+        skillRequired = 235,
+        skillRange = { orange = 235, yellow = 235, green = 255, gray = 275 },
         reagents = {
-            { itemId = 15992, name = "Dense Blasting Powder", count = 2 },
-            { itemId = 14047, name = "Runecloth", count = 2 },
-            { itemId = 8150, name = "Deeprock Salt", count = 1 },
+            { itemId = 10561, name = "Mithril Casing", count = 1 },
+            { itemId = 9061, name = "Goblin Rocket Fuel", count = 1 },
+            { itemId = 10507, name = "Solid Dynamite", count = 6 },
+            { itemId = 10560, name = "Unstable Trigger", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 19027,
-            cost = 5000,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2271,15 +2335,16 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Dense Blasting Powder (240)
+    -- Mithril Gyro-Shot (245)
     {
-        id = 19788,
-        name = "Dense Blasting Powder",
-        itemId = 15992,
-        skillRequired = 240,
-        skillRange = { orange = 240, yellow = 250, green = 255, gray = 260 },
+        id = 12621,
+        name = "Mithril Gyro-Shot",
+        itemId = 10513,
+        skillRequired = 245,
+        skillRange = { orange = 245, yellow = 245, green = 265, gray = 285 },
         reagents = {
-            { itemId = 12365, name = "Dense Stone", count = 2 },
+            { itemId = 3860, name = "Mithril Bar", count = 2 },
+            { itemId = 10505, name = "Solid Blasting Powder", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -2367,43 +2432,75 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- World Enlarger (250)
+    -- Dense Blasting Powder (250)
     {
-        id = 23129,
-        name = "World Enlarger",
-        itemId = 18660,
+        id = 19788,
+        name = "Dense Blasting Powder",
+        itemId = 15992,
         skillRequired = 250,
-        skillRange = { orange = 250, yellow = 260, green = 265, gray = 270 },
+        skillRange = { orange = 250, yellow = 250, green = 255, gray = 260 },
         reagents = {
-            { itemId = 10561, name = "Mithril Casing", count = 1 },
-            { itemId = 15994, name = "Thorium Widget", count = 2 },
-            { itemId = 10558, name = "Gold Power Core", count = 1 },
-            { itemId = 10560, name = "Unstable Trigger", count = 1 },
-            { itemId = 3864, name = "Citrine", count = 1 },
+            { itemId = 12365, name = "Dense Stone", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 18661,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Powerful Seaforium Charge (255)
+    -- Dense Dynamite (250)
     {
-        id = 23080,
-        name = "Powerful Seaforium Charge",
-        itemId = 18594,
-        skillRequired = 255,
-        skillRange = { orange = 255, yellow = 275, green = 285, gray = 295 },
+        id = 23070,
+        name = "Dense Dynamite",
+        itemId = 18641,
+        skillRequired = 250,
+        skillRange = { orange = 250, yellow = 250, green = 260, gray = 270 },
         reagents = {
-            { itemId = 15994, name = "Thorium Widget", count = 2 },
-            { itemId = 15992, name = "Dense Blasting Powder", count = 3 },
-            { itemId = 8170, name = "Rugged Leather", count = 2 },
-            { itemId = 159, name = "Refreshing Spring Water", count = 1 },
+            { itemId = 15992, name = "Dense Blasting Powder", count = 2 },
+            { itemId = 14047, name = "Runecloth", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Snake Burst Firework (250)
+    {
+        id = 23507,
+        name = "Snake Burst Firework",
+        itemId = 19026,
+        skillRequired = 250,
+        skillRange = { orange = 250, yellow = 250, green = 260, gray = 270 },
+        reagents = {
+            { itemId = 15992, name = "Dense Blasting Powder", count = 2 },
+            { itemId = 14047, name = "Runecloth", count = 2 },
+            { itemId = 8150, name = "Deeprock Salt", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
-            itemId = 18656,
-            cost = 16000,
+            itemId = 19027,
+            cost = 5000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Tranquil Mechanical Yeti (250)
+    {
+        id = 26011,
+        name = "Tranquil Mechanical Yeti",
+        itemId = 21277,
+        skillRequired = 250,
+        skillRange = { orange = 250, yellow = 320, green = 330, gray = 340 },
+        reagents = {
+            { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
+            { itemId = 15994, name = "Thorium Widget", count = 4 },
+            { itemId = 7079, name = "Globe of Water", count = 2 },
+            { itemId = 18631, name = "Truesilver Transformer", count = 2 },
+            { itemId = 10558, name = "Gold Power Core", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2506,6 +2603,26 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- World Enlarger (260)
+    {
+        id = 23129,
+        name = "World Enlarger",
+        itemId = 18660,
+        skillRequired = 260,
+        skillRange = { orange = 260, yellow = 260, green = 265, gray = 270 },
+        reagents = {
+            { itemId = 10561, name = "Mithril Casing", count = 1 },
+            { itemId = 15994, name = "Thorium Widget", count = 2 },
+            { itemId = 10558, name = "Gold Power Core", count = 1 },
+            { itemId = 10560, name = "Unstable Trigger", count = 1 },
+            { itemId = 3864, name = "Citrine", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 18661,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Lifelike Mechanical Toad (265)
     {
         id = 19793,
@@ -2562,133 +2679,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18654,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Dimensional Ripper - Everlook (265)
-    {
-        id = 23486,
-        name = "Dimensional Ripper - Everlook",
-        itemId = 18984,
-        skillRequired = 265,
-        skillRange = { orange = 265, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 10 },
-            { itemId = 18631, name = "Truesilver Transformer", count = 1 },
-            { itemId = 7077, name = "Heart of Fire", count = 4 },
-            { itemId = 7910, name = "Star Ruby", count = 2 },
-            { itemId = 10586, name = "The Big One", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Ultrasafe Transporter - Gadgetzan (265)
-    {
-        id = 23489,
-        name = "Ultrasafe Transporter - Gadgetzan",
-        itemId = 18986,
-        skillRequired = 265,
-        skillRange = { orange = 265, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 12 },
-            { itemId = 18631, name = "Truesilver Transformer", count = 2 },
-            { itemId = 7075, name = "Core of Earth", count = 4 },
-            { itemId = 7079, name = "Globe of Water", count = 2 },
-            { itemId = 7909, name = "Aquamarine", count = 4 },
-            { itemId = 9060, name = "Inlaid Mithril Cylinder", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Large Blue Rocket Cluster (265)
-    {
-        id = 26426,
-        name = "Large Blue Rocket Cluster",
-        itemId = 21714,
-        skillRequired = 265,
-        skillRange = { orange = 265, yellow = 275, green = 280, gray = 285 },
-        reagents = {
-            { itemId = 15992, name = "Dense Blasting Powder", count = 1 },
-            { itemId = 8170, name = "Rugged Leather", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 21733,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Large Green Rocket Cluster (265)
-    {
-        id = 26427,
-        name = "Large Green Rocket Cluster",
-        itemId = 21716,
-        skillRequired = 265,
-        skillRange = { orange = 265, yellow = 275, green = 280, gray = 285 },
-        reagents = {
-            { itemId = 15992, name = "Dense Blasting Powder", count = 1 },
-            { itemId = 8170, name = "Rugged Leather", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 21734,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Large Red Rocket Cluster (265)
-    {
-        id = 26428,
-        name = "Large Red Rocket Cluster",
-        itemId = 21718,
-        skillRequired = 265,
-        skillRange = { orange = 265, yellow = 275, green = 280, gray = 285 },
-        reagents = {
-            { itemId = 15992, name = "Dense Blasting Powder", count = 1 },
-            { itemId = 8170, name = "Rugged Leather", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 21735,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Steam Tonk Controller (265)
-    {
-        id = 28327,
-        name = "Steam Tonk Controller",
-        itemId = 22728,
-        skillRequired = 265,
-        skillRange = { orange = 265, yellow = 275, green = 280, gray = 285 },
-        reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 3 },
-            { itemId = 10558, name = "Gold Power Core", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 22729,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Fused Wiring (265)
-    {
-        id = 39895,
-        name = "Fused Wiring",
-        itemId = 7191,
-        skillRequired = 265,
-        skillRange = { orange = 265, yellow = 275, green = 280, gray = 285 },
-        reagents = {
-            { itemId = 20816, name = "Delicate Copper Wire", count = 3 },
-            { itemId = 7078, name = "Essence of Fire", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 32381,
-            cost = 16000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2789,6 +2779,77 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Powerful Seaforium Charge (275)
+    {
+        id = 23080,
+        name = "Powerful Seaforium Charge",
+        itemId = 18594,
+        skillRequired = 275,
+        skillRange = { orange = 275, yellow = 275, green = 285, gray = 295 },
+        reagents = {
+            { itemId = 15994, name = "Thorium Widget", count = 2 },
+            { itemId = 15992, name = "Dense Blasting Powder", count = 3 },
+            { itemId = 8170, name = "Rugged Leather", count = 2 },
+            { itemId = 159, name = "Refreshing Spring Water", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 18656,
+            cost = 16000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Large Blue Rocket Cluster (275)
+    {
+        id = 26426,
+        name = "Large Blue Rocket Cluster",
+        itemId = 21714,
+        skillRequired = 275,
+        skillRange = { orange = 275, yellow = 275, green = 280, gray = 285 },
+        reagents = {
+            { itemId = 15992, name = "Dense Blasting Powder", count = 1 },
+            { itemId = 8170, name = "Rugged Leather", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21733,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Large Green Rocket Cluster (275)
+    {
+        id = 26427,
+        name = "Large Green Rocket Cluster",
+        itemId = 21716,
+        skillRequired = 275,
+        skillRange = { orange = 275, yellow = 275, green = 280, gray = 285 },
+        reagents = {
+            { itemId = 15992, name = "Dense Blasting Powder", count = 1 },
+            { itemId = 8170, name = "Rugged Leather", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21734,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Large Red Rocket Cluster (275)
+    {
+        id = 26428,
+        name = "Large Red Rocket Cluster",
+        itemId = 21718,
+        skillRequired = 275,
+        skillRange = { orange = 275, yellow = 275, green = 280, gray = 285 },
+        reagents = {
+            { itemId = 15992, name = "Dense Blasting Powder", count = 1 },
+            { itemId = 8170, name = "Rugged Leather", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 21735,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Firework Cluster Launcher (275)
     {
         id = 26443,
@@ -2808,36 +2869,38 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Elemental Blasting Powder (280)
+    -- Steam Tonk Controller (275)
     {
-        id = 30303,
-        name = "Elemental Blasting Powder",
-        itemId = 23781,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 300, green = 310, gray = 320 },
+        id = 28327,
+        name = "Steam Tonk Controller",
+        itemId = 22728,
+        skillRequired = 275,
+        skillRange = { orange = 275, yellow = 295, green = 305, gray = 315 },
         reagents = {
-            { itemId = 22574, name = "Mote of Fire", count = 1 },
-            { itemId = 22573, name = "Mote of Earth", count = 2 },
+            { itemId = 3860, name = "Mithril Bar", count = 3 },
+            { itemId = 10558, name = "Gold Power Core", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 22729,
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Fel Iron Casing (280)
+    -- Fused Wiring (275)
     {
-        id = 30304,
-        name = "Fel Iron Casing",
-        itemId = 23782,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 300, green = 310, gray = 320 },
+        id = 39895,
+        name = "Fused Wiring",
+        itemId = 7191,
+        skillRequired = 275,
+        skillRange = { orange = 275, yellow = 275, green = 280, gray = 285 },
         reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 3 },
+            { itemId = 20816, name = "Delicate Copper Wire", count = 3 },
+            { itemId = 7078, name = "Essence of Fire", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 32381,
+            cost = 16000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2866,7 +2929,7 @@ local recipes = {
         name = "Thorium Shells",
         itemId = 15997,
         skillRequired = 285,
-        skillRange = { orange = 285, yellow = 295, green = 300, gray = 305 },
+        skillRange = { orange = 285, yellow = 305, green = 315, gray = 325 },
         reagents = {
             { itemId = 12359, name = "Thorium Bar", count = 2 },
             { itemId = 15992, name = "Dense Blasting Powder", count = 1 },
@@ -2892,25 +2955,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 16050,
             cost = 20000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Zapthrottle Mote Extractor (285)
-    {
-        id = 30548,
-        name = "Zapthrottle Mote Extractor",
-        itemId = 23821,
-        skillRequired = 285,
-        skillRange = { orange = 285, yellow = 305, green = 315, gray = 325 },
-        reagents = {
-            { itemId = 23782, name = "Fel Iron Casing", count = 2 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
-            { itemId = 21886, name = "Primal Life", count = 4 },
-            { itemId = 16006, name = "Delicate Arcanite Converter", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 23888,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2968,39 +3012,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18657,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Handful of Fel Iron Bolts (290)
-    {
-        id = 30305,
-        name = "Handful of Fel Iron Bolts",
-        itemId = 23783,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 300, green = 305, gray = 310 },
-        reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Fel Iron Shells (290)
-    {
-        id = 30346,
-        name = "Fel Iron Shells",
-        itemId = 23772,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 310, green = 320, gray = 330 },
-        reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 2 },
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3211,19 +3222,16 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Tranquil Mechanical Yeti (300)
+    -- Elemental Blasting Powder (300)
     {
-        id = 26011,
-        name = "Tranquil Mechanical Yeti",
-        itemId = 21277,
+        id = 30303,
+        name = "Elemental Blasting Powder",
+        itemId = 23781,
         skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
+        skillRange = { orange = 300, yellow = 300, green = 310, gray = 320 },
         reagents = {
-            { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
-            { itemId = 15994, name = "Thorium Widget", count = 4 },
-            { itemId = 7079, name = "Globe of Water", count = 2 },
-            { itemId = 18631, name = "Truesilver Transformer", count = 2 },
-            { itemId = 10558, name = "Gold Power Core", count = 1 },
+            { itemId = 22574, name = "Mote of Fire", count = 1 },
+            { itemId = 22573, name = "Mote of Earth", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -3231,17 +3239,15 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Fel Iron Bomb (300)
+    -- Fel Iron Casing (300)
     {
-        id = 30310,
-        name = "Fel Iron Bomb",
-        itemId = 23736,
+        id = 30304,
+        name = "Fel Iron Casing",
+        itemId = 23782,
         skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
+        skillRange = { orange = 300, yellow = 300, green = 310, gray = 320 },
         reagents = {
-            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
+            { itemId = 23445, name = "Fel Iron Bar", count = 3 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -3249,22 +3255,38 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Fel Iron Toolbox (305)
+    -- Handful of Fel Iron Bolts (300)
     {
-        id = 30348,
-        name = "Fel Iron Toolbox",
-        itemId = 23774,
+        id = 30305,
+        name = "Handful of Fel Iron Bolts",
+        itemId = 23783,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 300, green = 305, gray = 310 },
+        reagents = {
+            { itemId = 23445, name = "Fel Iron Bar", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Zapthrottle Mote Extractor (305)
+    {
+        id = 30548,
+        name = "Zapthrottle Mote Extractor",
+        itemId = 23821,
         skillRequired = 305,
-        skillRange = { orange = 305, yellow = 325, green = 335, gray = 345 },
+        skillRange = { orange = 305, yellow = 305, green = 315, gray = 325 },
         reagents = {
-            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
-            { itemId = 23445, name = "Fel Iron Bar", count = 5 },
+            { itemId = 23782, name = "Fel Iron Casing", count = 2 },
             { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
+            { itemId = 21886, name = "Primal Life", count = 4 },
+            { itemId = 16006, name = "Delicate Arcanite Converter", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 23816,
-            cost = 40000,
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 23888,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3287,131 +3309,20 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- The Bigger One (305)
+    -- Fel Iron Shells (310)
     {
-        id = 30558,
-        name = "The Bigger One",
-        itemId = 23826,
-        skillRequired = 305,
-        skillRange = { orange = 305, yellow = 325, green = 335, gray = 345 },
-        reagents = {
-            { itemId = 23782, name = "Fel Iron Casing", count = 3 },
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 6 },
-            { itemId = 17020, name = "Arcane Powder", count = 3 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Fel Iron Musket (310)
-    {
-        id = 30312,
-        name = "Fel Iron Musket",
-        itemId = 23742,
+        id = 30346,
+        name = "Fel Iron Shells",
+        itemId = 23772,
         skillRequired = 310,
-        skillRange = { orange = 310, yellow = 330, green = 340, gray = 350 },
+        skillRange = { orange = 310, yellow = 310, green = 320, gray = 330 },
         reagents = {
-            { itemId = 4400, name = "Heavy Stock", count = 1 },
-            { itemId = 23782, name = "Fel Iron Casing", count = 3 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Healing Potion Injector (310)
-    {
-        id = 30551,
-        name = "Healing Potion Injector",
-        itemId = 33092,
-        skillRequired = 310,
-        skillRange = { orange = 310, yellow = 330, green = 340, gray = 350 },
-        reagents = {
-            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 1 },
-            { itemId = 21887, name = "Knothide Leather", count = 2 },
-            { itemId = 22829, name = "Super Healing Potion", count = 20 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35310,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Adamantite Frame (315)
-    {
-        id = 30306,
-        name = "Adamantite Frame",
-        itemId = 23784,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 325, green = 330, gray = 335 },
-        reagents = {
-            { itemId = 23446, name = "Adamantite Bar", count = 4 },
-            { itemId = 22452, name = "Primal Earth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Adamantite Grenade (315)
-    {
-        id = 30311,
-        name = "Adamantite Grenade",
-        itemId = 23737,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23446, name = "Adamantite Bar", count = 4 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
+            { itemId = 23445, name = "Fel Iron Bar", count = 2 },
             { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Crashin' Thrashin' Robot (315)
-    {
-        id = 30337,
-        name = "Crashin' Thrashin' Robot",
-        itemId = 23767,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23784, name = "Adamantite Frame", count = 1 },
-            { itemId = 23782, name = "Fel Iron Casing", count = 2 },
-            { itemId = 10558, name = "Gold Power Core", count = 1 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 23810,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- White Smoke Flare (315)
-    {
-        id = 30341,
-        name = "White Smoke Flare",
-        itemId = 23768,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
-            { itemId = 21877, name = "Netherweave Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 23811,
-            cost = 60000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3453,47 +3364,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Green Smoke Flare (315)
-    {
-        id = 30344,
-        name = "Green Smoke Flare",
-        itemId = 23771,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
-            { itemId = 21877, name = "Netherweave Cloth", count = 1 },
-            { itemId = 2605, name = "Green Dye", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 942,
-            factionName = "Cenarion Expedition",
-            level = "Friendly",
-            itemId = 23814,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Adamantite Shell Machine (315)
-    {
-        id = 30347,
-        name = "Adamantite Shell Machine",
-        itemId = 34504,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23446, name = "Adamantite Bar", count = 1 },
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 2 },
-            { itemId = 4470, name = "Simple Wood", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 23815,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
     -- Goblin Tonk Controller (315)
     {
         id = 30561,
@@ -3505,25 +3375,6 @@ local recipes = {
             { itemId = 23782, name = "Fel Iron Casing", count = 1 },
             { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
             { itemId = 10558, name = "Gold Power Core", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Gnomish Flame Turret (315)
-    {
-        id = 30568,
-        name = "Gnomish Flame Turret",
-        itemId = 23841,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23784, name = "Adamantite Frame", count = 1 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 3 },
-            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -3549,53 +3400,17 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Purple Smoke Flare (315)
+    -- Fel Iron Musket (320)
     {
-        id = 32814,
-        name = "Purple Smoke Flare",
-        itemId = 25886,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
-            { itemId = 21877, name = "Netherweave Cloth", count = 1 },
-            { itemId = 4342, name = "Purple Dye", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 25887,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Adamantite Arrow Maker (315)
-    {
-        id = 43676,
-        name = "Adamantite Arrow Maker",
-        itemId = 20475,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23446, name = "Adamantite Bar", count = 1 },
-            { itemId = 4470, name = "Simple Wood", count = 4 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 33804,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Super Sapper Charge (320)
-    {
-        id = 30560,
-        name = "Super Sapper Charge",
-        itemId = 23827,
+        id = 30312,
+        name = "Fel Iron Musket",
+        itemId = 23742,
         skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
+        skillRange = { orange = 320, yellow = 330, green = 340, gray = 350 },
         reagents = {
-            { itemId = 21877, name = "Netherweave Cloth", count = 4 },
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 4 },
-            { itemId = 22457, name = "Primal Mana", count = 1 },
+            { itemId = 4400, name = "Heavy Stock", count = 1 },
+            { itemId = 23782, name = "Fel Iron Casing", count = 3 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 6 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -3603,13 +3418,125 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Adamantite Scope (325)
+    -- Adamantite Frame (325)
+    {
+        id = 30306,
+        name = "Adamantite Frame",
+        itemId = 23784,
+        skillRequired = 325,
+        skillRange = { orange = 325, yellow = 325, green = 330, gray = 335 },
+        reagents = {
+            { itemId = 23446, name = "Adamantite Bar", count = 4 },
+            { itemId = 22452, name = "Primal Earth", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Crashin' Thrashin' Robot (325)
+    {
+        id = 30337,
+        name = "Crashin' Thrashin' Robot",
+        itemId = 23767,
+        skillRequired = 325,
+        skillRange = { orange = 325, yellow = 335, green = 345, gray = 355 },
+        reagents = {
+            { itemId = 23784, name = "Adamantite Frame", count = 1 },
+            { itemId = 23782, name = "Fel Iron Casing", count = 2 },
+            { itemId = 10558, name = "Gold Power Core", count = 1 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 23810,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Fel Iron Toolbox (325)
+    {
+        id = 30348,
+        name = "Fel Iron Toolbox",
+        itemId = 23774,
+        skillRequired = 325,
+        skillRange = { orange = 325, yellow = 325, green = 335, gray = 345 },
+        reagents = {
+            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
+            { itemId = 23445, name = "Fel Iron Bar", count = 5 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 23816,
+            cost = 40000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- The Bigger One (325)
+    {
+        id = 30558,
+        name = "The Bigger One",
+        itemId = 23826,
+        skillRequired = 325,
+        skillRange = { orange = 325, yellow = 325, green = 335, gray = 345 },
+        reagents = {
+            { itemId = 23782, name = "Fel Iron Casing", count = 3 },
+            { itemId = 23781, name = "Elemental Blasting Powder", count = 6 },
+            { itemId = 17020, name = "Arcane Powder", count = 3 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Gnomish Flame Turret (325)
+    {
+        id = 30568,
+        name = "Gnomish Flame Turret",
+        itemId = 23841,
+        skillRequired = 325,
+        skillRange = { orange = 325, yellow = 335, green = 345, gray = 355 },
+        reagents = {
+            { itemId = 23784, name = "Adamantite Frame", count = 1 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
+            { itemId = 23781, name = "Elemental Blasting Powder", count = 3 },
+            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Healing Potion Injector (330)
+    {
+        id = 30551,
+        name = "Healing Potion Injector",
+        itemId = 33092,
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 330, green = 340, gray = 350 },
+        reagents = {
+            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 1 },
+            { itemId = 21887, name = "Knothide Leather", count = 2 },
+            { itemId = 22829, name = "Super Healing Potion", count = 20 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35310,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Adamantite Scope (335)
     {
         id = 30329,
         name = "Adamantite Scope",
         itemId = 23764,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 345, green = 355, gray = 365 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 8 },
             { itemId = 23112, name = "Golden Draenite", count = 2 },
@@ -3621,32 +3548,90 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Mana Potion Injector (325)
+    -- White Smoke Flare (335)
     {
-        id = 30552,
-        name = "Mana Potion Injector",
-        itemId = 33093,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
+        id = 30341,
+        name = "White Smoke Flare",
+        itemId = 23768,
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 335, green = 345, gray = 355 },
         reagents = {
-            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 1 },
-            { itemId = 21887, name = "Knothide Leather", count = 2 },
-            { itemId = 22832, name = "Super Mana Potion", count = 20 },
+            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
+            { itemId = 21877, name = "Netherweave Cloth", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35311,
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 23811,
+            cost = 60000,
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Icy Blasting Primers (325)
+    -- Green Smoke Flare (335)
+    {
+        id = 30344,
+        name = "Green Smoke Flare",
+        itemId = 23771,
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 335, green = 345, gray = 355 },
+        reagents = {
+            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
+            { itemId = 21877, name = "Netherweave Cloth", count = 1 },
+            { itemId = 2605, name = "Green Dye", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 942,
+            factionName = "Cenarion Expedition",
+            level = "Friendly",
+            itemId = 23814,
+            cost = 60000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Adamantite Shell Machine (335)
+    {
+        id = 30347,
+        name = "Adamantite Shell Machine",
+        itemId = 34504,
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 335, green = 345, gray = 355 },
+        reagents = {
+            { itemId = 23446, name = "Adamantite Bar", count = 1 },
+            { itemId = 23781, name = "Elemental Blasting Powder", count = 2 },
+            { itemId = 4470, name = "Simple Wood", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 23815,
+            cost = 60000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Purple Smoke Flare (335)
+    {
+        id = 32814,
+        name = "Purple Smoke Flare",
+        itemId = 25886,
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 335, green = 345, gray = 355 },
+        reagents = {
+            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
+            { itemId = 21877, name = "Netherweave Cloth", count = 1 },
+            { itemId = 4342, name = "Purple Dye", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 25887,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Icy Blasting Primers (335)
     {
         id = 39971,
         name = "Icy Blasting Primers",
         itemId = 32423,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 335, green = 340, gray = 345 },
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 335, green = 340, gray = 345 },
         reagents = {
             { itemId = 21885, name = "Primal Water", count = 1 },
             { itemId = 23781, name = "Elemental Blasting Powder", count = 2 },
@@ -3658,13 +3643,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Frost Grenades (325)
+    -- Frost Grenades (335)
     {
         id = 39973,
         name = "Frost Grenades",
         itemId = 32413,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 345, green = 355, gray = 365 },
         reagents = {
             { itemId = 32423, name = "Icy Blasting Primers", count = 1 },
             { itemId = 23782, name = "Fel Iron Casing", count = 1 },
@@ -3676,13 +3661,31 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Hardened Adamantite Tube (330)
+    -- Adamantite Arrow Maker (335)
+    {
+        id = 43676,
+        name = "Adamantite Arrow Maker",
+        itemId = 20475,
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 335, green = 345, gray = 355 },
+        reagents = {
+            { itemId = 23446, name = "Adamantite Bar", count = 1 },
+            { itemId = 4470, name = "Simple Wood", count = 4 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 33804,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Hardened Adamantite Tube (340)
     {
         id = 30307,
         name = "Hardened Adamantite Tube",
         itemId = 23785,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 350, green = 360, gray = 370 },
+        skillRequired = 340,
+        skillRange = { orange = 340, yellow = 350, green = 360, gray = 370 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 3 },
         },
@@ -3692,13 +3695,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Khorium Power Core (330)
+    -- Khorium Power Core (340)
     {
         id = 30308,
         name = "Khorium Power Core",
         itemId = 23786,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 350, green = 360, gray = 370 },
+        skillRequired = 340,
+        skillRange = { orange = 340, yellow = 350, green = 360, gray = 370 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 3 },
             { itemId = 21884, name = "Primal Fire", count = 1 },
@@ -3709,13 +3712,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felsteel Stabilizer (330)
+    -- Felsteel Stabilizer (340)
     {
         id = 30309,
         name = "Felsteel Stabilizer",
         itemId = 23787,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 350, green = 360, gray = 370 },
+        skillRequired = 340,
+        skillRange = { orange = 340, yellow = 350, green = 360, gray = 370 },
         reagents = {
             { itemId = 23448, name = "Felsteel Bar", count = 2 },
         },
@@ -3725,13 +3728,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Cogspinner Goggles (330)
+    -- Cogspinner Goggles (340)
     {
         id = 30316,
         name = "Cogspinner Goggles",
         itemId = 23758,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 350, green = 360, gray = 370 },
+        skillRequired = 340,
+        skillRange = { orange = 340, yellow = 350, green = 360, gray = 370 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 23077, name = "Blood Garnet", count = 2 },
@@ -3744,13 +3747,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Power Amplification Goggles (330)
+    -- Power Amplification Goggles (340)
     {
         id = 30317,
         name = "Power Amplification Goggles",
         itemId = 23761,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 350, green = 360, gray = 370 },
+        skillRequired = 340,
+        skillRange = { orange = 340, yellow = 350, green = 360, gray = 370 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 21929, name = "Flame Spessarite", count = 2 },
@@ -3762,140 +3765,17 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Dimensional Ripper - Area 52 (330)
+    -- Super Sapper Charge (340)
     {
-        id = 36954,
-        name = "Dimensional Ripper - Area 52",
-        itemId = 30542,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 350, green = 360, gray = 370 },
-        reagents = {
-            { itemId = 23784, name = "Adamantite Frame", count = 1 },
-            { itemId = 21884, name = "Primal Fire", count = 2 },
-            { itemId = 23826, name = "The Bigger One", count = 2 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
-            { itemId = 23786, name = "Khorium Power Core", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Ultrasafe Transporter - Toshley's Station (330)
-    {
-        id = 36955,
-        name = "Ultrasafe Transporter - Toshley's Station",
-        itemId = 30544,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 350, green = 360, gray = 370 },
-        reagents = {
-            { itemId = 23784, name = "Adamantite Frame", count = 1 },
-            { itemId = 22451, name = "Primal Air", count = 2 },
-            { itemId = 23787, name = "Felsteel Stabilizer", count = 2 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
-            { itemId = 23786, name = "Khorium Power Core", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Adamantite Rifle (340)
-    {
-        id = 30313,
-        name = "Adamantite Rifle",
-        itemId = 23746,
+        id = 30560,
+        name = "Super Sapper Charge",
+        itemId = 23827,
         skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRange = { orange = 340, yellow = 340, green = 350, gray = 360 },
         reagents = {
-            { itemId = 23782, name = "Fel Iron Casing", count = 3 },
-            { itemId = 23784, name = "Adamantite Frame", count = 2 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 23799,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Ultra-Spectropic Detection Goggles (340)
-    {
-        id = 30318,
-        name = "Ultra-Spectropic Detection Goggles",
-        itemId = 23762,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
-            { itemId = 23449, name = "Khorium Bar", count = 2 },
-            { itemId = 23079, name = "Deep Peridot", count = 2 },
-            { itemId = 22448, name = "Small Prismatic Shard", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 23805,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Khorium Toolbox (340)
-    {
-        id = 30349,
-        name = "Khorium Toolbox",
-        itemId = 23775,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
-        reagents = {
-            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
-            { itemId = 23449, name = "Khorium Bar", count = 5 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 23817,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Elemental Seaforium Charge (340)
-    {
-        id = 30547,
-        name = "Elemental Seaforium Charge",
-        itemId = 23819,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 350, green = 355, gray = 360 },
-        reagents = {
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 2 },
-            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 933,
-            factionName = "The Consortium",
-            level = "Revered",
-            itemId = 23874,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Goblin Rocket Launcher (340)
-    {
-        id = 30563,
-        name = "Goblin Rocket Launcher",
-        itemId = 23836,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
-        reagents = {
-            { itemId = 23785, name = "Hardened Adamantite Tube", count = 2 },
-            { itemId = 23786, name = "Khorium Power Core", count = 1 },
-            { itemId = 23787, name = "Felsteel Stabilizer", count = 2 },
-            { itemId = 21884, name = "Primal Fire", count = 6 },
-            { itemId = 22452, name = "Primal Earth", count = 6 },
-            { itemId = 16006, name = "Delicate Arcanite Converter", count = 2 },
+            { itemId = 21877, name = "Netherweave Cloth", count = 4 },
+            { itemId = 23781, name = "Elemental Blasting Powder", count = 4 },
+            { itemId = 22457, name = "Primal Mana", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -3922,13 +3802,133 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Nigh-Invulnerability Belt (340)
+    -- Mana Potion Injector (345)
+    {
+        id = 30552,
+        name = "Mana Potion Injector",
+        itemId = 33093,
+        skillRequired = 345,
+        skillRange = { orange = 345, yellow = 345, green = 355, gray = 365 },
+        reagents = {
+            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 1 },
+            { itemId = 21887, name = "Knothide Leather", count = 2 },
+            { itemId = 22832, name = "Super Mana Potion", count = 20 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35311,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Adamantite Rifle (350)
+    {
+        id = 30313,
+        name = "Adamantite Rifle",
+        itemId = 23746,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23782, name = "Fel Iron Casing", count = 3 },
+            { itemId = 23784, name = "Adamantite Frame", count = 2 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 23799,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Ultra-Spectropic Detection Goggles (350)
+    {
+        id = 30318,
+        name = "Ultra-Spectropic Detection Goggles",
+        itemId = 23762,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
+            { itemId = 23449, name = "Khorium Bar", count = 2 },
+            { itemId = 23079, name = "Deep Peridot", count = 2 },
+            { itemId = 22448, name = "Small Prismatic Shard", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 23805,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Khorium Toolbox (350)
+    {
+        id = 30349,
+        name = "Khorium Toolbox",
+        itemId = 23775,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
+            { itemId = 23449, name = "Khorium Bar", count = 5 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 23817,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Elemental Seaforium Charge (350)
+    {
+        id = 30547,
+        name = "Elemental Seaforium Charge",
+        itemId = 23819,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 350, green = 355, gray = 360 },
+        reagents = {
+            { itemId = 23781, name = "Elemental Blasting Powder", count = 2 },
+            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 933,
+            factionName = "The Consortium",
+            level = "Revered",
+            itemId = 23874,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Goblin Rocket Launcher (350)
+    {
+        id = 30563,
+        name = "Goblin Rocket Launcher",
+        itemId = 23836,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23785, name = "Hardened Adamantite Tube", count = 2 },
+            { itemId = 23786, name = "Khorium Power Core", count = 1 },
+            { itemId = 23787, name = "Felsteel Stabilizer", count = 2 },
+            { itemId = 21884, name = "Primal Fire", count = 6 },
+            { itemId = 22452, name = "Primal Earth", count = 6 },
+            { itemId = 16006, name = "Delicate Arcanite Converter", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Nigh-Invulnerability Belt (350)
     {
         id = 30570,
         name = "Nigh-Invulnerability Belt",
         itemId = 23825,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
             { itemId = 23786, name = "Khorium Power Core", count = 4 },
@@ -3939,120 +3939,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Gyro-balanced Khorium Destroyer (340)
-    {
-        id = 41307,
-        name = "Gyro-balanced Khorium Destroyer",
-        itemId = 32756,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
-        reagents = {
-            { itemId = 23785, name = "Hardened Adamantite Tube", count = 1 },
-            { itemId = 23449, name = "Khorium Bar", count = 20 },
-            { itemId = 23787, name = "Felsteel Stabilizer", count = 4 },
-            { itemId = 21884, name = "Primal Fire", count = 12 },
-            { itemId = 22451, name = "Primal Air", count = 12 },
-            { itemId = 23572, name = "Primal Nether", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Rocket Boots Xtreme (345)
-    {
-        id = 30556,
-        name = "Rocket Boots Xtreme",
-        itemId = 23824,
-        skillRequired = 345,
-        skillRange = { orange = 345, yellow = 365, green = 375, gray = 385 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
-            { itemId = 23786, name = "Khorium Power Core", count = 2 },
-            { itemId = 23785, name = "Hardened Adamantite Tube", count = 2 },
-            { itemId = 23787, name = "Felsteel Stabilizer", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 23887,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Rocket Boots Xtreme Lite (345)
-    {
-        id = 46697,
-        name = "Rocket Boots Xtreme Lite",
-        itemId = 35581,
-        skillRequired = 345,
-        skillRange = { orange = 345, yellow = 365, green = 375, gray = 385 },
-        reagents = {
-            { itemId = 21840, name = "Bolt of Netherweave", count = 8 },
-            { itemId = 23786, name = "Khorium Power Core", count = 2 },
-            { itemId = 23785, name = "Hardened Adamantite Tube", count = 2 },
-            { itemId = 23787, name = "Felsteel Stabilizer", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35582,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Felsteel Boomstick (350)
-    {
-        id = 30314,
-        name = "Felsteel Boomstick",
-        itemId = 23747,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
-        reagents = {
-            { itemId = 23785, name = "Hardened Adamantite Tube", count = 1 },
-            { itemId = 23787, name = "Felsteel Stabilizer", count = 4 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 23800,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Hyper-Vision Goggles (350)
-    {
-        id = 30325,
-        name = "Hyper-Vision Goggles",
-        itemId = 23763,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
-            { itemId = 23449, name = "Khorium Bar", count = 2 },
-            { itemId = 23441, name = "Nightseye", count = 2 },
-            { itemId = 22449, name = "Large Prismatic Shard", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 23806,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Khorium Scope (350)
-    {
-        id = 30332,
-        name = "Khorium Scope",
-        itemId = 23765,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
-        reagents = {
-            { itemId = 23785, name = "Hardened Adamantite Tube", count = 1 },
-            { itemId = 23449, name = "Khorium Bar", count = 4 },
-            { itemId = 23440, name = "Dawnstone", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 23808,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4287,13 +4173,127 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Field Repair Bot 110G (350)
+    -- Flying Machine (350)
+    {
+        id = 44155,
+        name = "Flying Machine",
+        itemId = 34060,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 375, green = 380, gray = 385 },
+        reagents = {
+            { itemId = 23784, name = "Adamantite Frame", count = 2 },
+            { itemId = 23445, name = "Fel Iron Bar", count = 30 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 8 },
+            { itemId = 11291, name = "Star Wood", count = 8 },
+            { itemId = 23446, name = "Adamantite Bar", count = 5 },
+            { itemId = 23819, name = "Elemental Seaforium Charge", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Rocket Boots Xtreme (355)
+    {
+        id = 30556,
+        name = "Rocket Boots Xtreme",
+        itemId = 23824,
+        skillRequired = 355,
+        skillRange = { orange = 355, yellow = 365, green = 375, gray = 385 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
+            { itemId = 23786, name = "Khorium Power Core", count = 2 },
+            { itemId = 23785, name = "Hardened Adamantite Tube", count = 2 },
+            { itemId = 23787, name = "Felsteel Stabilizer", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 23887,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Rocket Boots Xtreme Lite (355)
+    {
+        id = 46697,
+        name = "Rocket Boots Xtreme Lite",
+        itemId = 35581,
+        skillRequired = 355,
+        skillRange = { orange = 355, yellow = 365, green = 375, gray = 385 },
+        reagents = {
+            { itemId = 21840, name = "Bolt of Netherweave", count = 8 },
+            { itemId = 23786, name = "Khorium Power Core", count = 2 },
+            { itemId = 23785, name = "Hardened Adamantite Tube", count = 2 },
+            { itemId = 23787, name = "Felsteel Stabilizer", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35582,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Felsteel Boomstick (360)
+    {
+        id = 30314,
+        name = "Felsteel Boomstick",
+        itemId = 23747,
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
+        reagents = {
+            { itemId = 23785, name = "Hardened Adamantite Tube", count = 1 },
+            { itemId = 23787, name = "Felsteel Stabilizer", count = 4 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 23800,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Hyper-Vision Goggles (360)
+    {
+        id = 30325,
+        name = "Hyper-Vision Goggles",
+        itemId = 23763,
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
+            { itemId = 23449, name = "Khorium Bar", count = 2 },
+            { itemId = 23441, name = "Nightseye", count = 2 },
+            { itemId = 22449, name = "Large Prismatic Shard", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 23806,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Khorium Scope (360)
+    {
+        id = 30332,
+        name = "Khorium Scope",
+        itemId = 23765,
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
+        reagents = {
+            { itemId = 23785, name = "Hardened Adamantite Tube", count = 1 },
+            { itemId = 23449, name = "Khorium Bar", count = 4 },
+            { itemId = 23440, name = "Dawnstone", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 23808,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Field Repair Bot 110G (360)
     {
         id = 44391,
         name = "Field Repair Bot 110G",
         itemId = 34113,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 8 },
             { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 8 },
@@ -4305,222 +4305,50 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Wonderheal XT68 Shades (350)
+    -- Ornate Khorium Rifle (375)
     {
-        id = 46106,
-        name = "Wonderheal XT68 Shades",
-        itemId = 35183,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 390, green = 410, gray = 430 },
+        id = 30315,
+        name = "Ornate Khorium Rifle",
+        itemId = 23748,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
-            { itemId = 32479, name = "Wonderheal XT40 Shades", count = 1 },
-            { itemId = 21885, name = "Primal Water", count = 4 },
-            { itemId = 22457, name = "Primal Mana", count = 8 },
-            { itemId = 23572, name = "Primal Nether", count = 4 },
+            { itemId = 23785, name = "Hardened Adamantite Tube", count = 2 },
+            { itemId = 23449, name = "Khorium Bar", count = 12 },
+            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
+            { itemId = 23439, name = "Noble Topaz", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.DROP,
-            itemId = 35191,
+            itemId = 23802,
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Justicebringer 3000 Specs (350)
+    -- Stabilized Eternium Scope (375)
     {
-        id = 46107,
-        name = "Justicebringer 3000 Specs",
-        itemId = 35185,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 390, green = 410, gray = 430 },
+        id = 30334,
+        name = "Stabilized Eternium Scope",
+        itemId = 23766,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
-            { itemId = 32472, name = "Justicebringer 2000 Specs", count = 1 },
-            { itemId = 21886, name = "Primal Life", count = 8 },
-            { itemId = 22457, name = "Primal Mana", count = 8 },
-            { itemId = 22452, name = "Primal Earth", count = 8 },
-            { itemId = 23572, name = "Primal Nether", count = 4 },
+            { itemId = 23785, name = "Hardened Adamantite Tube", count = 2 },
+            { itemId = 23787, name = "Felsteel Stabilizer", count = 6 },
+            { itemId = 23438, name = "Star of Elune", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.DROP,
-            itemId = 35187,
+            itemId = 23809,
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Powerheal 9000 Lens (350)
-    {
-        id = 46108,
-        name = "Powerheal 9000 Lens",
-        itemId = 35181,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 390, green = 410, gray = 430 },
-        reagents = {
-            { itemId = 32495, name = "Powerheal 4000 Lens", count = 1 },
-            { itemId = 21886, name = "Primal Life", count = 8 },
-            { itemId = 22457, name = "Primal Mana", count = 8 },
-            { itemId = 23572, name = "Primal Nether", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35189,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Hyper-Magnified Moon Specs (350)
-    {
-        id = 46109,
-        name = "Hyper-Magnified Moon Specs",
-        itemId = 35182,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 390, green = 410, gray = 430 },
-        reagents = {
-            { itemId = 32480, name = "Magnified Moon Specs", count = 1 },
-            { itemId = 21885, name = "Primal Water", count = 6 },
-            { itemId = 21886, name = "Primal Life", count = 12 },
-            { itemId = 23572, name = "Primal Nether", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35190,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Primal-Attuned Goggles (350)
-    {
-        id = 46110,
-        name = "Primal-Attuned Goggles",
-        itemId = 35184,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 390, green = 410, gray = 430 },
-        reagents = {
-            { itemId = 32475, name = "Living Replicator Specs", count = 1 },
-            { itemId = 21886, name = "Primal Life", count = 5 },
-            { itemId = 22457, name = "Primal Mana", count = 5 },
-            { itemId = 21885, name = "Primal Water", count = 5 },
-            { itemId = 23572, name = "Primal Nether", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35192,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Annihilator Holo-Gogs (350)
-    {
-        id = 46111,
-        name = "Annihilator Holo-Gogs",
-        itemId = 34847,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 390, green = 410, gray = 430 },
-        reagents = {
-            { itemId = 32494, name = "Destruction Holo-gogs", count = 1 },
-            { itemId = 22456, name = "Primal Shadow", count = 4 },
-            { itemId = 21884, name = "Primal Fire", count = 4 },
-            { itemId = 22457, name = "Primal Mana", count = 4 },
-            { itemId = 23572, name = "Primal Nether", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35186,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Lightning Etched Specs (350)
-    {
-        id = 46112,
-        name = "Lightning Etched Specs",
-        itemId = 34355,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 390, green = 410, gray = 430 },
-        reagents = {
-            { itemId = 32476, name = "Gadgetstorm Goggles", count = 1 },
-            { itemId = 23571, name = "Primal Might", count = 2 },
-            { itemId = 22451, name = "Primal Air", count = 2 },
-            { itemId = 23572, name = "Primal Nether", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35193,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Surestrike Goggles v3.0 (350)
-    {
-        id = 46113,
-        name = "Surestrike Goggles v3.0",
-        itemId = 34356,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 390, green = 410, gray = 430 },
-        reagents = {
-            { itemId = 32474, name = "Surestrike Goggles v2.0", count = 1 },
-            { itemId = 22451, name = "Primal Air", count = 12 },
-            { itemId = 23572, name = "Primal Nether", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35194,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Mayhem Projection Goggles (350)
-    {
-        id = 46114,
-        name = "Mayhem Projection Goggles",
-        itemId = 34354,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 390, green = 410, gray = 430 },
-        reagents = {
-            { itemId = 32461, name = "Furious Gizmatic Goggles", count = 1 },
-            { itemId = 21884, name = "Primal Fire", count = 10 },
-            { itemId = 23572, name = "Primal Nether", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35195,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Hard Khorium Goggles (350)
-    {
-        id = 46115,
-        name = "Hard Khorium Goggles",
-        itemId = 34357,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 390, green = 410, gray = 430 },
-        reagents = {
-            { itemId = 32473, name = "Tankatronic Goggles", count = 1 },
-            { itemId = 35128, name = "Hardened Khorium", count = 2 },
-            { itemId = 23571, name = "Primal Might", count = 1 },
-            { itemId = 23572, name = "Primal Nether", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35196,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Quad Deathblow X44 Goggles (350)
-    {
-        id = 46116,
-        name = "Quad Deathblow X44 Goggles",
-        itemId = 34353,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 390, green = 410, gray = 430 },
-        reagents = {
-            { itemId = 32478, name = "Deathblow X11 Goggles", count = 1 },
-            { itemId = 22456, name = "Primal Shadow", count = 12 },
-            { itemId = 23572, name = "Primal Nether", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 35197,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Foreman's Enchanted Helmet (355)
+    -- Foreman's Enchanted Helmet (375)
     {
         id = 30565,
         name = "Foreman's Enchanted Helmet",
         itemId = 23838,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 24272, name = "Shadowcloth", count = 4 },
             { itemId = 22457, name = "Primal Mana", count = 12 },
@@ -4532,13 +4360,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Foreman's Reinforced Helmet (355)
+    -- Foreman's Reinforced Helmet (375)
     {
         id = 30566,
         name = "Foreman's Reinforced Helmet",
         itemId = 23839,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 8 },
             { itemId = 22452, name = "Primal Earth", count = 12 },
@@ -4550,13 +4378,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Gnomish Power Goggles (355)
+    -- Gnomish Power Goggles (375)
     {
         id = 30574,
         name = "Gnomish Power Goggles",
         itemId = 23828,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 24271, name = "Spellcloth", count = 4 },
             { itemId = 21884, name = "Primal Fire", count = 8 },
@@ -4571,13 +4399,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Gnomish Battle Goggles (355)
+    -- Gnomish Battle Goggles (375)
     {
         id = 30575,
         name = "Gnomish Battle Goggles",
         itemId = 23829,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
             { itemId = 22456, name = "Primal Shadow", count = 12 },
@@ -4591,57 +4419,20 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Ornate Khorium Rifle (365)
+    -- Gyro-balanced Khorium Destroyer (375)
     {
-        id = 30315,
-        name = "Ornate Khorium Rifle",
-        itemId = 23748,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        id = 41307,
+        name = "Gyro-balanced Khorium Destroyer",
+        itemId = 32756,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 375, green = 392, gray = 410 },
         reagents = {
-            { itemId = 23785, name = "Hardened Adamantite Tube", count = 2 },
-            { itemId = 23449, name = "Khorium Bar", count = 12 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
-            { itemId = 23439, name = "Noble Topaz", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 23802,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Stabilized Eternium Scope (365)
-    {
-        id = 30334,
-        name = "Stabilized Eternium Scope",
-        itemId = 23766,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23785, name = "Hardened Adamantite Tube", count = 2 },
-            { itemId = 23787, name = "Felsteel Stabilizer", count = 6 },
-            { itemId = 23438, name = "Star of Elune", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 23809,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Flying Machine (365)
-    {
-        id = 44155,
-        name = "Flying Machine",
-        itemId = 34060,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 375, green = 380, gray = 385 },
-        reagents = {
-            { itemId = 23784, name = "Adamantite Frame", count = 2 },
-            { itemId = 23445, name = "Fel Iron Bar", count = 30 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 8 },
-            { itemId = 11291, name = "Star Wood", count = 8 },
-            { itemId = 23446, name = "Adamantite Bar", count = 5 },
-            { itemId = 23819, name = "Elemental Seaforium Charge", count = 4 },
+            { itemId = 23785, name = "Hardened Adamantite Tube", count = 1 },
+            { itemId = 23449, name = "Khorium Bar", count = 20 },
+            { itemId = 23787, name = "Felsteel Stabilizer", count = 4 },
+            { itemId = 21884, name = "Primal Fire", count = 12 },
+            { itemId = 22451, name = "Primal Air", count = 12 },
+            { itemId = 23572, name = "Primal Nether", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -4665,6 +4456,215 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Wonderheal XT68 Shades (375)
+    {
+        id = 46106,
+        name = "Wonderheal XT68 Shades",
+        itemId = 35183,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 390, green = 410, gray = 430 },
+        reagents = {
+            { itemId = 32479, name = "Wonderheal XT40 Shades", count = 1 },
+            { itemId = 21885, name = "Primal Water", count = 4 },
+            { itemId = 22457, name = "Primal Mana", count = 8 },
+            { itemId = 23572, name = "Primal Nether", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35191,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Justicebringer 3000 Specs (375)
+    {
+        id = 46107,
+        name = "Justicebringer 3000 Specs",
+        itemId = 35185,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 390, green = 410, gray = 430 },
+        reagents = {
+            { itemId = 32472, name = "Justicebringer 2000 Specs", count = 1 },
+            { itemId = 21886, name = "Primal Life", count = 8 },
+            { itemId = 22457, name = "Primal Mana", count = 8 },
+            { itemId = 22452, name = "Primal Earth", count = 8 },
+            { itemId = 23572, name = "Primal Nether", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35187,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Powerheal 9000 Lens (375)
+    {
+        id = 46108,
+        name = "Powerheal 9000 Lens",
+        itemId = 35181,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 390, green = 410, gray = 430 },
+        reagents = {
+            { itemId = 32495, name = "Powerheal 4000 Lens", count = 1 },
+            { itemId = 21886, name = "Primal Life", count = 8 },
+            { itemId = 22457, name = "Primal Mana", count = 8 },
+            { itemId = 23572, name = "Primal Nether", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35189,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Hyper-Magnified Moon Specs (375)
+    {
+        id = 46109,
+        name = "Hyper-Magnified Moon Specs",
+        itemId = 35182,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 390, green = 410, gray = 430 },
+        reagents = {
+            { itemId = 32480, name = "Magnified Moon Specs", count = 1 },
+            { itemId = 21885, name = "Primal Water", count = 6 },
+            { itemId = 21886, name = "Primal Life", count = 12 },
+            { itemId = 23572, name = "Primal Nether", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35190,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Primal-Attuned Goggles (375)
+    {
+        id = 46110,
+        name = "Primal-Attuned Goggles",
+        itemId = 35184,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 390, green = 410, gray = 430 },
+        reagents = {
+            { itemId = 32475, name = "Living Replicator Specs", count = 1 },
+            { itemId = 21886, name = "Primal Life", count = 5 },
+            { itemId = 22457, name = "Primal Mana", count = 5 },
+            { itemId = 21885, name = "Primal Water", count = 5 },
+            { itemId = 23572, name = "Primal Nether", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35192,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Annihilator Holo-Gogs (375)
+    {
+        id = 46111,
+        name = "Annihilator Holo-Gogs",
+        itemId = 34847,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 390, green = 410, gray = 430 },
+        reagents = {
+            { itemId = 32494, name = "Destruction Holo-gogs", count = 1 },
+            { itemId = 22456, name = "Primal Shadow", count = 4 },
+            { itemId = 21884, name = "Primal Fire", count = 4 },
+            { itemId = 22457, name = "Primal Mana", count = 4 },
+            { itemId = 23572, name = "Primal Nether", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35186,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Lightning Etched Specs (375)
+    {
+        id = 46112,
+        name = "Lightning Etched Specs",
+        itemId = 34355,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 390, green = 410, gray = 430 },
+        reagents = {
+            { itemId = 32476, name = "Gadgetstorm Goggles", count = 1 },
+            { itemId = 23571, name = "Primal Might", count = 2 },
+            { itemId = 22451, name = "Primal Air", count = 2 },
+            { itemId = 23572, name = "Primal Nether", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35193,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Surestrike Goggles v3.0 (375)
+    {
+        id = 46113,
+        name = "Surestrike Goggles v3.0",
+        itemId = 34356,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 390, green = 410, gray = 430 },
+        reagents = {
+            { itemId = 32474, name = "Surestrike Goggles v2.0", count = 1 },
+            { itemId = 22451, name = "Primal Air", count = 12 },
+            { itemId = 23572, name = "Primal Nether", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35194,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Mayhem Projection Goggles (375)
+    {
+        id = 46114,
+        name = "Mayhem Projection Goggles",
+        itemId = 34354,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 390, green = 410, gray = 430 },
+        reagents = {
+            { itemId = 32461, name = "Furious Gizmatic Goggles", count = 1 },
+            { itemId = 21884, name = "Primal Fire", count = 10 },
+            { itemId = 23572, name = "Primal Nether", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35195,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Hard Khorium Goggles (375)
+    {
+        id = 46115,
+        name = "Hard Khorium Goggles",
+        itemId = 34357,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 390, green = 410, gray = 430 },
+        reagents = {
+            { itemId = 32473, name = "Tankatronic Goggles", count = 1 },
+            { itemId = 35128, name = "Hardened Khorium", count = 2 },
+            { itemId = 23571, name = "Primal Might", count = 1 },
+            { itemId = 23572, name = "Primal Nether", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35196,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Quad Deathblow X44 Goggles (375)
+    {
+        id = 46116,
+        name = "Quad Deathblow X44 Goggles",
+        itemId = 34353,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 390, green = 410, gray = 430 },
+        reagents = {
+            { itemId = 32478, name = "Deathblow X11 Goggles", count = 1 },
+            { itemId = 22456, name = "Primal Shadow", count = 12 },
+            { itemId = 23572, name = "Primal Nether", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 35197,
         },
         expansion = C.EXPANSION.TBC,
     },

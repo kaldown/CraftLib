@@ -5,6 +5,42 @@ local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
 local recipes = {
+    -- Gordok Ogre Suit (0)
+    {
+        id = 22815,
+        name = "Gordok Ogre Suit",
+        itemId = 18258,
+        skillRequired = 0,
+        skillRange = { orange = 0, yellow = 285, green = 290, gray = 295 },
+        reagents = {
+            { itemId = 8170, name = "Rugged Leather", count = 4 },
+            { itemId = 14048, name = "Bolt of Runecloth", count = 2 },
+            { itemId = 18240, name = "Ogre Tannin", count = 1 },
+            { itemId = 14341, name = "Rune Thread", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Handstitched Leather Boots (1)
+    {
+        id = 2149,
+        name = "Handstitched Leather Boots",
+        itemId = 2302,
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 40, green = 55, gray = 70 },
+        reagents = {
+            { itemId = 2318, name = "Light Leather", count = 2 },
+            { itemId = 2320, name = "Coarse Thread", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Light Armor Kit (1)
     {
         id = 2152,
@@ -37,30 +73,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Handstitched Leather Boots (10)
-    {
-        id = 2149,
-        name = "Handstitched Leather Boots",
-        itemId = 2302,
-        skillRequired = 10,
-        skillRange = { orange = 10, yellow = 40, green = 55, gray = 70 },
-        reagents = {
-            { itemId = 2318, name = "Light Leather", count = 2 },
-            { itemId = 2320, name = "Coarse Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Handstitched Leather Vest (10)
+    -- Handstitched Leather Vest (1)
     {
         id = 7126,
         name = "Handstitched Leather Vest",
         itemId = 5957,
-        skillRequired = 10,
-        skillRange = { orange = 10, yellow = 40, green = 55, gray = 70 },
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 40, green = 55, gray = 70 },
         reagents = {
             { itemId = 2318, name = "Light Leather", count = 3 },
             { itemId = 2320, name = "Coarse Thread", count = 1 },
@@ -71,13 +90,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Handstitched Leather Cloak (10)
+    -- Handstitched Leather Cloak (1)
     {
         id = 9058,
         name = "Handstitched Leather Cloak",
         itemId = 7276,
-        skillRequired = 10,
-        skillRange = { orange = 10, yellow = 40, green = 55, gray = 70 },
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 40, green = 55, gray = 70 },
         reagents = {
             { itemId = 2318, name = "Light Leather", count = 2 },
             { itemId = 2320, name = "Coarse Thread", count = 1 },
@@ -88,13 +107,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Handstitched Leather Bracers (10)
+    -- Handstitched Leather Bracers (1)
     {
         id = 9059,
         name = "Handstitched Leather Bracers",
         itemId = 7277,
-        skillRequired = 10,
-        skillRange = { orange = 10, yellow = 40, green = 55, gray = 70 },
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 40, green = 55, gray = 70 },
         reagents = {
             { itemId = 2318, name = "Light Leather", count = 2 },
             { itemId = 2320, name = "Coarse Thread", count = 3 },
@@ -331,23 +350,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Fine Leather Cloak (75)
-    {
-        id = 2159,
-        name = "Fine Leather Cloak",
-        itemId = 2308,
-        skillRequired = 75,
-        skillRange = { orange = 75, yellow = 105, green = 120, gray = 135 },
-        reagents = {
-            { itemId = 2318, name = "Light Leather", count = 10 },
-            { itemId = 2321, name = "Fine Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Fine Leather Gloves (75)
     {
         id = 2164,
@@ -402,6 +404,23 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Fine Leather Cloak (85)
+    {
+        id = 2159,
+        name = "Fine Leather Cloak",
+        itemId = 2308,
+        skillRequired = 85,
+        skillRange = { orange = 85, yellow = 105, green = 120, gray = 135 },
+        reagents = {
+            { itemId = 2318, name = "Light Leather", count = 10 },
+            { itemId = 2321, name = "Fine Thread", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Fine Leather Tunic (85)
     {
         id = 3761,
@@ -417,26 +436,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Moonglow Vest (85)
-    {
-        id = 8322,
-        name = "Moonglow Vest",
-        itemId = 6709,
-        skillRequired = 85,
-        skillRange = { orange = 85, yellow = 115, green = 130, gray = 145 },
-        reagents = {
-            { itemId = 2318, name = "Light Leather", count = 6 },
-            { itemId = 4231, name = "Cured Light Hide", count = 1 },
-            { itemId = 2320, name = "Coarse Thread", count = 4 },
-            { itemId = 5498, name = "Small Lustrous Pearl", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 6710,
-            cost = 550,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -496,19 +495,23 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Medium Leather (90)
+    -- Moonglow Vest (90)
     {
-        id = 20648,
-        name = "Medium Leather",
-        itemId = 2319,
+        id = 8322,
+        name = "Moonglow Vest",
+        itemId = 6709,
         skillRequired = 90,
-        skillRange = { orange = 90, yellow = 100, green = 105, gray = 110 },
+        skillRange = { orange = 90, yellow = 115, green = 130, gray = 145 },
         reagents = {
-            { itemId = 2318, name = "Light Leather", count = 4 },
+            { itemId = 2318, name = "Light Leather", count = 6 },
+            { itemId = 4231, name = "Cured Light Hide", count = 1 },
+            { itemId = 2320, name = "Coarse Thread", count = 4 },
+            { itemId = 5498, name = "Small Lustrous Pearl", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 6710,
+            cost = 550,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -659,6 +662,22 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Medium Leather (100)
+    {
+        id = 20648,
+        name = "Medium Leather",
+        itemId = 2319,
+        skillRequired = 100,
+        skillRange = { orange = 100, yellow = 100, green = 105, gray = 110 },
+        reagents = {
+            { itemId = 2318, name = "Light Leather", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Black Whelp Tunic (100)
     {
         id = 24940,
@@ -789,6 +808,26 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Dark Leather Gloves (120)
+    {
+        id = 3765,
+        name = "Dark Leather Gloves",
+        itemId = 4248,
+        skillRequired = 120,
+        skillRange = { orange = 120, yellow = 155, green = 167, gray = 180 },
+        reagents = {
+            { itemId = 2312, name = "Fine Leather Gloves", count = 1 },
+            { itemId = 4233, name = "Cured Medium Hide", count = 1 },
+            { itemId = 2321, name = "Fine Thread", count = 1 },
+            { itemId = 4340, name = "Gray Dye", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 7360,
+            cost = 1600,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Hillman's Belt (120)
     {
         id = 3767,
@@ -879,26 +918,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Dark Leather Gloves (130)
-    {
-        id = 3765,
-        name = "Dark Leather Gloves",
-        itemId = 4248,
-        skillRequired = 130,
-        skillRange = { orange = 130, yellow = 155, green = 167, gray = 180 },
-        reagents = {
-            { itemId = 2312, name = "Fine Leather Gloves", count = 1 },
-            { itemId = 4233, name = "Cured Medium Hide", count = 1 },
-            { itemId = 2321, name = "Fine Thread", count = 1 },
-            { itemId = 4340, name = "Gray Dye", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 7360,
-            cost = 1600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1014,40 +1033,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 7363,
             cost = 2100,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Heavy Leather (140)
-    {
-        id = 20649,
-        name = "Heavy Leather",
-        itemId = 4234,
-        skillRequired = 140,
-        skillRange = { orange = 140, yellow = 150, green = 155, gray = 160 },
-        reagents = {
-            { itemId = 2319, name = "Medium Leather", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Heavy Leather Ball (140)
-    {
-        id = 23190,
-        name = "Heavy Leather Ball",
-        itemId = 18662,
-        skillRequired = 140,
-        skillRange = { orange = 140, yellow = 150, green = 155, gray = 160 },
-        reagents = {
-            { itemId = 4234, name = "Heavy Leather", count = 2 },
-            { itemId = 2321, name = "Fine Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 18731,
-            cost = 2000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1189,6 +1174,40 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Heavy Leather (150)
+    {
+        id = 20649,
+        name = "Heavy Leather",
+        itemId = 4234,
+        skillRequired = 150,
+        skillRange = { orange = 150, yellow = 150, green = 155, gray = 160 },
+        reagents = {
+            { itemId = 2319, name = "Medium Leather", count = 5 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Heavy Leather Ball (150)
+    {
+        id = 23190,
+        name = "Heavy Leather Ball",
+        itemId = 18662,
+        skillRequired = 150,
+        skillRange = { orange = 150, yellow = 150, green = 155, gray = 160 },
+        reagents = {
+            { itemId = 4234, name = "Heavy Leather", count = 2 },
+            { itemId = 2321, name = "Fine Thread", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 18731,
+            cost = 2000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1651,27 +1670,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Shadowskin Gloves (190)
-    {
-        id = 22711,
-        name = "Shadowskin Gloves",
-        itemId = 18238,
-        skillRequired = 190,
-        skillRange = { orange = 190, yellow = 210, green = 220, gray = 230 },
-        reagents = {
-            { itemId = 4304, name = "Thick Leather", count = 6 },
-            { itemId = 7428, name = "Shadowcat Hide", count = 8 },
-            { itemId = 7971, name = "Black Pearl", count = 2 },
-            { itemId = 4236, name = "Cured Heavy Hide", count = 2 },
-            { itemId = 1210, name = "Shadowgem", count = 4 },
-            { itemId = 8343, name = "Heavy Silken Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 18239,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Guardian Leather Bracers (195)
     {
         id = 3777,
@@ -1703,22 +1701,6 @@ local recipes = {
             { itemId = 4305, name = "Bolt of Silk Cloth", count = 2 },
             { itemId = 2325, name = "Black Dye", count = 2 },
             { itemId = 7071, name = "Iron Buckle", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Thick Leather (195)
-    {
-        id = 20650,
-        name = "Thick Leather",
-        itemId = 4304,
-        skillRequired = 195,
-        skillRange = { orange = 195, yellow = 200, green = 202, gray = 205 },
-        reagents = {
-            { itemId = 4234, name = "Heavy Leather", count = 6 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -1838,6 +1820,43 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 8384,
             cost = 3500,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Thick Leather (200)
+    {
+        id = 20650,
+        name = "Thick Leather",
+        itemId = 4304,
+        skillRequired = 200,
+        skillRange = { orange = 200, yellow = 200, green = 202, gray = 205 },
+        reagents = {
+            { itemId = 4234, name = "Heavy Leather", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Shadowskin Gloves (200)
+    {
+        id = 22711,
+        name = "Shadowskin Gloves",
+        itemId = 18238,
+        skillRequired = 200,
+        skillRange = { orange = 200, yellow = 210, green = 220, gray = 230 },
+        reagents = {
+            { itemId = 4304, name = "Thick Leather", count = 6 },
+            { itemId = 7428, name = "Shadowcat Hide", count = 8 },
+            { itemId = 7971, name = "Black Pearl", count = 2 },
+            { itemId = 4236, name = "Cured Heavy Hide", count = 2 },
+            { itemId = 1210, name = "Shadowgem", count = 4 },
+            { itemId = 8343, name = "Heavy Silken Thread", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 18239,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2248,22 +2267,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Rugged Armor Kit (230)
-    {
-        id = 19058,
-        name = "Rugged Armor Kit",
-        itemId = 15564,
-        skillRequired = 230,
-        skillRange = { orange = 230, yellow = 250, green = 260, gray = 270 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Tough Scorpid Boots (235)
     {
         id = 10554,
@@ -2372,23 +2375,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 8400,
             cost = 5000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Cured Rugged Hide (240)
-    {
-        id = 19047,
-        name = "Cured Rugged Hide",
-        itemId = 15407,
-        skillRequired = 240,
-        skillRange = { orange = 240, yellow = 250, green = 255, gray = 260 },
-        reagents = {
-            { itemId = 8171, name = "Rugged Hide", count = 1 },
-            { itemId = 15409, name = "Refined Deeprock Salt", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2517,6 +2503,39 @@ local recipes = {
             { itemId = 7971, name = "Black Pearl", count = 2 },
             { itemId = 8172, name = "Cured Thick Hide", count = 4 },
             { itemId = 8343, name = "Heavy Silken Thread", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Cured Rugged Hide (250)
+    {
+        id = 19047,
+        name = "Cured Rugged Hide",
+        itemId = 15407,
+        skillRequired = 250,
+        skillRange = { orange = 250, yellow = 250, green = 255, gray = 260 },
+        reagents = {
+            { itemId = 8171, name = "Rugged Hide", count = 1 },
+            { itemId = 15409, name = "Refined Deeprock Salt", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Rugged Armor Kit (250)
+    {
+        id = 19058,
+        name = "Rugged Armor Kit",
+        itemId = 15564,
+        skillRequired = 250,
+        skillRange = { orange = 250, yellow = 250, green = 260, gray = 270 },
+        reagents = {
+            { itemId = 8170, name = "Rugged Leather", count = 5 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -2945,25 +2964,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Gordok Ogre Suit (275)
-    {
-        id = 22815,
-        name = "Gordok Ogre Suit",
-        itemId = 18258,
-        skillRequired = 275,
-        skillRange = { orange = 275, yellow = 285, green = 290, gray = 295 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 4 },
-            { itemId = 14048, name = "Bolt of Runecloth", count = 2 },
-            { itemId = 18240, name = "Ogre Tannin", count = 1 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Heavy Scorpid Belt (280)
     {
         id = 19070,
@@ -3052,22 +3052,6 @@ local recipes = {
             { itemId = 15412, name = "Green Dragonscale", count = 30 },
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Knothide Armor Kit (280)
-    {
-        id = 32456,
-        name = "Knothide Armor Kit",
-        itemId = 25650,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 310, green = 325, gray = 340 },
-        reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 4 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -3366,8 +3350,12 @@ local recipes = {
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 576,
+            factionName = "Timbermaw Hold",
+            level = "Honored",
             itemId = 19326,
+            cost = 22000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3386,130 +3374,12 @@ local recipes = {
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 529,
+            factionName = "Argent Dawn",
+            level = "Honored",
             itemId = 19328,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Knothide Leather (290)
-    {
-        id = 32454,
-        name = "Knothide Leather",
-        itemId = 21887,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 300, green = 305, gray = 310 },
-        reagents = {
-            { itemId = 25649, name = "Knothide Leather Scraps", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Felscale Gloves (290)
-    {
-        id = 32462,
-        name = "Felscale Gloves",
-        itemId = 25654,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 310, green = 320, gray = 330 },
-        reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 5 },
-            { itemId = 25700, name = "Fel Scales", count = 1 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Scaled Draenic Pants (290)
-    {
-        id = 32466,
-        name = "Scaled Draenic Pants",
-        itemId = 25662,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 310, green = 320, gray = 330 },
-        reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 6 },
-            { itemId = 25700, name = "Fel Scales", count = 3 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Thick Draenic Gloves (290)
-    {
-        id = 32470,
-        name = "Thick Draenic Gloves",
-        itemId = 25669,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 310, green = 320, gray = 330 },
-        reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 6 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Wild Draenish Boots (290)
-    {
-        id = 32478,
-        name = "Wild Draenish Boots",
-        itemId = 25673,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 310, green = 320, gray = 330 },
-        reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 6 },
-            { itemId = 14341, name = "Rune Thread", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Comfortable Insoles (290)
-    {
-        id = 32482,
-        name = "Comfortable Insoles",
-        itemId = 25679,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 300, green = 305, gray = 310 },
-        reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 25726,
-            cost = 10000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Leatherworker's Satchel (290)
-    {
-        id = 45100,
-        name = "Leatherworker's Satchel",
-        itemId = 34482,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 310, green = 320, gray = 330 },
-        reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 20 },
-            { itemId = 25700, name = "Fel Scales", count = 4 },
-            { itemId = 25707, name = "Fel Hide", count = 4 },
-            { itemId = 14341, name = "Rune Thread", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
+            cost = 22000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4116,8 +3986,12 @@ local recipes = {
             { itemId = 14227, name = "Ironweb Spider Silk", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 576,
+            factionName = "Timbermaw Hold",
+            level = "Revered",
             itemId = 19327,
+            cost = 40000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4136,8 +4010,12 @@ local recipes = {
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 529,
+            factionName = "Argent Dawn",
+            level = "Revered",
             itemId = 19329,
+            cost = 40000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4238,8 +4116,12 @@ local recipes = {
             { itemId = 14341, name = "Rune Thread", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 270,
+            factionName = "Zandalar Tribe",
+            level = "Revered",
             itemId = 19769,
+            cost = 50000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4257,8 +4139,12 @@ local recipes = {
             { itemId = 14341, name = "Rune Thread", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 270,
+            factionName = "Zandalar Tribe",
+            level = "Honored",
             itemId = 19770,
+            cost = 50000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4276,8 +4162,12 @@ local recipes = {
             { itemId = 14341, name = "Rune Thread", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 270,
+            factionName = "Zandalar Tribe",
+            level = "Friendly",
             itemId = 19771,
+            cost = 50000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4295,8 +4185,12 @@ local recipes = {
             { itemId = 14341, name = "Rune Thread", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 270,
+            factionName = "Zandalar Tribe",
+            level = "Revered",
             itemId = 19772,
+            cost = 50000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4314,8 +4208,12 @@ local recipes = {
             { itemId = 14341, name = "Rune Thread", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 270,
+            factionName = "Zandalar Tribe",
+            level = "Honored",
             itemId = 19773,
+            cost = 50000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4353,8 +4251,12 @@ local recipes = {
             { itemId = 14227, name = "Ironweb Spider Silk", count = 6 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 609,
+            factionName = "Cenarion Circle",
+            level = "Exalted",
             itemId = 20382,
+            cost = 60000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4371,8 +4273,12 @@ local recipes = {
             { itemId = 7078, name = "Essence of Fire", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 609,
+            factionName = "Cenarion Circle",
+            level = "Friendly",
             itemId = 20506,
+            cost = 40000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4723,15 +4629,47 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Felscale Boots (300)
+    -- Knothide Leather (300)
     {
-        id = 32463,
-        name = "Felscale Boots",
-        itemId = 25655,
+        id = 32454,
+        name = "Knothide Leather",
+        itemId = 21887,
         skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
+        skillRange = { orange = 300, yellow = 300, green = 305, gray = 310 },
         reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 8 },
+            { itemId = 25649, name = "Knothide Leather Scraps", count = 5 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Knothide Armor Kit (300)
+    {
+        id = 32456,
+        name = "Knothide Armor Kit",
+        itemId = 25650,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 310, green = 325, gray = 340 },
+        reagents = {
+            { itemId = 21887, name = "Knothide Leather", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Felscale Gloves (300)
+    {
+        id = 32462,
+        name = "Felscale Gloves",
+        itemId = 25654,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 310, green = 320, gray = 330 },
+        reagents = {
+            { itemId = 21887, name = "Knothide Leather", count = 5 },
             { itemId = 25700, name = "Fel Scales", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
@@ -4741,16 +4679,16 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Scaled Draenic Gloves (300)
+    -- Scaled Draenic Pants (300)
     {
-        id = 32467,
-        name = "Scaled Draenic Gloves",
-        itemId = 25661,
+        id = 32466,
+        name = "Scaled Draenic Pants",
+        itemId = 25662,
         skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
+        skillRange = { orange = 300, yellow = 310, green = 320, gray = 330 },
         reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 8 },
-            { itemId = 25700, name = "Fel Scales", count = 1 },
+            { itemId = 21887, name = "Knothide Leather", count = 6 },
+            { itemId = 25700, name = "Fel Scales", count = 3 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
         source = {
@@ -4759,15 +4697,32 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Wild Draenish Gloves (300)
+    -- Thick Draenic Gloves (300)
     {
-        id = 32479,
-        name = "Wild Draenish Gloves",
-        itemId = 25674,
+        id = 32470,
+        name = "Thick Draenic Gloves",
+        itemId = 25669,
         skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
+        skillRange = { orange = 300, yellow = 310, green = 320, gray = 330 },
         reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 9 },
+            { itemId = 21887, name = "Knothide Leather", count = 6 },
+            { itemId = 14341, name = "Rune Thread", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Wild Draenish Boots (300)
+    {
+        id = 32478,
+        name = "Wild Draenish Boots",
+        itemId = 25673,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 310, green = 320, gray = 330 },
+        reagents = {
+            { itemId = 21887, name = "Knothide Leather", count = 6 },
             { itemId = 14341, name = "Rune Thread", count = 3 },
         },
         source = {
@@ -4776,13 +4731,102 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Thick Draenic Pants (305)
+    -- Comfortable Insoles (300)
+    {
+        id = 32482,
+        name = "Comfortable Insoles",
+        itemId = 25679,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 300, green = 305, gray = 310 },
+        reagents = {
+            { itemId = 21887, name = "Knothide Leather", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 25726,
+            cost = 10000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Leatherworker's Satchel (300)
+    {
+        id = 45100,
+        name = "Leatherworker's Satchel",
+        itemId = 34482,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 310, green = 320, gray = 330 },
+        reagents = {
+            { itemId = 21887, name = "Knothide Leather", count = 20 },
+            { itemId = 25700, name = "Fel Scales", count = 4 },
+            { itemId = 25707, name = "Fel Hide", count = 4 },
+            { itemId = 14341, name = "Rune Thread", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Felscale Boots (310)
+    {
+        id = 32463,
+        name = "Felscale Boots",
+        itemId = 25655,
+        skillRequired = 310,
+        skillRange = { orange = 310, yellow = 320, green = 330, gray = 340 },
+        reagents = {
+            { itemId = 21887, name = "Knothide Leather", count = 8 },
+            { itemId = 25700, name = "Fel Scales", count = 1 },
+            { itemId = 14341, name = "Rune Thread", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Scaled Draenic Gloves (310)
+    {
+        id = 32467,
+        name = "Scaled Draenic Gloves",
+        itemId = 25661,
+        skillRequired = 310,
+        skillRange = { orange = 310, yellow = 320, green = 330, gray = 340 },
+        reagents = {
+            { itemId = 21887, name = "Knothide Leather", count = 8 },
+            { itemId = 25700, name = "Fel Scales", count = 1 },
+            { itemId = 14341, name = "Rune Thread", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Wild Draenish Gloves (310)
+    {
+        id = 32479,
+        name = "Wild Draenish Gloves",
+        itemId = 25674,
+        skillRequired = 310,
+        skillRange = { orange = 310, yellow = 320, green = 330, gray = 340 },
+        reagents = {
+            { itemId = 21887, name = "Knothide Leather", count = 9 },
+            { itemId = 14341, name = "Rune Thread", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Thick Draenic Pants (315)
     {
         id = 32471,
         name = "Thick Draenic Pants",
         itemId = 25670,
-        skillRequired = 305,
-        skillRange = { orange = 305, yellow = 325, green = 335, gray = 345 },
+        skillRequired = 315,
+        skillRange = { orange = 315, yellow = 325, green = 335, gray = 345 },
         reagents = {
             { itemId = 21887, name = "Knothide Leather", count = 10 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
@@ -4793,13 +4837,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Knothide Ammo Pouch (305)
+    -- Knothide Ammo Pouch (315)
     {
         id = 44343,
         name = "Knothide Ammo Pouch",
         itemId = 34099,
-        skillRequired = 305,
-        skillRange = { orange = 305, yellow = 325, green = 335, gray = 345 },
+        skillRequired = 315,
+        skillRange = { orange = 315, yellow = 325, green = 335, gray = 345 },
         reagents = {
             { itemId = 21887, name = "Knothide Leather", count = 24 },
             { itemId = 14341, name = "Rune Thread", count = 4 },
@@ -4811,13 +4855,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Knothide Quiver (305)
+    -- Knothide Quiver (315)
     {
         id = 44344,
         name = "Knothide Quiver",
         itemId = 34100,
-        skillRequired = 305,
-        skillRange = { orange = 305, yellow = 325, green = 335, gray = 345 },
+        skillRequired = 315,
+        skillRange = { orange = 315, yellow = 325, green = 335, gray = 345 },
         reagents = {
             { itemId = 21887, name = "Knothide Leather", count = 20 },
             { itemId = 25719, name = "Arakkoa Feather", count = 30 },
@@ -4829,13 +4873,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felscale Pants (310)
+    -- Felscale Pants (320)
     {
         id = 32464,
         name = "Felscale Pants",
         itemId = 25656,
-        skillRequired = 310,
-        skillRange = { orange = 310, yellow = 330, green = 340, gray = 350 },
+        skillRequired = 320,
+        skillRange = { orange = 320, yellow = 330, green = 340, gray = 350 },
         reagents = {
             { itemId = 21887, name = "Knothide Leather", count = 10 },
             { itemId = 25700, name = "Fel Scales", count = 3 },
@@ -4847,13 +4891,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Thick Draenic Boots (310)
+    -- Thick Draenic Boots (320)
     {
         id = 32472,
         name = "Thick Draenic Boots",
         itemId = 25668,
-        skillRequired = 310,
-        skillRange = { orange = 310, yellow = 330, green = 340, gray = 350 },
+        skillRequired = 320,
+        skillRange = { orange = 320, yellow = 330, green = 340, gray = 350 },
         reagents = {
             { itemId = 21887, name = "Knothide Leather", count = 10 },
             { itemId = 14341, name = "Rune Thread", count = 3 },
@@ -4864,13 +4908,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Wild Draenish Leggings (310)
+    -- Wild Draenish Leggings (320)
     {
         id = 32480,
         name = "Wild Draenish Leggings",
         itemId = 25675,
-        skillRequired = 310,
-        skillRange = { orange = 310, yellow = 330, green = 340, gray = 350 },
+        skillRequired = 320,
+        skillRange = { orange = 320, yellow = 330, green = 340, gray = 350 },
         reagents = {
             { itemId = 21887, name = "Knothide Leather", count = 13 },
             { itemId = 14341, name = "Rune Thread", count = 3 },
@@ -4881,13 +4925,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Heavy Knothide Leather (315)
+    -- Heavy Knothide Leather (325)
     {
         id = 32455,
         name = "Heavy Knothide Leather",
         itemId = 23793,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 325, green = 330, gray = 335 },
+        skillRequired = 325,
+        skillRange = { orange = 325, yellow = 325, green = 330, gray = 335 },
         reagents = {
             { itemId = 21887, name = "Knothide Leather", count = 5 },
         },
@@ -4895,102 +4939,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 25720,
             cost = 50000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Scaled Draenic Vest (315)
-    {
-        id = 32468,
-        name = "Scaled Draenic Vest",
-        itemId = 25660,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 12 },
-            { itemId = 25700, name = "Fel Scales", count = 3 },
-            { itemId = 14341, name = "Rune Thread", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Cobrahide Leg Armor (315)
-    {
-        id = 35549,
-        name = "Cobrahide Leg Armor",
-        itemId = 29533,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
-            { itemId = 29539, name = "Cobra Scales", count = 2 },
-            { itemId = 22451, name = "Primal Air", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 947,
-            factionName = "Thrallmar",
-            level = "Honored",
-            itemId = 31361,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Clefthide Leg Armor (315)
-    {
-        id = 35555,
-        name = "Clefthide Leg Armor",
-        itemId = 29534,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
-            { itemId = 25708, name = "Thick Clefthoof Leather", count = 8 },
-            { itemId = 22452, name = "Primal Earth", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 942,
-            factionName = "Cenarion Expedition",
-            level = "Honored",
-            itemId = 29720,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Thick Draenic Vest (320)
-    {
-        id = 32473,
-        name = "Thick Draenic Vest",
-        itemId = 25671,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
-        reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 14 },
-            { itemId = 14341, name = "Rune Thread", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Wild Draenish Vest (320)
-    {
-        id = 32481,
-        name = "Wild Draenish Vest",
-        itemId = 25676,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
-        reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 15 },
-            { itemId = 14341, name = "Rune Thread", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5036,34 +4984,16 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felscale Breastplate (325)
+    -- Scaled Draenic Vest (325)
     {
-        id = 32465,
-        name = "Felscale Breastplate",
-        itemId = 25657,
+        id = 32468,
+        name = "Scaled Draenic Vest",
+        itemId = 25660,
         skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
-        reagents = {
-            { itemId = 21887, name = "Knothide Leather", count = 14 },
-            { itemId = 25700, name = "Fel Scales", count = 3 },
-            { itemId = 14341, name = "Rune Thread", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Scaled Draenic Boots (325)
-    {
-        id = 32469,
-        name = "Scaled Draenic Boots",
-        itemId = 25659,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
+        skillRange = { orange = 325, yellow = 335, green = 345, gray = 355 },
         reagents = {
             { itemId = 21887, name = "Knothide Leather", count = 12 },
-            { itemId = 25700, name = "Fel Scales", count = 2 },
+            { itemId = 25700, name = "Fel Scales", count = 3 },
             { itemId = 14341, name = "Rune Thread", count = 3 },
         },
         source = {
@@ -5084,21 +5014,25 @@ local recipes = {
             { itemId = 22452, name = "Primal Earth", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 978,
+            factionName = "Kurenai",
+            level = "Honored",
             itemId = 30444,
+            cost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Drums of War (325)
+    -- Thick Draenic Vest (330)
     {
-        id = 35540,
-        name = "Drums of War",
-        itemId = 29528,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 340, green = 347, gray = 355 },
+        id = 32473,
+        name = "Thick Draenic Vest",
+        itemId = 25671,
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 3 },
-            { itemId = 25700, name = "Fel Scales", count = 3 },
+            { itemId = 21887, name = "Knothide Leather", count = 14 },
+            { itemId = 14341, name = "Rune Thread", count = 3 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -5106,113 +5040,20 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Greater Drums of War (325)
+    -- Wild Draenish Vest (330)
     {
-        id = 351766,
-        name = "Greater Drums of War",
-        itemId = 185852,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 340, green = 347, gray = 355 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 3 },
-            { itemId = 25700, name = "Fel Scales", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 185922,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Fel Leather Gloves (330)
-    {
-        id = 32490,
-        name = "Fel Leather Gloves",
-        itemId = 25685,
+        id = 32481,
+        name = "Wild Draenish Vest",
+        itemId = 25676,
         skillRequired = 330,
-        skillRange = { orange = 330, yellow = 350, green = 360, gray = 370 },
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 25707, name = "Fel Hide", count = 6 },
-            { itemId = 22456, name = "Primal Shadow", count = 6 },
+            { itemId = 21887, name = "Knothide Leather", count = 15 },
             { itemId = 14341, name = "Rune Thread", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 933,
-            factionName = "The Consortium",
-            level = "Friendly",
-            itemId = 25732,
-            cost = 120000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Netherfury Belt (330)
-    {
-        id = 32501,
-        name = "Netherfury Belt",
-        itemId = 25694,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 350, green = 360, gray = 370 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
-            { itemId = 25699, name = "Crystal Infused Leather", count = 8 },
-            { itemId = 21885, name = "Primal Water", count = 3 },
-            { itemId = 22457, name = "Primal Mana", count = 3 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 978,
-            factionName = "Kurenai",
-            level = "Friendly",
-            itemId = 29217,
-            cost = 120000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Netherfury Leggings (330)
-    {
-        id = 32502,
-        name = "Netherfury Leggings",
-        itemId = 25692,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 350, green = 360, gray = 370 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
-            { itemId = 25699, name = "Crystal Infused Leather", count = 12 },
-            { itemId = 21885, name = "Primal Water", count = 5 },
-            { itemId = 22457, name = "Primal Mana", count = 5 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 978,
-            factionName = "Kurenai",
-            level = "Honored",
-            itemId = 29219,
-            cost = 120000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Drums of Speed (330)
-    {
-        id = 35544,
-        name = "Drums of Speed",
-        itemId = 29530,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 345, green = 352, gray = 360 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 29547, name = "Wind Scales", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 978,
-            factionName = "Kurenai",
-            level = "Honored",
-            itemId = 34173,
-            cost = 160000,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5273,262 +5114,153 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Greater Drums of Speed (330)
+    -- Felscale Breastplate (335)
     {
-        id = 351768,
-        name = "Greater Drums of Speed",
-        itemId = 185851,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 345, green = 352, gray = 360 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 29547, name = "Wind Scales", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 978,
-            factionName = "Kurenai",
-            level = "Honored",
-            itemId = 187049,
-            cost = 160000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Drums of Restoration (335)
-    {
-        id = 35539,
-        name = "Drums of Restoration",
-        itemId = 29531,
+        id = 32465,
+        name = "Felscale Breastplate",
+        itemId = 25657,
         skillRequired = 335,
-        skillRange = { orange = 335, yellow = 350, green = 357, gray = 365 },
+        skillRange = { orange = 335, yellow = 345, green = 355, gray = 365 },
         reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 29548, name = "Nether Dragonscales", count = 4 },
+            { itemId = 21887, name = "Knothide Leather", count = 14 },
+            { itemId = 25700, name = "Fel Scales", count = 3 },
+            { itemId = 14341, name = "Rune Thread", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 978,
-            factionName = "Kurenai",
-            level = "Honored",
-            itemId = 34175,
-            cost = 160000,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Greater Drums of Restoration (335)
+    -- Scaled Draenic Boots (335)
     {
-        id = 351769,
-        name = "Greater Drums of Restoration",
-        itemId = 185850,
+        id = 32469,
+        name = "Scaled Draenic Boots",
+        itemId = 25659,
         skillRequired = 335,
-        skillRange = { orange = 335, yellow = 350, green = 357, gray = 365 },
+        skillRange = { orange = 335, yellow = 345, green = 355, gray = 365 },
         reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 29548, name = "Nether Dragonscales", count = 4 },
+            { itemId = 21887, name = "Knothide Leather", count = 12 },
+            { itemId = 25700, name = "Fel Scales", count = 2 },
+            { itemId = 14341, name = "Rune Thread", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 978,
-            factionName = "Kurenai",
-            level = "Honored",
-            itemId = 187048,
-            cost = 160000,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Riding Crop (340)
+    -- Cobrahide Leg Armor (335)
     {
-        id = 32461,
-        name = "Riding Crop",
-        itemId = 25653,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        id = 35549,
+        name = "Cobrahide Leg Armor",
+        itemId = 29533,
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 335, green = 345, gray = 355 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
-            { itemId = 23571, name = "Primal Might", count = 1 },
-            { itemId = 22445, name = "Arcane Dust", count = 6 },
-            { itemId = 22448, name = "Small Prismatic Shard", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 25725,
-            cost = 50000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Stylin' Purple Hat (340)
-    {
-        id = 32485,
-        name = "Stylin' Purple Hat",
-        itemId = 25680,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 29539, name = "Cobra Scales", count = 2 },
-            { itemId = 22456, name = "Primal Shadow", count = 8 },
-            { itemId = 4342, name = "Purple Dye", count = 4 },
-            { itemId = 14341, name = "Rune Thread", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 25728,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Stylin' Adventure Hat (340)
-    {
-        id = 32487,
-        name = "Stylin' Adventure Hat",
-        itemId = 25681,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 29539, name = "Cobra Scales", count = 2 },
-            { itemId = 21886, name = "Primal Life", count = 8 },
-            { itemId = 2325, name = "Black Dye", count = 4 },
-            { itemId = 14341, name = "Rune Thread", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 25729,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Stylin' Crimson Hat (340)
-    {
-        id = 32488,
-        name = "Stylin' Crimson Hat",
-        itemId = 25683,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 29539, name = "Cobra Scales", count = 2 },
-            { itemId = 21884, name = "Primal Fire", count = 8 },
-            { itemId = 2604, name = "Red Dye", count = 4 },
-            { itemId = 14341, name = "Rune Thread", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 25731,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Stylin' Jungle Hat (340)
-    {
-        id = 32489,
-        name = "Stylin' Jungle Hat",
-        itemId = 25682,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 29539, name = "Cobra Scales", count = 2 },
-            { itemId = 22452, name = "Primal Earth", count = 8 },
-            { itemId = 14341, name = "Rune Thread", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 25730,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Fel Leather Boots (340)
-    {
-        id = 32493,
-        name = "Fel Leather Boots",
-        itemId = 25686,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 10 },
-            { itemId = 25707, name = "Fel Hide", count = 8 },
-            { itemId = 22456, name = "Primal Shadow", count = 8 },
-            { itemId = 14341, name = "Rune Thread", count = 3 },
+            { itemId = 22451, name = "Primal Air", count = 4 },
         },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 933,
-            factionName = "The Consortium",
+            factionId = 947,
+            factionName = "Thrallmar",
             level = "Honored",
-            itemId = 25733,
-            cost = 140000,
+            itemId = 31361,
+            cost = 60000,
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Fel Leather Leggings (340)
+    -- Clefthide Leg Armor (335)
     {
-        id = 32494,
-        name = "Fel Leather Leggings",
-        itemId = 25687,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        id = 35555,
+        name = "Clefthide Leg Armor",
+        itemId = 29534,
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 335, green = 345, gray = 355 },
         reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 10 },
-            { itemId = 25707, name = "Fel Hide", count = 10 },
-            { itemId = 22456, name = "Primal Shadow", count = 10 },
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
+            { itemId = 25708, name = "Thick Clefthoof Leather", count = 8 },
+            { itemId = 22452, name = "Primal Earth", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 942,
+            factionName = "Cenarion Expedition",
+            level = "Honored",
+            itemId = 29720,
+            cost = 60000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Fel Leather Gloves (340)
+    {
+        id = 32490,
+        name = "Fel Leather Gloves",
+        itemId = 25685,
+        skillRequired = 340,
+        skillRange = { orange = 340, yellow = 350, green = 360, gray = 370 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 25707, name = "Fel Hide", count = 6 },
+            { itemId = 22456, name = "Primal Shadow", count = 6 },
             { itemId = 14341, name = "Rune Thread", count = 3 },
         },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 933,
             factionName = "The Consortium",
-            level = "Revered",
-            itemId = 25734,
-            cost = 140000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Felstalker Belt (340)
-    {
-        id = 32498,
-        name = "Felstalker Belt",
-        itemId = 25695,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 25707, name = "Fel Hide", count = 4 },
-            { itemId = 25699, name = "Crystal Infused Leather", count = 8 },
-            { itemId = 22451, name = "Primal Air", count = 6 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 946,
-            factionName = "Honor Hold",
             level = "Friendly",
-            itemId = 29213,
+            itemId = 25732,
             cost = 120000,
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Netherfury Boots (340)
+    -- Netherfury Belt (340)
     {
-        id = 32503,
-        name = "Netherfury Boots",
-        itemId = 25693,
+        id = 32501,
+        name = "Netherfury Belt",
+        itemId = 25694,
         skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRange = { orange = 340, yellow = 350, green = 360, gray = 370 },
         reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 25699, name = "Crystal Infused Leather", count = 10 },
-            { itemId = 21885, name = "Primal Water", count = 4 },
-            { itemId = 22457, name = "Primal Mana", count = 4 },
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
+            { itemId = 25699, name = "Crystal Infused Leather", count = 8 },
+            { itemId = 21885, name = "Primal Water", count = 3 },
+            { itemId = 22457, name = "Primal Mana", count = 3 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 978,
             factionName = "Kurenai",
-            level = "Revered",
-            itemId = 29218,
+            level = "Friendly",
+            itemId = 29217,
+            cost = 120000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Netherfury Leggings (340)
+    {
+        id = 32502,
+        name = "Netherfury Leggings",
+        itemId = 25692,
+        skillRequired = 340,
+        skillRange = { orange = 340, yellow = 350, green = 360, gray = 370 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
+            { itemId = 25699, name = "Crystal Infused Leather", count = 12 },
+            { itemId = 21885, name = "Primal Water", count = 5 },
+            { itemId = 22457, name = "Primal Mana", count = 5 },
+            { itemId = 14341, name = "Rune Thread", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 978,
+            factionName = "Kurenai",
+            level = "Honored",
+            itemId = 29219,
             cost = 120000,
         },
         expansion = C.EXPANSION.TBC,
@@ -5623,13 +5355,287 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Enchanted Felscale Leggings (340)
+    -- Drums of War (340)
+    {
+        id = 35540,
+        name = "Drums of War",
+        itemId = 29528,
+        skillRequired = 340,
+        skillRange = { orange = 340, yellow = 340, green = 347, gray = 355 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 3 },
+            { itemId = 25700, name = "Fel Scales", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Greater Drums of War (340)
+    {
+        id = 351766,
+        name = "Greater Drums of War",
+        itemId = 185852,
+        skillRequired = 340,
+        skillRange = { orange = 340, yellow = 340, green = 347, gray = 355 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 3 },
+            { itemId = 25700, name = "Fel Scales", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 185922,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Drums of Speed (345)
+    {
+        id = 35544,
+        name = "Drums of Speed",
+        itemId = 29530,
+        skillRequired = 345,
+        skillRange = { orange = 345, yellow = 345, green = 352, gray = 360 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 29547, name = "Wind Scales", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 978,
+            factionName = "Kurenai",
+            level = "Honored",
+            itemId = 34173,
+            cost = 160000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Greater Drums of Speed (345)
+    {
+        id = 351768,
+        name = "Greater Drums of Speed",
+        itemId = 185851,
+        skillRequired = 345,
+        skillRange = { orange = 345, yellow = 345, green = 352, gray = 360 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 29547, name = "Wind Scales", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 978,
+            factionName = "Kurenai",
+            level = "Honored",
+            itemId = 187049,
+            cost = 160000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Riding Crop (350)
+    {
+        id = 32461,
+        name = "Riding Crop",
+        itemId = 25653,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
+            { itemId = 23571, name = "Primal Might", count = 1 },
+            { itemId = 22445, name = "Arcane Dust", count = 6 },
+            { itemId = 22448, name = "Small Prismatic Shard", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 25725,
+            cost = 50000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Stylin' Purple Hat (350)
+    {
+        id = 32485,
+        name = "Stylin' Purple Hat",
+        itemId = 25680,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 29539, name = "Cobra Scales", count = 2 },
+            { itemId = 22456, name = "Primal Shadow", count = 8 },
+            { itemId = 4342, name = "Purple Dye", count = 4 },
+            { itemId = 14341, name = "Rune Thread", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 25728,
+            cost = 60000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Stylin' Adventure Hat (350)
+    {
+        id = 32487,
+        name = "Stylin' Adventure Hat",
+        itemId = 25681,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 29539, name = "Cobra Scales", count = 2 },
+            { itemId = 21886, name = "Primal Life", count = 8 },
+            { itemId = 2325, name = "Black Dye", count = 4 },
+            { itemId = 14341, name = "Rune Thread", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 25729,
+            cost = 60000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Stylin' Crimson Hat (350)
+    {
+        id = 32488,
+        name = "Stylin' Crimson Hat",
+        itemId = 25683,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 29539, name = "Cobra Scales", count = 2 },
+            { itemId = 21884, name = "Primal Fire", count = 8 },
+            { itemId = 2604, name = "Red Dye", count = 4 },
+            { itemId = 14341, name = "Rune Thread", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 25731,
+            cost = 60000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Stylin' Jungle Hat (350)
+    {
+        id = 32489,
+        name = "Stylin' Jungle Hat",
+        itemId = 25682,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 29539, name = "Cobra Scales", count = 2 },
+            { itemId = 22452, name = "Primal Earth", count = 8 },
+            { itemId = 14341, name = "Rune Thread", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 25730,
+            cost = 60000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Fel Leather Boots (350)
+    {
+        id = 32493,
+        name = "Fel Leather Boots",
+        itemId = 25686,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 10 },
+            { itemId = 25707, name = "Fel Hide", count = 8 },
+            { itemId = 22456, name = "Primal Shadow", count = 8 },
+            { itemId = 14341, name = "Rune Thread", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 933,
+            factionName = "The Consortium",
+            level = "Honored",
+            itemId = 25733,
+            cost = 140000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Fel Leather Leggings (350)
+    {
+        id = 32494,
+        name = "Fel Leather Leggings",
+        itemId = 25687,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 10 },
+            { itemId = 25707, name = "Fel Hide", count = 10 },
+            { itemId = 22456, name = "Primal Shadow", count = 10 },
+            { itemId = 14341, name = "Rune Thread", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 933,
+            factionName = "The Consortium",
+            level = "Revered",
+            itemId = 25734,
+            cost = 140000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Felstalker Belt (350)
+    {
+        id = 32498,
+        name = "Felstalker Belt",
+        itemId = 25695,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 25707, name = "Fel Hide", count = 4 },
+            { itemId = 25699, name = "Crystal Infused Leather", count = 8 },
+            { itemId = 22451, name = "Primal Air", count = 6 },
+            { itemId = 14341, name = "Rune Thread", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 946,
+            factionName = "Honor Hold",
+            level = "Friendly",
+            itemId = 29213,
+            cost = 120000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Netherfury Boots (350)
+    {
+        id = 32503,
+        name = "Netherfury Boots",
+        itemId = 25693,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 25699, name = "Crystal Infused Leather", count = 10 },
+            { itemId = 21885, name = "Primal Water", count = 4 },
+            { itemId = 22457, name = "Primal Mana", count = 4 },
+            { itemId = 14341, name = "Rune Thread", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 978,
+            factionName = "Kurenai",
+            level = "Revered",
+            itemId = 29218,
+            cost = 120000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Enchanted Felscale Leggings (350)
     {
         id = 35525,
         name = "Enchanted Felscale Leggings",
         itemId = 29489,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 25700, name = "Fel Scales", count = 12 },
@@ -5645,13 +5651,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Enchanted Felscale Gloves (340)
+    -- Enchanted Felscale Gloves (350)
     {
         id = 35526,
         name = "Enchanted Felscale Gloves",
         itemId = 29490,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 25700, name = "Fel Scales", count = 10 },
@@ -5667,13 +5673,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Enchanted Felscale Boots (340)
+    -- Enchanted Felscale Boots (350)
     {
         id = 35527,
         name = "Enchanted Felscale Boots",
         itemId = 29491,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 25700, name = "Fel Scales", count = 10 },
@@ -5689,13 +5695,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Flamescale Boots (340)
+    -- Flamescale Boots (350)
     {
         id = 35528,
         name = "Flamescale Boots",
         itemId = 29493,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 25699, name = "Crystal Infused Leather", count = 8 },
@@ -5712,13 +5718,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Flamescale Leggings (340)
+    -- Flamescale Leggings (350)
     {
         id = 35529,
         name = "Flamescale Leggings",
         itemId = 29492,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 25699, name = "Crystal Infused Leather", count = 12 },
@@ -5735,13 +5741,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Flamescale Belt (340)
+    -- Flamescale Belt (350)
     {
         id = 35531,
         name = "Flamescale Belt",
         itemId = 29494,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 25699, name = "Crystal Infused Leather", count = 8 },
@@ -5758,13 +5764,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Enchanted Clefthoof Leggings (340)
+    -- Enchanted Clefthoof Leggings (350)
     {
         id = 35532,
         name = "Enchanted Clefthoof Leggings",
         itemId = 29495,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 25708, name = "Thick Clefthoof Leather", count = 24 },
@@ -5780,13 +5786,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Enchanted Clefthoof Gloves (340)
+    -- Enchanted Clefthoof Gloves (350)
     {
         id = 35533,
         name = "Enchanted Clefthoof Gloves",
         itemId = 29496,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 25708, name = "Thick Clefthoof Leather", count = 16 },
@@ -5802,13 +5808,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Enchanted Clefthoof Boots (340)
+    -- Enchanted Clefthoof Boots (350)
     {
         id = 35534,
         name = "Enchanted Clefthoof Boots",
         itemId = 29497,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 25708, name = "Thick Clefthoof Leather", count = 16 },
@@ -5824,13 +5830,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Blastguard Pants (340)
+    -- Blastguard Pants (350)
     {
         id = 35535,
         name = "Blastguard Pants",
         itemId = 29498,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 25707, name = "Fel Hide", count = 10 },
@@ -5847,13 +5853,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Blastguard Boots (340)
+    -- Blastguard Boots (350)
     {
         id = 35536,
         name = "Blastguard Boots",
         itemId = 29499,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 25707, name = "Fel Hide", count = 8 },
@@ -5870,13 +5876,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Blastguard Belt (340)
+    -- Blastguard Belt (350)
     {
         id = 35537,
         name = "Blastguard Belt",
         itemId = 29500,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 25707, name = "Fel Hide", count = 6 },
@@ -5893,13 +5899,34 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Quiver of a Thousand Feathers (340)
+    -- Drums of Restoration (350)
+    {
+        id = 35539,
+        name = "Drums of Restoration",
+        itemId = 29531,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 350, green = 357, gray = 365 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 29548, name = "Nether Dragonscales", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 978,
+            factionName = "Kurenai",
+            level = "Honored",
+            itemId = 34175,
+            cost = 160000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Quiver of a Thousand Feathers (350)
     {
         id = 44359,
         name = "Quiver of a Thousand Feathers",
         itemId = 34105,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
             { itemId = 17056, name = "Light Feather", count = 99 },
@@ -5916,13 +5943,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Netherscale Ammo Pouch (340)
+    -- Netherscale Ammo Pouch (350)
     {
         id = 44768,
         name = "Netherscale Ammo Pouch",
         itemId = 34106,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 12 },
             { itemId = 29548, name = "Nether Dragonscales", count = 12 },
@@ -5939,175 +5966,67 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Leather Gauntlets of the Sun (340)
+    -- Glove Reinforcements (350)
     {
-        id = 46132,
-        name = "Leather Gauntlets of the Sun",
-        itemId = 34372,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
+        id = 44770,
+        name = "Glove Reinforcements",
+        itemId = 34207,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 355, green = 360, gray = 365 },
         reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 30 },
-            { itemId = 25708, name = "Thick Clefthoof Leather", count = 16 },
-            { itemId = 21886, name = "Primal Life", count = 18 },
-            { itemId = 23571, name = "Primal Might", count = 8 },
-            { itemId = 34664, name = "Sunmote", count = 6 },
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
+            { itemId = 22452, name = "Primal Earth", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 35547,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Fletcher's Gloves of the Phoenix (340)
+    -- Heavy Knothide Armor Kit (350)
     {
-        id = 46133,
-        name = "Fletcher's Gloves of the Phoenix",
-        itemId = 34374,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
+        id = 44970,
+        name = "Heavy Knothide Armor Kit",
+        itemId = 34330,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 355, green = 360, gray = 365 },
         reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 30 },
-            { itemId = 29547, name = "Wind Scales", count = 16 },
-            { itemId = 22451, name = "Primal Air", count = 18 },
-            { itemId = 23571, name = "Primal Might", count = 8 },
-            { itemId = 34664, name = "Sunmote", count = 6 },
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35541,
-            cost = 80000,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Leatherworking Trainer",
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Gloves of Immortal Dusk (340)
+    -- Greater Drums of Restoration (350)
     {
-        id = 46134,
-        name = "Gloves of Immortal Dusk",
-        itemId = 34370,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
+        id = 351769,
+        name = "Greater Drums of Restoration",
+        itemId = 185850,
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 350, green = 357, gray = 365 },
         reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 30 },
-            { itemId = 25707, name = "Fel Hide", count = 16 },
-            { itemId = 22456, name = "Primal Shadow", count = 18 },
-            { itemId = 23571, name = "Primal Might", count = 8 },
-            { itemId = 34664, name = "Sunmote", count = 6 },
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 29548, name = "Nether Dragonscales", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 35543,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 978,
+            factionName = "Kurenai",
+            level = "Honored",
+            itemId = 187048,
+            cost = 160000,
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Sun-Drenched Scale Gloves (340)
-    {
-        id = 46135,
-        name = "Sun-Drenched Scale Gloves",
-        itemId = 34376,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 30 },
-            { itemId = 29548, name = "Nether Dragonscales", count = 16 },
-            { itemId = 21886, name = "Primal Life", count = 18 },
-            { itemId = 23571, name = "Primal Might", count = 8 },
-            { itemId = 34664, name = "Sunmote", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35550,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Leather Chestguard of the Sun (340)
-    {
-        id = 46136,
-        name = "Leather Chestguard of the Sun",
-        itemId = 34371,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 40 },
-            { itemId = 25708, name = "Thick Clefthoof Leather", count = 24 },
-            { itemId = 23571, name = "Primal Might", count = 6 },
-            { itemId = 23572, name = "Primal Nether", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35545,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Embrace of the Phoenix (340)
-    {
-        id = 46137,
-        name = "Embrace of the Phoenix",
-        itemId = 34373,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 40 },
-            { itemId = 29547, name = "Wind Scales", count = 24 },
-            { itemId = 23571, name = "Primal Might", count = 6 },
-            { itemId = 23572, name = "Primal Nether", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35540,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Carapace of Sun and Shadow (340)
-    {
-        id = 46138,
-        name = "Carapace of Sun and Shadow",
-        itemId = 34369,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 40 },
-            { itemId = 25707, name = "Fel Hide", count = 24 },
-            { itemId = 23571, name = "Primal Might", count = 6 },
-            { itemId = 23572, name = "Primal Nether", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35539,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Sun-Drenched Scale Chestguard (340)
-    {
-        id = 46139,
-        name = "Sun-Drenched Scale Chestguard",
-        itemId = 34375,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 40 },
-            { itemId = 29548, name = "Nether Dragonscales", count = 24 },
-            { itemId = 23571, name = "Primal Might", count = 6 },
-            { itemId = 23572, name = "Primal Nether", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35549,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Heavy Clefthoof Leggings (345)
+    -- Heavy Clefthoof Leggings (355)
     {
         id = 32496,
         name = "Heavy Clefthoof Leggings",
         itemId = 25690,
-        skillRequired = 345,
-        skillRange = { orange = 345, yellow = 365, green = 375, gray = 385 },
+        skillRequired = 355,
+        skillRange = { orange = 355, yellow = 365, green = 375, gray = 385 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 25708, name = "Thick Clefthoof Leather", count = 34 },
@@ -6124,13 +6043,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Heavy Clefthoof Boots (345)
+    -- Heavy Clefthoof Boots (355)
     {
         id = 32497,
         name = "Heavy Clefthoof Boots",
         itemId = 25691,
-        skillRequired = 345,
-        skillRange = { orange = 345, yellow = 365, green = 375, gray = 385 },
+        skillRequired = 355,
+        skillRange = { orange = 355, yellow = 365, green = 375, gray = 385 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 25708, name = "Thick Clefthoof Leather", count = 20 },
@@ -6147,92 +6066,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Nethercobra Leg Armor (345)
-    {
-        id = 35554,
-        name = "Nethercobra Leg Armor",
-        itemId = 29535,
-        skillRequired = 345,
-        skillRange = { orange = 345, yellow = 365, green = 375, gray = 385 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
-            { itemId = 29539, name = "Cobra Scales", count = 4 },
-            { itemId = 22451, name = "Primal Air", count = 8 },
-            { itemId = 23572, name = "Primal Nether", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 947,
-            factionName = "Thrallmar",
-            level = "Exalted",
-            itemId = 31362,
-            cost = 120000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Nethercleft Leg Armor (345)
-    {
-        id = 35557,
-        name = "Nethercleft Leg Armor",
-        itemId = 29536,
-        skillRequired = 345,
-        skillRange = { orange = 345, yellow = 365, green = 375, gray = 385 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
-            { itemId = 25708, name = "Thick Clefthoof Leather", count = 16 },
-            { itemId = 22452, name = "Primal Earth", count = 8 },
-            { itemId = 23572, name = "Primal Nether", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 942,
-            factionName = "Cenarion Expedition",
-            level = "Exalted",
-            itemId = 29721,
-            cost = 120000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Glove Reinforcements (345)
-    {
-        id = 44770,
-        name = "Glove Reinforcements",
-        itemId = 34207,
-        skillRequired = 345,
-        skillRange = { orange = 345, yellow = 355, green = 360, gray = 365 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
-            { itemId = 22452, name = "Primal Earth", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Heavy Knothide Armor Kit (345)
-    {
-        id = 44970,
-        name = "Heavy Knothide Armor Kit",
-        itemId = 34330,
-        skillRequired = 345,
-        skillRange = { orange = 345, yellow = 355, green = 360, gray = 365 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Leatherworking Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Heavy Clefthoof Vest (350)
+    -- Heavy Clefthoof Vest (360)
     {
         id = 32495,
         name = "Heavy Clefthoof Vest",
         itemId = 25689,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 25708, name = "Thick Clefthoof Leather", count = 40 },
@@ -6249,13 +6089,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felstalker Bracer (350)
+    -- Felstalker Bracer (360)
     {
         id = 32499,
         name = "Felstalker Bracer",
         itemId = 25697,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 25707, name = "Fel Hide", count = 6 },
@@ -6273,13 +6113,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felstalker Breastplate (350)
+    -- Felstalker Breastplate (360)
     {
         id = 32500,
         name = "Felstalker Breastplate",
         itemId = 25696,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 10 },
             { itemId = 25707, name = "Fel Hide", count = 4 },
@@ -6297,34 +6137,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Drums of Battle (350)
-    {
-        id = 35543,
-        name = "Drums of Battle",
-        itemId = 29529,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 365, green = 372, gray = 380 },
-        reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 25708, name = "Thick Clefthoof Leather", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 935,
-            factionName = "The Sha'tar",
-            level = "Honored",
-            itemId = 29717,
-            cost = 120000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Cloak of Darkness (350)
+    -- Cloak of Darkness (360)
     {
         id = 42546,
         name = "Cloak of Darkness",
         itemId = 33122,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
             { itemId = 21844, name = "Bolt of Soulcloth", count = 12 },
@@ -6341,13 +6160,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Bag of Many Hides (350)
+    -- Bag of Many Hides (360)
     {
         id = 45117,
         name = "Bag of Many Hides",
         itemId = 34490,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 15 },
             { itemId = 29547, name = "Wind Scales", count = 5 },
@@ -6363,13 +6182,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Greater Drums of Battle (350)
+    -- Drums of Battle (365)
     {
-        id = 351771,
-        name = "Greater Drums of Battle",
-        itemId = 185848,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 365, green = 372, gray = 380 },
+        id = 35543,
+        name = "Drums of Battle",
+        itemId = 29529,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 365, green = 372, gray = 380 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 25708, name = "Thick Clefthoof Leather", count = 4 },
@@ -6379,39 +6198,64 @@ local recipes = {
             factionId = 935,
             factionName = "The Sha'tar",
             level = "Honored",
-            itemId = 185926,
+            itemId = 29717,
             cost = 120000,
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Drums of Panic (355)
+    -- Nethercobra Leg Armor (365)
     {
-        id = 35538,
-        name = "Drums of Panic",
-        itemId = 29532,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 370, green = 377, gray = 385 },
+        id = 35554,
+        name = "Nethercobra Leg Armor",
+        itemId = 29535,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 365, green = 375, gray = 385 },
         reagents = {
-            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
-            { itemId = 25707, name = "Fel Hide", count = 4 },
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
+            { itemId = 29539, name = "Cobra Scales", count = 4 },
+            { itemId = 22451, name = "Primal Air", count = 8 },
+            { itemId = 23572, name = "Primal Nether", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 989,
-            factionName = "Keepers of Time",
-            level = "Honored",
-            itemId = 29713,
+            factionId = 947,
+            factionName = "Thrallmar",
+            level = "Exalted",
+            itemId = 31362,
             cost = 120000,
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Cobrascale Hood (355)
+    -- Nethercleft Leg Armor (365)
+    {
+        id = 35557,
+        name = "Nethercleft Leg Armor",
+        itemId = 29536,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 365, green = 375, gray = 385 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
+            { itemId = 25708, name = "Thick Clefthoof Leather", count = 16 },
+            { itemId = 22452, name = "Primal Earth", count = 8 },
+            { itemId = 23572, name = "Primal Nether", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 942,
+            factionName = "Cenarion Expedition",
+            level = "Exalted",
+            itemId = 29721,
+            cost = 120000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Cobrascale Hood (365)
     {
         id = 35558,
         name = "Cobrascale Hood",
         itemId = 29502,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 29539, name = "Cobra Scales", count = 10 },
@@ -6426,13 +6270,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Cobrascale Gloves (355)
+    -- Cobrascale Gloves (365)
     {
         id = 35559,
         name = "Cobrascale Gloves",
         itemId = 29503,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 29539, name = "Cobra Scales", count = 8 },
@@ -6447,13 +6291,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Windscale Hood (355)
+    -- Windscale Hood (365)
     {
         id = 35560,
         name = "Windscale Hood",
         itemId = 29504,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 29547, name = "Wind Scales", count = 20 },
@@ -6468,13 +6312,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Hood of Primal Life (355)
+    -- Hood of Primal Life (365)
     {
         id = 35561,
         name = "Hood of Primal Life",
         itemId = 29505,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 21886, name = "Primal Life", count = 20 },
@@ -6488,13 +6332,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Gloves of the Living Touch (355)
+    -- Gloves of the Living Touch (365)
     {
         id = 35562,
         name = "Gloves of the Living Touch",
         itemId = 29506,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 21886, name = "Primal Life", count = 16 },
@@ -6508,13 +6352,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Windslayer Wraps (355)
+    -- Windslayer Wraps (365)
     {
         id = 35563,
         name = "Windslayer Wraps",
         itemId = 29507,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 29547, name = "Wind Scales", count = 12 },
@@ -6529,13 +6373,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Living Dragonscale Helm (355)
+    -- Living Dragonscale Helm (365)
     {
         id = 35564,
         name = "Living Dragonscale Helm",
         itemId = 29508,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 29548, name = "Nether Dragonscales", count = 28 },
@@ -6550,13 +6394,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Earthen Netherscale Boots (355)
+    -- Earthen Netherscale Boots (365)
     {
         id = 35567,
         name = "Earthen Netherscale Boots",
         itemId = 29512,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 29548, name = "Nether Dragonscales", count = 24 },
@@ -6571,13 +6415,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Windstrike Gloves (355)
+    -- Windstrike Gloves (365)
     {
         id = 35568,
         name = "Windstrike Gloves",
         itemId = 29509,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 29547, name = "Wind Scales", count = 14 },
@@ -6592,13 +6436,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Netherdrake Helm (355)
+    -- Netherdrake Helm (365)
     {
         id = 35572,
         name = "Netherdrake Helm",
         itemId = 29510,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 29548, name = "Nether Dragonscales", count = 28 },
@@ -6613,13 +6457,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Netherdrake Gloves (355)
+    -- Netherdrake Gloves (365)
     {
         id = 35573,
         name = "Netherdrake Gloves",
         itemId = 29511,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 29548, name = "Nether Dragonscales", count = 24 },
@@ -6634,13 +6478,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Thick Netherscale Breastplate (355)
+    -- Thick Netherscale Breastplate (365)
     {
         id = 35574,
         name = "Thick Netherscale Breastplate",
         itemId = 29514,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
             { itemId = 29548, name = "Nether Dragonscales", count = 32 },
@@ -6655,13 +6499,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Shadowprowler's Chestguard (355)
+    -- Shadowprowler's Chestguard (365)
     {
         id = 42731,
         name = "Shadowprowler's Chestguard",
         itemId = 33204,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 10 },
             { itemId = 21844, name = "Bolt of Soulcloth", count = 16 },
@@ -6679,13 +6523,217 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Greater Drums of Panic (355)
+    -- Leather Gauntlets of the Sun (365)
+    {
+        id = 46132,
+        name = "Leather Gauntlets of the Sun",
+        itemId = 34372,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 30 },
+            { itemId = 25708, name = "Thick Clefthoof Leather", count = 16 },
+            { itemId = 21886, name = "Primal Life", count = 18 },
+            { itemId = 23571, name = "Primal Might", count = 8 },
+            { itemId = 34664, name = "Sunmote", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 35547,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Fletcher's Gloves of the Phoenix (365)
+    {
+        id = 46133,
+        name = "Fletcher's Gloves of the Phoenix",
+        itemId = 34374,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 30 },
+            { itemId = 29547, name = "Wind Scales", count = 16 },
+            { itemId = 22451, name = "Primal Air", count = 18 },
+            { itemId = 23571, name = "Primal Might", count = 8 },
+            { itemId = 34664, name = "Sunmote", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35541,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Gloves of Immortal Dusk (365)
+    {
+        id = 46134,
+        name = "Gloves of Immortal Dusk",
+        itemId = 34370,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 30 },
+            { itemId = 25707, name = "Fel Hide", count = 16 },
+            { itemId = 22456, name = "Primal Shadow", count = 18 },
+            { itemId = 23571, name = "Primal Might", count = 8 },
+            { itemId = 34664, name = "Sunmote", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 35543,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Sun-Drenched Scale Gloves (365)
+    {
+        id = 46135,
+        name = "Sun-Drenched Scale Gloves",
+        itemId = 34376,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 30 },
+            { itemId = 29548, name = "Nether Dragonscales", count = 16 },
+            { itemId = 21886, name = "Primal Life", count = 18 },
+            { itemId = 23571, name = "Primal Might", count = 8 },
+            { itemId = 34664, name = "Sunmote", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35550,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Leather Chestguard of the Sun (365)
+    {
+        id = 46136,
+        name = "Leather Chestguard of the Sun",
+        itemId = 34371,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 40 },
+            { itemId = 25708, name = "Thick Clefthoof Leather", count = 24 },
+            { itemId = 23571, name = "Primal Might", count = 6 },
+            { itemId = 23572, name = "Primal Nether", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35545,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Embrace of the Phoenix (365)
+    {
+        id = 46137,
+        name = "Embrace of the Phoenix",
+        itemId = 34373,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 40 },
+            { itemId = 29547, name = "Wind Scales", count = 24 },
+            { itemId = 23571, name = "Primal Might", count = 6 },
+            { itemId = 23572, name = "Primal Nether", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35540,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Carapace of Sun and Shadow (365)
+    {
+        id = 46138,
+        name = "Carapace of Sun and Shadow",
+        itemId = 34369,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 40 },
+            { itemId = 25707, name = "Fel Hide", count = 24 },
+            { itemId = 23571, name = "Primal Might", count = 6 },
+            { itemId = 23572, name = "Primal Nether", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35539,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Sun-Drenched Scale Chestguard (365)
+    {
+        id = 46139,
+        name = "Sun-Drenched Scale Chestguard",
+        itemId = 34375,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 40 },
+            { itemId = 29548, name = "Nether Dragonscales", count = 24 },
+            { itemId = 23571, name = "Primal Might", count = 6 },
+            { itemId = 23572, name = "Primal Nether", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35549,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Greater Drums of Battle (365)
+    {
+        id = 351771,
+        name = "Greater Drums of Battle",
+        itemId = 185848,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 365, green = 372, gray = 380 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 25708, name = "Thick Clefthoof Leather", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 935,
+            factionName = "The Sha'tar",
+            level = "Honored",
+            itemId = 185926,
+            cost = 120000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Drums of Panic (370)
+    {
+        id = 35538,
+        name = "Drums of Panic",
+        itemId = 29532,
+        skillRequired = 370,
+        skillRange = { orange = 370, yellow = 370, green = 377, gray = 385 },
+        reagents = {
+            { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
+            { itemId = 25707, name = "Fel Hide", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 989,
+            factionName = "Keepers of Time",
+            level = "Honored",
+            itemId = 29713,
+            cost = 120000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Greater Drums of Panic (370)
     {
         id = 351770,
         name = "Greater Drums of Panic",
         itemId = 185849,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 370, green = 377, gray = 385 },
+        skillRequired = 370,
+        skillRange = { orange = 370, yellow = 370, green = 377, gray = 385 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 25707, name = "Fel Hide", count = 4 },
@@ -6700,13 +6748,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Ebon Netherscale Breastplate (365)
+    -- Ebon Netherscale Breastplate (375)
     {
         id = 35575,
         name = "Ebon Netherscale Breastplate",
         itemId = 29515,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
             { itemId = 29548, name = "Nether Dragonscales", count = 30 },
@@ -6720,13 +6768,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Ebon Netherscale Belt (365)
+    -- Ebon Netherscale Belt (375)
     {
         id = 35576,
         name = "Ebon Netherscale Belt",
         itemId = 29516,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 29548, name = "Nether Dragonscales", count = 24 },
@@ -6740,13 +6788,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Ebon Netherscale Bracers (365)
+    -- Ebon Netherscale Bracers (375)
     {
         id = 35577,
         name = "Ebon Netherscale Bracers",
         itemId = 29517,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 29548, name = "Nether Dragonscales", count = 18 },
@@ -6759,13 +6807,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Netherstrike Breastplate (365)
+    -- Netherstrike Breastplate (375)
     {
         id = 35580,
         name = "Netherstrike Breastplate",
         itemId = 29519,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
             { itemId = 29548, name = "Nether Dragonscales", count = 30 },
@@ -6779,13 +6827,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Netherstrike Belt (365)
+    -- Netherstrike Belt (375)
     {
         id = 35582,
         name = "Netherstrike Belt",
         itemId = 29520,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 29548, name = "Nether Dragonscales", count = 24 },
@@ -6799,13 +6847,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Netherstrike Bracers (365)
+    -- Netherstrike Bracers (375)
     {
         id = 35584,
         name = "Netherstrike Bracers",
         itemId = 29521,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 29548, name = "Nether Dragonscales", count = 18 },
@@ -6818,13 +6866,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Windhawk Hauberk (365)
+    -- Windhawk Hauberk (375)
     {
         id = 35585,
         name = "Windhawk Hauberk",
         itemId = 29522,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
             { itemId = 29547, name = "Wind Scales", count = 20 },
@@ -6838,13 +6886,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Windhawk Belt (365)
+    -- Windhawk Belt (375)
     {
         id = 35587,
         name = "Windhawk Belt",
         itemId = 29524,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 29547, name = "Wind Scales", count = 16 },
@@ -6858,13 +6906,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Windhawk Bracers (365)
+    -- Windhawk Bracers (375)
     {
         id = 35588,
         name = "Windhawk Bracers",
         itemId = 29523,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 29547, name = "Wind Scales", count = 12 },
@@ -6877,13 +6925,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Primalstrike Vest (365)
+    -- Primalstrike Vest (375)
     {
         id = 35589,
         name = "Primalstrike Vest",
         itemId = 29525,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 8 },
             { itemId = 23571, name = "Primal Might", count = 6 },
@@ -6895,13 +6943,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Primalstrike Belt (365)
+    -- Primalstrike Belt (375)
     {
         id = 35590,
         name = "Primalstrike Belt",
         itemId = 29526,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 23571, name = "Primal Might", count = 5 },
@@ -6913,13 +6961,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Primalstrike Bracers (365)
+    -- Primalstrike Bracers (375)
     {
         id = 35591,
         name = "Primalstrike Bracers",
         itemId = 29527,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 23571, name = "Primal Might", count = 3 },
@@ -6930,13 +6978,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Belt of Natural Power (365)
+    -- Belt of Natural Power (375)
     {
         id = 36349,
         name = "Belt of Natural Power",
         itemId = 30042,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 30183, name = "Nether Vortex", count = 2 },
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
@@ -6951,13 +6999,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Belt of Deep Shadow (365)
+    -- Belt of Deep Shadow (375)
     {
         id = 36351,
         name = "Belt of Deep Shadow",
         itemId = 30040,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 30183, name = "Nether Vortex", count = 2 },
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
@@ -6972,13 +7020,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Belt of the Black Eagle (365)
+    -- Belt of the Black Eagle (375)
     {
         id = 36352,
         name = "Belt of the Black Eagle",
         itemId = 30046,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 30183, name = "Nether Vortex", count = 2 },
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
@@ -6993,13 +7041,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Monsoon Belt (365)
+    -- Monsoon Belt (375)
     {
         id = 36353,
         name = "Monsoon Belt",
         itemId = 30044,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 30183, name = "Nether Vortex", count = 2 },
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
@@ -7014,13 +7062,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Boots of Natural Grace (365)
+    -- Boots of Natural Grace (375)
     {
         id = 36355,
         name = "Boots of Natural Grace",
         itemId = 30041,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23572, name = "Primal Nether", count = 2 },
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
@@ -7033,13 +7081,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Boots of Utter Darkness (365)
+    -- Boots of Utter Darkness (375)
     {
         id = 36357,
         name = "Boots of Utter Darkness",
         itemId = 30039,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23572, name = "Primal Nether", count = 2 },
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
@@ -7052,13 +7100,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Boots of the Crimson Hawk (365)
+    -- Boots of the Crimson Hawk (375)
     {
         id = 36358,
         name = "Boots of the Crimson Hawk",
         itemId = 30045,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23572, name = "Primal Nether", count = 2 },
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
@@ -7073,13 +7121,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Hurricane Boots (365)
+    -- Hurricane Boots (375)
     {
         id = 36359,
         name = "Hurricane Boots",
         itemId = 30043,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23572, name = "Primal Nether", count = 2 },
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
@@ -7093,13 +7141,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Boots of Shackled Souls (365)
+    -- Boots of Shackled Souls (375)
     {
         id = 39997,
         name = "Boots of Shackled Souls",
         itemId = 32398,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 32428, name = "Heart of Darkness", count = 2 },
             { itemId = 22450, name = "Void Crystal", count = 1 },
@@ -7117,13 +7165,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Bracers of Shackled Souls (365)
+    -- Bracers of Shackled Souls (375)
     {
         id = 40000,
         name = "Bracers of Shackled Souls",
         itemId = 32399,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 32428, name = "Heart of Darkness", count = 1 },
             { itemId = 22450, name = "Void Crystal", count = 1 },
@@ -7141,13 +7189,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Greaves of Shackled Souls (365)
+    -- Greaves of Shackled Souls (375)
     {
         id = 40001,
         name = "Greaves of Shackled Souls",
         itemId = 32400,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 32428, name = "Heart of Darkness", count = 3 },
             { itemId = 22450, name = "Void Crystal", count = 1 },
@@ -7165,13 +7213,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Waistguard of Shackled Souls (365)
+    -- Waistguard of Shackled Souls (375)
     {
         id = 40002,
         name = "Waistguard of Shackled Souls",
         itemId = 32397,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 32428, name = "Heart of Darkness", count = 2 },
             { itemId = 22450, name = "Void Crystal", count = 1 },
@@ -7189,13 +7237,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Redeemed Soul Moccasins (365)
+    -- Redeemed Soul Moccasins (375)
     {
         id = 40003,
         name = "Redeemed Soul Moccasins",
         itemId = 32394,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 32428, name = "Heart of Darkness", count = 2 },
             { itemId = 22450, name = "Void Crystal", count = 1 },
@@ -7213,13 +7261,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Redeemed Soul Wristguards (365)
+    -- Redeemed Soul Wristguards (375)
     {
         id = 40004,
         name = "Redeemed Soul Wristguards",
         itemId = 32395,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 32428, name = "Heart of Darkness", count = 1 },
             { itemId = 22450, name = "Void Crystal", count = 1 },
@@ -7237,13 +7285,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Redeemed Soul Legguards (365)
+    -- Redeemed Soul Legguards (375)
     {
         id = 40005,
         name = "Redeemed Soul Legguards",
         itemId = 32396,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 32428, name = "Heart of Darkness", count = 3 },
             { itemId = 22450, name = "Void Crystal", count = 1 },
@@ -7261,13 +7309,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Redeemed Soul Cinch (365)
+    -- Redeemed Soul Cinch (375)
     {
         id = 40006,
         name = "Redeemed Soul Cinch",
         itemId = 32393,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 32428, name = "Heart of Darkness", count = 2 },
             { itemId = 22450, name = "Void Crystal", count = 1 },
@@ -7285,13 +7333,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Bracers of Renewed Life (365)
+    -- Bracers of Renewed Life (375)
     {
         id = 41156,
         name = "Bracers of Renewed Life",
         itemId = 32582,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 22451, name = "Primal Air", count = 6 },
@@ -7305,13 +7353,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Shoulderpads of Renewed Life (365)
+    -- Shoulderpads of Renewed Life (375)
     {
         id = 41157,
         name = "Shoulderpads of Renewed Life",
         itemId = 32583,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 22451, name = "Primal Air", count = 8 },
@@ -7325,13 +7373,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Swiftstrike Bracers (365)
+    -- Swiftstrike Bracers (375)
     {
         id = 41158,
         name = "Swiftstrike Bracers",
         itemId = 32580,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 22451, name = "Primal Air", count = 10 },
@@ -7344,13 +7392,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Swiftstrike Shoulders (365)
+    -- Swiftstrike Shoulders (375)
     {
         id = 41160,
         name = "Swiftstrike Shoulders",
         itemId = 32581,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 22451, name = "Primal Air", count = 12 },
@@ -7363,13 +7411,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Bindings of Lightning Reflexes (365)
+    -- Bindings of Lightning Reflexes (375)
     {
         id = 41161,
         name = "Bindings of Lightning Reflexes",
         itemId = 32574,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 22451, name = "Primal Air", count = 4 },
@@ -7384,13 +7432,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Shoulders of Lightning Reflexes (365)
+    -- Shoulders of Lightning Reflexes (375)
     {
         id = 41162,
         name = "Shoulders of Lightning Reflexes",
         itemId = 32575,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 22451, name = "Primal Air", count = 6 },
@@ -7405,13 +7453,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Living Earth Bindings (365)
+    -- Living Earth Bindings (375)
     {
         id = 41163,
         name = "Living Earth Bindings",
         itemId = 32577,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 22451, name = "Primal Air", count = 4 },
@@ -7426,13 +7474,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Living Earth Shoulders (365)
+    -- Living Earth Shoulders (375)
     {
         id = 41164,
         name = "Living Earth Shoulders",
         itemId = 32579,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
         reagents = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 6 },
             { itemId = 22451, name = "Primal Air", count = 6 },

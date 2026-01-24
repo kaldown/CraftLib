@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- All 10 professions now have Wowhead-verified difficulty values (93-100% coverage)
+- Removed calculated orange values that were incorrect for some recipes
+- Total: 1929/1974 recipes (97.7%) verified from Wowhead
+
 ## [0.2.3] - 2026-01-24
 
 ### Added
@@ -19,11 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - First Aid skillRequired values verified from Wowhead (e.g., Runecloth Bandage: 200→260)
 - Cooking skillRequired values verified from Wowhead (116 recipes)
-
-### Known Issues
-
-- Other professions (Alchemy, Blacksmithing, etc.) still use calculated difficulty values
-- See `docs/TODO.md` for remaining work
 
 ## [0.2.1] - 2026-01-23
 

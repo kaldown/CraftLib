@@ -21,6 +21,22 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Copper Chain Pants (1)
+    {
+        id = 2662,
+        name = "Copper Chain Pants",
+        itemId = 2852,
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 50, green = 70, gray = 90 },
+        reagents = {
+            { itemId = 2840, name = "Copper Bar", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Copper Bracers (1)
     {
         id = 2663,
@@ -61,38 +77,6 @@ local recipes = {
         itemId = 10421,
         skillRequired = 1,
         skillRange = { orange = 1, yellow = 15, green = 35, gray = 55 },
-        reagents = {
-            { itemId = 2840, name = "Copper Bar", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Rough Grinding Stone (5)
-    {
-        id = 3320,
-        name = "Rough Grinding Stone",
-        itemId = 3470,
-        skillRequired = 5,
-        skillRange = { orange = 5, yellow = 45, green = 65, gray = 85 },
-        reagents = {
-            { itemId = 2835, name = "Rough Stone", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Copper Chain Pants (10)
-    {
-        id = 2662,
-        name = "Copper Chain Pants",
-        itemId = 2852,
-        skillRequired = 10,
-        skillRange = { orange = 10, yellow = 50, green = 70, gray = 90 },
         reagents = {
             { itemId = 2840, name = "Copper Bar", count = 4 },
         },
@@ -165,6 +149,22 @@ local recipes = {
             { itemId = 2840, name = "Copper Bar", count = 6 },
             { itemId = 2880, name = "Weak Flux", count = 1 },
             { itemId = 2589, name = "Linen Cloth", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Rough Grinding Stone (25)
+    {
+        id = 3320,
+        name = "Rough Grinding Stone",
+        itemId = 3470,
+        skillRequired = 25,
+        skillRange = { orange = 25, yellow = 45, green = 65, gray = 85 },
+        reagents = {
+            { itemId = 2835, name = "Rough Stone", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -318,55 +318,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Coarse Sharpening Stone (50)
-    {
-        id = 2665,
-        name = "Coarse Sharpening Stone",
-        itemId = 2863,
-        skillRequired = 50,
-        skillRange = { orange = 50, yellow = 65, green = 72, gray = 80 },
-        reagents = {
-            { itemId = 2836, name = "Coarse Stone", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Coarse Weightstone (50)
-    {
-        id = 3116,
-        name = "Coarse Weightstone",
-        itemId = 3240,
-        skillRequired = 50,
-        skillRange = { orange = 50, yellow = 65, green = 72, gray = 80 },
-        reagents = {
-            { itemId = 2836, name = "Coarse Stone", count = 1 },
-            { itemId = 2592, name = "Wool Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Coarse Grinding Stone (50)
-    {
-        id = 3326,
-        name = "Coarse Grinding Stone",
-        itemId = 3478,
-        skillRequired = 50,
-        skillRange = { orange = 50, yellow = 75, green = 87, gray = 100 },
-        reagents = {
-            { itemId = 2836, name = "Coarse Stone", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Gemmed Copper Gauntlets (60)
     {
         id = 3325,
@@ -383,6 +334,39 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 3610,
             cost = 200,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Coarse Sharpening Stone (65)
+    {
+        id = 2665,
+        name = "Coarse Sharpening Stone",
+        itemId = 2863,
+        skillRequired = 65,
+        skillRange = { orange = 65, yellow = 65, green = 72, gray = 80 },
+        reagents = {
+            { itemId = 2836, name = "Coarse Stone", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Coarse Weightstone (65)
+    {
+        id = 3116,
+        name = "Coarse Weightstone",
+        itemId = 3240,
+        skillRequired = 65,
+        skillRange = { orange = 65, yellow = 65, green = 72, gray = 80 },
+        reagents = {
+            { itemId = 2836, name = "Coarse Stone", count = 1 },
+            { itemId = 2592, name = "Wool Cloth", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -459,6 +443,22 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Coarse Grinding Stone (75)
+    {
+        id = 3326,
+        name = "Coarse Grinding Stone",
+        itemId = 3478,
+        skillRequired = 75,
+        skillRange = { orange = 75, yellow = 75, green = 87, gray = 100 },
+        reagents = {
+            { itemId = 2836, name = "Coarse Stone", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Runed Copper Breastplate (80)
     {
         id = 2667,
@@ -475,23 +475,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 2881,
             cost = 600,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Silver Skeleton Key (80)
-    {
-        id = 19666,
-        name = "Silver Skeleton Key",
-        itemId = 15869,
-        skillRequired = 80,
-        skillRange = { orange = 80, yellow = 100, green = 110, gray = 120 },
-        reagents = {
-            { itemId = 2842, name = "Silver Bar", count = 1 },
-            { itemId = 3470, name = "Rough Grinding Stone", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -548,22 +531,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Heavy Grinding Stone (100)
-    {
-        id = 3337,
-        name = "Heavy Grinding Stone",
-        itemId = 3486,
-        skillRequired = 100,
-        skillRange = { orange = 100, yellow = 125, green = 137, gray = 150 },
-        reagents = {
-            { itemId = 2838, name = "Heavy Stone", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Silver Rod (100)
     {
         id = 7818,
@@ -600,6 +567,23 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Silver Skeleton Key (100)
+    {
+        id = 19666,
+        name = "Silver Skeleton Key",
+        itemId = 15869,
+        skillRequired = 100,
+        skillRange = { orange = 100, yellow = 100, green = 110, gray = 120 },
+        reagents = {
+            { itemId = 2842, name = "Silver Bar", count = 1 },
+            { itemId = 3470, name = "Rough Grinding Stone", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Thick Bronze Darts (100)
     {
         id = 34979,
@@ -611,6 +595,38 @@ local recipes = {
             { itemId = 2841, name = "Bronze Bar", count = 6 },
             { itemId = 3470, name = "Rough Grinding Stone", count = 2 },
             { itemId = 2319, name = "Medium Leather", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Rough Bronze Leggings (105)
+    {
+        id = 2668,
+        name = "Rough Bronze Leggings",
+        itemId = 2865,
+        skillRequired = 105,
+        skillRange = { orange = 105, yellow = 145, green = 160, gray = 175 },
+        reagents = {
+            { itemId = 2841, name = "Bronze Bar", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Rough Bronze Cuirass (105)
+    {
+        id = 2670,
+        name = "Rough Bronze Cuirass",
+        itemId = 2866,
+        skillRequired = 105,
+        skillRange = { orange = 105, yellow = 145, green = 160, gray = 175 },
+        reagents = {
+            { itemId = 2841, name = "Bronze Bar", count = 7 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -638,22 +654,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Heavy Sharpening Stone (110)
-    {
-        id = 2674,
-        name = "Heavy Sharpening Stone",
-        itemId = 2871,
-        skillRequired = 110,
-        skillRange = { orange = 110, yellow = 125, green = 132, gray = 140 },
-        reagents = {
-            { itemId = 2838, name = "Heavy Stone", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Bronze Mace (110)
     {
         id = 2740,
@@ -665,23 +665,6 @@ local recipes = {
             { itemId = 2841, name = "Bronze Bar", count = 6 },
             { itemId = 2880, name = "Weak Flux", count = 4 },
             { itemId = 2319, name = "Medium Leather", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Heavy Weightstone (110)
-    {
-        id = 3117,
-        name = "Heavy Weightstone",
-        itemId = 3241,
-        skillRequired = 110,
-        skillRange = { orange = 110, yellow = 125, green = 132, gray = 140 },
-        reagents = {
-            { itemId = 2838, name = "Heavy Stone", count = 1 },
-            { itemId = 2592, name = "Wool Cloth", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -718,38 +701,6 @@ local recipes = {
             { itemId = 3466, name = "Strong Flux", count = 1 },
             { itemId = 5498, name = "Small Lustrous Pearl", count = 2 },
             { itemId = 3478, name = "Coarse Grinding Stone", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Rough Bronze Leggings (115)
-    {
-        id = 2668,
-        name = "Rough Bronze Leggings",
-        itemId = 2865,
-        skillRequired = 115,
-        skillRange = { orange = 115, yellow = 145, green = 160, gray = 175 },
-        reagents = {
-            { itemId = 2841, name = "Bronze Bar", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Rough Bronze Cuirass (115)
-    {
-        id = 2670,
-        name = "Rough Bronze Cuirass",
-        itemId = 2866,
-        skillRequired = 115,
-        skillRange = { orange = 115, yellow = 145, green = 160, gray = 175 },
-        reagents = {
-            { itemId = 2841, name = "Bronze Bar", count = 7 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -827,6 +778,39 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Heavy Sharpening Stone (125)
+    {
+        id = 2674,
+        name = "Heavy Sharpening Stone",
+        itemId = 2871,
+        skillRequired = 125,
+        skillRange = { orange = 125, yellow = 125, green = 132, gray = 140 },
+        reagents = {
+            { itemId = 2838, name = "Heavy Stone", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Heavy Weightstone (125)
+    {
+        id = 3117,
+        name = "Heavy Weightstone",
+        itemId = 3241,
+        skillRequired = 125,
+        skillRange = { orange = 125, yellow = 125, green = 132, gray = 140 },
+        reagents = {
+            { itemId = 2838, name = "Heavy Stone", count = 1 },
+            { itemId = 2592, name = "Wool Cloth", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Deadly Bronze Poniard (125)
     {
         id = 3295,
@@ -865,6 +849,22 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 2882,
             cost = 1200,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Heavy Grinding Stone (125)
+    {
+        id = 3337,
+        name = "Heavy Grinding Stone",
+        itemId = 3486,
+        skillRequired = 125,
+        skillRange = { orange = 125, yellow = 125, green = 137, gray = 150 },
+        reagents = {
+            { itemId = 2838, name = "Heavy Stone", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -955,23 +955,6 @@ local recipes = {
             { itemId = 2841, name = "Bronze Bar", count = 12 },
             { itemId = 3466, name = "Strong Flux", count = 2 },
             { itemId = 2319, name = "Medium Leather", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Golden Skeleton Key (130)
-    {
-        id = 19667,
-        name = "Golden Skeleton Key",
-        itemId = 15870,
-        skillRequired = 130,
-        skillRange = { orange = 130, yellow = 150, green = 160, gray = 170 },
-        reagents = {
-            { itemId = 3577, name = "Gold Bar", count = 1 },
-            { itemId = 3486, name = "Heavy Grinding Stone", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -1116,22 +1099,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Iron Buckle (145)
-    {
-        id = 8768,
-        name = "Iron Buckle",
-        itemId = 7071,
-        skillRequired = 145,
-        skillRange = { orange = 145, yellow = 150, green = 152, gray = 155 },
-        reagents = {
-            { itemId = 3575, name = "Iron Bar", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Green Iron Gauntlets (150)
     {
         id = 3336,
@@ -1170,6 +1137,22 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Iron Buckle (150)
+    {
+        id = 8768,
+        name = "Iron Buckle",
+        itemId = 7071,
+        skillRequired = 150,
+        skillRange = { orange = 150, yellow = 150, green = 152, gray = 155 },
+        reagents = {
+            { itemId = 3575, name = "Iron Bar", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Golden Rod (150)
     {
         id = 14379,
@@ -1180,6 +1163,23 @@ local recipes = {
         reagents = {
             { itemId = 3577, name = "Gold Bar", count = 1 },
             { itemId = 3478, name = "Coarse Grinding Stone", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Golden Skeleton Key (150)
+    {
+        id = 19667,
+        name = "Golden Skeleton Key",
+        itemId = 15870,
+        skillRequired = 150,
+        skillRange = { orange = 150, yellow = 150, green = 160, gray = 170 },
+        reagents = {
+            { itemId = 3577, name = "Gold Bar", count = 1 },
+            { itemId = 3486, name = "Heavy Grinding Stone", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -1556,23 +1556,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Truesilver Skeleton Key (180)
-    {
-        id = 19668,
-        name = "Truesilver Skeleton Key",
-        itemId = 15871,
-        skillRequired = 180,
-        skillRange = { orange = 180, yellow = 200, green = 210, gray = 220 },
-        reagents = {
-            { itemId = 6037, name = "Truesilver Bar", count = 1 },
-            { itemId = 7966, name = "Solid Grinding Stone", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Massive Iron Axe (185)
     {
         id = 3498,
@@ -1685,55 +1668,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 6046,
             cost = 3800,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Solid Sharpening Stone (190)
-    {
-        id = 9918,
-        name = "Solid Sharpening Stone",
-        itemId = 7964,
-        skillRequired = 190,
-        skillRange = { orange = 190, yellow = 200, green = 205, gray = 210 },
-        reagents = {
-            { itemId = 7912, name = "Solid Stone", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Solid Grinding Stone (190)
-    {
-        id = 9920,
-        name = "Solid Grinding Stone",
-        itemId = 7966,
-        skillRequired = 190,
-        skillRange = { orange = 190, yellow = 200, green = 205, gray = 210 },
-        reagents = {
-            { itemId = 7912, name = "Solid Stone", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Solid Weightstone (190)
-    {
-        id = 9921,
-        name = "Solid Weightstone",
-        itemId = 7965,
-        skillRequired = 190,
-        skillRange = { orange = 190, yellow = 200, green = 205, gray = 210 },
-        reagents = {
-            { itemId = 7912, name = "Solid Stone", count = 1 },
-            { itemId = 4306, name = "Silk Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1877,6 +1811,55 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Solid Sharpening Stone (200)
+    {
+        id = 9918,
+        name = "Solid Sharpening Stone",
+        itemId = 7964,
+        skillRequired = 200,
+        skillRange = { orange = 200, yellow = 200, green = 205, gray = 210 },
+        reagents = {
+            { itemId = 7912, name = "Solid Stone", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Solid Grinding Stone (200)
+    {
+        id = 9920,
+        name = "Solid Grinding Stone",
+        itemId = 7966,
+        skillRequired = 200,
+        skillRange = { orange = 200, yellow = 200, green = 205, gray = 210 },
+        reagents = {
+            { itemId = 7912, name = "Solid Stone", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Solid Weightstone (200)
+    {
+        id = 9921,
+        name = "Solid Weightstone",
+        itemId = 7965,
+        skillRequired = 200,
+        skillRange = { orange = 200, yellow = 200, green = 205, gray = 210 },
+        reagents = {
+            { itemId = 7912, name = "Solid Stone", count = 1 },
+            { itemId = 4306, name = "Silk Cloth", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Inlaid Mithril Cylinder (200)
     {
         id = 11454,
@@ -1906,6 +1889,23 @@ local recipes = {
         reagents = {
             { itemId = 6037, name = "Truesilver Bar", count = 1 },
             { itemId = 3486, name = "Heavy Grinding Stone", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Truesilver Skeleton Key (200)
+    {
+        id = 19668,
+        name = "Truesilver Skeleton Key",
+        itemId = 15871,
+        skillRequired = 200,
+        skillRange = { orange = 200, yellow = 200, green = 210, gray = 220 },
+        reagents = {
+            { itemId = 6037, name = "Truesilver Bar", count = 1 },
+            { itemId = 7966, name = "Solid Grinding Stone", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -2352,24 +2352,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Heavy Mithril Helm (235)
-    {
-        id = 9970,
-        name = "Heavy Mithril Helm",
-        itemId = 7934,
-        skillRequired = 235,
-        skillRange = { orange = 235, yellow = 255, green = 265, gray = 275 },
-        reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 14 },
-            { itemId = 7909, name = "Aquamarine", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 7990,
-            cost = 10000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- The Shatterer (235)
     {
         id = 10003,
@@ -2430,6 +2412,24 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 7993,
+            cost = 10000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Heavy Mithril Helm (245)
+    {
+        id = 9970,
+        name = "Heavy Mithril Helm",
+        itemId = 7934,
+        skillRequired = 245,
+        skillRange = { orange = 245, yellow = 255, green = 265, gray = 275 },
+        reagents = {
+            { itemId = 3860, name = "Mithril Bar", count = 14 },
+            { itemId = 7909, name = "Aquamarine", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 7990,
             cost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
@@ -2878,40 +2878,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Arcanite Skeleton Key (265)
-    {
-        id = 19669,
-        name = "Arcanite Skeleton Key",
-        itemId = 15872,
-        skillRequired = 265,
-        skillRange = { orange = 265, yellow = 275, green = 280, gray = 285 },
-        reagents = {
-            { itemId = 12360, name = "Arcanite Bar", count = 1 },
-            { itemId = 12644, name = "Dense Grinding Stone", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Arcanite Rod (265)
-    {
-        id = 20201,
-        name = "Arcanite Rod",
-        itemId = 16206,
-        skillRequired = 265,
-        skillRange = { orange = 265, yellow = 275, green = 280, gray = 285 },
-        reagents = {
-            { itemId = 12360, name = "Arcanite Bar", count = 3 },
-            { itemId = 12644, name = "Dense Grinding Stone", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Dark Iron Mail (270)
     {
         id = 15293,
@@ -3109,6 +3075,40 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Arcanite Skeleton Key (275)
+    {
+        id = 19669,
+        name = "Arcanite Skeleton Key",
+        itemId = 15872,
+        skillRequired = 275,
+        skillRange = { orange = 275, yellow = 275, green = 280, gray = 285 },
+        reagents = {
+            { itemId = 12360, name = "Arcanite Bar", count = 1 },
+            { itemId = 12644, name = "Dense Grinding Stone", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Arcanite Rod (275)
+    {
+        id = 20201,
+        name = "Arcanite Rod",
+        itemId = 16206,
+        skillRequired = 275,
+        skillRange = { orange = 275, yellow = 275, green = 280, gray = 285 },
+        reagents = {
+            { itemId = 12360, name = "Arcanite Bar", count = 3 },
+            { itemId = 12644, name = "Dense Grinding Stone", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Dark Iron Shoulders (280)
     {
         id = 15295,
@@ -3223,23 +3223,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 12825,
             cost = 20000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Elemental Sharpening Stone (280)
-    {
-        id = 22757,
-        name = "Elemental Sharpening Stone",
-        itemId = 18262,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 300, green = 310, gray = 320 },
-        reagents = {
-            { itemId = 7067, name = "Elemental Earth", count = 2 },
-            { itemId = 12365, name = "Dense Stone", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 18264,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3486,88 +3469,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Fel Iron Plate Gloves (290)
-    {
-        id = 29545,
-        name = "Fel Iron Plate Gloves",
-        itemId = 23482,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 310, green = 320, gray = 330 },
-        reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Fel Iron Chain Coif (290)
-    {
-        id = 29551,
-        name = "Fel Iron Chain Coif",
-        itemId = 23493,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 310, green = 320, gray = 330 },
-        reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Fel Sharpening Stone (290)
-    {
-        id = 29654,
-        name = "Fel Sharpening Stone",
-        itemId = 23528,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 300, green = 305, gray = 310 },
-        reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 1 },
-            { itemId = 22573, name = "Mote of Earth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Fel Iron Rod (290)
-    {
-        id = 32655,
-        name = "Fel Iron Rod",
-        itemId = 25843,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 300, green = 305, gray = 310 },
-        reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Fel Weightstone (290)
-    {
-        id = 34607,
-        name = "Fel Weightstone",
-        itemId = 28420,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 300, green = 305, gray = 310 },
-        reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 1 },
-            { itemId = 21877, name = "Netherweave Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Imperial Plate Boots (295)
     {
         id = 16657,
@@ -3694,22 +3595,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 17051,
             cost = 70000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Fel Iron Plate Belt (295)
-    {
-        id = 29547,
-        name = "Fel Iron Plate Belt",
-        itemId = 23484,
-        skillRequired = 295,
-        skillRange = { orange = 295, yellow = 315, green = 325, gray = 335 },
-        reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4337,6 +4222,23 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 18592,
             cost = 80000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Elemental Sharpening Stone (300)
+    {
+        id = 22757,
+        name = "Elemental Sharpening Stone",
+        itemId = 18262,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 300, green = 310, gray = 320 },
+        reagents = {
+            { itemId = 7067, name = "Elemental Earth", count = 2 },
+            { itemId = 12365, name = "Dense Stone", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 18264,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -5067,15 +4969,15 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Fel Iron Chain Gloves (300)
+    -- Fel Iron Plate Gloves (300)
     {
-        id = 29552,
-        name = "Fel Iron Chain Gloves",
-        itemId = 23491,
+        id = 29545,
+        name = "Fel Iron Plate Gloves",
+        itemId = 23482,
         skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
+        skillRange = { orange = 300, yellow = 310, green = 320, gray = 330 },
         reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 5 },
+            { itemId = 23445, name = "Fel Iron Bar", count = 4 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -5083,15 +4985,65 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Fel Iron Hatchet (300)
+    -- Fel Iron Chain Coif (300)
     {
-        id = 29557,
-        name = "Fel Iron Hatchet",
-        itemId = 23497,
+        id = 29551,
+        name = "Fel Iron Chain Coif",
+        itemId = 23493,
         skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
+        skillRange = { orange = 300, yellow = 310, green = 320, gray = 330 },
         reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 9 },
+            { itemId = 23445, name = "Fel Iron Bar", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Fel Sharpening Stone (300)
+    {
+        id = 29654,
+        name = "Fel Sharpening Stone",
+        itemId = 23528,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 300, green = 305, gray = 310 },
+        reagents = {
+            { itemId = 23445, name = "Fel Iron Bar", count = 1 },
+            { itemId = 22573, name = "Mote of Earth", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Fel Iron Rod (300)
+    {
+        id = 32655,
+        name = "Fel Iron Rod",
+        itemId = 25843,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 300, green = 305, gray = 310 },
+        reagents = {
+            { itemId = 23445, name = "Fel Iron Bar", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Fel Weightstone (300)
+    {
+        id = 34607,
+        name = "Fel Weightstone",
+        itemId = 28420,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 300, green = 305, gray = 310 },
+        reagents = {
+            { itemId = 23445, name = "Fel Iron Bar", count = 1 },
+            { itemId = 21877, name = "Netherweave Cloth", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -5117,15 +5069,15 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Fel Iron Plate Boots (305)
+    -- Fel Iron Plate Belt (305)
     {
-        id = 29548,
-        name = "Fel Iron Plate Boots",
-        itemId = 23487,
+        id = 29547,
+        name = "Fel Iron Plate Belt",
+        itemId = 23484,
         skillRequired = 305,
-        skillRange = { orange = 305, yellow = 325, green = 335, gray = 345 },
+        skillRange = { orange = 305, yellow = 315, green = 325, gray = 335 },
         reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 6 },
+            { itemId = 23445, name = "Fel Iron Bar", count = 4 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -5133,61 +5085,29 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Fel Iron Plate Pants (305)
+    -- Fel Iron Chain Gloves (310)
     {
-        id = 29549,
-        name = "Fel Iron Plate Pants",
-        itemId = 23488,
-        skillRequired = 305,
-        skillRange = { orange = 305, yellow = 325, green = 335, gray = 345 },
-        reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 8 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Fel Iron Chain Bracers (305)
-    {
-        id = 29553,
-        name = "Fel Iron Chain Bracers",
-        itemId = 23494,
-        skillRequired = 305,
-        skillRange = { orange = 305, yellow = 325, green = 335, gray = 345 },
-        reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Fel Iron Hammer (305)
-    {
-        id = 29558,
-        name = "Fel Iron Hammer",
-        itemId = 23498,
-        skillRequired = 305,
-        skillRange = { orange = 305, yellow = 325, green = 335, gray = 345 },
-        reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Fel Iron Chain Tunic (310)
-    {
-        id = 29556,
-        name = "Fel Iron Chain Tunic",
-        itemId = 23490,
+        id = 29552,
+        name = "Fel Iron Chain Gloves",
+        itemId = 23491,
         skillRequired = 310,
-        skillRange = { orange = 310, yellow = 330, green = 340, gray = 350 },
+        skillRange = { orange = 310, yellow = 320, green = 330, gray = 340 },
+        reagents = {
+            { itemId = 23445, name = "Fel Iron Bar", count = 5 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Fel Iron Hatchet (310)
+    {
+        id = 29557,
+        name = "Fel Iron Hatchet",
+        itemId = 23497,
+        skillRequired = 310,
+        skillRange = { orange = 310, yellow = 320, green = 330, gray = 340 },
         reagents = {
             { itemId = 23445, name = "Fel Iron Bar", count = 9 },
         },
@@ -5197,15 +5117,15 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Fel Iron Greatsword (310)
+    -- Fel Iron Plate Boots (315)
     {
-        id = 29565,
-        name = "Fel Iron Greatsword",
-        itemId = 23499,
-        skillRequired = 310,
-        skillRange = { orange = 310, yellow = 330, green = 340, gray = 350 },
+        id = 29548,
+        name = "Fel Iron Plate Boots",
+        itemId = 23487,
+        skillRequired = 315,
+        skillRange = { orange = 315, yellow = 325, green = 335, gray = 345 },
         reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 12 },
+            { itemId = 23445, name = "Fel Iron Bar", count = 6 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -5213,13 +5133,45 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Fel Iron Breastplate (315)
+    -- Fel Iron Plate Pants (315)
     {
-        id = 29550,
-        name = "Fel Iron Breastplate",
-        itemId = 23489,
+        id = 29549,
+        name = "Fel Iron Plate Pants",
+        itemId = 23488,
         skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
+        skillRange = { orange = 315, yellow = 325, green = 335, gray = 345 },
+        reagents = {
+            { itemId = 23445, name = "Fel Iron Bar", count = 8 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Fel Iron Chain Bracers (315)
+    {
+        id = 29553,
+        name = "Fel Iron Chain Bracers",
+        itemId = 23494,
+        skillRequired = 315,
+        skillRange = { orange = 315, yellow = 325, green = 335, gray = 345 },
+        reagents = {
+            { itemId = 23445, name = "Fel Iron Bar", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Fel Iron Hammer (315)
+    {
+        id = 29558,
+        name = "Fel Iron Hammer",
+        itemId = 23498,
+        skillRequired = 315,
+        skillRange = { orange = 315, yellow = 325, green = 335, gray = 345 },
         reagents = {
             { itemId = 23445, name = "Fel Iron Bar", count = 10 },
         },
@@ -5229,13 +5181,61 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Adamantite Maul (315)
+    -- Fel Iron Chain Tunic (320)
+    {
+        id = 29556,
+        name = "Fel Iron Chain Tunic",
+        itemId = 23490,
+        skillRequired = 320,
+        skillRange = { orange = 320, yellow = 330, green = 340, gray = 350 },
+        reagents = {
+            { itemId = 23445, name = "Fel Iron Bar", count = 9 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Fel Iron Greatsword (320)
+    {
+        id = 29565,
+        name = "Fel Iron Greatsword",
+        itemId = 23499,
+        skillRequired = 320,
+        skillRange = { orange = 320, yellow = 330, green = 340, gray = 350 },
+        reagents = {
+            { itemId = 23445, name = "Fel Iron Bar", count = 12 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Fel Iron Breastplate (325)
+    {
+        id = 29550,
+        name = "Fel Iron Breastplate",
+        itemId = 23489,
+        skillRequired = 325,
+        skillRange = { orange = 325, yellow = 335, green = 345, gray = 355 },
+        reagents = {
+            { itemId = 23445, name = "Fel Iron Bar", count = 10 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Adamantite Maul (325)
     {
         id = 29566,
         name = "Adamantite Maul",
         itemId = 23502,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
+        skillRequired = 325,
+        skillRange = { orange = 325, yellow = 335, green = 345, gray = 355 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 8 },
         },
@@ -5246,13 +5246,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Lesser Rune of Warding (315)
+    -- Lesser Rune of Warding (325)
     {
         id = 32284,
         name = "Lesser Rune of Warding",
         itemId = 23559,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 325, green = 330, gray = 335 },
+        skillRequired = 325,
+        skillRange = { orange = 325, yellow = 325, green = 330, gray = 335 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 1 },
         },
@@ -5262,13 +5262,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Adamantite Cleaver (320)
+    -- Adamantite Cleaver (330)
     {
         id = 29568,
         name = "Adamantite Cleaver",
         itemId = 23503,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 8 },
         },
@@ -5279,13 +5279,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Adamantite Dagger (320)
+    -- Adamantite Dagger (330)
     {
         id = 29569,
         name = "Adamantite Dagger",
         itemId = 23504,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 7 },
             { itemId = 21887, name = "Knothide Leather", count = 2 },
@@ -5297,13 +5297,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Heavy Earthforged Breastplate (320)
+    -- Heavy Earthforged Breastplate (330)
     {
         id = 36129,
         name = "Heavy Earthforged Breastplate",
         itemId = 30074,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 8 },
             { itemId = 22452, name = "Primal Earth", count = 4 },
@@ -5314,13 +5314,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Stormforged Hauberk (320)
+    -- Stormforged Hauberk (330)
     {
         id = 36130,
         name = "Stormforged Hauberk",
         itemId = 30076,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 8 },
             { itemId = 21885, name = "Primal Water", count = 2 },
@@ -5332,13 +5332,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Windforged Rapier (320)
+    -- Windforged Rapier (330)
     {
         id = 36131,
         name = "Windforged Rapier",
         itemId = 30077,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 6 },
             { itemId = 22451, name = "Primal Air", count = 6 },
@@ -5349,13 +5349,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Stoneforged Claymore (320)
+    -- Stoneforged Claymore (330)
     {
         id = 36133,
         name = "Stoneforged Claymore",
         itemId = 30086,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 10 },
             { itemId = 22452, name = "Primal Earth", count = 6 },
@@ -5366,13 +5366,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Stormforged Axe (320)
+    -- Stormforged Axe (330)
     {
         id = 36134,
         name = "Stormforged Axe",
         itemId = 30087,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 8 },
             { itemId = 21885, name = "Primal Water", count = 3 },
@@ -5384,13 +5384,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Skyforged Great Axe (320)
+    -- Skyforged Great Axe (330)
     {
         id = 36135,
         name = "Skyforged Great Axe",
         itemId = 30088,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 10 },
             { itemId = 22451, name = "Primal Air", count = 6 },
@@ -5401,13 +5401,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Lavaforged Warhammer (320)
+    -- Lavaforged Warhammer (330)
     {
         id = 36136,
         name = "Lavaforged Warhammer",
         itemId = 30089,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 8 },
             { itemId = 21884, name = "Primal Fire", count = 6 },
@@ -5418,13 +5418,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Great Earthforged Hammer (320)
+    -- Great Earthforged Hammer (330)
     {
         id = 36137,
         name = "Great Earthforged Hammer",
         itemId = 30093,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 340, green = 350, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 12 },
             { itemId = 22452, name = "Primal Earth", count = 6 },
@@ -5435,13 +5435,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Adamantite Rapier (325)
+    -- Adamantite Rapier (335)
     {
         id = 29571,
         name = "Adamantite Rapier",
         itemId = 23505,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 345, green = 355, gray = 365 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 12 },
         },
@@ -5452,13 +5452,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Adamantite Plate Bracers (325)
+    -- Adamantite Plate Bracers (335)
     {
         id = 29603,
         name = "Adamantite Plate Bracers",
         itemId = 23506,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 345, green = 355, gray = 365 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 6 },
             { itemId = 22452, name = "Primal Earth", count = 2 },
@@ -5471,13 +5471,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Adamantite Plate Gloves (325)
+    -- Adamantite Plate Gloves (335)
     {
         id = 29605,
         name = "Adamantite Plate Gloves",
         itemId = 23508,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 345, green = 355, gray = 365 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 8 },
             { itemId = 21887, name = "Knothide Leather", count = 2 },
@@ -5487,42 +5487,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 23595,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Adamantite Breastplate (330)
-    {
-        id = 29606,
-        name = "Adamantite Breastplate",
-        itemId = 23507,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 350, green = 360, gray = 370 },
-        reagents = {
-            { itemId = 23446, name = "Adamantite Bar", count = 12 },
-            { itemId = 22452, name = "Primal Earth", count = 4 },
-            { itemId = 21884, name = "Primal Fire", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 23596,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Lesser Ward of Shielding (330)
-    {
-        id = 29728,
-        name = "Lesser Ward of Shielding",
-        itemId = 23575,
-        skillRequired = 330,
-        skillRange = { orange = 330, yellow = 340, green = 345, gray = 350 },
-        reagents = {
-            { itemId = 23446, name = "Adamantite Bar", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 23638,
             cost = 60000,
         },
         expansion = C.EXPANSION.TBC,
@@ -5545,13 +5509,49 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Flamebane Bracers (340)
+    -- Adamantite Breastplate (340)
+    {
+        id = 29606,
+        name = "Adamantite Breastplate",
+        itemId = 23507,
+        skillRequired = 340,
+        skillRange = { orange = 340, yellow = 350, green = 360, gray = 370 },
+        reagents = {
+            { itemId = 23446, name = "Adamantite Bar", count = 12 },
+            { itemId = 22452, name = "Primal Earth", count = 4 },
+            { itemId = 21884, name = "Primal Fire", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 23596,
+            cost = 60000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Lesser Ward of Shielding (340)
+    {
+        id = 29728,
+        name = "Lesser Ward of Shielding",
+        itemId = 23575,
+        skillRequired = 340,
+        skillRange = { orange = 340, yellow = 340, green = 345, gray = 350 },
+        reagents = {
+            { itemId = 23446, name = "Adamantite Bar", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 23638,
+            cost = 60000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Flamebane Bracers (350)
     {
         id = 29614,
         name = "Flamebane Bracers",
         itemId = 23515,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23445, name = "Fel Iron Bar", count = 6 },
             { itemId = 21885, name = "Primal Water", count = 3 },
@@ -5567,13 +5567,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Adamantite Sharpening Stone (340)
+    -- Adamantite Sharpening Stone (350)
     {
         id = 29656,
         name = "Adamantite Sharpening Stone",
         itemId = 23529,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 350, green = 355, gray = 360 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 350, green = 355, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 1 },
             { itemId = 22573, name = "Mote of Earth", count = 2 },
@@ -5588,29 +5588,33 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Greater Rune of Warding (340)
+    -- Greater Rune of Warding (350)
     {
         id = 32285,
         name = "Greater Rune of Warding",
         itemId = 25521,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 350, green = 355, gray = 360 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 350, green = 355, gray = 360 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 942,
+            factionName = "Cenarion Expedition",
+            level = "Honored",
             itemId = 25526,
+            cost = 60000,
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Adamantite Rod (340)
+    -- Adamantite Rod (350)
     {
         id = 32656,
         name = "Adamantite Rod",
         itemId = 25844,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 350, green = 355, gray = 360 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 350, green = 355, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 10 },
         },
@@ -5621,13 +5625,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Nether Chain Shirt (340)
+    -- Nether Chain Shirt (350)
     {
         id = 34529,
         name = "Nether Chain Shirt",
         itemId = 23563,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 22456, name = "Primal Shadow", count = 20 },
             { itemId = 22451, name = "Primal Air", count = 20 },
@@ -5641,13 +5645,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Breastplate of Kings (340)
+    -- Breastplate of Kings (350)
     {
         id = 34533,
         name = "Breastplate of Kings",
         itemId = 28483,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23571, name = "Primal Might", count = 8 },
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 6 },
@@ -5660,13 +5664,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Fireguard (340)
+    -- Fireguard (350)
     {
         id = 34535,
         name = "Fireguard",
         itemId = 28425,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 22456, name = "Primal Shadow", count = 20 },
             { itemId = 22457, name = "Primal Mana", count = 20 },
@@ -5678,13 +5682,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Lionheart Blade (340)
+    -- Lionheart Blade (350)
     {
         id = 34538,
         name = "Lionheart Blade",
         itemId = 28428,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23571, name = "Primal Might", count = 10 },
             { itemId = 23449, name = "Khorium Bar", count = 14 },
@@ -5696,13 +5700,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- The Planar Edge (340)
+    -- The Planar Edge (350)
     {
         id = 34541,
         name = "The Planar Edge",
         itemId = 28431,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23571, name = "Primal Might", count = 5 },
             { itemId = 22456, name = "Primal Shadow", count = 20 },
@@ -5715,13 +5719,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Lunar Crescent (340)
+    -- Lunar Crescent (350)
     {
         id = 34543,
         name = "Lunar Crescent",
         itemId = 28434,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 22451, name = "Primal Air", count = 12 },
             { itemId = 22452, name = "Primal Earth", count = 12 },
@@ -5734,13 +5738,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Drakefist Hammer (340)
+    -- Drakefist Hammer (350)
     {
         id = 34545,
         name = "Drakefist Hammer",
         itemId = 28437,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 21884, name = "Primal Fire", count = 20 },
             { itemId = 22452, name = "Primal Earth", count = 20 },
@@ -5753,13 +5757,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Thunder (340)
+    -- Thunder (350)
     {
         id = 34547,
         name = "Thunder",
         itemId = 28440,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 22451, name = "Primal Air", count = 20 },
             { itemId = 21885, name = "Primal Water", count = 20 },
@@ -5772,13 +5776,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Adamantite Weightstone (340)
+    -- Adamantite Weightstone (350)
     {
         id = 34608,
         name = "Adamantite Weightstone",
         itemId = 28421,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 350, green = 355, gray = 360 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 350, green = 355, gray = 360 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 1 },
             { itemId = 21877, name = "Netherweave Cloth", count = 2 },
@@ -5793,13 +5797,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felsteel Whisper Knives (340)
+    -- Felsteel Whisper Knives (350)
     {
         id = 34983,
         name = "Felsteel Whisper Knives",
         itemId = 29204,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 360, green = 370, gray = 380 },
+        skillRequired = 350,
+        skillRange = { orange = 350, yellow = 360, green = 370, gray = 380 },
         reagents = {
             { itemId = 23448, name = "Felsteel Bar", count = 6 },
             { itemId = 22451, name = "Primal Air", count = 2 },
@@ -5812,96 +5816,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Sunblessed Gauntlets (340)
-    {
-        id = 46140,
-        name = "Sunblessed Gauntlets",
-        itemId = 34380,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
-        reagents = {
-            { itemId = 35128, name = "Hardened Khorium", count = 8 },
-            { itemId = 21886, name = "Primal Life", count = 20 },
-            { itemId = 23571, name = "Primal Might", count = 6 },
-            { itemId = 34664, name = "Sunmote", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35208,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Hard Khorium Battlefists (340)
-    {
-        id = 46141,
-        name = "Hard Khorium Battlefists",
-        itemId = 34378,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
-        reagents = {
-            { itemId = 35128, name = "Hardened Khorium", count = 10 },
-            { itemId = 21884, name = "Primal Fire", count = 12 },
-            { itemId = 22456, name = "Primal Shadow", count = 12 },
-            { itemId = 22451, name = "Primal Air", count = 12 },
-            { itemId = 34664, name = "Sunmote", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35209,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Sunblessed Breastplate (340)
-    {
-        id = 46142,
-        name = "Sunblessed Breastplate",
-        itemId = 34379,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
-        reagents = {
-            { itemId = 23449, name = "Khorium Bar", count = 20 },
-            { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
-            { itemId = 21886, name = "Primal Life", count = 15 },
-            { itemId = 21885, name = "Primal Water", count = 15 },
-            { itemId = 23572, name = "Primal Nether", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35210,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Hard Khorium Battleplate (340)
-    {
-        id = 46144,
-        name = "Hard Khorium Battleplate",
-        itemId = 34377,
-        skillRequired = 340,
-        skillRange = { orange = 340, yellow = 375, green = 392, gray = 410 },
-        reagents = {
-            { itemId = 23449, name = "Khorium Bar", count = 20 },
-            { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
-            { itemId = 21884, name = "Primal Fire", count = 10 },
-            { itemId = 22456, name = "Primal Shadow", count = 10 },
-            { itemId = 23572, name = "Primal Nether", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35211,
-            cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Enchanted Adamantite Belt (345)
+    -- Enchanted Adamantite Belt (355)
     {
         id = 29608,
         name = "Enchanted Adamantite Belt",
         itemId = 23510,
-        skillRequired = 345,
-        skillRange = { orange = 345, yellow = 365, green = 375, gray = 385 },
+        skillRequired = 355,
+        skillRange = { orange = 355, yellow = 365, green = 375, gray = 385 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 2 },
             { itemId = 22445, name = "Arcane Dust", count = 8 },
@@ -5917,13 +5838,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Enchanted Adamantite Boots (345)
+    -- Enchanted Adamantite Boots (355)
     {
         id = 29611,
         name = "Enchanted Adamantite Boots",
         itemId = 23511,
-        skillRequired = 345,
-        skillRange = { orange = 345, yellow = 365, green = 375, gray = 385 },
+        skillRequired = 355,
+        skillRange = { orange = 355, yellow = 365, green = 375, gray = 385 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 3 },
             { itemId = 22445, name = "Arcane Dust", count = 12 },
@@ -5939,13 +5860,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Flamebane Helm (345)
+    -- Flamebane Helm (355)
     {
         id = 29615,
         name = "Flamebane Helm",
         itemId = 23516,
-        skillRequired = 345,
-        skillRange = { orange = 345, yellow = 365, green = 375, gray = 385 },
+        skillRequired = 355,
+        skillRange = { orange = 355, yellow = 365, green = 375, gray = 385 },
         reagents = {
             { itemId = 23445, name = "Fel Iron Bar", count = 12 },
             { itemId = 21885, name = "Primal Water", count = 5 },
@@ -5961,13 +5882,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Enchanted Adamantite Breastplate (350)
+    -- Enchanted Adamantite Breastplate (360)
     {
         id = 29610,
         name = "Enchanted Adamantite Breastplate",
         itemId = 23509,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
             { itemId = 22445, name = "Arcane Dust", count = 20 },
@@ -5983,13 +5904,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Flamebane Gloves (350)
+    -- Flamebane Gloves (360)
     {
         id = 29616,
         name = "Flamebane Gloves",
         itemId = 23514,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23445, name = "Fel Iron Bar", count = 8 },
             { itemId = 21885, name = "Primal Water", count = 4 },
@@ -6005,13 +5926,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felsteel Gloves (350)
+    -- Felsteel Gloves (360)
     {
         id = 29619,
         name = "Felsteel Gloves",
         itemId = 23517,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23448, name = "Felsteel Bar", count = 6 },
         },
@@ -6022,13 +5943,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felsteel Leggings (350)
+    -- Felsteel Leggings (360)
     {
         id = 29620,
         name = "Felsteel Leggings",
         itemId = 23518,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23448, name = "Felsteel Bar", count = 8 },
         },
@@ -6039,13 +5960,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Khorium Belt (350)
+    -- Khorium Belt (360)
     {
         id = 29628,
         name = "Khorium Belt",
         itemId = 23524,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 3 },
             { itemId = 21885, name = "Primal Water", count = 2 },
@@ -6058,13 +5979,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Khorium Pants (350)
+    -- Khorium Pants (360)
     {
         id = 29629,
         name = "Khorium Pants",
         itemId = 23523,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 6 },
             { itemId = 21885, name = "Primal Water", count = 4 },
@@ -6077,31 +5998,35 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felsteel Shield Spike (350)
+    -- Felsteel Shield Spike (360)
     {
         id = 29657,
         name = "Felsteel Shield Spike",
         itemId = 23530,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
+        skillRequired = 360,
+        skillRange = { orange = 360, yellow = 370, green = 380, gray = 390 },
         reagents = {
             { itemId = 23448, name = "Felsteel Bar", count = 4 },
             { itemId = 21884, name = "Primal Fire", count = 4 },
             { itemId = 22452, name = "Primal Earth", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 947,
+            factionName = "Thrallmar",
+            level = "Exalted",
             itemId = 24002,
+            cost = 60000,
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Enchanted Adamantite Leggings (355)
+    -- Enchanted Adamantite Leggings (365)
     {
         id = 29613,
         name = "Enchanted Adamantite Leggings",
         itemId = 23512,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
             { itemId = 22445, name = "Arcane Dust", count = 24 },
@@ -6117,13 +6042,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Flamebane Breastplate (355)
+    -- Flamebane Breastplate (365)
     {
         id = 29617,
         name = "Flamebane Breastplate",
         itemId = 23513,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23445, name = "Fel Iron Bar", count = 16 },
             { itemId = 21885, name = "Primal Water", count = 6 },
@@ -6139,13 +6064,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felsteel Helm (355)
+    -- Felsteel Helm (365)
     {
         id = 29621,
         name = "Felsteel Helm",
         itemId = 23519,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23448, name = "Felsteel Bar", count = 8 },
         },
@@ -6156,13 +6081,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Gauntlets of the Iron Tower (355)
+    -- Gauntlets of the Iron Tower (365)
     {
         id = 29622,
         name = "Gauntlets of the Iron Tower",
         itemId = 23532,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 10 },
             { itemId = 23571, name = "Primal Might", count = 2 },
@@ -6176,13 +6101,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Khorium Boots (355)
+    -- Khorium Boots (365)
     {
         id = 29630,
         name = "Khorium Boots",
         itemId = 23525,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 4 },
             { itemId = 21885, name = "Primal Water", count = 3 },
@@ -6195,13 +6120,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Ragesteel Gloves (355)
+    -- Ragesteel Gloves (365)
     {
         id = 29642,
         name = "Ragesteel Gloves",
         itemId = 23520,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23445, name = "Fel Iron Bar", count = 8 },
             { itemId = 21884, name = "Primal Fire", count = 6 },
@@ -6215,13 +6140,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Ragesteel Helm (355)
+    -- Ragesteel Helm (365)
     {
         id = 29643,
         name = "Ragesteel Helm",
         itemId = 23521,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23445, name = "Fel Iron Bar", count = 10 },
             { itemId = 21884, name = "Primal Fire", count = 10 },
@@ -6235,13 +6160,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felfury Gauntlets (355)
+    -- Felfury Gauntlets (365)
     {
         id = 29658,
         name = "Felfury Gauntlets",
         itemId = 23531,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23448, name = "Felsteel Bar", count = 10 },
             { itemId = 23571, name = "Primal Might", count = 3 },
@@ -6254,13 +6179,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Steelgrip Gauntlets (355)
+    -- Steelgrip Gauntlets (365)
     {
         id = 29662,
         name = "Steelgrip Gauntlets",
         itemId = 23533,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23448, name = "Felsteel Bar", count = 10 },
             { itemId = 23571, name = "Primal Might", count = 5 },
@@ -6273,13 +6198,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Storm Helm (355)
+    -- Storm Helm (365)
     {
         id = 29663,
         name = "Storm Helm",
         itemId = 23534,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 8 },
             { itemId = 22451, name = "Primal Air", count = 16 },
@@ -6293,13 +6218,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Helm of the Stalwart Defender (355)
+    -- Helm of the Stalwart Defender (365)
     {
         id = 29664,
         name = "Helm of the Stalwart Defender",
         itemId = 23535,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 8 },
             { itemId = 22452, name = "Primal Earth", count = 22 },
@@ -6313,13 +6238,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Oathkeeper's Helm (355)
+    -- Oathkeeper's Helm (365)
     {
         id = 29668,
         name = "Oathkeeper's Helm",
         itemId = 23536,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 8 },
             { itemId = 23571, name = "Primal Might", count = 3 },
@@ -6333,13 +6258,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Black Felsteel Bracers (355)
+    -- Black Felsteel Bracers (365)
     {
         id = 29669,
         name = "Black Felsteel Bracers",
         itemId = 23537,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23448, name = "Felsteel Bar", count = 6 },
             { itemId = 22456, name = "Primal Shadow", count = 15 },
@@ -6352,13 +6277,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Bracers of the Green Fortress (355)
+    -- Bracers of the Green Fortress (365)
     {
         id = 29671,
         name = "Bracers of the Green Fortress",
         itemId = 23538,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 6 },
             { itemId = 21886, name = "Primal Life", count = 20 },
@@ -6371,13 +6296,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Blessed Bracers (355)
+    -- Blessed Bracers (365)
     {
         id = 29672,
         name = "Blessed Bracers",
         itemId = 23539,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 6 },
             { itemId = 23571, name = "Primal Might", count = 2 },
@@ -6391,13 +6316,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felsteel Longblade (355)
+    -- Felsteel Longblade (365)
     {
         id = 29692,
         name = "Felsteel Longblade",
         itemId = 23540,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 10 },
             { itemId = 23448, name = "Felsteel Bar", count = 10 },
@@ -6411,13 +6336,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Khorium Champion (355)
+    -- Khorium Champion (365)
     {
         id = 29693,
         name = "Khorium Champion",
         itemId = 23541,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 20 },
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 2 },
@@ -6431,13 +6356,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Fel Edged Battleaxe (355)
+    -- Fel Edged Battleaxe (365)
     {
         id = 29694,
         name = "Fel Edged Battleaxe",
         itemId = 23542,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 10 },
             { itemId = 23448, name = "Felsteel Bar", count = 10 },
@@ -6451,13 +6376,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Felsteel Reaper (355)
+    -- Felsteel Reaper (365)
     {
         id = 29695,
         name = "Felsteel Reaper",
         itemId = 23543,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 10 },
             { itemId = 23448, name = "Felsteel Bar", count = 10 },
@@ -6471,13 +6396,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Runic Hammer (355)
+    -- Runic Hammer (365)
     {
         id = 29696,
         name = "Runic Hammer",
         itemId = 23544,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 10 },
             { itemId = 23448, name = "Felsteel Bar", count = 10 },
@@ -6491,13 +6416,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Fel Hardened Maul (355)
+    -- Fel Hardened Maul (365)
     {
         id = 29697,
         name = "Fel Hardened Maul",
         itemId = 23546,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 10 },
             { itemId = 23448, name = "Felsteel Bar", count = 10 },
@@ -6511,13 +6436,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Eternium Runed Blade (355)
+    -- Eternium Runed Blade (365)
     {
         id = 29698,
         name = "Eternium Runed Blade",
         itemId = 23554,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 10 },
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
@@ -6532,13 +6457,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Dirge (355)
+    -- Dirge (365)
     {
         id = 29699,
         name = "Dirge",
         itemId = 23555,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 10 },
             { itemId = 23448, name = "Felsteel Bar", count = 10 },
@@ -6552,13 +6477,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Hand of Eternity (355)
+    -- Hand of Eternity (365)
     {
         id = 29700,
         name = "Hand of Eternity",
         itemId = 23556,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 10 },
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
@@ -6573,13 +6498,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Ragesteel Shoulders (355)
+    -- Ragesteel Shoulders (365)
     {
         id = 42662,
         name = "Ragesteel Shoulders",
         itemId = 33173,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23445, name = "Fel Iron Bar", count = 12 },
             { itemId = 21884, name = "Primal Fire", count = 2 },
@@ -6593,13 +6518,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Hammer of Righteous Might (355)
+    -- Hammer of Righteous Might (365)
     {
         id = 43846,
         name = "Hammer of Righteous Might",
         itemId = 32854,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 375, green = 385, gray = 395 },
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 385, gray = 395 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 16 },
             { itemId = 23448, name = "Felsteel Bar", count = 12 },
@@ -6613,13 +6538,96 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Ragesteel Breastplate (360)
+    -- Sunblessed Gauntlets (365)
+    {
+        id = 46140,
+        name = "Sunblessed Gauntlets",
+        itemId = 34380,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 35128, name = "Hardened Khorium", count = 8 },
+            { itemId = 21886, name = "Primal Life", count = 20 },
+            { itemId = 23571, name = "Primal Might", count = 6 },
+            { itemId = 34664, name = "Sunmote", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35208,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Hard Khorium Battlefists (365)
+    {
+        id = 46141,
+        name = "Hard Khorium Battlefists",
+        itemId = 34378,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 35128, name = "Hardened Khorium", count = 10 },
+            { itemId = 21884, name = "Primal Fire", count = 12 },
+            { itemId = 22456, name = "Primal Shadow", count = 12 },
+            { itemId = 22451, name = "Primal Air", count = 12 },
+            { itemId = 34664, name = "Sunmote", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35209,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Sunblessed Breastplate (365)
+    {
+        id = 46142,
+        name = "Sunblessed Breastplate",
+        itemId = 34379,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 23449, name = "Khorium Bar", count = 20 },
+            { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
+            { itemId = 21886, name = "Primal Life", count = 15 },
+            { itemId = 21885, name = "Primal Water", count = 15 },
+            { itemId = 23572, name = "Primal Nether", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35210,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Hard Khorium Battleplate (365)
+    {
+        id = 46144,
+        name = "Hard Khorium Battleplate",
+        itemId = 34377,
+        skillRequired = 365,
+        skillRange = { orange = 365, yellow = 375, green = 392, gray = 410 },
+        reagents = {
+            { itemId = 23449, name = "Khorium Bar", count = 20 },
+            { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
+            { itemId = 21884, name = "Primal Fire", count = 10 },
+            { itemId = 22456, name = "Primal Shadow", count = 10 },
+            { itemId = 23572, name = "Primal Nether", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35211,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Ragesteel Breastplate (370)
     {
         id = 29645,
         name = "Ragesteel Breastplate",
         itemId = 23522,
-        skillRequired = 360,
-        skillRange = { orange = 360, yellow = 380, green = 390, gray = 400 },
+        skillRequired = 370,
+        skillRange = { orange = 370, yellow = 380, green = 390, gray = 400 },
         reagents = {
             { itemId = 23445, name = "Fel Iron Bar", count = 12 },
             { itemId = 21884, name = "Primal Fire", count = 10 },
@@ -6633,13 +6641,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Swiftsteel Gloves (360)
+    -- Swiftsteel Gloves (370)
     {
         id = 29648,
         name = "Swiftsteel Gloves",
         itemId = 23526,
-        skillRequired = 360,
-        skillRange = { orange = 360, yellow = 380, green = 390, gray = 400 },
+        skillRequired = 370,
+        skillRange = { orange = 370, yellow = 380, green = 390, gray = 400 },
         reagents = {
             { itemId = 23448, name = "Felsteel Bar", count = 6 },
             { itemId = 22449, name = "Large Prismatic Shard", count = 2 },
@@ -6653,13 +6661,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Earthpeace Breastplate (360)
+    -- Earthpeace Breastplate (370)
     {
         id = 29649,
         name = "Earthpeace Breastplate",
         itemId = 23527,
-        skillRequired = 360,
-        skillRange = { orange = 360, yellow = 380, green = 390, gray = 400 },
+        skillRequired = 370,
+        skillRange = { orange = 370, yellow = 380, green = 390, gray = 400 },
         reagents = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
             { itemId = 21886, name = "Primal Life", count = 6 },
@@ -6669,662 +6677,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 23617,
             cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Eternium Rod (365)
-    {
-        id = 32657,
-        name = "Eternium Rod",
-        itemId = 25845,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 375, green = 380, gray = 385 },
-        reagents = {
-            { itemId = 23447, name = "Eternium Bar", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 25847,
-            cost = 120000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Twisting Nether Chain Shirt (365)
-    {
-        id = 34530,
-        name = "Twisting Nether Chain Shirt",
-        itemId = 23564,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23563, name = "Nether Chain Shirt", count = 1 },
-            { itemId = 23572, name = "Primal Nether", count = 10 },
-            { itemId = 22457, name = "Primal Mana", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Bulwark of Kings (365)
-    {
-        id = 34534,
-        name = "Bulwark of Kings",
-        itemId = 28484,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28483, name = "Breastplate of Kings", count = 1 },
-            { itemId = 23572, name = "Primal Nether", count = 10 },
-            { itemId = 22457, name = "Primal Mana", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Blazeguard (365)
-    {
-        id = 34537,
-        name = "Blazeguard",
-        itemId = 28426,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28425, name = "Fireguard", count = 1 },
-            { itemId = 23572, name = "Primal Nether", count = 8 },
-            { itemId = 22451, name = "Primal Air", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Lionheart Champion (365)
-    {
-        id = 34540,
-        name = "Lionheart Champion",
-        itemId = 28429,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28428, name = "Lionheart Blade", count = 1 },
-            { itemId = 23572, name = "Primal Nether", count = 8 },
-            { itemId = 23571, name = "Primal Might", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Black Planar Edge (365)
-    {
-        id = 34542,
-        name = "Black Planar Edge",
-        itemId = 28432,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28431, name = "The Planar Edge", count = 1 },
-            { itemId = 23572, name = "Primal Nether", count = 8 },
-            { itemId = 23448, name = "Felsteel Bar", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Mooncleaver (365)
-    {
-        id = 34544,
-        name = "Mooncleaver",
-        itemId = 28435,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28434, name = "Lunar Crescent", count = 1 },
-            { itemId = 23572, name = "Primal Nether", count = 8 },
-            { itemId = 22457, name = "Primal Mana", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Dragonmaw (365)
-    {
-        id = 34546,
-        name = "Dragonmaw",
-        itemId = 28438,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28437, name = "Drakefist Hammer", count = 1 },
-            { itemId = 23572, name = "Primal Nether", count = 8 },
-            { itemId = 23571, name = "Primal Might", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Deep Thunder (365)
-    {
-        id = 34548,
-        name = "Deep Thunder",
-        itemId = 28441,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28440, name = "Thunder", count = 1 },
-            { itemId = 23572, name = "Primal Nether", count = 8 },
-            { itemId = 22457, name = "Primal Mana", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Embrace of the Twisting Nether (365)
-    {
-        id = 36256,
-        name = "Embrace of the Twisting Nether",
-        itemId = 23565,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23564, name = "Twisting Nether Chain Shirt", count = 1 },
-            { itemId = 30183, name = "Nether Vortex", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Bulwark of the Ancient Kings (365)
-    {
-        id = 36257,
-        name = "Bulwark of the Ancient Kings",
-        itemId = 28485,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28484, name = "Bulwark of Kings", count = 1 },
-            { itemId = 30183, name = "Nether Vortex", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Blazefury (365)
-    {
-        id = 36258,
-        name = "Blazefury",
-        itemId = 28427,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28426, name = "Blazeguard", count = 1 },
-            { itemId = 30183, name = "Nether Vortex", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Lionheart Executioner (365)
-    {
-        id = 36259,
-        name = "Lionheart Executioner",
-        itemId = 28430,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28429, name = "Lionheart Champion", count = 1 },
-            { itemId = 30183, name = "Nether Vortex", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Wicked Edge of the Planes (365)
-    {
-        id = 36260,
-        name = "Wicked Edge of the Planes",
-        itemId = 28433,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28432, name = "Black Planar Edge", count = 1 },
-            { itemId = 30183, name = "Nether Vortex", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Bloodmoon (365)
-    {
-        id = 36261,
-        name = "Bloodmoon",
-        itemId = 28436,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28435, name = "Mooncleaver", count = 1 },
-            { itemId = 30183, name = "Nether Vortex", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Dragonstrike (365)
-    {
-        id = 36262,
-        name = "Dragonstrike",
-        itemId = 28439,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28438, name = "Dragonmaw", count = 1 },
-            { itemId = 30183, name = "Nether Vortex", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Stormherald (365)
-    {
-        id = 36263,
-        name = "Stormherald",
-        itemId = 28442,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 28441, name = "Deep Thunder", count = 1 },
-            { itemId = 30183, name = "Nether Vortex", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Belt of the Guardian (365)
-    {
-        id = 36389,
-        name = "Belt of the Guardian",
-        itemId = 30034,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 30183, name = "Nether Vortex", count = 2 },
-            { itemId = 23573, name = "Hardened Adamantite Bar", count = 5 },
-            { itemId = 21885, name = "Primal Water", count = 10 },
-            { itemId = 22452, name = "Primal Earth", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 30321,
-            cost = 240000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Red Belt of Battle (365)
-    {
-        id = 36390,
-        name = "Red Belt of Battle",
-        itemId = 30032,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 30183, name = "Nether Vortex", count = 2 },
-            { itemId = 23573, name = "Hardened Adamantite Bar", count = 5 },
-            { itemId = 21884, name = "Primal Fire", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 30322,
-            cost = 240000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Boots of the Protector (365)
-    {
-        id = 36391,
-        name = "Boots of the Protector",
-        itemId = 30033,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23572, name = "Primal Nether", count = 2 },
-            { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
-            { itemId = 21885, name = "Primal Water", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 30323,
-            cost = 240000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Red Havoc Boots (365)
-    {
-        id = 36392,
-        name = "Red Havoc Boots",
-        itemId = 30031,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23572, name = "Primal Nether", count = 2 },
-            { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
-            { itemId = 21884, name = "Primal Fire", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 30324,
-            cost = 240000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Wildguard Breastplate (365)
-    {
-        id = 38473,
-        name = "Wildguard Breastplate",
-        itemId = 31364,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23448, name = "Felsteel Bar", count = 8 },
-            { itemId = 21886, name = "Primal Life", count = 12 },
-            { itemId = 22456, name = "Primal Shadow", count = 12 },
-            { itemId = 23572, name = "Primal Nether", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 31390,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Wildguard Leggings (365)
-    {
-        id = 38475,
-        name = "Wildguard Leggings",
-        itemId = 31367,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23448, name = "Felsteel Bar", count = 8 },
-            { itemId = 21886, name = "Primal Life", count = 12 },
-            { itemId = 22456, name = "Primal Shadow", count = 12 },
-            { itemId = 23572, name = "Primal Nether", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 31391,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Wildguard Helm (365)
-    {
-        id = 38476,
-        name = "Wildguard Helm",
-        itemId = 31368,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23448, name = "Felsteel Bar", count = 8 },
-            { itemId = 21886, name = "Primal Life", count = 12 },
-            { itemId = 22456, name = "Primal Shadow", count = 12 },
-            { itemId = 23572, name = "Primal Nether", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 31392,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Iceguard Breastplate (365)
-    {
-        id = 38477,
-        name = "Iceguard Breastplate",
-        itemId = 31369,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23449, name = "Khorium Bar", count = 8 },
-            { itemId = 21885, name = "Primal Water", count = 12 },
-            { itemId = 21884, name = "Primal Fire", count = 12 },
-            { itemId = 23572, name = "Primal Nether", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 31393,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Iceguard Leggings (365)
-    {
-        id = 38478,
-        name = "Iceguard Leggings",
-        itemId = 31370,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23449, name = "Khorium Bar", count = 8 },
-            { itemId = 21885, name = "Primal Water", count = 12 },
-            { itemId = 21884, name = "Primal Fire", count = 12 },
-            { itemId = 23572, name = "Primal Nether", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 967,
-            factionName = "The Violet Eye",
-            level = "Revered",
-            itemId = 31394,
-            cost = 240000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Iceguard Helm (365)
-    {
-        id = 38479,
-        name = "Iceguard Helm",
-        itemId = 31371,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23449, name = "Khorium Bar", count = 8 },
-            { itemId = 21885, name = "Primal Water", count = 12 },
-            { itemId = 21884, name = "Primal Fire", count = 12 },
-            { itemId = 23572, name = "Primal Nether", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 967,
-            factionName = "The Violet Eye",
-            level = "Honored",
-            itemId = 31395,
-            cost = 240000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Shadesteel Sabots (365)
-    {
-        id = 40033,
-        name = "Shadesteel Sabots",
-        itemId = 32402,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 32428, name = "Heart of Darkness", count = 2 },
-            { itemId = 22450, name = "Void Crystal", count = 1 },
-            { itemId = 21886, name = "Primal Life", count = 2 },
-            { itemId = 22456, name = "Primal Shadow", count = 4 },
-            { itemId = 23446, name = "Adamantite Bar", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 32441,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Shadesteel Bracers (365)
-    {
-        id = 40034,
-        name = "Shadesteel Bracers",
-        itemId = 32403,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 32428, name = "Heart of Darkness", count = 1 },
-            { itemId = 22450, name = "Void Crystal", count = 1 },
-            { itemId = 21886, name = "Primal Life", count = 2 },
-            { itemId = 22456, name = "Primal Shadow", count = 2 },
-            { itemId = 23446, name = "Adamantite Bar", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 32442,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Shadesteel Greaves (365)
-    {
-        id = 40035,
-        name = "Shadesteel Greaves",
-        itemId = 32404,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 32428, name = "Heart of Darkness", count = 3 },
-            { itemId = 22450, name = "Void Crystal", count = 1 },
-            { itemId = 21886, name = "Primal Life", count = 4 },
-            { itemId = 22456, name = "Primal Shadow", count = 6 },
-            { itemId = 23446, name = "Adamantite Bar", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 32443,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Shadesteel Girdle (365)
-    {
-        id = 40036,
-        name = "Shadesteel Girdle",
-        itemId = 32401,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 32428, name = "Heart of Darkness", count = 2 },
-            { itemId = 22450, name = "Void Crystal", count = 1 },
-            { itemId = 21886, name = "Primal Life", count = 3 },
-            { itemId = 22456, name = "Primal Shadow", count = 4 },
-            { itemId = 23446, name = "Adamantite Bar", count = 8 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 32444,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Swiftsteel Bracers (365)
-    {
-        id = 41132,
-        name = "Swiftsteel Bracers",
-        itemId = 32568,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23448, name = "Felsteel Bar", count = 14 },
-            { itemId = 23573, name = "Hardened Adamantite Bar", count = 2 },
-            { itemId = 22451, name = "Primal Air", count = 6 },
-            { itemId = 32428, name = "Heart of Darkness", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35531,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Swiftsteel Shoulders (365)
-    {
-        id = 41133,
-        name = "Swiftsteel Shoulders",
-        itemId = 32570,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23448, name = "Felsteel Bar", count = 18 },
-            { itemId = 23573, name = "Hardened Adamantite Bar", count = 2 },
-            { itemId = 22451, name = "Primal Air", count = 8 },
-            { itemId = 32428, name = "Heart of Darkness", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35532,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Dawnsteel Bracers (365)
-    {
-        id = 41134,
-        name = "Dawnsteel Bracers",
-        itemId = 32571,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23449, name = "Khorium Bar", count = 14 },
-            { itemId = 23573, name = "Hardened Adamantite Bar", count = 2 },
-            { itemId = 21884, name = "Primal Fire", count = 6 },
-            { itemId = 32428, name = "Heart of Darkness", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35529,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Dawnsteel Shoulders (365)
-    {
-        id = 41135,
-        name = "Dawnsteel Shoulders",
-        itemId = 32573,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 385, green = 395, gray = 405 },
-        reagents = {
-            { itemId = 23449, name = "Khorium Bar", count = 18 },
-            { itemId = 23573, name = "Hardened Adamantite Bar", count = 2 },
-            { itemId = 21884, name = "Primal Fire", count = 8 },
-            { itemId = 32428, name = "Heart of Darkness", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35530,
-            cost = 30000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -7342,6 +6694,694 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 23639,
             cost = 300000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Eternium Rod (375)
+    {
+        id = 32657,
+        name = "Eternium Rod",
+        itemId = 25845,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 375, green = 380, gray = 385 },
+        reagents = {
+            { itemId = 23447, name = "Eternium Bar", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 25847,
+            cost = 120000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Twisting Nether Chain Shirt (375)
+    {
+        id = 34530,
+        name = "Twisting Nether Chain Shirt",
+        itemId = 23564,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23563, name = "Nether Chain Shirt", count = 1 },
+            { itemId = 23572, name = "Primal Nether", count = 10 },
+            { itemId = 22457, name = "Primal Mana", count = 10 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Bulwark of Kings (375)
+    {
+        id = 34534,
+        name = "Bulwark of Kings",
+        itemId = 28484,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28483, name = "Breastplate of Kings", count = 1 },
+            { itemId = 23572, name = "Primal Nether", count = 10 },
+            { itemId = 22457, name = "Primal Mana", count = 10 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Blazeguard (375)
+    {
+        id = 34537,
+        name = "Blazeguard",
+        itemId = 28426,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28425, name = "Fireguard", count = 1 },
+            { itemId = 23572, name = "Primal Nether", count = 8 },
+            { itemId = 22451, name = "Primal Air", count = 10 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Lionheart Champion (375)
+    {
+        id = 34540,
+        name = "Lionheart Champion",
+        itemId = 28429,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28428, name = "Lionheart Blade", count = 1 },
+            { itemId = 23572, name = "Primal Nether", count = 8 },
+            { itemId = 23571, name = "Primal Might", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Black Planar Edge (375)
+    {
+        id = 34542,
+        name = "Black Planar Edge",
+        itemId = 28432,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28431, name = "The Planar Edge", count = 1 },
+            { itemId = 23572, name = "Primal Nether", count = 8 },
+            { itemId = 23448, name = "Felsteel Bar", count = 6 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Mooncleaver (375)
+    {
+        id = 34544,
+        name = "Mooncleaver",
+        itemId = 28435,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28434, name = "Lunar Crescent", count = 1 },
+            { itemId = 23572, name = "Primal Nether", count = 8 },
+            { itemId = 22457, name = "Primal Mana", count = 10 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Dragonmaw (375)
+    {
+        id = 34546,
+        name = "Dragonmaw",
+        itemId = 28438,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28437, name = "Drakefist Hammer", count = 1 },
+            { itemId = 23572, name = "Primal Nether", count = 8 },
+            { itemId = 23571, name = "Primal Might", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Deep Thunder (375)
+    {
+        id = 34548,
+        name = "Deep Thunder",
+        itemId = 28441,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28440, name = "Thunder", count = 1 },
+            { itemId = 23572, name = "Primal Nether", count = 8 },
+            { itemId = 22457, name = "Primal Mana", count = 10 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Embrace of the Twisting Nether (375)
+    {
+        id = 36256,
+        name = "Embrace of the Twisting Nether",
+        itemId = 23565,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23564, name = "Twisting Nether Chain Shirt", count = 1 },
+            { itemId = 30183, name = "Nether Vortex", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Bulwark of the Ancient Kings (375)
+    {
+        id = 36257,
+        name = "Bulwark of the Ancient Kings",
+        itemId = 28485,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28484, name = "Bulwark of Kings", count = 1 },
+            { itemId = 30183, name = "Nether Vortex", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Blazefury (375)
+    {
+        id = 36258,
+        name = "Blazefury",
+        itemId = 28427,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28426, name = "Blazeguard", count = 1 },
+            { itemId = 30183, name = "Nether Vortex", count = 5 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Lionheart Executioner (375)
+    {
+        id = 36259,
+        name = "Lionheart Executioner",
+        itemId = 28430,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28429, name = "Lionheart Champion", count = 1 },
+            { itemId = 30183, name = "Nether Vortex", count = 5 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Wicked Edge of the Planes (375)
+    {
+        id = 36260,
+        name = "Wicked Edge of the Planes",
+        itemId = 28433,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28432, name = "Black Planar Edge", count = 1 },
+            { itemId = 30183, name = "Nether Vortex", count = 5 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Bloodmoon (375)
+    {
+        id = 36261,
+        name = "Bloodmoon",
+        itemId = 28436,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28435, name = "Mooncleaver", count = 1 },
+            { itemId = 30183, name = "Nether Vortex", count = 5 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Dragonstrike (375)
+    {
+        id = 36262,
+        name = "Dragonstrike",
+        itemId = 28439,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28438, name = "Dragonmaw", count = 1 },
+            { itemId = 30183, name = "Nether Vortex", count = 5 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Stormherald (375)
+    {
+        id = 36263,
+        name = "Stormherald",
+        itemId = 28442,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 28441, name = "Deep Thunder", count = 1 },
+            { itemId = 30183, name = "Nether Vortex", count = 5 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Belt of the Guardian (375)
+    {
+        id = 36389,
+        name = "Belt of the Guardian",
+        itemId = 30034,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 30183, name = "Nether Vortex", count = 2 },
+            { itemId = 23573, name = "Hardened Adamantite Bar", count = 5 },
+            { itemId = 21885, name = "Primal Water", count = 10 },
+            { itemId = 22452, name = "Primal Earth", count = 5 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 30321,
+            cost = 240000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Red Belt of Battle (375)
+    {
+        id = 36390,
+        name = "Red Belt of Battle",
+        itemId = 30032,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 30183, name = "Nether Vortex", count = 2 },
+            { itemId = 23573, name = "Hardened Adamantite Bar", count = 5 },
+            { itemId = 21884, name = "Primal Fire", count = 10 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 30322,
+            cost = 240000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Boots of the Protector (375)
+    {
+        id = 36391,
+        name = "Boots of the Protector",
+        itemId = 30033,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23572, name = "Primal Nether", count = 2 },
+            { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
+            { itemId = 21885, name = "Primal Water", count = 12 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 30323,
+            cost = 240000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Red Havoc Boots (375)
+    {
+        id = 36392,
+        name = "Red Havoc Boots",
+        itemId = 30031,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23572, name = "Primal Nether", count = 2 },
+            { itemId = 23573, name = "Hardened Adamantite Bar", count = 4 },
+            { itemId = 21884, name = "Primal Fire", count = 12 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 30324,
+            cost = 240000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Wildguard Breastplate (375)
+    {
+        id = 38473,
+        name = "Wildguard Breastplate",
+        itemId = 31364,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23448, name = "Felsteel Bar", count = 8 },
+            { itemId = 21886, name = "Primal Life", count = 12 },
+            { itemId = 22456, name = "Primal Shadow", count = 12 },
+            { itemId = 23572, name = "Primal Nether", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 942,
+            factionName = "Cenarion Expedition",
+            level = "Exalted",
+            itemId = 31390,
+            cost = 240000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Wildguard Leggings (375)
+    {
+        id = 38475,
+        name = "Wildguard Leggings",
+        itemId = 31367,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23448, name = "Felsteel Bar", count = 8 },
+            { itemId = 21886, name = "Primal Life", count = 12 },
+            { itemId = 22456, name = "Primal Shadow", count = 12 },
+            { itemId = 23572, name = "Primal Nether", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 942,
+            factionName = "Cenarion Expedition",
+            level = "Revered",
+            itemId = 31391,
+            cost = 240000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Wildguard Helm (375)
+    {
+        id = 38476,
+        name = "Wildguard Helm",
+        itemId = 31368,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23448, name = "Felsteel Bar", count = 8 },
+            { itemId = 21886, name = "Primal Life", count = 12 },
+            { itemId = 22456, name = "Primal Shadow", count = 12 },
+            { itemId = 23572, name = "Primal Nether", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 942,
+            factionName = "Cenarion Expedition",
+            level = "Revered",
+            itemId = 31392,
+            cost = 240000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Iceguard Breastplate (375)
+    {
+        id = 38477,
+        name = "Iceguard Breastplate",
+        itemId = 31369,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23449, name = "Khorium Bar", count = 8 },
+            { itemId = 21885, name = "Primal Water", count = 12 },
+            { itemId = 21884, name = "Primal Fire", count = 12 },
+            { itemId = 23572, name = "Primal Nether", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 967,
+            factionName = "The Violet Eye",
+            level = "Honored",
+            itemId = 31393,
+            cost = 240000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Iceguard Leggings (375)
+    {
+        id = 38478,
+        name = "Iceguard Leggings",
+        itemId = 31370,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23449, name = "Khorium Bar", count = 8 },
+            { itemId = 21885, name = "Primal Water", count = 12 },
+            { itemId = 21884, name = "Primal Fire", count = 12 },
+            { itemId = 23572, name = "Primal Nether", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 967,
+            factionName = "The Violet Eye",
+            level = "Revered",
+            itemId = 31394,
+            cost = 240000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Iceguard Helm (375)
+    {
+        id = 38479,
+        name = "Iceguard Helm",
+        itemId = 31371,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23449, name = "Khorium Bar", count = 8 },
+            { itemId = 21885, name = "Primal Water", count = 12 },
+            { itemId = 21884, name = "Primal Fire", count = 12 },
+            { itemId = 23572, name = "Primal Nether", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 967,
+            factionName = "The Violet Eye",
+            level = "Honored",
+            itemId = 31395,
+            cost = 240000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Shadesteel Sabots (375)
+    {
+        id = 40033,
+        name = "Shadesteel Sabots",
+        itemId = 32402,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 32428, name = "Heart of Darkness", count = 2 },
+            { itemId = 22450, name = "Void Crystal", count = 1 },
+            { itemId = 21886, name = "Primal Life", count = 2 },
+            { itemId = 22456, name = "Primal Shadow", count = 4 },
+            { itemId = 23446, name = "Adamantite Bar", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 1012,
+            factionName = "Ashtongue Deathsworn",
+            level = "Honored",
+            itemId = 32441,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Shadesteel Bracers (375)
+    {
+        id = 40034,
+        name = "Shadesteel Bracers",
+        itemId = 32403,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 32428, name = "Heart of Darkness", count = 1 },
+            { itemId = 22450, name = "Void Crystal", count = 1 },
+            { itemId = 21886, name = "Primal Life", count = 2 },
+            { itemId = 22456, name = "Primal Shadow", count = 2 },
+            { itemId = 23446, name = "Adamantite Bar", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 1012,
+            factionName = "Ashtongue Deathsworn",
+            level = "Friendly",
+            itemId = 32442,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Shadesteel Greaves (375)
+    {
+        id = 40035,
+        name = "Shadesteel Greaves",
+        itemId = 32404,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 32428, name = "Heart of Darkness", count = 3 },
+            { itemId = 22450, name = "Void Crystal", count = 1 },
+            { itemId = 21886, name = "Primal Life", count = 4 },
+            { itemId = 22456, name = "Primal Shadow", count = 6 },
+            { itemId = 23446, name = "Adamantite Bar", count = 12 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 1012,
+            factionName = "Ashtongue Deathsworn",
+            level = "Honored",
+            itemId = 32443,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Shadesteel Girdle (375)
+    {
+        id = 40036,
+        name = "Shadesteel Girdle",
+        itemId = 32401,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 32428, name = "Heart of Darkness", count = 2 },
+            { itemId = 22450, name = "Void Crystal", count = 1 },
+            { itemId = 21886, name = "Primal Life", count = 3 },
+            { itemId = 22456, name = "Primal Shadow", count = 4 },
+            { itemId = 23446, name = "Adamantite Bar", count = 8 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 1012,
+            factionName = "Ashtongue Deathsworn",
+            level = "Friendly",
+            itemId = 32444,
+            cost = 80000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Swiftsteel Bracers (375)
+    {
+        id = 41132,
+        name = "Swiftsteel Bracers",
+        itemId = 32568,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23448, name = "Felsteel Bar", count = 14 },
+            { itemId = 23573, name = "Hardened Adamantite Bar", count = 2 },
+            { itemId = 22451, name = "Primal Air", count = 6 },
+            { itemId = 32428, name = "Heart of Darkness", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35531,
+            cost = 30000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Swiftsteel Shoulders (375)
+    {
+        id = 41133,
+        name = "Swiftsteel Shoulders",
+        itemId = 32570,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23448, name = "Felsteel Bar", count = 18 },
+            { itemId = 23573, name = "Hardened Adamantite Bar", count = 2 },
+            { itemId = 22451, name = "Primal Air", count = 8 },
+            { itemId = 32428, name = "Heart of Darkness", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35532,
+            cost = 30000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Dawnsteel Bracers (375)
+    {
+        id = 41134,
+        name = "Dawnsteel Bracers",
+        itemId = 32571,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23449, name = "Khorium Bar", count = 14 },
+            { itemId = 23573, name = "Hardened Adamantite Bar", count = 2 },
+            { itemId = 21884, name = "Primal Fire", count = 6 },
+            { itemId = 32428, name = "Heart of Darkness", count = 4 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35529,
+            cost = 30000,
+        },
+        expansion = C.EXPANSION.TBC,
+    },
+    -- Dawnsteel Shoulders (375)
+    {
+        id = 41135,
+        name = "Dawnsteel Shoulders",
+        itemId = 32573,
+        skillRequired = 375,
+        skillRange = { orange = 375, yellow = 385, green = 395, gray = 405 },
+        reagents = {
+            { itemId = 23449, name = "Khorium Bar", count = 18 },
+            { itemId = 23573, name = "Hardened Adamantite Bar", count = 2 },
+            { itemId = 21884, name = "Primal Fire", count = 8 },
+            { itemId = 32428, name = "Heart of Darkness", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35530,
+            cost = 30000,
         },
         expansion = C.EXPANSION.TBC,
     },
