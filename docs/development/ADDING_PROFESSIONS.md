@@ -2,7 +2,23 @@
 
 ## Overview
 
-This guide walks through adding recipe data for a new profession to CraftLib using the three-phase verified sources pipeline.
+This guide walks through adding recipe data for a new profession to CraftLib using the verified sources pipeline.
+
+## Data Pipeline
+
+```
+DB2 (wago.tools)          Wowhead
+      ↓                      ↓
+  extract_db2_sources.py     fetch_wowhead_sources.py
+      ↓                      ↓
+      └──────────┬───────────┘
+                 ↓
+    Data/Sources/[Profession].json
+                 ↓
+        generate_recipes.py
+                 ↓
+    Data/TBC/[Profession]/Recipes.lua
+```
 
 ## Step 1: Extract Sources from DB2
 
@@ -28,14 +44,45 @@ python scripts/fetch_wowhead_sources.py --profession [Profession] --dry-run
 python scripts/fetch_wowhead_sources.py --profession [Profession]
 ```
 
-Commit the verified sources:
+## Step 3: Fetch Difficulty Levels
+
+**IMPORTANT:** DB2 does not contain accurate difficulty (orange) values. You MUST fetch from Wowhead.
+
+```bash
+# Preview
+python scripts/fetch_wowhead_sources.py --profession [Profession] --difficulty --dry-run
+
+# Fetch all difficulty levels
+python scripts/fetch_wowhead_sources.py --profession [Profession] --difficulty
+```
+
+This adds verified difficulty to each recipe:
+```json
+"difficulty": {
+  "orange": 30,
+  "yellow": 45,
+  "green": 52,
+  "gray": 60,
+  "certainty": "WOWHEAD"
+}
+```
+
+### Why This Is Required
+
+DB2 only provides `TrivialSkillLineRankLow` (yellow) and `TrivialSkillLineRankHigh` (gray).
+The orange value (skill required to learn) cannot be reliably calculated - some recipes
+have non-uniform gaps between difficulty colors.
+
+See `vendor/db2-parser/schema/SkillLineAbility.md` for technical details.
+
+## Step 4: Commit Verified Sources
 
 ```bash
 git add Data/Sources/[Profession].json
-git commit -m "feat(data): verify [Profession] sources"
+git commit -m "feat(data): verify [Profession] sources and difficulty"
 ```
 
-## Step 3: Generate Recipes.lua
+## Step 5: Generate Recipes.lua
 
 Generate the Lua file from verified sources:
 
@@ -43,9 +90,11 @@ Generate the Lua file from verified sources:
 python scripts/generate_recipes.py --version 2.5.5.65463 --profession [Profession]
 ```
 
-**Note:** Generation will fail if any PENDING sources remain. Run `fetch_wowhead_sources.py` first.
+**Notes:**
+- Generation will fail if any PENDING sources remain
+- If difficulty is not verified (certainty != "WOWHEAD"), script falls back to calculation (less accurate)
 
-## Step 4: Add to TOC
+## Step 6: Add to TOC
 
 Edit `CraftLib.toc`, add after existing data files:
 
@@ -53,7 +102,7 @@ Edit `CraftLib.toc`, add after existing data files:
 Data/TBC/[Profession]/Recipes.lua
 ```
 
-## Step 5: Validate Recipe Sources
+## Step 7: Validate Recipe Sources
 
 Run the validation script to detect any remaining issues:
 
@@ -61,7 +110,7 @@ Run the validation script to detect any remaining issues:
 python scripts/validate_sources.py --profession [Profession]
 ```
 
-## Step 6: Test In-Game
+## Step 8: Test In-Game
 
 ```lua
 /reload
@@ -76,13 +125,13 @@ python scripts/validate_sources.py --profession [Profession]
 /dump CraftLib:GetRecipeBySpellId("professionKey", SPELL_ID)
 ```
 
-## Step 8: Update Documentation
+## Step 9: Update Documentation
 
 1. **README.md**: Update profession coverage table
 2. **CURSEFORGE.md**: Sync with README
 3. **CHANGELOG.md**: Add entry under `[Unreleased]`
 
-## Step 9: Commit
+## Step 10: Commit
 
 ```bash
 git add Data/TBC/[Profession]/ CraftLib.toc README.md CURSEFORGE.md CHANGELOG.md
@@ -98,3 +147,5 @@ git commit -m "feat(data): add [Profession] recipes for TBC"
 - Not using constants for source types
 - **Marking vendor recipes as TRAINER** - Always run `validate_sources.py` after adding recipes
 - Not specifying vendor locations for VENDOR sources
+- **Skipping difficulty fetch** - DB2 does not have orange values; calculated values are inaccurate for some recipes
+- **Relying on calculated difficulty** - Always fetch from Wowhead for accurate data

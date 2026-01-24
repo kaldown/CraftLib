@@ -64,7 +64,8 @@ def load_source_overrides(scripts_dir: Path) -> dict:
 def load_verified_sources(sources_dir: Path, profession_name: str) -> dict | None:
     """Load verified sources from Sources/{Profession}.json.
 
-    Returns dict mapping spell_id (str) to source dict, or None if file doesn't exist.
+    Returns dict mapping spell_id (str) to recipe dict (with source and difficulty),
+    or None if file doesn't exist.
     """
     sources_file = sources_dir / f"{profession_name.replace(' ', '')}.json"
     if not sources_file.exists():
@@ -73,9 +74,9 @@ def load_verified_sources(sources_dir: Path, profession_name: str) -> dict | Non
     with open(sources_file, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    # Convert to spell_id -> source lookup
+    # Convert to spell_id -> full recipe data lookup (includes source and difficulty)
     return {
-        spell_id: recipe["source"]
+        spell_id: recipe
         for spell_id, recipe in data.get("recipes", {}).items()
     }
 
@@ -269,29 +270,30 @@ def extract_recipes(
             continue  # Not a crafting recipe
 
         # Build recipe object
-        min_skill = int(row.get("MinSkillLineRank", "0"))
         trivial_low = int(row.get("TrivialSkillLineRankLow", "0"))
         trivial_high = int(row.get("TrivialSkillLineRankHigh", "0"))
 
-        # Calculate skill range
-        # Note: MinSkillLineRank is often unreliable (always 1 for some professions like First Aid)
-        # TrivialSkillLineRankLow (yellow point) is when you can learn the recipe
-        # Orange range is typically 30 skill points before yellow
-        yellow = trivial_low if trivial_low > 0 else 1
-        gray = trivial_high if trivial_high > 0 else yellow + 60
-        green = (yellow + gray) // 2
+        # Get verified data if available
+        verified_recipe = verified_sources.get(spell_id) if verified_sources else None
+        verified_difficulty = verified_recipe.get("difficulty") if verified_recipe else None
 
-        # Calculate orange point and skill required
-        # If min_skill is reliable (> 1), use it; otherwise derive from yellow
-        if min_skill > 1:
-            skill_required = min_skill
-            orange = min_skill
+        # Determine skill range - prefer verified Wowhead data over calculation
+        if verified_difficulty and verified_difficulty.get("certainty") == "WOWHEAD":
+            # Use verified difficulty from Wowhead
+            orange = verified_difficulty["orange"]
+            yellow = verified_difficulty["yellow"]
+            green = verified_difficulty["green"]
+            gray = verified_difficulty["gray"]
         else:
-            # Orange starts 30 points before yellow (standard WoW mechanic)
-            orange = max(1, yellow - 30)
-            # Starter recipes (orange = 1) are learnable at skill 1
-            # Other recipes are learnable at their yellow point
-            skill_required = 1 if orange == 1 else yellow
+            # Fall back to calculation (not reliable for all recipes)
+            # DB2 only provides yellow and gray; orange and green must be calculated
+            yellow = trivial_low if trivial_low > 0 else 1
+            gray = trivial_high if trivial_high > 0 else yellow + 60
+            green = (yellow + gray) // 2
+            # Orange = 2 * yellow - gray (assumes equal gaps, but not always true)
+            orange = max(1, 2 * yellow - gray)
+
+        skill_required = orange
 
         # Get reagents
         reagents = []
@@ -335,15 +337,18 @@ def extract_recipes(
         }
 
         # Detect source - prefer verified sources, fall back to heuristics
-        if verified_sources and spell_id in verified_sources:
-            source = verified_sources[spell_id]
+        if verified_recipe:
+            source = verified_recipe.get("source")
             # Check for PENDING sources
-            if source.get("certainty") == "PENDING":
+            if source and source.get("certainty") == "PENDING":
                 raise ValueError(
                     f"Recipe '{recipe['name']}' (spell {spell_id}) has PENDING source. "
                     f"Run fetch_wowhead_sources.py to verify."
                 )
-            recipe["source"] = source
+            if source:
+                recipe["source"] = source
+            else:
+                recipe["source"] = detect_source(recipe, indexes, overrides)
         else:
             # Fall back to heuristic detection (for professions without verified sources)
             recipe["source"] = detect_source(recipe, indexes, overrides)

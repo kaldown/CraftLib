@@ -50,6 +50,18 @@
                 }
               }
             }
+          },
+          "difficulty": {
+            "type": "object",
+            "description": "Skill difficulty levels from Wowhead (required for accurate data)",
+            "required": ["orange", "yellow", "green", "gray", "certainty"],
+            "properties": {
+              "orange": { "type": "integer", "description": "Skill level when recipe is orange (skill required to learn)" },
+              "yellow": { "type": "integer", "description": "Skill level when recipe turns yellow" },
+              "green": { "type": "integer", "description": "Skill level when recipe turns green" },
+              "gray": { "type": "integer", "description": "Skill level when recipe turns gray" },
+              "certainty": { "enum": ["DB2", "WOWHEAD", "CALCULATED", "PENDING"], "description": "Source of difficulty data" }
+            }
           }
         }
       }

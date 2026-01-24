@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
-"""Fetch recipe sources from Wowhead for PENDING items.
+"""Fetch recipe sources and difficulty from Wowhead.
 
-Reads Sources/{Profession}.json, fetches Wowhead data for PENDING entries,
-updates the file with verified sources.
+Reads Sources/{Profession}.json, fetches Wowhead data, updates the file.
 
 Usage:
+    # Fetch sources for PENDING items
     python fetch_wowhead_sources.py --profession FirstAid
     python fetch_wowhead_sources.py --profession FirstAid --dry-run
     python fetch_wowhead_sources.py --profession FirstAid --items 16112 16113
+
+    # Fetch difficulty levels for all recipes
+    python fetch_wowhead_sources.py --profession Engineering --difficulty
+    python fetch_wowhead_sources.py --profession Engineering --difficulty --dry-run
+    python fetch_wowhead_sources.py --profession Engineering --difficulty --spells 3922 3923
 """
 
 import argparse
@@ -33,6 +38,49 @@ WOWHEAD_SOURCE_TYPES = {
     11: "EVENT",
     12: "ACHIEVEMENT",
 }
+
+
+def fetch_wowhead_spell(spell_id: int, expansion: str = "classic") -> dict | None:
+    """Fetch spell difficulty data from Wowhead HTML page.
+
+    Returns dict with difficulty info or None on failure.
+    """
+    url = f"https://www.wowhead.com/{expansion}/spell={spell_id}"
+
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=30) as response:
+            content = response.read().decode("utf-8")
+    except (urllib.error.URLError, TimeoutError, OSError) as e:
+        print(f"  Error fetching {url}: {e}", file=sys.stderr)
+        return None
+
+    # Extract colors array from HTML/JavaScript: "colors":[30,45,52,60]
+    colors_match = re.search(r'"colors":\[(\d+),(\d+),(\d+),(\d+)\]', content)
+    if colors_match:
+        return {
+            "orange": int(colors_match.group(1)),
+            "yellow": int(colors_match.group(2)),
+            "green": int(colors_match.group(3)),
+            "gray": int(colors_match.group(4)),
+        }
+
+    # Fallback: try learnedat field
+    learnedat_match = re.search(r'"learnedat":(\d+)', content)
+    if learnedat_match:
+        return {
+            "orange": int(learnedat_match.group(1)),
+            "yellow": None,
+            "green": None,
+            "gray": None,
+        }
+
+    return None
 
 
 def fetch_wowhead_item(item_id: int, expansion: str = "tbc") -> dict | None:
@@ -199,6 +247,81 @@ def process_pending_sources(sources_file: Path, dry_run: bool, specific_items: l
     return 0
 
 
+def process_difficulty(sources_file: Path, dry_run: bool, specific_spells: list[int] | None) -> int:
+    """Fetch difficulty levels from Wowhead for all recipes."""
+    with open(sources_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    recipes_to_fetch = []
+    for spell_id, recipe in data["recipes"].items():
+        difficulty = recipe.get("difficulty", {})
+        # Skip if already verified from Wowhead
+        if difficulty.get("certainty") == "WOWHEAD":
+            continue
+
+        if specific_spells and int(spell_id) not in specific_spells:
+            continue
+
+        recipes_to_fetch.append((spell_id, recipe))
+
+    if not recipes_to_fetch:
+        print("No recipes need difficulty verification.", file=sys.stderr)
+        return 0
+
+    print(f"Found {len(recipes_to_fetch)} recipes to fetch difficulty:", file=sys.stderr)
+    if dry_run:
+        for spell_id, recipe in recipes_to_fetch[:10]:
+            print(f"  - {recipe['name']} (spell {spell_id})", file=sys.stderr)
+        if len(recipes_to_fetch) > 10:
+            print(f"  ... and {len(recipes_to_fetch) - 10} more", file=sys.stderr)
+        print("\nDry run - no changes made.", file=sys.stderr)
+        return 0
+
+    print("\nFetching difficulty from Wowhead...", file=sys.stderr)
+    updated = 0
+    failed = 0
+
+    for spell_id, recipe in recipes_to_fetch:
+        print(f"  Fetching spell {spell_id} ({recipe['name']})...", file=sys.stderr, end=" ")
+
+        wowhead_data = fetch_wowhead_spell(int(spell_id))
+        if not wowhead_data or wowhead_data.get("yellow") is None:
+            print("FAILED", file=sys.stderr)
+            failed += 1
+            continue
+
+        data["recipes"][spell_id]["difficulty"] = {
+            "orange": wowhead_data["orange"],
+            "yellow": wowhead_data["yellow"],
+            "green": wowhead_data["green"],
+            "gray": wowhead_data["gray"],
+            "certainty": "WOWHEAD",
+        }
+        print(f"OK -> {wowhead_data['orange']}/{wowhead_data['yellow']}/{wowhead_data['green']}/{wowhead_data['gray']}", file=sys.stderr)
+        updated += 1
+
+        # Save progress every 10 items
+        if updated % 10 == 0:
+            with open(sources_file, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2)
+            print(f"  [Saved progress: {updated} verified]", file=sys.stderr)
+
+        # Rate limit
+        time.sleep(0.5)
+
+    # Write back
+    if updated > 0:
+        with open(sources_file, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
+        print(f"\nUpdated {sources_file}: {updated} difficulty levels verified", file=sys.stderr)
+
+    if failed > 0:
+        print(f"⚠ {failed} recipes could not be verified", file=sys.stderr)
+        return 2
+
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Fetch recipe sources from Wowhead")
     parser.add_argument("--profession", required=True, help="Profession name")
@@ -209,7 +332,9 @@ def main() -> int:
         help="Sources directory",
     )
     parser.add_argument("--dry-run", action="store_true", help="Show what would be fetched")
-    parser.add_argument("--items", type=int, nargs="+", help="Specific item IDs to fetch")
+    parser.add_argument("--items", type=int, nargs="+", help="Specific item IDs to fetch (for sources)")
+    parser.add_argument("--difficulty", action="store_true", help="Fetch difficulty levels instead of sources")
+    parser.add_argument("--spells", type=int, nargs="+", help="Specific spell IDs to fetch (for difficulty)")
     args = parser.parse_args()
 
     # Find sources file
@@ -221,7 +346,10 @@ def main() -> int:
         print("Run extract_db2_sources.py first.", file=sys.stderr)
         return 1
 
-    return process_pending_sources(sources_file, args.dry_run, args.items)
+    if args.difficulty:
+        return process_difficulty(sources_file, args.dry_run, args.spells)
+    else:
+        return process_pending_sources(sources_file, args.dry_run, args.items)
 
 
 if __name__ == "__main__":

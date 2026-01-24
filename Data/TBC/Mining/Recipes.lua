@@ -21,13 +21,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Smelt Bronze (65)
+    -- Smelt Bronze (15)
     {
         id = 2659,
         name = "Smelt Bronze",
         itemId = 2841,
-        skillRequired = 65,
-        skillRange = { orange = 35, yellow = 65, green = 90, gray = 115 },
+        skillRequired = 15,
+        skillRange = { orange = 15, yellow = 65, green = 90, gray = 115 },
         reagents = {
             { itemId = 2840, name = "Copper Bar", count = 1 },
             { itemId = 3576, name = "Tin Bar", count = 1 },
@@ -38,13 +38,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Smelt Tin (65)
+    -- Smelt Tin (55)
     {
         id = 3304,
         name = "Smelt Tin",
         itemId = 3576,
-        skillRequired = 65,
-        skillRange = { orange = 35, yellow = 65, green = 70, gray = 75 },
+        skillRequired = 55,
+        skillRange = { orange = 55, yellow = 65, green = 70, gray = 75 },
         reagents = {
             { itemId = 2771, name = "Tin Ore", count = 1 },
         },
@@ -54,13 +54,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Smelt Silver (115)
+    -- Smelt Silver (100)
     {
         id = 2658,
         name = "Smelt Silver",
         itemId = 2842,
-        skillRequired = 115,
-        skillRange = { orange = 85, yellow = 115, green = 122, gray = 130 },
+        skillRequired = 100,
+        skillRange = { orange = 100, yellow = 115, green = 122, gray = 130 },
         reagents = {
             { itemId = 2775, name = "Silver Ore", count = 1 },
         },
@@ -70,15 +70,47 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Smelt Iron (130)
+    -- Smelt Iron (100)
     {
         id = 3307,
         name = "Smelt Iron",
         itemId = 3575,
-        skillRequired = 130,
+        skillRequired = 100,
         skillRange = { orange = 100, yellow = 130, green = 145, gray = 160 },
         reagents = {
             { itemId = 2772, name = "Iron Ore", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Mining Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Smelt Mithril (120)
+    {
+        id = 10097,
+        name = "Smelt Mithril",
+        itemId = 3860,
+        skillRequired = 120,
+        skillRange = { orange = 120, yellow = 175, green = 202, gray = 230 },
+        reagents = {
+            { itemId = 3858, name = "Mithril Ore", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Mining Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Smelt Gold (155)
+    {
+        id = 3308,
+        name = "Smelt Gold",
+        itemId = 3577,
+        skillRequired = 155,
+        skillRange = { orange = 155, yellow = 170, green = 177, gray = 185 },
+        reagents = {
+            { itemId = 2776, name = "Gold Ore", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -92,7 +124,7 @@ local recipes = {
         name = "Smelt Steel",
         itemId = 3859,
         skillRequired = 165,
-        skillRange = { orange = 135, yellow = 165, green = 165, gray = 165 },
+        skillRange = { orange = 165, yellow = 165, green = 165, gray = 165 },
         reagents = {
             { itemId = 3575, name = "Iron Bar", count = 1 },
             { itemId = 3857, name = "Coal", count = 1 },
@@ -103,61 +135,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Smelt Gold (170)
-    {
-        id = 3308,
-        name = "Smelt Gold",
-        itemId = 3577,
-        skillRequired = 170,
-        skillRange = { orange = 140, yellow = 170, green = 177, gray = 185 },
-        reagents = {
-            { itemId = 2776, name = "Gold Ore", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Mining Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Smelt Mithril (175)
-    {
-        id = 10097,
-        name = "Smelt Mithril",
-        itemId = 3860,
-        skillRequired = 175,
-        skillRange = { orange = 145, yellow = 175, green = 202, gray = 230 },
-        reagents = {
-            { itemId = 3858, name = "Mithril Ore", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Mining Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Smelt Truesilver (235)
-    {
-        id = 10098,
-        name = "Smelt Truesilver",
-        itemId = 6037,
-        skillRequired = 235,
-        skillRange = { orange = 205, yellow = 235, green = 242, gray = 250 },
-        reagents = {
-            { itemId = 7911, name = "Truesilver Ore", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Mining Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Smelt Thorium (250)
+    -- Smelt Thorium (210)
     {
         id = 16153,
         name = "Smelt Thorium",
         itemId = 12359,
-        skillRequired = 250,
-        skillRange = { orange = 220, yellow = 250, green = 270, gray = 290 },
+        skillRequired = 210,
+        skillRange = { orange = 210, yellow = 250, green = 270, gray = 290 },
         reagents = {
             { itemId = 10620, name = "Thorium Ore", count = 1 },
         },
@@ -167,15 +151,15 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Smelt Dark Iron (300)
+    -- Smelt Truesilver (220)
     {
-        id = 14891,
-        name = "Smelt Dark Iron",
-        itemId = 11371,
-        skillRequired = 300,
-        skillRange = { orange = 270, yellow = 300, green = 305, gray = 310 },
+        id = 10098,
+        name = "Smelt Truesilver",
+        itemId = 6037,
+        skillRequired = 220,
+        skillRange = { orange = 220, yellow = 235, green = 242, gray = 250 },
         reagents = {
-            { itemId = 11370, name = "Dark Iron Ore", count = 8 },
+            { itemId = 7911, name = "Truesilver Ore", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -183,15 +167,31 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Smelt Fel Iron (300)
+    -- Smelt Fel Iron (285)
     {
         id = 29356,
         name = "Smelt Fel Iron",
         itemId = 23445,
-        skillRequired = 300,
-        skillRange = { orange = 270, yellow = 300, green = 307, gray = 315 },
+        skillRequired = 285,
+        skillRange = { orange = 285, yellow = 300, green = 307, gray = 315 },
         reagents = {
             { itemId = 23424, name = "Fel Iron Ore", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Mining Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Smelt Dark Iron (290)
+    {
+        id = 14891,
+        name = "Smelt Dark Iron",
+        itemId = 11371,
+        skillRequired = 290,
+        skillRange = { orange = 290, yellow = 300, green = 305, gray = 310 },
+        reagents = {
+            { itemId = 11370, name = "Dark Iron Ore", count = 8 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -205,7 +205,7 @@ local recipes = {
         name = "Earth Shatter",
         itemId = 22573,
         skillRequired = 300,
-        skillRange = { orange = 270, yellow = 300, green = 300, gray = 300 },
+        skillRange = { orange = 300, yellow = 300, green = 300, gray = 300 },
         reagents = {
             { itemId = 22452, name = "Primal Earth", count = 1 },
         },
@@ -221,7 +221,7 @@ local recipes = {
         name = "Fire Sunder",
         itemId = 22574,
         skillRequired = 300,
-        skillRange = { orange = 270, yellow = 300, green = 300, gray = 300 },
+        skillRange = { orange = 300, yellow = 300, green = 300, gray = 300 },
         reagents = {
             { itemId = 21884, name = "Primal Fire", count = 1 },
         },
@@ -231,13 +231,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Smelt Adamantite (325)
+    -- Smelt Adamantite (310)
     {
         id = 29358,
         name = "Smelt Adamantite",
         itemId = 23446,
-        skillRequired = 325,
-        skillRange = { orange = 295, yellow = 325, green = 332, gray = 340 },
+        skillRequired = 310,
+        skillRange = { orange = 310, yellow = 325, green = 332, gray = 340 },
         reagents = {
             { itemId = 23425, name = "Adamantite Ore", count = 2 },
         },
@@ -247,13 +247,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Smelt Elementium (350)
+    -- Smelt Elementium (325)
     {
         id = 22967,
         name = "Smelt Elementium",
         itemId = 17771,
-        skillRequired = 350,
-        skillRange = { orange = 320, yellow = 350, green = 362, gray = 375 },
+        skillRequired = 325,
+        skillRange = { orange = 325, yellow = 350, green = 362, gray = 375 },
         reagents = {
             { itemId = 18562, name = "Elementium Ore", count = 1 },
             { itemId = 12360, name = "Arcanite Bar", count = 10 },
@@ -266,15 +266,16 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Smelt Eternium (350)
+    -- Smelt Felsteel (330)
     {
-        id = 29359,
-        name = "Smelt Eternium",
-        itemId = 23447,
-        skillRequired = 350,
-        skillRange = { orange = 320, yellow = 350, green = 357, gray = 365 },
+        id = 29360,
+        name = "Smelt Felsteel",
+        itemId = 23448,
+        skillRequired = 330,
+        skillRange = { orange = 330, yellow = 355, green = 367, gray = 380 },
         reagents = {
-            { itemId = 23427, name = "Eternium Ore", count = 2 },
+            { itemId = 23445, name = "Fel Iron Bar", count = 3 },
+            { itemId = 23447, name = "Eternium Bar", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -282,16 +283,15 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Smelt Felsteel (355)
+    -- Smelt Eternium (335)
     {
-        id = 29360,
-        name = "Smelt Felsteel",
-        itemId = 23448,
-        skillRequired = 355,
-        skillRange = { orange = 325, yellow = 355, green = 367, gray = 380 },
+        id = 29359,
+        name = "Smelt Eternium",
+        itemId = 23447,
+        skillRequired = 335,
+        skillRange = { orange = 335, yellow = 350, green = 357, gray = 365 },
         reagents = {
-            { itemId = 23445, name = "Fel Iron Bar", count = 3 },
-            { itemId = 23447, name = "Eternium Bar", count = 2 },
+            { itemId = 23427, name = "Eternium Ore", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -305,7 +305,7 @@ local recipes = {
         name = "Smelt Khorium",
         itemId = 23449,
         skillRequired = 375,
-        skillRange = { orange = 345, yellow = 375, green = 375, gray = 375 },
+        skillRange = { orange = 375, yellow = 375, green = 375, gray = 375 },
         reagents = {
             { itemId = 23426, name = "Khorium Ore", count = 2 },
         },
@@ -321,7 +321,7 @@ local recipes = {
         name = "Smelt Hardened Adamantite",
         itemId = 23573,
         skillRequired = 375,
-        skillRange = { orange = 345, yellow = 375, green = 375, gray = 375 },
+        skillRange = { orange = 375, yellow = 375, green = 375, gray = 375 },
         reagents = {
             { itemId = 23446, name = "Adamantite Bar", count = 10 },
         },
@@ -337,14 +337,15 @@ local recipes = {
         name = "Smelt Hardened Khorium",
         itemId = 35128,
         skillRequired = 375,
-        skillRange = { orange = 345, yellow = 375, green = 375, gray = 375 },
+        skillRange = { orange = 375, yellow = 375, green = 375, gray = 375 },
         reagents = {
             { itemId = 23449, name = "Khorium Bar", count = 3 },
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Mining Trainer",
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35273,
+            cost = 80000,
         },
         expansion = C.EXPANSION.TBC,
     },
