@@ -10,7 +10,7 @@
 - ✅ Engineering - 240/250 (96%) - 10 recipes don't exist on Wowhead (likely removed)
 - ✅ Enchanting - 30/31 (96%) - 1 recipe (Arcane Dust) missing on Wowhead
 - ✅ First Aid - 15/16 (93%) - Crystal Infused Bandage has no difficulty data on Wowhead
-- ⚠️ Alchemy - 13/186 (6%) - Rate limited, needs more batches
+- ⚠️ Alchemy - 152/186 (81%) - Rate limited, 34 recipes remaining
 - ❌ Blacksmithing - 0/385 - Not started (rate limited)
 - ❌ Jewelcrafting - 0/261 - Not started (rate limited)
 - ❌ Leatherworking - 0/379 - Not started (rate limited)
