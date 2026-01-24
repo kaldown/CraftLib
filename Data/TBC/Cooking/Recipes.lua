@@ -5,13 +5,13 @@ local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
 local recipes = {
-    -- Charred Wolf Meat (5)
+    -- Charred Wolf Meat (0)
     {
         id = 2538,
         name = "Charred Wolf Meat",
         itemId = 2679,
-        skillRequired = 5,
-        skillRange = { orange = 5, yellow = 45, green = 65, gray = 85 },
+        skillRequired = 0,
+        skillRange = { orange = 0, yellow = 45, green = 65, gray = 85 },
         reagents = {
             { itemId = 2672, name = "Stringy Wolf Meat", count = 1 },
         },
@@ -21,13 +21,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Roasted Boar Meat (5)
+    -- Roasted Boar Meat (0)
     {
         id = 2540,
         name = "Roasted Boar Meat",
         itemId = 2681,
-        skillRequired = 5,
-        skillRange = { orange = 5, yellow = 45, green = 65, gray = 85 },
+        skillRequired = 0,
+        skillRange = { orange = 0, yellow = 45, green = 65, gray = 85 },
         reagents = {
             { itemId = 769, name = "Chunk of Boar Meat", count = 1 },
         },
@@ -37,13 +37,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Brilliant Smallfish (5)
+    -- Brilliant Smallfish (1)
     {
         id = 7751,
         name = "Brilliant Smallfish",
         itemId = 6290,
-        skillRequired = 5,
-        skillRange = { orange = 5, yellow = 45, green = 65, gray = 85 },
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 45, green = 65, gray = 85 },
         reagents = {
             { itemId = 6291, name = "Raw Brilliant Smallfish", count = 1 },
         },
@@ -54,13 +54,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Slitherskin Mackerel (5)
+    -- Slitherskin Mackerel (1)
     {
         id = 7752,
         name = "Slitherskin Mackerel",
         itemId = 787,
-        skillRequired = 5,
-        skillRange = { orange = 5, yellow = 45, green = 65, gray = 85 },
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 45, green = 65, gray = 85 },
         reagents = {
             { itemId = 6303, name = "Raw Slitherskin Mackerel", count = 1 },
         },
@@ -71,13 +71,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Herb Baked Egg (5)
+    -- Herb Baked Egg (1)
     {
         id = 8604,
         name = "Herb Baked Egg",
         itemId = 6888,
-        skillRequired = 5,
-        skillRange = { orange = 5, yellow = 45, green = 65, gray = 85 },
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 45, green = 65, gray = 85 },
         reagents = {
             { itemId = 6889, name = "Small Egg", count = 1 },
             { itemId = 2678, name = "Mild Spices", count = 1 },
@@ -89,13 +89,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Crispy Bat Wing (5)
+    -- Crispy Bat Wing (1)
     {
         id = 15935,
         name = "Crispy Bat Wing",
         itemId = 12224,
-        skillRequired = 5,
-        skillRange = { orange = 5, yellow = 45, green = 65, gray = 85 },
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 45, green = 65, gray = 85 },
         reagents = {
             { itemId = 12223, name = "Meaty Bat Wing", count = 1 },
             { itemId = 2678, name = "Mild Spices", count = 1 },
@@ -107,13 +107,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Gingerbread Cookie (5)
+    -- Gingerbread Cookie (1)
     {
         id = 21143,
         name = "Gingerbread Cookie",
         itemId = 17197,
-        skillRequired = 5,
-        skillRange = { orange = 5, yellow = 45, green = 65, gray = 85 },
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 45, green = 65, gray = 85 },
         reagents = {
             { itemId = 6889, name = "Small Egg", count = 1 },
             { itemId = 17194, name = "Holiday Spices", count = 1 },
@@ -122,39 +122,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 17200,
             cost = 25,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Lynx Steak (5)
-    {
-        id = 33276,
-        name = "Lynx Steak",
-        itemId = 27635,
-        skillRequired = 5,
-        skillRange = { orange = 5, yellow = 45, green = 65, gray = 85 },
-        reagents = {
-            { itemId = 27668, name = "Lynx Meat", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27685,
-            cost = 40,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Roasted Moongraze Tenderloin (5)
-    {
-        id = 33277,
-        name = "Roasted Moongraze Tenderloin",
-        itemId = 24105,
-        skillRequired = 5,
-        skillRange = { orange = 5, yellow = 45, green = 65, gray = 85 },
-        reagents = {
-            { itemId = 23676, name = "Moongraze Stag Tenderloin", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 27686,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -191,23 +158,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Beer Basted Boar Ribs (20)
-    {
-        id = 2795,
-        name = "Beer Basted Boar Ribs",
-        itemId = 2888,
-        skillRequired = 20,
-        skillRange = { orange = 20, yellow = 60, green = 80, gray = 100 },
-        reagents = {
-            { itemId = 2886, name = "Crag Boar Rib", count = 1 },
-            { itemId = 2894, name = "Rhapsody Malt", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 2889,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Scorpid Surprise (20)
     {
         id = 6413,
@@ -225,41 +175,20 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Spice Bread (20)
+    -- Beer Basted Boar Ribs (25)
     {
-        id = 37836,
-        name = "Spice Bread",
-        itemId = 30816,
-        skillRequired = 20,
-        skillRange = { orange = 20, yellow = 30, green = 35, gray = 40 },
-        reagents = {
-            { itemId = 30817, name = "Simple Flour", count = 1 },
-            { itemId = 2678, name = "Mild Spices", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Cooking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Delicious Chocolate Cake (25)
-    {
-        id = 43779,
-        name = "Delicious Chocolate Cake",
-        itemId = 33924,
+        id = 2795,
+        name = "Beer Basted Boar Ribs",
+        itemId = 2888,
         skillRequired = 25,
-        skillRange = { orange = 25, yellow = 50, green = 62, gray = 75 },
+        skillRange = { orange = 25, yellow = 60, green = 80, gray = 100 },
         reagents = {
-            { itemId = 30817, name = "Simple Flour", count = 8 },
-            { itemId = 1179, name = "Ice Cold Milk", count = 4 },
-            { itemId = 2678, name = "Mild Spices", count = 4 },
-            { itemId = 6889, name = "Small Egg", count = 8 },
-            { itemId = 2593, name = "Flask of Stormwind Tawny", count = 1 },
-            { itemId = 785, name = "Mageroyal", count = 3 },
+            { itemId = 2886, name = "Crag Boar Rib", count = 1 },
+            { itemId = 2894, name = "Rhapsody Malt", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 33925,
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 2889,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -455,23 +384,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Bat Bites (50)
-    {
-        id = 33278,
-        name = "Bat Bites",
-        itemId = 27636,
-        skillRequired = 50,
-        skillRange = { orange = 50, yellow = 90, green = 110, gray = 130 },
-        reagents = {
-            { itemId = 27669, name = "Bat Flesh", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27687,
-            cost = 400,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Blood Sausage (60)
     {
         id = 3371,
@@ -504,22 +416,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 18160,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Crunchy Spider Surprise (60)
-    {
-        id = 28267,
-        name = "Crunchy Spider Surprise",
-        itemId = 22645,
-        skillRequired = 60,
-        skillRange = { orange = 60, yellow = 100, green = 120, gray = 140 },
-        reagents = {
-            { itemId = 22644, name = "Crunchy Spider Leg", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 22647,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -644,23 +540,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Succulent Pork Ribs (90)
-    {
-        id = 2548,
-        name = "Succulent Pork Ribs",
-        itemId = 2685,
-        skillRequired = 90,
-        skillRange = { orange = 90, yellow = 130, green = 150, gray = 170 },
-        reagents = {
-            { itemId = 2677, name = "Boar Ribs", count = 2 },
-            { itemId = 2692, name = "Hot Spices", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 2700,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Murloc Fin Soup (90)
     {
         id = 3372,
@@ -713,30 +592,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Captain Rumsey's Lager (90)
-    {
-        id = 45695,
-        name = "Captain Rumsey's Lager",
-        itemId = 34832,
-        skillRequired = 90,
-        skillRange = { orange = 90, yellow = 100, green = 105, gray = 110 },
-        reagents = {
-            { itemId = 2596, name = "Skin of Dwarven Stout", count = 1 },
-            { itemId = 2594, name = "Flagon of Dwarven Honeymead", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 34834,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Redridge Goulash (95)
+    -- Redridge Goulash (100)
     {
         id = 2547,
         name = "Redridge Goulash",
         itemId = 1082,
-        skillRequired = 95,
-        skillRange = { orange = 95, yellow = 135, green = 155, gray = 175 },
+        skillRequired = 100,
+        skillRange = { orange = 100, yellow = 135, green = 155, gray = 175 },
         reagents = {
             { itemId = 1081, name = "Crisp Spider Meat", count = 1 },
             { itemId = 1080, name = "Tough Condor Meat", count = 1 },
@@ -796,6 +658,23 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 6330,
             cost = 1200,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Succulent Pork Ribs (110)
+    {
+        id = 2548,
+        name = "Succulent Pork Ribs",
+        itemId = 2685,
+        skillRequired = 110,
+        skillRange = { orange = 110, yellow = 130, green = 150, gray = 170 },
+        reagents = {
+            { itemId = 2677, name = "Boar Ribs", count = 2 },
+            { itemId = 2692, name = "Hot Spices", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 2700,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -868,21 +747,20 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Heavy Crocolisk Stew (120)
+    -- Hot Lion Chops (125)
     {
-        id = 24418,
-        name = "Heavy Crocolisk Stew",
-        itemId = 20074,
-        skillRequired = 120,
-        skillRange = { orange = 120, yellow = 160, green = 180, gray = 200 },
+        id = 3398,
+        name = "Hot Lion Chops",
+        itemId = 3727,
+        skillRequired = 125,
+        skillRange = { orange = 125, yellow = 175, green = 195, gray = 215 },
         reagents = {
-            { itemId = 3667, name = "Tender Crocolisk Meat", count = 2 },
-            { itemId = 3713, name = "Soothing Spices", count = 1 },
+            { itemId = 3731, name = "Lion Meat", count = 1 },
+            { itemId = 2692, name = "Hot Spices", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 20075,
-            cost = 2000,
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 3735,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -938,40 +816,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Hot Lion Chops (135)
-    {
-        id = 3398,
-        name = "Hot Lion Chops",
-        itemId = 3727,
-        skillRequired = 135,
-        skillRange = { orange = 135, yellow = 175, green = 195, gray = 215 },
-        reagents = {
-            { itemId = 3731, name = "Lion Meat", count = 1 },
-            { itemId = 2692, name = "Hot Spices", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 3735,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Goldthorn Tea (145)
-    {
-        id = 13028,
-        name = "Goldthorn Tea",
-        itemId = 10841,
-        skillRequired = 145,
-        skillRange = { orange = 145, yellow = 175, green = 190, gray = 205 },
-        reagents = {
-            { itemId = 3821, name = "Goldthorn", count = 1 },
-            { itemId = 159, name = "Refreshing Spring Water", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Cooking Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Tasty Lion Steak (150)
     {
         id = 3399,
@@ -989,20 +833,21 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Rockscale Cod (150)
+    -- Heavy Crocolisk Stew (150)
     {
-        id = 7828,
-        name = "Rockscale Cod",
-        itemId = 4594,
+        id = 24418,
+        name = "Heavy Crocolisk Stew",
+        itemId = 20074,
         skillRequired = 150,
-        skillRange = { orange = 150, yellow = 190, green = 210, gray = 230 },
+        skillRange = { orange = 150, yellow = 160, green = 180, gray = 200 },
         reagents = {
-            { itemId = 6362, name = "Raw Rockscale Cod", count = 1 },
+            { itemId = 3667, name = "Tender Crocolisk Meat", count = 2 },
+            { itemId = 3713, name = "Soothing Spices", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
-            itemId = 6369,
-            cost = 2200,
+            itemId = 20075,
+            cost = 2000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1055,6 +900,40 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 6039,
             cost = 5000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Rockscale Cod (175)
+    {
+        id = 7828,
+        name = "Rockscale Cod",
+        itemId = 4594,
+        skillRequired = 175,
+        skillRange = { orange = 175, yellow = 190, green = 210, gray = 230 },
+        reagents = {
+            { itemId = 6362, name = "Raw Rockscale Cod", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 6369,
+            cost = 2200,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Goldthorn Tea (175)
+    {
+        id = 13028,
+        name = "Goldthorn Tea",
+        itemId = 10841,
+        skillRequired = 175,
+        skillRange = { orange = 175, yellow = 215, green = 235, gray = 255 },
+        reagents = {
+            { itemId = 3821, name = "Goldthorn", count = 1 },
+            { itemId = 159, name = "Refreshing Spring Water", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Cooking Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1184,13 +1063,607 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- Crunchy Spider Surprise (185)
+    {
+        id = 28267,
+        name = "Crunchy Spider Surprise",
+        itemId = 22645,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 22644, name = "Crunchy Spider Leg", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 22647,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Lynx Steak (185)
+    {
+        id = 33276,
+        name = "Lynx Steak",
+        itemId = 27635,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27668, name = "Lynx Meat", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27685,
+            cost = 40,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Roasted Moongraze Tenderloin (185)
+    {
+        id = 33277,
+        name = "Roasted Moongraze Tenderloin",
+        itemId = 24105,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 23676, name = "Moongraze Stag Tenderloin", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 27686,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Bat Bites (185)
+    {
+        id = 33278,
+        name = "Bat Bites",
+        itemId = 27636,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27669, name = "Bat Flesh", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27687,
+            cost = 400,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Buzzard Bites (185)
+    {
+        id = 33279,
+        name = "Buzzard Bites",
+        itemId = 27651,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27671, name = "Buzzard Meat", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 27684,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Ravager Dog (185)
+    {
+        id = 33284,
+        name = "Ravager Dog",
+        itemId = 27655,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27674, name = "Ravager Flesh", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27688,
+            cost = 20000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Sporeling Snack (185)
+    {
+        id = 33285,
+        name = "Sporeling Snack",
+        itemId = 27656,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27676, name = "Strange Spores", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 27689,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Blackened Basilisk (185)
+    {
+        id = 33286,
+        name = "Blackened Basilisk",
+        itemId = 27657,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27677, name = "Chunk o' Basilisk", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27690,
+            cost = 30000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Roasted Clefthoof (185)
+    {
+        id = 33287,
+        name = "Roasted Clefthoof",
+        itemId = 27658,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27678, name = "Clefthoof Meat", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27691,
+            cost = 30000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Warp Burger (185)
+    {
+        id = 33288,
+        name = "Warp Burger",
+        itemId = 27659,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27681, name = "Warped Flesh", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27692,
+            cost = 30000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Talbuk Steak (185)
+    {
+        id = 33289,
+        name = "Talbuk Steak",
+        itemId = 27660,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27682, name = "Talbuk Venison", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27693,
+            cost = 30000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Blackened Trout (185)
+    {
+        id = 33290,
+        name = "Blackened Trout",
+        itemId = 27661,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27422, name = "Barbed Gill Trout", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27694,
+            cost = 20000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Feltail Delight (185)
+    {
+        id = 33291,
+        name = "Feltail Delight",
+        itemId = 27662,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27425, name = "Spotted Feltail", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27695,
+            cost = 20000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Blackened Sporefish (185)
+    {
+        id = 33292,
+        name = "Blackened Sporefish",
+        itemId = 27663,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27429, name = "Zangarian Sporefish", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27696,
+            cost = 20000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Grilled Mudfish (185)
+    {
+        id = 33293,
+        name = "Grilled Mudfish",
+        itemId = 27664,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27435, name = "Figluster's Mudfish", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27697,
+            cost = 30000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Poached Bluefish (185)
+    {
+        id = 33294,
+        name = "Poached Bluefish",
+        itemId = 27665,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27437, name = "Icefin Bluefish", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27698,
+            cost = 30000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Golden Fish Sticks (185)
+    {
+        id = 33295,
+        name = "Golden Fish Sticks",
+        itemId = 27666,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27438, name = "Golden Darter", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27699,
+            cost = 30000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Spicy Crawdad (185)
+    {
+        id = 33296,
+        name = "Spicy Crawdad",
+        itemId = 27667,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27439, name = "Furious Crawdad", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 27700,
+            cost = 30000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Clam Bar (185)
+    {
+        id = 36210,
+        name = "Clam Bar",
+        itemId = 30155,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 24477, name = "Jaggal Clam Meat", count = 2 },
+            { itemId = 3713, name = "Soothing Spices", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 30156,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Spice Bread (185)
+    {
+        id = 37836,
+        name = "Spice Bread",
+        itemId = 30816,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 30817, name = "Simple Flour", count = 1 },
+            { itemId = 2678, name = "Mild Spices", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Cooking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Mok'Nathal Shortribs (185)
+    {
+        id = 38867,
+        name = "Mok'Nathal Shortribs",
+        itemId = 31672,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 31670, name = "Raptor Ribs", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 31675,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Crunchy Serpent (185)
+    {
+        id = 38868,
+        name = "Crunchy Serpent",
+        itemId = 31673,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 31671, name = "Serpent Flesh", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 31674,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Stewed Trout (185)
+    {
+        id = 42296,
+        name = "Stewed Trout",
+        itemId = 33048,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27422, name = "Barbed Gill Trout", count = 1 },
+            { itemId = 2593, name = "Flask of Stormwind Tawny", count = 1 },
+            { itemId = 3713, name = "Soothing Spices", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Cooking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Fisherman's Feast (185)
+    {
+        id = 42302,
+        name = "Fisherman's Feast",
+        itemId = 33052,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27515, name = "Huge Spotted Feltail", count = 1 },
+            { itemId = 4539, name = "Goldenbark Apple", count = 5 },
+            { itemId = 3713, name = "Soothing Spices", count = 5 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Cooking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Hot Buttered Trout (185)
+    {
+        id = 42305,
+        name = "Hot Buttered Trout",
+        itemId = 33053,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27516, name = "Enormous Barbed Gill Trout", count = 1 },
+            { itemId = 3713, name = "Soothing Spices", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Cooking Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Skullfish Soup (185)
+    {
+        id = 43707,
+        name = "Skullfish Soup",
+        itemId = 33825,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 33824, name = "Crescent-Tail Skullfish", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 33870,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Stormchops (185)
+    {
+        id = 43758,
+        name = "Stormchops",
+        itemId = 33866,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27678, name = "Clefthoof Meat", count = 1 },
+            { itemId = 13757, name = "Lightning Eel", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 33871,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Broiled Bloodfin (185)
+    {
+        id = 43761,
+        name = "Broiled Bloodfin",
+        itemId = 33867,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 33823, name = "Bloodfin Catfish", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 33869,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Spicy Hot Talbuk (185)
+    {
+        id = 43765,
+        name = "Spicy Hot Talbuk",
+        itemId = 33872,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27682, name = "Talbuk Venison", count = 1 },
+            { itemId = 2692, name = "Hot Spices", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 33873,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Kibler's Bits (185)
+    {
+        id = 43772,
+        name = "Kibler's Bits",
+        itemId = 33874,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 27671, name = "Buzzard Meat", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 33875,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Delicious Chocolate Cake (185)
+    {
+        id = 43779,
+        name = "Delicious Chocolate Cake",
+        itemId = 33924,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 30817, name = "Simple Flour", count = 8 },
+            { itemId = 1179, name = "Ice Cold Milk", count = 4 },
+            { itemId = 2678, name = "Mild Spices", count = 4 },
+            { itemId = 6889, name = "Small Egg", count = 8 },
+            { itemId = 2593, name = "Flask of Stormwind Tawny", count = 1 },
+            { itemId = 785, name = "Mageroyal", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 33925,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Hot Apple Cider (185)
+    {
+        id = 45022,
+        name = "Hot Apple Cider",
+        itemId = 34411,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 34412, name = "Sparkling Apple Cider", count = 1 },
+            { itemId = 17196, name = "Holiday Spirits", count = 1 },
+            { itemId = 17194, name = "Holiday Spices", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 34413,
+            cost = 10000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Captain Rumsey's Lager (185)
+    {
+        id = 45695,
+        name = "Captain Rumsey's Lager",
+        itemId = 34832,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 2596, name = "Skin of Dwarven Stout", count = 1 },
+            { itemId = 2594, name = "Flagon of Dwarven Honeymead", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 34834,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Charred Bear Kabobs (185)
+    {
+        id = 46684,
+        name = "Charred Bear Kabobs",
+        itemId = 35563,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 35562, name = "Bear Flank", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35564,
+            cost = 18000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
+    -- Juicy Bear Burger (185)
+    {
+        id = 46688,
+        name = "Juicy Bear Burger",
+        itemId = 35565,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 185, green = 205, gray = 225 },
+        reagents = {
+            { itemId = 35562, name = "Bear Flank", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 35566,
+            cost = 18000,
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Dragonbreath Chili (200)
     {
         id = 15906,
         name = "Dragonbreath Chili",
         itemId = 12217,
         skillRequired = 200,
-        skillRange = { orange = 200, yellow = 225, green = 237, gray = 250 },
+        skillRange = { orange = 200, yellow = 240, green = 260, gray = 280 },
         reagents = {
             { itemId = 12037, name = "Mystery Meat", count = 1 },
             { itemId = 4402, name = "Small Flame Sac", count = 1 },
@@ -1209,7 +1682,7 @@ local recipes = {
         name = "Heavy Kodo Stew",
         itemId = 12215,
         skillRequired = 200,
-        skillRange = { orange = 200, yellow = 225, green = 237, gray = 250 },
+        skillRange = { orange = 200, yellow = 240, green = 260, gray = 280 },
         reagents = {
             { itemId = 12204, name = "Heavy Kodo Meat", count = 2 },
             { itemId = 3713, name = "Soothing Spices", count = 1 },
@@ -1228,7 +1701,7 @@ local recipes = {
         name = "Spider Sausage",
         itemId = 17222,
         skillRequired = 200,
-        skillRange = { orange = 200, yellow = 225, green = 237, gray = 250 },
+        skillRange = { orange = 200, yellow = 240, green = 260, gray = 280 },
         reagents = {
             { itemId = 12205, name = "White Spider Meat", count = 2 },
         },
@@ -1244,7 +1717,7 @@ local recipes = {
         name = "Spiced Chili Crab",
         itemId = 12216,
         skillRequired = 225,
-        skillRange = { orange = 225, yellow = 250, green = 262, gray = 275 },
+        skillRange = { orange = 225, yellow = 265, green = 285, gray = 305 },
         reagents = {
             { itemId = 12206, name = "Tender Crab Meat", count = 1 },
             { itemId = 2692, name = "Hot Spices", count = 2 },
@@ -1262,7 +1735,7 @@ local recipes = {
         name = "Monster Omelet",
         itemId = 12218,
         skillRequired = 225,
-        skillRange = { orange = 225, yellow = 250, green = 262, gray = 275 },
+        skillRange = { orange = 225, yellow = 265, green = 285, gray = 305 },
         reagents = {
             { itemId = 12207, name = "Giant Egg", count = 1 },
             { itemId = 3713, name = "Soothing Spices", count = 2 },
@@ -1280,7 +1753,7 @@ local recipes = {
         name = "Spotted Yellowtail",
         itemId = 6887,
         skillRequired = 225,
-        skillRange = { orange = 225, yellow = 250, green = 262, gray = 275 },
+        skillRange = { orange = 225, yellow = 265, green = 285, gray = 305 },
         reagents = {
             { itemId = 4603, name = "Raw Spotted Yellowtail", count = 1 },
         },
@@ -1297,7 +1770,7 @@ local recipes = {
         name = "Cooked Glossy Mightfish",
         itemId = 13927,
         skillRequired = 225,
-        skillRange = { orange = 225, yellow = 250, green = 262, gray = 275 },
+        skillRange = { orange = 225, yellow = 265, green = 285, gray = 305 },
         reagents = {
             { itemId = 13754, name = "Raw Glossy Mightfish", count = 1 },
             { itemId = 3713, name = "Soothing Spices", count = 1 },
@@ -1315,7 +1788,7 @@ local recipes = {
         name = "Filet of Redgill",
         itemId = 13930,
         skillRequired = 225,
-        skillRange = { orange = 225, yellow = 250, green = 262, gray = 275 },
+        skillRange = { orange = 225, yellow = 265, green = 285, gray = 305 },
         reagents = {
             { itemId = 13758, name = "Raw Redgill", count = 1 },
         },
@@ -1332,7 +1805,7 @@ local recipes = {
         name = "Undermine Clam Chowder",
         itemId = 16766,
         skillRequired = 225,
-        skillRange = { orange = 225, yellow = 250, green = 262, gray = 275 },
+        skillRange = { orange = 225, yellow = 265, green = 285, gray = 305 },
         reagents = {
             { itemId = 7974, name = "Zesty Clam Meat", count = 2 },
             { itemId = 2692, name = "Hot Spices", count = 1 },
@@ -1351,7 +1824,7 @@ local recipes = {
         name = "Tender Wolf Steak",
         itemId = 18045,
         skillRequired = 225,
-        skillRange = { orange = 225, yellow = 250, green = 262, gray = 275 },
+        skillRange = { orange = 225, yellow = 265, green = 285, gray = 305 },
         reagents = {
             { itemId = 12208, name = "Tender Wolf Meat", count = 1 },
             { itemId = 3713, name = "Soothing Spices", count = 1 },
@@ -1369,7 +1842,7 @@ local recipes = {
         name = "Grilled Squid",
         itemId = 13928,
         skillRequired = 240,
-        skillRange = { orange = 240, yellow = 265, green = 277, gray = 290 },
+        skillRange = { orange = 240, yellow = 280, green = 300, gray = 320 },
         reagents = {
             { itemId = 13755, name = "Winter Squid", count = 1 },
             { itemId = 3713, name = "Soothing Spices", count = 1 },
@@ -1387,7 +1860,7 @@ local recipes = {
         name = "Hot Smoked Bass",
         itemId = 13929,
         skillRequired = 240,
-        skillRange = { orange = 240, yellow = 265, green = 277, gray = 290 },
+        skillRange = { orange = 240, yellow = 280, green = 300, gray = 320 },
         reagents = {
             { itemId = 13756, name = "Raw Summer Bass", count = 1 },
             { itemId = 2692, name = "Hot Spices", count = 2 },
@@ -1399,13 +1872,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Nightfin Soup (255)
+    -- Nightfin Soup (250)
     {
         id = 18243,
         name = "Nightfin Soup",
         itemId = 13931,
-        skillRequired = 255,
-        skillRange = { orange = 255, yellow = 275, green = 285, gray = 295 },
+        skillRequired = 250,
+        skillRange = { orange = 250, yellow = 290, green = 310, gray = 330 },
         reagents = {
             { itemId = 13759, name = "Raw Nightfin Snapper", count = 1 },
             { itemId = 159, name = "Refreshing Spring Water", count = 1 },
@@ -1417,13 +1890,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Poached Sunscale Salmon (255)
+    -- Poached Sunscale Salmon (250)
     {
         id = 18244,
         name = "Poached Sunscale Salmon",
         itemId = 13932,
-        skillRequired = 255,
-        skillRange = { orange = 255, yellow = 275, green = 285, gray = 295 },
+        skillRequired = 250,
+        skillRange = { orange = 250, yellow = 290, green = 310, gray = 330 },
         reagents = {
             { itemId = 13760, name = "Raw Sunscale Salmon", count = 1 },
         },
@@ -1434,47 +1907,13 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Charred Bear Kabobs (255)
-    {
-        id = 46684,
-        name = "Charred Bear Kabobs",
-        itemId = 35563,
-        skillRequired = 255,
-        skillRange = { orange = 255, yellow = 275, green = 285, gray = 295 },
-        reagents = {
-            { itemId = 35562, name = "Bear Flank", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35564,
-            cost = 18000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Juicy Bear Burger (255)
-    {
-        id = 46688,
-        name = "Juicy Bear Burger",
-        itemId = 35565,
-        skillRequired = 255,
-        skillRange = { orange = 255, yellow = 275, green = 285, gray = 295 },
-        reagents = {
-            { itemId = 35562, name = "Bear Flank", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 35566,
-            cost = 18000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Lobster Stew (275)
     {
         id = 18245,
         name = "Lobster Stew",
         itemId = 13933,
         skillRequired = 275,
-        skillRange = { orange = 275, yellow = 300, green = 312, gray = 325 },
+        skillRange = { orange = 275, yellow = 315, green = 335, gray = 355 },
         reagents = {
             { itemId = 13888, name = "Darkclaw Lobster", count = 1 },
             { itemId = 159, name = "Refreshing Spring Water", count = 1 },
@@ -1492,7 +1931,7 @@ local recipes = {
         name = "Mightfish Steak",
         itemId = 13934,
         skillRequired = 275,
-        skillRange = { orange = 275, yellow = 300, green = 312, gray = 325 },
+        skillRange = { orange = 275, yellow = 315, green = 335, gray = 355 },
         reagents = {
             { itemId = 13893, name = "Large Raw Mightfish", count = 1 },
             { itemId = 2692, name = "Hot Spices", count = 1 },
@@ -1511,7 +1950,7 @@ local recipes = {
         name = "Baked Salmon",
         itemId = 13935,
         skillRequired = 275,
-        skillRange = { orange = 275, yellow = 300, green = 312, gray = 325 },
+        skillRange = { orange = 275, yellow = 315, green = 335, gray = 355 },
         reagents = {
             { itemId = 13889, name = "Raw Whitescale Salmon", count = 1 },
             { itemId = 3713, name = "Soothing Spices", count = 1 },
@@ -1529,7 +1968,7 @@ local recipes = {
         name = "Runn Tum Tuber Surprise",
         itemId = 18254,
         skillRequired = 275,
-        skillRange = { orange = 275, yellow = 300, green = 312, gray = 325 },
+        skillRange = { orange = 275, yellow = 315, green = 335, gray = 355 },
         reagents = {
             { itemId = 18255, name = "Runn Tum Tuber", count = 1 },
             { itemId = 3713, name = "Soothing Spices", count = 1 },
@@ -1546,7 +1985,7 @@ local recipes = {
         name = "Smoked Desert Dumplings",
         itemId = 20452,
         skillRequired = 285,
-        skillRange = { orange = 285, yellow = 310, green = 322, gray = 335 },
+        skillRange = { orange = 285, yellow = 325, green = 345, gray = 365 },
         reagents = {
             { itemId = 20424, name = "Sandworm Meat", count = 1 },
             { itemId = 3713, name = "Soothing Spices", count = 1 },
@@ -1563,7 +2002,7 @@ local recipes = {
         name = "Dirge's Kickin' Chimaerok Chops",
         itemId = 21023,
         skillRequired = 300,
-        skillRange = { orange = 300, yellow = 325, green = 337, gray = 350 },
+        skillRange = { orange = 300, yellow = 325, green = 345, gray = 365 },
         reagents = {
             { itemId = 2692, name = "Hot Spices", count = 1 },
             { itemId = 9061, name = "Goblin Rocket Fuel", count = 1 },
@@ -1576,451 +2015,12 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Buzzard Bites (300)
-    {
-        id = 33279,
-        name = "Buzzard Bites",
-        itemId = 27651,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 27671, name = "Buzzard Meat", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 27684,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Ravager Dog (300)
-    {
-        id = 33284,
-        name = "Ravager Dog",
-        itemId = 27655,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 27674, name = "Ravager Flesh", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27688,
-            cost = 20000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Blackened Trout (300)
-    {
-        id = 33290,
-        name = "Blackened Trout",
-        itemId = 27661,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 27422, name = "Barbed Gill Trout", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27694,
-            cost = 20000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Feltail Delight (300)
-    {
-        id = 33291,
-        name = "Feltail Delight",
-        itemId = 27662,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 27425, name = "Spotted Feltail", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27695,
-            cost = 20000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Clam Bar (300)
-    {
-        id = 36210,
-        name = "Clam Bar",
-        itemId = 30155,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 24477, name = "Jaggal Clam Meat", count = 2 },
-            { itemId = 3713, name = "Soothing Spices", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 30156,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Stormchops (300)
-    {
-        id = 43758,
-        name = "Stormchops",
-        itemId = 33866,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 27678, name = "Clefthoof Meat", count = 1 },
-            { itemId = 13757, name = "Lightning Eel", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 33871,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Broiled Bloodfin (300)
-    {
-        id = 43761,
-        name = "Broiled Bloodfin",
-        itemId = 33867,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 33823, name = "Bloodfin Catfish", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 33869,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Sporeling Snack (310)
-    {
-        id = 33285,
-        name = "Sporeling Snack",
-        itemId = 27656,
-        skillRequired = 310,
-        skillRange = { orange = 310, yellow = 330, green = 340, gray = 350 },
-        reagents = {
-            { itemId = 27676, name = "Strange Spores", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 27689,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Blackened Sporefish (310)
-    {
-        id = 33292,
-        name = "Blackened Sporefish",
-        itemId = 27663,
-        skillRequired = 310,
-        skillRange = { orange = 310, yellow = 330, green = 340, gray = 350 },
-        reagents = {
-            { itemId = 27429, name = "Zangarian Sporefish", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27696,
-            cost = 20000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Blackened Basilisk (315)
-    {
-        id = 33286,
-        name = "Blackened Basilisk",
-        itemId = 27657,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 27677, name = "Chunk o' Basilisk", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27690,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Stewed Trout (315)
-    {
-        id = 42296,
-        name = "Stewed Trout",
-        itemId = 33048,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 27422, name = "Barbed Gill Trout", count = 1 },
-            { itemId = 2593, name = "Flask of Stormwind Tawny", count = 1 },
-            { itemId = 3713, name = "Soothing Spices", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Cooking Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Skullfish Soup (315)
-    {
-        id = 43707,
-        name = "Skullfish Soup",
-        itemId = 33825,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 33824, name = "Crescent-Tail Skullfish", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 33870,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Spicy Hot Talbuk (315)
-    {
-        id = 43765,
-        name = "Spicy Hot Talbuk",
-        itemId = 33872,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 27682, name = "Talbuk Venison", count = 1 },
-            { itemId = 2692, name = "Hot Spices", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 33873,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Grilled Mudfish (320)
-    {
-        id = 33293,
-        name = "Grilled Mudfish",
-        itemId = 27664,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
-        reagents = {
-            { itemId = 27435, name = "Figluster's Mudfish", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27697,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Poached Bluefish (320)
-    {
-        id = 33294,
-        name = "Poached Bluefish",
-        itemId = 27665,
-        skillRequired = 320,
-        skillRange = { orange = 320, yellow = 340, green = 350, gray = 360 },
-        reagents = {
-            { itemId = 27437, name = "Icefin Bluefish", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27698,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Roasted Clefthoof (325)
-    {
-        id = 33287,
-        name = "Roasted Clefthoof",
-        itemId = 27658,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
-        reagents = {
-            { itemId = 27678, name = "Clefthoof Meat", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27691,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Warp Burger (325)
-    {
-        id = 33288,
-        name = "Warp Burger",
-        itemId = 27659,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
-        reagents = {
-            { itemId = 27681, name = "Warped Flesh", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27692,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Talbuk Steak (325)
-    {
-        id = 33289,
-        name = "Talbuk Steak",
-        itemId = 27660,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
-        reagents = {
-            { itemId = 27682, name = "Talbuk Venison", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27693,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Golden Fish Sticks (325)
-    {
-        id = 33295,
-        name = "Golden Fish Sticks",
-        itemId = 27666,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
-        reagents = {
-            { itemId = 27438, name = "Golden Darter", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27699,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Kibler's Bits (325)
-    {
-        id = 43772,
-        name = "Kibler's Bits",
-        itemId = 33874,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 345, green = 355, gray = 365 },
-        reagents = {
-            { itemId = 27671, name = "Buzzard Meat", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 33875,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Hot Apple Cider (325)
-    {
-        id = 45022,
-        name = "Hot Apple Cider",
-        itemId = 34411,
-        skillRequired = 325,
-        skillRange = { orange = 325, yellow = 325, green = 325, gray = 325 },
-        reagents = {
-            { itemId = 34412, name = "Sparkling Apple Cider", count = 1 },
-            { itemId = 17196, name = "Holiday Spirits", count = 1 },
-            { itemId = 17194, name = "Holiday Spices", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 34413,
-            cost = 10000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Mok'Nathal Shortribs (335)
-    {
-        id = 38867,
-        name = "Mok'Nathal Shortribs",
-        itemId = 31672,
-        skillRequired = 335,
-        skillRange = { orange = 335, yellow = 355, green = 365, gray = 375 },
-        reagents = {
-            { itemId = 31670, name = "Raptor Ribs", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 31675,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Crunchy Serpent (335)
-    {
-        id = 38868,
-        name = "Crunchy Serpent",
-        itemId = 31673,
-        skillRequired = 335,
-        skillRange = { orange = 335, yellow = 355, green = 365, gray = 375 },
-        reagents = {
-            { itemId = 31671, name = "Serpent Flesh", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 31674,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Spicy Crawdad (350)
-    {
-        id = 33296,
-        name = "Spicy Crawdad",
-        itemId = 27667,
-        skillRequired = 350,
-        skillRange = { orange = 350, yellow = 370, green = 380, gray = 390 },
-        reagents = {
-            { itemId = 27439, name = "Furious Crawdad", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 27700,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Fisherman's Feast (365)
-    {
-        id = 42302,
-        name = "Fisherman's Feast",
-        itemId = 33052,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 375, green = 380, gray = 385 },
-        reagents = {
-            { itemId = 27515, name = "Huge Spotted Feltail", count = 1 },
-            { itemId = 4539, name = "Goldenbark Apple", count = 5 },
-            { itemId = 3713, name = "Soothing Spices", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Cooking Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Hot Buttered Trout (365)
-    {
-        id = 42305,
-        name = "Hot Buttered Trout",
-        itemId = 33053,
-        skillRequired = 365,
-        skillRange = { orange = 365, yellow = 375, green = 380, gray = 385 },
-        reagents = {
-            { itemId = 27516, name = "Enormous Barbed Gill Trout", count = 1 },
-            { itemId = 3713, name = "Soothing Spices", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Cooking Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
 }
 
 CraftLib:RegisterProfession("cooking", {
     id = C.PROFESSION_ID.COOKING,
     name = "Cooking",
-    expansion = C.EXPANSION.TBC,
+    expansion = C.EXPANSION.VANILLA,
     milestones = { 75, 150, 225, 300, 375 },
     recipes = recipes,
 })
