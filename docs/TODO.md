@@ -7,14 +7,14 @@
 **Progress:**
 - ✅ Cooking - 116/116 (100%) - Complete
 - ✅ Mining - 21/21 (100%) - Complete
-- ✅ Engineering - 240/250 (96%) - 10 recipes don't exist on Wowhead (likely removed)
-- ✅ Enchanting - 30/31 (96%) - 1 recipe (Arcane Dust) missing on Wowhead
-- ✅ First Aid - 15/16 (93%) - Crystal Infused Bandage has no difficulty data on Wowhead
-- ⚠️ Alchemy - 152/186 (81%) - Rate limited, 34 recipes remaining
-- ❌ Blacksmithing - 0/385 - Not started (rate limited)
-- ❌ Jewelcrafting - 0/261 - Not started (rate limited)
-- ❌ Leatherworking - 0/379 - Not started (rate limited)
-- ❌ Tailoring - 0/329 - Not started (rate limited)
+- ✅ Jewelcrafting - 259/261 (99%) - 2 removed recipes
+- ✅ Alchemy - 182/186 (97%) - 4 removed recipes
+- ✅ Engineering - 240/250 (96%) - 10 removed recipes
+- ✅ Enchanting - 30/31 (96%) - 1 removed recipe (Arcane Dust)
+- ✅ Tailoring - 314/329 (95%) - 15 removed recipes
+- ✅ Leatherworking - 360/379 (94%) - some removed recipes
+- ✅ First Aid - 15/16 (93%) - 1 removed recipe
+- ❌ **Blacksmithing - 0/385 - REMAINING**
 
 ### Remaining Steps
 
