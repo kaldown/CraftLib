@@ -1,8 +1,8 @@
-## Interface: 20504
+## Interface: 20505, 20504, 20503, 20502, 20501
 ## Title: CraftLib
 ## Notes: Comprehensive crafting recipe database for WoW addons
 ## Author: kaldown
-## Version: 0.2.2
+## Version: 0.2.3
 ## IconTexture: Interface\AddOns\CraftLib\icon
 ## SavedVariables: CraftLibDB
 ## X-Curse-Project-ID: 1438834

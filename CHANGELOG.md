@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.3] - 2026-01-24
+
+### Added
+
+- Automated releases via GitHub Actions (CurseForge, Wago.io, GitHub Releases)
+
 ## [0.2.2] - 2026-01-24
 
 ### Fixed
