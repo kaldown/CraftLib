@@ -5,16 +5,16 @@
 **Issue:** Orange (skill required) values were calculated using formula `2 * yellow - gray`, which is incorrect for some recipes.
 
 **Progress:**
-- ✅ First Aid - 15/16 recipes verified (Crystal Infused Bandage failed)
-- ✅ Cooking - 116/116 recipes verified
-- ⚠️ Engineering - 20/248 recipes verified (rate limited)
-- ❌ Alchemy - sources extracted, difficulty not fetched
-- ❌ Blacksmithing - sources extracted, difficulty not fetched
-- ❌ Enchanting - sources extracted, difficulty not fetched
-- ❌ Jewelcrafting - sources extracted, difficulty not fetched
-- ❌ Leatherworking - sources extracted, difficulty not fetched
-- ❌ Mining - sources extracted, difficulty not fetched
-- ❌ Tailoring - sources extracted, difficulty not fetched
+- ✅ Cooking - 116/116 (100%) - Complete
+- ✅ Mining - 21/21 (100%) - Complete
+- ✅ Engineering - 240/250 (96%) - 10 recipes don't exist on Wowhead (likely removed)
+- ✅ Enchanting - 30/31 (96%) - 1 recipe (Arcane Dust) missing on Wowhead
+- ✅ First Aid - 15/16 (93%) - Crystal Infused Bandage has no difficulty data on Wowhead
+- ⚠️ Alchemy - 13/186 (6%) - Rate limited, needs more batches
+- ❌ Blacksmithing - 0/385 - Not started (rate limited)
+- ❌ Jewelcrafting - 0/261 - Not started (rate limited)
+- ❌ Leatherworking - 0/379 - Not started (rate limited)
+- ❌ Tailoring - 0/329 - Not started (rate limited)
 
 ### Remaining Steps
 
