@@ -121,8 +121,8 @@ python scripts/generate_recipes.py --version 2.5.5.65463 --profession FirstAid
 
 - **DB2 Tables:** Spell, SpellName, SpellEffect, SpellReagents, Item, ItemSparse, SkillLine, SkillLineAbility, ItemEffect, Faction
 - **Wowhead:** VENDOR vs DROP verification for recipe items
-- **Fetcher:** [db2-parser](vendor/db2-parser) submodule
+- **Fetcher:** [db2-parser](https://github.com/kaldown/db2-parser) submodule
 
 ## Addons Using CraftLib
 
-- [LazyProf](https://www.curseforge.com/wow/addons/lazyprof) - Profession leveling optimizer
+- [LazyProf](https://github.com/kaldown/LazyProf) - Profession leveling optimizer
