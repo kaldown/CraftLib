@@ -14,7 +14,7 @@
 - ✅ Tailoring - 314/329 (95%) - 15 removed recipes
 - ✅ Leatherworking - 377/379 (99%) - 2 removed recipes
 - ✅ First Aid - 15/16 (93%) - 1 removed recipe
-- ◐ **Blacksmithing - 155/385 (40%) - IN PROGRESS**
+- ◐ **Blacksmithing - 287/385 (75%) - IN PROGRESS** (43 no data, 55 rate limited)
 
 ### Remaining Steps
 
