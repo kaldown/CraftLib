@@ -1,6 +1,7 @@
 # CraftLib
 
 [![CurseForge](https://img.shields.io/badge/CurseForge-CraftLib-orange)](https://www.curseforge.com/wow/addons/craftlib)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Comprehensive crafting recipe database and API for World of Warcraft addon developers.
 
@@ -126,3 +127,7 @@ python scripts/generate_recipes.py --version 2.5.5.65463 --profession FirstAid
 ## Addons Using CraftLib
 
 - [LazyProf](https://github.com/kaldown/LazyProf) - Profession leveling optimizer
+
+## License
+
+MIT - See [LICENSE](LICENSE) for details.
