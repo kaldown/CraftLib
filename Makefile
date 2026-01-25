@@ -1,12 +1,8 @@
-.PHONY: release clean fetch-data generate update-data extract-sources verify-sources
+.PHONY: clean fetch-data generate update-data extract-sources verify-sources
 
 PYTHON := python3
 EXPANSION ?= 2
 DB2_DIR := vendor/db2-parser
-
-# Build release zip
-release:
-	@./scripts/build.sh
 
 # Remove build artifacts
 clean:

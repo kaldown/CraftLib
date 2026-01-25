@@ -8,6 +8,7 @@ ignore:
   - scripts
   - vendor
   - Makefile
+  - Data/Sources
   - README.md
   - CONTRIBUTING.md
   - CURSEFORGE.md
