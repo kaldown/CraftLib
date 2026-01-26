@@ -167,23 +167,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Crystal Infused Bandage (240)
-    {
-        id = 30021,
-        name = "Crystal Infused Bandage",
-        itemId = 23684,
-        skillRequired = 240,
-        skillRange = { orange = 240, yellow = 300, green = 330, gray = 360 },
-        reagents = {
-            { itemId = 23567, name = "zzOLD[PH] Silithus PvP Dust [DEP]", count = 1 },
-            { itemId = 14047, name = "Runecloth", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 23689,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Runecloth Bandage (260)
     {
         id = 18629,

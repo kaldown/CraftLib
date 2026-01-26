@@ -419,23 +419,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Arcane Dust (315)
-    {
-        id = 28021,
-        name = "Arcane Dust",
-        itemId = 22445,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 12363, name = "Arcane Crystal", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 22564,
-            cost = 50000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
     -- Prismatic Sphere (325)
     {
         id = 28027,

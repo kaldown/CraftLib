@@ -965,24 +965,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Mobile Alarm (165)
-    {
-        id = 12900,
-        name = "Mobile Alarm",
-        itemId = 10719,
-        skillRequired = 165,
-        skillRange = { orange = 165, yellow = 205, green = 225, gray = 245 },
-        reagents = {
-            { itemId = 10559, name = "Mithril Tube", count = 1 },
-            { itemId = 10560, name = "Unstable Trigger", count = 1 },
-            { itemId = 3860, name = "Mithril Bar", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Gyrochronatom (170)
     {
         id = 3961,
@@ -993,24 +975,6 @@ local recipes = {
         reagents = {
             { itemId = 3575, name = "Iron Bar", count = 1 },
             { itemId = 10558, name = "Gold Power Core", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Explosive Arrow (170)
-    {
-        id = 12719,
-        name = "Explosive Arrow",
-        itemId = 10579,
-        skillRequired = 170,
-        skillRange = { orange = 170, yellow = 210, green = 230, gray = 250 },
-        reagents = {
-            { itemId = 3030, name = "Razor Arrow", count = 100 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 2 },
-            { itemId = 3860, name = "Mithril Bar", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
@@ -1743,25 +1707,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Goblin "Boom" Box (215)
-    {
-        id = 12720,
-        name = "Goblin \"Boom\" Box",
-        itemId = 10580,
-        skillRequired = 215,
-        skillRange = { orange = 215, yellow = 235, green = 245, gray = 255 },
-        reagents = {
-            { itemId = 10561, name = "Mithril Casing", count = 1 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 2 },
-            { itemId = 10558, name = "Gold Power Core", count = 1 },
-            { itemId = 3860, name = "Mithril Bar", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Gnomish Harm Prevention Belt (215)
     {
         id = 12903,
@@ -1817,44 +1762,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 10604,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Goblin Radio (220)
-    {
-        id = 12722,
-        name = "Goblin Radio",
-        itemId = 10585,
-        skillRequired = 220,
-        skillRange = { orange = 220, yellow = 240, green = 250, gray = 260 },
-        reagents = {
-            { itemId = 10561, name = "Mithril Casing", count = 1 },
-            { itemId = 3860, name = "Mithril Bar", count = 2 },
-            { itemId = 4389, name = "Gyrochronatom", count = 1 },
-            { itemId = 10560, name = "Unstable Trigger", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Gnomish Ham Radio (220)
-    {
-        id = 12904,
-        name = "Gnomish Ham Radio",
-        itemId = 10723,
-        skillRequired = 220,
-        skillRange = { orange = 220, yellow = 240, green = 250, gray = 260 },
-        reagents = {
-            { itemId = 10561, name = "Mithril Casing", count = 1 },
-            { itemId = 3860, name = "Mithril Bar", count = 2 },
-            { itemId = 4389, name = "Gyrochronatom", count = 1 },
-            { itemId = 10560, name = "Unstable Trigger", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3232,25 +3139,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Critter Enlarger (305)
-    {
-        id = 30549,
-        name = "Critter Enlarger",
-        itemId = 23820,
-        skillRequired = 305,
-        skillRange = { orange = 305, yellow = 325, green = 335, gray = 345 },
-        reagents = {
-            { itemId = 23784, name = "Adamantite Frame", count = 1 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 2 },
-            { itemId = 10558, name = "Gold Power Core", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 23882,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
     -- Fel Iron Shells (310)
     {
         id = 30346,
@@ -3261,80 +3149,6 @@ local recipes = {
         reagents = {
             { itemId = 23445, name = "Fel Iron Bar", count = 2 },
             { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Red Smoke Flare (315)
-    {
-        id = 30342,
-        name = "Red Smoke Flare",
-        itemId = 23769,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
-            { itemId = 21877, name = "Netherweave Cloth", count = 1 },
-            { itemId = 2604, name = "Red Dye", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 23812,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Blue Smoke Flare (315)
-    {
-        id = 30343,
-        name = "Blue Smoke Flare",
-        itemId = 23770,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 335, green = 345, gray = 355 },
-        reagents = {
-            { itemId = 23781, name = "Elemental Blasting Powder", count = 1 },
-            { itemId = 21877, name = "Netherweave Cloth", count = 1 },
-            { itemId = 6260, name = "Blue Dye", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 23813,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Goblin Tonk Controller (315)
-    {
-        id = 30561,
-        name = "Goblin Tonk Controller",
-        itemId = 23831,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 325, green = 330, gray = 335 },
-        reagents = {
-            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
-            { itemId = 10558, name = "Gold Power Core", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Gnomish Tonk Controller (315)
-    {
-        id = 30573,
-        name = "Gnomish Tonk Controller",
-        itemId = 23832,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 325, green = 330, gray = 335 },
-        reagents = {
-            { itemId = 23782, name = "Fel Iron Casing", count = 1 },
-            { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
-            { itemId = 10558, name = "Gold Power Core", count = 1 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,

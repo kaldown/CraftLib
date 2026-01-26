@@ -424,25 +424,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Ironforge Chain (70)
-    {
-        id = 8366,
-        name = "Ironforge Chain",
-        itemId = 6730,
-        skillRequired = 70,
-        skillRange = { orange = 70, yellow = 110, green = 130, gray = 150 },
-        reagents = {
-            { itemId = 2840, name = "Copper Bar", count = 12 },
-            { itemId = 774, name = "Malachite", count = 2 },
-            { itemId = 3470, name = "Rough Grinding Stone", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 6734,
-            cost = 250,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Coarse Grinding Stone (75)
     {
         id = 3326,
@@ -705,23 +686,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Rough Bronze Bracers (115)
-    {
-        id = 2671,
-        name = "Rough Bronze Bracers",
-        itemId = 2867,
-        skillRequired = 115,
-        skillRange = { orange = 115, yellow = 145, green = 160, gray = 175 },
-        reagents = {
-            { itemId = 2841, name = "Bronze Bar", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 5577,
-            cost = 1200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1015,25 +979,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 5543,
-            cost = 1800,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Ironforge Gauntlets (140)
-    {
-        id = 8368,
-        name = "Ironforge Gauntlets",
-        itemId = 6733,
-        skillRequired = 140,
-        skillRange = { orange = 140, yellow = 170, green = 185, gray = 200 },
-        reagents = {
-            { itemId = 2841, name = "Bronze Bar", count = 8 },
-            { itemId = 1210, name = "Shadowgem", count = 3 },
-            { itemId = 3478, name = "Coarse Grinding Stone", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 6736,
             cost = 1800,
         },
         expansion = C.EXPANSION.VANILLA,
@@ -2090,25 +2035,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Mithril Scale Gloves (220)
-    {
-        id = 9942,
-        name = "Mithril Scale Gloves",
-        itemId = 7925,
-        skillRequired = 220,
-        skillRange = { orange = 220, yellow = 240, green = 250, gray = 260 },
-        reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 8 },
-            { itemId = 4234, name = "Heavy Leather", count = 6 },
-            { itemId = 4338, name = "Mageweave Cloth", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 7977,
-            cost = 8000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Ornate Mithril Pants (220)
     {
         id = 9945,
@@ -2720,25 +2646,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Thorium Greatsword (260)
-    {
-        id = 16960,
-        name = "Thorium Greatsword",
-        itemId = 12764,
-        skillRequired = 260,
-        skillRange = { orange = 260, yellow = 285, green = 297, gray = 310 },
-        reagents = {
-            { itemId = 12359, name = "Thorium Bar", count = 16 },
-            { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
-            { itemId = 8170, name = "Rugged Leather", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 12816,
-            cost = 12000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Earthforged Leggings (260)
     {
         id = 36122,
@@ -2950,49 +2857,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 12691,
             cost = 16000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Bleakwood Hew (270)
-    {
-        id = 16965,
-        name = "Bleakwood Hew",
-        itemId = 12769,
-        skillRequired = 270,
-        skillRange = { orange = 270, yellow = 295, green = 307, gray = 320 },
-        reagents = {
-            { itemId = 12359, name = "Thorium Bar", count = 30 },
-            { itemId = 12803, name = "Living Essence", count = 6 },
-            { itemId = 8153, name = "Wildvine", count = 6 },
-            { itemId = 12799, name = "Large Opal", count = 6 },
-            { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
-            { itemId = 8170, name = "Rugged Leather", count = 8 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 12817,
-            cost = 16000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Inlaid Thorium Hammer (270)
-    {
-        id = 16967,
-        name = "Inlaid Thorium Hammer",
-        itemId = 12772,
-        skillRequired = 270,
-        skillRange = { orange = 270, yellow = 295, green = 307, gray = 320 },
-        reagents = {
-            { itemId = 12359, name = "Thorium Bar", count = 30 },
-            { itemId = 3577, name = "Gold Bar", count = 4 },
-            { itemId = 6037, name = "Truesilver Bar", count = 2 },
-            { itemId = 12361, name = "Blue Sapphire", count = 2 },
-            { itemId = 8170, name = "Rugged Leather", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 12818,
-            cost = 12000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3278,26 +3142,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 12696,
-            cost = 20000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Rune Edge (285)
-    {
-        id = 16980,
-        name = "Rune Edge",
-        itemId = 12779,
-        skillRequired = 285,
-        skillRange = { orange = 285, yellow = 310, green = 322, gray = 335 },
-        reagents = {
-            { itemId = 12359, name = "Thorium Bar", count = 30 },
-            { itemId = 12799, name = "Large Opal", count = 2 },
-            { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
-            { itemId = 8170, name = "Rugged Leather", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 12826,
             cost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
@@ -3929,48 +3773,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 12728,
             cost = 80000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Blood Talon (300)
-    {
-        id = 16986,
-        name = "Blood Talon",
-        itemId = 12795,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 325, green = 337, gray = 350 },
-        reagents = {
-            { itemId = 12655, name = "Enchanted Thorium Bar", count = 10 },
-            { itemId = 12360, name = "Arcanite Bar", count = 10 },
-            { itemId = 12662, name = "Demonic Rune", count = 8 },
-            { itemId = 7910, name = "Star Ruby", count = 10 },
-            { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 12831,
-            cost = 40000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Darkspear (300)
-    {
-        id = 16987,
-        name = "Darkspear",
-        itemId = 12802,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 325, green = 337, gray = 350 },
-        reagents = {
-            { itemId = 12655, name = "Enchanted Thorium Bar", count = 20 },
-            { itemId = 12804, name = "Powerful Mojo", count = 20 },
-            { itemId = 12364, name = "Huge Emerald", count = 2 },
-            { itemId = 12800, name = "Azerothian Diamond", count = 2 },
-            { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 12832,
-            cost = 40000,
         },
         expansion = C.EXPANSION.VANILLA,
     },

@@ -2192,24 +2192,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Nightscape Cloak (230)
-    {
-        id = 10550,
-        name = "Nightscape Cloak",
-        itemId = 8195,
-        skillRequired = 230,
-        skillRange = { orange = 230, yellow = 250, green = 260, gray = 270 },
-        reagents = {
-            { itemId = 4304, name = "Thick Leather", count = 12 },
-            { itemId = 4291, name = "Silken Thread", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 8388,
-            cost = 5000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Turtle Scale Helm (230)
     {
         id = 10552,
@@ -3743,26 +3725,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 15779,
             cost = 60000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Onyxia Scale Breastplate (300)
-    {
-        id = 19106,
-        name = "Onyxia Scale Breastplate",
-        itemId = 15141,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 40 },
-            { itemId = 15410, name = "Scale of Onyxia", count = 12 },
-            { itemId = 15416, name = "Black Dragonscale", count = 60 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 15780,
-            cost = 120000,
         },
         expansion = C.EXPANSION.VANILLA,
     },

@@ -569,25 +569,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Green Woolen Robe (80)
-    {
-        id = 7636,
-        name = "Green Woolen Robe",
-        itemId = 6243,
-        skillRequired = 80,
-        skillRange = { orange = 80, yellow = 115, green = 132, gray = 150 },
-        reagents = {
-            { itemId = 2997, name = "Bolt of Woolen Cloth", count = 3 },
-            { itemId = 2321, name = "Fine Thread", count = 2 },
-            { itemId = 2605, name = "Green Dye", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 6273,
-            cost = 750,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Green Woolen Vest (85)
     {
         id = 2399,
@@ -1048,26 +1029,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Boots of Darkness (130)
-    {
-        id = 8778,
-        name = "Boots of Darkness",
-        itemId = 7027,
-        skillRequired = 130,
-        skillRange = { orange = 130, yellow = 160, green = 175, gray = 190 },
-        reagents = {
-            { itemId = 4305, name = "Bolt of Silk Cloth", count = 3 },
-            { itemId = 2319, name = "Medium Leather", count = 2 },
-            { itemId = 6048, name = "Shadow Protection Potion", count = 1 },
-            { itemId = 2321, name = "Fine Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 7093,
-            cost = 800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1919,44 +1880,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Stormcloth Pants (205)
-    {
-        id = 12062,
-        name = "Stormcloth Pants",
-        itemId = 10010,
-        skillRequired = 205,
-        skillRange = { orange = 205, yellow = 235, green = 250, gray = 265 },
-        reagents = {
-            { itemId = 4339, name = "Bolt of Mageweave", count = 4 },
-            { itemId = 7079, name = "Globe of Water", count = 2 },
-            { itemId = 8343, name = "Heavy Silken Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 10303,
-            cost = 5000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Stormcloth Gloves (205)
-    {
-        id = 12063,
-        name = "Stormcloth Gloves",
-        itemId = 10011,
-        skillRequired = 205,
-        skillRange = { orange = 205, yellow = 235, green = 250, gray = 265 },
-        reagents = {
-            { itemId = 4339, name = "Bolt of Mageweave", count = 3 },
-            { itemId = 7079, name = "Globe of Water", count = 2 },
-            { itemId = 8343, name = "Heavy Silken Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 10304,
-            cost = 5000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Crimson Silk Gloves (210)
     {
         id = 8804,
@@ -2010,25 +1933,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Stormcloth Vest (210)
-    {
-        id = 12068,
-        name = "Stormcloth Vest",
-        itemId = 10020,
-        skillRequired = 210,
-        skillRange = { orange = 210, yellow = 240, green = 255, gray = 270 },
-        reagents = {
-            { itemId = 4339, name = "Bolt of Mageweave", count = 5 },
-            { itemId = 7079, name = "Globe of Water", count = 3 },
-            { itemId = 8343, name = "Heavy Silken Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 10313,
-            cost = 6000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2271,25 +2175,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Stormcloth Headband (225)
-    {
-        id = 12083,
-        name = "Stormcloth Headband",
-        itemId = 10032,
-        skillRequired = 225,
-        skillRange = { orange = 225, yellow = 255, green = 270, gray = 285 },
-        reagents = {
-            { itemId = 4339, name = "Bolt of Mageweave", count = 4 },
-            { itemId = 7079, name = "Globe of Water", count = 4 },
-            { itemId = 8343, name = "Heavy Silken Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 10319,
-            cost = 7000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Enchanted Mageweave Pouch (225)
     {
         id = 27658,
@@ -2376,25 +2261,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 10314,
             cost = 4000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Stormcloth Shoulders (230)
-    {
-        id = 12087,
-        name = "Stormcloth Shoulders",
-        itemId = 10038,
-        skillRequired = 230,
-        skillRange = { orange = 230, yellow = 260, green = 275, gray = 290 },
-        reagents = {
-            { itemId = 4339, name = "Bolt of Mageweave", count = 5 },
-            { itemId = 7079, name = "Globe of Water", count = 6 },
-            { itemId = 8343, name = "Heavy Silken Thread", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 10322,
-            cost = 7500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2488,26 +2354,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 10317,
             cost = 4000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Stormcloth Boots (235)
-    {
-        id = 12090,
-        name = "Stormcloth Boots",
-        itemId = 10039,
-        skillRequired = 235,
-        skillRange = { orange = 235, yellow = 265, green = 280, gray = 295 },
-        reagents = {
-            { itemId = 4339, name = "Bolt of Mageweave", count = 6 },
-            { itemId = 7079, name = "Globe of Water", count = 6 },
-            { itemId = 8343, name = "Heavy Silken Thread", count = 3 },
-            { itemId = 4304, name = "Thick Leather", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 10324,
-            cost = 8000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4672,26 +4518,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.TBC,
     },
-    -- Heavy Netherweave Net (315)
-    {
-        id = 31461,
-        name = "Heavy Netherweave Net",
-        itemId = 24269,
-        skillRequired = 315,
-        skillRange = { orange = 315, yellow = 325, green = 330, gray = 335 },
-        reagents = {
-            { itemId = 21877, name = "Netherweave Cloth", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.REPUTATION,
-            factionId = 942,
-            factionName = "Cenarion Expedition",
-            level = "Friendly",
-            itemId = 24315,
-            cost = 30000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
     -- Netherweave Gloves (320)
     {
         id = 26770,
@@ -5242,130 +5068,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 21902,
             cost = 80000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Netherflame Robe (355)
-    {
-        id = 36665,
-        name = "Netherflame Robe",
-        itemId = 30459,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 365, green = 370, gray = 375 },
-        reagents = {
-            { itemId = 21840, name = "Bolt of Netherweave", count = 10 },
-            { itemId = 21884, name = "Primal Fire", count = 5 },
-            { itemId = 22456, name = "Primal Shadow", count = 6 },
-            { itemId = 21881, name = "Netherweb Spider Silk", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 30469,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Netherflame Belt (355)
-    {
-        id = 36667,
-        name = "Netherflame Belt",
-        itemId = 30460,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 365, green = 370, gray = 375 },
-        reagents = {
-            { itemId = 21840, name = "Bolt of Netherweave", count = 6 },
-            { itemId = 21887, name = "Knothide Leather", count = 4 },
-            { itemId = 21884, name = "Primal Fire", count = 3 },
-            { itemId = 22456, name = "Primal Shadow", count = 4 },
-            { itemId = 21881, name = "Netherweb Spider Silk", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 30470,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Netherflame Boots (355)
-    {
-        id = 36668,
-        name = "Netherflame Boots",
-        itemId = 30461,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 365, green = 370, gray = 375 },
-        reagents = {
-            { itemId = 21840, name = "Bolt of Netherweave", count = 6 },
-            { itemId = 21887, name = "Knothide Leather", count = 4 },
-            { itemId = 21884, name = "Primal Fire", count = 2 },
-            { itemId = 22456, name = "Primal Shadow", count = 6 },
-            { itemId = 21881, name = "Netherweb Spider Silk", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 30471,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Lifeblood Leggings (355)
-    {
-        id = 36669,
-        name = "Lifeblood Leggings",
-        itemId = 30465,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 365, green = 370, gray = 375 },
-        reagents = {
-            { itemId = 21840, name = "Bolt of Netherweave", count = 10 },
-            { itemId = 21885, name = "Primal Water", count = 5 },
-            { itemId = 21886, name = "Primal Life", count = 5 },
-            { itemId = 21881, name = "Netherweb Spider Silk", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 30472,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Lifeblood Belt (355)
-    {
-        id = 36670,
-        name = "Lifeblood Belt",
-        itemId = 30463,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 365, green = 370, gray = 375 },
-        reagents = {
-            { itemId = 21840, name = "Bolt of Netherweave", count = 6 },
-            { itemId = 21887, name = "Knothide Leather", count = 4 },
-            { itemId = 21885, name = "Primal Water", count = 3 },
-            { itemId = 21886, name = "Primal Life", count = 3 },
-            { itemId = 21881, name = "Netherweb Spider Silk", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 30473,
-            cost = 60000,
-        },
-        expansion = C.EXPANSION.TBC,
-    },
-    -- Lifeblood Bracers (355)
-    {
-        id = 36672,
-        name = "Lifeblood Bracers",
-        itemId = 30464,
-        skillRequired = 355,
-        skillRange = { orange = 355, yellow = 365, green = 370, gray = 375 },
-        reagents = {
-            { itemId = 21840, name = "Bolt of Netherweave", count = 4 },
-            { itemId = 21887, name = "Knothide Leather", count = 4 },
-            { itemId = 21885, name = "Primal Water", count = 2 },
-            { itemId = 21886, name = "Primal Life", count = 2 },
-            { itemId = 21881, name = "Netherweb Spider Silk", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 30474,
-            cost = 60000,
         },
         expansion = C.EXPANSION.TBC,
     },

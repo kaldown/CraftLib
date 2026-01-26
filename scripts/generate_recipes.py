@@ -252,9 +252,15 @@ def extract_recipes(
     skill_line_id: int,
     overrides: dict = None,
     verified_sources: dict = None,
-) -> list[dict]:
-    """Extract recipes for a profession from SkillLineAbility."""
+) -> tuple[list[dict], list[dict]]:
+    """Extract recipes for a profession from SkillLineAbility.
+
+    Returns:
+        Tuple of (recipes, skipped_recipes) where skipped_recipes are those
+        without verified difficulty data (likely removed/never-implemented).
+    """
     recipes = []
+    skipped_recipes = []
 
     for row in data["SkillLineAbility"]:
         if row.get("SkillLine") != str(skill_line_id):
@@ -268,6 +274,15 @@ def extract_recipes(
         item_id = indexes["crafted_items"].get(spell_id)
         if not item_id:
             continue  # Not a crafting recipe
+
+        # Skip recipes without verified difficulty data (likely removed/never-implemented)
+        # Only applies when we have verified sources for this profession
+        if verified_sources:
+            verified_recipe = verified_sources.get(spell_id)
+            if not verified_recipe or "difficulty" not in verified_recipe:
+                spell_name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
+                skipped_recipes.append({"id": spell_id, "name": spell_name})
+                continue
 
         # Build recipe object
         trivial_low = int(row.get("TrivialSkillLineRankLow", "0"))
@@ -369,7 +384,7 @@ def extract_recipes(
     # Sort by skill required
     recipes.sort(key=lambda r: (r["skillRequired"], r["id"]))
 
-    return recipes
+    return recipes, skipped_recipes
 
 
 def generate_lua(recipes: list[dict], profession: dict, expansion: int) -> str:
@@ -525,10 +540,15 @@ def main() -> int:
             print(f"Loaded {len(verified_sources)} verified sources for {profession['name']}", file=sys.stderr)
 
         try:
-            recipes = extract_recipes(data, indexes, skill_line_id, overrides, verified_sources)
+            recipes, skipped = extract_recipes(data, indexes, skill_line_id, overrides, verified_sources)
         except ValueError as e:
             print(f"ERROR: {e}", file=sys.stderr)
             return 2
+
+        if skipped:
+            print(f"Skipped {len(skipped)} recipes without verified difficulty for {profession['name']}:", file=sys.stderr)
+            for r in skipped:
+                print(f"  - {r['id']}: {r['name']}", file=sys.stderr)
 
         if not recipes:
             print(f"No recipes found for {profession['name']}", file=sys.stderr)

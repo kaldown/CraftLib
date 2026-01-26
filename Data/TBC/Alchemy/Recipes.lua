@@ -205,25 +205,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Elixir of Tongues (60)
-    {
-        id = 2336,
-        name = "Elixir of Tongues",
-        itemId = 2460,
-        skillRequired = 60,
-        skillRange = { orange = 60, yellow = 100, green = 120, gray = 140 },
-        reagents = {
-            { itemId = 2449, name = "Earthroot", count = 2 },
-            { itemId = 785, name = "Mageroyal", count = 2 },
-            { itemId = 3371, name = "Empty Vial", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 2556,
-            cost = 160,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Rage Potion (60)
     {
         id = 6617,
@@ -385,25 +366,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Cowardly Flight Potion (110)
-    {
-        id = 6619,
-        name = "Cowardly Flight Potion",
-        itemId = 5632,
-        skillRequired = 110,
-        skillRange = { orange = 110, yellow = 150, green = 170, gray = 190 },
-        reagents = {
-            { itemId = 5636, name = "Delicate Feather", count = 1 },
-            { itemId = 3356, name = "Kingsblood", count = 1 },
-            { itemId = 3372, name = "Leaded Vial", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 5641,
-            cost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -588,24 +550,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 5642,
             cost = 1800,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Elixir of Waterwalking (150)
-    {
-        id = 11447,
-        name = "Elixir of Waterwalking",
-        itemId = 8827,
-        skillRequired = 150,
-        skillRange = { orange = 150, yellow = 190, green = 210, gray = 230 },
-        reagents = {
-            { itemId = 6370, name = "Blackmouth Oil", count = 1 },
-            { itemId = 3357, name = "Liferoot", count = 1 },
-            { itemId = 3372, name = "Leaded Vial", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Alchemy Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1463,25 +1407,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 13478,
             cost = 13000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Greater Holy Protection Potion (265)
-    {
-        id = 17579,
-        name = "Greater Holy Protection Potion",
-        itemId = 13460,
-        skillRequired = 265,
-        skillRange = { orange = 265, yellow = 305, green = 325, gray = 345 },
-        reagents = {
-            { itemId = 7069, name = "Elemental Air", count = 1 },
-            { itemId = 13463, name = "Dreamfoil", count = 1 },
-            { itemId = 8925, name = "Crystal Vial", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 13500,
-            cost = 24000,
         },
         expansion = C.EXPANSION.VANILLA,
     },

@@ -545,26 +545,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Silver Rose Pendant (145)
-    {
-        id = 25614,
-        name = "Silver Rose Pendant",
-        itemId = 20956,
-        skillRequired = 145,
-        skillRange = { orange = 145, yellow = 175, green = 190, gray = 205 },
-        reagents = {
-            { itemId = 1206, name = "Moss Agate", count = 1 },
-            { itemId = 1529, name = "Jade", count = 1 },
-            { itemId = 2842, name = "Silver Bar", count = 2 },
-            { itemId = 20817, name = "Bronze Setting", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 20972,
-            cost = 2000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Heavy Golden Necklace of Battle (150)
     {
         id = 25320,
@@ -1182,23 +1162,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Primal Stone Statue (280)
-    {
-        id = 32810,
-        name = "Primal Stone Statue",
-        itemId = 25884,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 300, green = 310, gray = 320 },
-        reagents = {
-            { itemId = 22452, name = "Primal Earth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 25888,
-            cost = 40000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
