@@ -1,5 +1,12 @@
-# Claude Code
+# Agent/AI coding (local only)
 .claude/
+CLAUDE.md
+docs/plans/
+docs/agents/
+**/PROMPT*.md
+**/*-design.md
+**/*-impl.md
+**/*-brainstorm.md
 
 # macOS
 .DS_Store
@@ -12,12 +19,6 @@
 *.swp
 *.swo
 *~
-
-# Agent-specific files (local context only)
-docs/agents/
-
-# Plans are local working documents
-docs/plans/
 
 # Verified sources (local development data, not for release)
 Data/Sources/*.json
