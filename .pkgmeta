@@ -17,4 +17,3 @@ ignore:
   - "*.md"
 
 enable-nolib-creation: no
-enable-toc-creation: yes
