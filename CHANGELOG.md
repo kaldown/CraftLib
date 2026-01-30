@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.12] - 2026-01-30
+
+### Fixed
+
+- Engineering difficulty data corrected from Wowhead TBC:
+  - Steam Tonk Controller: yellow 295->275, green 305->280, gray 315->285
+  - Thorium Shells: yellow 305->295, green 315->300, gray 325->305
+- Enchanting "conversion" recipes (Large Prismatic Shard, Small Prismatic Shard, Void Shatter) now require correct skill level (335/375)
+- Fixed orange=0, yellow=0 recipes using gray as skillRequired (prevents conversion recipes appearing at skill 1)
+
 ## [0.2.11] - 2026-01-28
 
 ### Fixed
