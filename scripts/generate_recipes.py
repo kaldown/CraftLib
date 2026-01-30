@@ -334,6 +334,11 @@ def extract_recipes(
 
         if orange > 0:
             skill_required = orange
+        elif yellow == 0:
+            # Special case: orange=0, yellow=0 means recipe is always trivial (gray)
+            # but requires specific skill to LEARN. Use gray as the requirement.
+            # Example: Large Prismatic Shard (orange=0, yellow=0, gray=335)
+            skill_required = gray
         elif yellow <= EARLY_GAME_THRESHOLD:
             # Early-game recipe: available from skill 1
             skill_required = 1

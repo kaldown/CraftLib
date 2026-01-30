@@ -55,24 +55,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- The Mortar: Reloaded (1)
-    {
-        id = 13240,
-        name = "The Mortar: Reloaded",
-        itemId = 10577,
-        skillRequired = 1,
-        skillRange = { orange = 0, yellow = 0, green = 0, gray = 205 },
-        reagents = {
-            { itemId = 10577, name = "Goblin Mortar", count = 1 },
-            { itemId = 3860, name = "Mithril Bar", count = 1 },
-            { itemId = 10505, name = "Solid Blasting Powder", count = 3 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Engineering Trainer",
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Handful of Copper Bolts (30)
     {
         id = 3922,
@@ -1558,6 +1540,24 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
+    -- The Mortar: Reloaded (205)
+    {
+        id = 13240,
+        name = "The Mortar: Reloaded",
+        itemId = 10577,
+        skillRequired = 205,
+        skillRange = { orange = 0, yellow = 0, green = 0, gray = 205 },
+        reagents = {
+            { itemId = 10577, name = "Goblin Mortar", count = 1 },
+            { itemId = 3860, name = "Mithril Bar", count = 1 },
+            { itemId = 10505, name = "Solid Blasting Powder", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Engineering Trainer",
+        },
+        expansion = C.EXPANSION.VANILLA,
+    },
     -- Pet Bombling (205)
     {
         id = 15628,
@@ -2665,7 +2665,7 @@ local recipes = {
         name = "Steam Tonk Controller",
         itemId = 22728,
         skillRequired = 275,
-        skillRange = { orange = 275, yellow = 295, green = 305, gray = 315 },
+        skillRange = { orange = 275, yellow = 275, green = 280, gray = 285 },
         reagents = {
             { itemId = 3860, name = "Mithril Bar", count = 3 },
             { itemId = 10558, name = "Gold Power Core", count = 1 },
@@ -2719,7 +2719,7 @@ local recipes = {
         name = "Thorium Shells",
         itemId = 15997,
         skillRequired = 285,
-        skillRange = { orange = 285, yellow = 305, green = 315, gray = 325 },
+        skillRange = { orange = 285, yellow = 295, green = 300, gray = 305 },
         reagents = {
             { itemId = 12359, name = "Thorium Bar", count = 2 },
             { itemId = 15992, name = "Dense Blasting Powder", count = 1 },
