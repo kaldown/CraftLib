@@ -34,14 +34,15 @@ end
 
 | Key | Profession |
 |-----|------------|
-| `firstAid` | First Aid |
-| `cooking` | Cooking |
 | `alchemy` | Alchemy |
 | `blacksmithing` | Blacksmithing |
+| `cooking` | Cooking |
 | `enchanting` | Enchanting |
 | `engineering` | Engineering |
+| `firstAid` | First Aid |
 | `jewelcrafting` | Jewelcrafting |
 | `leatherworking` | Leatherworking |
+| `mining` | Mining (smelting recipes) |
 | `tailoring` | Tailoring |
 
 ## Data Schema
@@ -68,9 +69,9 @@ end
     itemId = 1251,                -- Crafted item ID
     skillRequired = 1,            -- Minimum skill to learn
     skillRange = {                -- Difficulty thresholds
-        orange = 1,               -- 100% skillup until this level
-        yellow = 30,              -- ~50% skillup until this level
-        green = 45,               -- ~25% skillup until this level
+        orange = 1,               -- 100% skillup below this level
+        yellow = 30,              -- Skillup chance decreasing (see note)
+        green = 45,               -- Skillup chance low (see note)
         gray = 55,                -- 0% skillup at and above
     },
     reagents = {                  -- Array of Reagent objects
@@ -78,12 +79,6 @@ end
     },
     source = { ... },             -- How to obtain recipe (see Source Object below)
     expansion = 1,                -- Which expansion added this
-
-    -- Optional fields
-    yield = 1,                    -- Items produced per craft (default: 1)
-    specialization = "...",       -- Required specialization
-    requiredTool = 12345,         -- Item ID of required tool
-    cooldown = 86400,             -- Cooldown in seconds
 }
 ```
 
@@ -95,12 +90,7 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
 ```lua
 {
     type = "trainer",
-    npcName = "Any Cooking Trainer",  -- Display name (optional for generic trainers)
-    npcId = 1234,                     -- Specific NPC ID (optional)
-    location = "Stormwind City",      -- Zone/area (optional)
-    faction = "Alliance",             -- "Alliance", "Horde", or nil for both
-    cost = 100,                       -- Training cost in copper (optional)
-    note = "Learned automatically",   -- Additional info (optional)
+    npcName = "Any Cooking Trainer",  -- Generic trainer name
 }
 ```
 
@@ -110,20 +100,6 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
     type = "vendor",
     itemId = 6325,                    -- Recipe item ID sold by vendor
     cost = 3400,                      -- Cost in copper
-    vendors = {                       -- Array of vendor info
-        {
-            npcId = 5494,
-            npcName = "Catherine Leland",
-            location = "Stormwind City",
-            faction = "Alliance",
-        },
-        {
-            npcId = 3029,
-            npcName = "Sewa Mistrunner",
-            location = "Thunder Bluff",
-            faction = "Horde",
-        },
-    },
 }
 ```
 
@@ -131,10 +107,7 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
 ```lua
 {
     type = "quest",
-    questId = 90,
-    questName = "Seasoned Wolf Kabobs",
-    location = "Darkshire",
-    faction = "Alliance",             -- nil for both factions
+    itemId = 16112,                   -- Recipe item ID (quest reward)
 }
 ```
 
@@ -142,10 +115,7 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
 ```lua
 {
     type = "drop",
-    npcId = 1234,                     -- Mob that drops it (nil for world drop)
-    npcName = "Mob Name",
-    location = "Zone",
-    dropRate = 5,                     -- Percentage (optional)
+    itemId = 16045,                   -- Recipe item ID (world drop)
 }
 ```
 
@@ -153,12 +123,11 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
 ```lua
 {
     type = "reputation",
-    factionId = 1234,
-    factionName = "Faction Name",
+    factionId = 1234,                 -- Faction ID
+    factionName = "Faction Name",     -- Display name
     level = "Revered",                -- Friendly, Honored, Revered, Exalted
-    npcId = 5678,
-    npcName = "Quartermaster",
-    location = "Zone",
+    itemId = 6325,                    -- Recipe item ID
+    cost = 3400,                      -- Cost in copper
 }
 ```
 
@@ -252,7 +221,17 @@ local function GetCraftableAlternatives(itemId)
 end
 ```
 
-## Version History
+## Difficulty Note
 
-- **0.1.1** - Enhanced source data with NPC IDs, locations, and faction info (Issue #1)
-- **0.1.0** - Initial release with First Aid (TBC)
+The `skillRange` thresholds define color boundaries, not fixed probabilities. The actual skillup formula is continuous:
+
+```
+chance = (gray - currentSkill) / (gray - yellow)
+```
+
+- **Orange** (below yellow): 100% skillup
+- **Yellow** (yellow to green): Chance decreases from 100% to ~50%
+- **Green** (green to gray): Chance decreases from ~50% to 0%
+- **Gray** (at or above gray): 0% skillup
+
+CraftLib provides the raw threshold values. Consumer addons (like LazyProf) implement the probability formula.

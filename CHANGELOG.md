@@ -37,7 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Filtered 46 removed/placeholder recipes from generated Lua files
+- Filtered 45 removed/placeholder recipes from generated Lua files
 - Recipes without Wowhead-verified difficulty are now excluded (never implemented or removed from game)
 - Examples: Crystal Infused Bandage, Stormcloth set, Goblin Radio, Explosive Arrow
 
@@ -136,6 +136,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Moved SCHEMA.md from docs/ to root for public access
 
-[Unreleased]: https://github.com/kaldown/CraftLib/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/kaldown/CraftLib/compare/v0.2.12...HEAD
+[0.2.12]: https://github.com/kaldown/CraftLib/compare/v0.2.11...v0.2.12
+[0.2.11]: https://github.com/kaldown/CraftLib/compare/v0.2.10...v0.2.11
+[0.2.10]: https://github.com/kaldown/CraftLib/compare/v0.2.7...v0.2.10
+[0.2.7]: https://github.com/kaldown/CraftLib/compare/v0.2.6...v0.2.7
+[0.2.6]: https://github.com/kaldown/CraftLib/compare/v0.2.5...v0.2.6
+[0.2.5]: https://github.com/kaldown/CraftLib/compare/v0.2.4...v0.2.5
+[0.2.4]: https://github.com/kaldown/CraftLib/compare/v0.2.3...v0.2.4
+[0.2.3]: https://github.com/kaldown/CraftLib/compare/v0.2.2...v0.2.3
+[0.2.2]: https://github.com/kaldown/CraftLib/compare/v0.2.1...v0.2.2
+[0.2.1]: https://github.com/kaldown/CraftLib/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/kaldown/CraftLib/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/kaldown/CraftLib/releases/tag/v0.1.0

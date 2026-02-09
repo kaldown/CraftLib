@@ -24,9 +24,9 @@ Add CraftLib as a dependency in your `.toc` file:
 ### API Example
 
 ```lua
-local recipes = CraftLib:GetRecipes("Cooking")
-local available = CraftLib:GetAvailableRecipes("Cooking", 225)
-local recipe = CraftLib:GetRecipeBySpellId("Cooking", 33359)
+local recipes = CraftLib:GetRecipes("cooking")
+local available = CraftLib:GetAvailableRecipes("cooking", 225)
+local recipe = CraftLib:GetRecipeBySpellId("cooking", 33359)
 local difficulty = CraftLib:GetRecipeDifficulty(recipe, 300)
 ```
 

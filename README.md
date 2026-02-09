@@ -18,16 +18,16 @@ All 10 professions are complete with Wowhead-verified difficulty data:
 
 | Profession | Recipes | Coverage |
 |------------|---------|----------|
-| Alchemy | 186 | Complete |
-| Blacksmithing | 385 | Complete |
+| Alchemy | 182 | Complete |
+| Blacksmithing | 376 | Complete |
 | Cooking | 116 | Complete |
-| Enchanting | 31 | Complete |
-| Engineering | 250 | Complete |
-| First Aid | 16 | Complete |
-| Jewelcrafting | 261 | Complete |
-| Leatherworking | 379 | Complete |
+| Enchanting | 30 | Complete |
+| Engineering | 240 | Complete |
+| First Aid | 15 | Complete |
+| Jewelcrafting | 259 | Complete |
+| Leatherworking | 377 | Complete |
 | Mining | 21 | Complete (smelting) |
-| Tailoring | 329 | Complete |
+| Tailoring | 314 | Complete |
 
 ## Usage
 
@@ -43,13 +43,13 @@ Add CraftLib as a dependency in your `.toc` file:
 -- Check if database is ready
 if CraftLib:IsReady() then
     -- Get all recipes for a profession
-    local recipes = CraftLib:GetRecipes("Cooking")
+    local recipes = CraftLib:GetRecipes("cooking")
 
     -- Filter by skill level
-    local available = CraftLib:GetAvailableRecipes("Cooking", 225)
+    local available = CraftLib:GetAvailableRecipes("cooking", 225)
 
     -- Look up by spell ID
-    local recipe = CraftLib:GetRecipeBySpellId("Cooking", 33359)
+    local recipe = CraftLib:GetRecipeBySpellId("cooking", 33359)
 
     -- Look up by crafted item ID
     local recipe = CraftLib:GetRecipeByItemId(27667)
@@ -85,11 +85,11 @@ Each recipe contains:
 | `id` | Spell ID |
 | `name` | Recipe name |
 | `itemId` | Crafted item ID |
-| `skill` | Required skill level |
+| `skillRequired` | Minimum skill to learn and craft |
 | `skillRange` | Difficulty thresholds `{orange, yellow, green, gray}` |
-| `reagents` | List of `{itemId, count}` pairs |
+| `reagents` | List of `{itemId, name, count}` |
 | `source` | How to obtain (trainer, vendor, quest, drop, reputation) |
-| `yield` | Items produced per craft (optional, default: 1) |
+| `expansion` | Which expansion the recipe belongs to |
 
 ## Data Generation
 
@@ -108,9 +108,8 @@ python scripts/extract_db2_sources.py --version 2.5.5.65463 --profession FirstAi
 # Fetch VENDOR vs DROP classification from Wowhead
 python scripts/fetch_wowhead_sources.py --profession FirstAid
 
-# Review and commit verified sources
-git add Data/Sources/FirstAid.json
-git commit -m "feat(data): verify FirstAid sources"
+# Fetch difficulty thresholds (orange/yellow/green/gray)
+python scripts/fetch_wowhead_sources.py --profession FirstAid --difficulty
 ```
 
 ### Phase 3: Generate Recipes.lua
@@ -120,10 +119,12 @@ git commit -m "feat(data): verify FirstAid sources"
 python scripts/generate_recipes.py --version 2.5.5.65463 --profession FirstAid
 ```
 
+Verified sources are stored in `Data/Sources/TBC/*.json` (gitignored). 45 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`).
+
 ### Data Sources
 
 - **DB2 Tables:** Spell, SpellName, SpellEffect, SpellReagents, Item, ItemSparse, SkillLine, SkillLineAbility, ItemEffect, Faction
-- **Wowhead:** VENDOR vs DROP verification for recipe items
+- **Wowhead:** Source verification (VENDOR vs DROP) and difficulty thresholds
 - **Fetcher:** [db2-parser](https://github.com/kaldown/db2-parser) submodule
 
 ## Addons Using CraftLib

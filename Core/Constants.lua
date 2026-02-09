@@ -48,11 +48,11 @@ CraftLib.Constants = {
         FISHING = 7620,
     },
 
-    -- Skill difficulty colors
+    -- Skill difficulty colors (probability is continuous, not fixed per color)
     DIFFICULTY = {
         ORANGE = "orange",  -- 100% skillup
-        YELLOW = "yellow",  -- ~50% skillup
-        GREEN = "green",    -- ~25% skillup
+        YELLOW = "yellow",  -- Skillup chance decreasing
+        GREEN = "green",    -- Skillup chance low
         GRAY = "gray",      -- 0% skillup
     },
 }

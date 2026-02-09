@@ -15,7 +15,7 @@ DB2 (wago.tools)          Wowhead
       ↓                      ↓
       └──────────┬───────────┘
                  ↓
-    Data/Sources/[Profession].json
+    Data/Sources/TBC/[Profession].json
                  ↓
         generate_recipes.py
                  ↓
@@ -30,7 +30,7 @@ Run the extraction script to get initial sources from DB2 data:
 python scripts/extract_db2_sources.py --version 2.5.5.65463 --profession [Profession]
 ```
 
-This creates `Data/Sources/[Profession].json` with:
+This creates `Data/Sources/TBC/[Profession].json` with:
 - **DB2 certain**: TRAINER, REPUTATION, QUEST (automatically detected)
 - **PENDING**: Items that need Wowhead verification (could be VENDOR or DROP)
 
@@ -90,7 +90,7 @@ See `vendor/db2-parser/schema/SkillLineAbility.md` for technical details.
 # Check which recipes are missing difficulty
 python3 -c "
 import json
-d = json.load(open('Data/Sources/[Profession].json'))
+d = json.load(open('Data/Sources/TBC/[Profession].json'))
 for sid, r in d['recipes'].items():
     if r.get('difficulty', {}).get('certainty') != 'WOWHEAD':
         print(f\"{sid}: {r['name']}\")"
@@ -104,7 +104,7 @@ for sid, r in d['recipes'].items():
 ## Step 4: Commit Verified Sources
 
 ```bash
-git add Data/Sources/[Profession].json
+git add Data/Sources/TBC/[Profession].json
 git commit -m "feat(data): verify [Profession] sources and difficulty"
 ```
 

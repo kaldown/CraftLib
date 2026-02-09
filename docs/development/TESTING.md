@@ -82,6 +82,21 @@ After verifying CraftLib works standalone, test with LazyProf:
 - Check all required fields are present
 - Verify itemId vs spellId (common mistake)
 
+## Testing Data Generation Scripts
+
+After modifying Python scripts, verify the pipeline still works:
+
+```bash
+# Validate existing recipe source classifications
+python scripts/validate_sources.py --expansion tbc
+
+# Test generation for a single profession (requires DB2 artifacts)
+python scripts/generate_recipes.py --version 2.5.5.65463 --profession FirstAid
+
+# Verify recipe count matches expected
+# Compare output against existing Recipes.lua
+```
+
 ## Error Reporting
 
 If you encounter errors:

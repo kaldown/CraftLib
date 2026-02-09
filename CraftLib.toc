@@ -5,6 +5,7 @@
 ## Version: 0.2.12
 ## IconTexture: Interface\AddOns\CraftLib\icon
 ## SavedVariables: CraftLibDB
+## X-SavedVariables-Note: Reserved for future use (not currently written to)
 ## X-Curse-Project-ID: 1438834
 ## X-Wago-ID: rNkyyOKa
 

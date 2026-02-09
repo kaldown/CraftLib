@@ -47,7 +47,6 @@ feat(data): add Engineering recipes for TBC
 - [ ] `CURSEFORGE.md` - Synced with README.md
 - [ ] `SCHEMA.md` - Updated if API or data structures changed
 - [ ] Architecture docs updated if design changed
-- [ ] Completed plans moved to `docs/plans/completed/`
 
 ### Commit Commands
 

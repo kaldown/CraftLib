@@ -28,4 +28,4 @@ See `Data/Sources/removed_recipes.json` for recipes that exist in DB2 but were r
 
 ---
 
-*Difficulty verification complete. This file can be archived or deleted.*
+*Difficulty verification complete. This file is kept as historical reference for the verification process. See `Data/Sources/removed_recipes.json` for the authoritative list of removed recipes.*

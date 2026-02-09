@@ -30,13 +30,14 @@
 
 **Context**: Recipe data spans multiple WoW expansions with different content.
 
-**Decision**: Organize data by expansion: `Data/TBC/`, `Data/Wrath/`, etc.
+**Decision**: Organize data by expansion: `Data/TBC/`, future `Data/Classic/`, etc. Apply the same expansion-based organization to intermediate source files: `Data/Sources/TBC/`, `Data/Sources/Classic/`, etc.
 
 **Rationale**:
 - Clear separation for different game versions
 - TBC data includes Vanilla recipes (TBC Classic plays both)
 - Easy to add expansion-specific content
 - Supports potential Classic Era / Season of Discovery variants
+- Same recipe can have different difficulty values across expansions, so source verification data must also be per-expansion
 
 **Consequences**:
 - Some duplication if recipes exist across expansions
@@ -147,7 +148,7 @@ else:
 
 **Status**: Accepted
 
-**Context**: DB2 data includes 46 recipes that were:
+**Context**: DB2 data includes 45 recipes that were:
 - In Beta/PTR but removed before live
 - Planned but never implemented
 - Removed in patches
@@ -175,7 +176,7 @@ Track filtered recipes in `Data/Sources/removed_recipes.json` for future review.
 **Trade-offs Accepted**:
 - Some legitimate recipes with missing Wowhead data might be filtered
 - Requires periodic review when TBC stabilizes
-- 46 recipes currently filtered (2-3% per profession)
+- 45 recipes currently filtered (2-3% per profession)
 
 **Consequences**:
 - `generate_recipes.py` skips recipes without difficulty data

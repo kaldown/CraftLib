@@ -2,28 +2,37 @@
 
 ## Prerequisites
 
-- World of Warcraft (TBC Classic or appropriate version)
+- World of Warcraft (Classic or Anniversary edition)
 - Git
+- Python 3 (for data generation scripts - standard library only, no pip installs)
 - Text editor with Lua support
 
 ## Clone Repository
 
 ```bash
-git clone https://github.com/kaldown/CraftLib.git ~/Projects/CraftLib
+git clone --recurse-submodules https://github.com/kaldown/CraftLib.git
+```
+
+If you already cloned without `--recurse-submodules`:
+
+```bash
+git submodule update --init --recursive
 ```
 
 ## Symlink to AddOns Folder
 
+Replace `<version>` with your WoW installation folder (e.g., `_classic_`, `_anniversary_`).
+
 ### macOS
 
 ```bash
-ln -s ~/Projects/CraftLib "/Applications/World of Warcraft/_classic_/Interface/AddOns/CraftLib"
+ln -s /path/to/CraftLib "/path/to/World of Warcraft/<version>/Interface/AddOns/CraftLib"
 ```
 
 ### Windows
 
 ```cmd
-mklink /D "C:\Program Files (x86)\World of Warcraft\_classic_\Interface\AddOns\CraftLib" "C:\Users\YOU\Projects\CraftLib"
+mklink /D "C:\...\World of Warcraft\<version>\Interface\AddOns\CraftLib" "C:\path\to\CraftLib"
 ```
 
 ## Verify Installation
@@ -49,7 +58,7 @@ See [COMPONENTS.md](../architecture/COMPONENTS.md) for detailed file description
 
 ## Making Changes
 
-1. Edit files in `~/Projects/CraftLib/`
+1. Edit files in your CraftLib directory
 2. In-game: `/reload` to reload UI
 3. Test changes with `/dump` commands
 4. See [TESTING.md](TESTING.md) for test procedures
