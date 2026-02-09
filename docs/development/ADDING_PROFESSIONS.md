@@ -4,7 +4,7 @@
 
 This guide walks through adding recipe data for a new profession to CraftLib using the verified sources pipeline.
 
-> **Before you start:** Read `.claude/CLAUDE.md` → "Lessons Learned" section for known issues with removed recipes, Wowhead URL patterns, and rate limiting.
+> **Before you start:** Check `Data/Sources/removed_recipes.json` for known removed recipes, and review this guide's notes on Wowhead URL patterns and rate limiting.
 
 ## Data Pipeline
 
@@ -83,7 +83,7 @@ See `vendor/db2-parser/schema/SkillLineAbility.md` for technical details.
 
 1. **Check for failed recipes** - Some recipes fail because they were removed/never implemented
 2. **Research failures** - Check Wowhead comments to determine if recipe is removed vs rate limited
-3. **Update `.claude/CLAUDE.md`** - Add any newly discovered removed recipes to the "Lessons Learned" table
+3. **Update `Data/Sources/removed_recipes.json`** - Add any newly discovered removed recipes
 4. **Consider filtering** - Removed recipes should not be in final Recipes.lua
 
 ```bash
@@ -96,10 +96,10 @@ for sid, r in d['recipes'].items():
         print(f\"{sid}: {r['name']}\")"
 ```
 
-**Reference:** See `.claude/CLAUDE.md` → "Lessons Learned: Per-Expansion Data Issues" for:
-- Known removed recipes per expansion
-- Wowhead URL patterns per expansion
-- Rate limiting patterns and workarounds
+**Reference:**
+- `Data/Sources/removed_recipes.json` - Known removed recipes per expansion
+- Use `--expansion tbc` for TBC Wowhead URLs, `--expansion classic` for vanilla
+- Wowhead rate limits after ~100 requests; wait 2-4 hours between batches
 
 ## Step 4: Commit Verified Sources
 
@@ -177,4 +177,4 @@ git commit -m "feat(data): add [Profession] recipes for TBC"
 - **Relying on calculated difficulty** - Always fetch from Wowhead for accurate data
 - **Using wrong Wowhead expansion URL** - Use `--expansion tbc` for TBC recipes, `--expansion classic` for vanilla
 - **Including removed recipes** - DB2 contains beta/removed recipes; check Wowhead comments for "removed" or "never implemented"
-- **Not updating Lessons Learned** - After every Wowhead session, update `.claude/CLAUDE.md` with new findings
+- **Not updating removed recipes** - After every Wowhead session, add newly discovered removed recipes to `Data/Sources/removed_recipes.json`

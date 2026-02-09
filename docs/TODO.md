@@ -24,7 +24,7 @@ Recipes.lua files regenerated with verified Wowhead difficulty data.
 
 ### Known Removed/Missing Recipes
 
-See `.claude/CLAUDE.md` → "Lessons Learned: Per-Expansion Data Issues" for recipes that exist in DB2 but were removed or have no Wowhead data.
+See `Data/Sources/removed_recipes.json` for recipes that exist in DB2 but were removed or have no Wowhead data.
 
 ---
 

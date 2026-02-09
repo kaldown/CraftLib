@@ -310,7 +310,7 @@ def extract_recipes(
 
         # Determine skill_required (minimum skill to acquire AND craft this recipe)
         #
-        # IMPORTANT: orange=0 handling (see CraftLib CLAUDE.md for full context)
+        # IMPORTANT: orange=0 handling (see ADR-005 in docs/architecture/DECISIONS.md)
         #
         # When orange=0, the recipe is "always orange" (100% skillup) until yellow.
         # However, orange=0 appears in two different contexts:
