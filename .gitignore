@@ -24,6 +24,9 @@ docs/agents/
 # Structure: Data/Sources/{Expansion}/{Profession}.json
 Data/Sources/*/*.json
 
+# DB2 artifacts (downloaded from wago.tools)
+artifacts/
+
 # Build artifacts
 *.zip
 *.tar.gz
