@@ -30,13 +30,17 @@
             "type": "object",
             "required": ["type", "certainty"],
             "properties": {
-              "type": { "enum": ["TRAINER", "VENDOR", "DROP", "QUEST", "REPUTATION"] },
+              "type": { "enum": ["TRAINER", "VENDOR", "DROP", "QUEST", "REPUTATION", "DISCOVERY", "WORLD_DROP"] },
               "certainty": { "enum": ["DB2", "WOWHEAD", "PENDING"] },
               "itemId": { "type": "integer" },
               "cost": { "type": "integer" },
               "factionId": { "type": "integer" },
               "factionName": { "type": "string" },
               "level": { "type": "string" },
+              "trainingCost": {
+                "type": "integer",
+                "description": "Cost in copper to learn from trainer (from Wowhead trainingcost field)"
+              },
               "vendors": {
                 "type": "array",
                 "items": {
@@ -61,6 +65,73 @@
               "green": { "type": "integer", "description": "Skill level when recipe turns green" },
               "gray": { "type": "integer", "description": "Skill level when recipe turns gray" },
               "certainty": { "enum": ["DB2", "WOWHEAD", "CALCULATED", "PENDING"], "description": "Source of difficulty data" }
+            }
+          },
+          "wowhead": {
+            "type": "object",
+            "description": "Comprehensive data from Wowhead spell page (fetched once, stored for future use)",
+            "properties": {
+              "source": {
+                "type": "array",
+                "items": { "type": "integer" },
+                "description": "Wowhead source type IDs: 1=CRAFTED, 2=DROP, 3=PVP, 4=QUEST, 5=VENDOR, 6=TRAINER, 7=DISCOVERY, 10=STARTER, 11=EVENT, 12=ACHIEVEMENT"
+              },
+              "trainingCost": {
+                "type": "integer",
+                "description": "Cost in copper to learn from trainer (absent if not trainable)"
+              },
+              "learnedAt": {
+                "type": "integer",
+                "description": "Skill level required to learn this recipe"
+              },
+              "numSkillUps": {
+                "type": "integer",
+                "description": "Number of skill-ups per craft (usually 1)"
+              },
+              "quality": {
+                "type": "integer",
+                "description": "Crafted item quality: 0=Poor, 1=Common, 2=Uncommon, 3=Rare, 4=Epic"
+              },
+              "reagents": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": { "type": "integer" },
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "description": "[itemId, count]"
+                },
+                "description": "Reagent list from Wowhead for cross-validation against DB2"
+              },
+              "creates": {
+                "type": "array",
+                "items": { "type": "integer" },
+                "minItems": 3,
+                "maxItems": 3,
+                "description": "[itemId, minCount, maxCount]"
+              },
+              "taughtBy": {
+                "type": "array",
+                "description": "NPCs that teach this recipe (trainers)",
+                "items": {
+                  "type": "object",
+                  "required": ["npcId", "name"],
+                  "properties": {
+                    "npcId": { "type": "integer" },
+                    "name": { "type": "string" },
+                    "faction": {
+                      "type": "string",
+                      "enum": ["Alliance", "Horde", "Neutral"],
+                      "description": "Inferred from NPC zone/location"
+                    }
+                  }
+                }
+              },
+              "fetchedAt": {
+                "type": "string",
+                "format": "date",
+                "description": "When this data was fetched from Wowhead"
+              }
             }
           }
         }
