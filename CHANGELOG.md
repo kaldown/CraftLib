@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- STARTER source type for auto-learned recipes (e.g., Herb Baked Egg)
+- Training cost data for trainer-learned recipes
+- DISCOVERY and WORLD_DROP source types reserved for future use
+
+### Changed
+
+- Pipeline rewrite: single-pass Wowhead fetch replaces three separate modes
+- All 1,925 recipes now have Wowhead-verified source classifications
+- Source reclassifications: ~200 recipes corrected from VENDOR/DROP to TRAINER where trainable in TBC
+- Scripts fail loudly on missing data instead of silently defaulting to zero
+
+### Removed
+
+- 6 additional removed/unverifiable recipes (51 total filtered from DB2)
+- `source_overrides.json` and `validate_sources.py` (obsolete)
+
 ## [0.2.12] - 2026-01-30
 
 ### Fixed

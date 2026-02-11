@@ -22,13 +22,13 @@ All 10 professions are complete with Wowhead-verified difficulty data:
 | Profession | Recipes | Coverage |
 |------------|---------|----------|
 | Alchemy | 182 | Complete |
-| Blacksmithing | 376 | Complete |
+| Blacksmithing | 375 | Complete |
 | Cooking | 116 | Complete |
 | Enchanting | 30 | Complete |
-| Engineering | 240 | Complete |
+| Engineering | 239 | Complete |
 | First Aid | 15 | Complete |
-| Jewelcrafting | 259 | Complete |
-| Leatherworking | 377 | Complete |
+| Jewelcrafting | 257 | Complete |
+| Leatherworking | 376 | Complete |
 | Mining | 21 | Complete (smelting) |
 | Tailoring | 314 | Complete |
 
@@ -105,14 +105,11 @@ CraftLib recipe data uses a three-phase pipeline for verified source accuracy:
 python scripts/extract_db2_sources.py --version 2.5.5.65463 --profession FirstAid
 ```
 
-### Phase 2: Verify Uncertain Sources
+### Phase 2: Verify Sources and Difficulty from Wowhead
 
 ```bash
-# Fetch VENDOR vs DROP classification from Wowhead
+# Single-pass: fetches difficulty + source + trainer status from Wowhead
 python scripts/fetch_wowhead_sources.py --profession FirstAid
-
-# Fetch difficulty thresholds (orange/yellow/green/gray)
-python scripts/fetch_wowhead_sources.py --profession FirstAid --difficulty
 ```
 
 ### Phase 3: Generate Recipes.lua
@@ -122,7 +119,7 @@ python scripts/fetch_wowhead_sources.py --profession FirstAid --difficulty
 python scripts/generate_recipes.py --version 2.5.5.65463 --profession FirstAid
 ```
 
-Verified sources are stored in `Data/Sources/TBC/*.json` (gitignored). 45 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`).
+Verified sources are stored in `Data/Sources/TBC/*.json` (gitignored). 51 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`).
 
 ### Data Sources
 

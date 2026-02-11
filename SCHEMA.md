@@ -119,6 +119,13 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
 }
 ```
 
+**Starter Source:**
+```lua
+{
+    type = "starter",                     -- Auto-learned when profession is trained
+}
+```
+
 **Reputation Source:**
 ```lua
 {
@@ -158,8 +165,9 @@ CraftLib.Constants.SOURCE_TYPE.VENDOR
 CraftLib.Constants.SOURCE_TYPE.DROP
 CraftLib.Constants.SOURCE_TYPE.REPUTATION
 CraftLib.Constants.SOURCE_TYPE.QUEST
-CraftLib.Constants.SOURCE_TYPE.DISCOVERY
-CraftLib.Constants.SOURCE_TYPE.WORLD_DROP
+CraftLib.Constants.SOURCE_TYPE.STARTER
+CraftLib.Constants.SOURCE_TYPE.DISCOVERY  -- reserved
+CraftLib.Constants.SOURCE_TYPE.WORLD_DROP -- reserved
 
 -- Profession IDs
 CraftLib.Constants.PROFESSION_ID.FIRST_AID  -- 3273
