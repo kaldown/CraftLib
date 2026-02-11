@@ -343,9 +343,8 @@ local recipes = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 35273,
-            cost = 80000,
         },
         expansion = C.EXPANSION.TBC,
     },

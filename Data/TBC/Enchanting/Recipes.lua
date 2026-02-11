@@ -274,9 +274,8 @@ local recipes = {
             { itemId = 14343, name = "Small Brilliant Shard", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 11813,
-            cost = 12000,
         },
         expansion = C.EXPANSION.VANILLA,
     },

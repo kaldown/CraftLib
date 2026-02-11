@@ -83,9 +83,7 @@ local recipes = {
             { itemId = 2678, name = "Mild Spices", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 6891,
-            cost = 25,
+            type = C.SOURCE_TYPE.STARTER,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1001,8 +999,8 @@ local recipes = {
             { itemId = 2692, name = "Hot Spices", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.QUEST,
-            itemId = 4609,
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Cooking Trainer",
         },
         expansion = C.EXPANSION.VANILLA,
     },
