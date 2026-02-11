@@ -1,4 +1,5 @@
 package-as: CraftLib
+license-output: LICENSE
 
 ignore:
   - .git
