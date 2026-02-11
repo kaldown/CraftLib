@@ -25,6 +25,7 @@ CraftLib.Constants = {
         DROP = "drop",
         REPUTATION = "reputation",
         QUEST = "quest",
+        STARTER = "starter",
         DISCOVERY = "discovery",
         WORLD_DROP = "world_drop",
     },
