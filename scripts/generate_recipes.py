@@ -26,39 +26,11 @@ PROFESSIONS = {
     186: {"key": "mining", "name": "Mining", "constant": "MINING"},
 }
 
-# Reputation level mapping
-REP_LEVELS = {
-    4: "Friendly",
-    5: "Honored",
-    6: "Revered",
-    7: "Exalted",
-}
-
 
 def escape_lua_string(s: str) -> str:
     """Escape special characters for Lua string literals."""
     return s.replace("\\", "\\\\").replace('"', '\\"')
 
-
-def load_source_overrides(scripts_dir: Path) -> dict:
-    """Load manual source overrides from JSON file.
-
-    Returns dict mapping recipe_item_id (str) to source type (str).
-    """
-    overrides_file = scripts_dir / "source_overrides.json"
-    if not overrides_file.exists():
-        return {}
-
-    with open(overrides_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    # Flatten all categories into a single lookup
-    overrides = {}
-    for source_type, item_ids in data.get("overrides", {}).items():
-        for item_id in item_ids:
-            overrides[str(item_id)] = source_type
-
-    return overrides
 
 
 def load_verified_sources(sources_dir: Path, profession_name: str) -> dict | None:
@@ -80,73 +52,6 @@ def load_verified_sources(sources_dir: Path, profession_name: str) -> dict | Non
         for spell_id, recipe in data.get("recipes", {}).items()
     }
 
-
-def detect_source(recipe: dict, indexes: dict, overrides: dict = None) -> dict:
-    """Detect recipe source (trainer/vendor/drop/reputation/quest).
-
-    Detection logic:
-    1. No recipe item → TRAINER (learned directly from NPC)
-    2. Recipe item exists:
-       a. Check manual overrides first (for known drops/quests)
-       b. MinFactionID > 0 → REPUTATION vendor
-       c. BuyPrice=0 AND SellPrice=0 → QUEST reward (untradeable)
-       d. BuyPrice > 0 → VENDOR (default for tradeable items)
-
-    The DB2 data cannot distinguish vendor vs drop items reliably.
-    Use source_overrides.json to manually specify known drops.
-    """
-    recipe_item_id = recipe.get("recipe_item")
-    overrides = overrides or {}
-
-    # No recipe item = trainer
-    if not recipe_item_id:
-        return {"type": "TRAINER"}
-
-    recipe_item_str = str(recipe_item_id)
-
-    # Check manual overrides first
-    if recipe_item_str in overrides:
-        override_type = overrides[recipe_item_str]
-        return {
-            "type": override_type,
-            "itemId": int(recipe_item_id),
-        }
-
-    # Get item details
-    item = indexes["item_details"].get(recipe_item_str, {})
-    buy_price = int(item.get("BuyPrice", "0"))
-    sell_price = int(item.get("SellPrice", "0"))
-    min_faction = int(item.get("MinFactionID", "0"))
-    min_rep = int(item.get("MinReputation", "0"))
-
-    # Reputation vendor (has faction requirement)
-    if min_faction > 0:
-        faction_name = indexes["faction_names"].get(str(min_faction), f"Faction-{min_faction}")
-        rep_level = REP_LEVELS.get(min_rep, f"Rep-{min_rep}")
-        return {
-            "type": "REPUTATION",
-            "factionId": min_faction,
-            "factionName": faction_name,
-            "level": rep_level,
-            "itemId": int(recipe_item_id),
-            "cost": buy_price,
-        }
-
-    # Quest reward (untradeable - no buy or sell price)
-    if buy_price == 0 and sell_price == 0:
-        return {
-            "type": "QUEST",
-            "itemId": int(recipe_item_id),
-        }
-
-    # Default to VENDOR for tradeable items with prices
-    # Note: DB2 cannot distinguish vendor vs world drop reliably.
-    # Known drops should be added to source_overrides.json
-    return {
-        "type": "VENDOR",
-        "itemId": int(recipe_item_id),
-        "cost": buy_price,
-    }
 
 
 def load_csv(path: Path) -> list[dict]:
@@ -171,8 +76,7 @@ def load_all_data(data_dir: Path) -> dict:
     for table in tables:
         path = data_dir / f"{table}.csv"
         if not path.exists():
-            print(f"  WARNING: {table}.csv not found", file=sys.stderr)
-            data[table] = []
+            raise FileNotFoundError(f"Required DB2 table not found: {path}")
         else:
             data[table] = load_csv(path)
             print(f"  Loaded {table}: {len(data[table])} rows", file=sys.stderr)
@@ -250,8 +154,8 @@ def extract_recipes(
     data: dict,
     indexes: dict,
     skill_line_id: int,
-    overrides: dict = None,
     verified_sources: dict = None,
+    removed: set[str] = None,
 ) -> tuple[list[dict], list[dict]]:
     """Extract recipes for a profession from SkillLineAbility.
 
@@ -270,43 +174,36 @@ def extract_recipes(
         if not spell_id:
             continue
 
+        # Skip explicitly removed recipes
+        if removed and spell_id in removed:
+            continue
+
         # Get crafted item
         item_id = indexes["crafted_items"].get(spell_id)
         if not item_id:
             continue  # Not a crafting recipe
 
-        # Skip recipes without verified difficulty data (likely removed/never-implemented)
-        # Only applies when we have verified sources for this profession
+        # Skip recipes not in verified sources (likely removed/never-implemented)
         if verified_sources:
             verified_recipe = verified_sources.get(spell_id)
-            if not verified_recipe or "difficulty" not in verified_recipe:
+            if not verified_recipe:
                 spell_name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
-                skipped_recipes.append({"id": spell_id, "name": spell_name})
+                skipped_recipes.append({"id": spell_id, "name": spell_name, "reason": "not in sources"})
                 continue
 
-        # Build recipe object
-        trivial_low = int(row.get("TrivialSkillLineRankLow", "0"))
-        trivial_high = int(row.get("TrivialSkillLineRankHigh", "0"))
-
-        # Get verified data if available
+        # Get verified difficulty — Wowhead data is REQUIRED, no DB2 fallback
         verified_recipe = verified_sources.get(spell_id) if verified_sources else None
         verified_difficulty = verified_recipe.get("difficulty") if verified_recipe else None
 
-        # Determine skill range - prefer verified Wowhead data over calculation
-        if verified_difficulty and verified_difficulty.get("certainty") == "WOWHEAD":
-            # Use verified difficulty from Wowhead
-            orange = verified_difficulty["orange"]
-            yellow = verified_difficulty["yellow"]
-            green = verified_difficulty["green"]
-            gray = verified_difficulty["gray"]
-        else:
-            # Fall back to calculation (not reliable for all recipes)
-            # DB2 only provides yellow and gray; orange and green must be calculated
-            yellow = trivial_low if trivial_low > 0 else 1
-            gray = trivial_high if trivial_high > 0 else yellow + 60
-            green = (yellow + gray) // 2
-            # Orange = 2 * yellow - gray (assumes equal gaps, but not always true)
-            orange = max(1, 2 * yellow - gray)
+        if not verified_difficulty or verified_difficulty.get("certainty") != "WOWHEAD":
+            spell_name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
+            skipped_recipes.append({"id": spell_id, "name": spell_name, "reason": "no WOWHEAD difficulty"})
+            continue
+
+        orange = verified_difficulty["orange"]
+        yellow = verified_difficulty["yellow"]
+        green = verified_difficulty["green"]
+        gray = verified_difficulty["gray"]
 
         # Determine skill_required (minimum skill to acquire AND craft this recipe)
         #
@@ -388,22 +285,25 @@ def extract_recipes(
             "recipe_item": indexes["recipe_items"].get(spell_id),
         }
 
-        # Detect source - prefer verified sources, fall back to heuristics
+        # Source from verified sources — REQUIRED
         if verified_recipe:
             source = verified_recipe.get("source")
-            # Check for PENDING sources
-            if source and source.get("certainty") == "PENDING":
+            if not source:
+                raise ValueError(
+                    f"Recipe '{recipe['name']}' (spell {spell_id}) has no source data. "
+                    f"Run fetch_wowhead_sources.py to populate."
+                )
+            if source.get("certainty") == "PENDING":
                 raise ValueError(
                     f"Recipe '{recipe['name']}' (spell {spell_id}) has PENDING source. "
                     f"Run fetch_wowhead_sources.py to verify."
                 )
-            if source:
-                recipe["source"] = source
-            else:
-                recipe["source"] = detect_source(recipe, indexes, overrides)
+            recipe["source"] = source
         else:
-            # Fall back to heuristic detection (for professions without verified sources)
-            recipe["source"] = detect_source(recipe, indexes, overrides)
+            raise ValueError(
+                f"Recipe '{recipe['name']}' (spell {spell_id}) has no verified source entry. "
+                f"Run extract_db2_sources.py then fetch_wowhead_sources.py first."
+            )
 
         recipes.append(recipe)
 
@@ -512,7 +412,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Generate CraftLib recipes from DB2")
     parser.add_argument("--version", required=True, help="Build version (e.g., 2.5.5.65463)")
     parser.add_argument("--expansion", type=int, default=2, help="Expansion number (default: 2 for TBC)")
-    parser.add_argument("--data-dir", type=Path, default=Path("vendor/db2-parser/artifacts"),
+    parser.add_argument("--data-dir", type=Path, default=Path("artifacts"),
                         help="DB2 artifacts directory")
     parser.add_argument("--output-dir", type=Path, default=Path("Data"),
                         help="Output directory for Lua files")
@@ -534,14 +434,19 @@ def main() -> int:
           f"{len(indexes['item_names'])} items, "
           f"{len(indexes['recipe_items'])} recipe items", file=sys.stderr)
 
-    # Load source overrides
-    scripts_dir = Path(__file__).parent
-    overrides = load_source_overrides(scripts_dir)
-    if overrides:
-        print(f"Loaded {len(overrides)} source overrides", file=sys.stderr)
-
     # Expansion name for paths
     exp_name = {1: "Classic", 2: "TBC", 3: "WotLK", 4: "Cata"}.get(args.expansion, "TBC")
+
+    # Load removed recipes
+    removed_path = Path(__file__).parent.parent / "Data" / "Sources" / "removed_recipes.json"
+    removed_spells: dict[str, set[str]] = {}
+    if removed_path.exists():
+        with open(removed_path) as f:
+            removed_data = json.load(f)
+        for prof_name, prof_recipes in removed_data.get("recipes", {}).items():
+            removed_spells[prof_name] = {str(r["spellId"]) for r in prof_recipes}
+        total = sum(len(s) for s in removed_spells.values())
+        print(f"Loaded {total} removed recipes", file=sys.stderr)
 
     # Load verified sources (per-expansion, per-profession)
     sources_dir = Path(__file__).parent.parent / "Data" / "Sources" / exp_name
@@ -566,15 +471,19 @@ def main() -> int:
             print(f"Loaded {len(verified_sources)} verified sources for {profession['name']}", file=sys.stderr)
 
         try:
-            recipes, skipped = extract_recipes(data, indexes, skill_line_id, overrides, verified_sources)
+            prof_removed = removed_spells.get(profession["name"], set())
+            recipes, skipped = extract_recipes(
+                data, indexes, skill_line_id, verified_sources, prof_removed
+            )
         except ValueError as e:
             print(f"ERROR: {e}", file=sys.stderr)
             return 2
 
         if skipped:
-            print(f"Skipped {len(skipped)} recipes without verified difficulty for {profession['name']}:", file=sys.stderr)
+            print(f"Skipped {len(skipped)} recipes for {profession['name']}:", file=sys.stderr)
             for r in skipped:
-                print(f"  - {r['id']}: {r['name']}", file=sys.stderr)
+                reason = r.get("reason", "unknown")
+                print(f"  - {r['id']}: {r['name']} ({reason})", file=sys.stderr)
 
         if not recipes:
             print(f"No recipes found for {profession['name']}", file=sys.stderr)

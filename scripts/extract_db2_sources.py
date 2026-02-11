@@ -91,8 +91,11 @@ def build_indexes(data_dir: Path) -> dict:
     for row in spell_effects:
         if row.get("Effect") == "24":
             spell_id = row.get("SpellID")
-            item_id = row.get("EffectItemType", "0")
-            if spell_id and item_id and item_id != "0":
+            item_id = row.get("EffectItemType")
+            if not item_id or item_id == "0":
+                print(f"  WARNING: SpellEffect Effect=24 has no EffectItemType for spell {spell_id}", file=sys.stderr)
+                continue
+            if spell_id:
                 indexes["crafted_items"][spell_id] = item_id
 
     # Recipe items (ItemEffect: items that teach spells)
@@ -123,17 +126,26 @@ def detect_source(spell_id: str, indexes: dict) -> dict:
     if not recipe_item_id:
         return {"type": "TRAINER", "certainty": "DB2"}
 
-    # Get item details
-    item = indexes["item_details"].get(str(recipe_item_id), {})
-    buy_price = int(item.get("BuyPrice", "0"))
-    sell_price = int(item.get("SellPrice", "0"))
-    min_faction = int(item.get("MinFactionID", "0"))
-    min_rep = int(item.get("MinReputation", "0"))
+    # Get item details — fail loudly if missing
+    item = indexes["item_details"].get(str(recipe_item_id))
+    if item is None:
+        raise ValueError(
+            f"Recipe item {recipe_item_id} not found in ItemSparse for spell {spell_id}. "
+            f"DB2 data may be incomplete."
+        )
+    buy_price = int(item["BuyPrice"])
+    sell_price = int(item["SellPrice"])
+    min_faction = int(item["MinFactionID"])
+    min_rep = int(item["MinReputation"])
 
     # REPUTATION: Has faction requirement (certain)
     if min_faction > 0:
-        faction_name = indexes["faction_names"].get(str(min_faction), f"Faction-{min_faction}")
-        rep_level = REP_LEVELS.get(min_rep, f"Rep-{min_rep}")
+        faction_name = indexes["faction_names"].get(str(min_faction))
+        if not faction_name:
+            raise ValueError(f"Faction {min_faction} not found in Faction table for spell {spell_id}")
+        rep_level = REP_LEVELS.get(min_rep)
+        if not rep_level:
+            raise ValueError(f"Unknown reputation level {min_rep} for faction {faction_name} (spell {spell_id})")
         return {
             "type": "REPUTATION",
             "certainty": "DB2",
