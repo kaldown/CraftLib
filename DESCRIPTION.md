@@ -1,3 +1,9 @@
+[![PayPal](https://img.shields.io/badge/Donate-PayPal-00457C?logo=paypal&logoColor=white)](https://www.paypal.com/donate/?hosted_button_id=FG4KES3HNPLVG)
+
+If you find this useful, consider [supporting development](https://www.paypal.com/donate/?hosted_button_id=FG4KES3HNPLVG).
+
+---
+
 CraftLib is a standalone library addon providing a complete crafting recipe database for World of Warcraft addon developers.
 
 > **This is a developer library** - It has no UI on its own. Other addons (like [LazyProf](https://www.curseforge.com/wow/addons/lazyprof)) use CraftLib for recipe data.

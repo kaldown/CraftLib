@@ -9,11 +9,6 @@ ignore:
   - vendor
   - Makefile
   - Data/Sources
-  - README.md
-  - CONTRIBUTING.md
-  - CURSEFORGE.md
-  - CHANGELOG.md
-  - SCHEMA.md
   - "*.md"
 
 enable-nolib-creation: no
