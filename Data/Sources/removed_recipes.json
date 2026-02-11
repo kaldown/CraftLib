@@ -11,6 +11,7 @@
     ],
     "Blacksmithing": [
       { "spellId": 2671, "name": "Rough Bronze Bracers", "notes": "No Wowhead data" },
+      { "spellId": 11454, "name": "Inlaid Mithril Cylinder", "notes": "Plans crafted by Gnomish Engineers, not a standard source" },
       { "spellId": 8366, "name": "Ironforge Chain", "notes": "No Wowhead data" },
       { "spellId": 8368, "name": "Ironforge Gauntlets", "notes": "No Wowhead data" },
       { "spellId": 9942, "name": "Mithril Scale Gloves", "notes": "No Wowhead data" },
@@ -32,19 +33,23 @@
       { "spellId": 12904, "name": "Gnomish Ham Radio", "notes": "Removed" },
       { "spellId": 30342, "name": "Red Smoke Flare", "notes": "No Wowhead data" },
       { "spellId": 30343, "name": "Blue Smoke Flare", "notes": "No Wowhead data" },
+      { "spellId": 30349, "name": "Khorium Toolbox", "notes": "Removed before live, never available to players" },
       { "spellId": 30549, "name": "Critter Enlarger", "notes": "No Wowhead data" },
       { "spellId": 30561, "name": "Goblin Tonk Controller", "notes": "Removed" },
       { "spellId": 30573, "name": "Gnomish Tonk Controller", "notes": "Removed" }
     ],
-    "FirstAid": [
+    "First Aid": [
       { "spellId": 30021, "name": "Crystal Infused Bandage", "notes": "Never implemented, placeholder reagent zzOLD[PH]" }
     ],
     "Jewelcrafting": [
       { "spellId": 25614, "name": "Silver Rose Pendant", "notes": "No Wowhead data" },
+      { "spellId": 26918, "name": "Arcanite Sword Pendant", "notes": "Source unverifiable, no Wowhead source data" },
+      { "spellId": 26920, "name": "Blood Crown", "notes": "Source unverifiable, no Wowhead source data" },
       { "spellId": 32810, "name": "Primal Stone Statue", "notes": "No Wowhead data" }
     ],
     "Leatherworking": [
       { "spellId": 10550, "name": "Nightscape Cloak", "notes": "No Wowhead data" },
+      { "spellId": 19080, "name": "Warbear Woolies", "notes": "No longer available, replaced by Meilosh (Timbermaw) vendor version" },
       { "spellId": 19106, "name": "Onyxia Scale Breastplate", "notes": "No Wowhead data" }
     ],
     "Tailoring": [
