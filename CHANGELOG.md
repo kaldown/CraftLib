@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-02-11
+
 ### Added
 
 - STARTER source type for auto-learned recipes (e.g., Herb Baked Egg)
@@ -154,7 +156,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Moved SCHEMA.md from docs/ to root for public access
 
-[Unreleased]: https://github.com/kaldown/CraftLib/compare/v0.2.12...HEAD
+[Unreleased]: https://github.com/kaldown/CraftLib/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/kaldown/CraftLib/compare/v0.2.12...v0.3.0
 [0.2.12]: https://github.com/kaldown/CraftLib/compare/v0.2.11...v0.2.12
 [0.2.11]: https://github.com/kaldown/CraftLib/compare/v0.2.10...v0.2.11
 [0.2.10]: https://github.com/kaldown/CraftLib/compare/v0.2.7...v0.2.10
