@@ -34,6 +34,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any First Aid Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -50,6 +51,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any First Aid Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -66,6 +68,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any First Aid Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -82,6 +85,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any First Aid Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -114,6 +118,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any First Aid Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },

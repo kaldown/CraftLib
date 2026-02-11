@@ -73,6 +73,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -91,6 +92,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -109,6 +111,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 150,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -127,6 +130,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -180,6 +184,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -233,6 +238,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -251,6 +257,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -269,6 +276,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 450,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -324,6 +332,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -360,6 +369,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 4000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -378,6 +388,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -414,6 +425,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -432,6 +444,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 2000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -449,6 +462,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -504,6 +518,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 3000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -559,6 +574,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -577,6 +593,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -595,6 +612,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -651,6 +669,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 6000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -706,6 +725,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 6500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -798,6 +818,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 7500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -835,6 +856,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 8000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -853,6 +875,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 9000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -871,6 +894,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 8000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -962,6 +986,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -980,6 +1005,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1051,6 +1077,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1068,6 +1095,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1085,6 +1113,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1103,6 +1132,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1139,6 +1169,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 12000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1175,6 +1206,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 12000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1301,6 +1333,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 14000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1318,6 +1351,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1353,6 +1387,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1371,6 +1406,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1408,6 +1444,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1444,6 +1481,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1462,6 +1500,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1698,6 +1737,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1716,6 +1756,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2045,6 +2086,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2063,6 +2105,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2081,6 +2124,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2118,6 +2162,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 25000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2136,6 +2181,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 25000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2154,6 +2200,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 25000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2172,6 +2219,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 25000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2228,6 +2276,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 30000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2304,6 +2353,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 30000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2322,6 +2372,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2358,6 +2409,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },

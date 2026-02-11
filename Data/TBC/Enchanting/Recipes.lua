@@ -37,6 +37,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -72,6 +73,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -91,6 +93,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -111,6 +114,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -148,6 +152,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 2600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -166,6 +171,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 3000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -186,6 +192,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 4000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -222,6 +229,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -239,6 +247,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -380,6 +389,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -396,6 +406,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -431,6 +442,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 40000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -464,6 +476,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 40000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -499,6 +512,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+            trainingCost = 80000,
         },
         expansion = C.EXPANSION.TBC,
     },

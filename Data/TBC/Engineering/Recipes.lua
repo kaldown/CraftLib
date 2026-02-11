@@ -68,6 +68,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 115,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -87,6 +88,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 130,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -104,6 +106,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 150,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -122,6 +125,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 150,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -138,6 +142,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 150,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -156,6 +161,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -174,6 +180,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 225,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -209,6 +216,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -226,6 +234,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -243,6 +252,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -262,6 +272,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -278,6 +289,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -314,6 +326,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 400,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -332,6 +345,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -368,6 +382,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 420,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -386,6 +401,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 450,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -403,6 +419,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 450,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -420,6 +437,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 475,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -476,6 +494,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -493,6 +512,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -526,6 +546,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -543,6 +564,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -560,6 +582,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -650,6 +673,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 550,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -669,6 +693,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 400,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -687,6 +712,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -725,6 +751,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -763,6 +790,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 750,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -781,6 +809,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 750,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -799,6 +828,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -815,6 +845,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -903,6 +934,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -979,6 +1011,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 900,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -997,6 +1030,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1016,6 +1050,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1032,6 +1067,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1049,6 +1085,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1082,6 +1119,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1171,6 +1209,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1224,6 +1263,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1400,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1277,6 +1317,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1354,6 +1395,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1372,6 +1414,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1409,6 +1452,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1429,6 +1473,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1446,6 +1491,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1464,6 +1510,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1482,6 +1529,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1500,6 +1548,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1517,6 +1566,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1537,6 +1587,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1555,6 +1606,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1611,6 +1663,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1700,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1650,6 +1703,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1670,6 +1724,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1686,6 +1741,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1704,6 +1760,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 1800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1724,6 +1781,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1782,6 +1840,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1799,6 +1858,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1858,6 +1918,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1966,6 +2027,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1986,6 +2048,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2400,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2007,6 +2070,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2400,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2025,6 +2089,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2400,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2044,6 +2109,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2064,6 +2130,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2102,6 +2169,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2122,6 +2190,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2139,6 +2208,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2159,6 +2229,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 2800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2178,6 +2249,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 3000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2219,6 +2291,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 4000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2235,6 +2308,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 4000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2252,6 +2326,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2310,6 +2385,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2327,6 +2403,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2347,6 +2424,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2365,6 +2443,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2485,6 +2564,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2501,6 +2581,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2723,6 +2804,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2819,6 +2901,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3062,6 +3145,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3078,6 +3162,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3094,6 +3179,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3112,6 +3198,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3148,6 +3235,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3166,6 +3254,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3183,6 +3272,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3201,6 +3291,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 25000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3258,6 +3349,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 25000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3277,6 +3369,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 22500,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3409,6 +3502,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3427,6 +3521,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3461,6 +3556,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3478,6 +3574,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3494,6 +3591,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3549,6 +3647,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 35000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3568,6 +3667,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 31500,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3669,6 +3769,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3689,6 +3790,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 45000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3750,6 +3852,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3771,6 +3874,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3792,6 +3896,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3813,6 +3918,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3834,6 +3940,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3855,6 +3962,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3876,6 +3984,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3897,6 +4006,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3918,6 +4028,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3939,6 +4050,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3960,6 +4072,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3981,6 +4094,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 120000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4147,6 +4261,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 100000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4165,6 +4280,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 100000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4186,6 +4302,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 90000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4206,6 +4323,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 90000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4227,6 +4345,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4246,6 +4365,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
+            trainingCost = 180000,
         },
         expansion = C.EXPANSION.TBC,
     },

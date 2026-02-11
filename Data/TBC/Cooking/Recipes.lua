@@ -170,6 +170,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 10,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -208,6 +209,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -329,6 +331,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -398,6 +401,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -553,6 +557,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -570,6 +575,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 150,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -897,6 +903,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1001,6 +1008,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1233,6 +1241,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 4000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1958,6 +1967,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 42000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -1993,6 +2003,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 60000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2010,6 +2021,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Cooking Trainer",
+            trainingCost = 60000,
         },
         expansion = C.EXPANSION.TBC,
     },

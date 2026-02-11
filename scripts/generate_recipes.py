@@ -345,6 +345,8 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int) -> str:
         source_lines = [f'            type = C.SOURCE_TYPE.{source["type"]},']
         if source["type"] == "TRAINER":
             source_lines.append(f'            npcName = "Any {prof_name} Trainer",')
+            if "trainingCost" in source:
+                source_lines.append(f'            trainingCost = {source["trainingCost"]},')
         elif source["type"] == "REPUTATION":
             escaped_faction = escape_lua_string(source["factionName"])
             source_lines.append(f'            factionId = {source["factionId"]},')

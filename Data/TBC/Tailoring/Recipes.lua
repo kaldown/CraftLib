@@ -37,6 +37,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 25,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -104,6 +105,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -121,6 +123,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -139,6 +142,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -156,6 +160,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -173,6 +178,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -191,6 +197,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -208,6 +215,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -244,6 +252,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -262,6 +271,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -281,6 +291,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -298,6 +309,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -352,6 +364,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -370,6 +383,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -388,6 +402,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -406,6 +421,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -424,6 +440,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -441,6 +458,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -495,6 +513,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -511,6 +530,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -528,6 +548,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -545,6 +566,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -563,6 +585,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -581,6 +604,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -598,6 +622,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 400,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -616,6 +641,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 400,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -634,6 +660,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -689,6 +716,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -761,6 +789,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -778,6 +807,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -796,6 +826,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -814,6 +845,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -941,6 +973,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -978,6 +1011,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 750,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1015,6 +1049,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 750,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1052,6 +1087,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1088,6 +1124,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1126,6 +1163,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1163,6 +1201,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1180,6 +1219,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 750,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1254,6 +1294,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1271,6 +1312,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 750,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1344,6 +1386,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1362,6 +1405,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 900,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1396,6 +1440,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1433,6 +1478,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 750,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1453,6 +1499,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1472,6 +1519,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1526,6 +1574,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1564,6 +1613,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1618,6 +1668,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1639,6 +1690,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1733,6 +1785,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 3000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1830,6 +1883,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 4000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1847,6 +1901,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 4000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1868,6 +1923,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1885,6 +1941,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 4000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1903,6 +1960,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 4500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1920,6 +1978,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1938,6 +1997,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 4950,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2010,6 +2070,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2046,6 +2107,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2083,6 +2145,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2101,6 +2164,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2120,6 +2184,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2138,6 +2203,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 5400,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2174,6 +2240,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 6000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2192,6 +2259,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 6000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2209,6 +2277,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 6000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2246,6 +2315,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 5850,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2265,6 +2335,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2301,6 +2372,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 6500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2358,6 +2430,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 6300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2431,6 +2504,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 7500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2508,6 +2582,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 7500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2542,6 +2617,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2692,6 +2768,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2710,6 +2787,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2765,6 +2843,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2783,6 +2862,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2839,6 +2919,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2858,6 +2939,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2876,6 +2958,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2913,6 +2996,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2931,6 +3015,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2949,6 +3034,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2968,6 +3054,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 12500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2986,6 +3073,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 12500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3041,6 +3129,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 12500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3059,6 +3148,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 12500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3140,6 +3230,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3158,6 +3249,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3215,6 +3307,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3233,6 +3326,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3327,6 +3421,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3345,6 +3440,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3429,6 +3525,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3465,6 +3562,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3520,6 +3618,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3539,6 +3638,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3558,6 +3658,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -3598,6 +3699,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4138,6 +4240,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4379,6 +4482,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4396,6 +4500,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4413,6 +4518,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4430,6 +4536,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4448,6 +4555,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4483,6 +4591,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4501,6 +4610,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },

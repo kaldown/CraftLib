@@ -84,6 +84,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -101,6 +102,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -118,6 +120,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -135,6 +138,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -153,6 +157,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -169,6 +174,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -185,6 +191,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -201,6 +208,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -219,6 +227,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -235,6 +244,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -253,6 +263,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 400,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -273,6 +284,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -291,6 +303,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 400,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -309,6 +322,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -325,6 +339,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -343,6 +358,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 650,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -362,6 +378,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -379,6 +396,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -397,6 +415,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -433,6 +452,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -449,6 +469,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -469,6 +490,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -542,6 +564,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 1200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -577,6 +600,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 1500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -647,6 +671,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 2000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -663,6 +688,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 2000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -681,6 +707,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 2000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -700,6 +727,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -738,6 +766,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -773,6 +802,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 3000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -790,6 +820,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -825,6 +856,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 3000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -862,6 +894,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 3500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -899,6 +932,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 3500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -916,6 +950,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 4000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -953,6 +988,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 4000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -970,6 +1006,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1063,6 +1100,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1080,6 +1118,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1098,6 +1137,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1137,6 +1177,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1155,6 +1196,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 12000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1172,6 +1214,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1228,6 +1271,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1245,6 +1289,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1550,6 +1595,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -1567,6 +1613,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -1584,6 +1631,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -1715,6 +1763,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 25000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -1863,6 +1912,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -1960,6 +2010,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -1977,6 +2028,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 8500,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -1994,6 +2046,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2011,6 +2064,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 30000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2028,6 +2082,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 30000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2046,6 +2101,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 8500,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2643,6 +2699,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -2760,6 +2817,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 30000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -3463,6 +3521,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Jewelcrafting Trainer",
+            trainingCost = 30000,
         },
         expansion = C.EXPANSION.TBC,
     },

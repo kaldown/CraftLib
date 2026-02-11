@@ -34,6 +34,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -101,6 +102,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -119,6 +121,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -135,6 +138,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -153,6 +157,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 50,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -169,6 +174,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -188,6 +194,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -207,6 +214,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -223,6 +231,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -243,6 +252,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -295,6 +305,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -313,6 +324,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -347,6 +359,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -364,6 +377,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -382,6 +396,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -398,6 +413,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -418,6 +434,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -434,6 +451,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -469,6 +487,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -488,6 +507,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -505,6 +525,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -522,6 +543,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -557,6 +579,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -575,6 +598,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -591,6 +615,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 300,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -607,6 +632,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -627,6 +653,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 600,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -645,6 +672,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -662,6 +690,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -681,6 +710,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 800,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -699,6 +729,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -716,6 +747,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -734,6 +766,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 200,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -750,6 +783,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -767,6 +801,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -822,6 +857,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -840,6 +876,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -879,6 +916,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -897,6 +935,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -915,6 +954,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -933,6 +973,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -951,6 +992,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -991,6 +1033,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1082,6 +1125,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1099,6 +1143,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1116,6 +1161,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1155,6 +1201,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1264,6 +1311,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1321,6 +1369,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 1250,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1436,6 +1485,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 7500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1474,6 +1524,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 7500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1531,6 +1582,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1720,6 +1772,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1736,6 +1789,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1752,6 +1806,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1769,6 +1824,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1786,6 +1842,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1803,6 +1860,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 2500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1822,6 +1880,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 7500,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1839,6 +1898,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1856,6 +1916,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1890,6 +1951,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1925,6 +1987,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -1942,6 +2005,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 5000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2072,6 +2136,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2124,6 +2189,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2141,6 +2207,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2161,6 +2228,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2212,6 +2280,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2234,6 +2303,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2311,6 +2381,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2371,6 +2442,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2410,6 +2482,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2426,6 +2499,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2443,6 +2517,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2459,6 +2534,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2553,6 +2629,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2587,6 +2664,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2604,6 +2682,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2621,6 +2700,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2638,6 +2718,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2655,6 +2736,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2870,6 +2952,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -2887,6 +2970,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4652,6 +4736,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4668,6 +4753,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4685,6 +4771,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4701,6 +4788,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4718,6 +4806,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4736,6 +4825,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -4752,6 +4842,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 15000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4768,6 +4859,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 18000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4784,6 +4876,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 18000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4800,6 +4893,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4816,6 +4910,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4832,6 +4927,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4848,6 +4944,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 20000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4864,6 +4961,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 22000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4880,6 +4978,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 22000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4896,6 +4995,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 25000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4929,6 +5029,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 25000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4981,6 +5082,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 40000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -4999,6 +5101,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 40000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5016,6 +5119,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 40000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5033,6 +5137,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 40000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5051,6 +5156,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 40000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5068,6 +5174,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 40000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5085,6 +5192,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 40000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5102,6 +5210,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 40000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5311,6 +5420,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5330,6 +5440,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5348,6 +5459,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5366,6 +5478,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5385,6 +5498,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5404,6 +5518,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5423,6 +5538,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 100000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -5482,6 +5598,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 50000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6362,6 +6479,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6380,6 +6498,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6398,6 +6517,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6416,6 +6536,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6434,6 +6555,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6452,6 +6574,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6470,6 +6593,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6488,6 +6612,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 250000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6505,6 +6630,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6522,6 +6648,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6539,6 +6666,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6556,6 +6684,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6573,6 +6702,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6590,6 +6720,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6607,6 +6738,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500000,
         },
         expansion = C.EXPANSION.TBC,
     },
@@ -6624,6 +6756,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+            trainingCost = 500000,
         },
         expansion = C.EXPANSION.TBC,
     },

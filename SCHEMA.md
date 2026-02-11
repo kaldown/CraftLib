@@ -91,6 +91,7 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
 {
     type = "trainer",
     npcName = "Any Cooking Trainer",  -- Generic trainer name
+    trainingCost = 5000,              -- Cost in copper (optional, nil if unknown)
 }
 ```
 
