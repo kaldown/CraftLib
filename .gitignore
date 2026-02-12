@@ -27,6 +27,9 @@ Data/Sources/*/*.json
 # DB2 artifacts (downloaded from wago.tools)
 artifacts/
 
+# Python
+__pycache__/
+
 # Build artifacts
 *.zip
 *.tar.gz
