@@ -5,7 +5,12 @@
 
 If you find this useful, consider [supporting development](https://www.paypal.com/donate/?hosted_button_id=FG4KES3HNPLVG).
 
-Other addons: [LazyProf](https://www.curseforge.com/wow/addons/lazyprof) - Profession leveling optimizer | [Silencer](https://www.curseforge.com/wow/addons/silencer-whispers) - Whisper gatekeeper
+Other addons:
+- [LazyProf](https://www.curseforge.com/wow/addons/lazyprof) - Profession leveling optimizer
+- [VendorSniper](https://www.curseforge.com/wow/addons/vendorsniper) - Vendor restock sniper
+- [Silencer](https://www.curseforge.com/wow/addons/silencer-whispers) - Whisper gatekeeper
+- [PickMe](https://www.curseforge.com/wow/addons/pickme) - LFG listing browser
+- [EyesOnMe](https://www.curseforge.com/wow/addons/eyesonme) - PvP targeting awareness
 
 ---
 
