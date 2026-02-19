@@ -2,7 +2,7 @@
 
 [![CurseForge](https://img.shields.io/badge/CurseForge-CraftLib-orange)](https://www.curseforge.com/wow/addons/craftlib)
 [![Wago](https://img.shields.io/badge/Wago-CraftLib-c1272d)](https://addons.wago.io/addons/craftlib)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: All Rights Reserved](https://img.shields.io/badge/License-All_Rights_Reserved-red.svg)](LICENSE)
 [![PayPal](https://img.shields.io/badge/Donate-PayPal-00457C?logo=paypal&logoColor=white)](https://www.paypal.com/donate/?hosted_button_id=FG4KES3HNPLVG)
 
 If you find this useful, consider [supporting development](https://www.paypal.com/donate/?hosted_button_id=FG4KES3HNPLVG).
@@ -148,4 +148,4 @@ Verified sources are stored in `Data/Sources/TBC/*.json` (gitignored). 51 remove
 
 ## License
 
-MIT - See [LICENSE](LICENSE) for details.
+All Rights Reserved - See [LICENSE](LICENSE) for details.

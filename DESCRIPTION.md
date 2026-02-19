@@ -1,13 +1,13 @@
 [![CurseForge](https://img.shields.io/badge/CurseForge-CraftLib-orange)](https://www.curseforge.com/wow/addons/craftlib)
 [![Wago](https://img.shields.io/badge/Wago-CraftLib-c1272d)](https://addons.wago.io/addons/craftlib)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: All Rights Reserved](https://img.shields.io/badge/License-All_Rights_Reserved-red.svg)](LICENSE)
 [![PayPal](https://img.shields.io/badge/Donate-PayPal-00457C?logo=paypal&logoColor=white)](https://www.paypal.com/donate/?hosted_button_id=FG4KES3HNPLVG)
 
 If you find this useful, consider [supporting development](https://www.paypal.com/donate/?hosted_button_id=FG4KES3HNPLVG).
 
 Other addons:
 - [LazyProf](https://www.curseforge.com/wow/addons/lazyprof) - Profession leveling optimizer
-- [VendorSniper](https://www.curseforge.com/wow/addons/vendorsniper) - Vendor restock sniper
+- [VendorSniper](https://addons.wago.io/addons/vendorsniper) - Vendor restock sniper
 - [Silencer](https://www.curseforge.com/wow/addons/silencer-whispers) - Whisper gatekeeper
 - [PickMe](https://www.curseforge.com/wow/addons/pickme) - LFG listing browser
 - [EyesOnMe](https://www.curseforge.com/wow/addons/eyesonme) - PvP targeting awareness
