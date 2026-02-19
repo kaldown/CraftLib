@@ -2,11 +2,11 @@
 ## Title: CraftLib
 ## Notes: Comprehensive crafting recipe database for WoW addons
 ## Author: kaldown
-## Version: 0.3.0
+## Version: 0.4.0
 ## IconTexture: Interface\AddOns\CraftLib\icon
 ## SavedVariables: CraftLibDB
 ## X-SavedVariables-Note: Reserved for future use (not currently written to)
-## X-License: MIT
+## X-License: All Rights Reserved
 ## X-Curse-Project-ID: 1438834
 ## X-Wago-ID: rNkyyOKa
 
