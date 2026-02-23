@@ -23,7 +23,11 @@
       { "spellId": 16987, "name": "Darkspear", "notes": "No Wowhead data" }
     ],
     "Enchanting": [
-      { "spellId": 28021, "name": "Arcane Dust", "notes": "Briefly in Beta, removed" }
+      { "spellId": 28021, "name": "Arcane Dust", "notes": "Briefly in Beta, removed" },
+      { "spellId": 28022, "name": "Large Prismatic Shard", "notes": "Material conversion, always gray, never gives skill-ups" },
+      { "spellId": 42615, "name": "Small Prismatic Shard", "notes": "Material conversion, always gray, never gives skill-ups" },
+      { "spellId": 45765, "name": "Void Shatter", "notes": "Material conversion, always gray, never gives skill-ups" },
+      { "spellId": 46578, "name": "Enchant Weapon - Deathfrost", "notes": "Seasonal event recipe (Midsummer), not reliably obtainable" }
     ],
     "Engineering": [
       { "spellId": 12719, "name": "Explosive Arrow", "notes": "Never implemented in TBC" },
