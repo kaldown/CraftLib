@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Enchantment recipes (Enchant Bracer, Enchant Boots, etc.) - previously only item-producing recipes (rods, wands, oils) were included
+- Support for recipes without crafted items (`itemId` is now optional)
+- 4 additional removed recipes (55 total): material conversions and seasonal event recipe
+
 ## [0.3.0] - 2026-02-11
 
 ### Added

@@ -33,7 +33,7 @@ All 10 professions are complete with Wowhead-verified difficulty data:
 | Alchemy | 182 | Complete |
 | Blacksmithing | 375 | Complete |
 | Cooking | 116 | Complete |
-| Enchanting | 30 | Complete |
+| Enchanting | 218 | Complete |
 | Engineering | 239 | Complete |
 | First Aid | 15 | Complete |
 | Jewelcrafting | 257 | Complete |
@@ -128,7 +128,7 @@ python scripts/fetch_wowhead_sources.py --profession FirstAid
 python scripts/generate_recipes.py --version 2.5.5.65463 --profession FirstAid
 ```
 
-Verified sources are stored in `Data/Sources/TBC/*.json` (gitignored). 51 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`).
+Verified sources are stored in `Data/Sources/TBC/*.json` (gitignored). 55 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`).
 
 ### Data Sources
 

@@ -66,7 +66,7 @@ end
     -- Required fields
     id = 3275,                    -- Spell ID (unique identifier)
     name = "Linen Bandage",       -- Recipe name
-    itemId = 1251,                -- Crafted item ID
+    itemId = 1251,                -- Crafted item ID (nil for enchantments)
     skillRequired = 1,            -- Minimum skill to learn
     skillRange = {                -- Difficulty thresholds
         orange = 1,               -- 100% skillup below this level
@@ -81,6 +81,8 @@ end
     expansion = 1,                -- Which expansion added this
 }
 ```
+
+> **Note:** `itemId` is `nil` for enchanting recipes that apply effects to gear rather than creating items. Consumer addons should handle `recipe.itemId` being `nil`.
 
 ### Source Object
 
