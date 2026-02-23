@@ -178,10 +178,12 @@ def extract_recipes(
         if removed and spell_id in removed:
             continue
 
-        # Get crafted item
+        # Get crafted item (optional - enchantments don't create items)
         item_id = indexes["crafted_items"].get(spell_id)
-        if not item_id:
-            continue  # Not a crafting recipe
+
+        # Must have reagents to be a crafting/enchanting recipe
+        if not indexes["spell_reagents"].get(spell_id):
+            continue
 
         # Skip recipes not in verified sources (likely removed/never-implemented)
         if verified_sources:
@@ -271,8 +273,6 @@ def extract_recipes(
         recipe = {
             "id": int(spell_id),
             "name": indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}"),
-            "itemId": int(item_id),
-            "itemName": indexes["item_names"].get(item_id, f"Unknown-{item_id}"),
             "skillRequired": skill_required,
             "skillRange": {
                 "orange": orange,
@@ -284,6 +284,10 @@ def extract_recipes(
             "expansion": expansion,
             "recipe_item": indexes["recipe_items"].get(spell_id),
         }
+
+        if item_id:
+            recipe["itemId"] = int(item_id)
+            recipe["itemName"] = indexes["item_names"].get(item_id, f"Unknown-{item_id}")
 
         # Source from verified sources — REQUIRED
         if verified_recipe:
@@ -358,9 +362,11 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int) -> str:
             source_lines.append(f'            itemId = {source["itemId"]},')
             source_lines.append(f'            cost = {source["cost"]},')
         elif source["type"] == "DROP":
-            source_lines.append(f'            itemId = {source["itemId"]},')
+            if "itemId" in source:
+                source_lines.append(f'            itemId = {source["itemId"]},')
         elif source["type"] == "QUEST":
-            source_lines.append(f'            itemId = {source["itemId"]},')
+            if "itemId" in source:
+                source_lines.append(f'            itemId = {source["itemId"]},')
         source_str = "\n".join(source_lines)
 
         # Skill range
@@ -373,7 +379,8 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int) -> str:
         lines.append("    {")
         lines.append(f"        id = {recipe['id']},")
         lines.append(f'        name = "{escaped_recipe_name}",')
-        lines.append(f"        itemId = {recipe['itemId']},")
+        if recipe.get("itemId"):
+            lines.append(f"        itemId = {recipe['itemId']},")
         lines.append(f"        skillRequired = {recipe['skillRequired']},")
         lines.append(f"        skillRange = {{ orange = {sr['orange']}, yellow = {sr['yellow']}, green = {sr['green']}, gray = {sr['gray']} }},")
         lines.append("        reagents = {")

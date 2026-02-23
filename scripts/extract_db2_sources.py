@@ -98,14 +98,31 @@ def build_indexes(data_dir: Path) -> dict:
             if spell_id:
                 indexes["crafted_items"][spell_id] = item_id
 
+    # Spell reagents: spell_id -> True (has reagents)
+    spell_reagents_csv = load_csv(data_dir / "SpellReagents.csv")
+    indexes["has_reagents"] = set()
+    for row in spell_reagents_csv:
+        spell_id = row.get("SpellID") or row.get("ID")
+        if not spell_id:
+            continue
+        # Check if any reagent slot is populated
+        for i in range(8):
+            item_id = row.get(f"Reagent_{i}", "0")
+            count = row.get(f"ReagentCount_{i}", "0")
+            if item_id and item_id != "0" and count and count != "0":
+                indexes["has_reagents"].add(spell_id)
+                break
+
     # Recipe items (ItemEffect: items that teach spells)
+    # Only include items that exist in ItemSparse (some old items were removed)
     item_effects = load_csv(data_dir / "ItemEffect.csv")
     indexes["recipe_items"] = {}
     for row in item_effects:
         spell_id = row.get("SpellID")
         item_id = row.get("ParentItemID")
         if spell_id and item_id and item_id != "0":
-            indexes["recipe_items"][spell_id] = item_id
+            if item_id in indexes["item_details"]:
+                indexes["recipe_items"][spell_id] = item_id
 
     # SkillLineAbility
     indexes["skill_line_abilities"] = load_csv(data_dir / "SkillLineAbility.csv")
@@ -191,8 +208,8 @@ def extract_profession_sources(
         if not spell_id:
             continue
 
-        # Skip non-crafting recipes
-        if spell_id not in indexes["crafted_items"]:
+        # Include recipes that either create items OR have reagents (enchantments)
+        if spell_id not in indexes["crafted_items"] and spell_id not in indexes["has_reagents"]:
             continue
 
         name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
