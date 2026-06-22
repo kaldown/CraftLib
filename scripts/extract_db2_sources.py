@@ -264,7 +264,8 @@ def main() -> int:
     args = parser.parse_args()
 
     # Map expansion to folder name
-    exp_folder = {"classic": "Classic", "tbc": "TBC", "wotlk": "WotLK", "cata": "Cata"}.get(
+    exp_folder = {"sod": "SoD", "classic": "Classic", "tbc": "TBC",
+                  "wotlk": "WotLK", "cata": "Cata"}.get(
         args.expansion.lower(), args.expansion.upper()
     )
 
