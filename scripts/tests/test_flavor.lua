@@ -44,10 +44,20 @@ check("FLAVOR constants present", sod.Constants.FLAVOR.SOD == "SOD" and sod.Cons
 check("DetectFlavor returns SOD on season 2", sod:DetectFlavor() == "SOD")
 check("activeFlavor is SOD", sod:GetActiveFlavor() == "SOD")
 
+sod:RegisterProfession("a", { id = 1, name = "A", flavor = "SOD", milestones = {75}, recipes = {} })
+sod:RegisterProfession("b", { id = 2, name = "B", milestones = {75}, recipes = {} }) -- no flavor => DEFAULT
+check("SOD dataset registers on SoD", sod:GetProfession("a") ~= nil)
+check("DEFAULT dataset skipped on SoD", sod:GetProfession("b") == nil)
+
 -- Scenario B: non-seasonal client (C_Seasons absent, e.g. TBC 2.5.5)
 local def = loadCraftLib(nil)
 check("DetectFlavor returns DEFAULT when C_Seasons absent", def:DetectFlavor() == "DEFAULT")
 check("activeFlavor is DEFAULT", def:GetActiveFlavor() == "DEFAULT")
+
+def:RegisterProfession("a", { id = 1, name = "A", flavor = "SOD", milestones = {75}, recipes = {} })
+def:RegisterProfession("b", { id = 2, name = "B", milestones = {75}, recipes = {} })
+check("SOD dataset skipped on DEFAULT", def:GetProfession("a") == nil)
+check("DEFAULT dataset registers on DEFAULT", def:GetProfession("b") ~= nil)
 
 -- Scenario C: plain Era / Hardcore (season present but not SoD)
 local era = loadCraftLib(0)

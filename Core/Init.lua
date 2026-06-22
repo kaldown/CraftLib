@@ -42,6 +42,12 @@ end
 -- @param professionKey string Unique key (e.g., "firstAid", "cooking")
 -- @param data table Profession data table
 function CraftLib:RegisterProfession(professionKey, data)
+    -- Skip datasets that do not match the running client's flavor.
+    -- Missing flavor field => DEFAULT (backward compatible with existing Data/TBC files).
+    if (data.flavor or self.Constants.FLAVOR.DEFAULT) ~= self.activeFlavor then
+        return
+    end
+
     if self.professions[professionKey] then
         -- Merge data if already exists (allows multi-file registration)
         local existing = self.professions[professionKey]
