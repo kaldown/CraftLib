@@ -21,3 +21,12 @@ def test_generate_lua_emits_flavor_and_sod_milestones():
     assert "milestones = { 75, 150, 225, 300 }," in lua
     assert "expansion = C.EXPANSION.SOD," in lua
     assert "-- Data/SoD/Tailoring/Recipes.lua" in lua
+
+
+def test_trivial_ranks_index_built_from_skilllineability():
+    data = {"SkillLineAbility": [
+        {"Spell": "2385", "SkillLine": "197",
+         "TrivialSkillLineRankLow": "45", "TrivialSkillLineRankHigh": "70"},
+    ]}
+    idx = gr.build_trivial_ranks(data)
+    assert idx["2385"] == (45, 70)

@@ -150,6 +150,23 @@ def build_indexes(data: dict) -> dict:
     return indexes
 
 
+def build_trivial_ranks(data: dict) -> dict:
+    """spell_id -> (yellow=TrivialLow, gray=TrivialHigh) from SkillLineAbility."""
+    out = {}
+    for row in data["SkillLineAbility"]:
+        spell_id = row.get("Spell")
+        if not spell_id:
+            continue
+        try:
+            low = int(row.get("TrivialSkillLineRankLow", "0"))
+            high = int(row.get("TrivialSkillLineRankHigh", "0"))
+        except ValueError:
+            continue
+        if high > 0:
+            out[spell_id] = (low, high)
+    return out
+
+
 def extract_recipes(
     data: dict,
     indexes: dict,
@@ -207,6 +224,14 @@ def extract_recipes(
         yellow = verified_difficulty["yellow"]
         green = verified_difficulty["green"]
         gray = verified_difficulty["gray"]
+
+        db2_ranks = indexes.get("trivial_ranks", {}).get(spell_id)
+        if db2_ranks:
+            db2_yellow, db2_gray = db2_ranks
+            if (yellow, gray) != (db2_yellow, db2_gray):
+                print(f"  CROSS-CHECK MISMATCH spell {spell_id}: "
+                      f"wowhead y/g={yellow}/{gray} vs db2={db2_yellow}/{db2_gray}",
+                      file=sys.stderr)
 
         # Determine skill_required (minimum skill to acquire AND craft this recipe)
         #
@@ -448,6 +473,7 @@ def main() -> int:
 
     # Build indexes
     indexes = build_indexes(data)
+    indexes["trivial_ranks"] = build_trivial_ranks(data)
     print(f"Built indexes: {len(indexes['spell_names'])} spells, "
           f"{len(indexes['item_names'])} items, "
           f"{len(indexes['recipe_items'])} recipe items", file=sys.stderr)
