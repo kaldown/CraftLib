@@ -31,3 +31,12 @@ def test_extract_listview_spells_parses_fixture():
     assert len(sample["colors"]) == 4
     assert "learnedat" in sample
     assert all(isinstance(k, int) for k in rows)
+
+
+def test_difficulty_from_colors_maps_and_normalizes():
+    # SoD epic: orange sentinel 0, learnedat carried separately
+    d = fw._difficulty_from_colors([0, 285, 295, 305], "sod")
+    assert d == {"orange": 0, "yellow": 285, "green": 295, "gray": 305,
+                 "certainty": "WOWHEAD", "expansion": "sod"}
+    d2 = fw._difficulty_from_colors([1, 55, 75, 95], "sod")
+    assert d2["orange"] == 1 and d2["gray"] == 95

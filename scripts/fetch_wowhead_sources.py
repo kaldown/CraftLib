@@ -41,6 +41,18 @@ WOWHEAD_SOURCE_TYPES = {
 }
 
 
+# Profession name/key -> Wowhead /classic/ profession-page slug
+PROFESSION_SLUGS = {
+    "alchemy": "alchemy", "blacksmithing": "blacksmithing", "enchanting": "enchanting",
+    "engineering": "engineering", "leatherworking": "leatherworking", "tailoring": "tailoring",
+    "cooking": "cooking", "firstaid": "first-aid", "mining": "mining",
+}
+
+# Wowhead URL subdomain per --expansion value
+WOWHEAD_SUBDOMAIN = {"sod": "classic", "classic": "classic", "tbc": "tbc",
+                     "wotlk": "wotlk", "cata": "cata"}
+
+
 def _fetch_page(url: str, retries: int = 3) -> str | None:
     """Fetch a web page (gzip-aware, retry on transient 403/503)."""
     headers = {
@@ -319,6 +331,86 @@ def _resolve_source(recipe: dict, wh: dict) -> dict | None:
     return None
 
 
+def _difficulty_from_colors(colors: list[int], expansion: str) -> dict:
+    """Map a Wowhead colors array [orange,yellow,green,gray] to a difficulty dict."""
+    return {
+        "orange": colors[0], "yellow": colors[1], "green": colors[2], "gray": colors[3],
+        "certainty": "WOWHEAD", "expansion": expansion,
+    }
+
+
+def process_profession_listview(sources_file, slug: str, expansion: str, dry_run: bool) -> int:
+    """One-request-per-profession Wowhead pass.
+
+    Fills difficulty + seasonId/phaseId + resolves source for every recipe in the
+    Sources JSON using a single profession-listview page.
+    """
+    with open(sources_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    subdomain = WOWHEAD_SUBDOMAIN.get(expansion, "classic")
+    url = f"https://www.wowhead.com/{subdomain}/spells/professions/{slug}"
+    print(f"Fetching listview: {url}", file=sys.stderr)
+    content = _fetch_page(url)
+    if not content:
+        print("  FAILED to fetch profession page", file=sys.stderr)
+        return 2
+
+    listview = _extract_listview_spells(content)
+    print(f"  Listview rows: {len(listview)}", file=sys.stderr)
+    if dry_run:
+        print(f"  Dry run - {len(data['recipes'])} recipes in sources, "
+              f"{sum(1 for sid in data['recipes'] if int(sid) in listview)} matched.",
+              file=sys.stderr)
+        return 0
+
+    filled, missing, seasonal = 0, [], 0
+    for spell_id, recipe in data["recipes"].items():
+        row = listview.get(int(spell_id))
+        if not row:
+            missing.append(spell_id)
+            continue
+        colors = row.get("colors")
+        if colors and len(colors) == 4:
+            recipe["difficulty"] = _difficulty_from_colors(colors, expansion)
+            filled += 1
+        # Capture SoD flag + comprehensive wowhead data
+        wh = recipe.setdefault("wowhead", {})
+        for src, dst in (("learnedat", "learnedAt"), ("nskillup", "numSkillUps"),
+                         ("quality", "quality"), ("reagents", "reagents"),
+                         ("creates", "creates"), ("source", "source"),
+                         ("trainingcost", "trainingCost")):
+            if src in row:
+                wh[dst] = row[src]
+        wh["fetchedAt"] = date.today().isoformat()
+        if row.get("seasonId"):
+            recipe["seasonId"] = row["seasonId"]
+            seasonal += 1
+        if row.get("phaseId"):
+            recipe["phaseId"] = row["phaseId"]
+        new_source = _resolve_source(recipe, wh)
+        if new_source:
+            recipe["source"] = new_source
+
+    with open(sources_file, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+
+    print(f"  Filled difficulty: {filled}; seasonal(seasonId): {seasonal}; "
+          f"no listview match: {len(missing)}", file=sys.stderr)
+    if missing:
+        print(f"  Unmatched spell ids (check removed_recipes / per-spell): {missing[:20]}",
+              file=sys.stderr)
+
+    # Residual: recipes still PENDING (listview lacked source[]) -> per-spell fallback.
+    # generate_recipes.py raises on PENDING sources, so resolve them here.
+    residual = [int(sid) for sid, r in data["recipes"].items()
+                if r.get("source", {}).get("certainty") == "PENDING"]
+    if residual:
+        print(f"  Residual PENDING sources: {len(residual)} -> per-spell fallback", file=sys.stderr)
+        process_profession(sources_file, False, residual, "classic", False)
+    return 0
+
+
 def _needs_fetch(recipe: dict, force: bool) -> bool:
     """Determine if a recipe needs Wowhead data fetched."""
     if force:
@@ -511,7 +603,8 @@ def main() -> int:
     args = parser.parse_args()
 
     # Map expansion subdomain to folder name
-    exp_folder = {"classic": "Classic", "tbc": "TBC", "wotlk": "WotLK", "cata": "Cata"}.get(
+    exp_folder = {"sod": "SoD", "classic": "Classic", "tbc": "TBC",
+                  "wotlk": "WotLK", "cata": "Cata"}.get(
         args.expansion.lower(), args.expansion.upper()
     )
 
@@ -523,6 +616,13 @@ def main() -> int:
         print(f"Sources file not found: {sources_file}", file=sys.stderr)
         print("Run extract_db2_sources.py first.", file=sys.stderr)
         return 1
+
+    if args.expansion.lower() == "sod":
+        slug = PROFESSION_SLUGS.get(prof_name.lower())
+        if not slug:
+            print(f"No Wowhead slug for profession: {args.profession}", file=sys.stderr)
+            return 1
+        return process_profession_listview(sources_file, slug, "sod", args.dry_run)
 
     return process_profession(sources_file, args.dry_run, args.spells, args.expansion, args.force)
 
