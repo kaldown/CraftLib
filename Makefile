@@ -69,3 +69,21 @@ update-data:
 	@VERSION=$$(ls -1 $(DB2_DIR)/artifacts | sort -V | tail -1) && \
 	echo "Using version: $$VERSION" && \
 	$(PYTHON) scripts/generate_recipes.py --version $$VERSION --expansion $(EXPANSION)
+
+SOD_VERSION ?= 1.15.8.67156
+SOD_PROFS := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tailoring Cooking FirstAid
+
+# Fetch the SoD/Era DB2 build
+sod-fetch:
+	@make -C $(DB2_DIR) fetch VERSION=$(SOD_VERSION)
+
+# Full SoD pipeline for all professions: extract -> listview verify -> generate
+sod-all: sod-fetch
+	@for p in $(SOD_PROFS); do \
+	  echo "=== $$p ==="; \
+	  $(PYTHON) scripts/extract_db2_sources.py --version $(SOD_VERSION) --profession $$p --expansion sod; \
+	  $(PYTHON) scripts/fetch_wowhead_sources.py --profession $$p --expansion sod; \
+	  $(PYTHON) scripts/generate_recipes.py --version $(SOD_VERSION) --flavor sod \
+	    --data-dir $(DB2_DIR)/artifacts --profession $$p; \
+	  sleep 2; \
+	done
