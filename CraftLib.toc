@@ -25,3 +25,13 @@ Data/TBC/Enchanting/Recipes.lua
 Data/TBC/Jewelcrafting/Recipes.lua
 Data/TBC/Leatherworking/Recipes.lua
 Data/TBC/Tailoring/Recipes.lua
+
+# Data - SoD (registers only on a Season of Discovery client; see RegisterProfession flavor guard)
+Data/SoD/FirstAid/Recipes.lua
+Data/SoD/Cooking/Recipes.lua
+Data/SoD/Engineering/Recipes.lua
+Data/SoD/Alchemy/Recipes.lua
+Data/SoD/Blacksmithing/Recipes.lua
+Data/SoD/Enchanting/Recipes.lua
+Data/SoD/Leatherworking/Recipes.lua
+Data/SoD/Tailoring/Recipes.lua
