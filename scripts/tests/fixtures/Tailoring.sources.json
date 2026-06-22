@@ -1,0 +1,13 @@
+{
+  "profession": "tailoring",
+  "version": "1.15.8.67156",
+  "generated": "2026-06-21",
+  "recipes": {
+    "2385": {
+      "name": "Brown Linen Vest",
+      "source": { "type": "TRAINER", "certainty": "WOWHEAD", "trainingCost": 50 },
+      "difficulty": { "orange": 10, "yellow": 45, "green": 57, "gray": 70,
+                      "certainty": "WOWHEAD", "expansion": "sod" }
+    }
+  }
+}

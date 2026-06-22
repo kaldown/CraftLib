@@ -16,6 +16,7 @@ CraftLib.Constants = {
         SHADOWLANDS = 9,
         DRAGONFLIGHT = 10,
         TWW = 11,
+        SOD = 12,  -- Season of Discovery (parallel ruleset; selected by flavor, not ordinal)
     },
 
     -- Recipe source types

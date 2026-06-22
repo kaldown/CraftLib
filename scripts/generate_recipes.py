@@ -156,6 +156,7 @@ def extract_recipes(
     skill_line_id: int,
     verified_sources: dict = None,
     removed: set[str] = None,
+    force_expansion: str | None = None,
 ) -> tuple[list[dict], list[dict]]:
     """Extract recipes for a profession from SkillLineAbility.
 
@@ -197,7 +198,7 @@ def extract_recipes(
         verified_recipe = verified_sources.get(spell_id) if verified_sources else None
         verified_difficulty = verified_recipe.get("difficulty") if verified_recipe else None
 
-        if not verified_difficulty or verified_difficulty.get("certainty") != "WOWHEAD":
+        if not verified_difficulty or verified_difficulty.get("certainty") not in ("WOWHEAD", "CRAFTDUMP"):
             spell_name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
             skipped_recipes.append({"id": spell_id, "name": spell_name, "reason": "no WOWHEAD difficulty"})
             continue
@@ -257,7 +258,9 @@ def extract_recipes(
 
         # Determine expansion based on skill required
         # Vanilla: 1-300, TBC: 301-375, WotLK: 376-450, Cata: 451-525, MoP: 526-600
-        if skill_required <= 300:
+        if force_expansion:
+            expansion = force_expansion
+        elif skill_required <= 300:
             expansion = "VANILLA"
         elif skill_required <= 375:
             expansion = "TBC"
@@ -317,9 +320,10 @@ def extract_recipes(
     return recipes, skipped_recipes
 
 
-def generate_lua(recipes: list[dict], profession: dict, expansion: int) -> str:
+def generate_lua(recipes: list[dict], profession: dict, expansion: int, flavor=None) -> str:
     """Generate Lua code for recipes."""
-    exp_name = {1: "Classic", 2: "TBC", 3: "WotLK", 4: "Cata"}.get(expansion, "TBC")
+    is_sod = (flavor == "sod")
+    exp_name = "SoD" if is_sod else {1: "Classic", 2: "TBC", 3: "WotLK", 4: "Cata"}.get(expansion, "TBC")
     prof_name = profession["name"]
     prof_key = profession["key"]
     prof_constant = profession["constant"]
@@ -397,18 +401,22 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int) -> str:
     lines.append("")
 
     # Milestones based on expansion
-    if expansion == 2:
+    if is_sod:
+        milestones = "{ 75, 150, 225, 300 }"
+    elif expansion == 2:
         milestones = "{ 75, 150, 225, 300, 375 }"
     else:
         milestones = "{ 75, 150, 225, 300 }"
 
     # Highest expansion in recipes
-    max_exp = "TBC" if any(r["expansion"] == "TBC" for r in recipes) else "VANILLA"
+    max_exp = "SOD" if is_sod else ("TBC" if any(r["expansion"] == "TBC" for r in recipes) else "VANILLA")
 
     lines.append(f'CraftLib:RegisterProfession("{prof_key}", {{')
     lines.append(f"    id = C.PROFESSION_ID.{prof_constant},")
     lines.append(f'    name = "{prof_name}",')
     lines.append(f"    expansion = C.EXPANSION.{max_exp},")
+    if is_sod:
+        lines.append('    flavor = "SOD",')
     lines.append(f"    milestones = {milestones},")
     lines.append("    recipes = recipes,")
     lines.append("})")
@@ -426,6 +434,7 @@ def main() -> int:
     parser.add_argument("--output-dir", type=Path, default=Path("Data"),
                         help="Output directory for Lua files")
     parser.add_argument("--profession", help="Generate only this profession (optional)")
+    parser.add_argument("--flavor", help="Data flavor (e.g. 'sod'); selects SoD folder + flavor tag")
     args = parser.parse_args()
 
     # Build data path
@@ -444,10 +453,13 @@ def main() -> int:
           f"{len(indexes['recipe_items'])} recipe items", file=sys.stderr)
 
     # Expansion name for paths
-    exp_name = {1: "Classic", 2: "TBC", 3: "WotLK", 4: "Cata"}.get(args.expansion, "TBC")
+    is_sod = (args.flavor or "").lower() == "sod"
+    exp_name = "SoD" if is_sod else {1: "Classic", 2: "TBC", 3: "WotLK", 4: "Cata"}.get(args.expansion, "TBC")
+    force_expansion = "SOD" if is_sod else None
 
-    # Load removed recipes
-    removed_path = Path(__file__).parent.parent / "Data" / "Sources" / "removed_recipes.json"
+    # Load removed recipes (flavor-specific; do NOT reuse the TBC list for SoD)
+    removed_name = "removed_recipes.sod.json" if is_sod else "removed_recipes.json"
+    removed_path = Path(__file__).parent.parent / "Data" / "Sources" / removed_name
     removed_spells: dict[str, set[str]] = {}
     if removed_path.exists():
         with open(removed_path) as f:
@@ -455,7 +467,10 @@ def main() -> int:
         for prof_name, prof_recipes in removed_data.get("recipes", {}).items():
             removed_spells[prof_name] = {str(r["spellId"]) for r in prof_recipes}
         total = sum(len(s) for s in removed_spells.values())
-        print(f"Loaded {total} removed recipes", file=sys.stderr)
+        print(f"Loaded {total} removed recipes from {removed_name}", file=sys.stderr)
+    elif is_sod:
+        print("No SoD removed-recipes file (Data/Sources/removed_recipes.sod.json); none applied.",
+              file=sys.stderr)
 
     # Load verified sources (per-expansion, per-profession)
     sources_dir = Path(__file__).parent.parent / "Data" / "Sources" / exp_name
@@ -482,7 +497,7 @@ def main() -> int:
         try:
             prof_removed = removed_spells.get(profession["name"], set())
             recipes, skipped = extract_recipes(
-                data, indexes, skill_line_id, verified_sources, prof_removed
+                data, indexes, skill_line_id, verified_sources, prof_removed, force_expansion
             )
         except ValueError as e:
             print(f"ERROR: {e}", file=sys.stderr)
@@ -499,7 +514,7 @@ def main() -> int:
             continue
 
         # Generate Lua
-        lua_code = generate_lua(recipes, profession, args.expansion)
+        lua_code = generate_lua(recipes, profession, args.expansion, args.flavor)
 
         # Write output
         output_dir = args.output_dir / exp_name / profession["name"].replace(" ", "")
