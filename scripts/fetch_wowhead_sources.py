@@ -48,6 +48,9 @@ PROFESSION_SLUGS = {
     "cooking": "cooking", "firstaid": "first-aid", "mining": "mining",
 }
 
+# Secondary skills live under /spells/secondary-skills/<slug>, not /spells/professions/<slug>
+SECONDARY_SKILL_SLUGS = {"cooking", "first-aid", "fishing"}
+
 # Wowhead URL subdomain per --expansion value
 WOWHEAD_SUBDOMAIN = {"sod": "classic", "classic": "classic", "tbc": "tbc",
                      "wotlk": "wotlk", "cata": "cata"}
@@ -349,7 +352,8 @@ def process_profession_listview(sources_file, slug: str, expansion: str, dry_run
         data = json.load(f)
 
     subdomain = WOWHEAD_SUBDOMAIN.get(expansion, "classic")
-    url = f"https://www.wowhead.com/{subdomain}/spells/professions/{slug}"
+    category = "secondary-skills" if slug in SECONDARY_SKILL_SLUGS else "professions"
+    url = f"https://www.wowhead.com/{subdomain}/spells/{category}/{slug}"
     print(f"Fetching listview: {url}", file=sys.stderr)
     content = _fetch_page(url)
     if not content:
