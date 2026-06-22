@@ -22,6 +22,38 @@ DB2 (wago.tools)          Wowhead
     Data/TBC/[Profession]/Recipes.lua
 ```
 
+## Season of Discovery (SoD)
+
+SoD data is generated **wholesale** from the latest `wow_classic_era` DB2 build (the Era build
+*is* the live SoD data) plus Wowhead's `/classic/` profession listview. The whole flow is one
+command:
+
+```bash
+make sod-all
+```
+
+This runs, for every profession: `extract_db2_sources.py --expansion sod` -> `fetch_wowhead_sources.py
+--expansion sod` -> `generate_recipes.py --flavor sod`, writing `Data/SoD/<Profession>/Recipes.lua`.
+
+Key differences from the TBC flow:
+
+- **Pinned build:** `1.15.8.67156` (set via `SOD_VERSION` in the Makefile). Fetch it with
+  `make sod-fetch`.
+- **`--expansion sod` (fetcher):** a one-request-per-profession **listview** pass. A single
+  Wowhead profession page embeds every recipe's 4-color difficulty array, so ~300 per-spell
+  requests collapse to 1. Difficulty, `seasonId`/`phaseId` (the SoD-only flag), and source are
+  filled in that one pass. Secondary skills (Cooking, First Aid) are fetched from Wowhead's
+  `secondary-skills` category automatically.
+- **`--flavor sod` (generator):** writes `Data/SoD/`, tags every recipe `C.EXPANSION.SOD`, emits
+  `flavor = "SOD"`, and uses milestones `{ 75, 150, 225, 300 }` (cap 300, no 375).
+- **Cross-validation:** the generator checks Wowhead yellow/gray against DB2
+  `TrivialSkillLineRankLow`/`High` and logs `CROSS-CHECK MISMATCH` lines for review.
+- **Not yet in the TOC:** `Data/SoD/` is intentionally **not** wired into `CraftLib.toc` yet.
+  Runtime selection of the SoD bucket lands in a later stage; adding it now would merge SoD into
+  the default dataset.
+
+The rest of this guide covers the per-profession TBC flow.
+
 ## Step 1: Extract Sources from DB2
 
 Run the extraction script to get initial sources from DB2 data:
@@ -49,13 +81,15 @@ python scripts/fetch_wowhead_sources.py --profession [Profession]
 ## Step 3: Fetch Difficulty Levels
 
 **IMPORTANT:** DB2 does not contain accurate difficulty (orange) values. You MUST fetch from Wowhead.
+The fetcher is single-pass: the same `fetch_wowhead_sources.py` run that resolves sources (Step 2)
+also fills difficulty, so no separate flag is needed - just use the correct `--expansion`.
 
 ```bash
 # Preview
-python scripts/fetch_wowhead_sources.py --profession [Profession] --difficulty --dry-run
+python scripts/fetch_wowhead_sources.py --profession [Profession] --dry-run
 
-# Fetch all difficulty levels (use correct expansion!)
-python scripts/fetch_wowhead_sources.py --profession [Profession] --difficulty --expansion tbc
+# Fetch (difficulty + source in one pass; use correct expansion!)
+python scripts/fetch_wowhead_sources.py --profession [Profession] --expansion tbc
 ```
 
 This adds verified difficulty to each recipe:
@@ -128,15 +162,7 @@ Edit `CraftLib.toc`, add after existing data files:
 Data/TBC/[Profession]/Recipes.lua
 ```
 
-## Step 7: Validate Recipe Sources
-
-Run the validation script to detect any remaining issues:
-
-```bash
-python scripts/validate_sources.py --profession [Profession]
-```
-
-## Step 8: Test In-Game
+## Step 7: Test In-Game
 
 ```lua
 /reload
@@ -151,13 +177,13 @@ python scripts/validate_sources.py --profession [Profession]
 /dump CraftLib:GetRecipeBySpellId("professionKey", SPELL_ID)
 ```
 
-## Step 9: Update Documentation
+## Step 8: Update Documentation
 
 1. **README.md**: Update profession coverage table
 2. **CURSEFORGE.md**: Sync with README
 3. **CHANGELOG.md**: Add entry under `[Unreleased]`
 
-## Step 10: Commit
+## Step 9: Commit
 
 ```bash
 git add Data/TBC/[Profession]/ CraftLib.toc README.md CURSEFORGE.md CHANGELOG.md
@@ -171,7 +197,7 @@ git commit -m "feat(data): add [Profession] recipes for TBC"
 - Missing reagents in list
 - Incorrect skill ranges (always verify)
 - Not using constants for source types
-- **Marking vendor recipes as TRAINER** - Always run `validate_sources.py` after adding recipes
+- **Marking vendor recipes as TRAINER** - Verify trainable recipes resolve to TRAINER in the Sources JSON
 - Not specifying vendor locations for VENDOR sources
 - **Skipping difficulty fetch** - DB2 does not have orange values; calculated values are inaccurate for some recipes
 - **Relying on calculated difficulty** - Always fetch from Wowhead for accurate data

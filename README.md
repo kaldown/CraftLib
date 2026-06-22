@@ -143,9 +143,11 @@ Verified sources are stored in `Data/Sources/TBC/*.json` (gitignored). 55 remove
 ## Supported Game Versions
 
 - Classic Era
-- Season of Discovery
 - Anniversary
 - Hardcore
+
+> Season of Discovery recipe data is generated and bundled, but runtime selection of the SoD
+> dataset lands in a later release.
 
 ## License
 
