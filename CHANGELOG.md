@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Season of Discovery support: a SoD client now registers the SoD recipe dataset (`Data/SoD/`) instead of the Vanilla/TBC set. Detection is by `C_Seasons.GetActiveSeason()`; non-matching datasets are skipped at load via a new flavor guard in `RegisterProfession`. New API: `CraftLib:GetActiveFlavor()`.
+
 ## [0.5.0] - 2026-02-23
 
 ### Added
