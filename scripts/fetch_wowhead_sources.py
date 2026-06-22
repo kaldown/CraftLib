@@ -110,6 +110,32 @@ def _extract_spell_data(content: str, spell_id: int) -> dict | None:
     return None
 
 
+def _extract_listview_spells(content: str) -> dict[int, dict]:
+    """Parse the embedded `var listviewspells = [ ... ];` array.
+
+    Returns {spell_id: row_dict}. Each row carries (when present): colors
+    [orange,yellow,green,gray], learnedat, reagents, creates, source, seasonId,
+    phaseId, nskillup, quality. Non-craft profession-rank rows lack `colors`.
+    """
+    match = re.search(r"var listviewspells = (\[.*?\]);", content, re.DOTALL)
+    if not match:
+        return {}
+    raw = match.group(1)
+    for text in (raw, _fix_js_object(raw)):
+        try:
+            rows = json.loads(text)
+            break
+        except json.JSONDecodeError:
+            rows = None
+    if not rows:
+        return {}
+    out: dict[int, dict] = {}
+    for row in rows:
+        if isinstance(row, dict) and "id" in row:
+            out[int(row["id"])] = row
+    return out
+
+
 def _extract_taught_by_npcs(content: str) -> list[dict]:
     """Extract NPC trainer data from the taught-by-npc Listview."""
     pattern = r"id:\s*'taught-by-npc'[^]]*?data:\s*(\[.*?\])\s*\}"
