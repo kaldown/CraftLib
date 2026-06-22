@@ -15,6 +15,7 @@ Usage:
 """
 
 import argparse
+import gzip
 import json
 import re
 import sys
@@ -40,20 +41,30 @@ WOWHEAD_SOURCE_TYPES = {
 }
 
 
-def _fetch_page(url: str) -> str | None:
-    """Fetch a web page and return content as string."""
-    try:
-        req = urllib.request.Request(
-            url,
-            headers={
-                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-            },
-        )
-        with urllib.request.urlopen(req, timeout=30) as response:
-            return response.read().decode("utf-8")
-    except (urllib.error.URLError, TimeoutError, OSError) as e:
-        print(f"  Error fetching {url}: {e}", file=sys.stderr)
-        return None
+def _fetch_page(url: str, retries: int = 3) -> str | None:
+    """Fetch a web page (gzip-aware, retry on transient 403/503)."""
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+        "Accept-Encoding": "gzip",
+    }
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=30) as response:
+                body = response.read()
+                if (response.headers.get("Content-Encoding") or "") == "gzip":
+                    body = gzip.decompress(body)
+                return body.decode("utf-8")
+        except urllib.error.HTTPError as e:
+            if e.code in (403, 503) and attempt < retries - 1:
+                time.sleep(2 * (attempt + 1))  # back off; Wowhead WAF cold-start
+                continue
+            print(f"  Error fetching {url}: {e}", file=sys.stderr)
+            return None
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            print(f"  Error fetching {url}: {e}", file=sys.stderr)
+            return None
+    return None
 
 
 def _fix_js_object(js_text: str) -> str:
