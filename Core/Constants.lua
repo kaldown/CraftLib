@@ -19,6 +19,13 @@ CraftLib.Constants = {
         SOD = 12,  -- Season of Discovery (parallel ruleset; selected by flavor, not ordinal)
     },
 
+    -- Client lineage the load-guard keys on (distinct from per-recipe expansion metadata).
+    -- DEFAULT = Vanilla/TBC/WotLK continuous progression; SOD = parallel Season of Discovery ruleset.
+    FLAVOR = {
+        DEFAULT = "DEFAULT",
+        SOD = "SOD",
+    },
+
     -- Recipe source types
     SOURCE_TYPE = {
         TRAINER = "trainer",

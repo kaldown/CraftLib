@@ -8,6 +8,33 @@ CraftLib.items = {}
 CraftLib.productIndex = {}  -- Reverse lookup: itemId -> recipes that produce it
 
 --------------------------------------------------------------------------------
+-- Flavor detection (client lineage)
+--------------------------------------------------------------------------------
+
+-- Detect the running client's lineage. SoD is the only reliable discriminator:
+-- C_Seasons.GetActiveSeason() == Enum.SeasonID.SeasonOfDiscovery (numeric 2).
+-- C_Seasons / Enum.SeasonID are absent on TBC 2.5.5, so both are nil-guarded.
+function CraftLib:DetectFlavor()
+    if C_Seasons and C_Seasons.GetActiveSeason then
+        local season = C_Seasons.GetActiveSeason()
+        local sod = (Enum and Enum.SeasonID and Enum.SeasonID.SeasonOfDiscovery) or 2
+        if season == sod then
+            return self.Constants.FLAVOR.SOD
+        end
+    end
+    return self.Constants.FLAVOR.DEFAULT
+end
+
+-- Computed once at load time (Init.lua runs before any Data/* file via TOC order).
+CraftLib.activeFlavor = CraftLib:DetectFlavor()
+
+--- Get the active client flavor ("DEFAULT" or "SOD").
+-- @return string
+function CraftLib:GetActiveFlavor()
+    return self.activeFlavor
+end
+
+--------------------------------------------------------------------------------
 -- Profession Registration API
 --------------------------------------------------------------------------------
 
