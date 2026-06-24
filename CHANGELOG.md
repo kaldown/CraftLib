@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-06-25
+
+### Added
+
+- Season of Discovery Mining: smelting recipes (`Data/SoD/Mining/`) are now bundled, completing SoD profession coverage. 13 smelting recipes including the seasonal Smelt Obsidian-Infused Thorium Bar.
+
 ## [0.6.0] - 2026-06-24
 
 ### Added

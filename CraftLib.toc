@@ -2,7 +2,7 @@
 ## Title: CraftLib
 ## Notes: Comprehensive crafting recipe database for WoW addons
 ## Author: kaldown
-## Version: 0.6.0
+## Version: 0.7.0
 ## IconTexture: Interface\AddOns\CraftLib\icon
 ## SavedVariables: CraftLibDB
 ## X-SavedVariables-Note: Reserved for future use (not currently written to)
@@ -29,6 +29,7 @@ Data/TBC/Tailoring/Recipes.lua
 # Data - SoD (registers only on a Season of Discovery client; see RegisterProfession flavor guard)
 Data/SoD/FirstAid/Recipes.lua
 Data/SoD/Cooking/Recipes.lua
+Data/SoD/Mining/Recipes.lua
 Data/SoD/Engineering/Recipes.lua
 Data/SoD/Alchemy/Recipes.lua
 Data/SoD/Blacksmithing/Recipes.lua
