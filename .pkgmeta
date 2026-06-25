@@ -4,7 +4,6 @@ license-output: LICENSE
 ignore:
   - .git
   - .github
-  - .claude
   - docs
   - scripts
   - vendor
