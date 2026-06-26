@@ -1,0 +1,1765 @@
+{
+  "profession": "mining",
+  "version": "2.5.5.65795",
+  "generated": "2026-02-11",
+  "recipes": {
+    "2658": {
+      "name": "Smelt Silver",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 200
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 115,
+        "green": 122,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 200,
+        "learnedAt": 75,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            2775,
+            1
+          ]
+        ],
+        "creates": [
+          2842,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16663,
+            "name": "Belil",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3001,
+            "name": "Brek Stonehoof",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1681,
+            "name": "Brock Stoneseeker",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4598,
+            "name": "Brom Killian",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1701,
+            "name": "Dank Drizzlecut",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17488,
+            "name": "Dulvi",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5513,
+            "name": "Gelman Stonehand",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4254,
+            "name": "Geofram Bouldertoe",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3555,
+            "name": "Johan Focht",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3175,
+            "name": "Krunn",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6297,
+            "name": "Kurdram Stonehammer",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3357,
+            "name": "Makaru",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3137,
+            "name": "Matt Johnson",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 16752,
+            "name": "Muaat",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 8128,
+            "name": "Pikkle",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 18804,
+            "name": "Prospector Nachlan",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5392,
+            "name": "Yarr Hammerstone",
+            "faction": "Alliance"
+          }
+        ]
+      }
+    },
+    "2659": {
+      "name": "Smelt Bronze",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 200
+      },
+      "difficulty": {
+        "orange": 65,
+        "yellow": 65,
+        "green": 90,
+        "gray": 115,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 200,
+        "learnedAt": 65,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2840,
+            1
+          ],
+          [
+            3576,
+            1
+          ]
+        ],
+        "creates": [
+          2841,
+          2,
+          2
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16663,
+            "name": "Belil",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3001,
+            "name": "Brek Stonehoof",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1681,
+            "name": "Brock Stoneseeker",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4598,
+            "name": "Brom Killian",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1701,
+            "name": "Dank Drizzlecut",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17488,
+            "name": "Dulvi",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5513,
+            "name": "Gelman Stonehand",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4254,
+            "name": "Geofram Bouldertoe",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3555,
+            "name": "Johan Focht",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3175,
+            "name": "Krunn",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6297,
+            "name": "Kurdram Stonehammer",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3357,
+            "name": "Makaru",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3137,
+            "name": "Matt Johnson",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 16752,
+            "name": "Muaat",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 8128,
+            "name": "Pikkle",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 18804,
+            "name": "Prospector Nachlan",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5392,
+            "name": "Yarr Hammerstone",
+            "faction": "Alliance"
+          }
+        ]
+      }
+    },
+    "3308": {
+      "name": "Smelt Gold",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2500
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 170,
+        "green": 177,
+        "gray": 185,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 2500,
+        "learnedAt": 155,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            2776,
+            1
+          ]
+        ],
+        "creates": [
+          3577,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16663,
+            "name": "Belil",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3001,
+            "name": "Brek Stonehoof",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1681,
+            "name": "Brock Stoneseeker",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4598,
+            "name": "Brom Killian",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1701,
+            "name": "Dank Drizzlecut",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17488,
+            "name": "Dulvi",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5513,
+            "name": "Gelman Stonehand",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4254,
+            "name": "Geofram Bouldertoe",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3555,
+            "name": "Johan Focht",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3175,
+            "name": "Krunn",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6297,
+            "name": "Kurdram Stonehammer",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3357,
+            "name": "Makaru",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3137,
+            "name": "Matt Johnson",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 16752,
+            "name": "Muaat",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 8128,
+            "name": "Pikkle",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 18804,
+            "name": "Prospector Nachlan",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5392,
+            "name": "Yarr Hammerstone",
+            "faction": "Alliance"
+          }
+        ]
+      }
+    },
+    "3307": {
+      "name": "Smelt Iron",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 500
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 130,
+        "green": 145,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 500,
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2772,
+            1
+          ]
+        ],
+        "creates": [
+          3575,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16663,
+            "name": "Belil",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3001,
+            "name": "Brek Stonehoof",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1681,
+            "name": "Brock Stoneseeker",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4598,
+            "name": "Brom Killian",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1701,
+            "name": "Dank Drizzlecut",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17488,
+            "name": "Dulvi",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5513,
+            "name": "Gelman Stonehand",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4254,
+            "name": "Geofram Bouldertoe",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3555,
+            "name": "Johan Focht",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3175,
+            "name": "Krunn",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6297,
+            "name": "Kurdram Stonehammer",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3357,
+            "name": "Makaru",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3137,
+            "name": "Matt Johnson",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 16752,
+            "name": "Muaat",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 8128,
+            "name": "Pikkle",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 18804,
+            "name": "Prospector Nachlan",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5392,
+            "name": "Yarr Hammerstone",
+            "faction": "Alliance"
+          }
+        ]
+      }
+    },
+    "3304": {
+      "name": "Smelt Tin",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 50
+      },
+      "difficulty": {
+        "orange": 65,
+        "yellow": 65,
+        "green": 70,
+        "gray": 75,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 50,
+        "learnedAt": 65,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2771,
+            1
+          ]
+        ],
+        "creates": [
+          3576,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16663,
+            "name": "Belil",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3001,
+            "name": "Brek Stonehoof",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1681,
+            "name": "Brock Stoneseeker",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4598,
+            "name": "Brom Killian",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1701,
+            "name": "Dank Drizzlecut",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17488,
+            "name": "Dulvi",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5513,
+            "name": "Gelman Stonehand",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4254,
+            "name": "Geofram Bouldertoe",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3555,
+            "name": "Johan Focht",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3175,
+            "name": "Krunn",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6297,
+            "name": "Kurdram Stonehammer",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3357,
+            "name": "Makaru",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3137,
+            "name": "Matt Johnson",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 16752,
+            "name": "Muaat",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 8128,
+            "name": "Pikkle",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 18804,
+            "name": "Prospector Nachlan",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5392,
+            "name": "Yarr Hammerstone",
+            "faction": "Alliance"
+          }
+        ]
+      }
+    },
+    "3569": {
+      "name": "Smelt Steel",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2500
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 165,
+        "green": 165,
+        "gray": 165,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 2500,
+        "learnedAt": 165,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3575,
+            1
+          ],
+          [
+            3857,
+            1
+          ]
+        ],
+        "creates": [
+          3859,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16663,
+            "name": "Belil",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3001,
+            "name": "Brek Stonehoof",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1681,
+            "name": "Brock Stoneseeker",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4598,
+            "name": "Brom Killian",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1701,
+            "name": "Dank Drizzlecut",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17488,
+            "name": "Dulvi",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5513,
+            "name": "Gelman Stonehand",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4254,
+            "name": "Geofram Bouldertoe",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3555,
+            "name": "Johan Focht",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3175,
+            "name": "Krunn",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6297,
+            "name": "Kurdram Stonehammer",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3357,
+            "name": "Makaru",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3137,
+            "name": "Matt Johnson",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 16752,
+            "name": "Muaat",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 8128,
+            "name": "Pikkle",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 18804,
+            "name": "Prospector Nachlan",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5392,
+            "name": "Yarr Hammerstone",
+            "faction": "Alliance"
+          }
+        ]
+      }
+    },
+    "2657": {
+      "name": "Smelt Copper",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 25,
+        "green": 47,
+        "gray": 70,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "learnedAt": 25,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2770,
+            1
+          ]
+        ],
+        "creates": [
+          2840,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      }
+    },
+    "10098": {
+      "name": "Smelt Truesilver",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10000
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 235,
+        "green": 242,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 10000,
+        "learnedAt": 230,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            7911,
+            1
+          ]
+        ],
+        "creates": [
+          6037,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16663,
+            "name": "Belil",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3001,
+            "name": "Brek Stonehoof",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1681,
+            "name": "Brock Stoneseeker",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4598,
+            "name": "Brom Killian",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1701,
+            "name": "Dank Drizzlecut",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17488,
+            "name": "Dulvi",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5513,
+            "name": "Gelman Stonehand",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4254,
+            "name": "Geofram Bouldertoe",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3555,
+            "name": "Johan Focht",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3175,
+            "name": "Krunn",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6297,
+            "name": "Kurdram Stonehammer",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3357,
+            "name": "Makaru",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3137,
+            "name": "Matt Johnson",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 16752,
+            "name": "Muaat",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 8128,
+            "name": "Pikkle",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 18804,
+            "name": "Prospector Nachlan",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5392,
+            "name": "Yarr Hammerstone",
+            "faction": "Alliance"
+          }
+        ]
+      }
+    },
+    "10097": {
+      "name": "Smelt Mithril",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 202,
+        "gray": 230,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 5000,
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3858,
+            1
+          ]
+        ],
+        "creates": [
+          3860,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16663,
+            "name": "Belil",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3001,
+            "name": "Brek Stonehoof",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1681,
+            "name": "Brock Stoneseeker",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4598,
+            "name": "Brom Killian",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1701,
+            "name": "Dank Drizzlecut",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17488,
+            "name": "Dulvi",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5513,
+            "name": "Gelman Stonehand",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4254,
+            "name": "Geofram Bouldertoe",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3555,
+            "name": "Johan Focht",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3175,
+            "name": "Krunn",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6297,
+            "name": "Kurdram Stonehammer",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3357,
+            "name": "Makaru",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3137,
+            "name": "Matt Johnson",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 16752,
+            "name": "Muaat",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 8128,
+            "name": "Pikkle",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 18804,
+            "name": "Prospector Nachlan",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5392,
+            "name": "Yarr Hammerstone",
+            "faction": "Alliance"
+          }
+        ]
+      }
+    },
+    "14891": {
+      "name": "Smelt Dark Iron",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 300,
+        "green": 305,
+        "gray": 310,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            11370,
+            8
+          ]
+        ],
+        "creates": [
+          11371,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      }
+    },
+    "16153": {
+      "name": "Smelt Thorium",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 270,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10620,
+            1
+          ]
+        ],
+        "creates": [
+          12359,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16663,
+            "name": "Belil",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3001,
+            "name": "Brek Stonehoof",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1681,
+            "name": "Brock Stoneseeker",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4598,
+            "name": "Brom Killian",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 1701,
+            "name": "Dank Drizzlecut",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17488,
+            "name": "Dulvi",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5513,
+            "name": "Gelman Stonehand",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4254,
+            "name": "Geofram Bouldertoe",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3555,
+            "name": "Johan Focht",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3175,
+            "name": "Krunn",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6297,
+            "name": "Kurdram Stonehammer",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3357,
+            "name": "Makaru",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3137,
+            "name": "Matt Johnson",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 16752,
+            "name": "Muaat",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 8128,
+            "name": "Pikkle",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 18804,
+            "name": "Prospector Nachlan",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5392,
+            "name": "Yarr Hammerstone",
+            "faction": "Alliance"
+          }
+        ]
+      }
+    },
+    "22967": {
+      "name": "Smelt Elementium",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 350,
+        "green": 362,
+        "gray": 375,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 5,
+        "reagents": [
+          [
+            18562,
+            1
+          ],
+          [
+            12360,
+            10
+          ],
+          [
+            17010,
+            1
+          ],
+          [
+            18567,
+            3
+          ]
+        ],
+        "creates": [
+          17771,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      }
+    },
+    "29356": {
+      "name": "Smelt Fel Iron",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 40000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 300,
+        "green": 307,
+        "gray": 315,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 40000,
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            23424,
+            2
+          ]
+        ],
+        "creates": [
+          23445,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "29358": {
+      "name": "Smelt Adamantite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 40000
+      },
+      "difficulty": {
+        "orange": 325,
+        "yellow": 325,
+        "green": 332,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 40000,
+        "learnedAt": 325,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            23425,
+            2
+          ]
+        ],
+        "creates": [
+          23446,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "29359": {
+      "name": "Smelt Eternium",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 40000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 357,
+        "gray": 365,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 40000,
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            23427,
+            2
+          ]
+        ],
+        "creates": [
+          23447,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "29360": {
+      "name": "Smelt Felsteel",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 40000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 355,
+        "green": 367,
+        "gray": 380,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 40000,
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            23445,
+            3
+          ],
+          [
+            23447,
+            2
+          ]
+        ],
+        "creates": [
+          23448,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "29361": {
+      "name": "Smelt Khorium",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 100000
+      },
+      "difficulty": {
+        "orange": 375,
+        "yellow": 375,
+        "green": 375,
+        "gray": 375,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 100000,
+        "learnedAt": 375,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            23426,
+            2
+          ]
+        ],
+        "creates": [
+          23449,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "29686": {
+      "name": "Smelt Hardened Adamantite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 100000
+      },
+      "difficulty": {
+        "orange": 375,
+        "yellow": 375,
+        "green": 375,
+        "gray": 375,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 100000,
+        "learnedAt": 375,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            23446,
+            10
+          ]
+        ],
+        "creates": [
+          23573,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "35750": {
+      "name": "Earth Shatter",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 300,
+        "green": 300,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 10000,
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            22452,
+            1
+          ]
+        ],
+        "creates": [
+          22573,
+          10,
+          10
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "35751": {
+      "name": "Fire Sunder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 300,
+        "green": 300,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 10000,
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            21884,
+            1
+          ]
+        ],
+        "creates": [
+          22574,
+          10,
+          10
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 18779,
+            "name": "Hurnak Grimmord",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 18747,
+            "name": "Krugosh",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "46353": {
+      "name": "Smelt Hardened Khorium",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 35273
+      },
+      "wowhead": {
+        "source": [
+          2
+        ],
+        "learnedAt": 375,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            23449,
+            3
+          ],
+          [
+            23573,
+            1
+          ]
+        ],
+        "creates": [
+          35128,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      },
+      "difficulty": {
+        "orange": 375,
+        "yellow": 375,
+        "green": 375,
+        "gray": 375,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      }
+    }
+  }
+}

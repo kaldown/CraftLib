@@ -20,9 +20,10 @@ docs/agents/
 *.swo
 *~
 
-# Verified sources (local development data, not for release)
-# Structure: Data/Sources/{Expansion}/{Profession}.json
-Data/Sources/*/*.json
+# Per-profession source JSONs are tracked for reproducible regeneration + audit.
+# Only transient verifier state and temp files stay ignored.
+Data/Sources/**/.fetch_state/
+Data/Sources/**/*.tmp
 
 # DB2 artifacts (downloaded from wago.tools)
 artifacts/

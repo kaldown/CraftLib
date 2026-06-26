@@ -1,0 +1,8483 @@
+{
+  "profession": "engineering",
+  "version": "1.15.8.67156",
+  "generated": "2026-06-22",
+  "recipes": {
+    "3918": {
+      "name": "Rough Blasting Powder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 20,
+        "green": 30,
+        "gray": 40,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2835,
+            1
+          ]
+        ],
+        "creates": [
+          4357,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3919": {
+      "name": "Rough Dynamite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 30,
+        "green": 45,
+        "gray": 60,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4357,
+            2
+          ],
+          [
+            2589,
+            1
+          ]
+        ],
+        "creates": [
+          4358,
+          2,
+          2
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3920": {
+      "name": "Crafted Light Shot",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 30,
+        "green": 45,
+        "gray": 60,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 30,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4357,
+            1
+          ],
+          [
+            2840,
+            1
+          ]
+        ],
+        "creates": [
+          8067,
+          200,
+          200
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3922": {
+      "name": "Handful of Copper Bolts",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 115
+      },
+      "difficulty": {
+        "orange": 30,
+        "yellow": 45,
+        "green": 52,
+        "gray": 60,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 30,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2840,
+            1
+          ]
+        ],
+        "creates": [
+          4359,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 115,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3923": {
+      "name": "Rough Copper Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 130
+      },
+      "difficulty": {
+        "orange": 30,
+        "yellow": 60,
+        "green": 75,
+        "gray": 90,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 30,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2840,
+            1
+          ],
+          [
+            4359,
+            1
+          ],
+          [
+            4357,
+            2
+          ],
+          [
+            2589,
+            1
+          ]
+        ],
+        "creates": [
+          4360,
+          2,
+          2
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 130,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3924": {
+      "name": "Copper Tube",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 150
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 80,
+        "green": 95,
+        "gray": 110,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2840,
+            2
+          ],
+          [
+            2880,
+            1
+          ]
+        ],
+        "creates": [
+          4361,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 150,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3925": {
+      "name": "Rough Boomstick",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 150
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 80,
+        "green": 95,
+        "gray": 110,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4361,
+            1
+          ],
+          [
+            4359,
+            1
+          ],
+          [
+            4399,
+            1
+          ]
+        ],
+        "creates": [
+          4362,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 150,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3977": {
+      "name": "Crude Scope",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 200
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 90,
+        "green": 105,
+        "gray": 120,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 60,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4361,
+            1
+          ],
+          [
+            774,
+            1
+          ],
+          [
+            4359,
+            1
+          ]
+        ],
+        "creates": [
+          4405,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 200,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3973": {
+      "name": "Silver Contact",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 300
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 110,
+        "green": 125,
+        "gray": 140,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 90,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2842,
+            1
+          ]
+        ],
+        "creates": [
+          4404,
+          5,
+          5
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 300,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3926": {
+      "name": "Copper Modulator",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 225
+      },
+      "difficulty": {
+        "orange": 65,
+        "yellow": 95,
+        "green": 110,
+        "gray": 125,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 65,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4359,
+            2
+          ],
+          [
+            2840,
+            1
+          ],
+          [
+            2589,
+            2
+          ]
+        ],
+        "creates": [
+          4363,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 225,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3928": {
+      "name": "Mechanical Squirrel",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 105,
+        "green": 120,
+        "gray": 135,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 75,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4363,
+            1
+          ],
+          [
+            4359,
+            1
+          ],
+          [
+            2840,
+            1
+          ],
+          [
+            774,
+            2
+          ]
+        ],
+        "creates": [
+          4401,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3929": {
+      "name": "Coarse Blasting Powder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 250
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 85,
+        "green": 90,
+        "gray": 95,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 75,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2836,
+            1
+          ]
+        ],
+        "creates": [
+          4364,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 250,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3930": {
+      "name": "Crafted Heavy Shot",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 250
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 85,
+        "green": 90,
+        "gray": 95,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 75,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4364,
+            1
+          ],
+          [
+            2840,
+            1
+          ]
+        ],
+        "creates": [
+          8068,
+          200,
+          200
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 250,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3931": {
+      "name": "Coarse Dynamite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 250
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 90,
+        "green": 97,
+        "gray": 105,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 75,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4364,
+            3
+          ],
+          [
+            2589,
+            1
+          ]
+        ],
+        "creates": [
+          4365,
+          1,
+          3
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 250,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3932": {
+      "name": "Target Dummy",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 300
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 115,
+        "green": 130,
+        "gray": 145,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 85,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4363,
+            1
+          ],
+          [
+            4359,
+            2
+          ],
+          [
+            2841,
+            1
+          ],
+          [
+            2592,
+            1
+          ]
+        ],
+        "creates": [
+          4366,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 300,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3933": {
+      "name": "Small Seaforium Charge",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 145,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4364,
+            2
+          ],
+          [
+            4363,
+            1
+          ],
+          [
+            2318,
+            1
+          ],
+          [
+            159,
+            1
+          ]
+        ],
+        "creates": [
+          4367,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3934": {
+      "name": "Flying Tiger Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 400
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 145,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            2318,
+            6
+          ],
+          [
+            818,
+            2
+          ]
+        ],
+        "creates": [
+          4368,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 400,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3936": {
+      "name": "Deadly Blunderbuss",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 420
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 130,
+        "green": 142,
+        "gray": 155,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 105,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4361,
+            2
+          ],
+          [
+            4359,
+            4
+          ],
+          [
+            4399,
+            1
+          ],
+          [
+            2319,
+            2
+          ]
+        ],
+        "creates": [
+          4369,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 420,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3937": {
+      "name": "Large Copper Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 450
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 105,
+        "green": 130,
+        "gray": 155,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 105,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2840,
+            3
+          ],
+          [
+            4364,
+            4
+          ],
+          [
+            4404,
+            1
+          ]
+        ],
+        "creates": [
+          4370,
+          2,
+          4
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 450,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3938": {
+      "name": "Bronze Tube",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 450
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 105,
+        "green": 130,
+        "gray": 155,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 105,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2841,
+            2
+          ],
+          [
+            2880,
+            1
+          ]
+        ],
+        "creates": [
+          4371,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 450,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3978": {
+      "name": "Standard Scope",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 475
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 135,
+        "green": 147,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 110,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4371,
+            1
+          ],
+          [
+            1206,
+            1
+          ]
+        ],
+        "creates": [
+          4406,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 475,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3939": {
+      "name": "Lovingly Crafted Boomstick",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 145,
+        "green": 157,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 120,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4371,
+            2
+          ],
+          [
+            4359,
+            2
+          ],
+          [
+            4400,
+            1
+          ],
+          [
+            1206,
+            3
+          ]
+        ],
+        "creates": [
+          4372,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3940": {
+      "name": "Shadow Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 145,
+        "green": 157,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 120,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            2319,
+            4
+          ],
+          [
+            1210,
+            2
+          ]
+        ],
+        "creates": [
+          4373,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3941": {
+      "name": "Small Bronze Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 500
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 120,
+        "green": 145,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 120,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4364,
+            4
+          ],
+          [
+            2841,
+            2
+          ],
+          [
+            4404,
+            1
+          ],
+          [
+            2592,
+            1
+          ]
+        ],
+        "creates": [
+          4374,
+          1,
+          3
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3942": {
+      "name": "Whirring Bronze Gizmo",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 500
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 150,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2841,
+            2
+          ],
+          [
+            2592,
+            1
+          ]
+        ],
+        "creates": [
+          4375,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3944": {
+      "name": "Flame Deflector",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 150,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4375,
+            1
+          ],
+          [
+            4402,
+            1
+          ]
+        ],
+        "creates": [
+          4376,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3945": {
+      "name": "Heavy Blasting Powder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 500
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 135,
+        "gray": 145,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2838,
+            1
+          ]
+        ],
+        "creates": [
+          4377,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3946": {
+      "name": "Heavy Dynamite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 500
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 135,
+        "gray": 145,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4377,
+            2
+          ],
+          [
+            2592,
+            1
+          ]
+        ],
+        "creates": [
+          4378,
+          1,
+          5
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3947": {
+      "name": "Crafted Solid Shot",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 300
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 135,
+        "gray": 145,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4377,
+            1
+          ],
+          [
+            2841,
+            1
+          ]
+        ],
+        "creates": [
+          8069,
+          200,
+          200
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 300,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3949": {
+      "name": "Silver-plated Shotgun",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 550
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 155,
+        "green": 167,
+        "gray": 180,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 130,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4371,
+            2
+          ],
+          [
+            4375,
+            2
+          ],
+          [
+            4400,
+            1
+          ],
+          [
+            2842,
+            3
+          ]
+        ],
+        "creates": [
+          4379,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 550,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3950": {
+      "name": "Big Bronze Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 600
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 140,
+        "green": 165,
+        "gray": 190,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 140,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4377,
+            2
+          ],
+          [
+            2841,
+            3
+          ],
+          [
+            4404,
+            1
+          ]
+        ],
+        "creates": [
+          4380,
+          2,
+          4
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 600,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3952": {
+      "name": "Minor Recombobulator",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 177,
+        "gray": 190,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 140,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4371,
+            1
+          ],
+          [
+            4375,
+            2
+          ],
+          [
+            2319,
+            2
+          ],
+          [
+            1206,
+            1
+          ]
+        ],
+        "creates": [
+          4381,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3953": {
+      "name": "Bronze Framework",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 600
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 145,
+        "green": 170,
+        "gray": 195,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 145,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2841,
+            2
+          ],
+          [
+            2319,
+            1
+          ],
+          [
+            2592,
+            1
+          ]
+        ],
+        "creates": [
+          4382,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 600,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3954": {
+      "name": "Moonsight Rifle",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 182,
+        "gray": 195,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 145,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4371,
+            3
+          ],
+          [
+            4375,
+            3
+          ],
+          [
+            4400,
+            1
+          ],
+          [
+            1705,
+            2
+          ]
+        ],
+        "creates": [
+          4383,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3955": {
+      "name": "Explosive Sheep",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 750
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4382,
+            1
+          ],
+          [
+            4375,
+            1
+          ],
+          [
+            4377,
+            2
+          ],
+          [
+            2592,
+            2
+          ]
+        ],
+        "creates": [
+          4384,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 750,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3956": {
+      "name": "Green Tinted Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 750
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            2319,
+            4
+          ],
+          [
+            1206,
+            2
+          ],
+          [
+            4368,
+            1
+          ]
+        ],
+        "creates": [
+          4385,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 750,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3957": {
+      "name": "Ice Deflector",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 175,
+        "green": 185,
+        "gray": 195,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 155,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4375,
+            1
+          ],
+          [
+            3829,
+            1
+          ]
+        ],
+        "creates": [
+          4386,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3958": {
+      "name": "Iron Strut",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 800
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 160,
+        "green": 170,
+        "gray": 180,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 160,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3575,
+            2
+          ]
+        ],
+        "creates": [
+          4387,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 800,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3959": {
+      "name": "Discombobulator Ray",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 180,
+        "green": 190,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 160,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4375,
+            3
+          ],
+          [
+            4306,
+            2
+          ],
+          [
+            1529,
+            1
+          ],
+          [
+            4371,
+            1
+          ]
+        ],
+        "creates": [
+          4388,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3960": {
+      "name": "Portable Bronze Mortar",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 185,
+        "green": 195,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 165,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4371,
+            4
+          ],
+          [
+            4387,
+            1
+          ],
+          [
+            4377,
+            4
+          ],
+          [
+            2319,
+            4
+          ]
+        ],
+        "creates": [
+          4403,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3961": {
+      "name": "Gyrochronatom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 900
+      },
+      "difficulty": {
+        "orange": 170,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 170,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3575,
+            1
+          ],
+          [
+            10558,
+            1
+          ]
+        ],
+        "creates": [
+          4389,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 900,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3962": {
+      "name": "Iron Grenade",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3575,
+            1
+          ],
+          [
+            4377,
+            1
+          ],
+          [
+            4306,
+            1
+          ]
+        ],
+        "creates": [
+          4390,
+          2,
+          4
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3963": {
+      "name": "Compact Harvest Reaper Kit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4387,
+            2
+          ],
+          [
+            4382,
+            1
+          ],
+          [
+            4389,
+            2
+          ],
+          [
+            4234,
+            4
+          ]
+        ],
+        "creates": [
+          4391,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3979": {
+      "name": "Accurate Scope",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 180,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4371,
+            1
+          ],
+          [
+            1529,
+            1
+          ],
+          [
+            3864,
+            1
+          ]
+        ],
+        "creates": [
+          4407,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3965": {
+      "name": "Advanced Target Dummy",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1200
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 185,
+        "green": 205,
+        "gray": 225,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 185,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4387,
+            1
+          ],
+          [
+            4382,
+            1
+          ],
+          [
+            4389,
+            1
+          ],
+          [
+            4234,
+            4
+          ]
+        ],
+        "creates": [
+          4392,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1200,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3966": {
+      "name": "Craftsman's Monocle",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 205,
+        "green": 215,
+        "gray": 225,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 185,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4234,
+            6
+          ],
+          [
+            3864,
+            2
+          ]
+        ],
+        "creates": [
+          4393,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3967": {
+      "name": "Big Iron Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1400
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 190,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3575,
+            3
+          ],
+          [
+            4377,
+            3
+          ],
+          [
+            4404,
+            1
+          ]
+        ],
+        "creates": [
+          4394,
+          2,
+          2
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1400,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3968": {
+      "name": "Goblin Land Mine",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 225,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 195,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4377,
+            3
+          ],
+          [
+            3575,
+            2
+          ],
+          [
+            4389,
+            1
+          ]
+        ],
+        "creates": [
+          4395,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3969": {
+      "name": "Mechanical Dragonling",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 230,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4382,
+            1
+          ],
+          [
+            4387,
+            4
+          ],
+          [
+            4389,
+            4
+          ],
+          [
+            3864,
+            2
+          ],
+          [
+            7191,
+            1
+          ]
+        ],
+        "creates": [
+          4396,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3971": {
+      "name": "Gnomish Cloaking Device",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 230,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4389,
+            4
+          ],
+          [
+            1529,
+            2
+          ],
+          [
+            1705,
+            2
+          ],
+          [
+            3864,
+            2
+          ],
+          [
+            7191,
+            1
+          ]
+        ],
+        "creates": [
+          4397,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3972": {
+      "name": "Large Seaforium Charge",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10505,
+            2
+          ],
+          [
+            4234,
+            2
+          ],
+          [
+            159,
+            1
+          ]
+        ],
+        "creates": [
+          4398,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "6458": {
+      "name": "Ornate Spyglass",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 400
+      },
+      "difficulty": {
+        "orange": 135,
+        "yellow": 160,
+        "green": 172,
+        "gray": 185,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 135,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4371,
+            2
+          ],
+          [
+            4375,
+            2
+          ],
+          [
+            4363,
+            1
+          ],
+          [
+            1206,
+            1
+          ]
+        ],
+        "creates": [
+          5507,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 400,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7430": {
+      "name": "Arclight Spanner",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 150
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 70,
+        "green": 80,
+        "gray": 90,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2840,
+            6
+          ]
+        ],
+        "creates": [
+          6219,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 150,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "8243": {
+      "name": "Flash Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 185,
+        "green": 205,
+        "gray": 225,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 185,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4611,
+            1
+          ],
+          [
+            4377,
+            1
+          ],
+          [
+            4306,
+            1
+          ]
+        ],
+        "creates": [
+          4852,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "8334": {
+      "name": "Practice Lock",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 300
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 115,
+        "green": 122,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2841,
+            1
+          ],
+          [
+            4359,
+            2
+          ],
+          [
+            2880,
+            1
+          ]
+        ],
+        "creates": [
+          6712,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 300,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "8339": {
+      "name": "EZ-Thro Dynamite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 115,
+        "green": 122,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4364,
+            4
+          ],
+          [
+            2592,
+            1
+          ]
+        ],
+        "creates": [
+          6714,
+          1,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "8895": {
+      "name": "Goblin Rocket Boots",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2200
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10026,
+            1
+          ],
+          [
+            10559,
+            2
+          ],
+          [
+            4234,
+            4
+          ],
+          [
+            9061,
+            2
+          ],
+          [
+            10560,
+            1
+          ]
+        ],
+        "creates": [
+          7189,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2200,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "9269": {
+      "name": "Gnomish Universal Remote",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 150,
+        "green": 162,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            2841,
+            6
+          ],
+          [
+            4375,
+            1
+          ],
+          [
+            814,
+            2
+          ],
+          [
+            818,
+            1
+          ],
+          [
+            774,
+            1
+          ]
+        ],
+        "creates": [
+          7506,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "9271": {
+      "name": "Aquadynamic Fish Attractor",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 500
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 160,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2841,
+            2
+          ],
+          [
+            6530,
+            1
+          ],
+          [
+            4364,
+            1
+          ]
+        ],
+        "creates": [
+          6533,
+          3,
+          3
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "9273": {
+      "name": "Goblin Jumper Cables",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 165,
+        "green": 180,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 165,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3575,
+            6
+          ],
+          [
+            4375,
+            2
+          ],
+          [
+            814,
+            2
+          ],
+          [
+            4306,
+            2
+          ],
+          [
+            1210,
+            2
+          ],
+          [
+            7191,
+            1
+          ]
+        ],
+        "creates": [
+          7148,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12584": {
+      "name": "Gold Power Core",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3577,
+            1
+          ]
+        ],
+        "creates": [
+          10558,
+          3,
+          3
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12585": {
+      "name": "Solid Blasting Powder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 185,
+        "gray": 195,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            7912,
+            2
+          ]
+        ],
+        "creates": [
+          10505,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12586": {
+      "name": "Solid Dynamite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 185,
+        "gray": 195,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10505,
+            1
+          ],
+          [
+            4306,
+            1
+          ]
+        ],
+        "creates": [
+          10507,
+          2,
+          2
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12587": {
+      "name": "Bright-Eye Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 205,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4234,
+            6
+          ],
+          [
+            3864,
+            2
+          ]
+        ],
+        "creates": [
+          10499,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12590": {
+      "name": "Gyromatic Micro-Adjustor",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3859,
+            4
+          ]
+        ],
+        "creates": [
+          10498,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12589": {
+      "name": "Mithril Tube",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1300
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 195,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3860,
+            3
+          ]
+        ],
+        "creates": [
+          10559,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1300,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12591": {
+      "name": "Unstable Trigger",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3860,
+            1
+          ],
+          [
+            4338,
+            1
+          ],
+          [
+            10505,
+            1
+          ]
+        ],
+        "creates": [
+          10560,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12594": {
+      "name": "Fire Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1600
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4385,
+            1
+          ],
+          [
+            3864,
+            2
+          ],
+          [
+            7068,
+            2
+          ],
+          [
+            4234,
+            4
+          ]
+        ],
+        "creates": [
+          10500,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1600,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12595": {
+      "name": "Mithril Blunderbuss",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1600
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10559,
+            1
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            4400,
+            1
+          ],
+          [
+            3860,
+            4
+          ],
+          [
+            7068,
+            2
+          ]
+        ],
+        "creates": [
+          10508,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1600,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12596": {
+      "name": "Hi-Impact Mithril Slugs",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1700
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 210,
+        "green": 230,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            3860,
+            1
+          ],
+          [
+            10505,
+            1
+          ]
+        ],
+        "creates": [
+          10512,
+          200,
+          200
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1700,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12597": {
+      "name": "Deadly Scope",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10559,
+            1
+          ],
+          [
+            7909,
+            2
+          ],
+          [
+            4304,
+            2
+          ]
+        ],
+        "creates": [
+          10546,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12599": {
+      "name": "Mithril Casing",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1800
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 215,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3860,
+            3
+          ]
+        ],
+        "creates": [
+          10561,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1800,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12603": {
+      "name": "Mithril Frag Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1800
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 215,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10561,
+            1
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            10505,
+            1
+          ]
+        ],
+        "creates": [
+          10514,
+          3,
+          3
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1800,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12607": {
+      "name": "Catseye Ultra Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 250,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 220,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4304,
+            4
+          ],
+          [
+            7909,
+            2
+          ],
+          [
+            10592,
+            1
+          ]
+        ],
+        "creates": [
+          10501,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12614": {
+      "name": "Mithril Heavy-bore Rifle",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 250,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 220,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10559,
+            2
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            4400,
+            1
+          ],
+          [
+            3860,
+            6
+          ],
+          [
+            3864,
+            2
+          ]
+        ],
+        "creates": [
+          10510,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12615": {
+      "name": "Spellpower Goggles Xtreme",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4304,
+            4
+          ],
+          [
+            7910,
+            2
+          ]
+        ],
+        "creates": [
+          10502,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12616": {
+      "name": "Parachute Cloak",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4339,
+            4
+          ],
+          [
+            10285,
+            2
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            10505,
+            4
+          ]
+        ],
+        "creates": [
+          10518,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12617": {
+      "name": "Deepdive Helmet",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 260,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 230,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            3860,
+            8
+          ],
+          [
+            10561,
+            1
+          ],
+          [
+            6037,
+            1
+          ],
+          [
+            818,
+            4
+          ],
+          [
+            774,
+            4
+          ]
+        ],
+        "creates": [
+          10506,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12618": {
+      "name": "Rose Colored Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2200
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 260,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 230,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4304,
+            6
+          ],
+          [
+            7910,
+            2
+          ]
+        ],
+        "creates": [
+          10503,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2200,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12619": {
+      "name": "Hi-Explosive Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2400
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 235,
+        "green": 255,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 235,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10561,
+            2
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            10505,
+            2
+          ]
+        ],
+        "creates": [
+          10562,
+          4,
+          4
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2400,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12620": {
+      "name": "Sniper Scope",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10559,
+            1
+          ],
+          [
+            7910,
+            1
+          ],
+          [
+            6037,
+            2
+          ]
+        ],
+        "creates": [
+          10548,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12621": {
+      "name": "Mithril Gyro-Shot",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2800
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 245,
+        "green": 265,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 245,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            3860,
+            2
+          ],
+          [
+            10505,
+            2
+          ]
+        ],
+        "creates": [
+          10513,
+          200,
+          200
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2800,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12622": {
+      "name": "Green Lens",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2800
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 275,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 245,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            4304,
+            8
+          ],
+          [
+            1529,
+            3
+          ],
+          [
+            7909,
+            3
+          ],
+          [
+            10286,
+            2
+          ],
+          [
+            8153,
+            2
+          ]
+        ],
+        "creates": [
+          10504,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2800,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12624": {
+      "name": "Mithril Mechanical Dragonling",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3860,
+            14
+          ],
+          [
+            7077,
+            4
+          ],
+          [
+            6037,
+            4
+          ],
+          [
+            9060,
+            2
+          ],
+          [
+            9061,
+            2
+          ],
+          [
+            7910,
+            2
+          ]
+        ],
+        "creates": [
+          10576,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12715": {
+      "name": "Goblin Rocket Fuel Recipe",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 205,
+        "green": 205,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10648,
+            1
+          ],
+          [
+            10647,
+            1
+          ]
+        ],
+        "creates": [
+          10644,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12716": {
+      "name": "Goblin Mortar",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10559,
+            2
+          ],
+          [
+            3860,
+            4
+          ],
+          [
+            10505,
+            5
+          ],
+          [
+            10558,
+            1
+          ],
+          [
+            7068,
+            1
+          ]
+        ],
+        "creates": [
+          10577,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12717": {
+      "name": "Goblin Mining Helmet",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            3860,
+            8
+          ],
+          [
+            3864,
+            1
+          ],
+          [
+            7067,
+            4
+          ]
+        ],
+        "creates": [
+          10542,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12718": {
+      "name": "Goblin Construction Helmet",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            3860,
+            8
+          ],
+          [
+            3864,
+            1
+          ],
+          [
+            7068,
+            4
+          ]
+        ],
+        "creates": [
+          10543,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12760": {
+      "name": "Goblin Sapper Charge",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 205,
+        "green": 225,
+        "gray": 245,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4338,
+            1
+          ],
+          [
+            10505,
+            3
+          ],
+          [
+            10560,
+            1
+          ]
+        ],
+        "creates": [
+          10646,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12719": {
+      "name": "Explosive Arrow",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "12720": {
+      "name": "Goblin \"Boom\" Box",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "12722": {
+      "name": "Goblin Radio",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "12755": {
+      "name": "Goblin Bomb Dispenser",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2400
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 230,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10561,
+            2
+          ],
+          [
+            10505,
+            4
+          ],
+          [
+            6037,
+            6
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            4407,
+            2
+          ]
+        ],
+        "creates": [
+          10587,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2400,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12754": {
+      "name": "The Big One",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2600
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 235,
+        "green": 255,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 235,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10561,
+            1
+          ],
+          [
+            9061,
+            1
+          ],
+          [
+            10507,
+            6
+          ],
+          [
+            10560,
+            1
+          ]
+        ],
+        "creates": [
+          10586,
+          2,
+          2
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2600,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12759": {
+      "name": "Gnomish Death Ray",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2800
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10559,
+            2
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            12808,
+            1
+          ],
+          [
+            7972,
+            4
+          ],
+          [
+            9060,
+            1
+          ]
+        ],
+        "creates": [
+          10645,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2800,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12758": {
+      "name": "Goblin Rocket Helmet",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 3000
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 275,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 245,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10543,
+            1
+          ],
+          [
+            9061,
+            4
+          ],
+          [
+            3860,
+            4
+          ],
+          [
+            10560,
+            1
+          ]
+        ],
+        "creates": [
+          10588,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 3000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12895": {
+      "name": "Inlaid Mithril Cylinder Plans",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 205,
+        "green": 205,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10648,
+            1
+          ],
+          [
+            10647,
+            1
+          ]
+        ],
+        "creates": [
+          10713,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12897": {
+      "name": "Gnomish Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10500,
+            1
+          ],
+          [
+            10559,
+            1
+          ],
+          [
+            10558,
+            2
+          ],
+          [
+            8151,
+            2
+          ],
+          [
+            4234,
+            2
+          ]
+        ],
+        "creates": [
+          10545,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12899": {
+      "name": "Gnomish Shrink Ray",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10559,
+            1
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            3860,
+            4
+          ],
+          [
+            8151,
+            4
+          ],
+          [
+            1529,
+            2
+          ]
+        ],
+        "creates": [
+          10716,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12900": {
+      "name": "Mobile Alarm",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "12902": {
+      "name": "Gnomish Net-o-Matic Projector",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1800
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10559,
+            1
+          ],
+          [
+            10285,
+            2
+          ],
+          [
+            4337,
+            4
+          ],
+          [
+            10505,
+            2
+          ],
+          [
+            3860,
+            4
+          ]
+        ],
+        "creates": [
+          10720,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1800,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12903": {
+      "name": "Gnomish Harm Prevention Belt",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2000
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 235,
+        "green": 245,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 215,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            7387,
+            1
+          ],
+          [
+            3860,
+            4
+          ],
+          [
+            6037,
+            2
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            7909,
+            2
+          ]
+        ],
+        "creates": [
+          10721,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12904": {
+      "name": "Gnomish Ham Radio",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "12905": {
+      "name": "Gnomish Rocket Boots",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2200
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10026,
+            1
+          ],
+          [
+            10559,
+            2
+          ],
+          [
+            4234,
+            4
+          ],
+          [
+            10505,
+            8
+          ],
+          [
+            4389,
+            4
+          ]
+        ],
+        "creates": [
+          10724,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2200,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12906": {
+      "name": "Gnomish Battle Chicken",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2400
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 260,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 230,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10561,
+            1
+          ],
+          [
+            6037,
+            6
+          ],
+          [
+            3860,
+            6
+          ],
+          [
+            9060,
+            2
+          ],
+          [
+            10558,
+            1
+          ],
+          [
+            1529,
+            2
+          ]
+        ],
+        "creates": [
+          10725,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2400,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12907": {
+      "name": "Gnomish Mind Control Cap",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2600
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 255,
+        "green": 265,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 235,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            3860,
+            10
+          ],
+          [
+            6037,
+            4
+          ],
+          [
+            10558,
+            1
+          ],
+          [
+            7910,
+            2
+          ],
+          [
+            4338,
+            4
+          ]
+        ],
+        "creates": [
+          10726,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2600,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12908": {
+      "name": "Goblin Dragon Gun",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2800
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10559,
+            2
+          ],
+          [
+            9061,
+            4
+          ],
+          [
+            3860,
+            6
+          ],
+          [
+            6037,
+            6
+          ],
+          [
+            10560,
+            1
+          ]
+        ],
+        "creates": [
+          10727,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2800,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "13240": {
+      "name": "The Mortar: Reloaded",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10577,
+            1
+          ],
+          [
+            3860,
+            1
+          ],
+          [
+            10505,
+            3
+          ]
+        ],
+        "creates": [
+          10577,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "15255": {
+      "name": "Mechanical Repair Kit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3860,
+            1
+          ],
+          [
+            4338,
+            1
+          ],
+          [
+            10505,
+            1
+          ]
+        ],
+        "creates": [
+          11590,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "15633": {
+      "name": "Lil' Smoky",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 205,
+        "green": 205,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            7075,
+            1
+          ],
+          [
+            4389,
+            2
+          ],
+          [
+            7191,
+            1
+          ],
+          [
+            3860,
+            2
+          ],
+          [
+            6037,
+            1
+          ]
+        ],
+        "creates": [
+          11826,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "15628": {
+      "name": "Pet Bombling",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 205,
+        "green": 205,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4394,
+            1
+          ],
+          [
+            7077,
+            1
+          ],
+          [
+            7191,
+            1
+          ],
+          [
+            3860,
+            6
+          ]
+        ],
+        "creates": [
+          11825,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19567": {
+      "name": "Salt Shaker",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10561,
+            1
+          ],
+          [
+            12359,
+            6
+          ],
+          [
+            10558,
+            1
+          ],
+          [
+            10560,
+            4
+          ]
+        ],
+        "creates": [
+          15846,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19788": {
+      "name": "Dense Blasting Powder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12365,
+            2
+          ]
+        ],
+        "creates": [
+          15992,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19790": {
+      "name": "Thorium Grenade",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 260,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15994,
+            1
+          ],
+          [
+            12359,
+            3
+          ],
+          [
+            15992,
+            3
+          ],
+          [
+            14047,
+            3
+          ]
+        ],
+        "creates": [
+          15993,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19792": {
+      "name": "Thorium Rifle",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 260,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10559,
+            2
+          ],
+          [
+            10561,
+            2
+          ],
+          [
+            15994,
+            2
+          ],
+          [
+            12359,
+            4
+          ],
+          [
+            10546,
+            1
+          ]
+        ],
+        "creates": [
+          15995,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19791": {
+      "name": "Thorium Widget",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 260,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12359,
+            3
+          ],
+          [
+            14047,
+            1
+          ]
+        ],
+        "creates": [
+          15994,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19793": {
+      "name": "Lifelike Mechanical Toad",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 265,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12803,
+            1
+          ],
+          [
+            15994,
+            4
+          ],
+          [
+            10558,
+            1
+          ],
+          [
+            8170,
+            1
+          ]
+        ],
+        "creates": [
+          15996,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19794": {
+      "name": "Spellpower Goggles Xtreme Plus",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 270,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10502,
+            1
+          ],
+          [
+            7910,
+            4
+          ],
+          [
+            12810,
+            2
+          ],
+          [
+            14047,
+            8
+          ]
+        ],
+        "creates": [
+          15999,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19796": {
+      "name": "Dark Iron Rifle",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            16000,
+            2
+          ],
+          [
+            11371,
+            6
+          ],
+          [
+            10546,
+            2
+          ],
+          [
+            12361,
+            2
+          ],
+          [
+            12799,
+            2
+          ],
+          [
+            8170,
+            4
+          ]
+        ],
+        "creates": [
+          16004,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19814": {
+      "name": "Masterwork Target Dummy",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10561,
+            1
+          ],
+          [
+            16000,
+            1
+          ],
+          [
+            15994,
+            2
+          ],
+          [
+            6037,
+            1
+          ],
+          [
+            8170,
+            2
+          ],
+          [
+            14047,
+            4
+          ]
+        ],
+        "creates": [
+          16023,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19795": {
+      "name": "Thorium Tube",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12359,
+            6
+          ]
+        ],
+        "creates": [
+          16000,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19815": {
+      "name": "Delicate Arcanite Converter",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 315,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12360,
+            1
+          ],
+          [
+            14227,
+            1
+          ]
+        ],
+        "creates": [
+          16006,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19799": {
+      "name": "Dark Iron Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 315,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15994,
+            2
+          ],
+          [
+            11371,
+            1
+          ],
+          [
+            15992,
+            3
+          ],
+          [
+            14047,
+            3
+          ]
+        ],
+        "creates": [
+          16005,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19800": {
+      "name": "Thorium Shells",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 315,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            12359,
+            2
+          ],
+          [
+            15992,
+            1
+          ]
+        ],
+        "creates": [
+          15997,
+          200,
+          200
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19819": {
+      "name": "Voice Amplification Modulator",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            16006,
+            2
+          ],
+          [
+            10558,
+            1
+          ],
+          [
+            15994,
+            1
+          ],
+          [
+            12799,
+            1
+          ]
+        ],
+        "creates": [
+          16009,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19831": {
+      "name": "Arcane Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            16006,
+            1
+          ],
+          [
+            12359,
+            3
+          ],
+          [
+            14047,
+            1
+          ]
+        ],
+        "creates": [
+          16040,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19830": {
+      "name": "Arcanite Dragonling",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            10576,
+            1
+          ],
+          [
+            16006,
+            8
+          ],
+          [
+            12655,
+            10
+          ],
+          [
+            15994,
+            6
+          ],
+          [
+            10558,
+            4
+          ],
+          [
+            12810,
+            6
+          ]
+        ],
+        "creates": [
+          16022,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19825": {
+      "name": "Master Engineer's Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10500,
+            1
+          ],
+          [
+            12364,
+            2
+          ],
+          [
+            12810,
+            4
+          ]
+        ],
+        "creates": [
+          16008,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "19833": {
+      "name": "Flawless Arcanite Rifle",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            12360,
+            10
+          ],
+          [
+            16000,
+            2
+          ],
+          [
+            7078,
+            2
+          ],
+          [
+            7076,
+            2
+          ],
+          [
+            12800,
+            2
+          ],
+          [
+            12810,
+            2
+          ]
+        ],
+        "creates": [
+          16007,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "21940": {
+      "name": "SnowMaster 9000",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 190,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3860,
+            8
+          ],
+          [
+            4389,
+            4
+          ],
+          [
+            17202,
+            4
+          ],
+          [
+            3829,
+            1
+          ]
+        ],
+        "creates": [
+          17716,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "22704": {
+      "name": "Field Repair Bot 74A",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12359,
+            12
+          ],
+          [
+            8170,
+            4
+          ],
+          [
+            7191,
+            1
+          ],
+          [
+            7067,
+            2
+          ],
+          [
+            7068,
+            1
+          ]
+        ],
+        "creates": [
+          18232,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "22793": {
+      "name": "Biznicks 247x128 Accurascope",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            17011,
+            2
+          ],
+          [
+            7076,
+            2
+          ],
+          [
+            16006,
+            4
+          ],
+          [
+            11371,
+            6
+          ],
+          [
+            16000,
+            1
+          ]
+        ],
+        "creates": [
+          18283,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "22795": {
+      "name": "Core Marksman Rifle",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            17010,
+            4
+          ],
+          [
+            17011,
+            2
+          ],
+          [
+            12360,
+            6
+          ],
+          [
+            16006,
+            2
+          ],
+          [
+            16000,
+            2
+          ]
+        ],
+        "creates": [
+          18282,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "22797": {
+      "name": "Force Reactive Disk",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            12360,
+            6
+          ],
+          [
+            16006,
+            2
+          ],
+          [
+            7082,
+            8
+          ],
+          [
+            12803,
+            12
+          ],
+          [
+            7076,
+            8
+          ]
+        ],
+        "creates": [
+          18168,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23066": {
+      "name": "Red Firework",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 162,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4377,
+            1
+          ],
+          [
+            4234,
+            1
+          ]
+        ],
+        "creates": [
+          9318,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23068": {
+      "name": "Green Firework",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 162,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4377,
+            1
+          ],
+          [
+            4234,
+            1
+          ]
+        ],
+        "creates": [
+          9313,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23067": {
+      "name": "Blue Firework",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 162,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4377,
+            1
+          ],
+          [
+            4234,
+            1
+          ]
+        ],
+        "creates": [
+          9312,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23069": {
+      "name": "EZ-Thro Dynamite II",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10505,
+            1
+          ],
+          [
+            4338,
+            2
+          ]
+        ],
+        "creates": [
+          18588,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23070": {
+      "name": "Dense Dynamite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 260,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15992,
+            2
+          ],
+          [
+            14047,
+            3
+          ]
+        ],
+        "creates": [
+          18641,
+          2,
+          2
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 5000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23071": {
+      "name": "Truesilver Transformer",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 270,
+        "green": 275,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 260,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6037,
+            2
+          ],
+          [
+            7067,
+            2
+          ],
+          [
+            7069,
+            1
+          ]
+        ],
+        "creates": [
+          18631,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23077": {
+      "name": "Gyrofreeze Ice Reflector",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 260,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            15994,
+            6
+          ],
+          [
+            18631,
+            2
+          ],
+          [
+            12361,
+            2
+          ],
+          [
+            7078,
+            4
+          ],
+          [
+            3829,
+            2
+          ],
+          [
+            13467,
+            4
+          ]
+        ],
+        "creates": [
+          18634,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23078": {
+      "name": "Goblin Jumper Cables XL",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 265,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15994,
+            2
+          ],
+          [
+            18631,
+            2
+          ],
+          [
+            7191,
+            2
+          ],
+          [
+            14227,
+            2
+          ],
+          [
+            7910,
+            2
+          ]
+        ],
+        "creates": [
+          18587,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23079": {
+      "name": "Major Recombobulator",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 285,
+        "green": 290,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            16000,
+            2
+          ],
+          [
+            18631,
+            1
+          ],
+          [
+            14047,
+            2
+          ]
+        ],
+        "creates": [
+          18637,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23080": {
+      "name": "Powerful Seaforium Charge",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15994,
+            2
+          ],
+          [
+            15992,
+            3
+          ],
+          [
+            8170,
+            2
+          ],
+          [
+            159,
+            1
+          ]
+        ],
+        "creates": [
+          18594,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23081": {
+      "name": "Hyper-Radiant Flame Reflector",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            11371,
+            4
+          ],
+          [
+            18631,
+            3
+          ],
+          [
+            7080,
+            6
+          ],
+          [
+            7910,
+            4
+          ],
+          [
+            12800,
+            2
+          ]
+        ],
+        "creates": [
+          18638,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23082": {
+      "name": "Ultra-Flash Shadow Reflector",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            11371,
+            8
+          ],
+          [
+            18631,
+            4
+          ],
+          [
+            12803,
+            6
+          ],
+          [
+            12808,
+            4
+          ],
+          [
+            12800,
+            2
+          ],
+          [
+            12799,
+            2
+          ]
+        ],
+        "creates": [
+          18639,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23096": {
+      "name": "Alarm-O-Bot",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 275,
+        "green": 280,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 265,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12359,
+            4
+          ],
+          [
+            15994,
+            2
+          ],
+          [
+            8170,
+            4
+          ],
+          [
+            7910,
+            1
+          ],
+          [
+            7191,
+            1
+          ]
+        ],
+        "creates": [
+          18645,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23129": {
+      "name": "World Enlarger",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 260,
+        "green": 265,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 260,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10561,
+            1
+          ],
+          [
+            15994,
+            2
+          ],
+          [
+            10558,
+            1
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            3864,
+            1
+          ]
+        ],
+        "creates": [
+          18660,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23489": {
+      "name": "Ultrasafe Transporter - Gadgetzan",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            3860,
+            12
+          ],
+          [
+            18631,
+            2
+          ],
+          [
+            7075,
+            4
+          ],
+          [
+            7079,
+            2
+          ],
+          [
+            7909,
+            4
+          ],
+          [
+            9060,
+            1
+          ]
+        ],
+        "creates": [
+          18986,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23486": {
+      "name": "Dimensional Ripper - Everlook",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            3860,
+            10
+          ],
+          [
+            18631,
+            1
+          ],
+          [
+            7077,
+            4
+          ],
+          [
+            7910,
+            2
+          ],
+          [
+            10586,
+            1
+          ]
+        ],
+        "creates": [
+          18984,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23507": {
+      "name": "Snake Burst Firework",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 260,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15992,
+            2
+          ],
+          [
+            14047,
+            2
+          ],
+          [
+            8150,
+            1
+          ]
+        ],
+        "creates": [
+          19026,
+          4,
+          4
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "24356": {
+      "name": "Bloodvine Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            19726,
+            4
+          ],
+          [
+            19774,
+            5
+          ],
+          [
+            16006,
+            2
+          ],
+          [
+            12804,
+            8
+          ],
+          [
+            12810,
+            4
+          ]
+        ],
+        "creates": [
+          19999,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "24357": {
+      "name": "Bloodvine Lens",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            19726,
+            5
+          ],
+          [
+            19774,
+            5
+          ],
+          [
+            16006,
+            1
+          ],
+          [
+            12804,
+            8
+          ],
+          [
+            12810,
+            4
+          ]
+        ],
+        "creates": [
+          19998,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26011": {
+      "name": "Tranquil Mechanical Yeti",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15407,
+            1
+          ],
+          [
+            15994,
+            4
+          ],
+          [
+            7079,
+            2
+          ],
+          [
+            18631,
+            2
+          ],
+          [
+            10558,
+            1
+          ]
+        ],
+        "creates": [
+          21277,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26416": {
+      "name": "Small Blue Rocket",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 137,
+        "gray": 150,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4364,
+            1
+          ],
+          [
+            2319,
+            1
+          ]
+        ],
+        "creates": [
+          21558,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26417": {
+      "name": "Small Green Rocket",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 137,
+        "gray": 150,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4364,
+            1
+          ],
+          [
+            2319,
+            1
+          ]
+        ],
+        "creates": [
+          21559,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26418": {
+      "name": "Small Red Rocket",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 137,
+        "gray": 150,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4364,
+            1
+          ],
+          [
+            2319,
+            1
+          ]
+        ],
+        "creates": [
+          21557,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26420": {
+      "name": "Large Blue Rocket",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4377,
+            1
+          ],
+          [
+            4234,
+            1
+          ]
+        ],
+        "creates": [
+          21589,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26421": {
+      "name": "Large Green Rocket",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4377,
+            1
+          ],
+          [
+            4234,
+            1
+          ]
+        ],
+        "creates": [
+          21590,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26422": {
+      "name": "Large Red Rocket",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4377,
+            1
+          ],
+          [
+            4234,
+            1
+          ]
+        ],
+        "creates": [
+          21592,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26423": {
+      "name": "Blue Rocket Cluster",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10505,
+            1
+          ],
+          [
+            4304,
+            1
+          ]
+        ],
+        "creates": [
+          21571,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26424": {
+      "name": "Green Rocket Cluster",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10505,
+            1
+          ],
+          [
+            4304,
+            1
+          ]
+        ],
+        "creates": [
+          21574,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26425": {
+      "name": "Red Rocket Cluster",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10505,
+            1
+          ],
+          [
+            4304,
+            1
+          ]
+        ],
+        "creates": [
+          21576,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26426": {
+      "name": "Large Blue Rocket Cluster",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 280,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15992,
+            1
+          ],
+          [
+            8170,
+            1
+          ]
+        ],
+        "creates": [
+          21714,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26427": {
+      "name": "Large Green Rocket Cluster",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 280,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15992,
+            1
+          ],
+          [
+            8170,
+            1
+          ]
+        ],
+        "creates": [
+          21716,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26428": {
+      "name": "Large Red Rocket Cluster",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 280,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15992,
+            1
+          ],
+          [
+            8170,
+            1
+          ]
+        ],
+        "creates": [
+          21718,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26442": {
+      "name": "Firework Launcher",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            9060,
+            1
+          ],
+          [
+            9061,
+            1
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            10561,
+            1
+          ]
+        ],
+        "creates": [
+          21569,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26443": {
+      "name": "Firework Cluster Launcher",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            9060,
+            4
+          ],
+          [
+            9061,
+            4
+          ],
+          [
+            18631,
+            2
+          ],
+          [
+            10561,
+            1
+          ]
+        ],
+        "creates": [
+          21570,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "28327": {
+      "name": "Steam Tonk Controller",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15994,
+            2
+          ],
+          [
+            10561,
+            1
+          ],
+          [
+            10558,
+            1
+          ]
+        ],
+        "creates": [
+          22728,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "424641": {
+      "name": "Shredder Autosalvage Unit",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 210178
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 135,
+        "green": 140,
+        "gray": 145,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 135,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4382,
+            1
+          ],
+          [
+            4375,
+            2
+          ],
+          [
+            4234,
+            1
+          ]
+        ],
+        "creates": [
+          210147,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 1
+    },
+    "431362": {
+      "name": "Soul Vessel",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 205,
+        "green": 210,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            1210,
+            4
+          ],
+          [
+            9262,
+            1
+          ],
+          [
+            16583,
+            1
+          ]
+        ],
+        "creates": [
+          211427,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "435956": {
+      "name": "Polished Truesilver Gears",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            6037,
+            1
+          ],
+          [
+            213381,
+            5
+          ]
+        ],
+        "creates": [
+          213383,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "435966": {
+      "name": "Ez-Thro Radiation Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 225,
+        "green": 230,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10505,
+            2
+          ],
+          [
+            215430,
+            1
+          ],
+          [
+            3860,
+            2
+          ]
+        ],
+        "creates": [
+          215168,
+          2,
+          5
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "435958": {
+      "name": "Whirling Truesilver Gearwall",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 225,
+        "green": 232,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            213376,
+            3
+          ],
+          [
+            213383,
+            5
+          ],
+          [
+            213369,
+            2
+          ],
+          [
+            10561,
+            2
+          ],
+          [
+            4389,
+            2
+          ],
+          [
+            3860,
+            15
+          ]
+        ],
+        "creates": [
+          213390,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "435964": {
+      "name": "High-Yield Radiation Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 225,
+        "green": 230,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            10505,
+            1
+          ],
+          [
+            215430,
+            1
+          ],
+          [
+            3860,
+            2
+          ]
+        ],
+        "creates": [
+          215127,
+          2,
+          5
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "435960": {
+      "name": "Hyperconductive Goldwap",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 225,
+        "green": 230,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            213383,
+            3
+          ],
+          [
+            213379,
+            3
+          ],
+          [
+            213369,
+            1
+          ],
+          [
+            3577,
+            10
+          ]
+        ],
+        "creates": [
+          215115,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "446236": {
+      "name": "Void-Powered Invoker's Vambraces",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            221021,
+            10
+          ],
+          [
+            220688,
+            1
+          ],
+          [
+            220689,
+            1
+          ],
+          [
+            10558,
+            2
+          ],
+          [
+            15994,
+            2
+          ]
+        ],
+        "creates": [
+          221025,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 3
+    },
+    "446238": {
+      "name": "Void-Powered Protector's Vambraces",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            221021,
+            10
+          ],
+          [
+            220688,
+            1
+          ],
+          [
+            220689,
+            1
+          ],
+          [
+            10558,
+            2
+          ],
+          [
+            16000,
+            2
+          ]
+        ],
+        "creates": [
+          221027,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 3
+    },
+    "446237": {
+      "name": "Void-Powered Slayer's Vambraces",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            221021,
+            10
+          ],
+          [
+            220688,
+            1
+          ],
+          [
+            220689,
+            1
+          ],
+          [
+            15992,
+            3
+          ],
+          [
+            7910,
+            2
+          ]
+        ],
+        "creates": [
+          221026,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 3
+    },
+    "461710": {
+      "name": "Fiery Core Sharpshooter Rifle",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            17010,
+            4
+          ],
+          [
+            17011,
+            2
+          ],
+          [
+            12360,
+            6
+          ],
+          [
+            16006,
+            2
+          ],
+          [
+            16000,
+            2
+          ]
+        ],
+        "creates": [
+          227849,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 4
+    },
+    "1213573": {
+      "name": "Arcane Megabomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            16006,
+            1
+          ],
+          [
+            20725,
+            1
+          ],
+          [
+            14047,
+            1
+          ]
+        ],
+        "creates": [
+          233984,
+          5,
+          5
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213576": {
+      "name": "The Fumigator",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            234011,
+            1
+          ],
+          [
+            234005,
+            2
+          ],
+          [
+            14047,
+            1
+          ]
+        ],
+        "creates": [
+          233985,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213578": {
+      "name": "Obsidian Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            234005,
+            3
+          ],
+          [
+            234007,
+            1
+          ],
+          [
+            234008,
+            1
+          ],
+          [
+            12365,
+            1
+          ]
+        ],
+        "creates": [
+          233986,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213586": {
+      "name": "G00 DV-1B3 Generator",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            234005,
+            20
+          ],
+          [
+            234012,
+            30
+          ],
+          [
+            234009,
+            8
+          ],
+          [
+            234011,
+            8
+          ],
+          [
+            234010,
+            8
+          ],
+          [
+            234007,
+            8
+          ]
+        ],
+        "creates": [
+          233987,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213588": {
+      "name": "Tuned Force Reactive Disk",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            18168,
+            1
+          ],
+          [
+            234007,
+            4
+          ],
+          [
+            234003,
+            8
+          ],
+          [
+            234005,
+            5
+          ]
+        ],
+        "creates": [
+          233988,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213646": {
+      "name": "Obsidian Blasting Powder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            22202,
+            2
+          ]
+        ],
+        "creates": [
+          234005,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1214145": {
+      "name": "Obsidian Shotgun",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            12360,
+            30
+          ],
+          [
+            234003,
+            8
+          ],
+          [
+            20725,
+            3
+          ],
+          [
+            20868,
+            3
+          ],
+          [
+            20870,
+            3
+          ],
+          [
+            20881,
+            2
+          ]
+        ],
+        "creates": [
+          234434,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1217207": {
+      "name": "Obsidian Scope",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 235530
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            16000,
+            1
+          ],
+          [
+            12363,
+            1
+          ],
+          [
+            234003,
+            1
+          ]
+        ],
+        "creates": [
+          235529,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1221012": {
+      "name": "Creepy Censor Sensors",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 236872
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 275,
+        "green": 277,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            8170,
+            8
+          ],
+          [
+            12800,
+            2
+          ]
+        ],
+        "creates": [
+          236871,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 7
+    },
+    "1226206": {
+      "name": "Tinkerbox",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 238782
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 260,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10561,
+            1
+          ],
+          [
+            10558,
+            2
+          ]
+        ],
+        "creates": [
+          238737,
+          2,
+          4
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    },
+    "1226207": {
+      "name": "Tinkerbox: Teleport",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 238783
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 270,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            238737,
+            1
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            15994,
+            1
+          ]
+        ],
+        "creates": [
+          238734,
+          1,
+          2
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    },
+    "1226208": {
+      "name": "Tinkerbox: Nitro Boosts",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 238784
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 270,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            238737,
+            1
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            16000,
+            1
+          ]
+        ],
+        "creates": [
+          238735,
+          1,
+          2
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    },
+    "1226209": {
+      "name": "Tinkerbox: Magnetic Displacement",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 238785
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 270,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            238737,
+            1
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            4387,
+            2
+          ]
+        ],
+        "creates": [
+          238736,
+          1,
+          2
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    },
+    "1226210": {
+      "name": "Tinker: Teleport",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WOWHEAD",
+        "wowheadSources": []
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 280,
+        "green": 282,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 280,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            238737,
+            1
+          ],
+          [
+            16006,
+            1
+          ],
+          [
+            15994,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    },
+    "1226211": {
+      "name": "Tinker: Nitro Boosts",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WOWHEAD",
+        "wowheadSources": []
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 280,
+        "green": 282,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 280,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            238737,
+            1
+          ],
+          [
+            16006,
+            1
+          ],
+          [
+            16000,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    },
+    "1226212": {
+      "name": "Tinker: Magnetic Displacement",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WOWHEAD",
+        "wowheadSources": []
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 280,
+        "green": 282,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 280,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            238737,
+            1
+          ],
+          [
+            16006,
+            1
+          ],
+          [
+            4387,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    },
+    "1226213": {
+      "name": "Semisafe Transporter: New Avalon",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 238789
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 305,
+        "green": 305,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 305,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            16006,
+            1
+          ],
+          [
+            18631,
+            2
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            10561,
+            2
+          ],
+          [
+            10588,
+            2
+          ],
+          [
+            12811,
+            1
+          ]
+        ],
+        "creates": [
+          238781,
+          1,
+          1
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    },
+    "1228088": {
+      "name": "Pop-Up Shrub",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 239222
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 255,
+        "green": 257,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 255,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            15994,
+            1
+          ],
+          [
+            10560,
+            1
+          ],
+          [
+            4382,
+            1
+          ]
+        ],
+        "creates": [
+          237023,
+          1,
+          1
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    }
+  }
+}

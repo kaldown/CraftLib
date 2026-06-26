@@ -1,0 +1,484 @@
+{
+  "profession": "firstAid",
+  "version": "1.15.8.67156",
+  "generated": "2026-06-22",
+  "recipes": {
+    "3275": {
+      "name": "Linen Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 30,
+        "green": 45,
+        "gray": 60,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2589,
+            1
+          ]
+        ],
+        "creates": [
+          1251,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3276": {
+      "name": "Heavy Linen Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 50,
+        "green": 75,
+        "gray": 100,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 40,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2589,
+            2
+          ]
+        ],
+        "creates": [
+          2581,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3277": {
+      "name": "Wool Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 250
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 80,
+        "green": 115,
+        "gray": 150,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2592,
+            1
+          ]
+        ],
+        "creates": [
+          3530,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 250,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3278": {
+      "name": "Heavy Wool Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 115,
+        "yellow": 115,
+        "green": 150,
+        "gray": 185,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 115,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2592,
+            2
+          ]
+        ],
+        "creates": [
+          3531,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7928": {
+      "name": "Silk Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5000
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 180,
+        "gray": 210,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4306,
+            1
+          ]
+        ],
+        "creates": [
+          6450,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 5000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7929": {
+      "name": "Heavy Silk Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 180,
+        "green": 210,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 180,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4306,
+            2
+          ]
+        ],
+        "creates": [
+          6451,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7934": {
+      "name": "Anti-Venom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 250
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 80,
+        "green": 115,
+        "gray": 150,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            1475,
+            1
+          ]
+        ],
+        "creates": [
+          6452,
+          3,
+          3
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 250,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7935": {
+      "name": "Strong Anti-Venom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 130,
+        "green": 165,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 130,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            1288,
+            1
+          ]
+        ],
+        "creates": [
+          6453,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "10840": {
+      "name": "Mageweave Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 210,
+        "green": 240,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4338,
+            1
+          ]
+        ],
+        "creates": [
+          8544,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "10841": {
+      "name": "Heavy Mageweave Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 240,
+        "green": 270,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4338,
+            2
+          ]
+        ],
+        "creates": [
+          8545,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "18629": {
+      "name": "Runecloth Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 260,
+        "green": 290,
+        "gray": 320,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 260,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            14047,
+            1
+          ]
+        ],
+        "creates": [
+          14529,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "18630": {
+      "name": "Heavy Runecloth Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 290,
+        "green": 320,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            14047,
+            2
+          ]
+        ],
+        "creates": [
+          14530,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "23787": {
+      "name": "Powerful Anti-Venom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 300,
+        "green": 330,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            19441,
+            1
+          ]
+        ],
+        "creates": [
+          19440,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "30021": {
+      "name": "Crystal Infused Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "470349": {
+      "name": "Dense Runecloth Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 327,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            14530,
+            2
+          ]
+        ],
+        "creates": [
+          232433,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    }
+  }
+}

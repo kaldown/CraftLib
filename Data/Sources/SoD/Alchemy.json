@@ -1,0 +1,5325 @@
+{
+  "profession": "alchemy",
+  "version": "1.15.8.67156",
+  "generated": "2026-06-22",
+  "recipes": {
+    "2330": {
+      "name": "Minor Healing Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 55,
+        "green": 75,
+        "gray": 95,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2447,
+            1
+          ],
+          [
+            765,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          118,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "2329": {
+      "name": "Elixir of Lion's Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 55,
+        "green": 75,
+        "gray": 95,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2449,
+            1
+          ],
+          [
+            765,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          2454,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "2331": {
+      "name": "Minor Mana Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 100
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 65,
+        "green": 85,
+        "gray": 105,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 25,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            785,
+            1
+          ],
+          [
+            765,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          2455,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 100,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "2332": {
+      "name": "Minor Rejuvenation Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 150
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 70,
+        "green": 90,
+        "gray": 110,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 40,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            785,
+            2
+          ],
+          [
+            2447,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          2456,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 150,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "2334": {
+      "name": "Elixir of Minor Fortitude",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 250
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 80,
+        "green": 100,
+        "gray": 120,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2449,
+            2
+          ],
+          [
+            2447,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          2458,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 250,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "2335": {
+      "name": "Swiftness Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 60,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2452,
+            1
+          ],
+          [
+            2450,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          2459,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "2336": {
+      "name": "Elixir of Tongues",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "2337": {
+      "name": "Lesser Healing Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 55,
+        "yellow": 85,
+        "green": 105,
+        "gray": 125,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 55,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            118,
+            1
+          ],
+          [
+            2450,
+            1
+          ]
+        ],
+        "creates": [
+          858,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3171": {
+      "name": "Elixir of Wisdom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 500
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 90,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            785,
+            1
+          ],
+          [
+            2450,
+            2
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          3383,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3172": {
+      "name": "Minor Magic Resistance Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 135,
+        "green": 155,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 110,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            785,
+            3
+          ],
+          [
+            3355,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          3384,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3173": {
+      "name": "Lesser Mana Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 145,
+        "green": 165,
+        "gray": 185,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 120,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            785,
+            1
+          ],
+          [
+            3820,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          3385,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3174": {
+      "name": "Elixir of Poison Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 145,
+        "green": 165,
+        "gray": 185,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 120,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            1288,
+            1
+          ],
+          [
+            2453,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3386,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3176": {
+      "name": "Strong Troll's Blood Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2453,
+            2
+          ],
+          [
+            2450,
+            2
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3388,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3177": {
+      "name": "Elixir of Defense",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2000
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 155,
+        "green": 175,
+        "gray": 195,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 130,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3355,
+            1
+          ],
+          [
+            3820,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3389,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "2333": {
+      "name": "Elixir of Lesser Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 140,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3355,
+            1
+          ],
+          [
+            2452,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3390,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3188": {
+      "name": "Elixir of Ogre's Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2449,
+            1
+          ],
+          [
+            3356,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3391,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3170": {
+      "name": "Weak Troll's Blood Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 50
+      },
+      "difficulty": {
+        "orange": 15,
+        "yellow": 60,
+        "green": 80,
+        "gray": 100,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 15,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2447,
+            1
+          ],
+          [
+            2449,
+            2
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          3382,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 50,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3230": {
+      "name": "Elixir of Minor Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 80,
+        "green": 100,
+        "gray": 120,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2452,
+            1
+          ],
+          [
+            765,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          2457,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3447": {
+      "name": "Healing Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4000
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 135,
+        "green": 155,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 110,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2453,
+            1
+          ],
+          [
+            2450,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          929,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3448": {
+      "name": "Lesser Invisibility Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4500
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 185,
+        "green": 205,
+        "gray": 225,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 165,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3818,
+            1
+          ],
+          [
+            3355,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3823,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3449": {
+      "name": "Shadow Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 165,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3818,
+            4
+          ],
+          [
+            3369,
+            4
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3824,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3450": {
+      "name": "Elixir of Fortitude",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5400
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3355,
+            1
+          ],
+          [
+            3821,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3825,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 5400,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3451": {
+      "name": "Mighty Troll's Blood Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 180,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3357,
+            1
+          ],
+          [
+            2453,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3826,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3452": {
+      "name": "Mana Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5000
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 180,
+        "green": 200,
+        "gray": 220,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 160,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3820,
+            1
+          ],
+          [
+            3356,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3827,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 5000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3453": {
+      "name": "Elixir of Detect Lesser Invisibility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 195,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3358,
+            1
+          ],
+          [
+            3818,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3828,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3454": {
+      "name": "Frost Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3358,
+            4
+          ],
+          [
+            3819,
+            2
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          3829,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "4508": {
+      "name": "Discolored Healing Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 80,
+        "green": 100,
+        "gray": 120,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3164,
+            1
+          ],
+          [
+            2447,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          4596,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "4942": {
+      "name": "Lesser Stoneshield Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 215,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3858,
+            1
+          ],
+          [
+            3821,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          4623,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "6624": {
+      "name": "Free Action Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6370,
+            2
+          ],
+          [
+            3820,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          5634,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "6619": {
+      "name": "Cowardly Flight Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "6618": {
+      "name": "Great Rage Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5637,
+            1
+          ],
+          [
+            3356,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          5633,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "6617": {
+      "name": "Rage Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 60,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5635,
+            1
+          ],
+          [
+            2450,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          5631,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7179": {
+      "name": "Elixir of Water Breathing",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 450
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 90,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3820,
+            1
+          ],
+          [
+            6370,
+            2
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          5996,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 450,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7181": {
+      "name": "Greater Healing Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5000
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 155,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3357,
+            1
+          ],
+          [
+            3356,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          1710,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 5000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7183": {
+      "name": "Elixir of Minor Defense",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 55,
+        "green": 75,
+        "gray": 95,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            765,
+            2
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          5997,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7257": {
+      "name": "Fire Protection Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 210,
+        "green": 230,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 165,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4402,
+            1
+          ],
+          [
+            6371,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          6049,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7258": {
+      "name": "Frost Protection Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 205,
+        "green": 225,
+        "gray": 245,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 190,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3819,
+            1
+          ],
+          [
+            3821,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          6050,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7255": {
+      "name": "Holy Protection Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2453,
+            1
+          ],
+          [
+            2452,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          6051,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7259": {
+      "name": "Nature Protection Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 210,
+        "green": 230,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 190,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3357,
+            1
+          ],
+          [
+            3820,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          6052,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7256": {
+      "name": "Shadow Protection Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 135,
+        "yellow": 160,
+        "green": 180,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 135,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3369,
+            1
+          ],
+          [
+            3356,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          6048,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7836": {
+      "name": "Blackmouth Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 250
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 80,
+        "green": 90,
+        "gray": 100,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6358,
+            2
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          6370,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 250,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7837": {
+      "name": "Fire Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 150,
+        "green": 160,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 130,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6359,
+            2
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          6371,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7841": {
+      "name": "Swim Speed Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2452,
+            1
+          ],
+          [
+            6370,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          6372,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "7845": {
+      "name": "Elixir of Firepower",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 3000
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 140,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6371,
+            2
+          ],
+          [
+            3356,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          6373,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 3000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "8240": {
+      "name": "Elixir of Giant Growth",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 90,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6522,
+            1
+          ],
+          [
+            2449,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          6662,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11447": {
+      "name": "Elixir of Waterwalking",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "11449": {
+      "name": "Elixir of Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5850
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 205,
+        "green": 225,
+        "gray": 245,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 185,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3820,
+            1
+          ],
+          [
+            3821,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          8949,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 5850,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11450": {
+      "name": "Elixir of Greater Defense",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 6750
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 195,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3355,
+            1
+          ],
+          [
+            3821,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          8951,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 6750,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11451": {
+      "name": "Oil of Immolation",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 7200
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4625,
+            1
+          ],
+          [
+            3821,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          8956,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 7200,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11448": {
+      "name": "Greater Mana Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 8100
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3358,
+            1
+          ],
+          [
+            3821,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          6149,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 8100,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11452": {
+      "name": "Restorative Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 215,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            7067,
+            1
+          ],
+          [
+            3821,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9030,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11453": {
+      "name": "Magic Resistance Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3358,
+            1
+          ],
+          [
+            8831,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9036,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11456": {
+      "name": "Goblin Rocket Fuel",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4625,
+            1
+          ],
+          [
+            9260,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          9061,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11457": {
+      "name": "Superior Healing Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 9000
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 215,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8838,
+            1
+          ],
+          [
+            3358,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          3928,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 9000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11458": {
+      "name": "Wildvine Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8153,
+            1
+          ],
+          [
+            8831,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9144,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11459": {
+      "name": "Philosophers' Stone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3575,
+            4
+          ],
+          [
+            9262,
+            1
+          ],
+          [
+            8831,
+            4
+          ],
+          [
+            4625,
+            4
+          ]
+        ],
+        "creates": [
+          9149,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11460": {
+      "name": "Elixir of Detect Undead",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4500
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 245,
+        "green": 265,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 230,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8836,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9154,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11461": {
+      "name": "Arcane Elixir",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 9000
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 250,
+        "green": 270,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 235,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8839,
+            1
+          ],
+          [
+            3821,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9155,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 9000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11464": {
+      "name": "Invisibility Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 250,
+        "green": 270,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 235,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8845,
+            1
+          ],
+          [
+            8838,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9172,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11465": {
+      "name": "Elixir of Greater Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10800
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 250,
+        "green": 270,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 235,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8839,
+            1
+          ],
+          [
+            3358,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9179,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 10800,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11466": {
+      "name": "Gift of Arthas",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 255,
+        "green": 275,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8836,
+            1
+          ],
+          [
+            8839,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9088,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11467": {
+      "name": "Elixir of Greater Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10800
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 255,
+        "green": 275,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8838,
+            1
+          ],
+          [
+            3821,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9187,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 10800,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11468": {
+      "name": "Elixir of Dream Vision",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 255,
+        "green": 275,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8831,
+            3
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9197,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11472": {
+      "name": "Elixir of Giants",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 260,
+        "green": 280,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 245,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8838,
+            1
+          ],
+          [
+            8846,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9206,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11473": {
+      "name": "Ghost Dye",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 260,
+        "green": 280,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 245,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8845,
+            2
+          ],
+          [
+            4342,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9210,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11476": {
+      "name": "Elixir of Shadow Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8845,
+            3
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9264,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11477": {
+      "name": "Elixir of Demonslaying",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8846,
+            1
+          ],
+          [
+            8845,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9224,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11478": {
+      "name": "Elixir of Detect Demon",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 12600
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8846,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          9233,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 12600,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11479": {
+      "name": "Transmute: Iron to Gold",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2500
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            3575,
+            1
+          ]
+        ],
+        "creates": [
+          3577,
+          0,
+          0
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "11480": {
+      "name": "Transmute: Mithril to Truesilver",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            3860,
+            1
+          ]
+        ],
+        "creates": [
+          6037,
+          0,
+          0
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 10000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "12609": {
+      "name": "Catseye Elixir",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 7200
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3821,
+            1
+          ],
+          [
+            3818,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          10592,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 7200,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "15833": {
+      "name": "Dreamless Sleep Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 9000
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 245,
+        "green": 265,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 230,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8831,
+            3
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          12190,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 9000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17187": {
+      "name": "Transmute: Arcanite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 282,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            12359,
+            1
+          ],
+          [
+            12363,
+            1
+          ]
+        ],
+        "creates": [
+          12360,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17551": {
+      "name": "Stonescale Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 13500
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13422,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          13423,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 13500,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17552": {
+      "name": "Mighty Rage Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 255,
+        "yellow": 270,
+        "green": 290,
+        "gray": 310,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 255,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8846,
+            3
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13442,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17553": {
+      "name": "Superior Mana Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 275,
+        "green": 295,
+        "gray": 315,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 260,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8838,
+            2
+          ],
+          [
+            8839,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13443,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17554": {
+      "name": "Elixir of Superior Defense",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 280,
+        "green": 300,
+        "gray": 320,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 265,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13423,
+            2
+          ],
+          [
+            8838,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13445,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17555": {
+      "name": "Elixir of the Sages",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 270,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13463,
+            1
+          ],
+          [
+            13466,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13447,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17556": {
+      "name": "Major Healing Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 290,
+        "green": 310,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13464,
+            2
+          ],
+          [
+            13465,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13446,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17557": {
+      "name": "Elixir of Brute Force",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 290,
+        "green": 310,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8846,
+            2
+          ],
+          [
+            13466,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13453,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17559": {
+      "name": "Transmute: Air to Fire",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 282,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            7082,
+            1
+          ]
+        ],
+        "creates": [
+          7078,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17561": {
+      "name": "Transmute: Earth to Water",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 282,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            7076,
+            1
+          ]
+        ],
+        "creates": [
+          7080,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17566": {
+      "name": "Transmute: Earth to Life",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 282,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            7076,
+            1
+          ]
+        ],
+        "creates": [
+          12803,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17560": {
+      "name": "Transmute: Fire to Earth",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 282,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            7078,
+            1
+          ]
+        ],
+        "creates": [
+          7076,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17563": {
+      "name": "Transmute: Undeath to Water",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 282,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            12808,
+            1
+          ]
+        ],
+        "creates": [
+          7080,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17562": {
+      "name": "Transmute: Water to Air",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 282,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            7080,
+            1
+          ]
+        ],
+        "creates": [
+          7082,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17564": {
+      "name": "Transmute: Water to Undeath",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 282,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            7080,
+            1
+          ]
+        ],
+        "creates": [
+          12808,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17565": {
+      "name": "Transmute: Life to Earth",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 282,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            12803,
+            1
+          ]
+        ],
+        "creates": [
+          7076,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17570": {
+      "name": "Greater Stoneshield Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 295,
+        "green": 315,
+        "gray": 335,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 280,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13423,
+            3
+          ],
+          [
+            10620,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13455,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17571": {
+      "name": "Elixir of the Mongoose",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 295,
+        "green": 315,
+        "gray": 335,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 280,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13465,
+            2
+          ],
+          [
+            13466,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13452,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17572": {
+      "name": "Purification Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 300,
+        "green": 320,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13467,
+            2
+          ],
+          [
+            13466,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13462,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17573": {
+      "name": "Greater Arcane Elixir",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 300,
+        "green": 320,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13463,
+            3
+          ],
+          [
+            13465,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13454,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17574": {
+      "name": "Greater Fire Protection Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 305,
+        "green": 325,
+        "gray": 345,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            7068,
+            1
+          ],
+          [
+            13463,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13457,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17575": {
+      "name": "Greater Frost Protection Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 305,
+        "green": 325,
+        "gray": 345,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            7070,
+            1
+          ],
+          [
+            13463,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13456,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17576": {
+      "name": "Greater Nature Protection Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 305,
+        "green": 325,
+        "gray": 345,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            7067,
+            1
+          ],
+          [
+            13463,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13458,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17577": {
+      "name": "Greater Arcane Protection Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 305,
+        "green": 325,
+        "gray": 345,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            11176,
+            1
+          ],
+          [
+            13463,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13461,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17578": {
+      "name": "Greater Shadow Protection Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 305,
+        "green": 325,
+        "gray": 345,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3824,
+            1
+          ],
+          [
+            13463,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13459,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17579": {
+      "name": "Greater Holy Protection Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "17580": {
+      "name": "Major Mana Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 295,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13463,
+            3
+          ],
+          [
+            13467,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13444,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17632": {
+      "name": "Alchemist's Stone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            7078,
+            8
+          ],
+          [
+            7076,
+            8
+          ],
+          [
+            7082,
+            8
+          ],
+          [
+            7080,
+            8
+          ],
+          [
+            12803,
+            8
+          ],
+          [
+            9262,
+            2
+          ],
+          [
+            13468,
+            4
+          ]
+        ],
+        "creates": [
+          13503,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17634": {
+      "name": "Flask of Petrification",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13423,
+            30
+          ],
+          [
+            13465,
+            10
+          ],
+          [
+            13468,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13506,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17635": {
+      "name": "Flask of the Titans",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8846,
+            30
+          ],
+          [
+            13423,
+            10
+          ],
+          [
+            13468,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13510,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17636": {
+      "name": "Flask of Distilled Wisdom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13463,
+            30
+          ],
+          [
+            13467,
+            10
+          ],
+          [
+            13468,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13511,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17637": {
+      "name": "Flask of Supreme Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13463,
+            30
+          ],
+          [
+            13465,
+            10
+          ],
+          [
+            13468,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13512,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "17638": {
+      "name": "Flask of Chromatic Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13467,
+            30
+          ],
+          [
+            13465,
+            10
+          ],
+          [
+            13468,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          13513,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "3175": {
+      "name": "Limited Invulnerability Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 275,
+        "green": 295,
+        "gray": 315,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8839,
+            2
+          ],
+          [
+            8845,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          3387,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "21923": {
+      "name": "Elixir of Frost Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 210,
+        "green": 230,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 190,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3819,
+            2
+          ],
+          [
+            3358,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          17708,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "22430": {
+      "name": "Refined Scale of Onyxia",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "22732": {
+      "name": "Major Rejuvenation Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10286,
+            1
+          ],
+          [
+            13464,
+            4
+          ],
+          [
+            13463,
+            4
+          ],
+          [
+            18256,
+            1
+          ]
+        ],
+        "creates": [
+          18253,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "22808": {
+      "name": "Elixir of Greater Water Breathing",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 9000
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 215,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            7972,
+            1
+          ],
+          [
+            8831,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          18294,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 9000,
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "24266": {
+      "name": "Gurubashi Mojo Madness",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            12938,
+            1
+          ],
+          [
+            19943,
+            1
+          ],
+          [
+            12804,
+            6
+          ],
+          [
+            13468,
+            1
+          ]
+        ],
+        "creates": [
+          19931,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "24365": {
+      "name": "Mageblood Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 290,
+        "green": 310,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13463,
+            1
+          ],
+          [
+            13466,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          20007,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "24366": {
+      "name": "Greater Dreamless Sleep Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 290,
+        "green": 310,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13463,
+            2
+          ],
+          [
+            13464,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          20002,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "24367": {
+      "name": "Living Action Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 300,
+        "green": 320,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13467,
+            2
+          ],
+          [
+            13465,
+            2
+          ],
+          [
+            10286,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          20008,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "24368": {
+      "name": "Major Troll's Blood Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 305,
+        "green": 325,
+        "gray": 345,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8846,
+            1
+          ],
+          [
+            13466,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          20004,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "25146": {
+      "name": "Transmute: Elemental Fire",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 301,
+        "green": 305,
+        "gray": 310,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            7077,
+            1
+          ]
+        ],
+        "creates": [
+          7068,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "26277": {
+      "name": "Elixir of Greater Firepower",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6371,
+            3
+          ],
+          [
+            4625,
+            3
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          21546,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      }
+    },
+    "426607": {
+      "name": "Elixir of Coalesced Regret",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 90,
+        "green": 100,
+        "gray": 110,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 90,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3820,
+            5
+          ],
+          [
+            3372,
+            1
+          ],
+          [
+            3369,
+            5
+          ],
+          [
+            11083,
+            1
+          ]
+        ],
+        "creates": [
+          210708,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 1
+    },
+    "435969": {
+      "name": "Insulating Gniodine",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            3372,
+            1
+          ],
+          [
+            213371,
+            5
+          ]
+        ],
+        "creates": [
+          213372,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "435971": {
+      "name": "Mildly Irradiated Rejuvenation Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 225,
+        "green": 230,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            213371,
+            1
+          ],
+          [
+            2456,
+            1
+          ],
+          [
+            215430,
+            3
+          ],
+          [
+            8925,
+            5
+          ]
+        ],
+        "creates": [
+          215162,
+          5,
+          5
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "439960": {
+      "name": "Lesser Arcane Elixir",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 210,
+        "green": 212,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3356,
+            1
+          ],
+          [
+            3821,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          217398,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "446226": {
+      "name": "Flask of Everlasting Nightmares",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            221021,
+            10
+          ],
+          [
+            220688,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          221024,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 3
+    },
+    "446851": {
+      "name": "Flask of Nightmarish Mojo",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            221021,
+            5
+          ],
+          [
+            8925,
+            1
+          ],
+          [
+            221312,
+            5
+          ]
+        ],
+        "creates": [
+          221313,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 3
+    },
+    "448085": {
+      "name": "Flask of Restless Dreams",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            221021,
+            10
+          ],
+          [
+            220688,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          222952,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 3
+    },
+    "1213544": {
+      "name": "Flask of Unyielding Sorrow",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            16203,
+            1
+          ],
+          [
+            234012,
+            1
+          ],
+          [
+            13511,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          233966,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213548": {
+      "name": "Flask of the Old Gods",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            16203,
+            1
+          ],
+          [
+            234006,
+            1
+          ],
+          [
+            13510,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          233965,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213546": {
+      "name": "Flask of Ancient Knowledge",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            16203,
+            1
+          ],
+          [
+            234011,
+            1
+          ],
+          [
+            13512,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          233964,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213552": {
+      "name": "Flask of Madness",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            16203,
+            1
+          ],
+          [
+            234010,
+            1
+          ],
+          [
+            13513,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          233962,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213559": {
+      "name": "Elixir of the Honey Badger",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13465,
+            2
+          ],
+          [
+            234012,
+            2
+          ],
+          [
+            234011,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          233967,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213563": {
+      "name": "Elixir of the Mage-Lord",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13466,
+            2
+          ],
+          [
+            234012,
+            2
+          ],
+          [
+            234011,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          233968,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213565": {
+      "name": "Elixir of the Ironside",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13467,
+            2
+          ],
+          [
+            234012,
+            2
+          ],
+          [
+            234011,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          233969,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213571": {
+      "name": "Elixir of Alacrity",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 315,
+        "green": 322,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13463,
+            2
+          ],
+          [
+            234012,
+            2
+          ],
+          [
+            234011,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          233977,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1231583": {
+      "name": "Major Discolored Healing Potion",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 241651
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "sod"
+      },
+      "wowhead": {
+        "learnedAt": 270,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            241652,
+            1
+          ],
+          [
+            13466,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          241650,
+          2,
+          4
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-22"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    }
+  }
+}

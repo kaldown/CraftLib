@@ -1,0 +1,1107 @@
+{
+  "profession": "firstAid",
+  "version": "2.5.5.65795",
+  "generated": "2026-02-11",
+  "recipes": {
+    "3275": {
+      "name": "Linen Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 30,
+        "green": 45,
+        "gray": 60,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2589,
+            1
+          ]
+        ],
+        "creates": [
+          1251,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      }
+    },
+    "3276": {
+      "name": "Heavy Linen Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 100
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 50,
+        "green": 75,
+        "gray": 100,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 100,
+        "learnedAt": 40,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2589,
+            2
+          ]
+        ],
+        "creates": [
+          2581,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16662,
+            "name": "Alestus",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 22477,
+            "name": "Anchorite Ensham",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 17214,
+            "name": "Anchorite Fateema",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17424,
+            "name": "Anchorite Paetheus",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3373,
+            "name": "Arnok",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6094,
+            "name": "Byancie",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4211,
+            "name": "Dannelor",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 19478,
+            "name": "Fera Palerunner",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3181,
+            "name": "Fremal Doohickey",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 16272,
+            "name": "Kanaria",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 4591,
+            "name": "Mary Edras",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 2329,
+            "name": "Michelle Belle",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 19184,
+            "name": "Mildred Fletcher",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 5150,
+            "name": "Nissa Firestone",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5759,
+            "name": "Nurse Neela",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 16731,
+            "name": "Nus",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 2798,
+            "name": "Pand Stonebinder",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 5943,
+            "name": "Rawrk",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 2327,
+            "name": "Shaina Fuller",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 2326,
+            "name": "Thamner Pol",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5939,
+            "name": "Vira Younghoof",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "3277": {
+      "name": "Wool Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 250
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 80,
+        "green": 115,
+        "gray": 150,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 250,
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2592,
+            1
+          ]
+        ],
+        "creates": [
+          3530,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16662,
+            "name": "Alestus",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 22477,
+            "name": "Anchorite Ensham",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 17214,
+            "name": "Anchorite Fateema",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17424,
+            "name": "Anchorite Paetheus",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3373,
+            "name": "Arnok",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6094,
+            "name": "Byancie",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4211,
+            "name": "Dannelor",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 19478,
+            "name": "Fera Palerunner",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3181,
+            "name": "Fremal Doohickey",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 16272,
+            "name": "Kanaria",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 4591,
+            "name": "Mary Edras",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 2329,
+            "name": "Michelle Belle",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 19184,
+            "name": "Mildred Fletcher",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 5150,
+            "name": "Nissa Firestone",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5759,
+            "name": "Nurse Neela",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 16731,
+            "name": "Nus",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 2798,
+            "name": "Pand Stonebinder",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 5943,
+            "name": "Rawrk",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 2327,
+            "name": "Shaina Fuller",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 2326,
+            "name": "Thamner Pol",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5939,
+            "name": "Vira Younghoof",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "3278": {
+      "name": "Heavy Wool Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 115,
+        "yellow": 115,
+        "green": 150,
+        "gray": 185,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "learnedAt": 115,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2592,
+            2
+          ]
+        ],
+        "creates": [
+          3531,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16662,
+            "name": "Alestus",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 22477,
+            "name": "Anchorite Ensham",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 17214,
+            "name": "Anchorite Fateema",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17424,
+            "name": "Anchorite Paetheus",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3373,
+            "name": "Arnok",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6094,
+            "name": "Byancie",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4211,
+            "name": "Dannelor",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 19478,
+            "name": "Fera Palerunner",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3181,
+            "name": "Fremal Doohickey",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 16272,
+            "name": "Kanaria",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 4591,
+            "name": "Mary Edras",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 2329,
+            "name": "Michelle Belle",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 19184,
+            "name": "Mildred Fletcher",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 5150,
+            "name": "Nissa Firestone",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5759,
+            "name": "Nurse Neela",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 16731,
+            "name": "Nus",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 2798,
+            "name": "Pand Stonebinder",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 5943,
+            "name": "Rawrk",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 2327,
+            "name": "Shaina Fuller",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 2326,
+            "name": "Thamner Pol",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5939,
+            "name": "Vira Younghoof",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "7928": {
+      "name": "Silk Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5000
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 180,
+        "gray": 210,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 5000,
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4306,
+            1
+          ]
+        ],
+        "creates": [
+          6450,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16662,
+            "name": "Alestus",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 22477,
+            "name": "Anchorite Ensham",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 17214,
+            "name": "Anchorite Fateema",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17424,
+            "name": "Anchorite Paetheus",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3373,
+            "name": "Arnok",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6094,
+            "name": "Byancie",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4211,
+            "name": "Dannelor",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 19478,
+            "name": "Fera Palerunner",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3181,
+            "name": "Fremal Doohickey",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 16272,
+            "name": "Kanaria",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 4591,
+            "name": "Mary Edras",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 2329,
+            "name": "Michelle Belle",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 19184,
+            "name": "Mildred Fletcher",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 5150,
+            "name": "Nissa Firestone",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5759,
+            "name": "Nurse Neela",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 16731,
+            "name": "Nus",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 2798,
+            "name": "Pand Stonebinder",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 5943,
+            "name": "Rawrk",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 2327,
+            "name": "Shaina Fuller",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 2326,
+            "name": "Thamner Pol",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5939,
+            "name": "Vira Younghoof",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "7929": {
+      "name": "Heavy Silk Bandage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 16112,
+        "cost": 2200
+      },
+      "wowhead": {
+        "source": [
+          5
+        ],
+        "learnedAt": 180,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4306,
+            2
+          ]
+        ],
+        "creates": [
+          6451,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 180,
+        "green": 210,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      }
+    },
+    "7934": {
+      "name": "Anti-Venom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 250
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 80,
+        "green": 115,
+        "gray": 150,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          6
+        ],
+        "trainingCost": 250,
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            1475,
+            1
+          ]
+        ],
+        "creates": [
+          6452,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-02-11",
+        "taughtBy": [
+          {
+            "npcId": 16662,
+            "name": "Alestus",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 22477,
+            "name": "Anchorite Ensham",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 17214,
+            "name": "Anchorite Fateema",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 17424,
+            "name": "Anchorite Paetheus",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 3373,
+            "name": "Arnok",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 6094,
+            "name": "Byancie",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 4211,
+            "name": "Dannelor",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 19478,
+            "name": "Fera Palerunner",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 3181,
+            "name": "Fremal Doohickey",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 16272,
+            "name": "Kanaria",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 4591,
+            "name": "Mary Edras",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 2329,
+            "name": "Michelle Belle",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 19184,
+            "name": "Mildred Fletcher",
+            "faction": "Neutral"
+          },
+          {
+            "npcId": 5150,
+            "name": "Nissa Firestone",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5759,
+            "name": "Nurse Neela",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 16731,
+            "name": "Nus",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 2798,
+            "name": "Pand Stonebinder",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 5943,
+            "name": "Rawrk",
+            "faction": "Horde"
+          },
+          {
+            "npcId": 2327,
+            "name": "Shaina Fuller",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 2326,
+            "name": "Thamner Pol",
+            "faction": "Alliance"
+          },
+          {
+            "npcId": 5939,
+            "name": "Vira Younghoof",
+            "faction": "Horde"
+          }
+        ]
+      }
+    },
+    "7935": {
+      "name": "Strong Anti-Venom",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 6454
+      },
+      "wowhead": {
+        "source": [
+          2
+        ],
+        "learnedAt": 130,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            1288,
+            1
+          ]
+        ],
+        "creates": [
+          6453,
+          3,
+          3
+        ],
+        "fetchedAt": "2026-02-11"
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 130,
+        "green": 165,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      }
+    },
+    "10840": {
+      "name": "Mageweave Bandage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 16113,
+        "cost": 5000
+      },
+      "wowhead": {
+        "source": [
+          5
+        ],
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4338,
+            1
+          ]
+        ],
+        "creates": [
+          8544,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 210,
+        "green": 240,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      }
+    },
+    "10841": {
+      "name": "Heavy Mageweave Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 240,
+        "green": 270,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4338,
+            2
+          ]
+        ],
+        "creates": [
+          8545,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      }
+    },
+    "18629": {
+      "name": "Runecloth Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 260,
+        "green": 290,
+        "gray": 320,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "learnedAt": 260,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            14047,
+            1
+          ]
+        ],
+        "creates": [
+          14529,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      }
+    },
+    "18630": {
+      "name": "Heavy Runecloth Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 290,
+        "green": 320,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            14047,
+            2
+          ]
+        ],
+        "creates": [
+          14530,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      }
+    },
+    "23787": {
+      "name": "Powerful Anti-Venom",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "DB2",
+        "itemId": 19442,
+        "factionId": 529,
+        "factionName": "Argent Dawn",
+        "level": "Honored",
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 300,
+        "green": 330,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      },
+      "wowhead": {
+        "source": [
+          5
+        ],
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            19441,
+            1
+          ]
+        ],
+        "creates": [
+          19440,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      }
+    },
+    "27032": {
+      "name": "Netherweave Bandage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 21992,
+        "cost": 20000
+      },
+      "wowhead": {
+        "source": [
+          5
+        ],
+        "learnedAt": 330,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            21877,
+            1
+          ]
+        ],
+        "creates": [
+          21990,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      },
+      "difficulty": {
+        "orange": 330,
+        "yellow": 330,
+        "green": 360,
+        "gray": 390,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      }
+    },
+    "27033": {
+      "name": "Heavy Netherweave Bandage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 21993,
+        "cost": 40000
+      },
+      "wowhead": {
+        "source": [
+          5
+        ],
+        "learnedAt": 360,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            21877,
+            2
+          ]
+        ],
+        "creates": [
+          21991,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-02-11"
+      },
+      "difficulty": {
+        "orange": 360,
+        "yellow": 360,
+        "green": 385,
+        "gray": 410,
+        "certainty": "WOWHEAD",
+        "expansion": "tbc"
+      }
+    },
+    "30021": {
+      "name": "Crystal Infused Bandage",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 23689
+      },
+      "wowhead": {
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            23567,
+            1
+          ],
+          [
+            14047,
+            10
+          ]
+        ],
+        "creates": [
+          23684,
+          4,
+          4
+        ],
+        "fetchedAt": "2026-02-11"
+      }
+    }
+  }
+}
