@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.1] - 2026-06-26
+
+### Fixed
+
+- Season of Discovery: more recipes that were wrongly shown as trainer-taught now report their real source - chiefly reputation recipes (with faction and standing), plus quest rewards, vendor plans (with cost), and world drops. Classic/TBC data is unchanged.
+
 ## [0.8.0] - 2026-06-26
 
 ### Fixed
