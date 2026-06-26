@@ -19,7 +19,7 @@ from pathlib import Path
 
 SOD_VERSION = "1.15.8.67156"
 
-INHERIT_TYPES = {"DROP", "VENDOR", "QUEST", "REPUTATION"}      # STARTER/DISCOVERY excluded (no cost/itemId)
+INHERIT_TYPES = {"DROP", "VENDOR", "QUEST", "REPUTATION", "STARTER", "DISCOVERY"}  # STARTER/DISCOVERY are structural (no cost/itemId; corroboration-exempt)
 INHERIT_CERTAINTY = {"WOWHEAD", "MANUAL", "DB2"}               # WOWHEAD + hand-verified MANUAL + DB2
 
 SOD_PROFS = ["Alchemy", "Blacksmithing", "Enchanting", "Engineering",
@@ -44,6 +44,8 @@ def load_itemsparse(path) -> dict:
 
 def _corroborated(source: dict, itemsparse: dict) -> bool:
     """True only when the SoD/Era DB2 confirms the inherited source's plan item + cost/faction."""
+    if source.get("type") in ("STARTER", "DISCOVERY"):
+        return True   # structural source: no cost/faction to cross-check (Wowhead-verified in the default bucket)
     item_id = source.get("itemId")
     if item_id is None:
         return False                              # all INHERIT_TYPES carry an itemId in practice

@@ -146,6 +146,32 @@ def test_reclaims_wowhead_conservative_tail_with_needs_review(tmp_path):
     assert "needsReview" not in out
 
 
+def test_inherits_structural_starter_with_empty_itemsparse(tmp_path):
+    # STARTER is a STRUCTURAL source type (no itemId/cost/faction) that was Wowhead-verified
+    # in the TBC bucket; there is nothing to cross-check against DB2 ItemSparse, so it must
+    # inherit WITHOUT corroboration -- even with an EMPTY itemsparse.
+    default = _write(tmp_path, "TBC.json", {"8604": {"name": "Herb Baked Egg",
+        "source": {"type": "STARTER", "certainty": "WOWHEAD"},
+        "wowhead": {"creates": [6888, 1, 1]}}})
+    sod = _write(tmp_path, "SoD.json", {"8604": {"name": "Herb Baked Egg",
+        "source": {"type": "TRAINER", "certainty": "DB2"}, "wowhead": {"creates": [6888, 1, 1]}}})
+    assert rcb.reconcile_profession(sod, default, set(), {}) == (1, 1, 0)
+    out = json.loads(sod.read_text())["recipes"]["8604"]["source"]
+    assert out == {"type": "STARTER", "certainty": "CROSS"}
+
+
+def test_inherits_structural_discovery_with_empty_itemsparse(tmp_path):
+    # DISCOVERY is the other structural type (world-object recipes); same corroboration exemption.
+    default = _write(tmp_path, "TBC.json", {"3952": {"name": "Minor Recombobulator",
+        "source": {"type": "DISCOVERY", "certainty": "WOWHEAD"},
+        "wowhead": {"creates": [4388, 1, 1]}}})
+    sod = _write(tmp_path, "SoD.json", {"3952": {"name": "Minor Recombobulator",
+        "source": {"type": "TRAINER", "certainty": "DB2"}, "wowhead": {"creates": [4388, 1, 1]}}})
+    assert rcb.reconcile_profession(sod, default, set(), {}) == (1, 1, 0)
+    out = json.loads(sod.read_text())["recipes"]["3952"]["source"]
+    assert out == {"type": "DISCOVERY", "certainty": "CROSS"}
+
+
 def test_does_not_reclaim_wowhead_trainer_without_needs_review(tmp_path):
     # A plain TRAINER/WOWHEAD (no needsReview) is a confident Wowhead verdict, NOT the
     # conservative tail -> must be left alone. Locks the "only the explicitly-uncertain tail" boundary.
