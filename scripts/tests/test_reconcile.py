@@ -126,3 +126,37 @@ def test_vendor_without_cost_fails_closed(tmp_path):
     sod = _write(tmp_path, "SoD.json", {"5": {"name": "V",
         "source": {"type": "TRAINER", "certainty": "DB2"}, "wowhead": {"creates": [1, 1, 1]}}})
     assert rcb.reconcile_profession(sod, default, set(), {"50": {"BuyPrice": 100, "MinFactionID": 0}}) == (0, 1, 1)
+
+
+def test_reclaims_wowhead_conservative_tail_with_needs_review(tmp_path):
+    # The conservative-tail stamp left by a prior pipeline pass: TRAINER/WOWHEAD/needsReview,
+    # no reviewReason. Its TBC twin is a corroborated DB2 REPUTATION -> reclaimed to REPUTATION/CROSS.
+    rep = {"type": "REPUTATION", "certainty": "DB2", "itemId": 19442,
+           "factionId": 529, "factionName": "Argent Dawn", "level": "Honored", "cost": 100000}
+    default = _write(tmp_path, "TBC.json", {"23787": {"name": "Powerful Anti-Venom",
+        "source": rep, "wowhead": {"creates": [19440, 1, 1]}}})
+    sod = _write(tmp_path, "SoD.json", {"23787": {"name": "Powerful Anti-Venom",
+        "source": {"type": "TRAINER", "certainty": "WOWHEAD", "needsReview": True},
+        "wowhead": {"creates": [19440, 1, 1]}}})
+    its = {"19442": {"BuyPrice": 100000, "MinFactionID": 529}}
+    assert rcb.reconcile_profession(sod, default, set(), its) == (1, 1, 0)
+    out = json.loads(sod.read_text())["recipes"]["23787"]["source"]
+    assert out == {"type": "REPUTATION", "certainty": "CROSS", "itemId": 19442,
+                   "factionId": 529, "factionName": "Argent Dawn", "level": "Honored", "cost": 100000}
+    assert "needsReview" not in out
+
+
+def test_does_not_reclaim_wowhead_trainer_without_needs_review(tmp_path):
+    # A plain TRAINER/WOWHEAD (no needsReview) is a confident Wowhead verdict, NOT the
+    # conservative tail -> must be left alone. Locks the "only the explicitly-uncertain tail" boundary.
+    default = _write(tmp_path, "TBC.json", {"40": {"name": "W",
+        "source": {"type": "DROP", "certainty": "WOWHEAD", "itemId": 1},
+        "wowhead": {"creates": [9, 1, 1]}}})
+    sod = _write(tmp_path, "SoD.json", {"40": {"name": "W",
+        "source": {"type": "TRAINER", "certainty": "WOWHEAD"},
+        "wowhead": {"creates": [9, 1, 1]}}})
+    inherited, total, needs_review = rcb.reconcile_profession(
+        sod, default, set(), {"1": {"BuyPrice": 0, "MinFactionID": 0}})
+    assert inherited == 0
+    out = json.loads(sod.read_text())["recipes"]["40"]["source"]
+    assert out == {"type": "TRAINER", "certainty": "WOWHEAD"}

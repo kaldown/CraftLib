@@ -105,7 +105,9 @@ def reconcile_profession(sod_path, default_path, allowlist, itemsparse) -> tuple
     recipes = sod.get("recipes", {})
     for sid, recipe in recipes.items():
         s = recipe.get("source", {})
-        if not (s.get("type") == "TRAINER" and s.get("certainty") == "DB2"):
+        if not (s.get("type") == "TRAINER" and (
+                s.get("certainty") == "DB2" or
+                (s.get("certainty") == "WOWHEAD" and s.get("needsReview")))):
             continue
         if sid in allowlist:
             continue
