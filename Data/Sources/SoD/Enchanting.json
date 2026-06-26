@@ -1,7 +1,7 @@
 {
   "profession": "enchanting",
   "version": "1.15.8.67156",
-  "generated": "2026-06-26",
+  "generated": "2026-06-27",
   "recipes": {
     "7418": {
       "name": "Enchant Bracer - Minor Health",
@@ -28,7 +28,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7420": {
@@ -60,7 +60,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7421": {
@@ -101,7 +101,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7426": {
@@ -137,7 +137,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7428": {
@@ -169,7 +169,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7443": {
@@ -198,7 +198,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7454": {
@@ -234,7 +234,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7457": {
@@ -266,7 +266,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7748": {
@@ -302,7 +302,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7766": {
@@ -330,7 +330,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7771": {
@@ -366,7 +366,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7776": {
@@ -399,7 +399,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7779": {
@@ -435,7 +435,7 @@
           6
         ],
         "trainingCost": 400,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7782": {
@@ -463,7 +463,7 @@
             5
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7786": {
@@ -495,7 +495,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7788": {
@@ -535,7 +535,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7745": {
@@ -571,7 +571,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7793": {
@@ -600,7 +600,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7795": {
@@ -649,7 +649,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7857": {
@@ -685,7 +685,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7859": {
@@ -713,7 +713,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7861": {
@@ -749,7 +749,7 @@
           6
         ],
         "trainingCost": 1250,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7863": {
@@ -781,7 +781,7 @@
           6
         ],
         "trainingCost": 1400,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7867": {
@@ -814,7 +814,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13378": {
@@ -850,7 +850,7 @@
           6
         ],
         "trainingCost": 600,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13380": {
@@ -882,7 +882,7 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13419": {
@@ -911,7 +911,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13421": {
@@ -947,7 +947,7 @@
           6
         ],
         "trainingCost": 800,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13464": {
@@ -983,7 +983,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13485": {
@@ -1019,7 +1019,7 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13501": {
@@ -1051,7 +1051,7 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13503": {
@@ -1087,7 +1087,7 @@
           6
         ],
         "trainingCost": 2000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13522": {
@@ -1119,7 +1119,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13529": {
@@ -1155,7 +1155,7 @@
           6
         ],
         "trainingCost": 2400,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13536": {
@@ -1184,7 +1184,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13538": {
@@ -1224,7 +1224,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13607": {
@@ -1260,7 +1260,7 @@
           6
         ],
         "trainingCost": 2400,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13612": {
@@ -1292,7 +1292,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13617": {
@@ -1324,7 +1324,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13620": {
@@ -1356,7 +1356,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13622": {
@@ -1388,7 +1388,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13626": {
@@ -1428,7 +1428,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13628": {
@@ -1477,7 +1477,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13631": {
@@ -1513,7 +1513,7 @@
           6
         ],
         "trainingCost": 2600,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13635": {
@@ -1549,7 +1549,7 @@
           6
         ],
         "trainingCost": 2600,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13637": {
@@ -1585,7 +1585,7 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13640": {
@@ -1617,7 +1617,7 @@
           6
         ],
         "trainingCost": 2700,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13642": {
@@ -1649,7 +1649,7 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13644": {
@@ -1681,7 +1681,7 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13646": {
@@ -1714,7 +1714,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13648": {
@@ -1746,7 +1746,7 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13653": {
@@ -1782,7 +1782,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13655": {
@@ -1818,7 +1818,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13657": {
@@ -1854,7 +1854,7 @@
           6
         ],
         "trainingCost": 3000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13659": {
@@ -1890,7 +1890,7 @@
           6
         ],
         "trainingCost": 3200,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13661": {
@@ -1922,7 +1922,7 @@
           6
         ],
         "trainingCost": 3600,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13663": {
@@ -1954,7 +1954,7 @@
           6
         ],
         "trainingCost": 3800,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13687": {
@@ -1986,7 +1986,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13689": {
@@ -2022,7 +2022,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13693": {
@@ -2058,7 +2058,7 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13695": {
@@ -2094,7 +2094,7 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13698": {
@@ -2126,7 +2126,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13700": {
@@ -2166,7 +2166,7 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13702": {
@@ -2215,7 +2215,7 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13746": {
@@ -2247,7 +2247,7 @@
           6
         ],
         "trainingCost": 4200,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13794": {
@@ -2279,7 +2279,7 @@
           6
         ],
         "trainingCost": 4200,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13815": {
@@ -2315,7 +2315,7 @@
           6
         ],
         "trainingCost": 4400,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13817": {
@@ -2343,7 +2343,7 @@
             5
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13822": {
@@ -2375,7 +2375,7 @@
           6
         ],
         "trainingCost": 4400,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13836": {
@@ -2407,7 +2407,7 @@
           6
         ],
         "trainingCost": 4600,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13841": {
@@ -2439,7 +2439,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13846": {
@@ -2471,7 +2471,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13858": {
@@ -2503,7 +2503,7 @@
           6
         ],
         "trainingCost": 4800,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13868": {
@@ -2535,7 +2535,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13882": {
@@ -2563,7 +2563,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13887": {
@@ -2599,7 +2599,7 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13890": {
@@ -2639,7 +2639,7 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13898": {
@@ -2671,7 +2671,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13905": {
@@ -2707,7 +2707,7 @@
           6
         ],
         "trainingCost": 5400,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13915": {
@@ -2743,7 +2743,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13917": {
@@ -2779,7 +2779,7 @@
           6
         ],
         "trainingCost": 5400,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13931": {
@@ -2812,7 +2812,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13933": {
@@ -2844,7 +2844,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13935": {
@@ -2876,7 +2876,7 @@
           6
         ],
         "trainingCost": 5800,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13937": {
@@ -2912,7 +2912,7 @@
           6
         ],
         "trainingCost": 6200,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13939": {
@@ -2948,7 +2948,7 @@
           6
         ],
         "trainingCost": 6200,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13941": {
@@ -2988,7 +2988,7 @@
           6
         ],
         "trainingCost": 6200,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13943": {
@@ -3024,7 +3024,7 @@
           6
         ],
         "trainingCost": 6200,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13945": {
@@ -3052,7 +3052,7 @@
             5
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13947": {
@@ -3084,7 +3084,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "13948": {
@@ -3120,7 +3120,7 @@
           6
         ],
         "trainingCost": 6500,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "14293": {
@@ -3161,7 +3161,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "14807": {
@@ -3202,7 +3202,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "14809": {
@@ -3247,7 +3247,7 @@
           6
         ],
         "trainingCost": 2600,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "14810": {
@@ -3292,7 +3292,7 @@
           6
         ],
         "trainingCost": 3000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "15596": {
@@ -3333,7 +3333,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "17181": {
@@ -3374,7 +3374,7 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "17180": {
@@ -3415,7 +3415,7 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20008": {
@@ -3443,7 +3443,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20020": {
@@ -3471,7 +3471,7 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20014": {
@@ -3519,7 +3519,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20017": {
@@ -3548,7 +3548,7 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20009": {
@@ -3580,7 +3580,7 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20012": {
@@ -3612,7 +3612,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20024": {
@@ -3644,7 +3644,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20026": {
@@ -3677,7 +3677,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20016": {
@@ -3709,7 +3709,7 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20029": {
@@ -3749,7 +3749,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20015": {
@@ -3778,7 +3778,7 @@
             8
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20028": {
@@ -3810,7 +3810,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20051": {
@@ -3864,7 +3864,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20013": {
@@ -3896,7 +3896,7 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20023": {
@@ -3924,7 +3924,7 @@
             8
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20010": {
@@ -3956,7 +3956,7 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20030": {
@@ -3988,7 +3988,7 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20033": {
@@ -4020,7 +4020,7 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20036": {
@@ -4052,7 +4052,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20031": {
@@ -4084,7 +4084,7 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20011": {
@@ -4112,7 +4112,7 @@
             15
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20034": {
@@ -4144,7 +4144,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20025": {
@@ -4180,7 +4180,7 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20032": {
@@ -4216,7 +4216,7 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "20035": {
@@ -4248,7 +4248,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "21931": {
@@ -4288,7 +4288,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "22434": {
@@ -4344,7 +4344,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "22750": {
@@ -4388,7 +4388,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "23799": {
@@ -4429,15 +4429,19 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "23800": {
       "name": "Enchant Weapon - Agility",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WOWHEAD",
-        "needsReview": true
+        "type": "REPUTATION",
+        "certainty": "CROSS",
+        "itemId": 19445,
+        "factionId": 576,
+        "factionName": "Timbermaw Hold",
+        "level": "Honored",
+        "cost": 30000
       },
       "difficulty": {
         "orange": 290,
@@ -4469,15 +4473,19 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "23801": {
       "name": "Enchant Bracer - Mana Regeneration",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WOWHEAD",
-        "needsReview": true
+        "type": "REPUTATION",
+        "certainty": "CROSS",
+        "itemId": 19446,
+        "factionId": 529,
+        "factionName": "Argent Dawn",
+        "level": "Honored",
+        "cost": 30000
       },
       "difficulty": {
         "orange": 290,
@@ -4505,15 +4513,19 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "23802": {
       "name": "Enchant Bracer - Healing Power",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WOWHEAD",
-        "needsReview": true
+        "type": "REPUTATION",
+        "certainty": "CROSS",
+        "itemId": 19447,
+        "factionId": 529,
+        "factionName": "Argent Dawn",
+        "level": "Revered",
+        "cost": 60000
       },
       "difficulty": {
         "orange": 300,
@@ -4545,7 +4557,7 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "23803": {
@@ -4582,7 +4594,7 @@
             15
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "23804": {
@@ -4619,7 +4631,7 @@
             20
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25072": {
@@ -4656,7 +4668,7 @@
             8
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25073": {
@@ -4692,7 +4704,7 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25074": {
@@ -4728,7 +4740,7 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25078": {
@@ -4764,7 +4776,7 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25079": {
@@ -4800,7 +4812,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25080": {
@@ -4837,15 +4849,19 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25081": {
       "name": "Enchant Cloak - Greater Fire Resistance",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WOWHEAD",
-        "needsReview": true
+        "type": "REPUTATION",
+        "certainty": "CROSS",
+        "itemId": 20732,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Friendly",
+        "cost": 100000
       },
       "difficulty": {
         "orange": 300,
@@ -4873,15 +4889,19 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25082": {
       "name": "Enchant Cloak - Greater Nature Resistance",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WOWHEAD",
-        "needsReview": true
+        "type": "REPUTATION",
+        "certainty": "CROSS",
+        "itemId": 20733,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Honored",
+        "cost": 100000
       },
       "difficulty": {
         "orange": 300,
@@ -4909,7 +4929,7 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25083": {
@@ -4946,7 +4966,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25084": {
@@ -4983,7 +5003,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25086": {
@@ -5020,7 +5040,7 @@
             8
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25124": {
@@ -5062,7 +5082,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25125": {
@@ -5104,7 +5124,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25126": {
@@ -5146,7 +5166,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25127": {
@@ -5188,7 +5208,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25128": {
@@ -5230,15 +5250,19 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25129": {
       "name": "Brilliant Wizard Oil",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WOWHEAD",
-        "needsReview": true
+        "type": "REPUTATION",
+        "certainty": "CROSS",
+        "itemId": 20756,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Honored",
+        "cost": 40000
       },
       "difficulty": {
         "orange": 300,
@@ -5271,15 +5295,19 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "25130": {
       "name": "Brilliant Mana Oil",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WOWHEAD",
-        "needsReview": true
+        "type": "REPUTATION",
+        "certainty": "CROSS",
+        "itemId": 20757,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Friendly",
+        "cost": 40000
       },
       "difficulty": {
         "orange": 300,
@@ -5312,15 +5340,19 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "27837": {
       "name": "Enchant 2H Weapon - Agility",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WOWHEAD",
-        "needsReview": true
+        "type": "REPUTATION",
+        "certainty": "CROSS",
+        "itemId": 22392,
+        "factionId": 576,
+        "factionName": "Timbermaw Hold",
+        "level": "Friendly",
+        "cost": 25000
       },
       "difficulty": {
         "orange": 290,
@@ -5352,7 +5384,7 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "430409": {
@@ -5393,7 +5425,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 1
@@ -5431,7 +5463,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -5465,7 +5497,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -5512,7 +5544,7 @@
           6
         ],
         "trainingCost": 3000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -5547,7 +5579,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -5582,7 +5614,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -5624,7 +5656,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -5674,7 +5706,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -5717,7 +5749,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -5752,7 +5784,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -5799,7 +5831,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5850,7 +5882,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5901,7 +5933,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5952,7 +5984,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5999,7 +6031,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6054,7 +6086,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6093,7 +6125,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6136,7 +6168,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6186,7 +6218,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6228,7 +6260,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6266,7 +6298,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6313,7 +6345,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6360,7 +6392,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6411,7 +6443,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6458,7 +6490,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6505,7 +6537,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6552,7 +6584,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6599,7 +6631,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6646,7 +6678,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6693,7 +6725,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6744,7 +6776,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6795,7 +6827,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6846,7 +6878,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6899,7 +6931,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6944,7 +6976,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6982,7 +7014,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7020,7 +7052,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7062,7 +7094,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7104,7 +7136,7 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7142,7 +7174,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7180,7 +7212,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7222,7 +7254,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7260,7 +7292,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7298,7 +7330,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7340,7 +7372,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -7382,7 +7414,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -7424,7 +7456,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -7466,7 +7498,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 8

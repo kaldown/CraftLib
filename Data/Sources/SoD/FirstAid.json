@@ -1,7 +1,7 @@
 {
   "profession": "firstAid",
   "version": "1.15.8.67156",
-  "generated": "2026-06-26",
+  "generated": "2026-06-27",
   "recipes": {
     "3275": {
       "name": "Linen Bandage",
@@ -33,7 +33,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "3276": {
@@ -66,7 +66,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "3277": {
@@ -103,7 +103,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "3278": {
@@ -140,7 +140,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7928": {
@@ -177,7 +177,7 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7929": {
@@ -211,7 +211,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7934": {
@@ -248,7 +248,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "7935": {
@@ -281,7 +281,7 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "10840": {
@@ -315,7 +315,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "10841": {
@@ -348,7 +348,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "18629": {
@@ -381,7 +381,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "18630": {
@@ -414,15 +414,19 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "23787": {
       "name": "Powerful Anti-Venom",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WOWHEAD",
-        "needsReview": true
+        "type": "REPUTATION",
+        "certainty": "CROSS",
+        "itemId": 19442,
+        "factionId": 529,
+        "factionName": "Argent Dawn",
+        "level": "Honored",
+        "cost": 100000
       },
       "difficulty": {
         "orange": 300,
@@ -447,7 +451,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       }
     },
     "30021": {
@@ -488,7 +492,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-26"
+        "fetchedAt": "2026-06-27"
       },
       "seasonId": 2,
       "phaseId": 6
