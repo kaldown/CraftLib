@@ -127,7 +127,26 @@ def build_indexes(data_dir: Path) -> dict:
     # SkillLineAbility
     indexes["skill_line_abilities"] = load_csv(data_dir / "SkillLineAbility.csv")
 
+    indexes["recipe_items_fallback"] = {}
+    indexes["item_details_fallback"] = {}
     return indexes
+
+
+def add_fallback_indexes(indexes: dict, fallback_dir: Path) -> None:
+    """Populate fallback recipe_items + item_details from another DB2 build."""
+    if not fallback_dir.exists():
+        return
+    item_sparse = load_csv(fallback_dir / "ItemSparse.csv")
+    details = {row["ID"]: row for row in item_sparse}
+    indexes["item_details_fallback"] = details
+    item_effects = load_csv(fallback_dir / "ItemEffect.csv")
+    fb = {}
+    for row in item_effects:
+        sid = row.get("SpellID")
+        iid = row.get("ParentItemID")
+        if sid and iid and iid != "0" and iid in details:
+            fb[sid] = iid
+    indexes["recipe_items_fallback"] = fb
 
 
 def detect_source(spell_id: str, indexes: dict) -> dict:
@@ -139,8 +158,15 @@ def detect_source(spell_id: str, indexes: dict) -> dict:
     """
     recipe_item_id = indexes["recipe_items"].get(spell_id)
 
-    # No recipe item = TRAINER (certain)
+    # No recipe item in this build: consult the fallback build's ItemEffect before
+    # concluding TRAINER. A recipe item there means this is NOT trainer-taught —
+    # mark PENDING so Wowhead/cross-bucket resolve it (avoids false-certain TRAINER).
     if not recipe_item_id:
+        fb_item = indexes.get("recipe_items_fallback", {}).get(spell_id)
+        fb_details = indexes.get("item_details_fallback", {}).get(str(fb_item)) if fb_item else None
+        if fb_item and fb_details and int(fb_details.get("MinFactionID", "0")) == 0:
+            return {"type": "PENDING", "certainty": "PENDING",
+                    "itemId": int(fb_item), "cost": int(fb_details["BuyPrice"])}
         return {"type": "TRAINER", "certainty": "DB2"}
 
     # Get item details — fail loudly if missing
@@ -261,6 +287,8 @@ def main() -> int:
         default="tbc",
         help="Target expansion (classic, tbc, wotlk, cata). Default: tbc",
     )
+    parser.add_argument("--fallback-version", default=None,
+                        help="DB2 build to consult for missing ItemEffect links (e.g. 2.5.5.65895)")
     args = parser.parse_args()
 
     # Map expansion to folder name
@@ -297,6 +325,9 @@ def main() -> int:
     # Build indexes
     print(f"Loading DB2 data from {data_dir}...", file=sys.stderr)
     indexes = build_indexes(data_dir)
+    fb = args.fallback_version
+    if fb:
+        add_fallback_indexes(indexes, args.data_dir / fb)
     print(
         f"Built indexes: {len(indexes['spell_names'])} spells, "
         f"{len(indexes['recipe_items'])} recipe items",

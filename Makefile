@@ -83,7 +83,7 @@ sod-fetch:
 sod-all: sod-fetch
 	@for p in $(SOD_PROFS); do \
 	  echo "=== $$p ==="; \
-	  $(PYTHON) scripts/extract_db2_sources.py --version $(SOD_VERSION) --profession $$p --expansion sod; \
+	  $(PYTHON) scripts/extract_db2_sources.py --version $(SOD_VERSION) --profession $$p --expansion sod --fallback-version 2.5.5.65895; \
 	  $(PYTHON) scripts/reconcile_cross_bucket.py --profession $$p; \
 	  $(PYTHON) scripts/fetch_wowhead_sources.py --profession $$p --expansion sod; \
 	  $(PYTHON) scripts/verify_trainer_sources.py --profession $$p --expansion sod; \
