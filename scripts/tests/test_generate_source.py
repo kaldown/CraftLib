@@ -26,10 +26,21 @@ def test_complete_vendor_emits_itemid_and_cost():
 
 
 def test_unknown_source_type_raises_naming_spell():
-    src = {"type": "STARTER", "certainty": "X"}
+    # A genuinely-unhandled type token (not TRAINER/REPUTATION/VENDOR/DROP/QUEST/
+    # STARTER/DISCOVERY/UNKNOWN) must still hit the final else:raise.
+    src = {"type": "BOGUS", "certainty": "X"}
     with pytest.raises(ValueError) as excinfo:
         gr.generate_lua([_recipe(src)], _PROF, expansion=1)
     assert "16980" in str(excinfo.value)
+
+
+def test_structural_starter_source_is_emitted():
+    # STARTER is a structural source (bare type line only, no itemId/cost): unlike UNKNOWN
+    # it is NOT ejected -- it must be emitted with its bare type line and the recipe id.
+    src = {"type": "STARTER", "certainty": "CROSS"}
+    lua = gr.generate_lua([_recipe(src)], _PROF, expansion=1)
+    assert "type = C.SOURCE_TYPE.STARTER," in lua
+    assert "16980" in lua
 
 
 def test_unknown_source_recipe_is_ejected_not_emitted():

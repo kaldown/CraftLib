@@ -403,6 +403,8 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int, flavor=N
         elif source["type"] == "QUEST":
             if "itemId" in source:
                 source_lines.append(f'            itemId = {source["itemId"]},')
+        elif source["type"] in ("STARTER", "DISCOVERY"):
+            pass   # structural source: bare type line only (no itemId/cost)
         else:
             raise ValueError(f"Unhandled source type {source['type']!r} for spell "
                              f"{recipe['id']} ({recipe['name']!r})")
