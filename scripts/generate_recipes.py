@@ -375,6 +375,10 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int, flavor=N
 
         # Source
         source = recipe["source"]
+        if source["type"] == "UNKNOWN":
+            print(f"  Ejected UNKNOWN-source recipe: {recipe['id']} ({recipe['name']!r})",
+                  file=sys.stderr)
+            continue
         source_lines = [f'            type = C.SOURCE_TYPE.{source["type"]},']
         if source["type"] == "TRAINER":
             source_lines.append(f'            npcName = "Any {prof_name} Trainer",')
@@ -554,7 +558,9 @@ def main() -> int:
         output_file = output_dir / "Recipes.lua"
 
         output_file.write_text(lua_code)
-        print(f"Generated {output_file}: {len(recipes)} recipes", file=sys.stderr)
+        # Count EMITTED recipes only: generate_lua ejects UNKNOWN-source recipes.
+        emitted = sum(1 for r in recipes if r["source"]["type"] != "UNKNOWN")
+        print(f"Generated {output_file}: {emitted} recipes", file=sys.stderr)
 
     return 0
 
