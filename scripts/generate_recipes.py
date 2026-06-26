@@ -388,6 +388,9 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int, flavor=N
             source_lines.append(f'            itemId = {source["itemId"]},')
             source_lines.append(f'            cost = {source["cost"]},')
         elif source["type"] == "VENDOR":
+            if "itemId" not in source or "cost" not in source:
+                raise ValueError(f"VENDOR source for spell {recipe['id']} ({recipe['name']!r}) "
+                                 f"missing cost/itemId; align before release")
             source_lines.append(f'            itemId = {source["itemId"]},')
             source_lines.append(f'            cost = {source["cost"]},')
         elif source["type"] == "DROP":
@@ -396,6 +399,9 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int, flavor=N
         elif source["type"] == "QUEST":
             if "itemId" in source:
                 source_lines.append(f'            itemId = {source["itemId"]},')
+        else:
+            raise ValueError(f"Unhandled source type {source['type']!r} for spell "
+                             f"{recipe['id']} ({recipe['name']!r})")
         source_str = "\n".join(source_lines)
 
         # Skill range
