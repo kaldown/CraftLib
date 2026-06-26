@@ -84,10 +84,11 @@ sod-all: sod-fetch
 	@for p in $(SOD_PROFS); do \
 	  echo "=== $$p ==="; \
 	  $(PYTHON) scripts/extract_db2_sources.py --version $(SOD_VERSION) --profession $$p --expansion sod; \
-	  $(PYTHON) scripts/reconcile_cross_bucket.py --profession $$p; \
+	  $(PYTHON) scripts/reconcile_cross_bucket.py --profession $$p --db2-itemsparse $(DB2_DIR)/artifacts/$(SOD_VERSION)/ItemSparse.csv; \
 	  $(PYTHON) scripts/fetch_wowhead_sources.py --profession $$p --expansion sod; \
 	  $(PYTHON) scripts/verify_trainer_sources.py --profession $$p --expansion sod; \
 	  $(PYTHON) scripts/assert_no_pending.py Data/Sources/SoD/$$p.json; \
+	  $(PYTHON) scripts/assert_no_unaligned.py Data/Sources/SoD/$$p.json; \
 	  $(PYTHON) scripts/generate_recipes.py --version $(SOD_VERSION) --flavor sod \
 	    --data-dir $(DB2_DIR)/artifacts --profession $$p; \
 	  sleep 2; \
