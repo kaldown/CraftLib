@@ -50,3 +50,15 @@ def test_run_resumes_and_writes(tmp_path, monkeypatch):
     assert out["type"] == "QUEST" and out["certainty"] == "WOWHEAD"
     state = json.loads((state_dir / "Leatherworking.json").read_text())
     assert state["spells"]["2158"]["status"] == "needsReview"
+
+
+def test_run_skips_uncorroborated_marker(tmp_path, monkeypatch):
+    sources = tmp_path / "Leatherworking.json"
+    sources.write_text(json.dumps({"recipes": {"300": {"name": "X", "source": {
+        "type": "TRAINER", "certainty": "DB2", "needsReview": True,
+        "reviewReason": "cross-bucket-uncorroborated"}}}}))
+    called = []
+    monkeypatch.setattr(vt, "_FETCH", lambda url: called.append(url) or "")
+    vt.run(sources, tmp_path / ".fetch_state", expansion="classic", base_delay=0, on_block="exit")
+    assert called == []  # marker recipe must NOT be fetched/processed
+    assert json.loads(sources.read_text())["recipes"]["300"]["source"]["reviewReason"] == "cross-bucket-uncorroborated"

@@ -153,7 +153,8 @@ def run(sources_path: Path, state_dir: Path, expansion: str = "classic",
     candidates = []
     for sid, recipe in data.get("recipes", {}).items():
         s = recipe.get("source", {})
-        if s.get("type") == "TRAINER" and s.get("certainty") == "DB2":
+        if s.get("type") == "TRAINER" and s.get("certainty") == "DB2" \
+                and s.get("reviewReason") != "cross-bucket-uncorroborated":
             if spells.get(sid, {}).get("status") in _TERMINAL:
                 continue
             candidates.append(sid)

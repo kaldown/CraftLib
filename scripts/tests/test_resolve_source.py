@@ -37,3 +37,14 @@ def test_trainer_signal_wins():
 def test_quest_to_vendor_without_cost_left_unchanged():
     rec = {"source": {"type": "QUEST", "certainty": "DB2", "itemId": 42}}
     assert fw._resolve_source(rec, {"source": [5]}) is None
+
+
+def test_cross_source_is_left_unchanged():
+    rec = {"source": {"type": "VENDOR", "certainty": "CROSS", "itemId": 5, "cost": 10}}
+    assert fw._resolve_source(rec, {"source": [6], "trainingCost": 40}) is None  # trainer signal must NOT override CROSS
+
+
+def test_uncorroborated_marker_is_left_unchanged():
+    rec = {"source": {"type": "TRAINER", "certainty": "DB2", "needsReview": True,
+                      "reviewReason": "cross-bucket-uncorroborated"}}
+    assert fw._resolve_source(rec, {"source": [6], "trainingCost": 40}) is None

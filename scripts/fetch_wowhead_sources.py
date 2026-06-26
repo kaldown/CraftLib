@@ -287,6 +287,9 @@ def _resolve_source(recipe: dict, wh: dict) -> dict | None:
     Returns a new source dict with WOWHEAD certainty, or None if no change.
     """
     existing_source = recipe.get("source", {})
+    if existing_source.get("certainty") == "CROSS" or \
+       existing_source.get("reviewReason") == "cross-bucket-uncorroborated":
+        return None  # reconcile's cross-bucket outputs are authoritative; do not overwrite
     existing_type = existing_source.get("type", "")
     existing_cert = existing_source.get("certainty", "")
 
