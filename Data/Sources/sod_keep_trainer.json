@@ -1,0 +1,4 @@
+{
+  "keepTrainer": ["11479"],
+  "_note": "SoD recipes intentionally kept as trainer-taught despite a non-trainer source in the DEFAULT/TBC bucket. These are legitimate Classic-Era vs TBC acquisition differences confirmed via the SoD profession listview (positive trainer evidence). Listing a spell here suppresses its cross-bucket audit finding and prevents reconcile from overriding it. 11479 = Transmute: Iron to Gold (SoD listview: trainer, trainingCost 2500; TBC: vendor item 9304)."
+}

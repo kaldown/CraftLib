@@ -39,7 +39,18 @@ def audit(sources_dir: Path):
         prof = os.path.basename(p)[:-5]
         buckets.setdefault(flavor, {})[prof] = json.load(open(p))
 
+    # Load the keep-trainer allowlist (one level up from bucket subdirs; absent = empty)
+    keep_trainer = set()
+    allowlist_path = sources_dir / "sod_keep_trainer.json"
+    if allowlist_path.exists():
+        try:
+            data = json.load(open(allowlist_path))
+            keep_trainer = set(data.get("keepTrainer", []))
+        except (json.JSONDecodeError, OSError):
+            pass
+
     # Check 1: Wowhead cross-check
+    # SoD mismatches are hard; DEFAULT/TBC mismatches are deferred warnings (frozen this release).
     for flavor, profs in buckets.items():
         for prof, data in profs.items():
             for sid, recipe in data.get("recipes", {}).items():
@@ -60,9 +71,14 @@ def audit(sources_dir: Path):
                 if t in EXPECT and exp not in whsrc:
                     if t == "TRAINER" and _has_training_cost(recipe):
                         continue
-                    hard.append((flavor, prof, sid, recipe.get("name"), "wowhead-mismatch", t, whsrc))
+                    finding = (flavor, prof, sid, recipe.get("name"), "wowhead-mismatch", t, whsrc)
+                    if flavor == "SoD":
+                        hard.append(finding)
+                    else:
+                        warn.append(finding)
 
     # Check 2: cross-bucket consistency (SoD TRAINER vs DEFAULT WOWHEAD non-trainer)
+    # Spell IDs in the keep-trainer allowlist are intentional SoD-specific trainer recipes.
     default_index = {}
     for prof, data in buckets.get("TBC", {}).items():
         for sid, recipe in data.get("recipes", {}).items():
@@ -73,6 +89,8 @@ def audit(sources_dir: Path):
         for sid, recipe in data.get("recipes", {}).items():
             s = recipe.get("source", {})
             if s.get("type") != "TRAINER":
+                continue
+            if sid in keep_trainer:
                 continue
             d = default_index.get(sid)
             if not d:
