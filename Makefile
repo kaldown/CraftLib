@@ -77,13 +77,22 @@ SOD_PROFS := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tailori
 sod-fetch:
 	@make -C $(DB2_DIR) fetch VERSION=$(SOD_VERSION)
 
-# Full SoD pipeline for all professions: extract -> listview verify -> generate
+# Full SoD pipeline for all professions:
+# extract -> cross-bucket reconcile -> listview verify -> trainer-tail verify
+# -> assert no PENDING -> generate
 sod-all: sod-fetch
 	@for p in $(SOD_PROFS); do \
 	  echo "=== $$p ==="; \
 	  $(PYTHON) scripts/extract_db2_sources.py --version $(SOD_VERSION) --profession $$p --expansion sod; \
+	  $(PYTHON) scripts/reconcile_cross_bucket.py --profession $$p; \
 	  $(PYTHON) scripts/fetch_wowhead_sources.py --profession $$p --expansion sod; \
+	  $(PYTHON) scripts/verify_trainer_sources.py --profession $$p --expansion sod; \
+	  $(PYTHON) scripts/assert_no_pending.py Data/Sources/SoD/$$p.json; \
 	  $(PYTHON) scripts/generate_recipes.py --version $(SOD_VERSION) --flavor sod \
 	    --data-dir $(DB2_DIR)/artifacts --profession $$p; \
 	  sleep 2; \
 	done
+	@$(PYTHON) scripts/audit_sources.py
+
+audit:
+	@$(PYTHON) scripts/audit_sources.py
