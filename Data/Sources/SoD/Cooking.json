@@ -1,13 +1,14 @@
 {
   "profession": "cooking",
   "version": "1.15.8.67156",
-  "generated": "2026-06-22",
+  "generated": "2026-06-26",
   "recipes": {
     "2538": {
       "name": "Charred Wolf Meat",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -32,7 +33,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2539": {
@@ -73,14 +74,15 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2540": {
       "name": "Roasted Boar Meat",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -105,7 +107,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2541": {
@@ -142,14 +144,15 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2542": {
       "name": "Goretusk Liver Pie",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 2697
       },
       "difficulty": {
         "orange": 50,
@@ -178,14 +181,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2543": {
       "name": "Westfall Stew",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 728
       },
       "difficulty": {
         "orange": 75,
@@ -218,7 +222,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2544": {
@@ -259,14 +263,15 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2545": {
       "name": "Cooked Crab Claw",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 2698
       },
       "difficulty": {
         "orange": 85,
@@ -295,7 +300,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2546": {
@@ -336,14 +341,15 @@
           6
         ],
         "trainingCost": 150,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2547": {
       "name": "Redridge Goulash",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 2699
       },
       "difficulty": {
         "orange": 100,
@@ -372,14 +378,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2548": {
       "name": "Succulent Pork Ribs",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 2700
       },
       "difficulty": {
         "orange": 110,
@@ -408,14 +415,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2549": {
       "name": "Seasoned Wolf Kabob",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 2701
       },
       "difficulty": {
         "orange": 100,
@@ -444,14 +452,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2795": {
       "name": "Beer Basted Boar Ribs",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 2889
       },
       "difficulty": {
         "orange": 25,
@@ -480,14 +489,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3370": {
       "name": "Crocolisk Steak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 3678
       },
       "difficulty": {
         "orange": 80,
@@ -516,14 +526,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3371": {
       "name": "Blood Sausage",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 3679
       },
       "difficulty": {
         "orange": 60,
@@ -556,14 +567,15 @@
           2,
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3372": {
       "name": "Murloc Fin Soup",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 3680
       },
       "difficulty": {
         "orange": 90,
@@ -592,14 +604,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3373": {
       "name": "Crocolisk Gumbo",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 3681
       },
       "difficulty": {
         "orange": 120,
@@ -628,14 +641,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3376": {
       "name": "Curiously Tasty Omelet",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 3682
       },
       "difficulty": {
         "orange": 130,
@@ -664,14 +678,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3377": {
       "name": "Gooey Spider Cake",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 3683
       },
       "difficulty": {
         "orange": 110,
@@ -700,14 +715,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3397": {
       "name": "Big Bear Steak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 3734
       },
       "difficulty": {
         "orange": 110,
@@ -736,14 +752,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3398": {
       "name": "Hot Lion Chops",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 3735
       },
       "difficulty": {
         "orange": 125,
@@ -772,14 +789,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3399": {
       "name": "Tasty Lion Steak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 3736
       },
       "difficulty": {
         "orange": 150,
@@ -808,14 +826,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3400": {
       "name": "Soothing Turtle Bisque",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 3737
       },
       "difficulty": {
         "orange": 175,
@@ -844,7 +863,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "4094": {
@@ -885,14 +904,15 @@
           6
         ],
         "trainingCost": 450,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6412": {
       "name": "Kaldorei Spider Kabob",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 5482
       },
       "difficulty": {
         "orange": 10,
@@ -917,14 +937,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6413": {
       "name": "Scorpid Surprise",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 5483,
+        "cost": 140
       },
       "difficulty": {
         "orange": 20,
@@ -949,14 +971,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6414": {
       "name": "Roasted Kodo Meat",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 5484,
+        "cost": 240
       },
       "difficulty": {
         "orange": 35,
@@ -985,14 +1009,16 @@
           2,
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6415": {
       "name": "Fillet of Frenzy",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 5485,
+        "cost": 400
       },
       "difficulty": {
         "orange": 50,
@@ -1021,14 +1047,15 @@
           2,
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6416": {
       "name": "Strider Stew",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 5486
       },
       "difficulty": {
         "orange": 50,
@@ -1057,14 +1084,15 @@
           2,
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6417": {
       "name": "Dig Rat Stew",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 5487
       },
       "difficulty": {
         "orange": 90,
@@ -1089,14 +1117,16 @@
           2,
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6418": {
       "name": "Crispy Lizard Tail",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 5488,
+        "cost": 400
       },
       "difficulty": {
         "orange": 100,
@@ -1125,14 +1155,16 @@
           2,
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6419": {
       "name": "Lean Venison",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 5489,
+        "cost": 1200
       },
       "difficulty": {
         "orange": 110,
@@ -1161,14 +1193,16 @@
           2,
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6501": {
       "name": "Clam Chowder",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 5528,
+        "cost": 800
       },
       "difficulty": {
         "orange": 90,
@@ -1201,7 +1235,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6500": {
@@ -1242,7 +1276,7 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6499": {
@@ -1283,14 +1317,16 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7213": {
       "name": "Giant Clam Scorcho",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6039,
+        "cost": 5000
       },
       "difficulty": {
         "orange": 175,
@@ -1319,14 +1355,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7751": {
       "name": "Brilliant Smallfish",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6325,
+        "cost": 40
       },
       "difficulty": {
         "orange": 1,
@@ -1351,14 +1389,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7752": {
       "name": "Slitherskin Mackerel",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6326,
+        "cost": 40
       },
       "difficulty": {
         "orange": 1,
@@ -1383,14 +1423,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7753": {
       "name": "Longjaw Mud Snapper",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6328,
+        "cost": 400
       },
       "difficulty": {
         "orange": 50,
@@ -1415,14 +1457,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7754": {
       "name": "Loch Frenzy Delight",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6329,
+        "cost": 400
       },
       "difficulty": {
         "orange": 50,
@@ -1451,14 +1495,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7755": {
       "name": "Bristle Whisker Catfish",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6330,
+        "cost": 1200
       },
       "difficulty": {
         "orange": 100,
@@ -1483,14 +1529,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7827": {
       "name": "Rainbow Fin Albacore",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6368,
+        "cost": 400
       },
       "difficulty": {
         "orange": 50,
@@ -1515,14 +1563,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7828": {
       "name": "Rockscale Cod",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6369,
+        "cost": 2200
       },
       "difficulty": {
         "orange": 175,
@@ -1547,14 +1597,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8238": {
       "name": "Savory Deviate Delight",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6661
       },
       "difficulty": {
         "orange": 85,
@@ -1583,14 +1634,14 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8604": {
       "name": "Herb Baked Egg",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "STARTER",
+        "certainty": "CROSS"
       },
       "difficulty": {
         "orange": 1,
@@ -1619,14 +1670,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8607": {
       "name": "Smoked Bear Meat",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6892,
+        "cost": 250
       },
       "difficulty": {
         "orange": 40,
@@ -1651,14 +1704,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9513": {
       "name": "Thistle Tea",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 18160
       },
       "difficulty": {
         "orange": 60,
@@ -1687,14 +1741,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13028": {
       "name": "Goldthorn Tea",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 175,
@@ -1723,14 +1778,16 @@
           4,
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15935": {
       "name": "Crispy Bat Wing",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12226,
+        "cost": 25
       },
       "difficulty": {
         "orange": 1,
@@ -1759,14 +1816,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15853": {
       "name": "Lean Wolf Steak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12227,
+        "cost": 1600
       },
       "difficulty": {
         "orange": 125,
@@ -1795,14 +1854,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15855": {
       "name": "Roast Raptor",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12228,
+        "cost": 5000
       },
       "difficulty": {
         "orange": 175,
@@ -1831,14 +1892,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15856": {
       "name": "Hot Wolf Ribs",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12229,
+        "cost": 5000
       },
       "difficulty": {
         "orange": 175,
@@ -1867,14 +1930,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15861": {
       "name": "Jungle Stew",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12231,
+        "cost": 3000
       },
       "difficulty": {
         "orange": 175,
@@ -1907,14 +1972,16 @@
           2,
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15863": {
       "name": "Carrion Surprise",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12232,
+        "cost": 5000
       },
       "difficulty": {
         "orange": 175,
@@ -1943,14 +2010,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15865": {
       "name": "Mystery Stew",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12233,
+        "cost": 3000
       },
       "difficulty": {
         "orange": 175,
@@ -1979,14 +2048,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15906": {
       "name": "Dragonbreath Chili",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12239,
+        "cost": 7000
       },
       "difficulty": {
         "orange": 200,
@@ -2019,14 +2090,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15910": {
       "name": "Heavy Kodo Stew",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12240,
+        "cost": 7000
       },
       "difficulty": {
         "orange": 200,
@@ -2059,14 +2132,16 @@
           2,
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15915": {
       "name": "Spiced Chili Crab",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 16111,
+        "cost": 12000
       },
       "difficulty": {
         "orange": 225,
@@ -2095,14 +2170,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15933": {
       "name": "Monster Omelet",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 16110,
+        "cost": 12000
       },
       "difficulty": {
         "orange": 225,
@@ -2131,14 +2208,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "818": {
       "name": "Basic Campfire",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -2158,14 +2236,16 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18239": {
       "name": "Cooked Glossy Mightfish",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13940,
+        "cost": 16000
       },
       "difficulty": {
         "orange": 225,
@@ -2194,14 +2274,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18238": {
       "name": "Spotted Yellowtail",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13939,
+        "cost": 16000
       },
       "difficulty": {
         "orange": 225,
@@ -2226,14 +2308,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18241": {
       "name": "Filet of Redgill",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13941,
+        "cost": 16000
       },
       "difficulty": {
         "orange": 225,
@@ -2258,14 +2342,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18240": {
       "name": "Grilled Squid",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13942,
+        "cost": 16000
       },
       "difficulty": {
         "orange": 240,
@@ -2294,14 +2380,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18242": {
       "name": "Hot Smoked Bass",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13943,
+        "cost": 16000
       },
       "difficulty": {
         "orange": 240,
@@ -2330,14 +2418,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18243": {
       "name": "Nightfin Soup",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13945,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 250,
@@ -2366,14 +2456,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18244": {
       "name": "Poached Sunscale Salmon",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13946,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 250,
@@ -2398,14 +2490,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18245": {
       "name": "Lobster Stew",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13947,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 275,
@@ -2434,14 +2528,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18246": {
       "name": "Mightfish Steak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13948,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 275,
@@ -2474,14 +2570,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18247": {
       "name": "Baked Salmon",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13949,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 275,
@@ -2510,14 +2608,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20626": {
       "name": "Undermine Clam Chowder",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 16767,
+        "cost": 3000
       },
       "difficulty": {
         "orange": 225,
@@ -2550,14 +2650,16 @@
           2,
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20916": {
       "name": "Mithril Headed Trout",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 17062,
+        "cost": 2200
       },
       "difficulty": {
         "orange": 175,
@@ -2582,14 +2684,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "21144": {
       "name": "Egg Nog",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 17201,
+        "cost": 240
       },
       "difficulty": {
         "orange": 35,
@@ -2626,14 +2730,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "21143": {
       "name": "Gingerbread Cookie",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 17200,
+        "cost": 25
       },
       "difficulty": {
         "orange": 1,
@@ -2662,7 +2768,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "21175": {
@@ -2699,14 +2805,16 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22480": {
       "name": "Tender Wolf Steak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 18046,
+        "cost": 12000
       },
       "difficulty": {
         "orange": 225,
@@ -2735,14 +2843,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22761": {
       "name": "Runn Tum Tuber Surprise",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18267
       },
       "difficulty": {
         "orange": 275,
@@ -2771,14 +2880,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24418": {
       "name": "Heavy Crocolisk Stew",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20075,
+        "cost": 2000
       },
       "difficulty": {
         "orange": 150,
@@ -2807,14 +2918,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24801": {
       "name": "Smoked Desert Dumplings",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 285,
@@ -2843,14 +2955,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25659": {
       "name": "Dirge's Kickin' Chimaerok Chops",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 21025
       },
       "difficulty": {
         "orange": 300,
@@ -2887,14 +3000,16 @@
           5,
           5
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25704": {
       "name": "Smoked Sagefish",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 21099,
+        "cost": 500
       },
       "difficulty": {
         "orange": 80,
@@ -2923,14 +3038,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25954": {
       "name": "Sagefish Delight",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 21219,
+        "cost": 5000
       },
       "difficulty": {
         "orange": 175,
@@ -2959,21 +3076,23 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "30047": {
       "name": "Crystal Throat Lozenge",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "470359": {
       "name": "Darkclaw Bisque",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -3002,7 +3121,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -3011,7 +3130,8 @@
       "name": "Smoked Redgill",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -3036,7 +3156,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -3078,7 +3198,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -3120,7 +3240,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -3162,7 +3282,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -3209,7 +3329,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -3256,7 +3376,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8

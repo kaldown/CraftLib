@@ -1,13 +1,14 @@
 {
   "profession": "tailoring",
   "version": "1.15.8.67156",
-  "generated": "2026-06-22",
+  "generated": "2026-06-26",
   "recipes": {
     "2963": {
       "name": "Bolt of Linen Cloth",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -32,14 +33,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2387": {
       "name": "Linen Cloak",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -68,7 +70,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2385": {
@@ -109,14 +111,15 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2389": {
       "name": "Red Linen Robe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 2598
       },
       "difficulty": {
         "orange": 40,
@@ -149,7 +152,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2386": {
@@ -194,7 +197,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2392": {
@@ -239,7 +242,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2393": {
@@ -284,7 +287,7 @@
           6
         ],
         "trainingCost": 25,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2394": {
@@ -329,7 +332,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2397": {
@@ -370,7 +373,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2395": {
@@ -415,7 +418,7 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2396": {
@@ -460,7 +463,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2964": {
@@ -497,7 +500,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2402": {
@@ -538,7 +541,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2399": {
@@ -583,7 +586,7 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2401": {
@@ -628,14 +631,15 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2403": {
       "name": "Gray Woolen Robe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 2601
       },
       "difficulty": {
         "orange": 105,
@@ -668,7 +672,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2406": {
@@ -713,7 +717,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3839": {
@@ -750,7 +754,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3865": {
@@ -787,7 +791,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3840": {
@@ -828,7 +832,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3841": {
@@ -873,7 +877,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3842": {
@@ -914,7 +918,7 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3843": {
@@ -955,14 +959,15 @@
           6
         ],
         "trainingCost": 400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3844": {
       "name": "Heavy Woolen Cloak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4346
       },
       "difficulty": {
         "orange": 100,
@@ -995,7 +1000,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3845": {
@@ -1040,14 +1045,15 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3847": {
       "name": "Red Woolen Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4345
       },
       "difficulty": {
         "orange": 95,
@@ -1084,7 +1090,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3848": {
@@ -1125,14 +1131,15 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3849": {
       "name": "Reinforced Woolen Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4347
       },
       "difficulty": {
         "orange": 120,
@@ -1165,7 +1172,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3850": {
@@ -1206,14 +1213,15 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3851": {
       "name": "Phoenix Pants",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4349
       },
       "difficulty": {
         "orange": 125,
@@ -1246,7 +1254,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3852": {
@@ -1291,14 +1299,16 @@
           6
         ],
         "trainingCost": 750,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3854": {
       "name": "Azure Silk Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 7114,
+        "cost": 1000
       },
       "difficulty": {
         "orange": 145,
@@ -1335,7 +1345,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3855": {
@@ -1384,14 +1394,15 @@
           6
         ],
         "trainingCost": 750,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3856": {
       "name": "Spider Silk Slippers",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4350
       },
       "difficulty": {
         "orange": 140,
@@ -1424,14 +1435,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3857": {
       "name": "Enchanter's Cowl",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 14630,
+        "cost": 1000
       },
       "difficulty": {
         "orange": 165,
@@ -1464,14 +1477,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3858": {
       "name": "Shadow Hood",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4351
       },
       "difficulty": {
         "orange": 170,
@@ -1504,7 +1518,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3859": {
@@ -1545,14 +1559,15 @@
           6
         ],
         "trainingCost": 750,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3860": {
       "name": "Boots of the Enchanter",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4352
       },
       "difficulty": {
         "orange": 175,
@@ -1585,7 +1600,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3861": {
@@ -1630,14 +1645,16 @@
           6
         ],
         "trainingCost": 900,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3862": {
       "name": "Icy Cloak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 4355,
+        "cost": 1500
       },
       "difficulty": {
         "orange": 200,
@@ -1674,14 +1691,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3863": {
       "name": "Spider Belt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4353
       },
       "difficulty": {
         "orange": 180,
@@ -1714,14 +1732,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3864": {
       "name": "Star Belt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4356
       },
       "difficulty": {
         "orange": 200,
@@ -1762,7 +1781,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3866": {
@@ -1807,14 +1826,15 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3868": {
       "name": "Phoenix Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4348
       },
       "difficulty": {
         "orange": 125,
@@ -1851,14 +1871,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3869": {
       "name": "Bright Yellow Shirt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 14627,
+        "cost": 800
       },
       "difficulty": {
         "orange": 135,
@@ -1891,14 +1913,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3870": {
       "name": "Dark Silk Shirt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6401,
+        "cost": 1100
       },
       "difficulty": {
         "orange": 155,
@@ -1931,7 +1955,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3871": {
@@ -1976,14 +2000,15 @@
           6
         ],
         "trainingCost": 450,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3872": {
       "name": "Rich Purple Silk Shirt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4354
       },
       "difficulty": {
         "orange": 185,
@@ -2016,14 +2041,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3873": {
       "name": "Black Swashbuckler's Shirt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10728,
+        "cost": 1500
       },
       "difficulty": {
         "orange": 200,
@@ -2056,7 +2083,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3914": {
@@ -2097,14 +2124,15 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3915": {
       "name": "Brown Linen Shirt",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -2133,7 +2161,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6521": {
@@ -2178,14 +2206,15 @@
           6
         ],
         "trainingCost": 400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3758": {
       "name": "Green Woolen Bag",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4292
       },
       "difficulty": {
         "orange": 95,
@@ -2218,7 +2247,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3755": {
@@ -2259,7 +2288,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3757": {
@@ -2300,7 +2329,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3813": {
@@ -2345,14 +2374,15 @@
           6
         ],
         "trainingCost": 800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6686": {
       "name": "Red Linen Bag",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 5771
       },
       "difficulty": {
         "orange": 70,
@@ -2385,14 +2415,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6688": {
       "name": "Red Woolen Bag",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 5772
       },
       "difficulty": {
         "orange": 115,
@@ -2425,7 +2456,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6690": {
@@ -2470,14 +2501,15 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6692": {
       "name": "Robes of Arcana",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 5773
       },
       "difficulty": {
         "orange": 150,
@@ -2510,14 +2542,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6693": {
       "name": "Green Silk Pack",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 5774
       },
       "difficulty": {
         "orange": 175,
@@ -2554,14 +2587,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6695": {
       "name": "Black Silk Pack",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 5775
       },
       "difficulty": {
         "orange": 185,
@@ -2594,7 +2628,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7623": {
@@ -2635,7 +2669,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7624": {
@@ -2680,14 +2714,16 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7630": {
       "name": "Blue Linen Vest",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6270,
+        "cost": 200
       },
       "difficulty": {
         "orange": 55,
@@ -2720,14 +2756,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7629": {
       "name": "Red Linen Vest",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6271
       },
       "difficulty": {
         "orange": 55,
@@ -2760,14 +2797,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7633": {
       "name": "Blue Linen Robe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6272,
+        "cost": 300
       },
       "difficulty": {
         "orange": 70,
@@ -2800,21 +2839,24 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7636": {
       "name": "Green Woolen Robe",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "7639": {
       "name": "Blue Overalls",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6274,
+        "cost": 400
       },
       "difficulty": {
         "orange": 100,
@@ -2847,14 +2889,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7643": {
       "name": "Greater Adept's Robe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6275,
+        "cost": 800
       },
       "difficulty": {
         "orange": 115,
@@ -2887,14 +2931,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7892": {
       "name": "Stylish Blue Shirt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6390
       },
       "difficulty": {
         "orange": 120,
@@ -2931,14 +2976,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7893": {
       "name": "Stylish Green Shirt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6391
       },
       "difficulty": {
         "orange": 120,
@@ -2975,7 +3021,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8465": {
@@ -3024,7 +3070,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8467": {
@@ -3069,7 +3115,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8489": {
@@ -3114,7 +3160,7 @@
           6
         ],
         "trainingCost": 675,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8483": {
@@ -3159,7 +3205,7 @@
           6
         ],
         "trainingCost": 450,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8776": {
@@ -3200,7 +3246,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8758": {
@@ -3245,7 +3291,7 @@
           6
         ],
         "trainingCost": 600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8760": {
@@ -3290,7 +3336,7 @@
           6
         ],
         "trainingCost": 600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8762": {
@@ -3331,7 +3377,7 @@
           6
         ],
         "trainingCost": 675,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8764": {
@@ -3376,7 +3422,7 @@
           6
         ],
         "trainingCost": 810,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8766": {
@@ -3429,7 +3475,7 @@
           6
         ],
         "trainingCost": 900,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8770": {
@@ -3486,7 +3532,7 @@
           6
         ],
         "trainingCost": 900,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8772": {
@@ -3535,7 +3581,7 @@
           6
         ],
         "trainingCost": 900,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8774": {
@@ -3576,21 +3622,23 @@
           6
         ],
         "trainingCost": 900,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8778": {
       "name": "Boots of Darkness",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "8780": {
       "name": "Hands of Darkness",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7092
       },
       "difficulty": {
         "orange": 145,
@@ -3627,14 +3675,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8782": {
       "name": "Truefaith Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7091
       },
       "difficulty": {
         "orange": 150,
@@ -3671,14 +3720,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8784": {
       "name": "Green Silk Armor",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7090
       },
       "difficulty": {
         "orange": 165,
@@ -3711,14 +3761,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8786": {
       "name": "Azure Silk Cloak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 7089,
+        "cost": 1500
       },
       "difficulty": {
         "orange": 175,
@@ -3751,14 +3803,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8789": {
       "name": "Crimson Silk Cloak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 7087,
+        "cost": 1200
       },
       "difficulty": {
         "orange": 180,
@@ -3795,7 +3849,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8791": {
@@ -3840,14 +3894,15 @@
           6
         ],
         "trainingCost": 2250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8793": {
       "name": "Crimson Silk Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7084
       },
       "difficulty": {
         "orange": 190,
@@ -3884,14 +3939,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8795": {
       "name": "Azure Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7085
       },
       "difficulty": {
         "orange": 190,
@@ -3928,14 +3984,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8797": {
       "name": "Earthen Silk Belt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7086
       },
       "difficulty": {
         "orange": 195,
@@ -3976,7 +4033,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8799": {
@@ -4021,14 +4078,16 @@
           6
         ],
         "trainingCost": 2700,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8802": {
       "name": "Crimson Silk Robe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 7088,
+        "cost": 5000
       },
       "difficulty": {
         "orange": 205,
@@ -4069,7 +4128,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8804": {
@@ -4126,14 +4185,15 @@
           6
         ],
         "trainingCost": 4500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12044": {
       "name": "Simple Linen Pants",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -4162,7 +4222,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12045": {
@@ -4207,7 +4267,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12046": {
@@ -4248,14 +4308,15 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12047": {
       "name": "Colorful Kilt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10316
       },
       "difficulty": {
         "orange": 120,
@@ -4288,7 +4349,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12048": {
@@ -4329,7 +4390,7 @@
           6
         ],
         "trainingCost": 3600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12049": {
@@ -4370,7 +4431,7 @@
           6
         ],
         "trainingCost": 3600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12050": {
@@ -4411,7 +4472,7 @@
           6
         ],
         "trainingCost": 3600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12052": {
@@ -4456,7 +4517,7 @@
           6
         ],
         "trainingCost": 4500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12053": {
@@ -4497,7 +4558,7 @@
           6
         ],
         "trainingCost": 4500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12055": {
@@ -4542,14 +4603,15 @@
           6
         ],
         "trainingCost": 4950,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12056": {
       "name": "Red Mageweave Vest",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10300
       },
       "difficulty": {
         "orange": 215,
@@ -4582,14 +4644,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12059": {
       "name": "White Bandit Mask",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10301
       },
       "difficulty": {
         "orange": 215,
@@ -4622,14 +4685,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12060": {
       "name": "Red Mageweave Pants",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10302
       },
       "difficulty": {
         "orange": 215,
@@ -4662,7 +4726,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12061": {
@@ -4707,28 +4771,32 @@
           6
         ],
         "trainingCost": 2250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12062": {
       "name": "Stormcloth Pants",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "12063": {
       "name": "Stormcloth Gloves",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "12064": {
       "name": "Orange Martial Shirt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10311,
+        "cost": 3000
       },
       "difficulty": {
         "orange": 220,
@@ -4761,7 +4829,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12065": {
@@ -4802,14 +4870,15 @@
           6
         ],
         "trainingCost": 4500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12066": {
       "name": "Red Mageweave Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10312
       },
       "difficulty": {
         "orange": 225,
@@ -4842,7 +4911,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12067": {
@@ -4891,14 +4960,15 @@
           6
         ],
         "trainingCost": 4500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12068": {
       "name": "Stormcloth Vest",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "12069": {
@@ -4943,7 +5013,7 @@
           6
         ],
         "trainingCost": 4500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12070": {
@@ -4992,7 +5062,7 @@
           6
         ],
         "trainingCost": 4500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12071": {
@@ -5037,7 +5107,7 @@
           6
         ],
         "trainingCost": 5400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12072": {
@@ -5078,7 +5148,7 @@
           6
         ],
         "trainingCost": 6000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12073": {
@@ -5123,7 +5193,7 @@
           6
         ],
         "trainingCost": 6000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12074": {
@@ -5164,14 +5234,16 @@
           6
         ],
         "trainingCost": 6000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12075": {
       "name": "Lavender Mageweave Shirt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10314,
+        "cost": 4000
       },
       "difficulty": {
         "orange": 230,
@@ -5204,7 +5276,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12076": {
@@ -5249,7 +5321,7 @@
           6
         ],
         "trainingCost": 5850,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12077": {
@@ -5298,14 +5370,15 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12078": {
       "name": "Red Mageweave Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10315
       },
       "difficulty": {
         "orange": 235,
@@ -5338,7 +5411,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12079": {
@@ -5383,14 +5456,16 @@
           6
         ],
         "trainingCost": 6500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12080": {
       "name": "Pink Mageweave Shirt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10317,
+        "cost": 4000
       },
       "difficulty": {
         "orange": 235,
@@ -5423,14 +5498,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12081": {
       "name": "Admiral's Hat",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10318,
+        "cost": 7000
       },
       "difficulty": {
         "orange": 240,
@@ -5463,7 +5540,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12082": {
@@ -5512,21 +5589,23 @@
           6
         ],
         "trainingCost": 6300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12083": {
       "name": "Stormcloth Headband",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "12084": {
       "name": "Red Mageweave Headband",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10320
       },
       "difficulty": {
         "orange": 240,
@@ -5559,14 +5638,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12085": {
       "name": "Tuxedo Shirt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10321,
+        "cost": 4500
       },
       "difficulty": {
         "orange": 240,
@@ -5595,14 +5676,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12086": {
       "name": "Shadoweave Mask",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 10463
       },
       "difficulty": {
         "orange": 245,
@@ -5635,14 +5717,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12087": {
       "name": "Stormcloth Shoulders",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "12088": {
@@ -5691,14 +5774,16 @@
           6
         ],
         "trainingCost": 7500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12089": {
       "name": "Tuxedo Pants",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10323,
+        "cost": 4500
       },
       "difficulty": {
         "orange": 245,
@@ -5727,21 +5812,24 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12090": {
       "name": "Stormcloth Boots",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "12091": {
       "name": "White Wedding Dress",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10325,
+        "cost": 10000
       },
       "difficulty": {
         "orange": 250,
@@ -5774,7 +5862,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12092": {
@@ -5831,14 +5919,16 @@
           6
         ],
         "trainingCost": 7500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12093": {
       "name": "Tuxedo Jacket",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10326,
+        "cost": 5000
       },
       "difficulty": {
         "orange": 250,
@@ -5867,7 +5957,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18401": {
@@ -5904,7 +5994,7 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18402": {
@@ -5945,14 +6035,15 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18403": {
       "name": "Frostweave Tunic",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 255,
@@ -5985,14 +6076,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18404": {
       "name": "Frostweave Robe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14467
       },
       "difficulty": {
         "orange": 255,
@@ -6025,14 +6117,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18406": {
       "name": "Runecloth Robe",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 260,
@@ -6065,14 +6158,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18405": {
       "name": "Runecloth Bag",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 14468,
+        "cost": 12000
       },
       "difficulty": {
         "orange": 260,
@@ -6105,14 +6200,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18407": {
       "name": "Runecloth Tunic",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 260,
@@ -6145,14 +6241,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18408": {
       "name": "Cindercloth Vest",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14471
       },
       "difficulty": {
         "orange": 260,
@@ -6185,14 +6282,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18409": {
       "name": "Runecloth Cloak",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 265,
@@ -6225,14 +6323,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18410": {
       "name": "Ghostweave Belt",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 265,
@@ -6269,14 +6368,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18411": {
       "name": "Frostweave Gloves",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 265,
@@ -6309,14 +6409,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18412": {
       "name": "Cindercloth Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14476
       },
       "difficulty": {
         "orange": 270,
@@ -6349,14 +6450,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18415": {
       "name": "Brightcloth Gloves",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 270,
@@ -6389,14 +6491,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18413": {
       "name": "Ghostweave Gloves",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 270,
@@ -6433,14 +6536,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18414": {
       "name": "Brightcloth Robe",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 270,
@@ -6473,14 +6577,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18416": {
       "name": "Ghostweave Vest",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -6517,14 +6622,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18417": {
       "name": "Runecloth Gloves",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -6557,14 +6663,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18418": {
       "name": "Cindercloth Cloak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14482
       },
       "difficulty": {
         "orange": 275,
@@ -6597,14 +6704,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18419": {
       "name": "Felcloth Pants",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 14483,
+        "cost": 16000
       },
       "difficulty": {
         "orange": 275,
@@ -6637,14 +6746,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18420": {
       "name": "Brightcloth Cloak",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -6677,14 +6787,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18421": {
       "name": "Wizardweave Leggings",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -6717,14 +6828,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18422": {
       "name": "Cloak of Fire",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14486
       },
       "difficulty": {
         "orange": 275,
@@ -6765,14 +6877,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18423": {
       "name": "Runecloth Boots",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 280,
@@ -6809,14 +6922,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18424": {
       "name": "Frostweave Pants",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 280,
@@ -6849,14 +6963,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18434": {
       "name": "Cindercloth Pants",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14490
       },
       "difficulty": {
         "orange": 280,
@@ -6889,14 +7004,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18436": {
       "name": "Robe of Winter Night",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14493
       },
       "difficulty": {
         "orange": 285,
@@ -6937,14 +7053,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18437": {
       "name": "Felcloth Boots",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 285,
@@ -6981,14 +7098,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18438": {
       "name": "Runecloth Pants",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 285,
@@ -7021,14 +7139,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18439": {
       "name": "Brightcloth Pants",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14494
       },
       "difficulty": {
         "orange": 290,
@@ -7065,14 +7184,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18440": {
       "name": "Mooncloth Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14497
       },
       "difficulty": {
         "orange": 290,
@@ -7105,14 +7225,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18441": {
       "name": "Ghostweave Pants",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -7145,14 +7266,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18442": {
       "name": "Felcloth Hood",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -7185,14 +7307,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18444": {
       "name": "Runecloth Headband",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 295,
@@ -7225,14 +7348,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18445": {
       "name": "Mooncloth Bag",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14499
       },
       "difficulty": {
         "orange": 300,
@@ -7265,14 +7389,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18446": {
       "name": "Wizardweave Robe",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -7305,14 +7430,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18447": {
       "name": "Mooncloth Vest",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14501
       },
       "difficulty": {
         "orange": 300,
@@ -7345,14 +7471,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18448": {
       "name": "Mooncloth Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14507
       },
       "difficulty": {
         "orange": 300,
@@ -7385,14 +7512,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18449": {
       "name": "Runecloth Shoulders",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -7429,14 +7557,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18450": {
       "name": "Wizardweave Turban",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -7473,14 +7602,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18451": {
       "name": "Felcloth Robe",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -7517,14 +7647,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18452": {
       "name": "Mooncloth Circlet",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14509
       },
       "difficulty": {
         "orange": 300,
@@ -7565,14 +7696,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18453": {
       "name": "Felcloth Shoulders",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -7613,14 +7745,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18454": {
       "name": "Gloves of Spell Mastery",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14511
       },
       "difficulty": {
         "orange": 300,
@@ -7669,14 +7802,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18455": {
       "name": "Bottomless Bag",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14510
       },
       "difficulty": {
         "orange": 300,
@@ -7717,14 +7851,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18456": {
       "name": "Truefaith Vestments",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14512
       },
       "difficulty": {
         "orange": 300,
@@ -7769,14 +7904,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18457": {
       "name": "Robe of the Archmage",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14513
       },
       "difficulty": {
         "orange": 300,
@@ -7821,14 +7957,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18458": {
       "name": "Robe of the Void",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 14514
       },
       "difficulty": {
         "orange": 300,
@@ -7873,14 +8010,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18560": {
       "name": "Mooncloth",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 14526,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 250,
@@ -7905,14 +8044,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19435": {
       "name": "Mooncloth Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -7952,14 +8092,16 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20848": {
       "name": "Flarecore Mantle",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 17017,
+        "cost": 180000
       },
       "difficulty": {
         "orange": 300,
@@ -8000,14 +8142,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20849": {
       "name": "Flarecore Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 17018,
+        "cost": 80000
       },
       "difficulty": {
         "orange": 300,
@@ -8048,14 +8192,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "21945": {
       "name": "Green Holiday Shirt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 17724
       },
       "difficulty": {
         "orange": 190,
@@ -8088,14 +8233,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22759": {
       "name": "Flarecore Wraps",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18265
       },
       "difficulty": {
         "orange": 300,
@@ -8136,14 +8282,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22813": {
       "name": "Gordok Ogre Suit",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -8180,14 +8327,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22866": {
       "name": "Belt of the Archmage",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18414
       },
       "difficulty": {
         "orange": 300,
@@ -8236,14 +8384,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22867": {
       "name": "Felcloth Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18415
       },
       "difficulty": {
         "orange": 300,
@@ -8284,14 +8433,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22868": {
       "name": "Inferno Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18416
       },
       "difficulty": {
         "orange": 300,
@@ -8328,14 +8478,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22869": {
       "name": "Mooncloth Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18417
       },
       "difficulty": {
         "orange": 300,
@@ -8372,14 +8523,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22870": {
       "name": "Cloak of Warding",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18418
       },
       "difficulty": {
         "orange": 300,
@@ -8416,14 +8568,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22902": {
       "name": "Mooncloth Robe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 18487,
+        "cost": 40000
       },
       "difficulty": {
         "orange": 300,
@@ -8460,14 +8614,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23662": {
       "name": "Wisdom of the Timbermaw",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -8504,14 +8659,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23664": {
       "name": "Argent Boots",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -8552,14 +8708,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23663": {
       "name": "Mantle of the Timbermaw",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -8596,14 +8753,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23665": {
       "name": "Argent Shoulders",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -8636,14 +8794,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23666": {
       "name": "Flarecore Robe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19219,
+        "cost": 60000
       },
       "difficulty": {
         "orange": 300,
@@ -8684,14 +8844,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23667": {
       "name": "Flarecore Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19220,
+        "cost": 90000
       },
       "difficulty": {
         "orange": 300,
@@ -8732,14 +8894,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24093": {
       "name": "Bloodvine Boots",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -8780,14 +8943,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24092": {
       "name": "Bloodvine Leggings",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -8828,14 +8992,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24091": {
       "name": "Bloodvine Vest",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -8876,14 +9041,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24902": {
       "name": "Runed Stygian Belt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 20548
       },
       "difficulty": {
         "orange": 300,
@@ -8924,14 +9090,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24903": {
       "name": "Runed Stygian Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 20547
       },
       "difficulty": {
         "orange": 300,
@@ -8972,14 +9139,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24901": {
       "name": "Runed Stygian Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 20546
       },
       "difficulty": {
         "orange": 300,
@@ -9016,14 +9184,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26085": {
       "name": "Soul Pouch",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 21358,
+        "cost": 12000
       },
       "difficulty": {
         "orange": 260,
@@ -9060,14 +9230,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26086": {
       "name": "Felcloth Bag",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 285,
@@ -9104,14 +9275,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26087": {
       "name": "Core Felcloth Bag",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21371
       },
       "difficulty": {
         "orange": 300,
@@ -9152,14 +9324,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26403": {
       "name": "Festive Red Dress",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 21722
       },
       "difficulty": {
         "orange": 250,
@@ -9196,14 +9369,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26407": {
       "name": "Festive Red Pant Suit",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 21723
       },
       "difficulty": {
         "orange": 250,
@@ -9240,14 +9414,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27658": {
       "name": "Enchanted Mageweave Pouch",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 22307,
+        "cost": 6000
       },
       "difficulty": {
         "orange": 225,
@@ -9280,14 +9456,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27659": {
       "name": "Enchanted Runecloth Bag",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 22308,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 275,
@@ -9320,14 +9498,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27660": {
       "name": "Big Bag of Enchantment",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 22309
       },
       "difficulty": {
         "orange": 300,
@@ -9364,14 +9543,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27724": {
       "name": "Cenarion Herb Bag",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -9408,14 +9588,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27725": {
       "name": "Satchel of Cenarius",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9452,14 +9633,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28210": {
       "name": "Gaea's Embrace",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9496,14 +9678,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28208": {
       "name": "Glacial Cloak",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9540,14 +9723,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28205": {
       "name": "Glacial Gloves",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9584,14 +9768,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28207": {
       "name": "Glacial Vest",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9628,14 +9813,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28209": {
       "name": "Glacial Wrists",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9672,14 +9858,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28481": {
       "name": "Sylvan Crown",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9716,14 +9903,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28482": {
       "name": "Sylvan Shoulders",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9756,14 +9944,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28480": {
       "name": "Sylvan Vest",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9800,14 +9989,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "428424": {
       "name": "Phoenix Bindings",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -9840,7 +10030,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 1
@@ -9849,7 +10039,8 @@
       "name": "Extraplanar Spidersilk Boots",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -9878,7 +10069,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 1
@@ -9887,7 +10078,8 @@
       "name": "Hyperconductive Arcano-Filament",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -9920,7 +10112,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -9929,7 +10121,8 @@
       "name": "Invoker's Mantle",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -9966,7 +10159,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -9975,7 +10168,8 @@
       "name": "Invoker's Cord",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10012,7 +10206,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10021,7 +10215,8 @@
       "name": "Gneuro-Linked Arcano-Filament Monocle",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10062,7 +10257,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10071,7 +10266,8 @@
       "name": "Crimson Silk Robe",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10112,7 +10308,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10155,7 +10351,7 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10198,7 +10394,7 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10207,7 +10403,8 @@
       "name": "Earthen Silk Belt",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10248,7 +10445,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10257,7 +10454,8 @@
       "name": "Crimson Silk Shoulders",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10294,7 +10492,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10341,7 +10539,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10350,7 +10548,8 @@
       "name": "Boots of the Enchanter",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10383,7 +10582,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10434,7 +10633,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10481,7 +10680,7 @@
           6
         ],
         "trainingCost": 900,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10490,7 +10689,8 @@
       "name": "Enchanter's Cowl",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10523,7 +10723,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10532,7 +10732,8 @@
       "name": "Fractured Mind Pauldrons",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10569,7 +10770,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -10578,7 +10779,8 @@
       "name": "Mantle of Insanity",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10615,7 +10817,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -10624,7 +10826,8 @@
       "name": "Shoulderpads of the Deranged",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10665,7 +10868,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -10674,7 +10877,8 @@
       "name": "Synthetic Gordok Ogre Suit",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10711,7 +10915,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -10720,7 +10924,8 @@
       "name": "Incandescent Mooncloth Robe",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10757,7 +10962,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -10766,7 +10971,8 @@
       "name": "Leather-Reinforced Runecloth Bag",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10803,7 +11009,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -10812,7 +11018,8 @@
       "name": "Incandescent Mooncloth Vest",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10845,7 +11052,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -10854,7 +11061,8 @@
       "name": "Incandescent Mooncloth Circlet",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10895,7 +11103,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -10904,7 +11112,8 @@
       "name": "Incandescent Mooncloth Leggings",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10937,7 +11146,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -10946,7 +11155,8 @@
       "name": "Bottomless Bag",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10987,7 +11197,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -10996,7 +11206,8 @@
       "name": "Embroidered Belt of the Archmage",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11045,7 +11256,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11054,7 +11265,8 @@
       "name": "Sylvan Shoulders",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11091,7 +11303,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11100,7 +11312,8 @@
       "name": "Sylvan Crown",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11141,7 +11354,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11150,7 +11363,8 @@
       "name": "Sylvan Vest",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11191,7 +11405,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11200,7 +11414,8 @@
       "name": "Vampiric Robe",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11237,7 +11452,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11246,7 +11461,8 @@
       "name": "Vampiric Shawl",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11283,7 +11499,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11292,7 +11508,8 @@
       "name": "Vampiric Cowl",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11329,7 +11546,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11338,7 +11555,8 @@
       "name": "Qiraji Silk Cape",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11379,7 +11597,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11388,7 +11606,8 @@
       "name": "Qiraji Silk Cloak",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11429,7 +11648,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11438,7 +11657,8 @@
       "name": "Qiraji Silk Drape",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11479,7 +11699,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11488,7 +11708,8 @@
       "name": "Qiraji Silk Scarf",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11529,7 +11750,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11538,7 +11759,8 @@
       "name": "Bolt of Qiraji Silk",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11563,7 +11785,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11572,7 +11794,8 @@
       "name": "Dreamscale Bracers",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11613,7 +11836,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11622,7 +11845,8 @@
       "name": "Dreamscale Mitts",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11663,7 +11887,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11672,7 +11896,8 @@
       "name": "Glacial Vest",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11709,7 +11934,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -11718,7 +11943,8 @@
       "name": "Glacial Cloak",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11755,7 +11981,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -11764,7 +11990,8 @@
       "name": "Glacial Gloves",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11801,7 +12028,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -11810,7 +12037,8 @@
       "name": "Glacial Wrists",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11847,7 +12075,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -11856,7 +12084,8 @@
       "name": "Frosty Vest",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11893,7 +12122,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -11902,7 +12131,8 @@
       "name": "Frosty Gloves",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11939,7 +12169,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -11948,7 +12178,8 @@
       "name": "Frosty Wrists",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11985,7 +12216,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -11993,8 +12224,8 @@
     "1224607": {
       "name": "Scarlet Augur's Hood",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238298
       },
       "difficulty": {
@@ -12031,7 +12262,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -12039,8 +12270,8 @@
     "1224608": {
       "name": "Scarlet Augur's Mantle",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238299
       },
       "difficulty": {
@@ -12073,7 +12304,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -12081,8 +12312,8 @@
     "1224609": {
       "name": "Scarlet Augur's Vestaments",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238300
       },
       "difficulty": {
@@ -12119,7 +12350,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -12127,8 +12358,8 @@
     "1224610": {
       "name": "Scarlet Augur's Cuffs",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238301
       },
       "difficulty": {
@@ -12157,7 +12388,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -12165,8 +12396,8 @@
     "1224611": {
       "name": "Scarlet Augur's Mitts",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238302
       },
       "difficulty": {
@@ -12199,7 +12430,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -12207,8 +12438,8 @@
     "1224612": {
       "name": "Scarlet Augur's Strap",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238303
       },
       "difficulty": {
@@ -12241,7 +12472,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -12249,8 +12480,8 @@
     "1224613": {
       "name": "Scarlet Augur's Leggings",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238304
       },
       "difficulty": {
@@ -12287,7 +12518,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -12295,8 +12526,8 @@
     "1224614": {
       "name": "Scarlet Augur's Soles",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238305
       },
       "difficulty": {
@@ -12329,7 +12560,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -12379,7 +12610,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -12433,7 +12664,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8

@@ -1,13 +1,14 @@
 {
   "profession": "enchanting",
   "version": "1.15.8.67156",
-  "generated": "2026-06-22",
+  "generated": "2026-06-26",
   "recipes": {
     "7418": {
       "name": "Enchant Bracer - Minor Health",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -27,7 +28,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7420": {
@@ -59,14 +60,15 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7421": {
       "name": "Runed Copper Rod",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -99,7 +101,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7426": {
@@ -135,14 +137,15 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7428": {
       "name": "Enchant Bracer - Minor Deflect",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -166,14 +169,16 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7443": {
       "name": "Enchant Chest - Minor Mana",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6342,
+        "cost": 300
       },
       "difficulty": {
         "orange": 20,
@@ -193,7 +198,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7454": {
@@ -229,7 +234,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7457": {
@@ -261,7 +266,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7748": {
@@ -297,14 +302,15 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7766": {
       "name": "Enchant Bracer - Minor Spirit",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6344
       },
       "difficulty": {
         "orange": 60,
@@ -324,7 +330,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7771": {
@@ -360,14 +366,16 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7776": {
       "name": "Enchant Chest - Lesser Mana",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6346,
+        "cost": 400
       },
       "difficulty": {
         "orange": 80,
@@ -391,7 +399,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7779": {
@@ -427,14 +435,15 @@
           6
         ],
         "trainingCost": 400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7782": {
       "name": "Enchant Bracer - Minor Strength",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6347
       },
       "difficulty": {
         "orange": 80,
@@ -454,14 +463,15 @@
             5
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7786": {
       "name": "Enchant Weapon - Minor Beastslayer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6348
       },
       "difficulty": {
         "orange": 90,
@@ -485,7 +495,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7788": {
@@ -525,7 +535,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7745": {
@@ -561,14 +571,16 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7793": {
       "name": "Enchant 2H Weapon - Lesser Intellect",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6349,
+        "cost": 500
       },
       "difficulty": {
         "orange": 100,
@@ -588,7 +600,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7795": {
@@ -637,7 +649,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7857": {
@@ -673,14 +685,15 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7859": {
       "name": "Enchant Bracer - Lesser Spirit",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6375
       },
       "difficulty": {
         "orange": 120,
@@ -700,7 +713,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7861": {
@@ -736,7 +749,7 @@
           6
         ],
         "trainingCost": 1250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7863": {
@@ -768,14 +781,16 @@
           6
         ],
         "trainingCost": 1400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7867": {
       "name": "Enchant Boots - Minor Agility",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6377,
+        "cost": 1000
       },
       "difficulty": {
         "orange": 125,
@@ -799,7 +814,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13378": {
@@ -835,14 +850,15 @@
           6
         ],
         "trainingCost": 600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13380": {
       "name": "Enchant 2H Weapon - Lesser Spirit",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11038
       },
       "difficulty": {
         "orange": 110,
@@ -866,14 +882,16 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13419": {
       "name": "Enchant Cloak - Minor Agility",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 11039,
+        "cost": 800
       },
       "difficulty": {
         "orange": 110,
@@ -893,7 +911,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13421": {
@@ -929,14 +947,15 @@
           6
         ],
         "trainingCost": 800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13464": {
       "name": "Enchant Shield - Lesser Protection",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11081
       },
       "difficulty": {
         "orange": 115,
@@ -964,7 +983,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13485": {
@@ -1000,7 +1019,7 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13501": {
@@ -1032,7 +1051,7 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13503": {
@@ -1068,14 +1087,15 @@
           6
         ],
         "trainingCost": 2000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13522": {
       "name": "Enchant Cloak - Lesser Shadow Resistance",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11098
       },
       "difficulty": {
         "orange": 135,
@@ -1099,7 +1119,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13529": {
@@ -1135,14 +1155,16 @@
           6
         ],
         "trainingCost": 2400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13536": {
       "name": "Enchant Bracer - Lesser Strength",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 11101,
+        "cost": 2500
       },
       "difficulty": {
         "orange": 140,
@@ -1162,7 +1184,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13538": {
@@ -1202,7 +1224,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13607": {
@@ -1238,14 +1260,15 @@
           6
         ],
         "trainingCost": 2400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13612": {
       "name": "Enchant Gloves - Mining",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11150
       },
       "difficulty": {
         "orange": 145,
@@ -1269,14 +1292,15 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13617": {
       "name": "Enchant Gloves - Herbalism",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11151
       },
       "difficulty": {
         "orange": 145,
@@ -1300,14 +1324,15 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13620": {
       "name": "Enchant Gloves - Fishing",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11152
       },
       "difficulty": {
         "orange": 145,
@@ -1331,7 +1356,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13622": {
@@ -1363,7 +1388,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13626": {
@@ -1403,7 +1428,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13628": {
@@ -1452,7 +1477,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13631": {
@@ -1488,7 +1513,7 @@
           6
         ],
         "trainingCost": 2600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13635": {
@@ -1524,7 +1549,7 @@
           6
         ],
         "trainingCost": 2600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13637": {
@@ -1560,7 +1585,7 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13640": {
@@ -1592,7 +1617,7 @@
           6
         ],
         "trainingCost": 2700,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13642": {
@@ -1624,7 +1649,7 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13644": {
@@ -1656,14 +1681,16 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13646": {
       "name": "Enchant Bracer - Lesser Deflection",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 11163,
+        "cost": 3000
       },
       "difficulty": {
         "orange": 170,
@@ -1687,7 +1714,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13648": {
@@ -1719,14 +1746,15 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13653": {
       "name": "Enchant Weapon - Lesser Beastslayer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11164
       },
       "difficulty": {
         "orange": 175,
@@ -1754,14 +1782,15 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13655": {
       "name": "Enchant Weapon - Lesser Elemental Slayer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11165
       },
       "difficulty": {
         "orange": 175,
@@ -1789,7 +1818,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13657": {
@@ -1825,7 +1854,7 @@
           6
         ],
         "trainingCost": 3000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13659": {
@@ -1861,7 +1890,7 @@
           6
         ],
         "trainingCost": 3200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13661": {
@@ -1893,7 +1922,7 @@
           6
         ],
         "trainingCost": 3600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13663": {
@@ -1925,14 +1954,15 @@
           6
         ],
         "trainingCost": 3800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13687": {
       "name": "Enchant Boots - Lesser Spirit",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11167
       },
       "difficulty": {
         "orange": 190,
@@ -1956,14 +1986,15 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13689": {
       "name": "Enchant Shield - Lesser Block",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11168
       },
       "difficulty": {
         "orange": 195,
@@ -1991,7 +2022,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13693": {
@@ -2027,7 +2058,7 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13695": {
@@ -2063,14 +2094,15 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13698": {
       "name": "Enchant Gloves - Skinning",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11166
       },
       "difficulty": {
         "orange": 200,
@@ -2094,7 +2126,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13700": {
@@ -2134,7 +2166,7 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13702": {
@@ -2183,7 +2215,7 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13746": {
@@ -2215,7 +2247,7 @@
           6
         ],
         "trainingCost": 4200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13794": {
@@ -2247,7 +2279,7 @@
           6
         ],
         "trainingCost": 4200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13815": {
@@ -2283,14 +2315,15 @@
           6
         ],
         "trainingCost": 4400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13817": {
       "name": "Enchant Shield - Stamina",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11202
       },
       "difficulty": {
         "orange": 210,
@@ -2310,7 +2343,7 @@
             5
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13822": {
@@ -2342,7 +2375,7 @@
           6
         ],
         "trainingCost": 4400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13836": {
@@ -2374,14 +2407,15 @@
           6
         ],
         "trainingCost": 4600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13841": {
       "name": "Enchant Gloves - Advanced Mining",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11203
       },
       "difficulty": {
         "orange": 215,
@@ -2405,14 +2439,15 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13846": {
       "name": "Enchant Bracer - Greater Spirit",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11204
       },
       "difficulty": {
         "orange": 220,
@@ -2436,7 +2471,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13858": {
@@ -2468,14 +2503,15 @@
           6
         ],
         "trainingCost": 4800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13868": {
       "name": "Enchant Gloves - Advanced Herbalism",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11205
       },
       "difficulty": {
         "orange": 225,
@@ -2499,14 +2535,15 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13882": {
       "name": "Enchant Cloak - Lesser Agility",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11206
       },
       "difficulty": {
         "orange": 225,
@@ -2526,7 +2563,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13887": {
@@ -2562,7 +2599,7 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13890": {
@@ -2602,14 +2639,15 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13898": {
       "name": "Enchant Weapon - Fiery Weapon",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11207
       },
       "difficulty": {
         "orange": 265,
@@ -2633,7 +2671,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13905": {
@@ -2669,14 +2707,15 @@
           6
         ],
         "trainingCost": 5400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13915": {
       "name": "Enchant Weapon - Demonslaying",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11208
       },
       "difficulty": {
         "orange": 230,
@@ -2704,7 +2743,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13917": {
@@ -2740,14 +2779,16 @@
           6
         ],
         "trainingCost": 5400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13931": {
       "name": "Enchant Bracer - Deflection",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 11223,
+        "cost": 5800
       },
       "difficulty": {
         "orange": 235,
@@ -2771,14 +2812,15 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13933": {
       "name": "Enchant Shield - Frost Resistance",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11224
       },
       "difficulty": {
         "orange": 235,
@@ -2802,7 +2844,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13935": {
@@ -2834,7 +2876,7 @@
           6
         ],
         "trainingCost": 5800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13937": {
@@ -2870,7 +2912,7 @@
           6
         ],
         "trainingCost": 6200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13939": {
@@ -2906,7 +2948,7 @@
           6
         ],
         "trainingCost": 6200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13941": {
@@ -2946,7 +2988,7 @@
           6
         ],
         "trainingCost": 6200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13943": {
@@ -2982,14 +3024,15 @@
           6
         ],
         "trainingCost": 6200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13945": {
       "name": "Enchant Bracer - Greater Stamina",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11225
       },
       "difficulty": {
         "orange": 245,
@@ -3009,14 +3052,15 @@
             5
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13947": {
       "name": "Enchant Gloves - Riding Skill",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11226
       },
       "difficulty": {
         "orange": 250,
@@ -3040,7 +3084,7 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13948": {
@@ -3076,7 +3120,7 @@
           6
         ],
         "trainingCost": 6500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "14293": {
@@ -3117,7 +3161,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "14807": {
@@ -3158,7 +3202,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "14809": {
@@ -3203,7 +3247,7 @@
           6
         ],
         "trainingCost": 2600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "14810": {
@@ -3248,14 +3292,15 @@
           6
         ],
         "trainingCost": 3000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15596": {
       "name": "Smoking Heart of the Mountain",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11813
       },
       "difficulty": {
         "orange": 265,
@@ -3288,7 +3333,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17181": {
@@ -3329,7 +3374,7 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17180": {
@@ -3370,14 +3415,15 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20008": {
       "name": "Enchant Bracer - Greater Intellect",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 255,
@@ -3397,14 +3443,15 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20020": {
       "name": "Enchant Boots - Greater Stamina",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16215
       },
       "difficulty": {
         "orange": 260,
@@ -3424,14 +3471,15 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20014": {
       "name": "Enchant Cloak - Greater Resistance",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 265,
@@ -3471,14 +3519,16 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20017": {
       "name": "Enchant Shield - Greater Stamina",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 16217,
+        "cost": 12000
       },
       "difficulty": {
         "orange": 265,
@@ -3498,14 +3548,15 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20009": {
       "name": "Enchant Bracer - Superior Spirit",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16218
       },
       "difficulty": {
         "orange": 270,
@@ -3529,14 +3580,15 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20012": {
       "name": "Enchant Gloves - Greater Agility",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 270,
@@ -3560,14 +3612,15 @@
             3
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20024": {
       "name": "Enchant Boots - Spirit",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16220
       },
       "difficulty": {
         "orange": 275,
@@ -3591,14 +3644,16 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20026": {
       "name": "Enchant Chest - Major Health",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 16221,
+        "cost": 16000
       },
       "difficulty": {
         "orange": 275,
@@ -3622,14 +3677,15 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20016": {
       "name": "Enchant Shield - Superior Spirit",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 280,
@@ -3653,14 +3709,15 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20029": {
       "name": "Enchant Weapon - Icy Chill",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16223
       },
       "difficulty": {
         "orange": 285,
@@ -3692,14 +3749,16 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20015": {
       "name": "Enchant Cloak - Superior Defense",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 16224,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 285,
@@ -3719,14 +3778,15 @@
             8
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20028": {
       "name": "Enchant Chest - Major Mana",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -3750,14 +3810,16 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20051": {
       "name": "Runed Arcanite Rod",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 16243,
+        "cost": 22000
       },
       "difficulty": {
         "orange": 290,
@@ -3802,14 +3864,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20013": {
       "name": "Enchant Gloves - Greater Strength",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 295,
@@ -3833,14 +3896,15 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20023": {
       "name": "Enchant Boots - Greater Agility",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 295,
@@ -3860,14 +3924,15 @@
             8
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20010": {
       "name": "Enchant Bracer - Superior Strength",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16246
       },
       "difficulty": {
         "orange": 295,
@@ -3891,14 +3956,15 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20030": {
       "name": "Enchant 2H Weapon - Superior Impact",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16247
       },
       "difficulty": {
         "orange": 295,
@@ -3922,14 +3988,15 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20033": {
       "name": "Enchant Weapon - Unholy Weapon",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16248
       },
       "difficulty": {
         "orange": 295,
@@ -3953,14 +4020,15 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20036": {
       "name": "Enchant 2H Weapon - Major Intellect",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16249
       },
       "difficulty": {
         "orange": 300,
@@ -3984,14 +4052,15 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20031": {
       "name": "Enchant Weapon - Superior Striking",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16250
       },
       "difficulty": {
         "orange": 300,
@@ -4015,14 +4084,15 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20011": {
       "name": "Enchant Bracer - Superior Stamina",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16251
       },
       "difficulty": {
         "orange": 300,
@@ -4042,14 +4112,15 @@
             15
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20034": {
       "name": "Enchant Weapon - Crusader",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16252
       },
       "difficulty": {
         "orange": 300,
@@ -4073,14 +4144,15 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20025": {
       "name": "Enchant Chest - Greater Stats",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16253
       },
       "difficulty": {
         "orange": 300,
@@ -4108,14 +4180,15 @@
             10
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20032": {
       "name": "Enchant Weapon - Lifestealing",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16254
       },
       "difficulty": {
         "orange": 300,
@@ -4143,14 +4216,15 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20035": {
       "name": "Enchant 2H Weapon - Major Spirit",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16255
       },
       "difficulty": {
         "orange": 300,
@@ -4174,14 +4248,15 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "21931": {
       "name": "Enchant Weapon - Winter's Might",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 17725
       },
       "difficulty": {
         "orange": 190,
@@ -4213,21 +4288,23 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22434": {
       "name": "Charged Scale of Onyxia",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "22749": {
       "name": "Enchant  Weapon - Spell Power",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18259
       },
       "difficulty": {
         "orange": 300,
@@ -4267,14 +4344,15 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22750": {
       "name": "Enchant  Weapon - Healing Power",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18260
       },
       "difficulty": {
         "orange": 300,
@@ -4310,14 +4388,16 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23799": {
       "name": "Enchant Weapon - Strength",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19444,
+        "cost": 30000
       },
       "difficulty": {
         "orange": 290,
@@ -4349,14 +4429,15 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23800": {
       "name": "Enchant Weapon - Agility",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -4388,14 +4469,15 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23801": {
       "name": "Enchant Bracer - Mana Regeneration",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -4423,14 +4505,15 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23802": {
       "name": "Enchant Bracer - Healing Power",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -4462,14 +4545,16 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23803": {
       "name": "Enchant Weapon - Mighty Spirit",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19448,
+        "cost": 80000
       },
       "difficulty": {
         "orange": 300,
@@ -4497,14 +4582,16 @@
             15
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23804": {
       "name": "Enchant Weapon - Mighty Intellect",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19449,
+        "cost": 100000
       },
       "difficulty": {
         "orange": 300,
@@ -4532,14 +4619,16 @@
             20
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25072": {
       "name": "Enchant Gloves - Threat",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20726,
+        "cost": 100000
       },
       "difficulty": {
         "orange": 300,
@@ -4567,14 +4656,15 @@
             8
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25073": {
       "name": "Enchant Gloves - Shadow Power",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 20727
       },
       "difficulty": {
         "orange": 300,
@@ -4602,14 +4692,15 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25074": {
       "name": "Enchant Gloves - Frost Power",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 20728
       },
       "difficulty": {
         "orange": 300,
@@ -4637,14 +4728,15 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25078": {
       "name": "Enchant Gloves - Fire Power",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 20729
       },
       "difficulty": {
         "orange": 300,
@@ -4672,14 +4764,15 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25079": {
       "name": "Enchant Gloves - Healing Power",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 20730
       },
       "difficulty": {
         "orange": 300,
@@ -4707,14 +4800,16 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25080": {
       "name": "Enchant Gloves - Superior Agility",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20731,
+        "cost": 100000
       },
       "difficulty": {
         "orange": 300,
@@ -4742,14 +4837,15 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25081": {
       "name": "Enchant Cloak - Greater Fire Resistance",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -4777,14 +4873,15 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25082": {
       "name": "Enchant Cloak - Greater Nature Resistance",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -4812,14 +4909,16 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25083": {
       "name": "Enchant Cloak - Stealth",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20734,
+        "cost": 100000
       },
       "difficulty": {
         "orange": 300,
@@ -4847,14 +4946,16 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25084": {
       "name": "Enchant Cloak - Subtlety",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20735,
+        "cost": 100000
       },
       "difficulty": {
         "orange": 300,
@@ -4882,14 +4983,16 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25086": {
       "name": "Enchant Cloak - Dodge",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20736,
+        "cost": 100000
       },
       "difficulty": {
         "orange": 300,
@@ -4917,14 +5020,16 @@
             8
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25124": {
       "name": "Minor Wizard Oil",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20758,
+        "cost": 500
       },
       "difficulty": {
         "orange": 45,
@@ -4957,14 +5062,16 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25125": {
       "name": "Minor Mana Oil",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20752,
+        "cost": 3000
       },
       "difficulty": {
         "orange": 150,
@@ -4997,14 +5104,16 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25126": {
       "name": "Lesser Wizard Oil",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20753,
+        "cost": 4000
       },
       "difficulty": {
         "orange": 200,
@@ -5037,14 +5146,16 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25127": {
       "name": "Lesser Mana Oil",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20754,
+        "cost": 10000
       },
       "difficulty": {
         "orange": 250,
@@ -5077,14 +5188,16 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25128": {
       "name": "Wizard Oil",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20755,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 275,
@@ -5117,14 +5230,15 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25129": {
       "name": "Brilliant Wizard Oil",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -5157,14 +5271,15 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25130": {
       "name": "Brilliant Mana Oil",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -5197,14 +5312,15 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27837": {
       "name": "Enchant 2H Weapon - Agility",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -5236,14 +5352,15 @@
             4
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "430409": {
       "name": "Blackfathom Mana Oil",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5276,7 +5393,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 1
@@ -5285,7 +5402,8 @@
       "name": "Enchant Weapon - Dismantle",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5313,7 +5431,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -5322,7 +5440,8 @@
       "name": "Enchant Chest - Retricutioner",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5346,7 +5465,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -5393,7 +5512,7 @@
           6
         ],
         "trainingCost": 3000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -5402,7 +5521,8 @@
       "name": "Sigil of Innovation",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5427,7 +5547,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -5436,7 +5556,8 @@
       "name": "Sigil of Living Dreams",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5461,7 +5582,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -5503,7 +5624,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -5512,7 +5633,8 @@
       "name": "Enchant Shield - Law of Nature",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5552,7 +5674,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -5561,7 +5683,8 @@
       "name": "Conductive Shield Coating",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5594,7 +5717,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -5603,7 +5726,8 @@
       "name": "Sigil of Flowing Waters",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5628,7 +5752,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -5637,7 +5761,8 @@
       "name": "Magnificent Trollshine",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5674,7 +5799,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5683,7 +5808,8 @@
       "name": "Speedstone",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5724,7 +5850,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5733,7 +5859,8 @@
       "name": "Tear of the Dreamer",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5774,7 +5901,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5783,7 +5910,8 @@
       "name": "Lodestone of Retaliation",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5824,7 +5952,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5833,7 +5961,8 @@
       "name": "Enchanted Stopwatch",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5870,7 +5999,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5879,7 +6008,8 @@
       "name": "Ruby-Encrusted Broach",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5924,7 +6054,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5933,7 +6063,8 @@
       "name": "Scroll: Wrath of the Swarm",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5962,7 +6093,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5971,7 +6102,8 @@
       "name": "Enchanted Repellent",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6004,7 +6136,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6013,7 +6145,8 @@
       "name": "Enchant Chest - Living Stats",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6053,7 +6186,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6062,7 +6195,8 @@
       "name": "Enchant Gloves - Holy Power",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6094,7 +6228,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6103,7 +6237,8 @@
       "name": "Enchant Gloves - Arcane Power",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6131,7 +6266,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6140,7 +6275,8 @@
       "name": "Enchanted Prayer Tome",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6177,7 +6313,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6186,7 +6322,8 @@
       "name": "Enchanted Totem",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6223,7 +6360,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6232,7 +6369,8 @@
       "name": "Enchanted Mushroom",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6273,7 +6411,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6282,7 +6420,8 @@
       "name": "Libram of Righteousness",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6319,7 +6458,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6328,7 +6467,8 @@
       "name": "Libram of the Exorcist",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6365,7 +6505,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6374,7 +6514,8 @@
       "name": "Libram of Sanctity",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6411,7 +6552,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6420,7 +6561,8 @@
       "name": "Totem of Pyroclastic Thunder",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6457,7 +6599,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6466,7 +6608,8 @@
       "name": "Totem of Thunderous Strikes",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6503,7 +6646,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6512,7 +6655,8 @@
       "name": "Totem of Flowing Magma",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6549,7 +6693,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6558,7 +6702,8 @@
       "name": "Idol of Sidereal Wrath",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6599,7 +6744,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6608,7 +6753,8 @@
       "name": "Idol of Feline Ferocity",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6649,7 +6795,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6658,7 +6804,8 @@
       "name": "Idol of Ursin Power",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6699,7 +6846,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6752,7 +6899,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6797,7 +6944,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -6806,7 +6953,8 @@
       "name": "Enchant Off-Hand - Superior Intellect",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6834,7 +6982,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -6843,7 +6991,8 @@
       "name": "Enchant Off-Hand - Excellent Spirit",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6871,7 +7020,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -6880,7 +7029,8 @@
       "name": "Enchant Off-Hand - Wisdom",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6912,7 +7062,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -6921,7 +7071,8 @@
       "name": "Enchant 2H Weapon - Spellblasting",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6953,7 +7104,7 @@
             6
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -6962,7 +7113,8 @@
       "name": "Enchant Shield - Excellent Stamina",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6990,7 +7142,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -6999,7 +7151,8 @@
       "name": "Enchant Shield - Critical Strike",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7027,7 +7180,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7036,7 +7189,8 @@
       "name": "Enchant Bracer - Greater Spellpower",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7068,7 +7222,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7077,7 +7231,8 @@
       "name": "Enchant Gloves - Superior Strength",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7105,7 +7260,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7114,7 +7269,8 @@
       "name": "Enchant Cloak - Agility",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7142,7 +7298,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -7184,7 +7340,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -7226,7 +7382,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -7268,7 +7424,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -7310,7 +7466,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8

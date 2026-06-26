@@ -1,13 +1,14 @@
 {
   "profession": "alchemy",
   "version": "1.15.8.67156",
-  "generated": "2026-06-22",
+  "generated": "2026-06-26",
   "recipes": {
     "2330": {
       "name": "Minor Healing Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -40,14 +41,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2329": {
       "name": "Elixir of Lion's Strength",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -80,7 +82,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2331": {
@@ -125,7 +127,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2332": {
@@ -170,7 +172,7 @@
           6
         ],
         "trainingCost": 150,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2334": {
@@ -215,14 +217,15 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2335": {
       "name": "Swiftness Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 2555
       },
       "difficulty": {
         "orange": 60,
@@ -255,14 +258,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2336": {
       "name": "Elixir of Tongues",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "2337": {
@@ -303,7 +307,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3171": {
@@ -348,14 +352,15 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3172": {
       "name": "Minor Magic Resistance Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3393
       },
       "difficulty": {
         "orange": 110,
@@ -388,7 +393,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3173": {
@@ -433,14 +438,15 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3174": {
       "name": "Elixir of Poison Resistance",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3394
       },
       "difficulty": {
         "orange": 120,
@@ -473,7 +479,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3176": {
@@ -518,7 +524,7 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3177": {
@@ -563,14 +569,15 @@
           6
         ],
         "trainingCost": 2000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2333": {
       "name": "Elixir of Lesser Agility",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3396
       },
       "difficulty": {
         "orange": 140,
@@ -603,14 +610,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3188": {
       "name": "Elixir of Ogre's Strength",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6211
       },
       "difficulty": {
         "orange": 150,
@@ -643,7 +651,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3170": {
@@ -688,14 +696,15 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3230": {
       "name": "Elixir of Minor Agility",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 2553
       },
       "difficulty": {
         "orange": 50,
@@ -728,7 +737,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3447": {
@@ -773,7 +782,7 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3448": {
@@ -818,14 +827,16 @@
           6
         ],
         "trainingCost": 4500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3449": {
       "name": "Shadow Oil",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6068,
+        "cost": 1500
       },
       "difficulty": {
         "orange": 165,
@@ -858,7 +869,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3450": {
@@ -903,14 +914,15 @@
           6
         ],
         "trainingCost": 5400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3451": {
       "name": "Mighty Troll's Blood Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3831
       },
       "difficulty": {
         "orange": 180,
@@ -943,7 +955,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3452": {
@@ -988,14 +1000,15 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3453": {
       "name": "Elixir of Detect Lesser Invisibility",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3832
       },
       "difficulty": {
         "orange": 195,
@@ -1028,14 +1041,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3454": {
       "name": "Frost Oil",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 14634,
+        "cost": 2500
       },
       "difficulty": {
         "orange": 200,
@@ -1068,14 +1083,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "4508": {
       "name": "Discolored Healing Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 4597
       },
       "difficulty": {
         "orange": 50,
@@ -1108,14 +1124,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "4942": {
       "name": "Lesser Stoneshield Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 4624
       },
       "difficulty": {
         "orange": 215,
@@ -1148,14 +1165,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6624": {
       "name": "Free Action Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 5642,
+        "cost": 1800
       },
       "difficulty": {
         "orange": 150,
@@ -1188,21 +1207,24 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6619": {
       "name": "Cowardly Flight Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "6618": {
       "name": "Great Rage Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 5643,
+        "cost": 2000
       },
       "difficulty": {
         "orange": 175,
@@ -1235,14 +1257,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6617": {
       "name": "Rage Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 5640,
+        "cost": 100
       },
       "difficulty": {
         "orange": 60,
@@ -1275,7 +1299,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7179": {
@@ -1320,7 +1344,7 @@
           6
         ],
         "trainingCost": 450,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7181": {
@@ -1365,14 +1389,15 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7183": {
       "name": "Elixir of Minor Defense",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -1401,14 +1426,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7257": {
       "name": "Fire Protection Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6055,
+        "cost": 1500
       },
       "difficulty": {
         "orange": 165,
@@ -1441,14 +1468,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7258": {
       "name": "Frost Protection Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6056,
+        "cost": 2000
       },
       "difficulty": {
         "orange": 190,
@@ -1481,14 +1510,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7255": {
       "name": "Holy Protection Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6053,
+        "cost": 800
       },
       "difficulty": {
         "orange": 100,
@@ -1521,14 +1552,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7259": {
       "name": "Nature Protection Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6057,
+        "cost": 2000
       },
       "difficulty": {
         "orange": 190,
@@ -1561,14 +1594,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7256": {
       "name": "Shadow Protection Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6054,
+        "cost": 900
       },
       "difficulty": {
         "orange": 135,
@@ -1601,7 +1636,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7836": {
@@ -1642,7 +1677,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7837": {
@@ -1683,7 +1718,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7841": {
@@ -1728,7 +1763,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7845": {
@@ -1773,14 +1808,15 @@
           6
         ],
         "trainingCost": 3000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8240": {
       "name": "Elixir of Giant Growth",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6663
       },
       "difficulty": {
         "orange": 90,
@@ -1813,14 +1849,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11447": {
       "name": "Elixir of Waterwalking",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "11449": {
@@ -1865,7 +1902,7 @@
           6
         ],
         "trainingCost": 5850,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11450": {
@@ -1910,7 +1947,7 @@
           6
         ],
         "trainingCost": 6750,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11451": {
@@ -1955,7 +1992,7 @@
           6
         ],
         "trainingCost": 7200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11448": {
@@ -2000,14 +2037,15 @@
           6
         ],
         "trainingCost": 8100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11452": {
       "name": "Restorative Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 215,
@@ -2040,14 +2078,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11453": {
       "name": "Magic Resistance Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 9293
       },
       "difficulty": {
         "orange": 210,
@@ -2080,14 +2119,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11456": {
       "name": "Goblin Rocket Fuel",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 210,
@@ -2120,7 +2160,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11457": {
@@ -2165,14 +2205,15 @@
           6
         ],
         "trainingCost": 9000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11458": {
       "name": "Wildvine Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 9294
       },
       "difficulty": {
         "orange": 225,
@@ -2205,14 +2246,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11459": {
       "name": "Philosophers' Stone",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 9303,
+        "cost": 8000
       },
       "difficulty": {
         "orange": 225,
@@ -2249,7 +2292,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11460": {
@@ -2290,7 +2333,7 @@
           6
         ],
         "trainingCost": 4500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11461": {
@@ -2335,14 +2378,15 @@
           6
         ],
         "trainingCost": 9000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11464": {
       "name": "Invisibility Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 9295
       },
       "difficulty": {
         "orange": 235,
@@ -2375,7 +2419,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11465": {
@@ -2420,14 +2464,15 @@
           6
         ],
         "trainingCost": 10800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11466": {
       "name": "Gift of Arthas",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 9296
       },
       "difficulty": {
         "orange": 240,
@@ -2460,7 +2505,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11467": {
@@ -2505,14 +2550,15 @@
           6
         ],
         "trainingCost": 10800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11468": {
       "name": "Elixir of Dream Vision",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 9297
       },
       "difficulty": {
         "orange": 240,
@@ -2541,14 +2587,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11472": {
       "name": "Elixir of Giants",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 9298
       },
       "difficulty": {
         "orange": 245,
@@ -2581,14 +2628,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11473": {
       "name": "Ghost Dye",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 9302,
+        "cost": 9000
       },
       "difficulty": {
         "orange": 245,
@@ -2621,14 +2670,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11476": {
       "name": "Elixir of Shadow Power",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 9301,
+        "cost": 10000
       },
       "difficulty": {
         "orange": 250,
@@ -2657,14 +2708,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11477": {
       "name": "Elixir of Demonslaying",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 9300,
+        "cost": 10000
       },
       "difficulty": {
         "orange": 250,
@@ -2697,7 +2750,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11478": {
@@ -2738,7 +2791,7 @@
           6
         ],
         "trainingCost": 12600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11479": {
@@ -2775,7 +2828,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11480": {
@@ -2812,7 +2865,7 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12609": {
@@ -2857,7 +2910,7 @@
           6
         ],
         "trainingCost": 7200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15833": {
@@ -2898,14 +2951,16 @@
           6
         ],
         "trainingCost": 9000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17187": {
       "name": "Transmute: Arcanite",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12958,
+        "cost": 50000
       },
       "difficulty": {
         "orange": 275,
@@ -2934,7 +2989,7 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17551": {
@@ -2975,14 +3030,15 @@
           6
         ],
         "trainingCost": 13500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17552": {
       "name": "Mighty Rage Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 255,
@@ -3011,14 +3067,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17553": {
       "name": "Superior Mana Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 260,
@@ -3051,14 +3108,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17554": {
       "name": "Elixir of Superior Defense",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13478,
+        "cost": 13000
       },
       "difficulty": {
         "orange": 265,
@@ -3091,14 +3150,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17555": {
       "name": "Elixir of the Sages",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 270,
@@ -3131,14 +3191,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17556": {
       "name": "Major Healing Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -3171,14 +3232,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17557": {
       "name": "Elixir of Brute Force",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -3211,14 +3273,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17559": {
       "name": "Transmute: Air to Fire",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -3243,14 +3306,15 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17561": {
       "name": "Transmute: Earth to Water",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -3275,14 +3339,15 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17566": {
       "name": "Transmute: Earth to Life",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13489
       },
       "difficulty": {
         "orange": 275,
@@ -3307,14 +3372,16 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17560": {
       "name": "Transmute: Fire to Earth",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13483,
+        "cost": 15000
       },
       "difficulty": {
         "orange": 275,
@@ -3339,14 +3406,15 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17563": {
       "name": "Transmute: Undeath to Water",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13486
       },
       "difficulty": {
         "orange": 275,
@@ -3371,14 +3439,16 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17562": {
       "name": "Transmute: Water to Air",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13485,
+        "cost": 15000
       },
       "difficulty": {
         "orange": 275,
@@ -3403,14 +3473,15 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17564": {
       "name": "Transmute: Water to Undeath",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13487
       },
       "difficulty": {
         "orange": 275,
@@ -3435,14 +3506,15 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17565": {
       "name": "Transmute: Life to Earth",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13488
       },
       "difficulty": {
         "orange": 275,
@@ -3467,14 +3539,15 @@
           0,
           0
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17570": {
       "name": "Greater Stoneshield Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13490
       },
       "difficulty": {
         "orange": 280,
@@ -3507,14 +3580,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17571": {
       "name": "Elixir of the Mongoose",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13491
       },
       "difficulty": {
         "orange": 280,
@@ -3547,14 +3621,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17572": {
       "name": "Purification Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 285,
@@ -3587,14 +3662,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17573": {
       "name": "Greater Arcane Elixir",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 285,
@@ -3627,14 +3703,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17574": {
       "name": "Greater Fire Protection Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13494
       },
       "difficulty": {
         "orange": 290,
@@ -3667,14 +3744,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17575": {
       "name": "Greater Frost Protection Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13495
       },
       "difficulty": {
         "orange": 290,
@@ -3707,14 +3785,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17576": {
       "name": "Greater Nature Protection Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13496
       },
       "difficulty": {
         "orange": 290,
@@ -3747,14 +3826,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17577": {
       "name": "Greater Arcane Protection Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13497
       },
       "difficulty": {
         "orange": 290,
@@ -3787,14 +3867,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17578": {
       "name": "Greater Shadow Protection Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13499
       },
       "difficulty": {
         "orange": 290,
@@ -3827,21 +3908,23 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17579": {
       "name": "Greater Holy Protection Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "17580": {
       "name": "Major Mana Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13501
       },
       "difficulty": {
         "orange": 295,
@@ -3874,14 +3957,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17632": {
       "name": "Alchemist's Stone",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -3930,14 +4014,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17634": {
       "name": "Flask of Petrification",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13518
       },
       "difficulty": {
         "orange": 300,
@@ -3974,14 +4059,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17635": {
       "name": "Flask of the Titans",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13519
       },
       "difficulty": {
         "orange": 300,
@@ -4018,14 +4104,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17636": {
       "name": "Flask of Distilled Wisdom",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13520
       },
       "difficulty": {
         "orange": 300,
@@ -4062,14 +4149,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17637": {
       "name": "Flask of Supreme Power",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13521
       },
       "difficulty": {
         "orange": 300,
@@ -4106,14 +4194,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "17638": {
       "name": "Flask of Chromatic Resistance",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 13522
       },
       "difficulty": {
         "orange": 300,
@@ -4150,14 +4239,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3175": {
       "name": "Limited Invulnerability Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3395
       },
       "difficulty": {
         "orange": 250,
@@ -4190,14 +4280,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "21923": {
       "name": "Elixir of Frost Power",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 17709
       },
       "difficulty": {
         "orange": 190,
@@ -4230,21 +4321,23 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22430": {
       "name": "Refined Scale of Onyxia",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "22732": {
       "name": "Major Rejuvenation Potion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18257
       },
       "difficulty": {
         "orange": 300,
@@ -4281,7 +4374,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22808": {
@@ -4326,14 +4419,15 @@
           6
         ],
         "trainingCost": 9000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24266": {
       "name": "Gurubashi Mojo Madness",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -4370,14 +4464,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24365": {
       "name": "Mageblood Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -4410,14 +4505,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24366": {
       "name": "Greater Dreamless Sleep Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -4450,14 +4546,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24367": {
       "name": "Living Action Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 285,
@@ -4494,14 +4591,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24368": {
       "name": "Major Troll's Blood Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -4534,14 +4632,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "25146": {
       "name": "Transmute: Elemental Fire",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -4566,14 +4665,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26277": {
       "name": "Elixir of Greater Firepower",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21547
       },
       "difficulty": {
         "orange": 250,
@@ -4606,14 +4706,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "426607": {
       "name": "Elixir of Coalesced Regret",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -4650,7 +4751,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 1
@@ -4659,7 +4760,8 @@
       "name": "Insulating Gniodine",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -4688,7 +4790,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -4697,7 +4799,8 @@
       "name": "Mildly Irradiated Rejuvenation Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -4734,7 +4837,7 @@
           5,
           5
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -4743,7 +4846,8 @@
       "name": "Lesser Arcane Elixir",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -4776,7 +4880,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -4785,7 +4889,8 @@
       "name": "Flask of Everlasting Nightmares",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -4818,7 +4923,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -4827,7 +4932,8 @@
       "name": "Flask of Nightmarish Mojo",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -4860,7 +4966,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -4869,7 +4975,8 @@
       "name": "Flask of Restless Dreams",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -4902,7 +5009,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -4911,7 +5018,8 @@
       "name": "Flask of Unyielding Sorrow",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -4948,7 +5056,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -4957,7 +5065,8 @@
       "name": "Flask of the Old Gods",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -4994,7 +5103,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5003,7 +5112,8 @@
       "name": "Flask of Ancient Knowledge",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5040,7 +5150,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5049,7 +5159,8 @@
       "name": "Flask of Madness",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5086,7 +5197,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5095,7 +5206,8 @@
       "name": "Elixir of the Honey Badger",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5132,7 +5244,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5141,7 +5253,8 @@
       "name": "Elixir of the Mage-Lord",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5178,7 +5291,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5187,7 +5300,8 @@
       "name": "Elixir of the Ironside",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5224,7 +5338,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5233,7 +5347,8 @@
       "name": "Elixir of Alacrity",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -5270,7 +5385,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -5316,7 +5431,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8

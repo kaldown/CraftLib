@@ -1,13 +1,14 @@
 {
   "profession": "firstAid",
   "version": "1.15.8.67156",
-  "generated": "2026-06-22",
+  "generated": "2026-06-26",
   "recipes": {
     "3275": {
       "name": "Linen Bandage",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -32,14 +33,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3276": {
       "name": "Heavy Linen Bandage",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 40,
@@ -64,7 +66,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3277": {
@@ -101,7 +103,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3278": {
@@ -138,7 +140,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7928": {
@@ -175,14 +177,16 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7929": {
       "name": "Heavy Silk Bandage",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 16112,
+        "cost": 2200
       },
       "difficulty": {
         "orange": 180,
@@ -207,7 +211,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7934": {
@@ -244,14 +248,15 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7935": {
       "name": "Strong Anti-Venom",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6454
       },
       "difficulty": {
         "orange": 130,
@@ -276,14 +281,16 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "10840": {
       "name": "Mageweave Bandage",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 16113,
+        "cost": 5000
       },
       "difficulty": {
         "orange": 210,
@@ -308,14 +315,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "10841": {
       "name": "Heavy Mageweave Bandage",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 240,
@@ -340,14 +348,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18629": {
       "name": "Runecloth Bandage",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 260,
@@ -372,14 +381,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "18630": {
       "name": "Heavy Runecloth Bandage",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -404,14 +414,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23787": {
       "name": "Powerful Anti-Venom",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -436,21 +447,23 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "30021": {
       "name": "Crystal Infused Bandage",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 23689
       }
     },
     "470349": {
       "name": "Dense Runecloth Bandage",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -475,7 +488,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6

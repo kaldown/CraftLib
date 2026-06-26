@@ -1,13 +1,14 @@
 {
   "profession": "blacksmithing",
   "version": "1.15.8.67156",
-  "generated": "2026-06-22",
+  "generated": "2026-06-26",
   "recipes": {
     "2660": {
       "name": "Rough Sharpening Stone",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -32,7 +33,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2661": {
@@ -69,7 +70,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2662": {
@@ -106,14 +107,15 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2663": {
       "name": "Copper Bracers",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -138,7 +140,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2664": {
@@ -179,7 +181,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2665": {
@@ -216,7 +218,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2666": {
@@ -253,14 +255,15 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2667": {
       "name": "Runed Copper Breastplate",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 2881
       },
       "difficulty": {
         "orange": 80,
@@ -293,7 +296,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2668": {
@@ -330,7 +333,7 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2670": {
@@ -367,7 +370,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2672": {
@@ -408,7 +411,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2674": {
@@ -445,7 +448,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2675": {
@@ -498,7 +501,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2737": {
@@ -543,7 +546,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2740": {
@@ -588,7 +591,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2741": {
@@ -633,7 +636,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2738": {
@@ -678,7 +681,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2739": {
@@ -723,7 +726,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2742": {
@@ -768,14 +771,15 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3115": {
       "name": "Rough Weightstone",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -804,7 +808,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3117": {
@@ -845,7 +849,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3116": {
@@ -886,7 +890,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3292": {
@@ -935,7 +939,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3293": {
@@ -988,7 +992,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3294": {
@@ -1041,14 +1045,15 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3295": {
       "name": "Deadly Bronze Poniard",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 2883
       },
       "difficulty": {
         "orange": 125,
@@ -1093,7 +1098,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3296": {
@@ -1150,14 +1155,15 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3297": {
       "name": "Mighty Iron Hammer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3608
       },
       "difficulty": {
         "orange": 145,
@@ -1202,7 +1208,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3319": {
@@ -1239,7 +1245,7 @@
           6
         ],
         "trainingCost": 50,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3320": {
@@ -1276,14 +1282,15 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3321": {
       "name": "Copper Chain Vest",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3609
       },
       "difficulty": {
         "orange": 35,
@@ -1316,7 +1323,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3323": {
@@ -1357,7 +1364,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3324": {
@@ -1402,14 +1409,15 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3325": {
       "name": "Gemmed Copper Gauntlets",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3610
       },
       "difficulty": {
         "orange": 60,
@@ -1442,7 +1450,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3326": {
@@ -1479,7 +1487,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3328": {
@@ -1524,14 +1532,15 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3330": {
       "name": "Silvered Bronze Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 2882
       },
       "difficulty": {
         "orange": 125,
@@ -1564,7 +1573,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3331": {
@@ -1609,7 +1618,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3333": {
@@ -1654,14 +1663,15 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3334": {
       "name": "Green Iron Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3611
       },
       "difficulty": {
         "orange": 145,
@@ -1698,14 +1708,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3336": {
       "name": "Green Iron Gauntlets",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3612
       },
       "difficulty": {
         "orange": 150,
@@ -1742,7 +1753,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3337": {
@@ -1779,7 +1790,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3491": {
@@ -1832,14 +1843,16 @@
           6
         ],
         "trainingCost": 600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3492": {
       "name": "Hardened Iron Shortsword",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12162,
+        "cost": 3000
       },
       "difficulty": {
         "orange": 160,
@@ -1880,14 +1893,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3493": {
       "name": "Jade Serpentblade",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3866
       },
       "difficulty": {
         "orange": 175,
@@ -1928,14 +1942,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3494": {
       "name": "Solid Iron Maul",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10858,
+        "cost": 3000
       },
       "difficulty": {
         "orange": 155,
@@ -1976,14 +1992,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3495": {
       "name": "Golden Iron Destroyer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3867
       },
       "difficulty": {
         "orange": 170,
@@ -2028,14 +2045,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3496": {
       "name": "Moonsteel Broadsword",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12163,
+        "cost": 4400
       },
       "difficulty": {
         "orange": 180,
@@ -2076,14 +2095,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3497": {
       "name": "Frost Tiger Blade",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3868
       },
       "difficulty": {
         "orange": 200,
@@ -2128,14 +2148,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3498": {
       "name": "Massive Iron Axe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12164,
+        "cost": 4400
       },
       "difficulty": {
         "orange": 185,
@@ -2176,14 +2198,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3500": {
       "name": "Shadow Crescent Axe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3869
       },
       "difficulty": {
         "orange": 200,
@@ -2228,7 +2251,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3501": {
@@ -2269,7 +2292,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3502": {
@@ -2314,14 +2337,16 @@
           6
         ],
         "trainingCost": 1250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3503": {
       "name": "Golden Scale Coif",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 6047,
+        "cost": 4400
       },
       "difficulty": {
         "orange": 190,
@@ -2354,14 +2379,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3504": {
       "name": "Green Iron Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3870
       },
       "difficulty": {
         "orange": 160,
@@ -2394,14 +2420,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3505": {
       "name": "Golden Scale Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3871
       },
       "difficulty": {
         "orange": 175,
@@ -2434,7 +2461,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3506": {
@@ -2479,14 +2506,15 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3507": {
       "name": "Golden Scale Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3872
       },
       "difficulty": {
         "orange": 170,
@@ -2519,7 +2547,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3508": {
@@ -2572,14 +2600,15 @@
           6
         ],
         "trainingCost": 7500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3511": {
       "name": "Golden Scale Cuirass",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3873
       },
       "difficulty": {
         "orange": 195,
@@ -2616,14 +2645,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3513": {
       "name": "Polished Steel Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3874
       },
       "difficulty": {
         "orange": 185,
@@ -2660,14 +2690,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3515": {
       "name": "Golden Scale Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 3875
       },
       "difficulty": {
         "orange": 200,
@@ -2704,14 +2735,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6518": {
       "name": "Iridescent Hammer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 5543
       },
       "difficulty": {
         "orange": 140,
@@ -2752,7 +2784,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6517": {
@@ -2801,21 +2833,23 @@
           6
         ],
         "trainingCost": 800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "2671": {
       "name": "Rough Bronze Bracers",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "2673": {
       "name": "Silvered Bronze Breastplate",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 5578
       },
       "difficulty": {
         "orange": 130,
@@ -2852,14 +2886,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7224": {
       "name": "Steel Weapon Chain",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6046
       },
       "difficulty": {
         "orange": 190,
@@ -2892,7 +2927,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7223": {
@@ -2933,14 +2968,15 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7221": {
       "name": "Iron Shield Spike",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6044
       },
       "difficulty": {
         "orange": 150,
@@ -2969,14 +3005,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7222": {
       "name": "Iron Counterweight",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6045
       },
       "difficulty": {
         "orange": 165,
@@ -3009,7 +3046,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7408": {
@@ -3054,7 +3091,7 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7817": {
@@ -3095,7 +3132,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7818": {
@@ -3136,21 +3173,23 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8366": {
       "name": "Ironforge Chain",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "8367": {
       "name": "Ironforge Breastplate",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 6735
       },
       "difficulty": {
         "orange": 100,
@@ -3183,14 +3222,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8368": {
       "name": "Ironforge Gauntlets",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "8768": {
@@ -3227,7 +3267,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8880": {
@@ -3276,14 +3316,15 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9811": {
       "name": "Barbaric Iron Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 7978
       },
       "difficulty": {
         "orange": 160,
@@ -3320,14 +3361,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9813": {
       "name": "Barbaric Iron Breastplate",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 7979
       },
       "difficulty": {
         "orange": 160,
@@ -3356,14 +3398,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9814": {
       "name": "Barbaric Iron Helm",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 7980
       },
       "difficulty": {
         "orange": 175,
@@ -3396,14 +3439,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9818": {
       "name": "Barbaric Iron Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 7981
       },
       "difficulty": {
         "orange": 180,
@@ -3440,14 +3484,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9820": {
       "name": "Barbaric Iron Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 7982
       },
       "difficulty": {
         "orange": 185,
@@ -3480,7 +3525,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9916": {
@@ -3521,7 +3566,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9918": {
@@ -3558,7 +3603,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9921": {
@@ -3599,7 +3644,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9920": {
@@ -3636,7 +3681,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9926": {
@@ -3677,7 +3722,7 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9928": {
@@ -3718,7 +3763,7 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9931": {
@@ -3755,14 +3800,15 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9933": {
       "name": "Heavy Mithril Pants",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7975
       },
       "difficulty": {
         "orange": 210,
@@ -3791,7 +3837,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9935": {
@@ -3832,14 +3878,16 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9937": {
       "name": "Mithril Scale Bracers",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 7995,
+        "cost": 6000
       },
       "difficulty": {
         "orange": 215,
@@ -3868,14 +3916,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9939": {
       "name": "Mithril Shield Spike",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7976
       },
       "difficulty": {
         "orange": 215,
@@ -3908,21 +3957,23 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9942": {
       "name": "Mithril Scale Gloves",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "9945": {
       "name": "Ornate Mithril Pants",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 7983
       },
       "difficulty": {
         "orange": 220,
@@ -3959,14 +4010,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9950": {
       "name": "Ornate Mithril Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 7984
       },
       "difficulty": {
         "orange": 220,
@@ -4003,14 +4055,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9952": {
       "name": "Ornate Mithril Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 7985
       },
       "difficulty": {
         "orange": 225,
@@ -4043,7 +4096,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9954": {
@@ -4100,14 +4153,15 @@
           6
         ],
         "trainingCost": 9000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9957": {
       "name": "Orcish War Leggings",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 230,
@@ -4136,7 +4190,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9959": {
@@ -4173,7 +4227,7 @@
           6
         ],
         "trainingCost": 15000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9961": {
@@ -4214,14 +4268,15 @@
           6
         ],
         "trainingCost": 15000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9964": {
       "name": "Mithril Spurs",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7989
       },
       "difficulty": {
         "orange": 235,
@@ -4250,14 +4305,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9966": {
       "name": "Mithril Scale Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7991
       },
       "difficulty": {
         "orange": 235,
@@ -4290,7 +4346,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9968": {
@@ -4331,14 +4387,15 @@
           6
         ],
         "trainingCost": 20000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9970": {
       "name": "Heavy Mithril Helm",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7990
       },
       "difficulty": {
         "orange": 245,
@@ -4367,14 +4424,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9972": {
       "name": "Ornate Mithril Breastplate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 240,
@@ -4411,7 +4469,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9974": {
@@ -4464,14 +4522,15 @@
           6
         ],
         "trainingCost": 9000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9979": {
       "name": "Ornate Mithril Boots",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 245,
@@ -4512,14 +4571,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9980": {
       "name": "Ornate Mithril Helm",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 245,
@@ -4556,7 +4616,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9983": {
@@ -4605,7 +4665,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9985": {
@@ -4650,7 +4710,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9986": {
@@ -4695,7 +4755,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9987": {
@@ -4740,7 +4800,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9993": {
@@ -4789,14 +4849,15 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9995": {
       "name": "Blue Glittering Axe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7992
       },
       "difficulty": {
         "orange": 220,
@@ -4833,14 +4894,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9997": {
       "name": "Wicked Mithril Blade",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 8029
       },
       "difficulty": {
         "orange": 225,
@@ -4877,7 +4939,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "10001": {
@@ -4930,7 +4992,7 @@
           6
         ],
         "trainingCost": 15000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "10003": {
@@ -4991,14 +5053,15 @@
           6
         ],
         "trainingCost": 13500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "10005": {
       "name": "Dazzling Mithril Rapier",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7993
       },
       "difficulty": {
         "orange": 240,
@@ -5043,7 +5106,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "10007": {
@@ -5104,14 +5167,15 @@
           6
         ],
         "trainingCost": 13500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "10009": {
       "name": "Runed Mithril Hammer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 8028
       },
       "difficulty": {
         "orange": 245,
@@ -5148,7 +5212,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "10011": {
@@ -5201,14 +5265,16 @@
           6
         ],
         "trainingCost": 13500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "10013": {
       "name": "Ebon Shiv",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 8030,
+        "cost": 10000
       },
       "difficulty": {
         "orange": 255,
@@ -5249,7 +5315,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "10015": {
@@ -5306,14 +5372,15 @@
           6
         ],
         "trainingCost": 13500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11643": {
       "name": "Golden Scale Gauntlets",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 9367
       },
       "difficulty": {
         "orange": 205,
@@ -5350,14 +5417,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12260": {
       "name": "Rough Copper Vest",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -5382,14 +5450,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12259": {
       "name": "Silvered Bronze Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10424
       },
       "difficulty": {
         "orange": 155,
@@ -5422,14 +5491,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "11454": {
       "name": "Inlaid Mithril Cylinder",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 200,
@@ -5462,7 +5532,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "14379": {
@@ -5503,7 +5573,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "14380": {
@@ -5544,14 +5614,15 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15296": {
       "name": "Dark Iron Plate",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11612
       },
       "difficulty": {
         "orange": 285,
@@ -5580,14 +5651,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15293": {
       "name": "Dark Iron Mail",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11614
       },
       "difficulty": {
         "orange": 270,
@@ -5616,14 +5688,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15292": {
       "name": "Dark Iron Pulverizer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11610
       },
       "difficulty": {
         "orange": 265,
@@ -5652,14 +5725,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15294": {
       "name": "Dark Iron Sunderer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11611
       },
       "difficulty": {
         "orange": 275,
@@ -5688,14 +5762,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15295": {
       "name": "Dark Iron Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11615
       },
       "difficulty": {
         "orange": 280,
@@ -5724,7 +5799,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15972": {
@@ -5777,14 +5852,15 @@
           6
         ],
         "trainingCost": 7500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15973": {
       "name": "Searing Golden Blade",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12261
       },
       "difficulty": {
         "orange": 190,
@@ -5821,7 +5897,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16641": {
@@ -5858,7 +5934,7 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16640": {
@@ -5899,7 +5975,7 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16639": {
@@ -5936,14 +6012,15 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16642": {
       "name": "Thorium Armor",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12682
       },
       "difficulty": {
         "orange": 250,
@@ -5976,14 +6053,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16643": {
       "name": "Thorium Belt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12683
       },
       "difficulty": {
         "orange": 250,
@@ -6012,14 +6090,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16644": {
       "name": "Thorium Bracers",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12684
       },
       "difficulty": {
         "orange": 255,
@@ -6048,14 +6127,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16645": {
       "name": "Radiant Belt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12685
       },
       "difficulty": {
         "orange": 260,
@@ -6084,14 +6164,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16646": {
       "name": "Imperial Plate Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12687
       },
       "difficulty": {
         "orange": 265,
@@ -6124,14 +6205,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16647": {
       "name": "Imperial Plate Belt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12688
       },
       "difficulty": {
         "orange": 265,
@@ -6164,14 +6246,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16648": {
       "name": "Radiant Breastplate",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12689
       },
       "difficulty": {
         "orange": 270,
@@ -6204,14 +6287,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16649": {
       "name": "Imperial Plate Bracers",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12690
       },
       "difficulty": {
         "orange": 270,
@@ -6240,14 +6324,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16650": {
       "name": "Wildthorn Mail",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12691
       },
       "difficulty": {
         "orange": 270,
@@ -6288,14 +6373,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16651": {
       "name": "Thorium Shield Spike",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12692
       },
       "difficulty": {
         "orange": 275,
@@ -6328,14 +6414,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16652": {
       "name": "Thorium Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12693
       },
       "difficulty": {
         "orange": 280,
@@ -6368,14 +6455,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16653": {
       "name": "Thorium Helm",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12694
       },
       "difficulty": {
         "orange": 280,
@@ -6408,14 +6496,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16654": {
       "name": "Radiant Gloves",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12695
       },
       "difficulty": {
         "orange": 285,
@@ -6444,14 +6533,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16667": {
       "name": "Demon Forged Breastplate",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12696
       },
       "difficulty": {
         "orange": 285,
@@ -6488,14 +6578,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16656": {
       "name": "Radiant Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12697
       },
       "difficulty": {
         "orange": 290,
@@ -6524,14 +6615,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16660": {
       "name": "Dawnbringer Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12698
       },
       "difficulty": {
         "orange": 290,
@@ -6568,14 +6660,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16655": {
       "name": "Fiery Plate Gauntlets",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12699
       },
       "difficulty": {
         "orange": 290,
@@ -6612,14 +6705,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16657": {
       "name": "Imperial Plate Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12700
       },
       "difficulty": {
         "orange": 295,
@@ -6652,14 +6746,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16658": {
       "name": "Imperial Plate Helm",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12701
       },
       "difficulty": {
         "orange": 295,
@@ -6688,14 +6783,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16659": {
       "name": "Radiant Circlet",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12702
       },
       "difficulty": {
         "orange": 295,
@@ -6724,14 +6820,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16662": {
       "name": "Thorium Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12704
       },
       "difficulty": {
         "orange": 300,
@@ -6760,14 +6857,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16663": {
       "name": "Imperial Plate Chest",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12705
       },
       "difficulty": {
         "orange": 300,
@@ -6796,14 +6894,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16664": {
       "name": "Runic Plate Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12706
       },
       "difficulty": {
         "orange": 300,
@@ -6836,14 +6935,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16665": {
       "name": "Runic Plate Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12707
       },
       "difficulty": {
         "orange": 300,
@@ -6876,14 +6976,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16724": {
       "name": "Whitesoul Helm",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12711
       },
       "difficulty": {
         "orange": 300,
@@ -6924,14 +7025,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16725": {
       "name": "Radiant Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12713
       },
       "difficulty": {
         "orange": 300,
@@ -6960,14 +7062,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16726": {
       "name": "Runic Plate Helm",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12714
       },
       "difficulty": {
         "orange": 300,
@@ -7004,14 +7107,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16730": {
       "name": "Imperial Plate Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12715
       },
       "difficulty": {
         "orange": 300,
@@ -7040,14 +7144,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16728": {
       "name": "Helm of the Great Chief",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12716
       },
       "difficulty": {
         "orange": 300,
@@ -7088,14 +7193,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16729": {
       "name": "Lionheart Helm",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12717
       },
       "difficulty": {
         "orange": 300,
@@ -7136,14 +7242,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16731": {
       "name": "Runic Breastplate",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12718
       },
       "difficulty": {
         "orange": 300,
@@ -7176,14 +7283,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16732": {
       "name": "Runic Plate Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12719
       },
       "difficulty": {
         "orange": 300,
@@ -7216,14 +7324,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16741": {
       "name": "Stronghold Gauntlets",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12720
       },
       "difficulty": {
         "orange": 300,
@@ -7264,14 +7373,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16742": {
       "name": "Enchanted Thorium Helm",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12725
       },
       "difficulty": {
         "orange": 300,
@@ -7312,14 +7422,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16744": {
       "name": "Enchanted Thorium Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12726
       },
       "difficulty": {
         "orange": 300,
@@ -7360,14 +7471,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16745": {
       "name": "Enchanted Thorium Breastplate",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12727
       },
       "difficulty": {
         "orange": 300,
@@ -7412,14 +7524,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16746": {
       "name": "Invulnerable Mail",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12728
       },
       "difficulty": {
         "orange": 300,
@@ -7456,35 +7569,40 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16960": {
       "name": "Thorium Greatsword",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "16965": {
       "name": "Bleakwood Hew",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "16967": {
       "name": "Inlaid Thorium Hammer",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "16969": {
       "name": "Ornate Thorium Handaxe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12819,
+        "cost": 16000
       },
       "difficulty": {
         "orange": 275,
@@ -7521,14 +7639,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16970": {
       "name": "Dawn's Edge",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12821
       },
       "difficulty": {
         "orange": 275,
@@ -7573,14 +7692,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16971": {
       "name": "Huge Thorium Battleaxe",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 12823,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 280,
@@ -7613,14 +7734,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16973": {
       "name": "Enchanted Battlehammer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12824
       },
       "difficulty": {
         "orange": 280,
@@ -7661,14 +7783,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16978": {
       "name": "Blazing Rapier",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 12825
       },
       "difficulty": {
         "orange": 280,
@@ -7709,21 +7832,23 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16980": {
       "name": "Rune Edge",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "16983": {
       "name": "Serenity",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12827
       },
       "difficulty": {
         "orange": 285,
@@ -7768,14 +7893,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16984": {
       "name": "Volcanic Hammer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12828
       },
       "difficulty": {
         "orange": 290,
@@ -7812,14 +7938,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16985": {
       "name": "Corruption",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12830
       },
       "difficulty": {
         "orange": 290,
@@ -7868,28 +7995,31 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16986": {
       "name": "Blood Talon",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "16987": {
       "name": "Darkspear",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "16988": {
       "name": "Hammer of the Titans",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12833
       },
       "difficulty": {
         "orange": 300,
@@ -7930,14 +8060,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16990": {
       "name": "Arcanite Champion",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12834
       },
       "difficulty": {
         "orange": 300,
@@ -7982,14 +8113,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16991": {
       "name": "Annihilator",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12835
       },
       "difficulty": {
         "orange": 300,
@@ -8034,14 +8166,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16992": {
       "name": "Frostguard",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12836
       },
       "difficulty": {
         "orange": 300,
@@ -8086,14 +8219,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16993": {
       "name": "Masterwork Stormhammer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12837
       },
       "difficulty": {
         "orange": 300,
@@ -8134,14 +8268,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16994": {
       "name": "Arcanite Reaper",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12838
       },
       "difficulty": {
         "orange": 300,
@@ -8174,14 +8309,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16995": {
       "name": "Heartseeker",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12839
       },
       "difficulty": {
         "orange": 300,
@@ -8230,14 +8366,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "16661": {
       "name": "Storm Gauntlets",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 12703
       },
       "difficulty": {
         "orange": 295,
@@ -8274,7 +8411,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19666": {
@@ -8315,7 +8452,7 @@
           6
         ],
         "trainingCost": 100,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19667": {
@@ -8356,7 +8493,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19668": {
@@ -8397,7 +8534,7 @@
           6
         ],
         "trainingCost": 2500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19669": {
@@ -8438,7 +8575,7 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20201": {
@@ -8479,14 +8616,16 @@
           6
         ],
         "trainingCost": 10000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20874": {
       "name": "Dark Iron Bracers",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 17051,
+        "cost": 70000
       },
       "difficulty": {
         "orange": 295,
@@ -8519,14 +8658,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20872": {
       "name": "Fiery Chain Girdle",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 17049,
+        "cost": 90000
       },
       "difficulty": {
         "orange": 295,
@@ -8559,14 +8700,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20876": {
       "name": "Dark Iron Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 17052,
+        "cost": 180000
       },
       "difficulty": {
         "orange": 300,
@@ -8599,14 +8742,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20873": {
       "name": "Fiery Chain Shoulders",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 17053,
+        "cost": 200000
       },
       "difficulty": {
         "orange": 300,
@@ -8639,14 +8784,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20897": {
       "name": "Dark Iron Destroyer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 17060,
+        "cost": 220000
       },
       "difficulty": {
         "orange": 300,
@@ -8683,14 +8830,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "20890": {
       "name": "Dark Iron Reaver",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 17059,
+        "cost": 220000
       },
       "difficulty": {
         "orange": 300,
@@ -8727,14 +8876,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "21161": {
       "name": "Sulfuron Hammer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 18592
       },
       "difficulty": {
         "orange": 300,
@@ -8783,14 +8933,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "21913": {
       "name": "Edge of Winter",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 17706
       },
       "difficulty": {
         "orange": 190,
@@ -8831,14 +8982,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22757": {
       "name": "Elemental Sharpening Stone",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18264
       },
       "difficulty": {
         "orange": 300,
@@ -8867,14 +9019,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23628": {
       "name": "Heavy Timbermaw Belt",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -8907,14 +9060,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23629": {
       "name": "Heavy Timbermaw Boots",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -8947,14 +9101,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23632": {
       "name": "Girdle of the Dawn",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -8987,14 +9142,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23633": {
       "name": "Gloves of the Dawn",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9027,14 +9183,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23636": {
       "name": "Dark Iron Helm",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19206,
+        "cost": 60000
       },
       "difficulty": {
         "orange": 300,
@@ -9067,14 +9225,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23637": {
       "name": "Dark Iron Gauntlets",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19207,
+        "cost": 80000
       },
       "difficulty": {
         "orange": 300,
@@ -9115,14 +9275,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23638": {
       "name": "Black Amnesty",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19208,
+        "cost": 70000
       },
       "difficulty": {
         "orange": 300,
@@ -9163,14 +9325,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23639": {
       "name": "Blackfury",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19209,
+        "cost": 70000
       },
       "difficulty": {
         "orange": 300,
@@ -9207,14 +9371,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23650": {
       "name": "Ebon Hand",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19210,
+        "cost": 120000
       },
       "difficulty": {
         "orange": 300,
@@ -9255,14 +9421,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23652": {
       "name": "Blackguard",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19211,
+        "cost": 120000
       },
       "difficulty": {
         "orange": 300,
@@ -9303,14 +9471,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23653": {
       "name": "Nightfall",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19212,
+        "cost": 120000
       },
       "difficulty": {
         "orange": 300,
@@ -9351,14 +9521,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24136": {
       "name": "Bloodsoul Breastplate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9395,14 +9566,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24138": {
       "name": "Bloodsoul Gauntlets",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9439,14 +9611,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24137": {
       "name": "Bloodsoul Shoulders",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9483,14 +9656,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24139": {
       "name": "Darksoul Breastplate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9523,14 +9697,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24140": {
       "name": "Darksoul Leggings",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9563,14 +9738,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24141": {
       "name": "Darksoul Shoulders",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9603,14 +9779,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24399": {
       "name": "Dark Iron Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 20040,
+        "cost": 80000
       },
       "difficulty": {
         "orange": 300,
@@ -9647,14 +9825,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24914": {
       "name": "Darkrune Breastplate",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 20554
       },
       "difficulty": {
         "orange": 300,
@@ -9687,14 +9866,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24912": {
       "name": "Darkrune Gauntlets",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 20553
       },
       "difficulty": {
         "orange": 300,
@@ -9731,14 +9911,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24913": {
       "name": "Darkrune Helm",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 20555
       },
       "difficulty": {
         "orange": 300,
@@ -9775,14 +9956,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27585": {
       "name": "Heavy Obsidian Belt",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9815,14 +9997,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27588": {
       "name": "Light Obsidian Belt",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9851,14 +10034,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27586": {
       "name": "Jagged Obsidian Shield",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9895,14 +10079,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27589": {
       "name": "Black Grasp of the Destroyer",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 22220
       },
       "difficulty": {
         "orange": 300,
@@ -9939,14 +10124,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27590": {
       "name": "Obsidian Mail Tunic",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -9987,14 +10173,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27587": {
       "name": "Thick Obsidian Breastplate",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 22222
       },
       "difficulty": {
         "orange": 300,
@@ -10035,14 +10222,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27830": {
       "name": "Persuader",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 22390
       },
       "difficulty": {
         "orange": 300,
@@ -10087,14 +10275,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27829": {
       "name": "Titanic Leggings",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 22388
       },
       "difficulty": {
         "orange": 300,
@@ -10131,14 +10320,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "27832": {
       "name": "Sageblade",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 22389
       },
       "difficulty": {
         "orange": 300,
@@ -10175,14 +10365,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28244": {
       "name": "Icebane Bracers",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -10219,14 +10410,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28242": {
       "name": "Icebane Breastplate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -10263,14 +10455,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28243": {
       "name": "Icebane Gauntlets",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -10307,14 +10500,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28461": {
       "name": "Ironvine Breastplate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -10351,14 +10545,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28462": {
       "name": "Ironvine Gloves",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -10391,14 +10586,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28463": {
       "name": "Ironvine Belt",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -10427,14 +10623,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "427061": {
       "name": "Mantle of the Second War",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10475,7 +10672,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 1
@@ -10484,7 +10681,8 @@
       "name": "Shifting Silver Breastplate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10513,7 +10711,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 1
@@ -10522,7 +10720,8 @@
       "name": "Blackfathom Sharpening Stone",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10551,7 +10750,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 1
@@ -10560,7 +10759,8 @@
       "name": "Low-Background Truesilver Plates",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10589,7 +10789,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10598,7 +10798,8 @@
       "name": "Tempered Interference-Negating Helmet",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10635,7 +10836,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10644,7 +10845,8 @@
       "name": "Reflective Truesilver Braincage",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10681,7 +10883,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10690,7 +10892,8 @@
       "name": "Golden Scale Gauntlets",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10727,7 +10930,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10736,7 +10939,8 @@
       "name": "Golden Scale Boots",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10773,7 +10977,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10782,7 +10986,8 @@
       "name": "Golden Scale Cuirass",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10819,7 +11024,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10828,7 +11033,8 @@
       "name": "Golden Scale Coif",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10861,7 +11067,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10870,7 +11076,8 @@
       "name": "Golden Scale Shoulders",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10903,7 +11110,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10912,7 +11119,8 @@
       "name": "Golden Scale Leggings",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10945,7 +11153,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -10954,7 +11162,8 @@
       "name": "Moonsteel Broadsword",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -10995,7 +11204,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -11004,7 +11213,8 @@
       "name": "Baleful Pauldrons",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11033,7 +11243,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -11042,7 +11252,8 @@
       "name": "Fearmonger's Shoulderguards",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11071,7 +11282,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -11080,7 +11291,8 @@
       "name": "Shoulderplates of Dread",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11109,7 +11321,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -11118,7 +11330,8 @@
       "name": "Sulfuron Hammer",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11167,7 +11380,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11176,7 +11389,8 @@
       "name": "Tempered Dark Iron Plate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11205,7 +11419,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11214,7 +11428,8 @@
       "name": "Skyrider's Masterwork Stormhammer",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11247,7 +11462,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11256,7 +11471,8 @@
       "name": "Fiery Plate Gauntlets of the Hidden Technique",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11293,7 +11509,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11302,7 +11518,8 @@
       "name": "Refined Hammer of the Titans",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11331,7 +11548,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11340,7 +11557,8 @@
       "name": "Desecration",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11389,7 +11607,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11398,7 +11616,8 @@
       "name": "Deadly Heartseeker",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11447,7 +11666,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11456,7 +11675,8 @@
       "name": "Tranquility",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11501,7 +11721,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11510,7 +11730,8 @@
       "name": "Refined Arcanite Reaper",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11539,7 +11760,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11548,7 +11769,8 @@
       "name": "Refined Arcanite Champion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11577,7 +11799,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11586,7 +11808,8 @@
       "name": "Hardened Frostguard",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11615,7 +11838,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11624,7 +11847,8 @@
       "name": "Finely-Enchanted Battlehammer",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11665,7 +11889,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11674,7 +11898,8 @@
       "name": "Invincible Mail",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11711,7 +11936,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11720,7 +11945,8 @@
       "name": "Stronger-hold Gauntlets",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11761,7 +11987,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11770,7 +11996,8 @@
       "name": "Tempest Gauntlets",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11807,7 +12034,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11816,7 +12043,8 @@
       "name": "Warcrest of the Great Chief",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11857,7 +12085,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11866,7 +12094,8 @@
       "name": "Sageblade of the Archmagus",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11903,7 +12132,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -11912,7 +12141,8 @@
       "name": "Ironvine Belt",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11945,7 +12175,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11954,7 +12184,8 @@
       "name": "Ironvine Gloves",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -11987,7 +12218,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -11996,7 +12227,8 @@
       "name": "Ironvine Breastplate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12033,7 +12265,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12042,7 +12274,8 @@
       "name": "Light Obsidian Belt",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12075,7 +12308,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12084,7 +12317,8 @@
       "name": "Heavy Obsidian Belt",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12121,7 +12355,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12130,7 +12364,8 @@
       "name": "Razorspike Headcage",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12171,7 +12406,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12180,7 +12415,8 @@
       "name": "Razorspike Shoulderplate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12221,7 +12457,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12230,7 +12466,8 @@
       "name": "Razorspike Battleplate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12271,7 +12508,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12280,7 +12517,8 @@
       "name": "Obsidian Reaver",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12325,7 +12563,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12334,7 +12572,8 @@
       "name": "Obsidian Grinding Stone",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12359,7 +12598,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12368,7 +12607,8 @@
       "name": "Obsidian Champion",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12413,7 +12653,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12422,7 +12662,8 @@
       "name": "Obsidian Destroyer",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12467,7 +12708,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12476,7 +12717,8 @@
       "name": "Obsidian Stormhammer",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12521,7 +12763,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12530,7 +12772,8 @@
       "name": "Obsidian Sageblade",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12575,7 +12818,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12584,7 +12827,8 @@
       "name": "Obsidian Defender",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12629,7 +12873,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12638,7 +12882,8 @@
       "name": "Obsidian Heartseeker",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12683,7 +12928,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12692,7 +12937,8 @@
       "name": "Black Grasp of the Destroyer",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12729,7 +12975,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12738,7 +12984,8 @@
       "name": "Jagged Obsidian Shield",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12775,7 +13022,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12784,7 +13031,8 @@
       "name": "Obsidian Mail Tunic",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12825,7 +13073,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12834,7 +13082,8 @@
       "name": "Dreamscale Visor",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12875,7 +13124,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12884,7 +13133,8 @@
       "name": "Thick Obsidian Breastplate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12925,7 +13175,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -12934,7 +13184,8 @@
       "name": "Icebane Breastplate",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -12971,7 +13222,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -12980,7 +13231,8 @@
       "name": "Icebane Gauntlets",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -13017,7 +13269,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -13026,7 +13278,8 @@
       "name": "Icebane Bracers",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -13063,7 +13316,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -13071,8 +13324,8 @@
     "1224631": {
       "name": "Scarlet Soldier's Helmet",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238322
       },
       "difficulty": {
@@ -13109,7 +13362,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -13117,8 +13370,8 @@
     "1224632": {
       "name": "Scarlet Soldier's Spaulders",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238323
       },
       "difficulty": {
@@ -13151,7 +13404,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -13159,8 +13412,8 @@
     "1224633": {
       "name": "Scarlet Soldier's Chestplate",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238324
       },
       "difficulty": {
@@ -13197,7 +13450,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -13205,8 +13458,8 @@
     "1224635": {
       "name": "Scarlet Soldier's Protectors",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238325
       },
       "difficulty": {
@@ -13235,7 +13488,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -13243,8 +13496,8 @@
     "1224636": {
       "name": "Scarlet Soldier's Grips",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238326
       },
       "difficulty": {
@@ -13277,7 +13530,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -13285,8 +13538,8 @@
     "1224637": {
       "name": "Scarlet Soldier's Waistguard",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238327
       },
       "difficulty": {
@@ -13319,7 +13572,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -13327,8 +13580,8 @@
     "1224638": {
       "name": "Scarlet Soldier's Legplates",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238328
       },
       "difficulty": {
@@ -13365,7 +13618,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -13373,8 +13626,8 @@
     "1224639": {
       "name": "Scarlet Soldier's Stompers",
       "source": {
-        "type": "QUEST",
-        "certainty": "DB2",
+        "type": "DROP",
+        "certainty": "WOWHEAD",
         "itemId": 238329
       },
       "difficulty": {
@@ -13407,7 +13660,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8

@@ -1,13 +1,14 @@
 {
   "profession": "engineering",
   "version": "1.15.8.67156",
-  "generated": "2026-06-22",
+  "generated": "2026-06-26",
   "recipes": {
     "3918": {
       "name": "Rough Blasting Powder",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -32,14 +33,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3919": {
       "name": "Rough Dynamite",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 1,
@@ -68,14 +70,15 @@
           2,
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3920": {
       "name": "Crafted Light Shot",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -104,7 +107,7 @@
           200,
           200
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3922": {
@@ -141,7 +144,7 @@
           6
         ],
         "trainingCost": 115,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3923": {
@@ -190,7 +193,7 @@
           6
         ],
         "trainingCost": 130,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3924": {
@@ -231,7 +234,7 @@
           6
         ],
         "trainingCost": 150,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3925": {
@@ -276,7 +279,7 @@
           6
         ],
         "trainingCost": 150,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3977": {
@@ -321,7 +324,7 @@
           6
         ],
         "trainingCost": 200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3973": {
@@ -358,7 +361,7 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3926": {
@@ -403,14 +406,15 @@
           6
         ],
         "trainingCost": 225,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3928": {
       "name": "Mechanical Squirrel",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4408
       },
       "difficulty": {
         "orange": 75,
@@ -447,7 +451,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3929": {
@@ -484,7 +488,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3930": {
@@ -525,7 +529,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3931": {
@@ -566,7 +570,7 @@
           6
         ],
         "trainingCost": 250,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3932": {
@@ -615,14 +619,15 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3933": {
       "name": "Small Seaforium Charge",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4409
       },
       "difficulty": {
         "orange": 100,
@@ -659,7 +664,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3934": {
@@ -700,7 +705,7 @@
           6
         ],
         "trainingCost": 400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3936": {
@@ -749,7 +754,7 @@
           6
         ],
         "trainingCost": 420,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3937": {
@@ -794,7 +799,7 @@
           6
         ],
         "trainingCost": 450,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3938": {
@@ -835,7 +840,7 @@
           6
         ],
         "trainingCost": 450,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3978": {
@@ -876,14 +881,16 @@
           6
         ],
         "trainingCost": 475,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3939": {
       "name": "Lovingly Crafted Boomstick",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13309,
+        "cost": 1000
       },
       "difficulty": {
         "orange": 120,
@@ -920,14 +927,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3940": {
       "name": "Shadow Goggles",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4410
       },
       "difficulty": {
         "orange": 120,
@@ -956,7 +964,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3941": {
@@ -1005,7 +1013,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3942": {
@@ -1046,14 +1054,15 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3944": {
       "name": "Flame Deflector",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4411
       },
       "difficulty": {
         "orange": 125,
@@ -1082,7 +1091,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3945": {
@@ -1119,7 +1128,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3946": {
@@ -1160,7 +1169,7 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3947": {
@@ -1201,7 +1210,7 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3949": {
@@ -1250,7 +1259,7 @@
           6
         ],
         "trainingCost": 550,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3950": {
@@ -1295,14 +1304,16 @@
           6
         ],
         "trainingCost": 600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3952": {
       "name": "Minor Recombobulator",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 14639,
+        "cost": 1500
       },
       "difficulty": {
         "orange": 140,
@@ -1339,7 +1350,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3953": {
@@ -1384,14 +1395,15 @@
           6
         ],
         "trainingCost": 600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3954": {
       "name": "Moonsight Rifle",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4412
       },
       "difficulty": {
         "orange": 145,
@@ -1428,7 +1440,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3955": {
@@ -1477,7 +1489,7 @@
           6
         ],
         "trainingCost": 750,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3956": {
@@ -1522,14 +1534,16 @@
           6
         ],
         "trainingCost": 750,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3957": {
       "name": "Ice Deflector",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13308,
+        "cost": 1800
       },
       "difficulty": {
         "orange": 155,
@@ -1558,7 +1572,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3958": {
@@ -1595,14 +1609,15 @@
           6
         ],
         "trainingCost": 800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3959": {
       "name": "Discombobulator Ray",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4413
       },
       "difficulty": {
         "orange": 160,
@@ -1639,14 +1654,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3960": {
       "name": "Portable Bronze Mortar",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4414
       },
       "difficulty": {
         "orange": 165,
@@ -1683,7 +1699,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3961": {
@@ -1724,7 +1740,7 @@
           6
         ],
         "trainingCost": 900,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3962": {
@@ -1769,7 +1785,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3963": {
@@ -1818,14 +1834,16 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3979": {
       "name": "Accurate Scope",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13310,
+        "cost": 2000
       },
       "difficulty": {
         "orange": 180,
@@ -1858,7 +1876,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3965": {
@@ -1907,14 +1925,15 @@
           6
         ],
         "trainingCost": 1200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3966": {
       "name": "Craftsman's Monocle",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4415
       },
       "difficulty": {
         "orange": 185,
@@ -1943,7 +1962,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3967": {
@@ -1988,14 +2007,15 @@
           6
         ],
         "trainingCost": 1400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3968": {
       "name": "Goblin Land Mine",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4416
       },
       "difficulty": {
         "orange": 195,
@@ -2028,14 +2048,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3969": {
       "name": "Mechanical Dragonling",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 13311,
+        "cost": 10000
       },
       "difficulty": {
         "orange": 200,
@@ -2076,14 +2098,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3971": {
       "name": "Gnomish Cloaking Device",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7742
       },
       "difficulty": {
         "orange": 200,
@@ -2124,14 +2147,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "3972": {
       "name": "Large Seaforium Charge",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 4417
       },
       "difficulty": {
         "orange": 200,
@@ -2164,7 +2188,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "6458": {
@@ -2213,7 +2237,7 @@
           6
         ],
         "trainingCost": 400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "7430": {
@@ -2250,14 +2274,15 @@
           6
         ],
         "trainingCost": 150,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8243": {
       "name": "Flash Bomb",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6672
       },
       "difficulty": {
         "orange": 185,
@@ -2290,7 +2315,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8334": {
@@ -2335,14 +2360,15 @@
           6
         ],
         "trainingCost": 300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8339": {
       "name": "EZ-Thro Dynamite",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 6716
       },
       "difficulty": {
         "orange": 100,
@@ -2371,7 +2397,7 @@
           1,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "8895": {
@@ -2424,14 +2450,15 @@
           6
         ],
         "trainingCost": 2200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9269": {
       "name": "Gnomish Universal Remote",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7560
       },
       "difficulty": {
         "orange": 125,
@@ -2472,7 +2499,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9271": {
@@ -2517,14 +2544,15 @@
           6
         ],
         "trainingCost": 500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "9273": {
       "name": "Goblin Jumper Cables",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 7561
       },
       "difficulty": {
         "orange": 165,
@@ -2569,7 +2597,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12584": {
@@ -2606,7 +2634,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12585": {
@@ -2643,7 +2671,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12586": {
@@ -2684,14 +2712,15 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12587": {
       "name": "Bright-Eye Goggles",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10601
       },
       "difficulty": {
         "orange": 175,
@@ -2720,7 +2749,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12590": {
@@ -2757,7 +2786,7 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12589": {
@@ -2794,7 +2823,7 @@
           6
         ],
         "trainingCost": 1300,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12591": {
@@ -2839,7 +2868,7 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12594": {
@@ -2888,7 +2917,7 @@
           6
         ],
         "trainingCost": 1600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12595": {
@@ -2941,7 +2970,7 @@
           6
         ],
         "trainingCost": 1600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12596": {
@@ -2982,14 +3011,16 @@
           6
         ],
         "trainingCost": 1700,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12597": {
       "name": "Deadly Scope",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10602,
+        "cost": 3000
       },
       "difficulty": {
         "orange": 210,
@@ -3022,7 +3053,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12599": {
@@ -3059,7 +3090,7 @@
           6
         ],
         "trainingCost": 1800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12603": {
@@ -3104,14 +3135,15 @@
           6
         ],
         "trainingCost": 1800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12607": {
       "name": "Catseye Ultra Goggles",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10603
       },
       "difficulty": {
         "orange": 220,
@@ -3144,14 +3176,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12614": {
       "name": "Mithril Heavy-bore Rifle",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10604
       },
       "difficulty": {
         "orange": 220,
@@ -3192,14 +3225,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12615": {
       "name": "Spellpower Goggles Xtreme",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 225,
@@ -3228,14 +3262,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12616": {
       "name": "Parachute Cloak",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10606
       },
       "difficulty": {
         "orange": 225,
@@ -3272,14 +3307,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12617": {
       "name": "Deepdive Helmet",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10607,
+        "cost": 3600
       },
       "difficulty": {
         "orange": 230,
@@ -3320,7 +3357,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12618": {
@@ -3361,7 +3398,7 @@
           6
         ],
         "trainingCost": 2200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12619": {
@@ -3406,14 +3443,15 @@
           6
         ],
         "trainingCost": 2400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12620": {
       "name": "Sniper Scope",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 10608
       },
       "difficulty": {
         "orange": 240,
@@ -3446,7 +3484,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12621": {
@@ -3487,7 +3525,7 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12622": {
@@ -3540,14 +3578,16 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12624": {
       "name": "Mithril Mechanical Dragonling",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 10609,
+        "cost": 4000
       },
       "difficulty": {
         "orange": 250,
@@ -3592,7 +3632,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12715": {
@@ -3633,14 +3673,15 @@
           6
         ],
         "trainingCost": 1000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12716": {
       "name": "Goblin Mortar",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -3681,7 +3722,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12717": {
@@ -3726,7 +3767,7 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12718": {
@@ -3771,7 +3812,7 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12760": {
@@ -3816,28 +3857,31 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12719": {
       "name": "Explosive Arrow",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "12720": {
       "name": "Goblin \"Boom\" Box",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "12722": {
       "name": "Goblin Radio",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "12755": {
@@ -3890,7 +3934,7 @@
           6
         ],
         "trainingCost": 2400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12754": {
@@ -3939,7 +3983,7 @@
           6
         ],
         "trainingCost": 2600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12759": {
@@ -3992,7 +4036,7 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12758": {
@@ -4041,7 +4085,7 @@
           6
         ],
         "trainingCost": 3000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12895": {
@@ -4082,7 +4126,7 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12897": {
@@ -4135,7 +4179,7 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12899": {
@@ -4188,14 +4232,15 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12900": {
       "name": "Mobile Alarm",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "12902": {
@@ -4248,7 +4293,7 @@
           6
         ],
         "trainingCost": 1800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12903": {
@@ -4301,14 +4346,15 @@
           6
         ],
         "trainingCost": 2000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12904": {
       "name": "Gnomish Ham Radio",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       }
     },
     "12905": {
@@ -4361,7 +4407,7 @@
           6
         ],
         "trainingCost": 2200,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12906": {
@@ -4418,7 +4464,7 @@
           6
         ],
         "trainingCost": 2400,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12907": {
@@ -4471,7 +4517,7 @@
           6
         ],
         "trainingCost": 2600,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "12908": {
@@ -4524,7 +4570,7 @@
           6
         ],
         "trainingCost": 2800,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "13240": {
@@ -4561,7 +4607,7 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15255": {
@@ -4606,14 +4652,15 @@
           6
         ],
         "trainingCost": 1500,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15633": {
       "name": "Lil' Smoky",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11827
       },
       "difficulty": {
         "orange": 205,
@@ -4654,14 +4701,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "15628": {
       "name": "Pet Bombling",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 11828
       },
       "difficulty": {
         "orange": 205,
@@ -4698,7 +4746,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19567": {
@@ -4747,7 +4795,7 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19788": {
@@ -4784,14 +4832,15 @@
           6
         ],
         "trainingCost": 4000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19790": {
       "name": "Thorium Grenade",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 260,
@@ -4828,14 +4877,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19792": {
       "name": "Thorium Rifle",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 260,
@@ -4876,14 +4926,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19791": {
       "name": "Thorium Widget",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 260,
@@ -4912,14 +4963,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19793": {
       "name": "Lifelike Mechanical Toad",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16044
       },
       "difficulty": {
         "orange": 265,
@@ -4956,14 +5008,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19794": {
       "name": "Spellpower Goggles Xtreme Plus",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 270,
@@ -5000,14 +5053,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19796": {
       "name": "Dark Iron Rifle",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16048
       },
       "difficulty": {
         "orange": 275,
@@ -5052,14 +5106,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19814": {
       "name": "Masterwork Target Dummy",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 16046,
+        "cost": 16000
       },
       "difficulty": {
         "orange": 275,
@@ -5104,14 +5160,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19795": {
       "name": "Thorium Tube",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 275,
@@ -5136,14 +5193,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19815": {
       "name": "Delicate Arcanite Converter",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 16050,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 285,
@@ -5172,14 +5231,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19799": {
       "name": "Dark Iron Bomb",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16049
       },
       "difficulty": {
         "orange": 285,
@@ -5216,14 +5276,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19800": {
       "name": "Thorium Shells",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 285,
@@ -5252,14 +5313,15 @@
           200,
           200
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19819": {
       "name": "Voice Amplification Modulator",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16052
       },
       "difficulty": {
         "orange": 290,
@@ -5296,14 +5358,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19831": {
       "name": "Arcane Bomb",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16055
       },
       "difficulty": {
         "orange": 300,
@@ -5336,14 +5399,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19830": {
       "name": "Arcanite Dragonling",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16054
       },
       "difficulty": {
         "orange": 300,
@@ -5388,14 +5452,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19825": {
       "name": "Master Engineer's Goggles",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 290,
@@ -5428,14 +5493,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "19833": {
       "name": "Flawless Arcanite Rifle",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 16056
       },
       "difficulty": {
         "orange": 300,
@@ -5480,14 +5546,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "21940": {
       "name": "SnowMaster 9000",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 17720
       },
       "difficulty": {
         "orange": 190,
@@ -5524,14 +5591,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22704": {
       "name": "Field Repair Bot 74A",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -5572,14 +5640,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22793": {
       "name": "Biznicks 247x128 Accurascope",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18290
       },
       "difficulty": {
         "orange": 300,
@@ -5620,14 +5689,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22795": {
       "name": "Core Marksman Rifle",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18292
       },
       "difficulty": {
         "orange": 300,
@@ -5668,14 +5738,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "22797": {
       "name": "Force Reactive Disk",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18291
       },
       "difficulty": {
         "orange": 300,
@@ -5716,14 +5787,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23066": {
       "name": "Red Firework",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 18647,
+        "cost": 1800
       },
       "difficulty": {
         "orange": 150,
@@ -5752,14 +5825,16 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23068": {
       "name": "Green Firework",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 18648,
+        "cost": 1800
       },
       "difficulty": {
         "orange": 150,
@@ -5788,14 +5863,16 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23067": {
       "name": "Blue Firework",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 18649,
+        "cost": 1800
       },
       "difficulty": {
         "orange": 150,
@@ -5824,14 +5901,16 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23069": {
       "name": "EZ-Thro Dynamite II",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 18650,
+        "cost": 5000
       },
       "difficulty": {
         "orange": 200,
@@ -5860,7 +5939,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23070": {
@@ -5901,14 +5980,15 @@
           6
         ],
         "trainingCost": 5000,
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23071": {
       "name": "Truesilver Transformer",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 260,
@@ -5941,14 +6021,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23077": {
       "name": "Gyrofreeze Ice Reflector",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 18652,
+        "cost": 12000
       },
       "difficulty": {
         "orange": 260,
@@ -5993,14 +6075,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23078": {
       "name": "Goblin Jumper Cables XL",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18653
       },
       "difficulty": {
         "orange": 265,
@@ -6041,14 +6124,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23079": {
       "name": "Major Recombobulator",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18655
       },
       "difficulty": {
         "orange": 275,
@@ -6081,14 +6165,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23080": {
       "name": "Powerful Seaforium Charge",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 18656,
+        "cost": 16000
       },
       "difficulty": {
         "orange": 275,
@@ -6125,14 +6211,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23081": {
       "name": "Hyper-Radiant Flame Reflector",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18657
       },
       "difficulty": {
         "orange": 290,
@@ -6173,14 +6260,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23082": {
       "name": "Ultra-Flash Shadow Reflector",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18658
       },
       "difficulty": {
         "orange": 300,
@@ -6225,14 +6313,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23096": {
       "name": "Alarm-O-Bot",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18654
       },
       "difficulty": {
         "orange": 265,
@@ -6273,14 +6362,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23129": {
       "name": "World Enlarger",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 18661
       },
       "difficulty": {
         "orange": 260,
@@ -6321,14 +6411,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23489": {
       "name": "Ultrasafe Transporter - Gadgetzan",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6373,14 +6464,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23486": {
       "name": "Dimensional Ripper - Everlook",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -6421,14 +6513,16 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "23507": {
       "name": "Snake Burst Firework",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "VENDOR",
+        "certainty": "CROSS",
+        "itemId": 19027,
+        "cost": 5000
       },
       "difficulty": {
         "orange": 250,
@@ -6461,14 +6555,15 @@
           4,
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24356": {
       "name": "Bloodvine Goggles",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -6509,14 +6604,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "24357": {
       "name": "Bloodvine Lens",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 300,
@@ -6557,14 +6653,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26011": {
       "name": "Tranquil Mechanical Yeti",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 250,
@@ -6605,14 +6702,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26416": {
       "name": "Small Blue Rocket",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21724
       },
       "difficulty": {
         "orange": 125,
@@ -6641,14 +6739,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26417": {
       "name": "Small Green Rocket",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21725
       },
       "difficulty": {
         "orange": 125,
@@ -6677,14 +6776,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26418": {
       "name": "Small Red Rocket",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21726
       },
       "difficulty": {
         "orange": 125,
@@ -6713,14 +6813,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26420": {
       "name": "Large Blue Rocket",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21727
       },
       "difficulty": {
         "orange": 175,
@@ -6749,14 +6850,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26421": {
       "name": "Large Green Rocket",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21728
       },
       "difficulty": {
         "orange": 175,
@@ -6785,14 +6887,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26422": {
       "name": "Large Red Rocket",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21729
       },
       "difficulty": {
         "orange": 175,
@@ -6821,14 +6924,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26423": {
       "name": "Blue Rocket Cluster",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21730
       },
       "difficulty": {
         "orange": 225,
@@ -6857,14 +6961,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26424": {
       "name": "Green Rocket Cluster",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21731
       },
       "difficulty": {
         "orange": 225,
@@ -6893,14 +6998,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26425": {
       "name": "Red Rocket Cluster",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21732
       },
       "difficulty": {
         "orange": 225,
@@ -6929,14 +7035,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26426": {
       "name": "Large Blue Rocket Cluster",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21733
       },
       "difficulty": {
         "orange": 275,
@@ -6965,14 +7072,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26427": {
       "name": "Large Green Rocket Cluster",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21734
       },
       "difficulty": {
         "orange": 275,
@@ -7001,14 +7109,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26428": {
       "name": "Large Red Rocket Cluster",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "DROP",
+        "certainty": "CROSS",
+        "itemId": 21735
       },
       "difficulty": {
         "orange": 275,
@@ -7037,14 +7146,15 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26442": {
       "name": "Firework Launcher",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 21738
       },
       "difficulty": {
         "orange": 225,
@@ -7081,14 +7191,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "26443": {
       "name": "Firework Cluster Launcher",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 21737
       },
       "difficulty": {
         "orange": 275,
@@ -7125,14 +7236,15 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "28327": {
       "name": "Steam Tonk Controller",
       "source": {
-        "type": "TRAINER",
-        "certainty": "DB2"
+        "type": "QUEST",
+        "certainty": "CROSS",
+        "itemId": 22729
       },
       "difficulty": {
         "orange": 275,
@@ -7165,7 +7277,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       }
     },
     "424641": {
@@ -7209,7 +7321,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 1
@@ -7218,7 +7330,8 @@
       "name": "Soul Vessel",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7251,7 +7364,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -7260,7 +7373,8 @@
       "name": "Polished Truesilver Gears",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7289,7 +7403,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -7298,7 +7412,8 @@
       "name": "Ez-Thro Radiation Bomb",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7331,7 +7446,7 @@
           2,
           5
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -7340,7 +7455,8 @@
       "name": "Whirling Truesilver Gearwall",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7385,7 +7501,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -7394,7 +7510,8 @@
       "name": "High-Yield Radiation Bomb",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7427,7 +7544,7 @@
           2,
           5
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -7436,7 +7553,8 @@
       "name": "Hyperconductive Goldwap",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7473,7 +7591,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 2
@@ -7482,7 +7600,8 @@
       "name": "Void-Powered Invoker's Vambraces",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7523,7 +7642,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -7532,7 +7651,8 @@
       "name": "Void-Powered Protector's Vambraces",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7573,7 +7693,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -7582,7 +7702,8 @@
       "name": "Void-Powered Slayer's Vambraces",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7623,7 +7744,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 3
@@ -7632,7 +7753,8 @@
       "name": "Fiery Core Sharpshooter Rifle",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7673,7 +7795,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 4
@@ -7682,7 +7804,8 @@
       "name": "Arcane Megabomb",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7715,7 +7838,7 @@
           5,
           5
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -7724,7 +7847,8 @@
       "name": "The Fumigator",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7757,7 +7881,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -7766,7 +7890,8 @@
       "name": "Obsidian Bomb",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7803,7 +7928,7 @@
           3,
           3
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -7812,7 +7937,8 @@
       "name": "G00 DV-1B3 Generator",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7857,7 +7983,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -7866,7 +7992,8 @@
       "name": "Tuned Force Reactive Disk",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7903,7 +8030,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -7912,7 +8039,8 @@
       "name": "Obsidian Blasting Powder",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7937,7 +8065,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -7946,7 +8074,8 @@
       "name": "Obsidian Shotgun",
       "source": {
         "type": "TRAINER",
-        "certainty": "DB2"
+        "certainty": "WOWHEAD",
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7991,7 +8120,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -8037,7 +8166,7 @@
         "source": [
           2
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 6
@@ -8076,7 +8205,7 @@
           1,
           1
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 7
@@ -8118,7 +8247,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -8164,7 +8293,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -8210,7 +8339,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -8256,7 +8385,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -8294,7 +8423,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -8332,7 +8461,7 @@
             1
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -8370,7 +8499,7 @@
             2
           ]
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -8428,7 +8557,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
@@ -8474,7 +8603,7 @@
         "source": [
           4
         ],
-        "fetchedAt": "2026-06-22"
+        "fetchedAt": "2026-06-26"
       },
       "seasonId": 2,
       "phaseId": 8
