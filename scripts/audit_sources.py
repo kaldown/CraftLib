@@ -21,7 +21,7 @@ EXPECT = {"DROP": 2, "VENDOR": 5, "QUEST": 4, "TRAINER": 6, "STARTER": 10, "DISC
 # Cross-bucket trust tiers (must mirror reconcile_cross_bucket's widening exactly;
 # deliberately duplicated - there is no shared module to import from).
 INHERIT_CERTAINTY = {"WOWHEAD", "MANUAL", "DB2"}
-INHERIT_TYPES = {"DROP", "VENDOR", "QUEST", "REPUTATION"}
+INHERIT_TYPES = {"DROP", "VENDOR", "QUEST", "REPUTATION", "STARTER", "DISCOVERY"}
 
 
 def _created(recipe):

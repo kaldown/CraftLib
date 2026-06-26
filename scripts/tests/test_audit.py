@@ -88,6 +88,18 @@ def test_cross_bucket_manual_vendor_is_hard(tmp_path):
     assert any(f[2] == "16980" and f[4] == "cross-bucket" for f in hard)
 
 
+def test_cross_bucket_structural_starter_is_hard(tmp_path):
+    """SoD TRAINER whose TBC twin is a STRUCTURAL non-trainer STARTER (created agree, not
+    allowlisted) must be detectable as a HARD cross-bucket finding -- mirrors reconcile's widening."""
+    _tree(tmp_path, "TBC", "Cooking", {"8604": {"name": "Herb Baked Egg",
+        "source": {"type": "STARTER", "certainty": "WOWHEAD"},
+        "wowhead": {"creates": [6888, 1, 1]}}})
+    _tree(tmp_path, "SoD", "Cooking", {"8604": {"name": "Herb Baked Egg",
+        "source": {"type": "TRAINER", "certainty": "DB2"}, "wowhead": {"creates": [6888, 1, 1]}}})
+    hard, warn = au.audit(tmp_path)
+    assert any(f[2] == "8604" and f[4] == "cross-bucket" for f in hard)
+
+
 def test_cross_bucket_uncorroborated_marker_skipped(tmp_path):
     _tree(tmp_path, "TBC", "Blacksmithing", {"1": {"name": "A",
         "source": {"type": "VENDOR", "certainty": "MANUAL", "itemId": 9, "cost": 1}, "wowhead": {"creates": [2, 1, 1]}}})
