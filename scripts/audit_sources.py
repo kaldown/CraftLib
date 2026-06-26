@@ -18,7 +18,10 @@ import sys
 from pathlib import Path
 
 EXPECT = {"DROP": 2, "VENDOR": 5, "QUEST": 4, "TRAINER": 6, "STARTER": 10, "DISCOVERY": 7}
-NON_TRAINER = {"DROP", "VENDOR", "QUEST", "STARTER", "DISCOVERY"}
+# Cross-bucket trust tiers (must mirror reconcile_cross_bucket's widening exactly;
+# deliberately duplicated - there is no shared module to import from).
+INHERIT_CERTAINTY = {"WOWHEAD", "MANUAL", "DB2"}
+INHERIT_TYPES = {"DROP", "VENDOR", "QUEST", "REPUTATION"}
 
 
 def _created(recipe):
@@ -83,7 +86,7 @@ def audit(sources_dir: Path):
     for prof, data in buckets.get("TBC", {}).items():
         for sid, recipe in data.get("recipes", {}).items():
             s = recipe.get("source", {})
-            if s.get("certainty") == "WOWHEAD" and s.get("type") in NON_TRAINER:
+            if s.get("certainty") in INHERIT_CERTAINTY and s.get("type") in INHERIT_TYPES:
                 default_index[sid] = (s.get("type"), _created(recipe))
     for prof, data in buckets.get("SoD", {}).items():
         for sid, recipe in data.get("recipes", {}).items():
@@ -92,6 +95,8 @@ def audit(sources_dir: Path):
                 continue
             if sid in keep_trainer:
                 continue
+            if s.get("reviewReason") == "cross-bucket-uncorroborated":
+                continue   # owned by assert_no_unaligned (avoid double-gating)
             d = default_index.get(sid)
             if not d:
                 continue

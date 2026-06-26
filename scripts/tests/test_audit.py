@@ -76,3 +76,32 @@ def test_needs_review_is_warning_not_hard(tmp_path):
     hard, warn = au.audit(tmp_path)
     assert hard == []
     assert any(f[2] == "5" for f in warn)
+
+
+def test_cross_bucket_manual_vendor_is_hard(tmp_path):
+    _tree(tmp_path, "TBC", "Blacksmithing", {"16980": {"name": "Rune Edge",
+        "source": {"type": "VENDOR", "certainty": "MANUAL", "itemId": 12826, "cost": 20000},
+        "wowhead": {"creates": [12779, 1, 1]}}})
+    _tree(tmp_path, "SoD", "Blacksmithing", {"16980": {"name": "Rune Edge",
+        "source": {"type": "TRAINER", "certainty": "DB2"}, "wowhead": {"creates": [12779, 1, 1]}}})
+    hard, warn = au.audit(tmp_path)
+    assert any(f[2] == "16980" and f[4] == "cross-bucket" for f in hard)
+
+
+def test_cross_bucket_uncorroborated_marker_skipped(tmp_path):
+    _tree(tmp_path, "TBC", "Blacksmithing", {"1": {"name": "A",
+        "source": {"type": "VENDOR", "certainty": "MANUAL", "itemId": 9, "cost": 1}, "wowhead": {"creates": [2, 1, 1]}}})
+    _tree(tmp_path, "SoD", "Blacksmithing", {"1": {"name": "A", "source": {
+        "type": "TRAINER", "certainty": "DB2", "needsReview": True,
+        "reviewReason": "cross-bucket-uncorroborated"}, "wowhead": {"creates": [2, 1, 1]}}})
+    hard, warn = au.audit(tmp_path)
+    assert not any(f[2] == "1" and f[4] == "cross-bucket" for f in hard)
+
+
+def test_cross_bucket_bare_needsreview_still_hard(tmp_path):
+    _tree(tmp_path, "TBC", "Blacksmithing", {"3": {"name": "B",
+        "source": {"type": "DROP", "certainty": "MANUAL", "itemId": 9}, "wowhead": {"creates": [2, 1, 1]}}})
+    _tree(tmp_path, "SoD", "Blacksmithing", {"3": {"name": "B", "source": {
+        "type": "TRAINER", "certainty": "WOWHEAD", "needsReview": True}, "wowhead": {"creates": [2, 1, 1]}}})
+    hard, warn = au.audit(tmp_path)
+    assert any(f[2] == "3" and f[4] == "cross-bucket" for f in hard)
