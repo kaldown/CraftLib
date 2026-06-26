@@ -277,73 +277,61 @@ def fetch_wowhead_spell(spell_id: int, expansion: str = "tbc") -> dict | None:
 def _resolve_source(recipe: dict, wh: dict) -> dict | None:
     """Resolve source type from Wowhead spell page data.
 
-    Policy: if trainable, always classify as TRAINER (cheaper, always available).
-    Does NOT reclassify REPUTATION sources (DB2 faction data is authoritative).
+    Policy: if trainable, always classify as TRAINER. REPUTATION stays
+    authoritative (DB2 faction data). Beyond resolving PENDING sources, an
+    over-confident DB2 QUEST guess is demoted when Wowhead's acquisition array
+    contradicts it (CRAFTED=1 is ignored as evidence). Over-confident DB2 TRAINER
+    guesses are NOT demoted here — they lack a recipe itemId; cross-bucket
+    reconciliation and verify_trainer_sources.py handle those.
 
-    Returns new source dict with WOWHEAD certainty, or None if no change needed.
+    Returns a new source dict with WOWHEAD certainty, or None if no change.
     """
     existing_source = recipe.get("source", {})
     existing_type = existing_source.get("type", "")
+    existing_cert = existing_source.get("certainty", "")
 
-    # Don't reclassify REPUTATION sources — DB2 faction data is authoritative
+    # Don't reclassify REPUTATION — DB2 faction data is authoritative.
     if existing_type == "REPUTATION":
         return None
 
     source_types = wh.get("source", [])
-
-    # Policy: if trainable, always classify as TRAINER
     has_training_cost = "trainingCost" in wh
     has_trainer_source = 6 in source_types
 
+    # Policy: if trainable, always classify as TRAINER.
     if has_training_cost or has_trainer_source:
-        new_source = {
-            "type": "TRAINER",
-            "certainty": "WOWHEAD",
-        }
+        new_source = {"type": "TRAINER", "certainty": "WOWHEAD"}
         if "trainingCost" in wh:
             new_source["trainingCost"] = wh["trainingCost"]
         return new_source
 
-    # For PENDING sources, resolve from Wowhead source array
-    if existing_source.get("certainty") == "PENDING":
-        if 5 in source_types:  # VENDOR
-            new_source = {
-                "type": "VENDOR",
-                "certainty": "WOWHEAD",
-                "itemId": existing_source.get("itemId"),
-                "cost": existing_source["cost"],  # KeyError = upstream bug
-            }
-            return new_source
-        if 2 in source_types:  # DROP
-            return {
-                "type": "DROP",
-                "certainty": "WOWHEAD",
-                "itemId": existing_source.get("itemId"),
-            }
-        if 4 in source_types:  # QUEST
-            return {
-                "type": "QUEST",
-                "certainty": "WOWHEAD",
-                "itemId": existing_source.get("itemId"),
-            }
-        if 10 in source_types:  # STARTER
-            return {
-                "type": "STARTER",
-                "certainty": "WOWHEAD",
-            }
-        if 7 in source_types:  # DISCOVERY
-            return {
-                "type": "DISCOVERY",
-                "certainty": "WOWHEAD",
-            }
-        # Unknown source type — flag it
-        print(f"  WARNING: PENDING recipe has unrecognized Wowhead sources: {source_types}", file=sys.stderr)
-        return {
-            "type": "UNKNOWN",
-            "certainty": "WOWHEAD",
-            "wowheadSources": source_types,
-        }
+    # Reclassify when the source is still PENDING, or an over-confident DB2 QUEST.
+    demotable = (existing_cert == "PENDING"
+                 or (existing_type == "QUEST" and existing_cert == "DB2"))
+    meaningful = [c for c in source_types if c != 1]  # CRAFTED is not acquisition
+    if not (demotable and meaningful):
+        return None
 
+    item_id = existing_source.get("itemId")
+    if 5 in source_types:  # VENDOR (needs cost)
+        cost = existing_source.get("cost")
+        if cost is None:
+            print(f"  WARNING: cannot demote to VENDOR without cost "
+                  f"(type={existing_type}, itemId={item_id}); left unchanged", file=sys.stderr)
+            return None
+        return {"type": "VENDOR", "certainty": "WOWHEAD", "itemId": item_id, "cost": cost}
+    if 2 in source_types:  # DROP
+        return {"type": "DROP", "certainty": "WOWHEAD", "itemId": item_id}
+    if 4 in source_types:  # QUEST
+        return {"type": "QUEST", "certainty": "WOWHEAD", "itemId": item_id}
+    if 10 in source_types:  # STARTER
+        return {"type": "STARTER", "certainty": "WOWHEAD"}
+    if 7 in source_types:  # DISCOVERY
+        return {"type": "DISCOVERY", "certainty": "WOWHEAD"}
+
+    if existing_cert == "PENDING":
+        print(f"  WARNING: PENDING recipe has unrecognized Wowhead sources: {source_types}", file=sys.stderr)
+        return {"type": "UNKNOWN", "certainty": "WOWHEAD", "wowheadSources": source_types}
     return None
 
 
