@@ -1,0 +1,33 @@
+{
+  "_note": "ALLOWLIST of items CONFIRMED vendor-stocked in-game. BuyPrice alone is NOT proof of vendor stock (73% of all items carry an intrinsic ~4-5x SellPrice BuyPrice, including world-drop cloth, gathered herbs, mined ore and smelted bars), so each entry is human-curated and must be in-game verified. The per-unit price is computed at BUILD time from DB2 BuyPrice / VendorStackCount (never hardcoded here) so it stays patch-current. 'verified:false' means curated-but-not-yet-in-game-confirmed; flipping to true is a release gate. 'flavors' restricts an entry to specific client flavors (omitted = all); Simple Flour (30817) is DEFAULT-only because it is absent from the Era/SoD DB2 build and unused by SoD recipes.",
+  "vendorReagents": {
+    "2320": { "name": "Coarse Thread", "verified": false },
+    "2321": { "name": "Fine Thread", "verified": false },
+    "4291": { "name": "Silken Thread", "verified": false },
+    "8343": { "name": "Heavy Silken Thread", "verified": false },
+    "14341": { "name": "Rune Thread", "verified": false },
+    "3371": { "name": "Empty Vial", "verified": false },
+    "3372": { "name": "Leaded Vial", "verified": false },
+    "8925": { "name": "Crystal Vial", "verified": false },
+    "18256": { "name": "Imbued Vial", "verified": false },
+    "2880": { "name": "Weak Flux", "verified": false },
+    "3466": { "name": "Strong Flux", "verified": false },
+    "18567": { "name": "Elemental Flux", "verified": false },
+    "3857": { "name": "Coal", "verified": false },
+    "4289": { "name": "Salt", "verified": false },
+    "2678": { "name": "Mild Spices", "verified": false },
+    "2692": { "name": "Hot Spices", "verified": false },
+    "3713": { "name": "Soothing Spices", "verified": false },
+    "1179": { "name": "Ice Cold Milk", "verified": false },
+    "30817": { "name": "Simple Flour", "verified": false, "flavors": ["DEFAULT"] },
+    "2604": { "name": "Red Dye", "verified": false },
+    "6260": { "name": "Blue Dye", "verified": false },
+    "4341": { "name": "Yellow Dye", "verified": false },
+    "6261": { "name": "Orange Dye", "verified": false },
+    "2605": { "name": "Green Dye", "verified": false },
+    "2325": { "name": "Black Dye", "verified": false },
+    "4342": { "name": "Purple Dye", "verified": false },
+    "4340": { "name": "Gray Dye", "verified": false },
+    "10290": { "name": "Pink Dye", "verified": false }
+  }
+}
