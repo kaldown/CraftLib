@@ -29,6 +29,30 @@ end
 | `CraftLib:GetRecipeByItemId(itemId)` | table/nil | Find recipe by crafted item ID |
 | `CraftLib:GetRecipeByProduct(itemId)` | table/nil | Find all recipes that produce an item |
 | `CraftLib:GetRecipeDifficulty(recipe, level)` | string | "orange"/"yellow"/"green"/"gray" |
+| `CraftLib:GetVendorBuyPrice(itemId)` | number/nil | Per-unit vendor BUY price (copper), or nil |
+
+### Vendor Buy Prices
+
+`CraftLib:GetVendorBuyPrice(itemId)` returns the per-unit vendor BUY price in copper for a
+confirmed vendor-stocked crafting reagent (thread, vials, dyes, salt, spices, flux, coal), or
+`nil` for everything else. The return is `nil` and never `0` or `{}` (ADR-004 nil-not-zero): a
+`0` would read downstream as "free" and corrupt a cost calculation, so absence is signalled by
+`nil`, meaning "not a confirmed vendor reagent - price it some other way".
+
+How the table is built (build-time, not shipped):
+
+- Membership is a curated, in-game-verified allowlist in `Data/Sources/vendor_reagents.json`.
+  `BuyPrice > 0` is NOT a vendor-stock signal - roughly 73% of all items carry an intrinsic
+  buy price (including world-drop cloth, gathered herbs, mined ore and smelted bars), so
+  vendor-buyability is determined ONLY by allowlist membership.
+- The per-unit price is derived from game data as `round(BuyPrice / VendorStackCount)`. DB2
+  `BuyPrice` is the price for one vendor-stack BATCH (vials sell in stacks of 5), so the raw
+  value is divided by the stack size to get a true per-unit cost.
+- The generated table ships as `Data/<Flavor>/VendorPrices.lua` and is registered via the
+  internal `CraftLib:RegisterVendorPrices({ flavor, prices })`, which is flavor-guarded exactly
+  like `RegisterProfession` (the SoD file carries `flavor = "SOD"`; the DEFAULT/TBC file omits
+  it). Prices are the undiscounted base values; a consumer with live merchant data (reputation
+  or faction discounts) should prefer that over this fallback.
 
 ### Profession Keys
 
