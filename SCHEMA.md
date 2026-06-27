@@ -153,6 +153,15 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
 }
 ```
 
+**Discovery Source:**
+```lua
+{
+    type = "discovery",               -- Learned via a world object or puzzle, not bought/trained
+                                      -- (e.g. the SoD New Avalon Mage Tower enchant formulas)
+    itemId = 241191,                  -- Formula/recipe item ID (optional; nil for puzzle-only recipes)
+}
+```
+
 **Reputation Source:**
 ```lua
 {
