@@ -514,7 +514,14 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int, flavor=N
         elif source["type"] == "QUEST":
             if "itemId" in source:
                 source_lines.append(f'            itemId = {source["itemId"]},')
-        elif source["type"] in ("STARTER", "DISCOVERY"):
+        elif source["type"] == "DISCOVERY":
+            # DISCOVERY recipes are learned by interacting with a world object/puzzle (e.g. the
+            # SoD New Avalon Mage Tower), not bought or trained. Mirror QUEST/DROP: emit the
+            # teaching formula/recipe itemId when known so consumers can link it, but GUARD it --
+            # a pure puzzle recipe may have no item, in which case the bare type line is correct.
+            if "itemId" in source:
+                source_lines.append(f'            itemId = {source["itemId"]},')
+        elif source["type"] == "STARTER":
             pass   # structural source: bare type line only (no itemId/cost)
         else:
             raise ValueError(f"Unhandled source type {source['type']!r} for spell "

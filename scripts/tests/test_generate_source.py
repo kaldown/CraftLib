@@ -52,6 +52,34 @@ def test_unknown_source_recipe_is_ejected_not_emitted():
     assert "Rune Edge" not in lua
 
 
+def test_discovery_with_itemid_emits_type_and_itemid():
+    # DISCOVERY is a real source type (SoD New Avalon Mage Tower formulas). With a known
+    # formula/recipe itemId it must emit BOTH the type line and the itemId (mirrors QUEST/DROP),
+    # unlike STARTER which is bare-type-only.
+    src = {"type": "DISCOVERY", "certainty": "MANUAL", "itemId": 241191, "needsReview": True}
+    lua = gr.generate_lua([_recipe(src)], _PROF, expansion=1)
+    assert "type = C.SOURCE_TYPE.DISCOVERY," in lua
+    assert "itemId = 241191," in lua
+
+
+def test_discovery_without_itemid_emits_bare_type():
+    # A discovery recipe with no formula item (puzzle-only) must still emit (not crash, not eject):
+    # bare type line, no itemId in the source block.
+    src = {"type": "DISCOVERY", "certainty": "MANUAL", "needsReview": True}
+    lua = gr.generate_lua([_recipe(src)], _PROF, expansion=1)
+    assert "type = C.SOURCE_TYPE.DISCOVERY," in lua
+    assert "16980" in lua
+    assert "itemId = " not in lua  # _recipe has no crafted itemId, so none should appear
+
+
+def test_quest_emits_itemid():
+    # QUEST carries the recipe itemId (quest reward); confirm the 9-recipe QUEST shape emits it.
+    src = {"type": "QUEST", "certainty": "MANUAL", "itemId": 238649, "needsReview": True}
+    lua = gr.generate_lua([_recipe(src)], _PROF, expansion=1)
+    assert "type = C.SOURCE_TYPE.QUEST," in lua
+    assert "itemId = 238649," in lua
+
+
 def test_unknown_ejected_but_vendor_still_emitted():
     # Mixing one UNKNOWN + one VENDOR: only the VENDOR survives generation.
     unknown = {"id": 16980, "name": "Rune Edge", "skillRequired": 250,
