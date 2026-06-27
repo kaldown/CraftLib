@@ -1,4 +1,4 @@
-.PHONY: clean fetch-data generate update-data extract-sources verify-sources
+.PHONY: clean fetch-data generate update-data extract-sources verify-sources vendor-prices
 
 PYTHON := python3
 EXPANSION ?= 2
@@ -69,6 +69,8 @@ update-data:
 	@VERSION=$$(ls -1 $(DB2_DIR)/artifacts | sort -V | tail -1) && \
 	echo "Using version: $$VERSION" && \
 	$(PYTHON) scripts/generate_recipes.py --version $$VERSION --expansion $(EXPANSION)
+	@VERSION=$$(ls -1 $(DB2_DIR)/artifacts | sort -V | tail -1) && \
+	$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version $$VERSION --expansion $(EXPANSION)
 
 SOD_VERSION ?= 1.15.8.67156
 SOD_PROFS := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tailoring Cooking FirstAid
@@ -94,6 +96,15 @@ sod-all: sod-fetch
 	  sleep 2; \
 	done
 	@$(PYTHON) scripts/audit_sources.py
+	@$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version $(SOD_VERSION) \
+	  --flavor sod --data-dir $(DB2_DIR)/artifacts
+
+# Emit the vendor-price tables for both flavors from the cached DB2 builds.
+vendor-prices:
+	@$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version 2.5.5.65895 \
+	  --expansion 2 --data-dir $(DB2_DIR)/artifacts
+	@$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version $(SOD_VERSION) \
+	  --flavor sod --data-dir $(DB2_DIR)/artifacts
 
 audit:
 	@$(PYTHON) scripts/audit_sources.py
