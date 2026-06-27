@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-06-27
+
 ### Added
 
 - Vendor-reagent pricing: a curated, in-game-verified per-unit vendor BUY price table (`Data/<Flavor>/VendorPrices.lua`) for confirmed vendor-stocked crafting reagents (threads, vials, dyes, salt, spices, flux, coal), plus a `CraftLib:GetVendorBuyPrice(itemId)` query returning per-unit copper or nil. Prices are derived per-unit from game data (dividing the batch buy price by the vendor stack size) so they stay accurate across patches.
