@@ -3290,9 +3290,10 @@
     "1225762": {
       "name": "Specklefin Feast",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WOWHEAD",
-        "wowheadSources": []
+        "type": "QUEST",
+        "certainty": "MANUAL",
+        "itemId": 238649,
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -3337,9 +3338,10 @@
     "1225763": {
       "name": "Grand Lobster Banquet",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WOWHEAD",
-        "wowheadSources": []
+        "type": "QUEST",
+        "certainty": "MANUAL",
+        "itemId": 238650,
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,

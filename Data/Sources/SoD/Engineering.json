@@ -8401,9 +8401,10 @@
     "1226210": {
       "name": "Tinker: Teleport",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WOWHEAD",
-        "wowheadSources": []
+        "type": "QUEST",
+        "certainty": "MANUAL",
+        "itemId": 238786,
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -8439,9 +8440,10 @@
     "1226211": {
       "name": "Tinker: Nitro Boosts",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WOWHEAD",
-        "wowheadSources": []
+        "type": "QUEST",
+        "certainty": "MANUAL",
+        "itemId": 238787,
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -8477,9 +8479,10 @@
     "1226212": {
       "name": "Tinker: Magnetic Displacement",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WOWHEAD",
-        "wowheadSources": []
+        "type": "QUEST",
+        "certainty": "MANUAL",
+        "itemId": 238788,
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,

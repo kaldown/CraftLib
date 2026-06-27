@@ -7338,9 +7338,10 @@
     "1231128": {
       "name": "Enchant Weapon - Grand Crusader",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WOWHEAD",
-        "wowheadSources": []
+        "type": "DISCOVERY",
+        "certainty": "MANUAL",
+        "itemId": 241191,
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7380,9 +7381,10 @@
     "1231139": {
       "name": "Enchant 2H Weapon - Grand Arcanist",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WOWHEAD",
-        "wowheadSources": []
+        "type": "DISCOVERY",
+        "certainty": "MANUAL",
+        "itemId": 241195,
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7422,9 +7424,10 @@
     "1231164": {
       "name": "Enchant Weapon - Grand Sorceror",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WOWHEAD",
-        "wowheadSources": []
+        "type": "DISCOVERY",
+        "certainty": "MANUAL",
+        "itemId": 241201,
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
@@ -7464,9 +7467,10 @@
     "1232172": {
       "name": "Enchant 2H Weapon - Grand Inquisitor",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WOWHEAD",
-        "wowheadSources": []
+        "type": "DISCOVERY",
+        "certainty": "MANUAL",
+        "itemId": 242361,
+        "needsReview": true
       },
       "difficulty": {
         "orange": 0,
