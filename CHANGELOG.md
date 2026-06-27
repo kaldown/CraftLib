@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Vendor-reagent pricing: a curated, in-game-verified per-unit vendor BUY price table (`Data/<Flavor>/VendorPrices.lua`) for confirmed vendor-stocked crafting reagents (threads, vials, dyes, salt, spices, flux, coal), plus a `CraftLib:GetVendorBuyPrice(itemId)` query returning per-unit copper or nil. Prices are derived per-unit from game data (dividing the batch buy price by the vendor stack size) so they stay accurate across patches.
+- Season of Discovery: nine Phase-8 recipes that were previously missing now appear with their true acquisition source - five quest-taught (the Specklefin Feast and Grand Lobster Banquet feasts, and the Teleport / Nitro Boosts / Magnetic Displacement tinkers) and four learned by discovery (the Grand Crusader, Grand Arcanist, Grand Sorceror, and Grand Inquisitor weapon enchants). Adds end-to-end support for the discovery source type.
 
 ## [0.8.1] - 2026-06-26
 
