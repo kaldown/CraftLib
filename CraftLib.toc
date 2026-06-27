@@ -14,6 +14,11 @@
 Core/Constants.lua
 Core/Init.lua
 
+# Vendor prices (per-unit vendor BUY for confirmed vendor-stocked reagents; flavor-guarded like Recipes.lua).
+# MUST load after Core/Init.lua (RegisterVendorPrices reads CraftLib.activeFlavor).
+Data/TBC/VendorPrices.lua
+Data/SoD/VendorPrices.lua
+
 # Data - TBC
 Data/TBC/FirstAid/Recipes.lua
 Data/TBC/Cooking/Recipes.lua

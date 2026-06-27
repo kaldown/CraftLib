@@ -7,6 +7,12 @@ CraftLib.professions = {}
 CraftLib.items = {}
 CraftLib.productIndex = {}  -- Reverse lookup: itemId -> recipes that produce it
 
+-- Build-time-generated per-unit vendor BUY prices (copper): itemId -> perUnit, populated
+-- ONLY for confirmed vendor-stocked reagents (see Data/<Flavor>/VendorPrices.lua). Kept as
+-- a separate keyed table rather than a field on each reagent to avoid duplicating one
+-- reagent's price across the hundreds of recipes that use it.
+CraftLib.vendorBuyPrices = {}
+
 --------------------------------------------------------------------------------
 -- Flavor detection (client lineage)
 --------------------------------------------------------------------------------
@@ -80,6 +86,20 @@ function CraftLib:RegisterProfession(professionKey, data)
     end
 end
 
+--- Register a curated table of per-unit vendor BUY prices (copper).
+-- @param data table { flavor = "SOD"|nil, prices = { [itemId] = perUnitCopper, ... } }
+function CraftLib:RegisterVendorPrices(data)
+    -- WHY mirror RegisterProfession's flavor guard EXACTLY: only the active flavor's bucket
+    -- may register, preserving the SoD/non-SoD non-mixing invariant the whole data
+    -- architecture depends on. A SoD-only price must never leak onto a TBC client.
+    if (data.flavor or self.Constants.FLAVOR.DEFAULT) ~= self.activeFlavor then
+        return
+    end
+    for itemId, perUnit in pairs(data.prices or {}) do
+        self.vendorBuyPrices[itemId] = perUnit
+    end
+end
+
 --------------------------------------------------------------------------------
 -- Query API
 --------------------------------------------------------------------------------
@@ -143,6 +163,16 @@ end
 -- @return table|nil Recipe data or nil
 function CraftLib:GetRecipeByItemId(itemId)
     return self.items[itemId]
+end
+
+--- Get the per-unit vendor BUY price (copper) for a confirmed vendor-stocked reagent.
+-- @param itemId number Reagent item ID
+-- @return number|nil per-unit copper, or nil if not a confirmed vendor reagent
+function CraftLib:GetVendorBuyPrice(itemId)
+    -- WHY nil (never 0): downstream a 0 reads as "free", which corrupts the cheapest path.
+    -- nil means "not a confirmed vendor reagent - price it some other way" (ADR-004
+    -- nil-not-zero contract, mirroring GetRecipeByItemId).
+    return self.vendorBuyPrices[itemId]
 end
 
 --- Get all recipes that produce a given item (reverse lookup)
