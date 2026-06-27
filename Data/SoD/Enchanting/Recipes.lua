@@ -2748,6 +2748,78 @@ local recipes = {
         },
         expansion = C.EXPANSION.SOD,
     },
+    -- Enchant Weapon - Grand Crusader (305)
+    {
+        id = 1231128,
+        name = "Enchant Weapon - Grand Crusader",
+        skillRequired = 305,
+        skillRange = { orange = 0, yellow = 305, green = 307, gray = 310 },
+        reagents = {
+            { itemId = 14344, name = "Large Brilliant Shard", count = 5 },
+            { itemId = 12811, name = "Righteous Orb", count = 2 },
+            { itemId = 20725, name = "Nexus Crystal", count = 2 },
+            { itemId = 12938, name = "Blood of Heroes", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DISCOVERY,
+            itemId = 241191,
+        },
+        expansion = C.EXPANSION.SOD,
+    },
+    -- Enchant 2H Weapon - Grand Arcanist (305)
+    {
+        id = 1231139,
+        name = "Enchant 2H Weapon - Grand Arcanist",
+        skillRequired = 305,
+        skillRange = { orange = 0, yellow = 305, green = 307, gray = 310 },
+        reagents = {
+            { itemId = 14344, name = "Large Brilliant Shard", count = 10 },
+            { itemId = 12811, name = "Righteous Orb", count = 4 },
+            { itemId = 20725, name = "Nexus Crystal", count = 4 },
+            { itemId = 12938, name = "Blood of Heroes", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DISCOVERY,
+            itemId = 241195,
+        },
+        expansion = C.EXPANSION.SOD,
+    },
+    -- Enchant Weapon - Grand Sorceror (305)
+    {
+        id = 1231164,
+        name = "Enchant Weapon - Grand Sorceror",
+        skillRequired = 305,
+        skillRange = { orange = 0, yellow = 305, green = 307, gray = 310 },
+        reagents = {
+            { itemId = 14344, name = "Large Brilliant Shard", count = 6 },
+            { itemId = 12811, name = "Righteous Orb", count = 3 },
+            { itemId = 20725, name = "Nexus Crystal", count = 2 },
+            { itemId = 12938, name = "Blood of Heroes", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DISCOVERY,
+            itemId = 241201,
+        },
+        expansion = C.EXPANSION.SOD,
+    },
+    -- Enchant 2H Weapon - Grand Inquisitor (305)
+    {
+        id = 1232172,
+        name = "Enchant 2H Weapon - Grand Inquisitor",
+        skillRequired = 305,
+        skillRange = { orange = 0, yellow = 305, green = 307, gray = 310 },
+        reagents = {
+            { itemId = 14344, name = "Large Brilliant Shard", count = 10 },
+            { itemId = 12811, name = "Righteous Orb", count = 6 },
+            { itemId = 20725, name = "Nexus Crystal", count = 4 },
+            { itemId = 12938, name = "Blood of Heroes", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DISCOVERY,
+            itemId = 242361,
+        },
+        expansion = C.EXPANSION.SOD,
+    },
     -- Magnificent Trollshine (310)
     {
         id = 471400,

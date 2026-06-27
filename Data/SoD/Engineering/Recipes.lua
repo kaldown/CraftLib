@@ -3023,6 +3023,57 @@ local recipes = {
         },
         expansion = C.EXPANSION.SOD,
     },
+    -- Tinker: Teleport (280)
+    {
+        id = 1226210,
+        name = "Tinker: Teleport",
+        skillRequired = 280,
+        skillRange = { orange = 0, yellow = 280, green = 282, gray = 285 },
+        reagents = {
+            { itemId = 238737, name = "Tinkerbox", count = 1 },
+            { itemId = 16006, name = "Delicate Arcanite Converter", count = 1 },
+            { itemId = 15994, name = "Thorium Widget", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 238786,
+        },
+        expansion = C.EXPANSION.SOD,
+    },
+    -- Tinker: Nitro Boosts (280)
+    {
+        id = 1226211,
+        name = "Tinker: Nitro Boosts",
+        skillRequired = 280,
+        skillRange = { orange = 0, yellow = 280, green = 282, gray = 285 },
+        reagents = {
+            { itemId = 238737, name = "Tinkerbox", count = 1 },
+            { itemId = 16006, name = "Delicate Arcanite Converter", count = 1 },
+            { itemId = 16000, name = "Thorium Tube", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 238787,
+        },
+        expansion = C.EXPANSION.SOD,
+    },
+    -- Tinker: Magnetic Displacement (280)
+    {
+        id = 1226212,
+        name = "Tinker: Magnetic Displacement",
+        skillRequired = 280,
+        skillRange = { orange = 0, yellow = 280, green = 282, gray = 285 },
+        reagents = {
+            { itemId = 238737, name = "Tinkerbox", count = 1 },
+            { itemId = 16006, name = "Delicate Arcanite Converter", count = 1 },
+            { itemId = 4387, name = "Iron Strut", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 238788,
+        },
+        expansion = C.EXPANSION.SOD,
+    },
     -- Dark Iron Bomb (285)
     {
         id = 19799,

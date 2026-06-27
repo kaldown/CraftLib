@@ -1474,6 +1474,44 @@ local recipes = {
         },
         expansion = C.EXPANSION.SOD,
     },
+    -- Specklefin Feast (290)
+    {
+        id = 1225762,
+        name = "Specklefin Feast",
+        itemId = 238641,
+        skillRequired = 290,
+        skillRange = { orange = 0, yellow = 290, green = 300, gray = 310 },
+        reagents = {
+            { itemId = 4603, name = "Raw Spotted Yellowtail", count = 12 },
+            { itemId = 12184, name = "Raptor Flesh", count = 4 },
+            { itemId = 6362, name = "Raw Rockscale Cod", count = 3 },
+            { itemId = 239017, name = "Exquisite Spices", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 238649,
+        },
+        expansion = C.EXPANSION.SOD,
+    },
+    -- Grand Lobster Banquet (290)
+    {
+        id = 1225763,
+        name = "Grand Lobster Banquet",
+        itemId = 238642,
+        skillRequired = 290,
+        skillRange = { orange = 0, yellow = 290, green = 300, gray = 310 },
+        reagents = {
+            { itemId = 13888, name = "Darkclaw Lobster", count = 12 },
+            { itemId = 3712, name = "Turtle Meat", count = 4 },
+            { itemId = 3404, name = "Buzzard Wing", count = 3 },
+            { itemId = 239017, name = "Exquisite Spices", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.QUEST,
+            itemId = 238650,
+        },
+        expansion = C.EXPANSION.SOD,
+    },
     -- Dirge's Kickin' Chimaerok Chops (300)
     {
         id = 25659,
