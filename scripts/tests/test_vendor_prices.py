@@ -128,3 +128,21 @@ def test_lua_default_omits_flavor_tag():
     lua = gr.generate_vendor_prices_lua([_entry(3371, 4, 20, 5, "Empty Vial")], "DEFAULT")
     assert "flavor =" not in lua
     assert "[3371] = 4," in lua
+
+
+# --- real-DB2 integration (self-skips when the cached build is absent, e.g. bare CI) ---
+
+_TBC_ISPARSE = (Path(__file__).resolve().parent.parent.parent
+                / "vendor" / "db2-parser" / "artifacts" / "2.5.5.65895" / "ItemSparse.csv")
+
+
+@pytest.mark.skipif(not _TBC_ISPARSE.exists(), reason="cached TBC DB2 build not present")
+def test_real_db2_pins_and_gating():
+    allowlist = gr.load_vendor_reagents()
+    details = gr.load_item_details(_TBC_ISPARSE.parent)
+    by_id = {e["itemId"]: e["perUnit"] for e in gr.compute_vendor_prices(allowlist, details, "DEFAULT")}
+    # Per-unit pins straight from the real DB2 build (guards against a schema/data shift).
+    assert by_id[3371] == 4 and by_id[3372] == 40 and by_id[8925] == 500 and by_id[2678] == 2
+    # BuyPrice>0 but not allowlisted: must be absent.
+    for gated in (14047, 2770, 2318):
+        assert gated not in by_id
