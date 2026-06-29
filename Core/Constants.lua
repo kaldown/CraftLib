@@ -26,6 +26,16 @@ CraftLib.Constants = {
         SOD = "SOD",
     },
 
+    -- Client PROFILE = lineage + expansion tier. Generalizes FLAVOR so one install
+    -- serves Vanilla/TBC/WotLK/SoD clients at once; the RegisterProfession load-guard
+    -- keys on this. DEFAULT (above) is retained only as a back-compat alias for FLAVOR.
+    PROFILE = {
+        VANILLA = "VANILLA",
+        TBC = "TBC",
+        WOTLK = "WOTLK",
+        SOD = "SOD",
+    },
+
     -- Recipe source types
     SOURCE_TYPE = {
         TRAINER = "trainer",
@@ -51,6 +61,7 @@ CraftLib.Constants = {
         MINING = 2575,
         SKINNING = 8613,
         TAILORING = 3908,
+        INSCRIPTION = 45357,  -- Apprentice Inscription (WotLK); verify vs SpellName.csv (Task 0.2)
         -- Secondary
         COOKING = 2550,
         FIRST_AID = 3273,
