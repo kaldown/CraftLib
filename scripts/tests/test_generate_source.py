@@ -95,3 +95,62 @@ def test_unknown_ejected_but_vendor_still_emitted():
     assert "Rune Edge" not in lua
     assert "99999" in lua
     assert "Vendor Plan" in lua
+
+
+# ---------------------------------------------------------------------------
+# Dedup test: WotLK SkillLineAbility class-specific duplicate rows
+# ---------------------------------------------------------------------------
+
+def _make_extract_fixtures(spell_id: str, skill_line_id: int):
+    """Return (data, indexes, verified_sources) for a single spell with two SkillLineAbility rows.
+
+    The two rows are identical apart from ClassMask (one general, one DK-specific) -- the exact
+    shape seen in the WotLK First Aid data (e.g. spell 3276 with ClassMask 1503 vs 32).
+    """
+    data = {
+        "SkillLineAbility": [
+            # General row (ClassMask 1503 = all classes except DK)
+            {"SkillLine": str(skill_line_id), "Spell": spell_id, "ClassMask": "1503",
+             "TrivialSkillLineRankLow": "80", "TrivialSkillLineRankHigh": "100"},
+            # Death-Knight-specific row (ClassMask 32) -- the WotLK duplicate
+            {"SkillLine": str(skill_line_id), "Spell": spell_id, "ClassMask": "32",
+             "TrivialSkillLineRankLow": "80", "TrivialSkillLineRankHigh": "100"},
+        ]
+    }
+    indexes = {
+        "crafted_items": {},
+        "spell_reagents": {spell_id: [("1251", 1)]},  # one reagent so it passes the reagent gate
+        "spell_names": {spell_id: "Heavy Linen Bandage"},
+        "item_names": {"1251": "Linen Cloth"},
+        "item_details": {},
+        "recipe_items": {},
+        "trivial_ranks": {},
+    }
+    verified_sources = {
+        spell_id: {
+            "difficulty": {
+                "orange": 1, "yellow": 80, "green": 95, "gray": 100,
+                "certainty": "WOWHEAD",
+            },
+            "source": {"type": "TRAINER", "certainty": "WOWHEAD"},
+        }
+    }
+    return data, indexes, verified_sources
+
+
+def test_extract_recipes_deduplicates_class_specific_rows():
+    # WHY: WotLK SkillLineAbility has a general row (ClassMask 1503) AND a Death-Knight-specific
+    # row (ClassMask 32) for the same spell.  extract_recipes must emit exactly ONE recipe -- the
+    # duplicate row must be skipped, not added a second time.
+    spell_id = "3276"
+    skill_line_id = 129  # First Aid
+    data, indexes, verified_sources = _make_extract_fixtures(spell_id, skill_line_id)
+
+    recipes, skipped = gr.extract_recipes(
+        data, indexes, skill_line_id, verified_sources=verified_sources
+    )
+
+    assert len(recipes) == 1, (
+        f"Expected 1 recipe after dedup; got {len(recipes)}.  "
+        "Two SkillLineAbility rows for the same spell must produce exactly one recipe."
+    )

@@ -309,6 +309,11 @@ def extract_recipes(
     """
     recipes = []
     skipped_recipes = []
+    # WHY seen_spell_ids: WotLK SkillLineAbility carries class-specific duplicate rows for the
+    # same Spell within a SkillLine (e.g. First Aid spell 3276 has a general row with ClassMask
+    # 1503 AND a Death-Knight-specific row with ClassMask 32). CraftLib serves exactly one recipe
+    # per spell, so the first row wins and later duplicates are skipped.
+    seen_spell_ids: set[str] = set()
 
     for row in data["SkillLineAbility"]:
         if row.get("SkillLine") != str(skill_line_id):
@@ -317,6 +322,11 @@ def extract_recipes(
         spell_id = row.get("Spell")
         if not spell_id:
             continue
+
+        # Skip class-specific duplicate rows (same spell already processed above)
+        if spell_id in seen_spell_ids:
+            continue
+        seen_spell_ids.add(spell_id)
 
         # Skip explicitly removed recipes
         if removed and spell_id in removed:

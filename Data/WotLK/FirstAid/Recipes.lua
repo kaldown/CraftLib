@@ -38,40 +38,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Heavy Linen Bandage (40)
-    {
-        id = 3276,
-        name = "Heavy Linen Bandage",
-        itemId = 2581,
-        skillRequired = 40,
-        skillRange = { orange = 40, yellow = 50, green = 75, gray = 100 },
-        reagents = {
-            { itemId = 2589, name = "Linen Cloth", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
-            trainingCost = 100,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Wool Bandage (80)
-    {
-        id = 3277,
-        name = "Wool Bandage",
-        itemId = 3530,
-        skillRequired = 80,
-        skillRange = { orange = 80, yellow = 80, green = 115, gray = 150 },
-        reagents = {
-            { itemId = 2592, name = "Wool Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
-            trainingCost = 250,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Wool Bandage (80)
     {
         id = 3277,
@@ -103,40 +69,6 @@ local recipes = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any First Aid Trainer",
             trainingCost = 250,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Anti-Venom (80)
-    {
-        id = 7934,
-        name = "Anti-Venom",
-        itemId = 6452,
-        skillRequired = 80,
-        skillRange = { orange = 80, yellow = 80, green = 115, gray = 150 },
-        reagents = {
-            { itemId = 1475, name = "Small Venom Sac", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
-            trainingCost = 250,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Heavy Wool Bandage (115)
-    {
-        id = 3278,
-        name = "Heavy Wool Bandage",
-        itemId = 3531,
-        skillRequired = 115,
-        skillRange = { orange = 115, yellow = 115, green = 150, gray = 185 },
-        reagents = {
-            { itemId = 2592, name = "Wool Cloth", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
-            trainingCost = 1000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -190,23 +122,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Silk Bandage (150)
-    {
-        id = 7928,
-        name = "Silk Bandage",
-        itemId = 6450,
-        skillRequired = 150,
-        skillRange = { orange = 150, yellow = 150, green = 180, gray = 210 },
-        reagents = {
-            { itemId = 4306, name = "Silk Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
-            trainingCost = 5000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Heavy Silk Bandage (180)
     {
         id = 7929,
@@ -221,40 +136,6 @@ local recipes = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any First Aid Trainer",
             trainingCost = 5000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Heavy Silk Bandage (180)
-    {
-        id = 7929,
-        name = "Heavy Silk Bandage",
-        itemId = 6451,
-        skillRequired = 180,
-        skillRange = { orange = 180, yellow = 180, green = 210, gray = 240 },
-        reagents = {
-            { itemId = 4306, name = "Silk Cloth", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
-            trainingCost = 5000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Mageweave Bandage (210)
-    {
-        id = 10840,
-        name = "Mageweave Bandage",
-        itemId = 8544,
-        skillRequired = 210,
-        skillRange = { orange = 210, yellow = 210, green = 240, gray = 270 },
-        reagents = {
-            { itemId = 4338, name = "Mageweave Cloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
-            trainingCost = 10000,
         },
         expansion = C.EXPANSION.VANILLA,
     },
@@ -292,23 +173,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.VANILLA,
     },
-    -- Heavy Mageweave Bandage (240)
-    {
-        id = 10841,
-        name = "Heavy Mageweave Bandage",
-        itemId = 8545,
-        skillRequired = 240,
-        skillRange = { orange = 240, yellow = 240, green = 270, gray = 300 },
-        reagents = {
-            { itemId = 4338, name = "Mageweave Cloth", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
-            trainingCost = 10000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
     -- Runecloth Bandage (260)
     {
         id = 18629,
@@ -318,40 +182,6 @@ local recipes = {
         skillRange = { orange = 260, yellow = 260, green = 290, gray = 320 },
         reagents = {
             { itemId = 14047, name = "Runecloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
-            trainingCost = 20000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Runecloth Bandage (260)
-    {
-        id = 18629,
-        name = "Runecloth Bandage",
-        itemId = 14529,
-        skillRequired = 260,
-        skillRange = { orange = 260, yellow = 260, green = 290, gray = 320 },
-        reagents = {
-            { itemId = 14047, name = "Runecloth", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any First Aid Trainer",
-            trainingCost = 20000,
-        },
-        expansion = C.EXPANSION.VANILLA,
-    },
-    -- Heavy Runecloth Bandage (290)
-    {
-        id = 18630,
-        name = "Heavy Runecloth Bandage",
-        itemId = 14530,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 290, green = 320, gray = 350 },
-        reagents = {
-            { itemId = 14047, name = "Runecloth", count = 2 },
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
