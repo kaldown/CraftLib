@@ -292,8 +292,9 @@ def main() -> int:
                         help="DB2 build to consult for missing ItemEffect links (e.g. 2.5.5.65895)")
     args = parser.parse_args()
 
-    # Map expansion to folder name
-    exp_folder = {"sod": "SoD", "classic": "Classic", "tbc": "TBC",
+    # Map expansion to folder name.
+    # "classic" is an alias for "vanilla" (both write to Data/Sources/Vanilla).
+    exp_folder = {"sod": "SoD", "vanilla": "Vanilla", "classic": "Vanilla", "tbc": "TBC",
                   "wotlk": "WotLK", "cata": "Cata"}.get(
         args.expansion.lower(), args.expansion.upper()
     )

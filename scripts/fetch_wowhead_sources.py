@@ -46,14 +46,17 @@ PROFESSION_SLUGS = {
     "alchemy": "alchemy", "blacksmithing": "blacksmithing", "enchanting": "enchanting",
     "engineering": "engineering", "leatherworking": "leatherworking", "tailoring": "tailoring",
     "cooking": "cooking", "firstaid": "first-aid", "mining": "mining",
+    # WotLK-only and TBC-only professions added for listview routing (Task 2.3)
+    "jewelcrafting": "jewelcrafting", "inscription": "inscription",
 }
 
 # Secondary skills live under /spells/secondary-skills/<slug>, not /spells/professions/<slug>
 SECONDARY_SKILL_SLUGS = {"cooking", "first-aid", "fishing"}
 
 # Wowhead URL subdomain per --expansion value
-WOWHEAD_SUBDOMAIN = {"sod": "classic", "classic": "classic", "tbc": "tbc",
-                     "wotlk": "wotlk", "cata": "cata"}
+# "vanilla" and "classic" both map to the /classic/ subdomain (same site, different folder name)
+WOWHEAD_SUBDOMAIN = {"sod": "classic", "vanilla": "classic", "classic": "classic",
+                     "tbc": "tbc", "wotlk": "wotlk", "cata": "cata"}
 
 
 def _fetch_page(url: str, retries: int = 3) -> str | None:
@@ -415,7 +418,9 @@ def process_profession_listview(sources_file, slug: str, expansion: str, dry_run
                 if r.get("source", {}).get("certainty") == "PENDING"]
     if residual:
         print(f"  Residual PENDING sources: {len(residual)} -> per-spell fallback", file=sys.stderr)
-        process_profession(sources_file, False, residual, "classic", False)
+        # Use the same subdomain the listview used, not a hardcoded "classic".
+        # Without this, WotLK residuals would re-fetch on /classic/ instead of /wotlk/.
+        process_profession(sources_file, False, residual, subdomain, False)
     return 0
 
 
@@ -610,8 +615,9 @@ def main() -> int:
     parser.add_argument("--force", action="store_true", help="Re-fetch all recipes even if already verified")
     args = parser.parse_args()
 
-    # Map expansion subdomain to folder name
-    exp_folder = {"sod": "SoD", "classic": "Classic", "tbc": "TBC",
+    # Map expansion subdomain to folder name.
+    # "classic" is an alias for "vanilla" (both write to Data/Sources/Vanilla).
+    exp_folder = {"sod": "SoD", "vanilla": "Vanilla", "classic": "Vanilla", "tbc": "TBC",
                   "wotlk": "WotLK", "cata": "Cata"}.get(
         args.expansion.lower(), args.expansion.upper()
     )
@@ -625,12 +631,14 @@ def main() -> int:
         print("Run extract_db2_sources.py first.", file=sys.stderr)
         return 1
 
-    if args.expansion.lower() == "sod":
+    # Use a single listview request for continuous-tier expansions and SoD.
+    # TBC keeps the per-spell path (already generated + stable; no high-volume profs like Inscription).
+    if args.expansion.lower() in ("sod", "wotlk", "vanilla", "classic"):
         slug = PROFESSION_SLUGS.get(prof_name.lower())
         if not slug:
             print(f"No Wowhead slug for profession: {args.profession}", file=sys.stderr)
             return 1
-        return process_profession_listview(sources_file, slug, "sod", args.dry_run)
+        return process_profession_listview(sources_file, slug, args.expansion.lower(), args.dry_run)
 
     return process_profession(sources_file, args.dry_run, args.spells, args.expansion, args.force)
 
