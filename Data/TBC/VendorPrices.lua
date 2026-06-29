@@ -10,6 +10,7 @@
 local ADDON_NAME, CraftLib = ...
 
 CraftLib:RegisterVendorPrices({
+    profile = "TBC",  -- runtime load-guard: registers only on the matching client profile
     prices = {
         [1179] = 25,  -- Ice Cold Milk (BuyPrice 125 / VendorStackCount 5)
         [2320] = 10,  -- Coarse Thread (BuyPrice 10 / VendorStackCount 1)

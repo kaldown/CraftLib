@@ -4780,6 +4780,7 @@ CraftLib:RegisterProfession("jewelcrafting", {
     id = C.PROFESSION_ID.JEWELCRAFTING,
     name = "Jewelcrafting",
     expansion = C.EXPANSION.TBC,
+    profile = "TBC",
     milestones = { 75, 150, 225, 300, 375 },
     recipes = recipes,
 })

@@ -3806,6 +3806,7 @@ CraftLib:RegisterProfession("enchanting", {
     id = C.PROFESSION_ID.ENCHANTING,
     name = "Enchanting",
     expansion = C.EXPANSION.TBC,
+    profile = "TBC",
     milestones = { 75, 150, 225, 300, 375 },
     recipes = recipes,
 })

@@ -6040,6 +6040,7 @@ CraftLib:RegisterProfession("tailoring", {
     id = C.PROFESSION_ID.TAILORING,
     name = "Tailoring",
     expansion = C.EXPANSION.TBC,
+    profile = "TBC",
     milestones = { 75, 150, 225, 300, 375 },
     recipes = recipes,
 })
