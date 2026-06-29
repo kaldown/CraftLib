@@ -1,0 +1,6716 @@
+{
+  "profession": "cooking",
+  "version": "3.4.5.63697",
+  "generated": "2026-06-30",
+  "recipes": {
+    "2538": {
+      "name": "Charred Wolf Meat",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 0,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2672,
+            1
+          ]
+        ],
+        "creates": [
+          2679,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2539": {
+      "name": "Spiced Wolf Meat",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 50
+      },
+      "difficulty": {
+        "orange": 10,
+        "yellow": 50,
+        "green": 70,
+        "gray": 90,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 10,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2672,
+            1
+          ]
+        ],
+        "creates": [
+          2680,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 50,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2540": {
+      "name": "Roasted Boar Meat",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 0,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            769,
+            1
+          ]
+        ],
+        "creates": [
+          2681,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2541": {
+      "name": "Coyote Steak",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 100
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2673,
+            1
+          ]
+        ],
+        "creates": [
+          2684,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 100,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2542": {
+      "name": "Goretusk Liver Pie",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 2697,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            723,
+            1
+          ]
+        ],
+        "creates": [
+          724,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2543": {
+      "name": "Westfall Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 728,
+        "cost": 200
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 115,
+        "green": 135,
+        "gray": 155,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 75,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            729,
+            1
+          ],
+          [
+            730,
+            1
+          ],
+          [
+            731,
+            1
+          ]
+        ],
+        "creates": [
+          733,
+          5,
+          5
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2544": {
+      "name": "Crab Cake",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 200
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 115,
+        "green": 135,
+        "gray": 155,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 75,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2674,
+            1
+          ]
+        ],
+        "creates": [
+          2683,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 200,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2545": {
+      "name": "Cooked Crab Claw",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 2698,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 125,
+        "green": 145,
+        "gray": 165,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 85,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2675,
+            1
+          ]
+        ],
+        "creates": [
+          2682,
+          1,
+          1
+        ],
+        "source": [
+          2,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2546": {
+      "name": "Dry Pork Ribs",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 150
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2677,
+            1
+          ]
+        ],
+        "creates": [
+          2687,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 150,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2547": {
+      "name": "Redridge Goulash",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 2699,
+        "cost": 800
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 135,
+        "green": 155,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            1081,
+            1
+          ],
+          [
+            1080,
+            1
+          ]
+        ],
+        "creates": [
+          1082,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2548": {
+      "name": "Succulent Pork Ribs",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 44851,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 110,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2677,
+            2
+          ]
+        ],
+        "creates": [
+          2685,
+          1,
+          1
+        ],
+        "source": [
+          2,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2549": {
+      "name": "Seasoned Wolf Kabob",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 2701,
+        "cost": 1600
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            1015,
+            2
+          ]
+        ],
+        "creates": [
+          1017,
+          3,
+          3
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "2795": {
+      "name": "Beer Basted Boar Ribs",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 2889,
+        "cost": 240
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 60,
+        "green": 80,
+        "gray": 100,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 25,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2886,
+            1
+          ]
+        ],
+        "creates": [
+          2888,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "3370": {
+      "name": "Crocolisk Steak",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 3678,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2924,
+            1
+          ]
+        ],
+        "creates": [
+          3662,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "3371": {
+      "name": "Blood Sausage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 3679,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 100,
+        "green": 120,
+        "gray": 140,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 60,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3173,
+            1
+          ],
+          [
+            3172,
+            1
+          ],
+          [
+            3174,
+            1
+          ]
+        ],
+        "creates": [
+          3220,
+          2,
+          2
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "3372": {
+      "name": "Murloc Fin Soup",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 3680,
+        "cost": 1600
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 90,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            1468,
+            2
+          ]
+        ],
+        "creates": [
+          3663,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "3373": {
+      "name": "Crocolisk Gumbo",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 3681,
+        "cost": 1600
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 160,
+        "green": 180,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 120,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3667,
+            1
+          ]
+        ],
+        "creates": [
+          3664,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "3376": {
+      "name": "Curiously Tasty Omelet",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 3682,
+        "cost": 1600
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 130,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3685,
+            1
+          ]
+        ],
+        "creates": [
+          3665,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "3377": {
+      "name": "Gooey Spider Cake",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 3683,
+        "cost": 1600
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 110,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2251,
+            2
+          ]
+        ],
+        "creates": [
+          3666,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "3397": {
+      "name": "Big Bear Steak",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 44119,
+        "cost": 1600
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 110,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3730,
+            1
+          ]
+        ],
+        "creates": [
+          3726,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "3398": {
+      "name": "Hot Lion Chops",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 3735,
+        "cost": 1800
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3731,
+            1
+          ]
+        ],
+        "creates": [
+          3727,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "3399": {
+      "name": "Tasty Lion Steak",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 3736
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3731,
+            2
+          ]
+        ],
+        "creates": [
+          3728,
+          1,
+          1
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "3400": {
+      "name": "Soothing Turtle Bisque",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 3737
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3712,
+            1
+          ]
+        ],
+        "creates": [
+          3729,
+          1,
+          1
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "4094": {
+      "name": "Barbecued Buzzard Wing",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 450
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3404,
+            1
+          ]
+        ],
+        "creates": [
+          4457,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5,
+          6
+        ],
+        "trainingCost": 450,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "6412": {
+      "name": "Kaldorei Spider Kabob",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 5482
+      },
+      "difficulty": {
+        "orange": 10,
+        "yellow": 50,
+        "green": 70,
+        "gray": 90,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 10,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5465,
+            1
+          ]
+        ],
+        "creates": [
+          5472,
+          1,
+          1
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "6413": {
+      "name": "Scorpid Surprise",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 5483,
+        "cost": 140
+      },
+      "difficulty": {
+        "orange": 20,
+        "yellow": 60,
+        "green": 80,
+        "gray": 100,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 20,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5466,
+            1
+          ]
+        ],
+        "creates": [
+          5473,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "6414": {
+      "name": "Roasted Kodo Meat",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 5484,
+        "cost": 240
+      },
+      "difficulty": {
+        "orange": 35,
+        "yellow": 75,
+        "green": 95,
+        "gray": 115,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 35,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5467,
+            1
+          ]
+        ],
+        "creates": [
+          5474,
+          2,
+          2
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "6415": {
+      "name": "Fillet of Frenzy",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 5485,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5468,
+            1
+          ]
+        ],
+        "creates": [
+          5476,
+          2,
+          2
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "6416": {
+      "name": "Strider Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 5486,
+        "cost": 440
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5469,
+            1
+          ]
+        ],
+        "creates": [
+          5477,
+          2,
+          2
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "6417": {
+      "name": "Dig Rat Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 44977,
+        "cost": 800
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 90,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5051,
+            1
+          ]
+        ],
+        "creates": [
+          5478,
+          2,
+          2
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "6418": {
+      "name": "Crispy Lizard Tail",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 5488,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5470,
+            1
+          ]
+        ],
+        "creates": [
+          5479,
+          2,
+          2
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "6419": {
+      "name": "Lean Venison",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 5489,
+        "cost": 1200
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 110,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5471,
+            1
+          ]
+        ],
+        "creates": [
+          5480,
+          2,
+          2
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "6501": {
+      "name": "Clam Chowder",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 5528,
+        "cost": 800
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 90,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5503,
+            1
+          ],
+          [
+            1179,
+            1
+          ]
+        ],
+        "creates": [
+          5526,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "6500": {
+      "name": "Goblin Deviled Clams",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 300
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5504,
+            1
+          ]
+        ],
+        "creates": [
+          5527,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 300,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "6499": {
+      "name": "Boiled Clams",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 100
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            5503,
+            1
+          ],
+          [
+            159,
+            1
+          ]
+        ],
+        "creates": [
+          5525,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 100,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7213": {
+      "name": "Giant Clam Scorcho",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 6039,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4655,
+            1
+          ]
+        ],
+        "creates": [
+          6038,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7751": {
+      "name": "Brilliant Smallfish",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 6325,
+        "cost": 40
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6291,
+            1
+          ]
+        ],
+        "creates": [
+          6290,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7752": {
+      "name": "Slitherskin Mackerel",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 6326,
+        "cost": 40
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6303,
+            1
+          ]
+        ],
+        "creates": [
+          787,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7753": {
+      "name": "Longjaw Mud Snapper",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 6328,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6289,
+            1
+          ]
+        ],
+        "creates": [
+          4592,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7754": {
+      "name": "Loch Frenzy Delight",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 6329,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6317,
+            1
+          ]
+        ],
+        "creates": [
+          6316,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7755": {
+      "name": "Bristle Whisker Catfish",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 6330,
+        "cost": 1200
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6308,
+            1
+          ]
+        ],
+        "creates": [
+          4593,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7827": {
+      "name": "Rainbow Fin Albacore",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 6368,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6361,
+            1
+          ]
+        ],
+        "creates": [
+          5095,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7828": {
+      "name": "Rockscale Cod",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 6369,
+        "cost": 2200
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6362,
+            1
+          ]
+        ],
+        "creates": [
+          4594,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "8238": {
+      "name": "Savory Deviate Delight",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 6661
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 125,
+        "green": 145,
+        "gray": 165,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 85,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6522,
+            1
+          ]
+        ],
+        "creates": [
+          6657,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "8604": {
+      "name": "Herb Baked Egg",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 6891
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6889,
+            1
+          ]
+        ],
+        "creates": [
+          6888,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "8607": {
+      "name": "Smoked Bear Meat",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 6892,
+        "cost": 250
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 80,
+        "green": 100,
+        "gray": 120,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 40,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3173,
+            1
+          ]
+        ],
+        "creates": [
+          6890,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "9513": {
+      "name": "Thistle Tea",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 18160,
+        "cost": 200
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 100,
+        "green": 120,
+        "gray": 140,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 60,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2452,
+            1
+          ],
+          [
+            159,
+            1
+          ]
+        ],
+        "creates": [
+          7676,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15935": {
+      "name": "Crispy Bat Wing",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 12226,
+        "cost": 25
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12223,
+            1
+          ]
+        ],
+        "creates": [
+          12224,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15853": {
+      "name": "Lean Wolf Steak",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 12227,
+        "cost": 1600
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            1015,
+            1
+          ]
+        ],
+        "creates": [
+          12209,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15855": {
+      "name": "Roast Raptor",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 12228,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12184,
+            1
+          ]
+        ],
+        "creates": [
+          12210,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15856": {
+      "name": "Hot Wolf Ribs",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 44851,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12203,
+            1
+          ]
+        ],
+        "creates": [
+          13851,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15861": {
+      "name": "Jungle Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 12231,
+        "cost": 3000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12202,
+            1
+          ],
+          [
+            159,
+            1
+          ]
+        ],
+        "creates": [
+          12212,
+          2,
+          2
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15863": {
+      "name": "Carrion Surprise",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 12232,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12037,
+            1
+          ]
+        ],
+        "creates": [
+          12213,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15865": {
+      "name": "Mystery Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 12233,
+        "cost": 3000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12037,
+            1
+          ],
+          [
+            2596,
+            1
+          ]
+        ],
+        "creates": [
+          12214,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15906": {
+      "name": "Dragonbreath Chili",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 12239,
+        "cost": 7000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12037,
+            1
+          ],
+          [
+            4402,
+            1
+          ]
+        ],
+        "creates": [
+          12217,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15910": {
+      "name": "Heavy Kodo Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 12240,
+        "cost": 7000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12204,
+            2
+          ]
+        ],
+        "creates": [
+          12215,
+          2,
+          2
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15915": {
+      "name": "Spiced Chili Crab",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 16111,
+        "cost": 12000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12206,
+            1
+          ]
+        ],
+        "creates": [
+          12216,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15933": {
+      "name": "Monster Omelet",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 16110,
+        "cost": 12000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12207,
+            1
+          ]
+        ],
+        "creates": [
+          12218,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "18239": {
+      "name": "Cooked Glossy Mightfish",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 13940,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13754,
+            1
+          ]
+        ],
+        "creates": [
+          13927,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "18238": {
+      "name": "Spotted Yellowtail",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 13939,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            4603,
+            1
+          ]
+        ],
+        "creates": [
+          6887,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "18241": {
+      "name": "Filet of Redgill",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 13941,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13758,
+            1
+          ]
+        ],
+        "creates": [
+          13930,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "18240": {
+      "name": "Grilled Squid",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 13942,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 265,
+        "green": 277,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13755,
+            1
+          ]
+        ],
+        "creates": [
+          13928,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "18242": {
+      "name": "Hot Smoked Bass",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 13943,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 265,
+        "green": 277,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13756,
+            1
+          ]
+        ],
+        "creates": [
+          13929,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "18243": {
+      "name": "Nightfin Soup",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 13945,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13759,
+            1
+          ],
+          [
+            159,
+            1
+          ]
+        ],
+        "creates": [
+          13931,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "18244": {
+      "name": "Poached Sunscale Salmon",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 13946,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13760,
+            1
+          ]
+        ],
+        "creates": [
+          13932,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "18245": {
+      "name": "Lobster Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 13947,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 300,
+        "green": 312,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13888,
+            1
+          ],
+          [
+            159,
+            1
+          ]
+        ],
+        "creates": [
+          13933,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "18246": {
+      "name": "Mightfish Steak",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 13948,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 300,
+        "green": 312,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13893,
+            1
+          ]
+        ],
+        "creates": [
+          13934,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "18247": {
+      "name": "Baked Salmon",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 13949,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 300,
+        "green": 312,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            13889,
+            1
+          ]
+        ],
+        "creates": [
+          13935,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20626": {
+      "name": "Undermine Clam Chowder",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 16767,
+        "cost": 3000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            7974,
+            2
+          ]
+        ],
+        "creates": [
+          16766,
+          2,
+          2
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20916": {
+      "name": "Mithril Head Trout",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 17062,
+        "cost": 2200
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8365,
+            1
+          ]
+        ],
+        "creates": [
+          8364,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "21144": {
+      "name": "Egg Nog",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 17201,
+        "cost": 240
+      },
+      "difficulty": {
+        "orange": 35,
+        "yellow": 75,
+        "green": 95,
+        "gray": 115,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 35,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6889,
+            1
+          ],
+          [
+            1179,
+            1
+          ],
+          [
+            17196,
+            1
+          ],
+          [
+            17194,
+            1
+          ]
+        ],
+        "creates": [
+          17198,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "21143": {
+      "name": "Gingerbread Cookie",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 17200,
+        "cost": 25
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6889,
+            1
+          ],
+          [
+            17194,
+            1
+          ]
+        ],
+        "creates": [
+          17197,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "21175": {
+      "name": "Spider Sausage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12205,
+            2
+          ]
+        ],
+        "creates": [
+          17222,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "22480": {
+      "name": "Tender Wolf Steak",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 18046,
+        "cost": 12000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12208,
+            1
+          ]
+        ],
+        "creates": [
+          18045,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "22761": {
+      "name": "Runn Tum Tuber Surprise",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 18267
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 300,
+        "green": 312,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            18255,
+            1
+          ]
+        ],
+        "creates": [
+          18254,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "24418": {
+      "name": "Heavy Crocolisk Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 20075,
+        "cost": 2000
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 160,
+        "green": 180,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3667,
+            2
+          ]
+        ],
+        "creates": [
+          20074,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "24801": {
+      "name": "Smoked Desert Dumplings",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 310,
+        "green": 322,
+        "gray": 335,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            20424,
+            1
+          ]
+        ],
+        "creates": [
+          20452,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25659": {
+      "name": "Dirge's Kickin' Chimaerok Chops",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 21025
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 325,
+        "green": 337,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            9061,
+            1
+          ],
+          [
+            8150,
+            1
+          ],
+          [
+            21024,
+            1
+          ]
+        ],
+        "creates": [
+          21023,
+          5,
+          5
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25704": {
+      "name": "Smoked Sagefish",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 21099,
+        "cost": 500
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            21071,
+            1
+          ]
+        ],
+        "creates": [
+          21072,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25954": {
+      "name": "Sagefish Delight",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 21219,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            21153,
+            1
+          ]
+        ],
+        "creates": [
+          21217,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "28267": {
+      "name": "Crunchy Spider Surprise",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 22647,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 100,
+        "green": 120,
+        "gray": 140,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 60,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            22644,
+            1
+          ]
+        ],
+        "creates": [
+          22645,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33276": {
+      "name": "Lynx Steak",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27685,
+        "cost": 40
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27668,
+            1
+          ]
+        ],
+        "creates": [
+          27635,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33277": {
+      "name": "Roasted Moongraze Tenderloin",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 27686
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            23676,
+            1
+          ]
+        ],
+        "creates": [
+          24105,
+          1,
+          1
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33278": {
+      "name": "Bat Bites",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27687,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27669,
+            1
+          ]
+        ],
+        "creates": [
+          27636,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33279": {
+      "name": "Buzzard Bites",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 27684
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27671,
+            1
+          ]
+        ],
+        "creates": [
+          27651,
+          1,
+          1
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33284": {
+      "name": "Ravager Dog",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27688,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27674,
+            1
+          ]
+        ],
+        "creates": [
+          27655,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33285": {
+      "name": "Sporeling Snack",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 27689
+      },
+      "difficulty": {
+        "orange": 310,
+        "yellow": 330,
+        "green": 340,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 310,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27676,
+            1
+          ]
+        ],
+        "creates": [
+          27656,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33286": {
+      "name": "Blackened Basilisk",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27690,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 315,
+        "yellow": 335,
+        "green": 345,
+        "gray": 355,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 315,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27677,
+            1
+          ]
+        ],
+        "creates": [
+          27657,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33287": {
+      "name": "Roasted Clefthoof",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27691,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 325,
+        "yellow": 345,
+        "green": 355,
+        "gray": 365,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 325,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27678,
+            1
+          ]
+        ],
+        "creates": [
+          27658,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33288": {
+      "name": "Warp Burger",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27692,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 325,
+        "yellow": 345,
+        "green": 355,
+        "gray": 365,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 325,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27681,
+            1
+          ]
+        ],
+        "creates": [
+          27659,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33289": {
+      "name": "Talbuk Steak",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27693,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 325,
+        "yellow": 345,
+        "green": 355,
+        "gray": 365,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 325,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27682,
+            1
+          ]
+        ],
+        "creates": [
+          27660,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33290": {
+      "name": "Blackened Trout",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27694,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27422,
+            1
+          ]
+        ],
+        "creates": [
+          27661,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33291": {
+      "name": "Feltail Delight",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27695,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27425,
+            1
+          ]
+        ],
+        "creates": [
+          27662,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33292": {
+      "name": "Blackened Sporefish",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27696,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 310,
+        "yellow": 330,
+        "green": 340,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 310,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27429,
+            1
+          ]
+        ],
+        "creates": [
+          27663,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33293": {
+      "name": "Grilled Mudfish",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27697,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 320,
+        "yellow": 340,
+        "green": 350,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27435,
+            1
+          ]
+        ],
+        "creates": [
+          27664,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33294": {
+      "name": "Poached Bluefish",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27698,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 320,
+        "yellow": 340,
+        "green": 350,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27437,
+            1
+          ]
+        ],
+        "creates": [
+          27665,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33295": {
+      "name": "Golden Fish Sticks",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27699,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 325,
+        "yellow": 345,
+        "green": 355,
+        "gray": 365,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 325,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27438,
+            1
+          ]
+        ],
+        "creates": [
+          27666,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "33296": {
+      "name": "Spicy Crawdad",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 27700,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 370,
+        "green": 375,
+        "gray": 380,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27439,
+            1
+          ]
+        ],
+        "creates": [
+          27667,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "36210": {
+      "name": "Clam Bar",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 30156
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            24477,
+            2
+          ]
+        ],
+        "creates": [
+          30155,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "37836": {
+      "name": "Spice Bread",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 30,
+        "green": 35,
+        "gray": 40,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            30817,
+            1
+          ],
+          [
+            2678,
+            1
+          ]
+        ],
+        "creates": [
+          30816,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 10,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "38868": {
+      "name": "Crunchy Serpent",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 31674,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 335,
+        "yellow": 355,
+        "green": 365,
+        "gray": 375,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 335,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            31671,
+            1
+          ]
+        ],
+        "creates": [
+          31673,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "38867": {
+      "name": "Mok'Nathal Shortribs",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 31675,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 335,
+        "yellow": 355,
+        "green": 365,
+        "gray": 375,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 335,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            31670,
+            1
+          ]
+        ],
+        "creates": [
+          31672,
+          1,
+          1
+        ],
+        "source": [
+          4,
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "42296": {
+      "name": "Stewed Trout",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 42000
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 335,
+        "green": 345,
+        "gray": 355,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 335,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27422,
+            1
+          ]
+        ],
+        "creates": [
+          33048,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 42000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "42302": {
+      "name": "Fisherman's Feast",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 60000
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 375,
+        "green": 380,
+        "gray": 385,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 375,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27515,
+            1
+          ]
+        ],
+        "creates": [
+          33052,
+          6,
+          6
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 60000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "42305": {
+      "name": "Hot Buttered Trout",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 60000
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 375,
+        "green": 380,
+        "gray": 385,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 375,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27516,
+            1
+          ]
+        ],
+        "creates": [
+          33053,
+          2,
+          2
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 60000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "43707": {
+      "name": "Skullfish Soup",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 33870
+      },
+      "difficulty": {
+        "orange": 325,
+        "yellow": 335,
+        "green": 345,
+        "gray": 355,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 325,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            33824,
+            1
+          ]
+        ],
+        "creates": [
+          33825,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "43758": {
+      "name": "Stormchops",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 33871
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27678,
+            1
+          ],
+          [
+            13757,
+            1
+          ]
+        ],
+        "creates": [
+          33866,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "43761": {
+      "name": "Broiled Bloodfin",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 33869
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            33823,
+            1
+          ]
+        ],
+        "creates": [
+          33867,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "43765": {
+      "name": "Spicy Hot Talbuk",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 33873
+      },
+      "difficulty": {
+        "orange": 325,
+        "yellow": 335,
+        "green": 345,
+        "gray": 355,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 325,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27682,
+            1
+          ]
+        ],
+        "creates": [
+          33872,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "43779": {
+      "name": "Delicious Chocolate Cake",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 33925
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 50,
+        "green": 62,
+        "gray": 75,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            30817,
+            8
+          ],
+          [
+            1179,
+            4
+          ],
+          [
+            2678,
+            4
+          ],
+          [
+            6889,
+            8
+          ],
+          [
+            2593,
+            1
+          ],
+          [
+            785,
+            3
+          ]
+        ],
+        "creates": [
+          33924,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45022": {
+      "name": "Hot Apple Cider",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 34413,
+        "cost": 10000
+      },
+      "difficulty": {
+        "orange": 325,
+        "yellow": 325,
+        "green": 325,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 325,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            34412,
+            1
+          ],
+          [
+            17196,
+            1
+          ],
+          [
+            17194,
+            1
+          ]
+        ],
+        "creates": [
+          34411,
+          2,
+          2
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "43772": {
+      "name": "Kibler's Bits",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 33875
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 345,
+        "green": 355,
+        "gray": 365,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            27671,
+            1
+          ]
+        ],
+        "creates": [
+          33874,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13028": {
+      "name": "Goldthorn Tea",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 190,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            3821,
+            1
+          ],
+          [
+            159,
+            1
+          ]
+        ],
+        "creates": [
+          10841,
+          4,
+          4
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45695": {
+      "name": "Captain Rumsey's Lager",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 34834
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 100,
+        "green": 105,
+        "gray": 110,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            2596,
+            1
+          ],
+          [
+            2594,
+            1
+          ]
+        ],
+        "creates": [
+          34832,
+          5,
+          5
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "46684": {
+      "name": "Charred Bear Kabobs",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 35564,
+        "cost": 18000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            35562,
+            1
+          ]
+        ],
+        "creates": [
+          35563,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "46688": {
+      "name": "Juicy Bear Burger",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 35566,
+        "cost": 18000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            35562,
+            1
+          ]
+        ],
+        "creates": [
+          35565,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "53056": {
+      "name": "Kungaloosh",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WOWHEAD",
+        "itemId": 39644
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 375,
+        "green": 387,
+        "gray": 400,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            35949,
+            2
+          ],
+          [
+            35948,
+            1
+          ]
+        ],
+        "creates": [
+          39520,
+          5,
+          5
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45560": {
+      "name": "Smoked Rockfin",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 365,
+        "gray": 380,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41803,
+            1
+          ]
+        ],
+        "creates": [
+          34759,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 10000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45561": {
+      "name": "Grilled Bonescale",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 365,
+        "gray": 380,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41808,
+            1
+          ]
+        ],
+        "creates": [
+          34760,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 10000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45562": {
+      "name": "Sauteed Goby",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 365,
+        "gray": 380,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41812,
+            1
+          ]
+        ],
+        "creates": [
+          34761,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 10000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45563": {
+      "name": "Grilled Sculpin",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 382,
+        "gray": 415,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41806,
+            1
+          ]
+        ],
+        "creates": [
+          34762,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45564": {
+      "name": "Smoked Salmon",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 382,
+        "gray": 415,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41809,
+            1
+          ]
+        ],
+        "creates": [
+          34763,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45565": {
+      "name": "Poached Nettlefish",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 382,
+        "gray": 415,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41813,
+            1
+          ]
+        ],
+        "creates": [
+          34764,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45569": {
+      "name": "Baked Manta Ray",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 382,
+        "gray": 415,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41802,
+            1
+          ]
+        ],
+        "creates": [
+          42942,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45566": {
+      "name": "Pickled Fangtooth",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 382,
+        "gray": 415,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41810,
+            1
+          ]
+        ],
+        "creates": [
+          34765,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57421": {
+      "name": "Northern Stew",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 350,
+        "green": 365,
+        "gray": 380,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43013,
+            1
+          ]
+        ],
+        "creates": [
+          34747,
+          1,
+          1
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45549": {
+      "name": "Mammoth Meal",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 382,
+        "gray": 415,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            34736,
+            1
+          ]
+        ],
+        "creates": [
+          34748,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45550": {
+      "name": "Shoveltusk Steak",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 382,
+        "gray": 415,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43009,
+            1
+          ]
+        ],
+        "creates": [
+          34749,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45551": {
+      "name": "Worm Delight",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 382,
+        "gray": 415,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43010,
+            1
+          ]
+        ],
+        "creates": [
+          34750,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45552": {
+      "name": "Roasted Worg",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 382,
+        "gray": 415,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43011,
+            1
+          ]
+        ],
+        "creates": [
+          34751,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45553": {
+      "name": "Rhino Dogs",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 382,
+        "gray": 415,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43012,
+            1
+          ]
+        ],
+        "creates": [
+          34752,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45554": {
+      "name": "Great Feast",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 50000
+      },
+      "difficulty": {
+        "orange": 375,
+        "yellow": 375,
+        "green": 400,
+        "gray": 425,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 375,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            34736,
+            1
+          ],
+          [
+            43009,
+            1
+          ],
+          [
+            43010,
+            1
+          ],
+          [
+            43013,
+            2
+          ]
+        ],
+        "creates": [
+          34753,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 50000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57423": {
+      "name": "Fish Feast",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43017
+      },
+      "difficulty": {
+        "orange": 450,
+        "yellow": 455,
+        "green": 460,
+        "gray": 465,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 450,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41806,
+            2
+          ],
+          [
+            41809,
+            2
+          ],
+          [
+            41813,
+            2
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          43015,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45555": {
+      "name": "Mega Mammoth Meal",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43018
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            34736,
+            2
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          34754,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45556": {
+      "name": "Tender Shoveltusk Steak",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43019
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43009,
+            2
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          34755,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45557": {
+      "name": "Spiced Worm Burger",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43020
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43010,
+            2
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          34756,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45558": {
+      "name": "Very Burnt Worg",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43021
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43011,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          34757,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45559": {
+      "name": "Mighty Rhino Dogs",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43022
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43012,
+            2
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          34758,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45567": {
+      "name": "Poached Northern Sculpin",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43023
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41806,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          34766,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45568": {
+      "name": "Firecracker Salmon",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43024
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41809,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          34767,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45571": {
+      "name": "Spicy Blue Nettlefish",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43025
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41813,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          34768,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "45570": {
+      "name": "Imperial Manta Steak",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43026
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41802,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          34769,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57433": {
+      "name": "Spicy Fried Herring",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43027
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41810,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          42993,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57434": {
+      "name": "Rhinolicious Wormsteak",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43028
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43010,
+            1
+          ],
+          [
+            43012,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          42994,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57435": {
+      "name": "Critter Bites",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43029
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43013,
+            2
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          43004,
+          4,
+          4
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57436": {
+      "name": "Hearty Rhino",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43030
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43012,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          42995,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57437": {
+      "name": "Snapper Extreme",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43031
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41808,
+            3
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          42996,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57438": {
+      "name": "Blackened Worg Steak",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43032
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43011,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          42997,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57439": {
+      "name": "Cuttlesteak",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43033
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41801,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          42998,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57440": {
+      "name": "Spiced Mammoth Treats",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43034
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            34736,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          43005,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57441": {
+      "name": "Blackened Dragonfin",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43035
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41807,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          42999,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57442": {
+      "name": "Dragonfin Filet",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43036
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41807,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          43000,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "57443": {
+      "name": "Tracker Snacks",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43037
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 425,
+        "green": 450,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43009,
+            1
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          43001,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "58065": {
+      "name": "Dalaran Clam Chowder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 20000
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 382,
+        "gray": 415,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            36782,
+            2
+          ]
+        ],
+        "creates": [
+          43268,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 20000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "58512": {
+      "name": "Tasty Cupcake",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 43507
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 357,
+        "gray": 365,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            30817,
+            2
+          ],
+          [
+            43501,
+            1
+          ]
+        ],
+        "creates": [
+          43490,
+          5,
+          5
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "58521": {
+      "name": "Last Week's Mammoth",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 43508
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 357,
+        "gray": 365,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            34736,
+            1
+          ]
+        ],
+        "creates": [
+          43488,
+          5,
+          5
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "58523": {
+      "name": "Bad Clams",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 43509
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 357,
+        "gray": 365,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            36782,
+            1
+          ],
+          [
+            22577,
+            1
+          ]
+        ],
+        "creates": [
+          43491,
+          5,
+          5
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "58525": {
+      "name": "Haunted Herring",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 43510
+      },
+      "difficulty": {
+        "orange": 350,
+        "yellow": 350,
+        "green": 357,
+        "gray": 365,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 350,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41810,
+            1
+          ],
+          [
+            12808,
+            1
+          ]
+        ],
+        "creates": [
+          43492,
+          5,
+          5
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "58527": {
+      "name": "Gigantic Feast",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43505
+      },
+      "difficulty": {
+        "orange": 425,
+        "yellow": 435,
+        "green": 455,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 425,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41800,
+            2
+          ],
+          [
+            34736,
+            2
+          ],
+          [
+            41803,
+            2
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          43478,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "58528": {
+      "name": "Small Feast",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 43506
+      },
+      "difficulty": {
+        "orange": 425,
+        "yellow": 435,
+        "green": 455,
+        "gray": 475,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 425,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41813,
+            2
+          ],
+          [
+            43012,
+            2
+          ],
+          [
+            41809,
+            2
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          43480,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "62045": {
+      "name": "Slow-Roasted Turkey",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 44861
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 330,
+        "green": 342,
+        "gray": 355,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 280,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            44834,
+            1
+          ],
+          [
+            44853,
+            2
+          ],
+          [
+            44835,
+            1
+          ]
+        ],
+        "creates": [
+          44838,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "62044": {
+      "name": "Pumpkin Pie",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 44862
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 150,
+        "green": 162,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            46784,
+            1
+          ],
+          [
+            44853,
+            1
+          ]
+        ],
+        "creates": [
+          44836,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "62051": {
+      "name": "Candied Sweet Potato",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 44859
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 270,
+        "green": 282,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 220,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            44855,
+            1
+          ],
+          [
+            44853,
+            1
+          ],
+          [
+            44835,
+            1
+          ]
+        ],
+        "creates": [
+          44839,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "62050": {
+      "name": "Spice Bread Stuffing",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 44860
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 90,
+        "green": 102,
+        "gray": 115,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            30816,
+            1
+          ],
+          [
+            44835,
+            1
+          ]
+        ],
+        "creates": [
+          44837,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "62049": {
+      "name": "Cranberry Chutney",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 44858
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 210,
+        "green": 222,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 160,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            44854,
+            1
+          ],
+          [
+            44853,
+            1
+          ]
+        ],
+        "creates": [
+          44840,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "62350": {
+      "name": "Worg Tartare",
+      "source": {
+        "type": "QUEST",
+        "certainty": "DB2",
+        "itemId": 44954
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 400,
+        "green": 405,
+        "gray": 460,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            43011,
+            2
+          ],
+          [
+            43007,
+            1
+          ]
+        ],
+        "creates": [
+          44953,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "64054": {
+      "name": "Clamlette Magnifique",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 250,
+        "green": 275,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            7974,
+            1
+          ]
+        ],
+        "creates": [
+          33004,
+          1,
+          1
+        ],
+        "source": [
+          4
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "64358": {
+      "name": "Black Jelly",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 50000
+      },
+      "difficulty": {
+        "orange": 400,
+        "yellow": 400,
+        "green": 412,
+        "gray": 425,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 400,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            41805,
+            3
+          ]
+        ],
+        "creates": [
+          45932,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 50000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "65454": {
+      "name": "Bread of the Dead",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WOWHEAD",
+        "itemId": 46710,
+        "cost": 2000
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 30,
+        "green": 35,
+        "gray": 40,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            30817,
+            1
+          ],
+          [
+            1179,
+            1
+          ]
+        ],
+        "creates": [
+          46691,
+          1,
+          1
+        ],
+        "source": [
+          5
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "66034": {
+      "name": "Candied Sweet Potato",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 46806
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 270,
+        "green": 282,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 220,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            46797,
+            1
+          ],
+          [
+            44853,
+            1
+          ],
+          [
+            44835,
+            1
+          ]
+        ],
+        "creates": [
+          44839,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "66035": {
+      "name": "Cranberry Chutney",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 46805
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 210,
+        "green": 222,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 160,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            46793,
+            1
+          ],
+          [
+            44853,
+            1
+          ]
+        ],
+        "creates": [
+          44840,
+          0,
+          0
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "66036": {
+      "name": "Pumpkin Pie",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 46804
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 150,
+        "green": 162,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            46796,
+            1
+          ],
+          [
+            44853,
+            1
+          ]
+        ],
+        "creates": [
+          44836,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "66037": {
+      "name": "Slow-Roasted Turkey",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 46807
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 330,
+        "green": 342,
+        "gray": 355,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 280,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            44834,
+            1
+          ],
+          [
+            44853,
+            2
+          ],
+          [
+            44835,
+            1
+          ]
+        ],
+        "creates": [
+          44838,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "66038": {
+      "name": "Spice Bread Stuffing",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 46803
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 90,
+        "green": 102,
+        "gray": 115,
+        "certainty": "WOWHEAD",
+        "expansion": "wotlk"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            30816,
+            1
+          ],
+          [
+            44835,
+            1
+          ]
+        ],
+        "creates": [
+          44837,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    }
+  }
+}
