@@ -24,6 +24,7 @@ PROFESSIONS = {
     165: {"key": "leatherworking", "name": "Leatherworking", "constant": "LEATHERWORKING"},
     197: {"key": "tailoring", "name": "Tailoring", "constant": "TAILORING"},
     186: {"key": "mining", "name": "Mining", "constant": "MINING"},
+    773: {"key": "inscription", "name": "Inscription", "constant": "INSCRIPTION"},
 }
 
 

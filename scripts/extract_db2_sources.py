@@ -32,6 +32,7 @@ PROFESSIONS = {
     165: {"key": "leatherworking", "name": "Leatherworking"},
     197: {"key": "tailoring", "name": "Tailoring"},
     186: {"key": "mining", "name": "Mining"},
+    773: {"key": "inscription", "name": "Inscription"},
 }
 
 REP_LEVELS = {
