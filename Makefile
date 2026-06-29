@@ -73,6 +73,7 @@ update-data:
 	$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version $$VERSION --expansion $(EXPANSION)
 
 SOD_VERSION ?= 1.15.8.67156
+WOTLK_VERSION ?= 3.4.5.63697
 SOD_PROFS := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tailoring Cooking FirstAid
 
 # Fetch the SoD/Era DB2 build
