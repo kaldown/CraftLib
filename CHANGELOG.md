@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-06-30
+
+### Added
+
+- Per-expansion client profiles: one install now serves Classic Era / Vanilla, Season of Discovery, TBC, and WotLK Classic clients, each loading recipe data built from its own game version. Generalizes the previous Season-of-Discovery flavor selection into a four-way profile (Vanilla / TBC / WotLK / SoD) chosen automatically per client.
+- WotLK Classic recipe data: a full Wrath of the Lich King bucket for all eleven professions, including Inscription, with the skill cap raised to 450. Glyphs report their true acquisition (learned via Inscription Research or the Book of Glyph Mastery) rather than as trainer-taught recipes.
+- Classic Era / Vanilla recipe data: a dedicated cap-300 bucket for non-seasonal Era clients, with Season-of-Discovery-only recipes correctly excluded.
+- Targets WotLK Classic (interface 30403) alongside Classic Era / Anniversary and TBC.
+
 ## [0.9.0] - 2026-06-27
 
 ### Added
