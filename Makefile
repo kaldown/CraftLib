@@ -1,4 +1,4 @@
-.PHONY: clean fetch-data generate update-data extract-sources verify-sources vendor-prices
+.PHONY: clean fetch-data generate update-data extract-sources verify-sources vendor-prices wotlk-all vanilla-all tbc-retag
 
 PYTHON := python3
 EXPANSION ?= 2
@@ -109,3 +109,39 @@ vendor-prices:
 
 audit:
 	@$(PYTHON) scripts/audit_sources.py
+
+# ---- Continuous-progression profiles (Vanilla/TBC/WotLK) -------------------
+# WOTLK_VERSION is pinned in Phase 0. TBC reuses the existing cached build.
+TBC_VERSION   ?= 2.5.5.65895
+WOTLK_PROFS   := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tailoring Cooking FirstAid Mining Jewelcrafting Inscription
+VANILLA_PROFS := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tailoring Cooking FirstAid Mining
+TBC_PROFS     := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tailoring Cooking FirstAid Mining Jewelcrafting
+
+# Simple classic flow for one continuous tier.
+# $(1)=expansion-string (vanilla/tbc/wotlk) $(2)=expansion-int $(3)=build $(4)=profs
+define TIER_PIPELINE
+	@make -C $(DB2_DIR) fetch VERSION=$(3)
+	@for p in $(4); do \
+	  echo "=== $(1) $$p ==="; \
+	  $(PYTHON) scripts/extract_db2_sources.py --version $(3) --profession $$p --expansion $(1); \
+	  $(PYTHON) scripts/fetch_wowhead_sources.py --profession $$p --expansion $(1); \
+	  $(PYTHON) scripts/assert_no_pending.py Data/Sources/$(call CAP,$(1))/$$p.json; \
+	  $(PYTHON) scripts/generate_recipes.py --version $(3) --expansion $(2) \
+	    --data-dir $(DB2_DIR)/artifacts --profession $$p; \
+	  sleep 2; \
+	done
+	@$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version $(3) \
+	  --expansion $(2) --data-dir $(DB2_DIR)/artifacts
+endef
+# Folder-name capitalizer (vanilla->Vanilla, tbc->TBC, wotlk->WotLK)
+CAP = $(if $(filter $(1),tbc),TBC,$(if $(filter $(1),wotlk),WotLK,Vanilla))
+
+wotlk-all:
+	$(call TIER_PIPELINE,wotlk,3,$(WOTLK_VERSION),$(WOTLK_PROFS))
+
+vanilla-all:
+	$(call TIER_PIPELINE,vanilla,1,$(SOD_VERSION),$(VANILLA_PROFS))
+
+# Re-generate the existing TBC bucket so its files carry profile="TBC".
+tbc-retag:
+	$(call TIER_PIPELINE,tbc,2,$(TBC_VERSION),$(TBC_PROFS))
