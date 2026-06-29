@@ -212,6 +212,13 @@
         "notes": "No Wowhead data"
       }
     ],
+    "Inscription": [
+      {
+        "spellId": 57231,
+        "name": "Death Knight Glyph 25",
+        "notes": "Placeholder/debug spell - learnedAt:9999, no Wowhead difficulty data, no source array. Never accessible to players. Evidence: https://www.wowhead.com/wotlk/spell=57231"
+      }
+    ],
     "Tailoring": [
       {
         "spellId": 7636,
