@@ -17,7 +17,7 @@ def _recipe():
 def test_generate_lua_emits_flavor_and_sod_milestones():
     prof = {"key": "tailoring", "name": "Tailoring", "constant": "TAILORING"}
     lua = gr.generate_lua([_recipe()], prof, expansion=1, flavor="sod")
-    assert 'flavor = "SOD",' in lua
+    assert 'profile = "SOD",' in lua
     assert "milestones = { 75, 150, 225, 300 }," in lua
     assert "expansion = C.EXPANSION.SOD," in lua
     assert "-- Data/SoD/Tailoring/Recipes.lua" in lua

@@ -117,17 +117,67 @@ def _entry(item_id, per, buy, vsc, name):
             "name": name, "verified": True}
 
 
-def test_lua_sod_carries_flavor_tag():
+def test_lua_sod_carries_profile_tag():
+    # flavor -> profile rename: the emitter now always emits profile= for every bucket
     lua = gr.generate_vendor_prices_lua([_entry(3371, 4, 20, 5, "Empty Vial")], "SOD")
-    assert 'flavor = "SOD",' in lua
+    assert 'profile = "SOD",' in lua
+    assert "flavor =" not in lua
     assert "[3371] = 4," in lua
     assert "CraftLib:RegisterVendorPrices({" in lua
 
 
-def test_lua_default_omits_flavor_tag():
-    lua = gr.generate_vendor_prices_lua([_entry(3371, 4, 20, 5, "Empty Vial")], "DEFAULT")
+def test_lua_tbc_carries_profile_tag():
+    # TBC (formerly the "DEFAULT" token) now also carries an explicit profile= tag
+    lua = gr.generate_vendor_prices_lua([_entry(3371, 4, 20, 5, "Empty Vial")], "TBC")
+    assert 'profile = "TBC",' in lua
     assert "flavor =" not in lua
     assert "[3371] = 4," in lua
+
+
+# --- emit_vendor_prices END-TO-END (profile->flavor split; the regression gap) --------------
+# This is the seam the unit tests missed: emit_vendor_prices receives a PROFILE token but must
+# pass the LEGACY flavor ("DEFAULT"/"SOD") to compute (for allowlist scoping) while emitting the
+# PROFILE token as the guard tag. A token like "TBC" must NOT drop a "flavors": ["DEFAULT"] entry.
+
+def _write_allowlist(tmp_path):
+    # Two verified reagents: one GLOBAL (no flavors), one scoped DEFAULT-only (like Simple Flour).
+    allowlist = {
+        "vendorReagents": {
+            "3371": {"name": "Empty Vial", "verified": True},  # global - all profiles
+            "30817": {"name": "Simple Flour", "verified": True, "flavors": ["DEFAULT"]},
+        }
+    }
+    p = tmp_path / "allowlist.json"
+    p.write_text(json.dumps(allowlist))
+    return p
+
+
+def _emit_details():
+    # Minimal ItemSparse rows so both reagents are priceable (BuyPrice / VendorStackCount).
+    return _details(_isparse_row(3371, 20, 1, 5), _isparse_row(30817, 25, 0, 5))
+
+
+@pytest.mark.parametrize("profile_token", ["TBC", "WOTLK"])
+def test_emit_continuous_tier_keeps_default_only_reagent(tmp_path, profile_token):
+    # A continuous-tier profile (TBC/WotLK/Vanilla) maps to the DEFAULT allowlist bucket, so the
+    # DEFAULT-only reagent MUST be present and the file MUST carry the real profile guard tag.
+    out = gr.emit_vendor_prices(_emit_details(), profile_token, profile_token, tmp_path,
+                                allowlist_path=_write_allowlist(tmp_path))
+    lua = out.read_text()
+    assert f'profile = "{profile_token}",' in lua
+    assert "[3371] = 4," in lua    # global reagent
+    assert "[30817] = 5," in lua   # DEFAULT-only reagent NOT dropped (25/5 = 5)
+
+
+def test_emit_sod_excludes_default_only_reagent(tmp_path):
+    # SoD maps to the SOD allowlist bucket: the DEFAULT-only reagent is absent (only the global one),
+    # and the file carries profile = "SOD".
+    out = gr.emit_vendor_prices(_emit_details(), "SOD", "SoD", tmp_path,
+                                allowlist_path=_write_allowlist(tmp_path))
+    lua = out.read_text()
+    assert 'profile = "SOD",' in lua
+    assert "[3371] = 4," in lua       # global reagent present
+    assert "[30817]" not in lua       # DEFAULT-only reagent correctly excluded on SoD
 
 
 # --- real-DB2 integration (self-skips when the cached build is absent, e.g. bare CI) ---
