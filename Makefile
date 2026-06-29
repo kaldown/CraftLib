@@ -119,15 +119,17 @@ TBC_PROFS     := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tai
 
 # Simple classic flow for one continuous tier.
 # $(1)=expansion-string (vanilla/tbc/wotlk) $(2)=expansion-int $(3)=build $(4)=profs
+# $(5)=extra flags forwarded to assert_no_pending AND generate_recipes (default empty).
+#     Example: --exclude-seasonal for the Vanilla bucket; both scripts accept this flag.
 define TIER_PIPELINE
 	@make -C $(DB2_DIR) fetch VERSION=$(3)
 	@for p in $(4); do \
 	  echo "=== $(1) $$p ==="; \
 	  $(PYTHON) scripts/extract_db2_sources.py --version $(3) --profession $$p --expansion $(1); \
 	  $(PYTHON) scripts/fetch_wowhead_sources.py --profession $$p --expansion $(1); \
-	  $(PYTHON) scripts/assert_no_pending.py Data/Sources/$(call CAP,$(1))/$$p.json; \
+	  $(PYTHON) scripts/assert_no_pending.py Data/Sources/$(call CAP,$(1))/$$p.json $(5); \
 	  $(PYTHON) scripts/generate_recipes.py --version $(3) --expansion $(2) \
-	    --data-dir $(DB2_DIR)/artifacts --profession $$p; \
+	    --data-dir $(DB2_DIR)/artifacts --profession $$p $(5); \
 	  sleep 2; \
 	done
 	@$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version $(3) \
@@ -140,7 +142,9 @@ wotlk-all:
 	$(call TIER_PIPELINE,wotlk,3,$(WOTLK_VERSION),$(WOTLK_PROFS))
 
 vanilla-all:
-	$(call TIER_PIPELINE,vanilla,1,$(SOD_VERSION),$(VANILLA_PROFS))
+	# WHY --exclude-seasonal: the Era build's Wowhead /classic data returns both Vanilla and
+	# SoD recipes; SoD-only ones carry seasonId==2 and must not appear in the Vanilla bucket.
+	$(call TIER_PIPELINE,vanilla,1,$(SOD_VERSION),$(VANILLA_PROFS),--exclude-seasonal)
 
 # Re-generate the existing TBC bucket so its files carry profile="TBC".
 tbc-retag:

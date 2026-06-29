@@ -1,0 +1,7319 @@
+{
+  "profession": "enchanting",
+  "version": "1.15.8.67156",
+  "generated": "2026-06-30",
+  "recipes": {
+    "7418": {
+      "name": "Enchant Bracer - Minor Health",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 70,
+        "green": 90,
+        "gray": 110,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 70,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7420": {
+      "name": "Enchant Chest - Minor Health",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 50
+      },
+      "difficulty": {
+        "orange": 15,
+        "yellow": 70,
+        "green": 90,
+        "gray": 110,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 15,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 50,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7421": {
+      "name": "Runed Copper Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 5,
+        "green": 7,
+        "gray": 10,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 1,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6217,
+            1
+          ],
+          [
+            10940,
+            1
+          ],
+          [
+            10938,
+            1
+          ]
+        ],
+        "creates": [
+          6218,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7426": {
+      "name": "Enchant Chest - Minor Absorption",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 100
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 40,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            2
+          ],
+          [
+            10938,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 100,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7428": {
+      "name": "Enchant Bracer - Minor Deflect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 80,
+        "green": 100,
+        "gray": 120,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10938,
+            1
+          ],
+          [
+            10940,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7443": {
+      "name": "Enchant Chest - Minor Mana",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 20,
+        "yellow": 80,
+        "green": 100,
+        "gray": 120,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 20,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10938,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7454": {
+      "name": "Enchant Cloak - Minor Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 100
+      },
+      "difficulty": {
+        "orange": 45,
+        "yellow": 95,
+        "green": 115,
+        "gray": 135,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 45,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            1
+          ],
+          [
+            10938,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 100,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7457": {
+      "name": "Enchant Bracer - Minor Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 250
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 100,
+        "green": 120,
+        "gray": 140,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 50,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            3
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 250,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7748": {
+      "name": "Enchant Chest - Lesser Health",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 250
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 105,
+        "green": 125,
+        "gray": 145,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 60,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            2
+          ],
+          [
+            10938,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 250,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7766": {
+      "name": "Enchant Bracer - Minor Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 105,
+        "green": 125,
+        "gray": 145,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 60,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10938,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7771": {
+      "name": "Enchant Cloak - Minor Protection",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 200
+      },
+      "difficulty": {
+        "orange": 70,
+        "yellow": 110,
+        "green": 130,
+        "gray": 150,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 70,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            3
+          ],
+          [
+            10939,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 200,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7776": {
+      "name": "Enchant Chest - Lesser Mana",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 115,
+        "green": 135,
+        "gray": 155,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10939,
+            1
+          ],
+          [
+            10938,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7779": {
+      "name": "Enchant Bracer - Minor Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 400
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 115,
+        "green": 135,
+        "gray": 155,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            2
+          ],
+          [
+            10939,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 400,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7782": {
+      "name": "Enchant Bracer - Minor Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 115,
+        "green": 135,
+        "gray": 155,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 80,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            5
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7786": {
+      "name": "Enchant Weapon - Minor Beastslayer",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 90,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            4
+          ],
+          [
+            10939,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7788": {
+      "name": "Enchant Weapon - Minor Striking",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 500
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 90,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            2
+          ],
+          [
+            10939,
+            1
+          ],
+          [
+            10978,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 500,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7745": {
+      "name": "Enchant 2H Weapon - Minor Impact",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 500
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            4
+          ],
+          [
+            10978,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 500,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7793": {
+      "name": "Enchant 2H Weapon - Lesser Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10939,
+            3
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7795": {
+      "name": "Runed Silver Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6338,
+            1
+          ],
+          [
+            10940,
+            6
+          ],
+          [
+            10939,
+            3
+          ],
+          [
+            1210,
+            1
+          ]
+        ],
+        "creates": [
+          6339,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7857": {
+      "name": "Enchant Chest - Health",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1000
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 145,
+        "green": 165,
+        "gray": 185,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 120,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            4
+          ],
+          [
+            10998,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7859": {
+      "name": "Enchant Bracer - Lesser Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 145,
+        "green": 165,
+        "gray": 185,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 120,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10998,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7861": {
+      "name": "Enchant Cloak - Lesser Fire Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1250
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            6371,
+            1
+          ],
+          [
+            10998,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1250,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7863": {
+      "name": "Enchant Boots - Minor Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1400
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            8
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1400,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "7867": {
+      "name": "Enchant Boots - Minor Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 125,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            6
+          ],
+          [
+            10998,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13378": {
+      "name": "Enchant Shield - Minor Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 600
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 105,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10998,
+            1
+          ],
+          [
+            10940,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 600,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13380": {
+      "name": "Enchant 2H Weapon - Lesser Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 135,
+        "green": 155,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 110,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10998,
+            1
+          ],
+          [
+            10940,
+            6
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13419": {
+      "name": "Enchant Cloak - Minor Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 135,
+        "green": 155,
+        "gray": 175,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 110,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10998,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13421": {
+      "name": "Enchant Cloak - Lesser Protection",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 800
+      },
+      "difficulty": {
+        "orange": 115,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 115,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            6
+          ],
+          [
+            10978,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 800,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13464": {
+      "name": "Enchant Shield - Lesser Protection",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 115,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 115,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10998,
+            1
+          ],
+          [
+            10940,
+            1
+          ],
+          [
+            10978,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13485": {
+      "name": "Enchant Shield - Lesser Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 155,
+        "green": 175,
+        "gray": 195,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 130,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10998,
+            2
+          ],
+          [
+            10940,
+            4
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13501": {
+      "name": "Enchant Bracer - Lesser Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 1500
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 155,
+        "green": 175,
+        "gray": 195,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 130,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11083,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 1500,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13503": {
+      "name": "Enchant Weapon - Lesser Striking",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2000
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 140,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11083,
+            2
+          ],
+          [
+            11084,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13522": {
+      "name": "Enchant Cloak - Lesser Shadow Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 135,
+        "yellow": 160,
+        "green": 180,
+        "gray": 200,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 135,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11082,
+            1
+          ],
+          [
+            6048,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13529": {
+      "name": "Enchant 2H Weapon - Lesser Impact",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2400
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 145,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11083,
+            3
+          ],
+          [
+            11084,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2400,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13536": {
+      "name": "Enchant Bracer - Lesser Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 140,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11083,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13538": {
+      "name": "Enchant Chest - Lesser Absorption",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2500
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 140,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            10940,
+            2
+          ],
+          [
+            11082,
+            1
+          ],
+          [
+            11084,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2500,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13607": {
+      "name": "Enchant Chest - Mana",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2400
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 145,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11082,
+            1
+          ],
+          [
+            10998,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2400,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13612": {
+      "name": "Enchant Gloves - Mining",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 145,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11083,
+            1
+          ],
+          [
+            2772,
+            3
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13617": {
+      "name": "Enchant Gloves - Herbalism",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 145,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11083,
+            1
+          ],
+          [
+            3356,
+            3
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13620": {
+      "name": "Enchant Gloves - Fishing",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 145,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11083,
+            1
+          ],
+          [
+            6370,
+            3
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13622": {
+      "name": "Enchant Bracer - Lesser Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2500
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11082,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2500,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13626": {
+      "name": "Enchant Chest - Minor Stats",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2500
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11082,
+            1
+          ],
+          [
+            11083,
+            1
+          ],
+          [
+            11084,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2500,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13628": {
+      "name": "Runed Golden Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2500
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            11128,
+            1
+          ],
+          [
+            5500,
+            1
+          ],
+          [
+            11082,
+            2
+          ],
+          [
+            11083,
+            2
+          ]
+        ],
+        "creates": [
+          11130,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2500,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13631": {
+      "name": "Enchant Shield - Lesser Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2600
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 155,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11134,
+            1
+          ],
+          [
+            11083,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2600,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13635": {
+      "name": "Enchant Cloak - Defense",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2600
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 155,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11138,
+            1
+          ],
+          [
+            11083,
+            3
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2600,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13637": {
+      "name": "Enchant Boots - Lesser Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2800
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 180,
+        "green": 200,
+        "gray": 220,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 160,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11083,
+            1
+          ],
+          [
+            11134,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2800,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13640": {
+      "name": "Enchant Chest - Greater Health",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2700
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 180,
+        "green": 200,
+        "gray": 220,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 160,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11083,
+            3
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2700,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13642": {
+      "name": "Enchant Bracer - Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2800
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 185,
+        "green": 205,
+        "gray": 225,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 165,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11134,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2800,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13644": {
+      "name": "Enchant Boots - Lesser Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2800
+      },
+      "difficulty": {
+        "orange": 170,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 170,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11083,
+            4
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2800,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13646": {
+      "name": "Enchant Bracer - Lesser Deflection",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 170,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 170,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11134,
+            1
+          ],
+          [
+            11083,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13648": {
+      "name": "Enchant Bracer - Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2800
+      },
+      "difficulty": {
+        "orange": 170,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 170,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11083,
+            6
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2800,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13653": {
+      "name": "Enchant Weapon - Lesser Beastslayer",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11134,
+            1
+          ],
+          [
+            5637,
+            2
+          ],
+          [
+            11138,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13655": {
+      "name": "Enchant Weapon - Lesser Elemental Slayer",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11134,
+            1
+          ],
+          [
+            7067,
+            1
+          ],
+          [
+            11138,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13657": {
+      "name": "Enchant Cloak - Fire Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 3000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11134,
+            1
+          ],
+          [
+            7068,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 3000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13659": {
+      "name": "Enchant Shield - Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 3200
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 180,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11135,
+            1
+          ],
+          [
+            11137,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 3200,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13661": {
+      "name": "Enchant Bracer - Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 3600
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 180,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11137,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 3600,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13663": {
+      "name": "Enchant Chest - Greater Mana",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 3800
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 205,
+        "green": 225,
+        "gray": 245,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 185,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11135,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 3800,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13687": {
+      "name": "Enchant Boots - Lesser Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 210,
+        "green": 230,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 190,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11135,
+            1
+          ],
+          [
+            11134,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13689": {
+      "name": "Enchant Shield - Lesser Block",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 195,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11135,
+            2
+          ],
+          [
+            11137,
+            2
+          ],
+          [
+            11139,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13693": {
+      "name": "Enchant Weapon - Striking",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4000
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 195,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11135,
+            2
+          ],
+          [
+            11139,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13695": {
+      "name": "Enchant 2H Weapon - Impact",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11137,
+            4
+          ],
+          [
+            11139,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13698": {
+      "name": "Enchant Gloves - Skinning",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11137,
+            1
+          ],
+          [
+            7392,
+            3
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13700": {
+      "name": "Enchant Chest - Lesser Stats",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11135,
+            2
+          ],
+          [
+            11137,
+            2
+          ],
+          [
+            11139,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13702": {
+      "name": "Runed Truesilver Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            11144,
+            1
+          ],
+          [
+            7971,
+            1
+          ],
+          [
+            11135,
+            2
+          ],
+          [
+            11137,
+            2
+          ]
+        ],
+        "creates": [
+          11145,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13746": {
+      "name": "Enchant Cloak - Greater Defense",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4200
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11137,
+            3
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4200,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13794": {
+      "name": "Enchant Cloak - Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4200
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 205,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11174,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4200,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13815": {
+      "name": "Enchant Gloves - Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4400
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11174,
+            1
+          ],
+          [
+            11137,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4400,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13817": {
+      "name": "Enchant Shield - Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11137,
+            5
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13822": {
+      "name": "Enchant Bracer - Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4400
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 210,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11174,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4400,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13836": {
+      "name": "Enchant Boots - Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4600
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 235,
+        "green": 255,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 215,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11137,
+            5
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4600,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13841": {
+      "name": "Enchant Gloves - Advanced Mining",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 235,
+        "green": 255,
+        "gray": 275,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 215,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11137,
+            3
+          ],
+          [
+            6037,
+            3
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13846": {
+      "name": "Enchant Bracer - Greater Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 220,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11174,
+            3
+          ],
+          [
+            11137,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13858": {
+      "name": "Enchant Chest - Superior Health",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 4800
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 220,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11137,
+            6
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 4800,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13868": {
+      "name": "Enchant Gloves - Advanced Herbalism",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 265,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11137,
+            3
+          ],
+          [
+            8838,
+            3
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13882": {
+      "name": "Enchant Cloak - Lesser Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 265,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11174,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13887": {
+      "name": "Enchant Gloves - Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 265,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11174,
+            2
+          ],
+          [
+            11137,
+            3
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 5000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13890": {
+      "name": "Enchant Boots - Minor Speed",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 265,
+        "gray": 285,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11177,
+            1
+          ],
+          [
+            7909,
+            1
+          ],
+          [
+            11174,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 5000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13898": {
+      "name": "Enchant Weapon - Fiery Weapon",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 265,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11177,
+            4
+          ],
+          [
+            7078,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13905": {
+      "name": "Enchant Shield - Greater Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5400
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 270,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 230,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11175,
+            1
+          ],
+          [
+            11176,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 5400,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13915": {
+      "name": "Enchant Weapon - Demonslaying",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 270,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 230,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11177,
+            1
+          ],
+          [
+            11176,
+            2
+          ],
+          [
+            9224,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13917": {
+      "name": "Enchant Chest - Superior Mana",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5400
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 270,
+        "gray": 290,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 230,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11175,
+            1
+          ],
+          [
+            11174,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 5400,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13931": {
+      "name": "Enchant Bracer - Deflection",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 255,
+        "green": 275,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 235,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11175,
+            1
+          ],
+          [
+            11176,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13933": {
+      "name": "Enchant Shield - Frost Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 255,
+        "green": 275,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 235,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11178,
+            1
+          ],
+          [
+            3829,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13935": {
+      "name": "Enchant Boots - Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 5800
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 255,
+        "green": 275,
+        "gray": 295,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 235,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11175,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 5800,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13937": {
+      "name": "Enchant 2H Weapon - Greater Impact",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 6200
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 280,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11178,
+            2
+          ],
+          [
+            11176,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 6200,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13939": {
+      "name": "Enchant Bracer - Greater Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 6200
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 280,
+        "gray": 300,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 240,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11176,
+            2
+          ],
+          [
+            11175,
+            1
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 6200,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13941": {
+      "name": "Enchant Chest - Stats",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 6200
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 245,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11178,
+            1
+          ],
+          [
+            11176,
+            3
+          ],
+          [
+            11175,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 6200,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13943": {
+      "name": "Enchant Weapon - Greater Striking",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 6200
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 245,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11178,
+            2
+          ],
+          [
+            11175,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 6200,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13945": {
+      "name": "Enchant Bracer - Greater Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 245,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11176,
+            5
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13947": {
+      "name": "Enchant Gloves - Riding Skill",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 290,
+        "gray": 310,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11178,
+            2
+          ],
+          [
+            11176,
+            3
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "13948": {
+      "name": "Enchant Gloves - Minor Haste",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 6500
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 290,
+        "gray": 310,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11178,
+            2
+          ],
+          [
+            8153,
+            2
+          ]
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 6500,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "14293": {
+      "name": "Lesser Magic Wand",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 50
+      },
+      "difficulty": {
+        "orange": 10,
+        "yellow": 75,
+        "green": 95,
+        "gray": 115,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 10,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4470,
+            1
+          ],
+          [
+            10938,
+            1
+          ]
+        ],
+        "creates": [
+          11287,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 50,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "14807": {
+      "name": "Greater Magic Wand",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 200
+      },
+      "difficulty": {
+        "orange": 70,
+        "yellow": 110,
+        "green": 130,
+        "gray": 150,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 70,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4470,
+            1
+          ],
+          [
+            10939,
+            1
+          ]
+        ],
+        "creates": [
+          11288,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 200,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "14809": {
+      "name": "Lesser Mystic Wand",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 2600
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 155,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            11291,
+            1
+          ],
+          [
+            11134,
+            1
+          ],
+          [
+            11083,
+            1
+          ]
+        ],
+        "creates": [
+          11289,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 2600,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "14810": {
+      "name": "Greater Mystic Wand",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 3000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            11291,
+            1
+          ],
+          [
+            11135,
+            1
+          ],
+          [
+            11137,
+            1
+          ]
+        ],
+        "creates": [
+          11290,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 3000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "15596": {
+      "name": "Smoking Heart of the Mountain",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 265,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            11382,
+            1
+          ],
+          [
+            7078,
+            1
+          ],
+          [
+            14343,
+            3
+          ]
+        ],
+        "creates": [
+          11811,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "17181": {
+      "name": "Enchanted Leather",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8170,
+            1
+          ],
+          [
+            16202,
+            1
+          ]
+        ],
+        "creates": [
+          12810,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 10000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "17180": {
+      "name": "Enchanted Thorium",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 10000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            12359,
+            1
+          ],
+          [
+            11176,
+            3
+          ]
+        ],
+        "creates": [
+          12655,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 10000,
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20008": {
+      "name": "Enchant Bracer - Greater Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 255,
+        "yellow": 275,
+        "green": 295,
+        "gray": 315,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 255,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16202,
+            3
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20020": {
+      "name": "Enchant Boots - Greater Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 300,
+        "gray": 320,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 260,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11176,
+            10
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20014": {
+      "name": "Enchant Cloak - Greater Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 265,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16202,
+            2
+          ],
+          [
+            7077,
+            1
+          ],
+          [
+            7075,
+            1
+          ],
+          [
+            7079,
+            1
+          ],
+          [
+            7081,
+            1
+          ],
+          [
+            7972,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20017": {
+      "name": "Enchant Shield - Greater Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 265,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11176,
+            10
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20009": {
+      "name": "Enchant Bracer - Superior Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 310,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 270,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16202,
+            3
+          ],
+          [
+            11176,
+            10
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20012": {
+      "name": "Enchant Gloves - Greater Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 310,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 270,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16202,
+            3
+          ],
+          [
+            16204,
+            3
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20024": {
+      "name": "Enchant Boots - Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 315,
+        "gray": 335,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16203,
+            2
+          ],
+          [
+            16202,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20026": {
+      "name": "Enchant Chest - Major Health",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 315,
+        "gray": 335,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16204,
+            6
+          ],
+          [
+            14343,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20016": {
+      "name": "Enchant Shield - Superior Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 300,
+        "green": 320,
+        "gray": 340,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 280,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16203,
+            2
+          ],
+          [
+            16204,
+            4
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20029": {
+      "name": "Enchant Weapon - Icy Chill",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 325,
+        "gray": 345,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14343,
+            4
+          ],
+          [
+            7080,
+            1
+          ],
+          [
+            7082,
+            1
+          ],
+          [
+            13467,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20015": {
+      "name": "Enchant Cloak - Superior Defense",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 325,
+        "gray": 345,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16204,
+            8
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20028": {
+      "name": "Enchant Chest - Major Mana",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16203,
+            3
+          ],
+          [
+            14343,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20051": {
+      "name": "Runed Arcanite Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            16206,
+            1
+          ],
+          [
+            13926,
+            1
+          ],
+          [
+            16204,
+            10
+          ],
+          [
+            16203,
+            4
+          ],
+          [
+            14343,
+            4
+          ],
+          [
+            14344,
+            2
+          ]
+        ],
+        "creates": [
+          16207,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20013": {
+      "name": "Enchant Gloves - Greater Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 295,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16203,
+            4
+          ],
+          [
+            16204,
+            4
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20023": {
+      "name": "Enchant Boots - Greater Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 295,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16203,
+            8
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20010": {
+      "name": "Enchant Bracer - Superior Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 295,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16204,
+            6
+          ],
+          [
+            16203,
+            6
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20030": {
+      "name": "Enchant 2H Weapon - Superior Impact",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 295,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            4
+          ],
+          [
+            16204,
+            10
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20033": {
+      "name": "Enchant Weapon - Unholy Weapon",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 295,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            4
+          ],
+          [
+            12808,
+            4
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20036": {
+      "name": "Enchant 2H Weapon - Major Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16203,
+            12
+          ],
+          [
+            14344,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20031": {
+      "name": "Enchant Weapon - Superior Striking",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            2
+          ],
+          [
+            16203,
+            10
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20011": {
+      "name": "Enchant Bracer - Superior Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16204,
+            15
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20034": {
+      "name": "Enchant Weapon - Crusader",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            4
+          ],
+          [
+            12811,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20025": {
+      "name": "Enchant Chest - Greater Stats",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            4
+          ],
+          [
+            16204,
+            15
+          ],
+          [
+            16203,
+            10
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20032": {
+      "name": "Enchant Weapon - Lifestealing",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            6
+          ],
+          [
+            12808,
+            6
+          ],
+          [
+            12803,
+            6
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "20035": {
+      "name": "Enchant 2H Weapon - Major Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16203,
+            12
+          ],
+          [
+            14344,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "21931": {
+      "name": "Enchant Weapon - Winter's Might",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 210,
+        "green": 230,
+        "gray": 250,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 190,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11135,
+            3
+          ],
+          [
+            11137,
+            3
+          ],
+          [
+            11139,
+            1
+          ],
+          [
+            3819,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "22434": {
+      "name": "Charged Scale of Onyxia",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      }
+    },
+    "22749": {
+      "name": "Enchant  Weapon - Spell Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            4
+          ],
+          [
+            16203,
+            12
+          ],
+          [
+            7078,
+            4
+          ],
+          [
+            7080,
+            4
+          ],
+          [
+            7082,
+            4
+          ],
+          [
+            13926,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "22750": {
+      "name": "Enchant  Weapon - Healing Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            4
+          ],
+          [
+            16203,
+            8
+          ],
+          [
+            12803,
+            6
+          ],
+          [
+            7080,
+            6
+          ],
+          [
+            12811,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "23799": {
+      "name": "Enchant Weapon - Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            6
+          ],
+          [
+            16203,
+            6
+          ],
+          [
+            16204,
+            4
+          ],
+          [
+            7076,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "23800": {
+      "name": "Enchant Weapon - Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            6
+          ],
+          [
+            16203,
+            6
+          ],
+          [
+            16204,
+            4
+          ],
+          [
+            7082,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "23801": {
+      "name": "Enchant Bracer - Mana Regeneration",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16204,
+            16
+          ],
+          [
+            16203,
+            4
+          ],
+          [
+            7080,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "23802": {
+      "name": "Enchant Bracer - Healing Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            2
+          ],
+          [
+            16204,
+            20
+          ],
+          [
+            16203,
+            4
+          ],
+          [
+            12803,
+            6
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "23803": {
+      "name": "Enchant Weapon - Mighty Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            10
+          ],
+          [
+            16203,
+            8
+          ],
+          [
+            16204,
+            15
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "23804": {
+      "name": "Enchant Weapon - Mighty Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            15
+          ],
+          [
+            16203,
+            12
+          ],
+          [
+            16204,
+            20
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25072": {
+      "name": "Enchant Gloves - Threat",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            4
+          ],
+          [
+            14344,
+            6
+          ],
+          [
+            18512,
+            8
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25073": {
+      "name": "Enchant Gloves - Shadow Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            14344,
+            10
+          ],
+          [
+            12808,
+            6
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25074": {
+      "name": "Enchant Gloves - Frost Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            14344,
+            10
+          ],
+          [
+            7080,
+            4
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25078": {
+      "name": "Enchant Gloves - Fire Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            14344,
+            10
+          ],
+          [
+            7078,
+            4
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25079": {
+      "name": "Enchant Gloves - Healing Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            14344,
+            8
+          ],
+          [
+            12811,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25080": {
+      "name": "Enchant Gloves - Superior Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            14344,
+            8
+          ],
+          [
+            7082,
+            4
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25081": {
+      "name": "Enchant Cloak - Greater Fire Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            14344,
+            8
+          ],
+          [
+            7078,
+            4
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25082": {
+      "name": "Enchant Cloak - Greater Nature Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            14344,
+            8
+          ],
+          [
+            12803,
+            4
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25083": {
+      "name": "Enchant Cloak - Stealth",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            14344,
+            8
+          ],
+          [
+            13468,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25084": {
+      "name": "Enchant Cloak - Subtlety",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            4
+          ],
+          [
+            14344,
+            6
+          ],
+          [
+            11754,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25086": {
+      "name": "Enchant Cloak - Dodge",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            14344,
+            8
+          ],
+          [
+            12809,
+            8
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25124": {
+      "name": "Minor Wizard Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 45,
+        "yellow": 55,
+        "green": 65,
+        "gray": 75,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 45,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            10940,
+            2
+          ],
+          [
+            17034,
+            1
+          ],
+          [
+            3371,
+            1
+          ]
+        ],
+        "creates": [
+          20744,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25125": {
+      "name": "Minor Mana Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 160,
+        "green": 170,
+        "gray": 180,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 150,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            11083,
+            3
+          ],
+          [
+            17034,
+            2
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          20745,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25126": {
+      "name": "Lesser Wizard Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 210,
+        "green": 220,
+        "gray": 230,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            11137,
+            3
+          ],
+          [
+            17035,
+            2
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "creates": [
+          20746,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25127": {
+      "name": "Lesser Mana Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            11176,
+            3
+          ],
+          [
+            8831,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          20747,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25128": {
+      "name": "Wizard Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 275,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            16204,
+            3
+          ],
+          [
+            4625,
+            2
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          20750,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25129": {
+      "name": "Brilliant Wizard Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            14344,
+            2
+          ],
+          [
+            4625,
+            3
+          ],
+          [
+            18256,
+            1
+          ]
+        ],
+        "creates": [
+          20749,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "25130": {
+      "name": "Brilliant Mana Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 300,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            14344,
+            2
+          ],
+          [
+            8831,
+            3
+          ],
+          [
+            18256,
+            1
+          ]
+        ],
+        "creates": [
+          20748,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "27837": {
+      "name": "Enchant 2H Weapon - Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 290,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            10
+          ],
+          [
+            16203,
+            6
+          ],
+          [
+            16204,
+            14
+          ],
+          [
+            7082,
+            4
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      }
+    },
+    "430409": {
+      "name": "Blackfathom Mana Oil",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 100,
+        "green": 110,
+        "gray": 120,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 100,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            3372,
+            1
+          ],
+          [
+            10939,
+            1
+          ],
+          [
+            10940,
+            5
+          ]
+        ],
+        "creates": [
+          211848,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 1
+    },
+    "435481": {
+      "name": "Enchant Weapon - Dismantle",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 200,
+        "green": 217,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11174,
+            4
+          ],
+          [
+            5637,
+            2
+          ],
+          [
+            11177,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "435903": {
+      "name": "Enchant Chest - Retricutioner",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 200,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            11177,
+            1
+          ],
+          [
+            11176,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "439134": {
+      "name": "Greater Mystic Wand",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WOWHEAD",
+        "trainingCost": 3000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 175,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            11291,
+            1
+          ],
+          [
+            11135,
+            1
+          ],
+          [
+            11137,
+            1
+          ]
+        ],
+        "creates": [
+          217287,
+          1,
+          1
+        ],
+        "source": [
+          6
+        ],
+        "trainingCost": 3000,
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "439156": {
+      "name": "Sigil of Innovation",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 225,
+        "green": 227,
+        "gray": 230,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 225,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            11137,
+            5
+          ]
+        ],
+        "creates": [
+          217308,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 2
+    },
+    "446243": {
+      "name": "Sigil of Living Dreams",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 250,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            11176,
+            5
+          ]
+        ],
+        "creates": [
+          221028,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 3
+    },
+    "448624": {
+      "name": "Scroll of Spatial Mending",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 223163
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 120,
+        "green": 125,
+        "gray": 130,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 120,
+        "numSkillUps": 1,
+        "quality": 2,
+        "reagents": [
+          [
+            4470,
+            1
+          ],
+          [
+            10940,
+            4
+          ]
+        ],
+        "creates": [
+          220792,
+          1,
+          1
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 3
+    },
+    "463871": {
+      "name": "Enchant Shield - Law of Nature",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            4
+          ],
+          [
+            16203,
+            12
+          ],
+          [
+            7078,
+            4
+          ],
+          [
+            7080,
+            4
+          ],
+          [
+            7076,
+            1
+          ],
+          [
+            12811,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 4
+    },
+    "463869": {
+      "name": "Conductive Shield Coating",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 285,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            16204,
+            2
+          ],
+          [
+            4625,
+            1
+          ],
+          [
+            8925,
+            1
+          ]
+        ],
+        "creates": [
+          228980,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 4
+    },
+    "463866": {
+      "name": "Sigil of Flowing Waters",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 305,
+        "green": 312,
+        "gray": 320,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 305,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            16204,
+            1
+          ]
+        ],
+        "creates": [
+          228978,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 4
+    },
+    "471400": {
+      "name": "Magnificent Trollshine",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 310,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            8151,
+            3
+          ],
+          [
+            8152,
+            3
+          ],
+          [
+            14344,
+            2
+          ],
+          [
+            18256,
+            1
+          ]
+        ],
+        "creates": [
+          232611,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213593": {
+      "name": "Speedstone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            234006,
+            10
+          ],
+          [
+            234010,
+            10
+          ],
+          [
+            20725,
+            6
+          ],
+          [
+            234004,
+            6
+          ],
+          [
+            2452,
+            20
+          ]
+        ],
+        "creates": [
+          233990,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213595": {
+      "name": "Tear of the Dreamer",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            234006,
+            10
+          ],
+          [
+            234010,
+            10
+          ],
+          [
+            20725,
+            4
+          ],
+          [
+            234003,
+            10
+          ],
+          [
+            234012,
+            10
+          ]
+        ],
+        "creates": [
+          233991,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213598": {
+      "name": "Lodestone of Retaliation",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            234007,
+            10
+          ],
+          [
+            234010,
+            5
+          ],
+          [
+            20725,
+            4
+          ],
+          [
+            234003,
+            10
+          ],
+          [
+            234011,
+            10
+          ]
+        ],
+        "creates": [
+          233992,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213600": {
+      "name": "Enchanted Stopwatch",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            234003,
+            3
+          ],
+          [
+            234005,
+            6
+          ],
+          [
+            14344,
+            4
+          ],
+          [
+            2459,
+            3
+          ]
+        ],
+        "creates": [
+          233993,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213603": {
+      "name": "Ruby-Encrusted Broach",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            234007,
+            10
+          ],
+          [
+            234010,
+            5
+          ],
+          [
+            20725,
+            6
+          ],
+          [
+            234003,
+            10
+          ],
+          [
+            234012,
+            10
+          ],
+          [
+            234011,
+            10
+          ]
+        ],
+        "creates": [
+          233994,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213607": {
+      "name": "Scroll: Wrath of the Swarm",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 3,
+        "reagents": [
+          [
+            16203,
+            1
+          ],
+          [
+            14047,
+            1
+          ]
+        ],
+        "creates": [
+          233995,
+          1,
+          1
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213610": {
+      "name": "Enchanted Repellent",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            234011,
+            3
+          ],
+          [
+            234012,
+            3
+          ],
+          [
+            16204,
+            2
+          ]
+        ],
+        "creates": [
+          233996,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213616": {
+      "name": "Enchant Chest - Living Stats",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            16204,
+            8
+          ],
+          [
+            16203,
+            5
+          ],
+          [
+            13458,
+            10
+          ],
+          [
+            234011,
+            2
+          ],
+          [
+            234010,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213622": {
+      "name": "Enchant Gloves - Holy Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            14344,
+            5
+          ],
+          [
+            13180,
+            5
+          ],
+          [
+            12735,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213626": {
+      "name": "Enchant Gloves - Arcane Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            14344,
+            5
+          ],
+          [
+            12753,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213628": {
+      "name": "Enchanted Prayer Tome",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            234008,
+            10
+          ],
+          [
+            234003,
+            2
+          ],
+          [
+            12810,
+            4
+          ]
+        ],
+        "creates": [
+          234000,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213633": {
+      "name": "Enchanted Totem",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            234012,
+            10
+          ],
+          [
+            234003,
+            2
+          ],
+          [
+            12810,
+            3
+          ]
+        ],
+        "creates": [
+          234001,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1213635": {
+      "name": "Enchanted Mushroom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            234012,
+            20
+          ],
+          [
+            12810,
+            3
+          ],
+          [
+            234011,
+            4
+          ],
+          [
+            234010,
+            4
+          ]
+        ],
+        "creates": [
+          234002,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1216005": {
+      "name": "Libram of Righteousness",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            234008,
+            10
+          ],
+          [
+            234003,
+            2
+          ],
+          [
+            12810,
+            4
+          ]
+        ],
+        "creates": [
+          234477,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1216007": {
+      "name": "Libram of the Exorcist",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            234008,
+            10
+          ],
+          [
+            234003,
+            2
+          ],
+          [
+            12810,
+            4
+          ]
+        ],
+        "creates": [
+          234475,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1216010": {
+      "name": "Libram of Sanctity",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            234008,
+            10
+          ],
+          [
+            234003,
+            2
+          ],
+          [
+            12810,
+            4
+          ]
+        ],
+        "creates": [
+          234476,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1216014": {
+      "name": "Totem of Pyroclastic Thunder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            234012,
+            10
+          ],
+          [
+            234003,
+            2
+          ],
+          [
+            12810,
+            3
+          ]
+        ],
+        "creates": [
+          234480,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1216016": {
+      "name": "Totem of Thunderous Strikes",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            234012,
+            10
+          ],
+          [
+            234003,
+            2
+          ],
+          [
+            12810,
+            3
+          ]
+        ],
+        "creates": [
+          234478,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1216018": {
+      "name": "Totem of Flowing Magma",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            234012,
+            10
+          ],
+          [
+            234003,
+            2
+          ],
+          [
+            12810,
+            3
+          ]
+        ],
+        "creates": [
+          234479,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1216020": {
+      "name": "Idol of Sidereal Wrath",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            234012,
+            20
+          ],
+          [
+            12810,
+            3
+          ],
+          [
+            234011,
+            4
+          ],
+          [
+            234010,
+            4
+          ]
+        ],
+        "creates": [
+          234474,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1216022": {
+      "name": "Idol of Feline Ferocity",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            234012,
+            20
+          ],
+          [
+            12810,
+            3
+          ],
+          [
+            234011,
+            4
+          ],
+          [
+            234010,
+            4
+          ]
+        ],
+        "creates": [
+          234469,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1216024": {
+      "name": "Idol of Ursin Power",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": 4,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            234012,
+            20
+          ],
+          [
+            12810,
+            3
+          ],
+          [
+            234011,
+            4
+          ],
+          [
+            234010,
+            4
+          ]
+        ],
+        "creates": [
+          234468,
+          0,
+          0
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1217189": {
+      "name": "Enchant Bracer - Spell Power",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 235526
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            2
+          ],
+          [
+            16204,
+            20
+          ],
+          [
+            16203,
+            4
+          ],
+          [
+            7080,
+            2
+          ],
+          [
+            7078,
+            2
+          ],
+          [
+            7082,
+            2
+          ]
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1217203": {
+      "name": "Enchant Bracer - Agility",
+      "source": {
+        "type": "DROP",
+        "certainty": "WOWHEAD",
+        "itemId": 235528
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            16204,
+            10
+          ],
+          [
+            16203,
+            2
+          ],
+          [
+            7082,
+            2
+          ]
+        ],
+        "source": [
+          2
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 6
+    },
+    "1219577": {
+      "name": "Enchant Off-Hand - Superior Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            16204,
+            18
+          ],
+          [
+            7082,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 7
+    },
+    "1219578": {
+      "name": "Enchant Off-Hand - Excellent Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            2
+          ],
+          [
+            16204,
+            18
+          ],
+          [
+            7080,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 7
+    },
+    "1219579": {
+      "name": "Enchant Off-Hand - Wisdom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            6
+          ],
+          [
+            16204,
+            18
+          ],
+          [
+            7082,
+            1
+          ],
+          [
+            7080,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 7
+    },
+    "1219580": {
+      "name": "Enchant 2H Weapon - Spellblasting",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            20725,
+            3
+          ],
+          [
+            16204,
+            24
+          ],
+          [
+            12938,
+            1
+          ],
+          [
+            8831,
+            6
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 7
+    },
+    "1219581": {
+      "name": "Enchant Shield - Excellent Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            6
+          ],
+          [
+            16204,
+            18
+          ],
+          [
+            7076,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 7
+    },
+    "1220623": {
+      "name": "Enchant Shield - Critical Strike",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            14344,
+            5
+          ],
+          [
+            16204,
+            15
+          ],
+          [
+            12938,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 7
+    },
+    "1220624": {
+      "name": "Enchant Bracer - Greater Spellpower",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16203,
+            3
+          ],
+          [
+            16204,
+            9
+          ],
+          [
+            12808,
+            12
+          ],
+          [
+            8831,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 7
+    },
+    "1219586": {
+      "name": "Enchant Gloves - Superior Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16203,
+            7
+          ],
+          [
+            16204,
+            21
+          ],
+          [
+            7078,
+            2
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 7
+    },
+    "1219587": {
+      "name": "Enchant Cloak - Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "WOWHEAD",
+        "expansion": "vanilla"
+      },
+      "wowhead": {
+        "learnedAt": 320,
+        "numSkillUps": 1,
+        "quality": -1,
+        "reagents": [
+          [
+            16203,
+            3
+          ],
+          [
+            16204,
+            9
+          ],
+          [
+            7078,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 7
+    },
+    "1231128": {
+      "name": "Enchant Weapon - Grand Crusader",
+      "source": {
+        "type": "PENDING",
+        "certainty": "PENDING",
+        "itemId": 241191,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 305,
+        "green": 307,
+        "gray": 310,
+        "certainty": "WOWHEAD",
+        "expansion": "classic"
+      },
+      "wowhead": {
+        "learnedAt": 305,
+        "numSkillUps": 1,
+        "reagents": [
+          [
+            14344,
+            5
+          ],
+          [
+            12811,
+            2
+          ],
+          [
+            20725,
+            2
+          ],
+          [
+            12938,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    },
+    "1231139": {
+      "name": "Enchant 2H Weapon - Grand Arcanist",
+      "source": {
+        "type": "PENDING",
+        "certainty": "PENDING",
+        "itemId": 241195,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 305,
+        "green": 307,
+        "gray": 310,
+        "certainty": "WOWHEAD",
+        "expansion": "classic"
+      },
+      "wowhead": {
+        "learnedAt": 305,
+        "numSkillUps": 1,
+        "reagents": [
+          [
+            14344,
+            10
+          ],
+          [
+            12811,
+            4
+          ],
+          [
+            20725,
+            4
+          ],
+          [
+            12938,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    },
+    "1231164": {
+      "name": "Enchant Weapon - Grand Sorceror",
+      "source": {
+        "type": "PENDING",
+        "certainty": "PENDING",
+        "itemId": 241201,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 305,
+        "green": 307,
+        "gray": 310,
+        "certainty": "WOWHEAD",
+        "expansion": "classic"
+      },
+      "wowhead": {
+        "learnedAt": 305,
+        "numSkillUps": 1,
+        "reagents": [
+          [
+            14344,
+            6
+          ],
+          [
+            12811,
+            3
+          ],
+          [
+            20725,
+            2
+          ],
+          [
+            12938,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    },
+    "1232172": {
+      "name": "Enchant 2H Weapon - Grand Inquisitor",
+      "source": {
+        "type": "PENDING",
+        "certainty": "PENDING",
+        "itemId": 242361,
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 0,
+        "yellow": 305,
+        "green": 307,
+        "gray": 310,
+        "certainty": "WOWHEAD",
+        "expansion": "classic"
+      },
+      "wowhead": {
+        "learnedAt": 305,
+        "numSkillUps": 1,
+        "reagents": [
+          [
+            14344,
+            10
+          ],
+          [
+            12811,
+            6
+          ],
+          [
+            20725,
+            4
+          ],
+          [
+            12938,
+            1
+          ]
+        ],
+        "fetchedAt": "2026-06-30"
+      },
+      "seasonId": 2,
+      "phaseId": 8
+    }
+  }
+}

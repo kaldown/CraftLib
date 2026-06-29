@@ -164,13 +164,17 @@ def emit_vendor_prices(item_details: dict, profile_token: str, exp_name: str, ou
                        allowlist_path: Path = VENDOR_REAGENTS_PATH) -> Path:
     """Compute + write Data/<exp_name>/VendorPrices.lua; warn loudly on unverified entries."""
     allowlist = load_vendor_reagents(allowlist_path)
-    # WHY the split: the allowlist 'flavors' field uses the LEGACY DEFAULT/SOD vocabulary, but the
-    # runtime guard now keys on the 4-value PROFILE (VANILLA/TBC/WOTLK/SOD). The continuous tiers
-    # (VANILLA/TBC/WOTLK) all share the DEFAULT bucket's allowlist scoping, so compute_vendor_prices
-    # gets the legacy flavor (else a "flavors": ["DEFAULT"] reagent like Simple Flour would be
-    # SILENTLY DROPPED from the TBC/WotLK/Vanilla table - a data-truth regression). The EMITTED
-    # guard tag, however, must carry the real profile so the right client loads it.
-    flavor = "SOD" if profile_token == "SOD" else "DEFAULT"
+    # WHY the flavor mapping: the allowlist 'flavors' field uses the LEGACY DEFAULT/SOD vocabulary,
+    # but the runtime guard now keys on the 4-value PROFILE (VANILLA/TBC/WOTLK/SOD). The continuous
+    # TBC/WotLK tiers share the DEFAULT scoping. VANILLA and SOD both use the Era DB2 build
+    # (1.15.8.x), so reagents absent from that build (e.g. Simple Flour/30817, which only exists
+    # in TBC ItemSparse) must be excluded from BOTH; this is enforced by mapping VANILLA -> "SOD"
+    # for the allowlist scoping check (flavors:["DEFAULT"] items skip the Era build). The EMITTED
+    # guard tag still carries the real PROFILE so the right client loads it.
+    if profile_token in ("SOD", "VANILLA"):
+        flavor = "SOD"   # both use the Era build; DEFAULT-only reagents (e.g. Simple Flour) must be absent
+    else:
+        flavor = "DEFAULT"
     entries = compute_vendor_prices(allowlist, item_details, flavor)  # may fail loud
     unverified = [e for e in entries if not e["verified"]]
     if unverified:
@@ -300,6 +304,7 @@ def extract_recipes(
     verified_sources: dict = None,
     removed: set[str] = None,
     force_expansion: str | None = None,
+    exclude_seasonal: bool = False,
 ) -> tuple[list[dict], list[dict]]:
     """Extract recipes for a profession from SkillLineAbility.
 
@@ -345,6 +350,16 @@ def extract_recipes(
             if not verified_recipe:
                 spell_name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
                 skipped_recipes.append({"id": spell_id, "name": spell_name, "reason": "not in sources"})
+                continue
+
+            # WHY exclude_seasonal: the Era build's Wowhead /classic listview returns BOTH
+            # Vanilla and Season-of-Discovery recipes; SoD-only ones carry seasonId==2. These
+            # do not exist on a non-SoD Era/Vanilla client and must be excluded from the Vanilla
+            # bucket. The SoD bucket keeps them via its own pipeline (--flavor sod). This flag
+            # defaults OFF so TBC/WotLK/SoD generation is unaffected.
+            if exclude_seasonal and verified_recipe.get("seasonId"):
+                spell_name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
+                skipped_recipes.append({"id": spell_id, "name": spell_name, "reason": "seasonal (seasonId)"})
                 continue
 
         # Get verified difficulty — Wowhead data is REQUIRED, no DB2 fallback
@@ -622,6 +637,12 @@ def main() -> int:
     parser.add_argument("--flavor", help="Data flavor (e.g. 'sod'); selects SoD folder + flavor tag")
     parser.add_argument("--vendor-prices-only", action="store_true",
                         help="Emit only Data/<Flavor>/VendorPrices.lua (skips recipe generation)")
+    parser.add_argument("--exclude-seasonal", action="store_true",
+                        help="Skip recipes whose source JSON carries a truthy seasonId. "
+                             "Use for the Vanilla bucket: the Era build's Wowhead /classic "
+                             "data includes SoD-season recipes (seasonId==2) that do not "
+                             "exist on a non-SoD Era/Vanilla client. Default OFF so "
+                             "TBC/WotLK/SoD generation is unaffected.")
     args = parser.parse_args()
 
     # Build data path
@@ -694,7 +715,8 @@ def main() -> int:
         try:
             prof_removed = removed_spells.get(profession["name"], set())
             recipes, skipped = extract_recipes(
-                data, indexes, skill_line_id, verified_sources, prof_removed, force_expansion
+                data, indexes, skill_line_id, verified_sources, prof_removed, force_expansion,
+                exclude_seasonal=args.exclude_seasonal,
             )
         except ValueError as e:
             print(f"ERROR: {e}", file=sys.stderr)
