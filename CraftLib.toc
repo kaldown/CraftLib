@@ -1,4 +1,4 @@
-## Interface: 11508, 20505
+## Interface: 11508, 20505, 30403
 ## Title: CraftLib
 ## Notes: Comprehensive crafting recipe database for WoW addons
 ## Author: kaldown
@@ -18,6 +18,8 @@ Core/Init.lua
 # MUST load after Core/Init.lua (RegisterVendorPrices reads CraftLib.activeFlavor).
 Data/TBC/VendorPrices.lua
 Data/SoD/VendorPrices.lua
+Data/Vanilla/VendorPrices.lua
+Data/WotLK/VendorPrices.lua
 
 # Data - TBC
 Data/TBC/FirstAid/Recipes.lua
@@ -41,3 +43,27 @@ Data/SoD/Blacksmithing/Recipes.lua
 Data/SoD/Enchanting/Recipes.lua
 Data/SoD/Leatherworking/Recipes.lua
 Data/SoD/Tailoring/Recipes.lua
+
+# Data - Vanilla (registers only on a non-SoD Classic Era client; profile guard)
+Data/Vanilla/FirstAid/Recipes.lua
+Data/Vanilla/Cooking/Recipes.lua
+Data/Vanilla/Mining/Recipes.lua
+Data/Vanilla/Engineering/Recipes.lua
+Data/Vanilla/Alchemy/Recipes.lua
+Data/Vanilla/Blacksmithing/Recipes.lua
+Data/Vanilla/Enchanting/Recipes.lua
+Data/Vanilla/Leatherworking/Recipes.lua
+Data/Vanilla/Tailoring/Recipes.lua
+
+# Data - WotLK (registers only on a WotLK Classic client; profile guard)
+Data/WotLK/FirstAid/Recipes.lua
+Data/WotLK/Cooking/Recipes.lua
+Data/WotLK/Mining/Recipes.lua
+Data/WotLK/Engineering/Recipes.lua
+Data/WotLK/Alchemy/Recipes.lua
+Data/WotLK/Blacksmithing/Recipes.lua
+Data/WotLK/Enchanting/Recipes.lua
+Data/WotLK/Jewelcrafting/Recipes.lua
+Data/WotLK/Leatherworking/Recipes.lua
+Data/WotLK/Tailoring/Recipes.lua
+Data/WotLK/Inscription/Recipes.lua
