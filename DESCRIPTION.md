@@ -57,13 +57,18 @@ local difficulty = CraftLib:GetRecipeDifficulty(recipe, 300)
 - `CraftLib:GetRecipeByItemId(itemId)` - Lookup by crafted item ID
 - `CraftLib:GetRecipeByProduct(itemId)` - Find all recipes that produce an item
 - `CraftLib:GetRecipeDifficulty(recipe, skillLevel)` - Get difficulty color
+- `CraftLib:GetVendorBuyPrice(itemId)` - Per-unit vendor buy price for vendor-stocked reagents (copper, or nil)
+- `CraftLib:GetActiveProfile()` - Active client profile ("VANILLA"/"TBC"/"WOTLK"/"SOD")
 
 ## Supported Game Versions
 
-- Classic Era
+One install serves every live Classic-family client - CraftLib detects which one you are on and loads the matching recipe data (each built from that client's own game build):
+
+- Classic Era / Anniversary (Vanilla)
 - Season of Discovery
-- Anniversary
-- Hardcore
+- The Burning Crusade Classic
+- Wrath of the Lich King Classic, including the Titan (3.80) seasonal WotLK client (includes Inscription, skill cap 450)
+- Hardcore (Classic Era data)
 
 ## Addons Using CraftLib
 

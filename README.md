@@ -20,26 +20,23 @@ Comprehensive crafting recipe database and API for World of Warcraft addon devel
 ## Features
 
 - Complete recipe data with skill levels, reagents, and difficulty thresholds
-- Source information for every recipe (trainers, vendors, quests, drops, reputation)
+- Source information for every recipe (trainers, vendors, quests, drops, reputation, discovery)
 - Fast lookups by spell ID or crafted item ID
 - Skill-based filtering and difficulty calculation
+- Per-expansion data: one install serves Classic Era / Vanilla, Season of Discovery, The Burning Crusade, and Wrath of the Lich King - it detects the running client and loads the matching recipe set automatically
 
-## Profession Coverage
+## Coverage
 
-All 10 professions are complete with Wowhead-verified difficulty data:
+CraftLib bundles a separate, cumulative recipe set for each Classic-family client and registers the correct one automatically (no configuration):
 
-| Profession | Recipes | Coverage |
-|------------|---------|----------|
-| Alchemy | 182 | Complete |
-| Blacksmithing | 375 | Complete |
-| Cooking | 116 | Complete |
-| Enchanting | 218 | Complete |
-| Engineering | 239 | Complete |
-| First Aid | 15 | Complete |
-| Jewelcrafting | 257 | Complete |
-| Leatherworking | 376 | Complete |
-| Mining | 21 | Complete (smelting) |
-| Tailoring | 314 | Complete |
+| Client | Professions | Skill cap |
+|--------|-------------|-----------|
+| Classic Era / Vanilla | 9 | 300 |
+| Season of Discovery | 9 | 300 |
+| The Burning Crusade Classic | 10 (+ Jewelcrafting) | 375 |
+| Wrath of the Lich King Classic | 11 (+ Inscription) | 450 |
+
+Professions: Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring, Cooking, First Aid, Mining - plus Jewelcrafting (TBC and later) and Inscription (WotLK). Every recipe carries Wowhead-verified difficulty thresholds and a real acquisition source.
 
 ## Usage
 
@@ -87,6 +84,8 @@ end
 | `GetRecipeByItemId(itemId)` | Look up recipe by crafted item ID |
 | `GetRecipeByProduct(itemId)` | Find all recipes that produce an item |
 | `GetRecipeDifficulty(recipe, skillLevel)` | Get difficulty color |
+| `GetVendorBuyPrice(itemId)` | Per-unit vendor buy price (copper) for confirmed vendor-stocked reagents, or nil |
+| `GetActiveProfile()` | Active client profile: `"VANILLA"`, `"TBC"`, `"WOTLK"`, or `"SOD"` |
 
 ## Recipe Data Structure
 
@@ -128,7 +127,7 @@ python scripts/fetch_wowhead_sources.py --profession FirstAid
 python scripts/generate_recipes.py --version 2.5.5.65463 --profession FirstAid
 ```
 
-Verified sources are stored in `Data/Sources/TBC/*.json` (gitignored). 55 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`).
+Verified sources are tracked under `Data/Sources/<Bucket>/*.json` for reproducibility. 55 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`). The pipeline is driven per client by the Makefile - `make vanilla-all`, `make wotlk-all`, and `make sod-all` regenerate each bucket from its own pinned game build.
 
 ### Data Sources
 
@@ -142,12 +141,14 @@ Verified sources are stored in `Data/Sources/TBC/*.json` (gitignored). 55 remove
 
 ## Supported Game Versions
 
-- Classic Era
-- Anniversary
-- Hardcore
+One install serves every live Classic-family client - CraftLib detects which one you are on and registers the matching recipe data:
 
-> Season of Discovery recipe data is generated and bundled, but runtime selection of the SoD
-> dataset lands in a later release.
+- Classic Era / Anniversary (Vanilla)
+- Season of Discovery
+- The Burning Crusade Classic
+- Wrath of the Lich King Classic - including the Titan (3.80) seasonal WotLK client
+
+Hardcore runs on the Classic Era client and is covered by the Vanilla data.
 
 ## License
 
