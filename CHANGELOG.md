@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.10.1] - 2026-06-30
+
+### Added
+
+- Interface support for additional Wrath of the Lich King clients: the WotLK 3.4.5 client and the Titan (3.80) WotLK seasonal client now load CraftLib without an out-of-date warning. Titan uses the WotLK recipe data.
+
 ## [0.10.0] - 2026-06-30
 
 ### Added
