@@ -1,8 +1,8 @@
-## Interface: 11508, 20505, 30305, 30403, 30405, 38001
+## Interface: 11508, 20505, 30300, 30403, 30405, 38001
 ## Title: CraftLib
 ## Notes: Comprehensive crafting recipe database for WoW addons
 ## Author: kaldown
-## Version: 0.10.1
+## Version: 0.10.2
 ## IconTexture: Interface\AddOns\CraftLib\icon
 ## SavedVariables: CraftLibDB
 ## X-SavedVariables-Note: Reserved for future use (not currently written to)

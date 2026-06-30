@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.10.2] - 2026-06-30
+
+### Fixed
+- Corrected the WotLK 3.3.5a client interface from 30305 to 30300, so CraftLib is no longer flagged out of date on 3.3.5a realms.
+
 ## [0.10.1] - 2026-06-30
 
 ### Added
