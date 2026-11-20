@@ -266,8 +266,14 @@ def extract_profession_sources(
         if spell_id not in indexes["crafted_items"] and spell_id not in indexes["has_reagents"]:
             continue
 
-        name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
         prev = old_recipes.get(spell_id)
+        # Never replace a curated name with a placeholder: the trainer verifier uses
+        # the sources name as its wrong-page guard. Placeholder only for new entries.
+        name = indexes["spell_names"].get(spell_id) or (prev or {}).get("name")
+        if not name:
+            name = f"Unknown-{spell_id}"
+            print(f"WARNING: spell {spell_id} has no name in this build; using {name}",
+                  file=sys.stderr)
         # Skip detection when the old source is kept anyway: detection can raise on
         # data gaps that a curated source has already resolved.
         if prev is not None and preserve_source(prev.get("source")):
