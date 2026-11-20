@@ -1,5 +1,6 @@
 """Registry-driven behaviour of the verifier, reconcile, audit and gate scripts."""
 import json
+from pathlib import Path
 
 import pytest
 
@@ -194,3 +195,17 @@ def test_audit_scope_compares_bucket_key_not_identity(tmp_path):
     clone = dataclasses.replace(get_bucket("sod"))
     hard, _ = au.audit(tmp_path, clone)
     assert len(hard) == 1
+
+
+@pytest.mark.parametrize("module,argv", [
+    (vt, ["--bucket", "sod", "--profession", "Tailoring"]),
+    (rcb, ["--bucket", "sod", "--all"]),
+    (au, []),
+    (anp, ["--bucket", "sod", "--profession", "Tailoring"]),
+], ids=["verify", "reconcile", "audit", "assert_no_pending"])
+def test_default_sources_dir_is_repo_rooted(module, argv, monkeypatch, tmp_path):
+    # WHY: a cwd-relative default read (and the verifier rewrote) a different tree
+    # depending on where the script was started from.
+    monkeypatch.chdir(tmp_path)
+    repo = Path(__file__).resolve().parents[2]
+    assert module.build_parser().parse_args(argv).sources_dir == repo / "Data" / "Sources"

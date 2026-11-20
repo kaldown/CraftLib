@@ -30,7 +30,7 @@ from pathlib import Path
 
 import wowhead
 from buckets import UnknownProfessionError, add_bucket_argument, get_bucket
-from pipeline_io import atomic_write_json, load_json
+from pipeline_io import InputFileError, atomic_write_json, load_json
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -324,9 +324,21 @@ def process_profession_listview(sources_file, profession, bucket, dry_run: bool)
 
     listview = _extract_listview_spells(content)
     print(f"  Listview rows: {len(listview)}", file=sys.stderr)
+    matched = sum(1 for sid in data["recipes"] if int(sid) in listview)
+    # WHY fail here: a bot-challenge or redesigned page parses to zero rows (or rows that
+    # are not this profession's), which used to read as "nothing to enrich" and exit 0,
+    # so a whole bucket went green without one Wowhead value.
+    if not listview:
+        print(f"  ERROR: bucket '{bucket.key}': no listview rows parsed from {url} "
+              f"(blocked, challenge page or changed page layout)", file=sys.stderr)
+        return 2
+    if data["recipes"] and matched == 0:
+        print(f"  ERROR: bucket '{bucket.key}': none of the {len(data['recipes'])} recipes in "
+              f"{sources_file} appear in the {len(listview)} listview rows of {url}",
+              file=sys.stderr)
+        return 2
     if dry_run:
-        print(f"  Dry run - {len(data['recipes'])} recipes in sources, "
-              f"{sum(1 for sid in data['recipes'] if int(sid) in listview)} matched.",
+        print(f"  Dry run - {len(data['recipes'])} recipes in sources, {matched} matched.",
               file=sys.stderr)
         return 0
 
@@ -368,13 +380,17 @@ def process_profession_listview(sources_file, profession, bucket, dry_run: bool)
 
     # Residual: recipes still PENDING (listview lacked source[]) -> per-spell fallback.
     # generate_recipes.py raises on PENDING sources, so resolve them here.
+    # WHY skip seasonal ones on an exclude_seasonal bucket: generate drops them and
+    # assert_no_pending ignores them there, so fetching them only adds requests that
+    # can fail the run for recipes the bucket never ships.
     residual = [int(sid) for sid, r in data["recipes"].items()
-                if r.get("source", {}).get("certainty") == "PENDING"]
+                if r.get("source", {}).get("certainty") == "PENDING"
+                and not (bucket.exclude_seasonal and r.get("seasonId"))]
     if residual:
         print(f"  Residual PENDING sources: {len(residual)} -> per-spell fallback", file=sys.stderr)
         # Propagate the result: a failed residual fetch used to leave PENDING
         # sources behind while the run exited 0.
-        return process_profession(sources_file, False, residual, bucket, False)
+        return process_profession(sources_file, False, residual, bucket, force=False)
     return 0
 
 
@@ -405,7 +421,7 @@ def process_profession(
     sources_file: Path,
     dry_run: bool,
     specific_spells: list[int] | None,
-    bucket=None,
+    bucket,
     force: bool = False,
 ) -> int:
     """Single-pass Wowhead data fetch for a profession.
@@ -549,7 +565,7 @@ def process_profession(
     return 0
 
 
-def main(argv: list[str] | None = None) -> int:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Fetch recipe data from Wowhead (single-pass: difficulty + source + trainer audit)"
     )
@@ -560,7 +576,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--dry-run", action="store_true", help="Show what would be fetched")
     parser.add_argument("--spells", type=int, nargs="+", help="Specific spell IDs to fetch")
     parser.add_argument("--force", action="store_true", help="Re-fetch all recipes even if already verified")
-    args = parser.parse_args(argv)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
 
     bucket = get_bucket(args.bucket)
     try:
@@ -573,17 +593,21 @@ def main(argv: list[str] | None = None) -> int:
     if not sources_file.exists():
         print(f"ERROR: bucket '{bucket.key}': sources file not found: {sources_file}", file=sys.stderr)
         print("Run extract_db2_sources.py first.", file=sys.stderr)
-        return 1
+        return 2
 
-    if bucket.enrich == "wowhead-listview":
-        try:
-            wowhead.profession_slug(profession)
-        except ValueError as e:
-            print(f"ERROR: bucket '{bucket.key}': {e}", file=sys.stderr)
-            return 1
-        return process_profession_listview(sources_file, profession, bucket, args.dry_run)
+    try:
+        if bucket.enrich == "wowhead-listview":
+            try:
+                wowhead.profession_slug(profession)
+            except ValueError as e:
+                print(f"ERROR: bucket '{bucket.key}': {e}", file=sys.stderr)
+                return 1
+            return process_profession_listview(sources_file, profession, bucket, args.dry_run)
 
-    return process_profession(sources_file, args.dry_run, args.spells, bucket, args.force)
+        return process_profession(sources_file, args.dry_run, args.spells, bucket, args.force)
+    except InputFileError as e:   # the sources file is read before any fetch or write
+        print(f"ERROR: bucket '{bucket.key}': {e}", file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":

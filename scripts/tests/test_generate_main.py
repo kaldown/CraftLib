@@ -1,4 +1,5 @@
 """CLI-level tests: the generator takes its identity from the bucket registry."""
+import json
 import shutil
 import subprocess
 
@@ -78,3 +79,24 @@ def test_main_vendor_prices_only_uses_registry_folder(tmp_path):
     lua = (tmp_path / "out" / "WotLK" / "VendorPrices.lua").read_text()
     assert 'profile = "WOTLK"' in lua
     assert "[2320] = 10," in lua
+
+
+@pytest.mark.parametrize("body", [
+    {"vendorreagents": {"2320": {"name": "Coarse Thread", "verified": True}}},  # misspelled key
+    {},                                                                        # key missing
+    {"vendorReagents": ["2320"]},                                              # wrong shape
+    [],                                                                        # not an object
+], ids=["misspelled", "missing", "list", "top-level-list"])
+def test_vendor_prices_malformed_allowlist_exits_2(tmp_path, capsys, body):
+    # WHY: a missing key used to read as an empty allowlist and emit an empty
+    # VendorPrices.lua, silently dropping every vendor price for the bucket.
+    write_build(tmp_path / "art")
+    src = write_sources(tmp_path / "src", "TBC")
+    (src / "vendor_reagents.json").write_text(json.dumps(body), encoding="utf-8")
+    rc = gr.main(["--bucket", "tbc", "--version", FIXTURE_VERSION,
+                  "--data-dir", str(tmp_path / "art"), "--sources-dir", str(src),
+                  "--output-dir", str(tmp_path / "out"), "--vendor-prices-only"])
+    assert rc == 2
+    err = capsys.readouterr().err
+    assert "vendor_reagents.json" in err and "vendorReagents" in err
+    assert not (tmp_path / "out" / "TBC" / "VendorPrices.lua").exists()

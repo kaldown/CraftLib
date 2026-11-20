@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-"""Resumable, throttled per-spell verifier for the SoD trainer tail (Layer 4).
+"""Resumable, throttled per-spell verifier for a bucket's trainer tail (Layer 4).
 
-For SoD recipes still typed TRAINER/DB2 after cross-bucket reconciliation, fetch
-the per-spell /classic/ page and reconcile against Wowhead's source array:
+Runs for buckets whose registry entry sets verify_trainers (today SoD). For
+recipes still typed TRAINER/DB2 after cross-bucket reconciliation, fetch the
+per-spell page on the bucket's Wowhead subdomain and reconcile against
+Wowhead's source array:
   - [6] or trainingcost -> keep TRAINER (upgrade to WOWHEAD)
-  - [4]/[5]/[2]        -> reclassify QUEST/VENDOR/DROP (flagged needsReview when
-                          the recipe itemId/cost is unknown)
-  - no acquisition evidence on a genuinely-parsed page -> keep TRAINER + needsReview
+  - [5]/[2]/[4]/[10]/[7] -> reclassify VENDOR/DROP/QUEST/STARTER/DISCOVERY (first
+                            match in that order), flagged needsReview
+  - none of those codes on a genuinely-parsed page (empty, crafted-only, or only
+    unmapped codes such as 3/11/12) -> keep TRAINER + needsReview
 
 Never emits PENDING. Idempotent + resumable via a sidecar checkpoint. Atomic
 writes (temp + os.replace) make it Ctrl-C safe. Stdlib only.
@@ -28,9 +31,11 @@ from datetime import date
 from pathlib import Path
 
 from buckets import UnknownProfessionError, add_bucket_argument, get_bucket
-from pipeline_io import atomic_write_json, load_json
+from pipeline_io import InputFileError, atomic_write_json, load_json
 from wowhead import (ACQUISITION_PRIORITY, CRAFTED, HEADERS, TRAINER, fix_js_object,
                      g_spells_extend_pattern, spell_url)
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 _BACKOFF = [5, 15, 45, 120]
 _TERMINAL = {"done", "needsReview"}
@@ -184,15 +189,21 @@ def run(sources_path: Path, state_dir: Path, bucket,
     return 0
 
 
-def main(argv: list[str] | None = None) -> int:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Resumable trainer-tail verifier")
     add_bucket_argument(parser)
     parser.add_argument("--profession", required=True)
-    parser.add_argument("--sources-dir", type=Path, default=Path("Data/Sources"))
+    # Repo-rooted like every other stage: a cwd-relative default rewrote whatever
+    # Data/Sources happened to sit under the current directory.
+    parser.add_argument("--sources-dir", type=Path, default=REPO_ROOT / "Data" / "Sources")
     parser.add_argument("--base-delay", type=float, default=1.5)
     parser.add_argument("--on-block", choices=["sleep", "exit"], default="sleep")
     parser.add_argument("--limit", type=int, default=0)
-    args = parser.parse_args(argv)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
 
     bucket = get_bucket(args.bucket)
     if not bucket.verify_trainers:
@@ -209,8 +220,12 @@ def main(argv: list[str] | None = None) -> int:
     if not sources_path.exists():
         print(f"ERROR: bucket '{bucket.key}': sources file not found: {sources_path}", file=sys.stderr)
         return 2
-    return run(sources_path, state_dir, bucket,
-               base_delay=args.base_delay, on_block=args.on_block, limit=args.limit)
+    try:
+        return run(sources_path, state_dir, bucket,
+                   base_delay=args.base_delay, on_block=args.on_block, limit=args.limit)
+    except InputFileError as e:   # raised by the initial loads, before any fetch
+        print(f"ERROR: bucket '{bucket.key}': {e}", file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":

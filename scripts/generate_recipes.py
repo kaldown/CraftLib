@@ -6,7 +6,6 @@ Usage:
 """
 
 import argparse
-import json
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -15,7 +14,7 @@ import db2
 from buckets import (BUCKETS, PROFESSIONS, Profession, UnknownProfessionError,
                      add_bucket_argument, get_bucket)
 from db2 import CanaryError, ColumnContractError
-from pipeline_io import atomic_write_text
+from pipeline_io import atomic_write_text, load_json
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -47,8 +46,7 @@ def load_exceptions(path: Path, bucket) -> Exceptions:
     path = Path(path)
     if not path.is_file():
         return Exceptions()
-    with open(path, encoding="utf-8") as f:
-        raw = json.load(f)
+    raw = load_json(path)
     result = {k: {} for k in EXCEPTION_CATEGORIES.values()}
     for key, body in raw.items():
         if key == "_doc":
@@ -94,8 +92,7 @@ def load_verified_sources(sources_dir: Path, profession_name: str) -> dict | Non
     if not sources_file.exists():
         return None
 
-    with open(sources_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_json(sources_file)
 
     # Convert to spell_id -> full recipe data lookup (includes source and difficulty)
     return {
@@ -106,9 +103,17 @@ def load_verified_sources(sources_dir: Path, profession_name: str) -> dict | Non
 
 
 def load_vendor_reagents(path: Path) -> dict:
-    """Load the curated allowlist: itemIdStr -> {name, verified, flavors?}."""
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f).get("vendorReagents", {})
+    """Load the curated allowlist: itemIdStr -> {name, verified, flavors?}.
+
+    Strict on purpose (like pipeline_io.load_keep_trainer): a missing or misspelled
+    key must not read as an empty allowlist, or the bucket would ship an empty
+    VendorPrices.lua and every vendor reagent would silently lose its price.
+    """
+    data = load_json(path)
+    if not isinstance(data, dict) or not isinstance(data.get("vendorReagents"), dict):
+        raise GenerateError(f"{path}: expected an object with a 'vendorReagents' object "
+                            f"(itemId -> {{name, verified}})")
+    return data["vendorReagents"]
 
 
 def load_item_details(data_dir: Path, bucket) -> dict:
@@ -240,8 +245,7 @@ def load_removed(sources_dir: Path, bucket) -> dict[str, set[str]]:
         # Registry names this file, so its absence is a config error, not "nothing removed".
         raise FileNotFoundError(
             f"bucket '{bucket.key}': removed-recipes file {bucket.removed_recipes} not found at {path}")
-    with open(path, encoding="utf-8") as f:
-        removed_data = json.load(f)
+    removed_data = load_json(path)
     removed = {name: {str(r["spellId"]) for r in recs}
                for name, recs in removed_data.get("recipes", {}).items()}
     print(f"Loaded {sum(len(v) for v in removed.values())} removed recipes from {bucket.removed_recipes}",
@@ -671,7 +675,7 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
     return "\n".join(lines)
 
 
-def main(argv: list[str] | None = None) -> int:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Generate CraftLib recipes from DB2")
     add_bucket_argument(parser)
     parser.add_argument("--version", help="DB2 build version (default: the bucket's pinned build)")
@@ -684,7 +688,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--profession", help="Generate only this profession (optional)")
     parser.add_argument("--vendor-prices-only", action="store_true",
                         help="Emit only Data/<Bucket>/VendorPrices.lua (skips recipe generation)")
-    args = parser.parse_args(argv)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
 
     bucket = get_bucket(args.bucket)
     version = args.version or bucket.build

@@ -44,15 +44,71 @@ def test_main_per_spell_failure_exits_2(monkeypatch, tmp_path):
                     "--sources-dir", str(tmp_path)]) == 2
 
 
-def test_listview_residual_failure_propagates(monkeypatch, tmp_path):
+def _residual_run(monkeypatch, tmp_path, bucket, folder, extra):
+    """Listview run where 2385 matches and `extra` recipes do not; returns (rc, fetched ids)."""
     html = (FIXTURES / "tailoring_listview.html").read_text(encoding="utf-8")
     monkeypatch.setattr(fw, "_fetch_page", lambda url, *a, **k: html)
-    monkeypatch.setattr(fw, "fetch_wowhead_spell", lambda sid, bucket: None)
+    fetched = []
+    monkeypatch.setattr(fw, "fetch_wowhead_spell", lambda sid, b: fetched.append(sid))
     monkeypatch.setattr(fw.time, "sleep", lambda s: None)
-    _write(tmp_path / "SoD" / "Tailoring.json",
-           {"999999": _recipe("Gone", {"type": "PENDING", "certainty": "PENDING"})})
+    _write(tmp_path / folder / "Tailoring.json", {"2385": _recipe("Brown Linen Vest"), **extra})
+    rc = fw.main(["--bucket", bucket, "--profession", "Tailoring", "--sources-dir", str(tmp_path)])
+    return rc, fetched
+
+
+def test_listview_residual_failure_propagates(monkeypatch, tmp_path):
+    rc, fetched = _residual_run(monkeypatch, tmp_path, "sod", "SoD", {
+        "999999": _recipe("Gone", {"type": "PENDING", "certainty": "PENDING"})})
+    assert fetched == [999999]  # the 2 comes from the residual fetch, not the listview checks
+    assert rc == 2
+
+
+SEASONAL_PENDING = {"999999": {"name": "Rune Thing", "seasonId": 2,
+                               "source": {"type": "PENDING", "certainty": "PENDING"}}}
+
+
+def test_listview_residual_skips_seasonal_on_exclude_seasonal_bucket(monkeypatch, tmp_path):
+    rc, fetched = _residual_run(monkeypatch, tmp_path, "vanilla", "Vanilla", SEASONAL_PENDING)
+    assert fetched == [] and rc == 0
+
+
+def test_listview_residual_keeps_seasonal_when_bucket_includes_them(monkeypatch, tmp_path):
+    rc, fetched = _residual_run(monkeypatch, tmp_path, "sod", "SoD", SEASONAL_PENDING)
+    assert fetched == [999999] and rc == 2
+
+
+CHALLENGE = "<html><head><title>Just a moment...</title></head><body>challenge</body></html>"
+
+
+@pytest.mark.parametrize("html,recipes", [
+    (CHALLENGE, {"2385": _recipe("Brown Linen Vest")}),          # no listview at all
+    ("var listviewspells = [];", {"2385": _recipe("Brown Linen Vest")}),  # empty listview
+    (None, {"999999": _recipe("Not On The Page")}),            # rows, but none of ours
+], ids=["challenge-page", "empty-listview", "no-matching-spell"])
+def test_listview_without_usable_rows_exits_2(monkeypatch, tmp_path, capsys, html, recipes):
+    page = html if html is not None else (FIXTURES / "tailoring_listview.html").read_text(encoding="utf-8")
+    monkeypatch.setattr(fw, "_fetch_page", lambda url, *a, **k: page)
+    monkeypatch.setattr(fw, "fetch_wowhead_spell",
+                        lambda sid, b: pytest.fail("must not fall back per spell"))
+    f = tmp_path / "SoD" / "Tailoring.json"
+    _write(f, recipes)
+    before = f.read_bytes()
     assert fw.main(["--bucket", "sod", "--profession", "Tailoring",
                     "--sources-dir", str(tmp_path)]) == 2
+    assert "https://www.wowhead.com/classic/spells/professions/tailoring" in capsys.readouterr().err
+    assert f.read_bytes() == before
+
+
+def test_missing_sources_file_exits_2(tmp_path, capsys):
+    assert fw.main(["--bucket", "tbc", "--profession", "Tailoring",
+                    "--sources-dir", str(tmp_path)]) == 2
+    assert "Tailoring.json" in capsys.readouterr().err
+
+
+def test_process_profession_requires_bucket():
+    import inspect
+    param = inspect.signature(fw.process_profession).parameters["bucket"]
+    assert param.default is inspect.Parameter.empty
 
 
 def test_main_unknown_bucket_rejected():

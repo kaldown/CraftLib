@@ -32,9 +32,18 @@ def atomic_write_json(path: Path, data) -> None:
     atomic_write_text(path, json.dumps(data, indent=2))
 
 
+class InputFileError(ValueError):
+    """An input file that exists but is not valid JSON (exit 2: input-data error)."""
+
+
 def load_json(path: Path):
-    with open(path, encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except json.JSONDecodeError as e:
+        # WHY re-raise: JSONDecodeError names only a line/column, and uncaught it exits 1
+        # with a traceback, which reads like a gate finding. Callers map this to exit 2.
+        raise InputFileError(f"{path}: malformed JSON ({e})") from None
 
 
 class KeepTrainerError(ValueError):

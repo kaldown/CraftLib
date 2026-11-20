@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 """Cross-bucket source reconciliation (Layer 1).
 
-Corrects over-confident SoD TRAINER/DB2 source guesses by inheriting the
-Wowhead-verified non-trainer source of the SAME spell from the DEFAULT (TBC)
-bucket. Deterministic and idempotent: re-derived from DEFAULT sources every run,
-so it does not depend on extract's preserve list.
+For a bucket whose registry entry names a reconcile_parent (today SoD, parent
+TBC), corrects over-confident TRAINER source guesses by inheriting the parent's
+trusted non-trainer source (buckets.INHERIT_CERTAINTY) of the SAME spell, when the
+child bucket's own DB2 build corroborates it (the plan item exists; for VENDOR and
+REPUTATION also its cost/faction; STARTER/DISCOVERY need no item).
+
+Inherited sources are written with certainty CROSS, which extract preserves on a
+re-extract, so they persist across runs: a later correction in the parent bucket
+does not reach an already-inherited child source. Re-deriving one needs an
+explicit reset of that source (back to TRAINER/DB2) before reconcile runs again.
+Deterministic and idempotent on unchanged inputs.
 
 Usage:
     python scripts/reconcile_cross_bucket.py --bucket sod --profession Leatherworking
@@ -17,7 +24,8 @@ from pathlib import Path
 from buckets import (INHERIT_CERTAINTY, INHERIT_TYPES, UnknownProfessionError,
                      add_bucket_argument, get_bucket)
 from db2 import ColumnContractError, load_csv_checked
-from pipeline_io import KeepTrainerError, atomic_write_json, load_json, load_keep_trainer
+from pipeline_io import (InputFileError, KeepTrainerError, atomic_write_json, load_json,
+                         load_keep_trainer)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -42,7 +50,7 @@ def load_itemsparse(path) -> dict:
 
 
 def _corroborated(source: dict, itemsparse: dict) -> bool:
-    """True only when the SoD/Era DB2 confirms the inherited source's plan item + cost/faction."""
+    """True only when the child bucket's DB2 confirms the inherited source's plan item + cost/faction."""
     if source.get("type") in ("STARTER", "DISCOVERY"):
         return True   # structural source: no cost/faction to cross-check (Wowhead-verified in the default bucket)
     item_id = source.get("itemId")
@@ -70,7 +78,7 @@ def _created_item(recipe: dict):
 
 
 def build_default_index(default_path: Path) -> dict:
-    """spellId -> {source, created} for inherit-eligible non-trainer DEFAULT recipes."""
+    """spellId -> {source, created} for inherit-eligible non-trainer parent-bucket recipes."""
     index = {}
     for sid, recipe in load_json(default_path).get("recipes", {}).items():
         s = recipe.get("source", {})
@@ -112,14 +120,19 @@ def reconcile_profession(sod_path, default_path, allowlist, itemsparse) -> tuple
     return inherited, len(recipes), needs_review
 
 
-def main(argv: list[str] | None = None) -> int:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Cross-bucket source reconciliation")
     add_bucket_argument(parser)  # the CHILD bucket; its parent comes from the registry
     parser.add_argument("--profession", help="Profession name (e.g. Leatherworking)")
     parser.add_argument("--all", action="store_true", help="Reconcile all of the bucket's professions")
-    parser.add_argument("--sources-dir", type=Path, default=Path("Data/Sources"))
+    # Repo-rooted like every other stage (a cwd-relative default depended on where it ran).
+    parser.add_argument("--sources-dir", type=Path, default=REPO_ROOT / "Data" / "Sources")
     parser.add_argument("--db2-itemsparse", type=Path, default=None)
-    args = parser.parse_args(argv)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
 
     child = get_bucket(args.bucket)
     if child.reconcile_parent is None:
@@ -143,6 +156,11 @@ def main(argv: list[str] | None = None) -> int:
             if not f.exists():
                 print(f"ERROR: bucket '{child.key}': sources file missing: {f}", file=sys.stderr)
                 return 2
+            try:
+                load_json(f)   # parse now: a malformed later file must not leave earlier ones rewritten
+            except InputFileError as e:
+                print(f"ERROR: bucket '{child.key}': {e}", file=sys.stderr)
+                return 2
         paths[prof] = (args.sources_dir / child.folder / f"{prof}.json",
                        args.sources_dir / parent.folder / f"{prof}.json")
 
@@ -154,7 +172,7 @@ def main(argv: list[str] | None = None) -> int:
             return 2
         try:
             allowlist = load_keep_trainer(keep_path)
-        except KeepTrainerError as e:
+        except (KeepTrainerError, InputFileError) as e:
             print(f"ERROR: bucket '{child.key}': {e}", file=sys.stderr)
             return 2
 

@@ -9,6 +9,8 @@ Two checks, offline:
      same-spell entry is a trusted non-trainer source (created items agree) is flagged.
 
 Exit 1 on any hard finding unless --warn-only. needsReview entries are warnings.
+Exit 2 on an input error: a sources folder the registry does not know, a missing
+bucket folder, parent twin or keep-trainer file, or a malformed JSON file.
 """
 import argparse
 import glob
@@ -18,8 +20,10 @@ from pathlib import Path
 
 from buckets import (BUCKETS, INHERIT_CERTAINTY, INHERIT_TYPES, UnknownBucketError,
                      bucket_for_folder)
-from pipeline_io import KeepTrainerError, load_json, load_keep_trainer
+from pipeline_io import InputFileError, KeepTrainerError, load_json, load_keep_trainer
 from wowhead import EXPECTED_CODE as EXPECT
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def _created(recipe):
@@ -146,12 +150,17 @@ def audit(sources_dir: Path, only_bucket=None):
     return hard, warn
 
 
-def main(argv: list[str] | None = None) -> int:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Audit recipe source classifications")
-    parser.add_argument("--sources-dir", type=Path, default=Path("Data/Sources"))
+    # Repo-rooted like every other stage (a cwd-relative default depended on where it ran).
+    parser.add_argument("--sources-dir", type=Path, default=REPO_ROOT / "Data" / "Sources")
     parser.add_argument("--bucket", choices=list(BUCKETS), help="Restrict the audit to one bucket")
     parser.add_argument("--warn-only", action="store_true", help="Exit 0 even on hard findings")
-    args = parser.parse_args(argv)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
 
     only = BUCKETS[args.bucket] if args.bucket else None
     try:
@@ -160,7 +169,7 @@ def main(argv: list[str] | None = None) -> int:
             bucket_for_folder(p.parent.name)
         validate_inputs(args.sources_dir, only)
         hard, warn = audit(args.sources_dir, only)
-    except (UnknownBucketError, AuditInputError, KeepTrainerError) as e:
+    except (UnknownBucketError, AuditInputError, KeepTrainerError, InputFileError) as e:
         print(f"ERROR: {e}", file=sys.stderr)
         return 2
     for f in warn:

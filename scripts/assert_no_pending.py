@@ -16,17 +16,21 @@ import sys
 from pathlib import Path
 
 from buckets import UnknownProfessionError, add_bucket_argument, get_bucket
-from pipeline_io import load_json
+from pipeline_io import InputFileError, load_json
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
-def main(argv: list[str] | None = None) -> int:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Fail if any source is still PENDING")
     add_bucket_argument(parser)
     parser.add_argument("--profession", required=True)
     parser.add_argument("--sources-dir", type=Path, default=REPO_ROOT / "Data" / "Sources")
-    args = parser.parse_args(argv)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
 
     bucket = get_bucket(args.bucket)
     try:
@@ -38,7 +42,11 @@ def main(argv: list[str] | None = None) -> int:
     if not path.is_file():
         print(f"ERROR: bucket '{bucket.key}': sources file not found: {path}", file=sys.stderr)
         return 2
-    data = load_json(path)
+    try:
+        data = load_json(path)
+    except InputFileError as e:
+        print(f"ERROR: bucket '{bucket.key}': {e}", file=sys.stderr)
+        return 2
     pending = []
     for sid, r in data.get("recipes", {}).items():
         if r.get("source", {}).get("certainty") != "PENDING":

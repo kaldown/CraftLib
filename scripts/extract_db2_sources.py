@@ -128,8 +128,10 @@ def build_indexes(data_dir: Path, bucket, check: bool = True) -> dict:
 def add_fallback_indexes(indexes: dict, fallback_dir: Path) -> None:
     """Populate fallback recipe_items + item_details from another DB2 build."""
     fallback_dir = Path(fallback_dir)
-    if not fallback_dir.exists():
-        return
+    if not fallback_dir.is_dir():
+        # WHY raise (not skip): a skipped fallback turns every recipe it would have
+        # marked PENDING into a confident TRAINER/DB2 guess.
+        raise FileNotFoundError(f"fallback data directory not found: {fallback_dir}")
     item_sparse = load_csv_checked(fallback_dir / "ItemSparse.csv", "ItemSparse",
                                    REQUIRED_COLUMNS["ItemSparse"])
     details = {row["ID"]: row for row in item_sparse}
@@ -294,7 +296,7 @@ def extract_profession_sources(
     return doc, orphans
 
 
-def main(argv: list[str] | None = None) -> int:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Extract recipe sources from DB2")
     add_bucket_argument(parser)
     parser.add_argument("--profession", required=True, help="Profession name, key or folder")
@@ -306,7 +308,11 @@ def main(argv: list[str] | None = None) -> int:
                         help="Base directory; writes <output-dir>/<Bucket>/<Profession>.json")
     parser.add_argument("--fallback-version", default=None,
                         help="DB2 build to consult for missing ItemEffect links (e.g. 2.5.5.65895)")
-    args = parser.parse_args(argv)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
 
     bucket = get_bucket(args.bucket)
     try:
@@ -321,14 +327,22 @@ def main(argv: list[str] | None = None) -> int:
         print(f"ERROR: bucket '{bucket.key}': data directory not found: {data_dir}", file=sys.stderr)
         return 1
 
+    # Same rule as the main build directory: a mistyped fallback build is a config error,
+    # checked before anything is read or written.
+    fallback_dir = args.data_dir / args.fallback_version if args.fallback_version else None
+    if fallback_dir is not None and not fallback_dir.is_dir():
+        print(f"ERROR: bucket '{bucket.key}': fallback data directory not found: {fallback_dir}",
+              file=sys.stderr)
+        return 1
+
     output_file = args.output_dir / bucket.folder / f"{profession.folder}.json"
 
     try:
         existing = load_existing_sources(output_file)
         print(f"Loading DB2 data from {data_dir}...", file=sys.stderr)
         indexes = build_indexes(data_dir, bucket)
-        if args.fallback_version:
-            add_fallback_indexes(indexes, args.data_dir / args.fallback_version)
+        if fallback_dir is not None:
+            add_fallback_indexes(indexes, fallback_dir)
         print(
             f"Built indexes: {len(indexes['spell_names'])} spells, "
             f"{len(indexes['recipe_items'])} recipe items",
