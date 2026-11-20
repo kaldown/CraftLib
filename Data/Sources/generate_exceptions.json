@@ -350,7 +350,7 @@
           1223789,
           1223791
         ],
-        "reason": "Season of Discovery trainer-tail verifier (scripts/verify_trainer_sources.py) found no non-trainer acquisition code on the Wowhead spell page and kept the recipe as trainer-taught, flagged for review. Shipped this way since 0.8.0; still unverified, to be re-checked with the SoD source correction."
+        "reason": "Season of Discovery trainer-tail verifier (scripts/verify_trainer_sources.py) found no vendor, drop, quest, starter or discovery code on the Wowhead spell page and kept the recipe as trainer-taught, flagged for review. Shipped this way since 0.8.0; still unverified, to be re-checked with the SoD source correction."
       },
       {
         "spells": [
