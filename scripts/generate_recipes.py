@@ -2,7 +2,7 @@
 """Generate CraftLib recipe Lua files from DB2 data.
 
 Usage:
-    python generate_recipes.py --version 2.5.5.65463 --expansion 2
+    python generate_recipes.py --bucket tbc
 """
 
 import argparse
@@ -11,21 +11,13 @@ import json
 import sys
 from pathlib import Path
 
+import db2
+from buckets import (PROFESSIONS, Profession, UnknownProfessionError,
+                     add_bucket_argument, get_bucket)
+from db2 import CanaryError, ColumnContractError
+from pipeline_io import atomic_write_text
 
-# Profession SkillLine IDs
-PROFESSIONS = {
-    129: {"key": "firstAid", "name": "First Aid", "constant": "FIRST_AID"},
-    185: {"key": "cooking", "name": "Cooking", "constant": "COOKING"},
-    171: {"key": "alchemy", "name": "Alchemy", "constant": "ALCHEMY"},
-    164: {"key": "blacksmithing", "name": "Blacksmithing", "constant": "BLACKSMITHING"},
-    333: {"key": "enchanting", "name": "Enchanting", "constant": "ENCHANTING"},
-    202: {"key": "engineering", "name": "Engineering", "constant": "ENGINEERING"},
-    755: {"key": "jewelcrafting", "name": "Jewelcrafting", "constant": "JEWELCRAFTING"},
-    165: {"key": "leatherworking", "name": "Leatherworking", "constant": "LEATHERWORKING"},
-    197: {"key": "tailoring", "name": "Tailoring", "constant": "TAILORING"},
-    186: {"key": "mining", "name": "Mining", "constant": "MINING"},
-    773: {"key": "inscription", "name": "Inscription", "constant": "INSCRIPTION"},
-}
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def escape_lua_string(s: str) -> str:
@@ -61,23 +53,19 @@ def load_csv(path: Path) -> list[dict]:
         return list(csv.DictReader(f))
 
 
-# Build-time path to the curated vendor-reagent allowlist (see Data/Sources/vendor_reagents.json).
-VENDOR_REAGENTS_PATH = Path(__file__).parent.parent / "Data" / "Sources" / "vendor_reagents.json"
-
-
-def load_vendor_reagents(path: Path = VENDOR_REAGENTS_PATH) -> dict:
+def load_vendor_reagents(path: Path) -> dict:
     """Load the curated allowlist: itemIdStr -> {name, verified, flavors?}."""
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f).get("vendorReagents", {})
 
 
-def load_item_details(data_dir: Path) -> dict:
-    """itemIdStr -> ItemSparse row (only the columns we need exist on every build)."""
-    return {row["ID"]: row for row in load_csv(data_dir / "ItemSparse.csv")}
+def load_item_details(data_dir: Path, bucket) -> dict:
+    """itemIdStr -> ItemSparse row (column contract enforced by db2.load_table)."""
+    return {row["ID"]: row for row in db2.load_table(data_dir, "ItemSparse", bucket)}
 
 
-def compute_vendor_prices(allowlist: dict, item_details: dict, flavor: str) -> list[dict]:
-    """Per-unit vendor BUY prices for the allowlisted reagents present in this flavor.
+def compute_vendor_prices(allowlist: dict, item_details: dict, scope: str) -> list[dict]:
+    """Per-unit vendor BUY prices for the allowlisted reagents present in this vendor scope.
 
     WHY divide by VendorStackCount: DB2 BuyPrice is the price for one VendorStackCount
     BATCH, not per unit; vials sell in stacks of 5, so storing the raw value would
@@ -91,21 +79,21 @@ def compute_vendor_prices(allowlist: dict, item_details: dict, flavor: str) -> l
         flavors = meta.get("flavors")
         # WHY skip (not fail) when flavor-scoped out: a DEFAULT-only reagent (e.g. Simple
         # Flour, absent from the Era/SoD build) must be ABSENT from the SoD table, not an error.
-        if flavors and flavor not in flavors:
+        if flavors and scope not in flavors:
             continue
         name = meta.get("name", f"item {item_id_str}")
         row = item_details.get(item_id_str)
         if row is None:
             raise ValueError(
                 f"Vendor reagent '{name}' (item {item_id_str}) is allowlisted but absent "
-                f"from ItemSparse for flavor {flavor}; recover the true price or align the "
+                f"from ItemSparse for scope {scope}; recover the true price or align the "
                 f"allowlist before release (data-truth)."
             )
         buy_price = int(row.get("BuyPrice") or 0)
         if buy_price <= 0:
             raise ValueError(
                 f"Vendor reagent '{name}' (item {item_id_str}) has BuyPrice<=0 in ItemSparse "
-                f"(flavor {flavor}); cannot derive a true vendor price - align before release "
+                f"(scope {scope}); cannot derive a true vendor price - align before release "
                 f"(data-truth)."
             )
         vsc = max(1, int(row.get("VendorStackCount") or 1))
@@ -121,16 +109,10 @@ def compute_vendor_prices(allowlist: dict, item_details: dict, flavor: str) -> l
     return entries
 
 
-def generate_vendor_prices_lua(entries: list[dict], profile_token: str) -> str:
-    """Emit Data/<Profile>/VendorPrices.lua text for the computed entries.
-
-    profile_token is the runtime PROFILE tag ("SOD"/"VANILLA"/"TBC"/"WOTLK"), not a flavor
-    string - it both selects the display folder and is emitted as the load-guard field.
-    """
-    # Map profile token to its display folder name so the header comment is correct for all profiles.
-    # (The old code hardcoded "SoD"/"TBC", which mislabeled WotLK and Vanilla as "TBC".)
-    _FOLDER = {"SOD": "SoD", "VANILLA": "Vanilla", "TBC": "TBC", "WOTLK": "WotLK", "CATA": "Cata"}
-    folder = _FOLDER.get(profile_token, "TBC")
+def generate_vendor_prices_lua(entries: list[dict], bucket) -> str:
+    """Emit Data/<Folder>/VendorPrices.lua text; folder and load-guard profile come from the registry."""
+    folder = bucket.folder
+    profile_token = bucket.profile
     lines = [
         f"-- Data/{folder}/VendorPrices.lua",
         "-- AUTO-GENERATED by scripts/generate_recipes.py (--vendor-prices-only). Do not edit by hand.",
@@ -160,58 +142,59 @@ def generate_vendor_prices_lua(entries: list[dict], profile_token: str) -> str:
     return "\n".join(lines)
 
 
-def emit_vendor_prices(item_details: dict, profile_token: str, exp_name: str, output_dir: Path,
-                       allowlist_path: Path = VENDOR_REAGENTS_PATH) -> Path:
-    """Compute + write Data/<exp_name>/VendorPrices.lua; warn loudly on unverified entries."""
+def emit_vendor_prices(item_details: dict, bucket, output_dir: Path, allowlist_path: Path) -> Path:
+    """Compute + write Data/<folder>/VendorPrices.lua; warn loudly on unverified entries."""
     allowlist = load_vendor_reagents(allowlist_path)
-    # WHY the flavor mapping: the allowlist 'flavors' field uses the LEGACY DEFAULT/SOD vocabulary,
-    # but the runtime guard now keys on the 4-value PROFILE (VANILLA/TBC/WOTLK/SOD). The continuous
-    # TBC/WotLK tiers share the DEFAULT scoping. VANILLA and SOD both use the Era DB2 build
-    # (1.15.8.x), so reagents absent from that build (e.g. Simple Flour/30817, which only exists
-    # in TBC ItemSparse) must be excluded from BOTH; this is enforced by mapping VANILLA -> "SOD"
-    # for the allowlist scoping check (flavors:["DEFAULT"] items skip the Era build). The EMITTED
-    # guard tag still carries the real PROFILE so the right client loads it.
-    if profile_token in ("SOD", "VANILLA"):
-        flavor = "SOD"   # both use the Era build; DEFAULT-only reagents (e.g. Simple Flour) must be absent
-    else:
-        flavor = "DEFAULT"
-    entries = compute_vendor_prices(allowlist, item_details, flavor)  # may fail loud
+    # WHY bucket.vendor_scope: the allowlist 'flavors' field uses the legacy DEFAULT/SOD
+    # vocabulary. Vanilla and SoD share the Era build, where DEFAULT-only reagents (e.g.
+    # Simple Flour) are absent, so both scope to "SOD"; the emitted guard tag still
+    # carries the real profile.
+    entries = compute_vendor_prices(allowlist, item_details, bucket.vendor_scope)  # may fail loud
     unverified = [e for e in entries if not e["verified"]]
     if unverified:
         names = ", ".join(f"{e['name']}({e['itemId']})" for e in unverified)
         print(f"  NOTE: {len(unverified)} vendor reagents are NOT in-game verified yet "
               f"(verified:false) - confirm before release: {names}", file=sys.stderr)
-    lua = generate_vendor_prices_lua(entries, profile_token)
-    out_dir = output_dir / exp_name
+    lua = generate_vendor_prices_lua(entries, bucket)
+    out_dir = output_dir / bucket.folder
     out_dir.mkdir(parents=True, exist_ok=True)
     out_file = out_dir / "VendorPrices.lua"
-    out_file.write_text(lua)
+    atomic_write_text(out_file, lua)
     print(f"Generated {out_file}: {len(entries)} vendor reagents", file=sys.stderr)
     return out_file
 
 
-def load_all_data(data_dir: Path) -> dict:
-    """Load all required CSV tables."""
+def load_all_data(data_dir: Path, bucket) -> dict:
+    """Load the DB2 tables the generator reads, through the column contract.
+
+    Spell/Item/SkillLine are not loaded: they were never read.
+    """
     print(f"Loading data from {data_dir}...", file=sys.stderr)
-
     data = {}
-
-    # Load each table
-    tables = [
-        "Spell", "SpellName", "SpellEffect", "SpellReagents",
-        "Item", "ItemSparse", "SkillLine", "SkillLineAbility",
-        "ItemEffect", "Faction"
-    ]
-
-    for table in tables:
-        path = data_dir / f"{table}.csv"
-        if not path.exists():
-            raise FileNotFoundError(f"Required DB2 table not found: {path}")
-        else:
-            data[table] = load_csv(path)
-            print(f"  Loaded {table}: {len(data[table])} rows", file=sys.stderr)
-
+    for table in ("SpellName", "SpellEffect", "SpellReagents", "ItemSparse",
+                  "SkillLineAbility", "ItemEffect", "Faction"):
+        data[table] = db2.load_table(data_dir, table, bucket)
+        print(f"  Loaded {table}: {len(data[table])} rows", file=sys.stderr)
     return data
+
+
+def load_removed(sources_dir: Path, bucket) -> dict[str, set[str]]:
+    """profession display name -> removed spell ids; {} when the bucket names no list."""
+    if bucket.removed_recipes is None:
+        print(f"Bucket '{bucket.key}' has no removed-recipes list; none applied.", file=sys.stderr)
+        return {}
+    path = sources_dir / bucket.removed_recipes
+    if not path.is_file():
+        # Registry names this file, so its absence is a config error, not "nothing removed".
+        raise FileNotFoundError(
+            f"bucket '{bucket.key}': removed-recipes file {bucket.removed_recipes} not found at {path}")
+    with open(path, encoding="utf-8") as f:
+        removed_data = json.load(f)
+    removed = {name: {str(r["spellId"]) for r in recs}
+               for name, recs in removed_data.get("recipes", {}).items()}
+    print(f"Loaded {sum(len(v) for v in removed.values())} removed recipes from {bucket.removed_recipes}",
+          file=sys.stderr)
+    return removed
 
 
 def build_indexes(data: dict) -> dict:
@@ -300,11 +283,10 @@ def build_trivial_ranks(data: dict) -> dict:
 def extract_recipes(
     data: dict,
     indexes: dict,
-    skill_line_id: int,
-    verified_sources: dict = None,
-    removed: set[str] = None,
-    force_expansion: str | None = None,
-    exclude_seasonal: bool = False,
+    profession: Profession,
+    bucket,
+    verified_sources: dict | None = None,
+    removed: set[str] | None = None,
 ) -> tuple[list[dict], list[dict]]:
     """Extract recipes for a profession from SkillLineAbility.
 
@@ -312,6 +294,9 @@ def extract_recipes(
         Tuple of (recipes, skipped_recipes) where skipped_recipes are those
         without verified difficulty data (likely removed/never-implemented).
     """
+    skill_line_id = profession.skill_line
+    force_expansion = bucket.fixed_expansion
+    exclude_seasonal = bucket.exclude_seasonal
     recipes = []
     skipped_recipes = []
     # WHY seen_spell_ids: WotLK SkillLineAbility carries class-specific duplicate rows for the
@@ -496,15 +481,13 @@ def extract_recipes(
     return recipes, skipped_recipes
 
 
-def generate_lua(recipes: list[dict], profession: dict, expansion: int, flavor=None) -> str:
+def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
     """Generate Lua code for recipes."""
-    is_sod = (flavor == "sod")
-    # Client PROFILE tag the runtime load-guard keys on (one cumulative bucket per profile).
-    profile = "SOD" if is_sod else {1: "VANILLA", 2: "TBC", 3: "WOTLK", 4: "CATA"}.get(expansion, "TBC")
-    exp_name = "SoD" if is_sod else {1: "Vanilla", 2: "TBC", 3: "WotLK", 4: "Cata"}.get(expansion, "TBC")
-    prof_name = profession["name"]
-    prof_key = profession["key"]
-    prof_constant = profession["constant"]
+    profile = bucket.profile
+    exp_name = bucket.folder
+    prof_name = profession.name
+    prof_key = profession.key
+    prof_constant = profession.constant
 
     lines = [
         f"-- Data/{exp_name}/{prof_name.replace(' ', '')}/Recipes.lua",
@@ -597,18 +580,11 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int, flavor=N
     lines.append("}")
     lines.append("")
 
-    # Milestones per client profile (drives the cap LazyProf levels to).
-    _MILESTONES = {
-        "VANILLA": "{ 75, 150, 225, 300 }",
-        "SOD":     "{ 75, 150, 225, 300 }",
-        "TBC":     "{ 75, 150, 225, 300, 375 }",
-        "WOTLK":   "{ 75, 150, 225, 300, 375, 450 }",
-    }
-    milestones = _MILESTONES.get(profile, "{ 75, 150, 225, 300 }")
+    milestones = "{ " + ", ".join(str(m) for m in bucket.milestones) + " }"
 
     # Highest expansion tier present among this bucket's recipes.
     _EXP_ORDER = {"VANILLA": 1, "TBC": 2, "WOTLK": 3, "CATA": 4, "MOP": 5, "SOD": 12}
-    max_exp = "SOD" if is_sod else max(
+    max_exp = bucket.fixed_expansion or max(
         (r["expansion"] for r in recipes),
         key=lambda e: _EXP_ORDER.get(e, 0), default="VANILLA")
 
@@ -625,125 +601,91 @@ def generate_lua(recipes: list[dict], profession: dict, expansion: int, flavor=N
     return "\n".join(lines)
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Generate CraftLib recipes from DB2")
-    parser.add_argument("--version", required=True, help="Build version (e.g., 2.5.5.65463)")
-    parser.add_argument("--expansion", type=int, default=2, help="Expansion number (default: 2 for TBC)")
-    parser.add_argument("--data-dir", type=Path, default=Path("artifacts"),
+    add_bucket_argument(parser)
+    parser.add_argument("--version", help="DB2 build version (default: the bucket's pinned build)")
+    parser.add_argument("--data-dir", type=Path, default=REPO_ROOT / "vendor" / "db2-parser" / "artifacts",
                         help="DB2 artifacts directory")
-    parser.add_argument("--output-dir", type=Path, default=Path("Data"),
+    parser.add_argument("--sources-dir", type=Path, default=REPO_ROOT / "Data" / "Sources",
+                        help="Directory holding <Bucket>/<Prof>.json, removed_recipes.json, vendor_reagents.json")
+    parser.add_argument("--output-dir", type=Path, default=REPO_ROOT / "Data",
                         help="Output directory for Lua files")
     parser.add_argument("--profession", help="Generate only this profession (optional)")
-    parser.add_argument("--flavor", help="Data flavor (e.g. 'sod'); selects SoD folder + flavor tag")
     parser.add_argument("--vendor-prices-only", action="store_true",
-                        help="Emit only Data/<Flavor>/VendorPrices.lua (skips recipe generation)")
-    parser.add_argument("--exclude-seasonal", action="store_true",
-                        help="Skip recipes whose source JSON carries a truthy seasonId. "
-                             "Use for the Vanilla bucket: the Era build's Wowhead /classic "
-                             "data includes SoD-season recipes (seasonId==2) that do not "
-                             "exist on a non-SoD Era/Vanilla client. Default OFF so "
-                             "TBC/WotLK/SoD generation is unaffected.")
-    args = parser.parse_args()
+                        help="Emit only Data/<Bucket>/VendorPrices.lua (skips recipe generation)")
+    args = parser.parse_args(argv)
 
-    # Build data path
-    data_dir = args.data_dir / args.version
+    bucket = get_bucket(args.bucket)
+    version = args.version or bucket.build
+    data_dir = args.data_dir / version
     if not data_dir.exists():
         print(f"Data directory not found: {data_dir}", file=sys.stderr)
         return 1
 
-    # Load all data
-    data = load_all_data(data_dir)
-
-    # Build indexes
-    indexes = build_indexes(data)
-    indexes["trivial_ranks"] = build_trivial_ranks(data)
-    print(f"Built indexes: {len(indexes['spell_names'])} spells, "
-          f"{len(indexes['item_names'])} items, "
-          f"{len(indexes['recipe_items'])} recipe items", file=sys.stderr)
-
-    # Expansion name for paths
-    is_sod = (args.flavor or "").lower() == "sod"
-    exp_name = "SoD" if is_sod else {1: "Vanilla", 2: "TBC", 3: "WotLK", 4: "Cata"}.get(args.expansion, "TBC")
-    force_expansion = "SOD" if is_sod else None
-
-    # Vendor-price emission is DECOUPLED from recipe generation on purpose: it has a
-    # different input (the curated allowlist + ItemSparse only) and must NOT trigger a
-    # full recipe regen (which could drift the committed Recipes.lua). This branch emits
-    # just the vendor table and returns.
-    if args.vendor_prices_only:
-        profile_token = "SOD" if is_sod else {1: "VANILLA", 2: "TBC", 3: "WOTLK"}.get(args.expansion, "TBC")
-        emit_vendor_prices(load_item_details(data_dir), profile_token, exp_name, args.output_dir)
-        return 0
-
-    # Load removed recipes (flavor-specific; do NOT reuse the TBC list for SoD)
-    removed_name = "removed_recipes.sod.json" if is_sod else "removed_recipes.json"
-    removed_path = Path(__file__).parent.parent / "Data" / "Sources" / removed_name
-    removed_spells: dict[str, set[str]] = {}
-    if removed_path.exists():
-        with open(removed_path) as f:
-            removed_data = json.load(f)
-        for prof_name, prof_recipes in removed_data.get("recipes", {}).items():
-            removed_spells[prof_name] = {str(r["spellId"]) for r in prof_recipes}
-        total = sum(len(s) for s in removed_spells.values())
-        print(f"Loaded {total} removed recipes from {removed_name}", file=sys.stderr)
-    elif is_sod:
-        print("No SoD removed-recipes file (Data/Sources/removed_recipes.sod.json); none applied.",
-              file=sys.stderr)
-
-    # Load verified sources (per-expansion, per-profession)
-    sources_dir = Path(__file__).parent.parent / "Data" / "Sources" / exp_name
-
-    # Filter professions if specified
-    professions_to_generate = PROFESSIONS.items()
     if args.profession:
-        prof_key = args.profession.lower()
-        professions_to_generate = [
-            (sid, p) for sid, p in PROFESSIONS.items()
-            if p["key"].lower() == prof_key or p["name"].lower() == prof_key
-        ]
-        if not professions_to_generate:
-            print(f"Unknown profession: {args.profession}", file=sys.stderr)
-            return 1
-
-    # Generate for each profession
-    for skill_line_id, profession in professions_to_generate:
-        # Load verified sources for this profession
-        verified_sources = load_verified_sources(sources_dir, profession["name"])
-        if verified_sources:
-            print(f"Loaded {len(verified_sources)} verified sources for {profession['name']}", file=sys.stderr)
-
         try:
-            prof_removed = removed_spells.get(profession["name"], set())
+            professions = [bucket.profession(args.profession)]
+        except UnknownProfessionError as e:
+            print(f"Unknown profession: {e}", file=sys.stderr)
+            return 1
+    else:
+        professions = [PROFESSIONS[f] for f in bucket.professions]
+
+    try:
+        # Vendor-price emission is DECOUPLED from recipe generation on purpose: it has a
+        # different input (the curated allowlist + ItemSparse only) and must NOT trigger a
+        # full recipe regen (which could drift the committed Recipes.lua).
+        if args.vendor_prices_only:
+            emit_vendor_prices(load_item_details(data_dir, bucket), bucket, args.output_dir,
+                               args.sources_dir / "vendor_reagents.json")
+            return 0
+
+        data = load_all_data(data_dir, bucket)
+        indexes = build_indexes(data)
+        indexes["trivial_ranks"] = build_trivial_ranks(data)
+        print(f"Built indexes: {len(indexes['spell_names'])} spells, "
+              f"{len(indexes['item_names'])} items, "
+              f"{len(indexes['recipe_items'])} recipe items", file=sys.stderr)
+
+        # Canaries run once, before anything is written: a broken join must not
+        # produce a plausible-looking partial output.
+        result = db2.measure_canaries(
+            data["SkillLineAbility"], {PROFESSIONS[f].skill_line for f in bucket.professions},
+            indexes["crafted_items"], indexes["spell_reagents"], indexes["recipe_items"])
+        db2.check_canaries(bucket, result, version)
+
+        removed_spells = load_removed(args.sources_dir, bucket)
+        bucket_sources = args.sources_dir / bucket.folder
+
+        for profession in professions:
+            verified_sources = load_verified_sources(bucket_sources, profession.name)
+            if verified_sources:
+                print(f"Loaded {len(verified_sources)} verified sources for {profession.name}", file=sys.stderr)
+
             recipes, skipped = extract_recipes(
-                data, indexes, skill_line_id, verified_sources, prof_removed, force_expansion,
-                exclude_seasonal=args.exclude_seasonal,
-            )
-        except ValueError as e:
-            print(f"ERROR: {e}", file=sys.stderr)
-            return 2
+                data, indexes, profession, bucket, verified_sources,
+                removed_spells.get(profession.name, set()))
 
-        if skipped:
-            print(f"Skipped {len(skipped)} recipes for {profession['name']}:", file=sys.stderr)
-            for r in skipped:
-                reason = r.get("reason", "unknown")
-                print(f"  - {r['id']}: {r['name']} ({reason})", file=sys.stderr)
+            if skipped:
+                print(f"Skipped {len(skipped)} recipes for {profession.name}:", file=sys.stderr)
+                for r in skipped:
+                    print(f"  - {r['id']}: {r['name']} ({r.get('reason', 'unknown')})", file=sys.stderr)
 
-        if not recipes:
-            print(f"No recipes found for {profession['name']}", file=sys.stderr)
-            continue
+            if not recipes:
+                print(f"No recipes found for {profession.name}", file=sys.stderr)
+                continue
 
-        # Generate Lua
-        lua_code = generate_lua(recipes, profession, args.expansion, args.flavor)
-
-        # Write output
-        output_dir = args.output_dir / exp_name / profession["name"].replace(" ", "")
-        output_dir.mkdir(parents=True, exist_ok=True)
-        output_file = output_dir / "Recipes.lua"
-
-        output_file.write_text(lua_code)
-        # Count EMITTED recipes only: generate_lua ejects UNKNOWN-source recipes.
-        emitted = sum(1 for r in recipes if r["source"]["type"] != "UNKNOWN")
-        print(f"Generated {output_file}: {emitted} recipes", file=sys.stderr)
+            lua_code = generate_lua(recipes, profession, bucket)
+            output_file = args.output_dir / bucket.folder / profession.folder / "Recipes.lua"
+            output_file.parent.mkdir(parents=True, exist_ok=True)
+            atomic_write_text(output_file, lua_code)
+            # Count EMITTED recipes only: generate_lua ejects UNKNOWN-source recipes.
+            emitted = sum(1 for r in recipes if r["source"]["type"] != "UNKNOWN")
+            print(f"Generated {output_file}: {emitted} recipes", file=sys.stderr)
+    except (ValueError, ColumnContractError, CanaryError, FileNotFoundError) as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 2
 
     return 0
 

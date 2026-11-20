@@ -21,7 +21,12 @@ spec.loader.exec_module(gen)
 # ---------------------------------------------------------------------------
 # Shared fixtures
 # ---------------------------------------------------------------------------
+import dataclasses
+from buckets import PROFESSIONS, get_bucket
 _SKILL_LINE = 197  # Tailoring
+_PROF = PROFESSIONS["Tailoring"]
+_ON = dataclasses.replace(get_bucket("tbc"), exclude_seasonal=True)
+_OFF = get_bucket("tbc")
 _SPELL_VANILLA = "2580"   # a regular Vanilla Tailoring recipe (no seasonId)
 _SPELL_SEASONAL = "428424"  # Phoenix Bindings -- SoD-only (seasonId=2)
 
@@ -87,9 +92,8 @@ def test_seasonal_recipe_excluded_when_flag_set():
     verified = _make_verified_sources(all_spells, seasonal_ids={_SPELL_SEASONAL})
 
     recipes, skipped = gen.extract_recipes(
-        data, indexes, _SKILL_LINE,
+        data, indexes, _PROF, _ON,
         verified_sources=verified,
-        exclude_seasonal=True,
     )
 
     recipe_ids = {str(r["id"]) for r in recipes}
@@ -123,9 +127,8 @@ def test_seasonal_recipe_included_when_flag_not_set():
     verified = _make_verified_sources(all_spells, seasonal_ids={_SPELL_SEASONAL})
 
     recipes, skipped = gen.extract_recipes(
-        data, indexes, _SKILL_LINE,
-        verified_sources=verified,
-        exclude_seasonal=False,  # flag OFF -- SoD / TBC / WotLK path
+        data, indexes, _PROF, _OFF,
+        verified_sources=verified,  # flag OFF -- SoD / TBC / WotLK path
     )
 
     recipe_ids = {str(r["id"]) for r in recipes}
@@ -145,14 +148,12 @@ def test_non_seasonal_recipe_never_excluded():
     verified = _make_verified_sources([_SPELL_VANILLA], seasonal_ids=set())
 
     recipes_on, _ = gen.extract_recipes(
-        data, indexes, _SKILL_LINE,
+        data, indexes, _PROF, _ON,
         verified_sources=verified,
-        exclude_seasonal=True,
     )
     recipes_off, _ = gen.extract_recipes(
-        data, indexes, _SKILL_LINE,
+        data, indexes, _PROF, _OFF,
         verified_sources=verified,
-        exclude_seasonal=False,
     )
 
     assert len(recipes_on) == 1, "Non-seasonal recipe must be included when flag is ON"

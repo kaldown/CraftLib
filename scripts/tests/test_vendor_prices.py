@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 
 import generate_recipes as gr
+from buckets import get_bucket
 
 ALLOWLIST = Path(__file__).resolve().parent.parent.parent / "Data" / "Sources" / "vendor_reagents.json"
 
@@ -119,7 +120,7 @@ def _entry(item_id, per, buy, vsc, name):
 
 def test_lua_sod_carries_profile_tag():
     # flavor -> profile rename: the emitter now always emits profile= for every bucket
-    lua = gr.generate_vendor_prices_lua([_entry(3371, 4, 20, 5, "Empty Vial")], "SOD")
+    lua = gr.generate_vendor_prices_lua([_entry(3371, 4, 20, 5, "Empty Vial")], get_bucket("sod"))
     assert 'profile = "SOD",' in lua
     assert "flavor =" not in lua
     assert "[3371] = 4," in lua
@@ -128,7 +129,7 @@ def test_lua_sod_carries_profile_tag():
 
 def test_lua_tbc_carries_profile_tag():
     # TBC (formerly the "DEFAULT" token) now also carries an explicit profile= tag
-    lua = gr.generate_vendor_prices_lua([_entry(3371, 4, 20, 5, "Empty Vial")], "TBC")
+    lua = gr.generate_vendor_prices_lua([_entry(3371, 4, 20, 5, "Empty Vial")], get_bucket("tbc"))
     assert 'profile = "TBC",' in lua
     assert "flavor =" not in lua
     assert "[3371] = 4," in lua
@@ -161,7 +162,7 @@ def _emit_details():
 def test_emit_continuous_tier_keeps_default_only_reagent(tmp_path, profile_token):
     # A continuous-tier profile (TBC/WotLK/Vanilla) maps to the DEFAULT allowlist bucket, so the
     # DEFAULT-only reagent MUST be present and the file MUST carry the real profile guard tag.
-    out = gr.emit_vendor_prices(_emit_details(), profile_token, profile_token, tmp_path,
+    out = gr.emit_vendor_prices(_emit_details(), get_bucket(profile_token.lower()), tmp_path,
                                 allowlist_path=_write_allowlist(tmp_path))
     lua = out.read_text()
     assert f'profile = "{profile_token}",' in lua
@@ -172,7 +173,7 @@ def test_emit_continuous_tier_keeps_default_only_reagent(tmp_path, profile_token
 def test_emit_sod_excludes_default_only_reagent(tmp_path):
     # SoD maps to the SOD allowlist bucket: the DEFAULT-only reagent is absent (only the global one),
     # and the file carries profile = "SOD".
-    out = gr.emit_vendor_prices(_emit_details(), "SOD", "SoD", tmp_path,
+    out = gr.emit_vendor_prices(_emit_details(), get_bucket("sod"), tmp_path,
                                 allowlist_path=_write_allowlist(tmp_path))
     lua = out.read_text()
     assert 'profile = "SOD",' in lua
@@ -186,10 +187,13 @@ _TBC_ISPARSE = (Path(__file__).resolve().parent.parent.parent
                 / "vendor" / "db2-parser" / "artifacts" / "2.5.5.65895" / "ItemSparse.csv")
 
 
+_ALLOWLIST = Path(__file__).resolve().parent.parent.parent / "Data" / "Sources" / "vendor_reagents.json"
+
+
 @pytest.mark.skipif(not _TBC_ISPARSE.exists(), reason="cached TBC DB2 build not present")
 def test_real_db2_pins_and_gating():
-    allowlist = gr.load_vendor_reagents()
-    details = gr.load_item_details(_TBC_ISPARSE.parent)
+    allowlist = gr.load_vendor_reagents(_ALLOWLIST)
+    details = gr.load_item_details(_TBC_ISPARSE.parent, get_bucket("tbc"))
     by_id = {e["itemId"]: e["perUnit"] for e in gr.compute_vendor_prices(allowlist, details, "DEFAULT")}
     # Per-unit pins straight from the real DB2 build (guards against a schema/data shift).
     assert by_id[3371] == 4 and by_id[3372] == 40 and by_id[8925] == 500 and by_id[2678] == 2

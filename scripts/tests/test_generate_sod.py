@@ -1,5 +1,6 @@
 import json
 import generate_recipes as gr
+from buckets import PROFESSIONS, get_bucket
 from tests.conftest import FIXTURES
 
 
@@ -15,8 +16,7 @@ def _recipe():
 
 
 def test_generate_lua_emits_flavor_and_sod_milestones():
-    prof = {"key": "tailoring", "name": "Tailoring", "constant": "TAILORING"}
-    lua = gr.generate_lua([_recipe()], prof, expansion=1, flavor="sod")
+    lua = gr.generate_lua([_recipe()], PROFESSIONS["Tailoring"], get_bucket("sod"))
     assert 'profile = "SOD",' in lua
     assert "milestones = { 75, 150, 225, 300 }," in lua
     assert "expansion = C.EXPANSION.SOD," in lua
