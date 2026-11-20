@@ -17,7 +17,8 @@ local function stubFrame()
     return f
 end
 
-local function loadCraftLib(activeSeason)
+local function loadCraftLib(activeSeason, iface)
+    _G.GetBuildInfo = function() return "x", "00000", "date", iface end
     _G.CreateFrame = function() return stubFrame() end
     _G.C_AddOns = { GetAddOnMetadata = function() return "test" end }
     _G.print = function() end
@@ -35,7 +36,7 @@ local function loadCraftLib(activeSeason)
 end
 
 -- Scenario A: SoD client (season 2)
-local sod = loadCraftLib(2)
+local sod = loadCraftLib(2, 11508)
 check("vendorBuyPrices table initialized", type(sod.vendorBuyPrices) == "table")
 sod:RegisterVendorPrices({ flavor = "SOD", prices = { [8925] = 500, [3371] = 4 } })
 sod:RegisterVendorPrices({ prices = { [9999] = 7 } })  -- no flavor => DEFAULT, must be skipped on SoD
@@ -44,7 +45,7 @@ check("DEFAULT prices skipped on SoD", sod:GetVendorBuyPrice(9999) == nil)
 check("nil for non-allowlisted item (never 0)", sod:GetVendorBuyPrice(123456) == nil)
 
 -- Scenario B: DEFAULT client (C_Seasons absent, e.g. TBC 2.5.5)
-local def = loadCraftLib(nil)
+local def = loadCraftLib(nil, 20505)
 def:RegisterVendorPrices({ flavor = "SOD", prices = { [8925] = 500 } })  -- skipped on DEFAULT
 def:RegisterVendorPrices({ prices = { [3371] = 4 } })                    -- registers on DEFAULT
 check("SOD prices skipped on DEFAULT", def:GetVendorBuyPrice(8925) == nil)

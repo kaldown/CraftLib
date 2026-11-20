@@ -17,10 +17,29 @@ CraftLib.vendorBuyPrices = {}
 -- Profile detection (client lineage + expansion tier)
 --------------------------------------------------------------------------------
 
--- Detect the running client's PROFILE (lineage + expansion tier).
--- SoD is checked first (parallel ruleset on the 1.15 client); otherwise the client
--- interface number's major digit picks the continuous tier. C_Seasons/Enum are nil on
--- TBC/WotLK (guarded); GetBuildInfo is universal but still nil-guarded for the test harness.
+-- WHY ranges per client minor version (not "major digit" arithmetic): the major digit
+-- no longer identifies a game (1.60 WoW Forever shares major 1 with Classic Era), and an
+-- unknown client must get NO data rather than a guessed bucket. Ranges, not exact
+-- numbers, so a patch bump inside a supported line (2.5.5 -> 2.5.6) keeps working.
+local INTERFACE_PROFILES = {
+    { min = 11500, max = 11599, profile = "VANILLA" }, -- Classic Era / Anniversary 1.15.x
+    { min = 20500, max = 20599, profile = "TBC" },     -- TBC Anniversary 2.5.x
+    { min = 30300, max = 30499, profile = "WOTLK" },   -- WotLK 3.3.5a (30300) and WotLK Classic 3.4.x
+    { min = 38000, max = 38099, profile = "WOTLK" },   -- Titan 3.80.x: seasonal WotLK, uses the WotLK bucket
+}
+
+-- Interface number of the running client, or nil when GetBuildInfo is missing/odd.
+local function GetInterfaceNumber()
+    if not GetBuildInfo then return nil end
+    local iface = select(4, GetBuildInfo())
+    if type(iface) ~= "number" then return nil end
+    return iface
+end
+
+-- Detect the running client's PROFILE (lineage + expansion tier), or nil when the
+-- client is not supported. SoD is checked first (parallel ruleset on the 1.15 client);
+-- otherwise the interface number is matched against INTERFACE_PROFILES. C_Seasons/Enum
+-- are nil on TBC/WotLK (guarded).
 function CraftLib:DetectProfile()
     if C_Seasons and C_Seasons.GetActiveSeason then
         local sod = (Enum and Enum.SeasonID and Enum.SeasonID.SeasonOfDiscovery) or 2
@@ -28,13 +47,14 @@ function CraftLib:DetectProfile()
             return self.Constants.PROFILE.SOD
         end
     end
-    -- 4th return of GetBuildInfo is the interface number: 11508 / 20505 / 30403.
-    local iface = (GetBuildInfo and select(4, GetBuildInfo())) or 0
-    local major = math.floor(iface / 10000)
-    if major == 3 then return self.Constants.PROFILE.WOTLK
-    elseif major == 2 then return self.Constants.PROFILE.TBC
-    elseif major >= 4 then return self.Constants.PROFILE.WOTLK  -- unknown-future client: highest known bucket (extension point)
-    else return self.Constants.PROFILE.VANILLA end
+    local iface = GetInterfaceNumber()
+    if not iface then return nil end
+    for _, range in ipairs(INTERFACE_PROFILES) do
+        if iface >= range.min and iface <= range.max then
+            return self.Constants.PROFILE[range.profile]
+        end
+    end
+    return nil
 end
 
 -- Computed once at load time (Init.lua runs before any Data/* file via TOC order).
@@ -42,10 +62,16 @@ CraftLib.activeProfile = CraftLib:DetectProfile()
 
 -- Back-compat: GetActiveFlavor keeps its original DEFAULT/SOD contract (the continuous
 -- tiers collapse to DEFAULT). New, tier-aware callers use GetActiveProfile.
-CraftLib.activeFlavor = (CraftLib.activeProfile == CraftLib.Constants.PROFILE.SOD)
-    and CraftLib.Constants.FLAVOR.SOD or CraftLib.Constants.FLAVOR.DEFAULT
+-- nil on an unsupported client (activeProfile nil), so callers never read a guessed flavor.
+if CraftLib.activeProfile == nil then
+    CraftLib.activeFlavor = nil
+elseif CraftLib.activeProfile == CraftLib.Constants.PROFILE.SOD then
+    CraftLib.activeFlavor = CraftLib.Constants.FLAVOR.SOD
+else
+    CraftLib.activeFlavor = CraftLib.Constants.FLAVOR.DEFAULT
+end
 
---- Get the active client profile ("VANILLA" | "TBC" | "WOTLK" | "SOD").
+--- Get the active client profile ("VANILLA" | "TBC" | "WOTLK" | "SOD"), or nil on an unsupported client.
 function CraftLib:GetActiveProfile()
     return self.activeProfile
 end
@@ -57,7 +83,9 @@ end
 
 --- Back-compat alias for the old flavor detector.
 function CraftLib:DetectFlavor()
-    return (self:DetectProfile() == self.Constants.PROFILE.SOD)
+    local profile = self:DetectProfile()
+    if profile == nil then return nil end
+    return (profile == self.Constants.PROFILE.SOD)
         and self.Constants.FLAVOR.SOD or self.Constants.FLAVOR.DEFAULT
 end
 
@@ -69,6 +97,9 @@ end
 -- @param professionKey string Unique key (e.g., "firstAid", "cooking")
 -- @param data table Profession data table
 function CraftLib:RegisterProfession(professionKey, data)
+    -- Unsupported client: register nothing (the legacy shims below would otherwise map
+    -- untagged data to TBC and never match a nil profile anyway, but fail early and clearly).
+    if self.activeProfile == nil then return end
     -- Skip datasets whose declared client PROFILE does not match the running client.
     -- Regenerated files carry profile=; the shim resolves any stray pre-migration file
     -- (legacy flavor="SOD", or untagged => the historical DEFAULT/TBC bucket).
@@ -114,6 +145,7 @@ end
 --- Register a curated table of per-unit vendor BUY prices (copper).
 -- @param data table { flavor = "SOD"|nil, prices = { [itemId] = perUnitCopper, ... } }
 function CraftLib:RegisterVendorPrices(data)
+    if self.activeProfile == nil then return end  -- unsupported client: no data
     -- WHY mirror RegisterProfession's flavor guard EXACTLY: only the active flavor's bucket
     -- may register, preserving the SoD/non-SoD non-mixing invariant the whole data
     -- architecture depends on. A SoD-only price must never leak onto a TBC client.
@@ -232,6 +264,7 @@ end
 --- Check if CraftLib is loaded and has data
 -- @return boolean
 function CraftLib:IsReady()
+    -- false on an unsupported client (nothing ever registers there).
     return next(self.professions) ~= nil
 end
 
@@ -250,8 +283,16 @@ local frame = CreateFrame("Frame")
 frame:RegisterEvent("ADDON_LOADED")
 frame:SetScript("OnEvent", function(self, event, loadedAddon)
     if loadedAddon == ADDON_NAME then
-        local version = C_AddOns.GetAddOnMetadata(ADDON_NAME, "Version") or "?"
-        print("|cff33ff99CraftLib|r v" .. version .. " loaded.")
+        -- Resolved here, not at file load: C_AddOns.GetAddOnMetadata is absent on older
+        -- clients, which expose the global GetAddOnMetadata instead.
+        local getMeta = (C_AddOns and C_AddOns.GetAddOnMetadata) or GetAddOnMetadata
+        local version = (getMeta and getMeta(ADDON_NAME, "Version")) or "?"
+        if CraftLib.activeProfile then
+            print("|cff33ff99CraftLib|r v" .. version .. " loaded.")
+        else
+            print("|cff33ff99CraftLib|r v" .. version .. " - this game client (interface "
+                .. tostring(GetInterfaceNumber() or "unknown") .. ") is not supported; no recipe data loaded.")
+        end
         self:UnregisterEvent("ADDON_LOADED")
     end
 end)

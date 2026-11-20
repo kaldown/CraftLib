@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- An unrecognized game client now loads no recipe data and says so at login, instead of silently using another client's data. Supported clients (Classic Era / Anniversary 1.15, TBC 2.5, WotLK 3.3.5a and 3.4, Titan 3.80) are unaffected.
+
+### Fixed
+- Reading the addon version at login no longer assumes `C_AddOns` exists; clients without it use `GetAddOnMetadata`.
+
 ## [0.10.2] - 2026-06-30
 
 ### Fixed

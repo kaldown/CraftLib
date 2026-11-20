@@ -10,20 +10,31 @@ local function check(name, cond)
     else failed = failed + 1; report("FAIL - " .. name) end
 end
 
+local lastFrame
+local printed = {}
 local function stubFrame()
     local f = {}
     function f:RegisterEvent() end
     function f:UnregisterEvent() end
-    function f:SetScript() end
+    function f:SetScript(_, fn) self.onEvent = fn end
+    lastFrame = f
     return f
 end
 
 -- Build a fresh CraftLib under a given season + interface number.
-local function loadCraftLib(activeSeason, iface)
+-- iface == false removes GetBuildInfo. metadata: "c_addons" (default) | "global" | "none".
+local function loadCraftLib(activeSeason, iface, metadata)
+    metadata = metadata or "c_addons"
+    printed = {}
     _G.CreateFrame = function() return stubFrame() end
-    _G.C_AddOns = { GetAddOnMetadata = function() return "test" end }
-    _G.print = function() end
-    _G.GetBuildInfo = function() return "x", "00000", "date", iface or 11508 end
+    _G.C_AddOns = (metadata == "c_addons") and { GetAddOnMetadata = function() return "test" end } or nil
+    _G.GetAddOnMetadata = (metadata == "global") and function() return "gtest" end or nil
+    _G.print = function(m) printed[#printed + 1] = m end
+    if iface == false then
+        _G.GetBuildInfo = nil
+    else
+        _G.GetBuildInfo = function() return "x", "00000", "date", iface or 11508 end
+    end
     if activeSeason ~= nil then
         _G.C_Seasons = { GetActiveSeason = function() return activeSeason end }
         _G.Enum = { SeasonID = { SeasonOfDiscovery = 2 } }
@@ -77,6 +88,54 @@ check("GetActiveFlavor SOD->SOD", s:GetActiveFlavor() == "SOD")
 regAll(s)
 check("SOD registers on SoD", s:GetProfession("sod") ~= nil)
 check("VANILLA skipped on SoD (season overrides interface)", s:GetProfession("vanilla") == nil)
+
+-- DetectProfile table
+local function det(i, season) return loadCraftLib(season, i):DetectProfile() end
+check("0 -> nil", det(0) == nil)
+check("no GetBuildInfo -> nil", loadCraftLib(nil, false):DetectProfile() == nil)
+check("11404 -> nil", det(11404) == nil)
+check("11508 -> VANILLA", det(11508) == "VANILLA")
+check("16001 -> nil", det(16001) == nil)
+check("20505 -> TBC", det(20505) == "TBC")
+check("20506 -> TBC", det(20506) == "TBC")
+check("30300 -> WOTLK", det(30300) == "WOTLK")
+check("30403 -> WOTLK", det(30403) == "WOTLK")
+check("30405 -> WOTLK", det(30405) == "WOTLK")
+check("38001 -> WOTLK", det(38001) == "WOTLK")
+check("40400 -> nil", det(40400) == nil)
+check("season 2 on 11508 -> SOD", det(11508, 2) == "SOD")
+
+-- Unsupported client (WoW Forever 16001)
+local u = loadCraftLib(nil, 16001)
+regAll(u)
+u:RegisterProfession("sodlegacy", { id = 6, name = "X", flavor = "SOD", milestones = {75}, recipes = {} })
+check("16001 registers nothing", next(u:GetProfessions()) == nil)
+check("16001 IsReady false", u:IsReady() == false)
+check("16001 GetActiveProfile nil", u:GetActiveProfile() == nil)
+check("16001 GetActiveFlavor nil", u:GetActiveFlavor() == nil)
+u:RegisterVendorPrices({ profile = "VANILLA", prices = { [1] = 2 } })
+check("16001 vendor prices not registered", u:GetVendorBuyPrice(1) == nil)
+lastFrame.onEvent(lastFrame, "ADDON_LOADED", "CraftLib")
+local msg = printed[1] or ""
+check("16001 message says not supported", msg:find("is not supported", 1, true) and msg:find("16001", 1, true))
+
+local ok = loadCraftLib(nil, 20505)
+lastFrame.onEvent(lastFrame, "ADDON_LOADED", "CraftLib")
+check("20505 message ends with loaded.", (printed[1] or ""):sub(-8) == " loaded.")
+
+local g = loadCraftLib(nil, 20505, "global")
+local gok = pcall(lastFrame.onEvent, lastFrame, "ADDON_LOADED", "CraftLib")
+check("global metadata works", gok and (printed[1] or ""):find("vgtest", 1, true))
+local n = loadCraftLib(nil, 20505, "none")
+local nok = pcall(lastFrame.onEvent, lastFrame, "ADDON_LOADED", "CraftLib")
+check("no metadata prints v?", nok and (printed[1] or ""):find("v? loaded", 1, true))
+
+-- TOC consistency
+local toc = io.open("CraftLib.toc"):read("*l")
+local listed = toc:match("^## Interface:%s*(.+)$")
+for num in listed:gmatch("%d+") do
+    check("TOC interface " .. num .. " detected", det(tonumber(num)) ~= nil)
+end
 
 report(string.format("\n%d passed, %d failed", passed, failed))
 os.exit(failed == 0 and 0 or 1)

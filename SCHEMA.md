@@ -20,7 +20,9 @@ end
 
 | Function | Returns | Description |
 |----------|---------|-------------|
-| `CraftLib:IsReady()` | boolean | Check if CraftLib has loaded data |
+| `CraftLib:IsReady()` | boolean | Check if CraftLib has loaded data; always `false` on an unsupported client |
+| `CraftLib:GetActiveProfile()` | string/nil | `"VANILLA"`, `"TBC"`, `"WOTLK"` or `"SOD"`; `nil` on an unsupported client |
+| `CraftLib:GetActiveFlavor()` | string/nil | Back-compat `"DEFAULT"` or `"SOD"`; `nil` on an unsupported client |
 | `CraftLib:GetProfessions()` | table | All registered professions |
 | `CraftLib:GetProfession(key)` | table/nil | Single profession by key |
 | `CraftLib:GetRecipes(key)` | table | All recipes for a profession |
@@ -30,6 +32,13 @@ end
 | `CraftLib:GetRecipeByProduct(itemId)` | table/nil | Find all recipes that produce an item |
 | `CraftLib:GetRecipeDifficulty(recipe, level)` | string | "orange"/"yellow"/"green"/"gray" |
 | `CraftLib:GetVendorBuyPrice(itemId)` | number/nil | Per-unit vendor BUY price (copper), or nil |
+
+### Unsupported clients
+
+The client is identified by its interface number: 1.15.x, 2.5.x, 3.3.5a / 3.4.x and 3.80.x are
+supported. On any other client CraftLib loads no recipe data, `IsReady()` returns `false`, and
+`GetActiveProfile()` / `GetActiveFlavor()` return `nil` (check `IsReady()` first; never assume a
+profile). A chat message at login states that the client is not supported.
 
 ### Vendor Buy Prices
 
