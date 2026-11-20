@@ -76,7 +76,7 @@ function CraftLib:GetActiveProfile()
     return self.activeProfile
 end
 
---- Back-compat alias: returns "DEFAULT" or "SOD" (unchanged contract).
+--- Back-compat alias: returns "DEFAULT" or "SOD", or nil on an unsupported client.
 function CraftLib:GetActiveFlavor()
     return self.activeFlavor
 end
@@ -97,8 +97,9 @@ end
 -- @param professionKey string Unique key (e.g., "firstAid", "cooking")
 -- @param data table Profession data table
 function CraftLib:RegisterProfession(professionKey, data)
-    -- Unsupported client: register nothing (the legacy shims below would otherwise map
-    -- untagged data to TBC and never match a nil profile anyway, but fail early and clearly).
+    -- Unsupported client: register nothing. An explicit short-circuit, redundant with the
+    -- profile guard below (no dataset's profile can match a nil activeProfile), kept so
+    -- the intent is visible.
     if self.activeProfile == nil then return end
     -- Skip datasets whose declared client PROFILE does not match the running client.
     -- Regenerated files carry profile=; the shim resolves any stray pre-migration file

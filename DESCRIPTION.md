@@ -58,7 +58,7 @@ local difficulty = CraftLib:GetRecipeDifficulty(recipe, 300)
 - `CraftLib:GetRecipeByProduct(itemId)` - Find all recipes that produce an item
 - `CraftLib:GetRecipeDifficulty(recipe, skillLevel)` - Get difficulty color
 - `CraftLib:GetVendorBuyPrice(itemId)` - Per-unit vendor buy price for vendor-stocked reagents (copper, or nil)
-- `CraftLib:GetActiveProfile()` - Active client profile ("VANILLA"/"TBC"/"WOTLK"/"SOD")
+- `CraftLib:GetActiveProfile()` - Active client profile ("VANILLA"/"TBC"/"WOTLK"/"SOD"), or nil on an unsupported client
 
 ## Supported Game Versions
 

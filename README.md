@@ -85,7 +85,7 @@ end
 | `GetRecipeByProduct(itemId)` | Find all recipes that produce an item |
 | `GetRecipeDifficulty(recipe, skillLevel)` | Get difficulty color |
 | `GetVendorBuyPrice(itemId)` | Per-unit vendor buy price (copper) for confirmed vendor-stocked reagents, or nil |
-| `GetActiveProfile()` | Active client profile: `"VANILLA"`, `"TBC"`, `"WOTLK"`, or `"SOD"` |
+| `GetActiveProfile()` | Active client profile: `"VANILLA"`, `"TBC"`, `"WOTLK"`, or `"SOD"`; `nil` on an unsupported client |
 
 ## Recipe Data Structure
 
