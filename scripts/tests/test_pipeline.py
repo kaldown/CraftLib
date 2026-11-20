@@ -20,6 +20,28 @@ def _plan(key, prof=None, steps=None):
 def test_plan_all_sod_order():
     names = [s.name for s in _plan("sod", "Tailoring")]
     assert names == list(pipeline.STEP_NAMES)
+    assert names == ["fetch", "extract", "reconcile", "enrich", "verify-trainers",
+                     "assert-no-pending", "assert-no-unaligned", "audit", "generate",
+                     "vendor-prices"]
+
+
+def test_plan_all_generates_only_after_every_gate_and_the_audit():
+    b = get_bucket("sod")
+    names = [s.name for s in pipeline.plan_all(
+        b, [b.profession(f) for f in b.professions], _opts())]
+    audit = names.index("audit")
+    first_generate = names.index("generate")
+    gates = {"extract", "reconcile", "enrich", "verify-trainers",
+             "assert-no-pending", "assert-no-unaligned"}
+    assert max(i for i, n in enumerate(names) if n in gates) < audit < first_generate
+    assert names.count("generate") == len(b.professions)
+    assert names[first_generate:] == ["generate"] * len(b.professions) + ["vendor-prices"]
+
+
+def test_verify_trainers_step_exits_on_persistent_block():
+    step = next(s for s in _plan("sod", "Tailoring") if s.name == "verify-trainers")
+    i = step.argv.index("--on-block")
+    assert step.argv[i + 1] == "exit"
 
 
 def test_plan_all_vanilla_skips_reconcile_and_verify():
@@ -55,8 +77,44 @@ def test_run_steps_sleeps_between_professions_for_network_steps():
     assert slept == [1.5]
 
 
+def test_run_steps_does_not_sleep_between_offline_steps():
+    slept = []
+    steps = [pipeline.Step("enrich", ["x"], "A"), pipeline.Step("audit", ["x"], None),
+             pipeline.Step("generate", ["x"], "A"), pipeline.Step("generate", ["x"], "B")]
+    pipeline.run_steps(steps, runner=lambda a: 0, delay=1.5, sleep=slept.append)
+    assert slept == []
+
+
 def test_unknown_step_exits_2():
     assert pipeline.main(["all", "--bucket", "sod", "--steps", "bogus", "--dry-run"]) == 2
+
+
+@pytest.mark.parametrize("value", ["", ",", " , "])
+def test_empty_steps_list_exits_2(capsys, value):
+    # An empty --steps used to mean "every step" (the whole networked pipeline).
+    assert pipeline.main(["all", "--bucket", "sod", "--steps", value, "--dry-run"]) == 2
+    out, err = capsys.readouterr()
+    assert out == "" and "--steps" in err
+
+
+def test_vendor_prices_all_rejects_version(capsys):
+    assert pipeline.main(["vendor-prices", "--all", "--version", "1.15.8.67156", "--dry-run"]) == 2
+    out, err = capsys.readouterr()
+    assert out == "" and "--version" in err and "--all" in err
+
+
+def test_vendor_prices_single_bucket_accepts_version(capsys):
+    assert pipeline.main(["vendor-prices", "--bucket", "tbc", "--version", "2.5.5.65895",
+                          "--dry-run"]) == 0
+    assert "--version 2.5.5.65895" in capsys.readouterr().out
+
+
+@pytest.mark.parametrize("cmd", ["all", "generate"])
+def test_unknown_profession_exits_1(capsys, cmd):
+    assert pipeline.main([cmd, "--bucket", "vanilla", "--profession", "Jewelcrafting",
+                          "--dry-run"]) == 1
+    out, err = capsys.readouterr()
+    assert out == "" and err.startswith("ERROR:") and "Jewelcrafting" in err
 
 
 def test_generate_subcommand_is_offline(capsys):

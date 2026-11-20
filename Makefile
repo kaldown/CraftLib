@@ -10,40 +10,54 @@ ifeq ($(strip $(BUCKETS)),)
 $(error bucket registry unreadable: '$(PYTHON) scripts/buckets.py keys' printed nothing)
 endif
 
-# Optional knobs: PROFESSION=Tailoring, OUT=<dir> (generate into a scratch dir
-# instead of Data/), ARGS="..." (extra pipeline flags, e.g. --steps a,b).
+# Knobs: PROFESSION=Tailoring, ARGS="..." (extra pipeline flags, e.g. --steps a,b),
+# OUT=<dir> (output directory of the offline <bucket>-generate and vendor-prices
+# targets, where it is REQUIRED; OUT=Data rewrites the shipped files).
 PROF_ARG = $(if $(PROFESSION),--profession "$(PROFESSION)")
 OUT_ARG = $(if $(OUT),--output-dir $(OUT))
+
+# WHY OUT is required for the offline targets: regenerating into the shipped Data/ is
+# not a no-op (the tracked sources can drift from the shipped Lua), so overwriting it
+# must be asked for by name. The messages live in variables because a literal comma
+# would split the $(if ...) arguments.
+OUT_REQUIRED_MSG = OUT is required: pass OUT=<dir>, or OUT=Data to rewrite the shipped files deliberately
+require_out = $(if $(strip $(OUT)),,$(error $@: $(OUT_REQUIRED_MSG)))
+# WHY reject OUT on the networked targets: they rewrite Data/Sources and Data/ in place
+# and used to ignore OUT silently.
+OUT_IGNORED_MSG = OUT is not used by the networked targets (they rewrite Data/Sources and Data/ in place); for <bucket>-all pass ARGS="--sources-dir <dir> --output-dir <dir>" instead
+reject_out = $(if $(strip $(OUT)),$(error $@: $(OUT_IGNORED_MSG)))
 
 .PHONY: help clean fetch-data vendor-prices audit list-buckets test test-python test-lua lint-lua \
 	$(addsuffix -all,$(BUCKETS)) $(addsuffix -fetch,$(BUCKETS)) $(addsuffix -generate,$(BUCKETS))
 
 help:
 	@echo "Per bucket ($(BUCKETS)):"
-	@echo "  make <bucket>-all        full pipeline (network): fetch, extract, enrich, gates, generate"
+	@echo "  make <bucket>-all        full pipeline (network): fetch, extract, enrich, gates, audit, generate"
 	@echo "  make <bucket>-fetch      fetch the bucket's pinned DB2 build"
-	@echo "  make <bucket>-generate   offline: regenerate Recipes.lua + vendor prices (OUT=dir)"
+	@echo "  make <bucket>-generate OUT=<dir>   offline: regenerate Recipes.lua + vendor prices into <dir>"
 	@echo "  PROFESSION=<name> limits a bucket target to one profession; ARGS=... passes pipeline flags"
+	@echo "  OUT is required by the offline targets; OUT=Data rewrites the shipped files deliberately."
+	@echo "  -all and -fetch reject OUT (they rewrite Data/ in place; use ARGS for other dirs)."
 	@echo "Other:"
 	@echo "  fetch-data [BUCKET=b]    fetch DB2 builds (all buckets by default)"
-	@echo "  vendor-prices [BUCKET=b] [OUT=dir]"
+	@echo "  vendor-prices OUT=<dir> [BUCKET=b]"
 	@echo "  audit  list-buckets  test  test-python  test-lua  lint-lua  clean"
 
 # A failing step makes pipeline.py exit non-zero, which stops make: gates are real gates.
 $(addsuffix -all,$(BUCKETS)): %-all:
-	@$(PIPELINE) all --bucket $* $(PROF_ARG) $(ARGS)
+	$(reject_out)@$(PIPELINE) all --bucket $* $(PROF_ARG) $(ARGS)
 
 $(addsuffix -fetch,$(BUCKETS)): %-fetch:
-	@$(PIPELINE) fetch --bucket $*
+	$(reject_out)@$(PIPELINE) fetch --bucket $*
 
 $(addsuffix -generate,$(BUCKETS)): %-generate:
-	@$(PIPELINE) generate --bucket $* $(PROF_ARG) $(OUT_ARG) $(ARGS)
+	$(require_out)@$(PIPELINE) generate --bucket $* $(PROF_ARG) $(OUT_ARG) $(ARGS)
 
 fetch-data:
 	@$(PIPELINE) fetch $(if $(BUCKET),--bucket $(BUCKET),--all)
 
 vendor-prices:
-	@$(PIPELINE) vendor-prices $(if $(BUCKET),--bucket $(BUCKET),--all) $(OUT_ARG)
+	$(require_out)@$(PIPELINE) vendor-prices $(if $(BUCKET),--bucket $(BUCKET),--all) $(OUT_ARG)
 
 audit:
 	@$(PYTHON) scripts/audit_sources.py
