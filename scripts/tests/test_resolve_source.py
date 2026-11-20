@@ -48,3 +48,9 @@ def test_uncorroborated_marker_is_left_unchanged():
     rec = {"source": {"type": "TRAINER", "certainty": "DB2", "needsReview": True,
                       "reviewReason": "cross-bucket-uncorroborated"}}
     assert fw._resolve_source(rec, {"source": [6], "trainingCost": 40}) is None
+
+
+def test_resolve_source_keeps_manual():
+    # Hand-verified sources outrank a Wowhead trainer signal.
+    rec = {"source": {"type": "VENDOR", "certainty": "MANUAL", "itemId": 5, "cost": 10}}
+    assert fw._resolve_source(rec, {"source": [6], "trainingCost": 40}) is None

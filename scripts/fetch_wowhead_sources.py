@@ -8,10 +8,13 @@ Single-pass: fetches each spell page once, extracts ALL data:
 - Comprehensive wowhead metadata (reagents, creates, taughtBy NPCs)
 
 Usage:
-    python fetch_wowhead_sources.py --profession Engineering
-    python fetch_wowhead_sources.py --profession Engineering --dry-run
-    python fetch_wowhead_sources.py --profession Engineering --spells 3922 3923
-    python fetch_wowhead_sources.py --profession Engineering --force
+    python fetch_wowhead_sources.py --bucket tbc --profession Engineering
+    python fetch_wowhead_sources.py --bucket tbc --profession Engineering --dry-run
+    python fetch_wowhead_sources.py --bucket tbc --profession Engineering --spells 3922 3923
+    python fetch_wowhead_sources.py --bucket tbc --profession Engineering --force
+
+The bucket registry decides the route: listview buckets fetch one profession
+page, per-spell buckets fetch every spell page.
 """
 
 import argparse
@@ -25,62 +28,21 @@ import urllib.error
 from datetime import date
 from pathlib import Path
 
+import wowhead
+from buckets import UnknownProfessionError, add_bucket_argument, get_bucket
+from pipeline_io import atomic_write_json, load_json
 
-# Wowhead source type IDs (from g_spells[id].source array)
-WOWHEAD_SOURCE_TYPES = {
-    1: "CRAFTED",
-    2: "DROP",
-    3: "PVP",
-    4: "QUEST",
-    5: "VENDOR",
-    6: "TRAINER",
-    7: "DISCOVERY",
-    10: "STARTER",
-    11: "EVENT",
-    12: "ACHIEVEMENT",
-}
-
-
-# Profession name/key -> Wowhead /classic/ profession-page slug
-PROFESSION_SLUGS = {
-    "alchemy": "alchemy", "blacksmithing": "blacksmithing", "enchanting": "enchanting",
-    "engineering": "engineering", "leatherworking": "leatherworking", "tailoring": "tailoring",
-    "cooking": "cooking", "firstaid": "first-aid", "mining": "mining",
-    # WotLK-only and TBC-only professions added for listview routing (Task 2.3)
-    "jewelcrafting": "jewelcrafting", "inscription": "inscription",
-}
-
-# Secondary skills live under /spells/secondary-skills/<slug>, not /spells/professions/<slug>
-SECONDARY_SKILL_SLUGS = {"cooking", "first-aid", "fishing"}
-
-# Wowhead URL subdomain per --expansion value
-# "vanilla" and "classic" both map to the /classic/ subdomain (same site, different folder name)
-WOWHEAD_SUBDOMAIN = {"sod": "classic", "vanilla": "classic", "classic": "classic",
-                     "tbc": "tbc", "wotlk": "wotlk", "cata": "cata"}
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def _fetch_page(url: str, retries: int = 3) -> str | None:
     """Fetch a web page (gzip-aware, retry on transient 403/503).
 
-    Wowhead sits behind CloudFront, which 403s a bare User-Agent. A complete
-    browser header set (Accept-Language + Referer + Sec-Fetch-* + UA) clears the
-    WAF on the first request; retry/backoff alone does not.
+    Headers live in wowhead.HEADERS (the CloudFront WAF needs the full browser set).
     """
-    headers = {
-        "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                       "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15"),
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Accept-Encoding": "gzip",
-        "Referer": "https://www.wowhead.com/",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "same-origin",
-        "Upgrade-Insecure-Requests": "1",
-    }
     for attempt in range(retries):
         try:
-            req = urllib.request.Request(url, headers=headers)
+            req = urllib.request.Request(url, headers=wowhead.HEADERS)
             with urllib.request.urlopen(req, timeout=30) as response:
                 body = response.read()
                 if (response.headers.get("Content-Encoding") or "") == "gzip":
@@ -98,15 +60,6 @@ def _fetch_page(url: str, retries: int = 3) -> str | None:
     return None
 
 
-def _fix_js_object(js_text: str) -> str:
-    """Fix JavaScript object notation to be valid JSON.
-
-    Wowhead sometimes uses unquoted keys like: {difficulties:[]}
-    This fixes them to: {"difficulties":[]}
-    """
-    return re.sub(r'(?<=[{,])(\s*)([a-zA-Z_]\w*)(\s*):', r'\1"\2"\3:', js_text)
-
-
 def _extract_spell_data(content: str, spell_id: int) -> dict | None:
     """Extract the g_spells data blob for a spell from page content.
 
@@ -116,11 +69,11 @@ def _extract_spell_data(content: str, spell_id: int) -> dict | None:
     Returns the parsed dict or None if not found.
     """
     # Pattern: $.extend(g_spells[SPELL_ID], {JSON_OBJECT});
-    pattern = rf'\$\.extend\(g_spells\[{spell_id}\],\s*(\{{[^;]*?\}})\s*\)'
+    pattern = wowhead.g_spells_extend_pattern(spell_id)
     match = re.search(pattern, content)
     if match:
         raw = match.group(1)
-        for text in [raw, _fix_js_object(raw)]:
+        for text in [raw, wowhead.fix_js_object(raw)]:
             try:
                 return json.loads(text)
             except json.JSONDecodeError:
@@ -132,7 +85,7 @@ def _extract_spell_data(content: str, spell_id: int) -> dict | None:
     match2 = re.search(pattern2, content)
     if match2:
         raw = match2.group(1)
-        for text in [raw, _fix_js_object(raw)]:
+        for text in [raw, wowhead.fix_js_object(raw)]:
             try:
                 return json.loads(text)
             except json.JSONDecodeError:
@@ -152,7 +105,7 @@ def _extract_listview_spells(content: str) -> dict[int, dict]:
     if not match:
         return {}
     raw = match.group(1)
-    for text in (raw, _fix_js_object(raw)):
+    for text in (raw, wowhead.fix_js_object(raw)):
         try:
             rows = json.loads(text)
             break
@@ -208,7 +161,7 @@ def _extract_taught_by_npcs(content: str) -> list[dict]:
     return result
 
 
-def fetch_wowhead_spell(spell_id: int, expansion: str = "tbc") -> dict | None:
+def fetch_wowhead_spell(spell_id: int, bucket) -> dict | None:
     """Fetch comprehensive spell data from Wowhead HTML page.
 
     Returns dict with all available data:
@@ -218,7 +171,7 @@ def fetch_wowhead_spell(spell_id: int, expansion: str = "tbc") -> dict | None:
 
     Returns None on complete failure (page not found / network error).
     """
-    url = f"https://www.wowhead.com/{expansion}/spell={spell_id}"
+    url = wowhead.spell_url(bucket, spell_id)
     content = _fetch_page(url)
     if not content:
         return None
@@ -296,13 +249,18 @@ def _resolve_source(recipe: dict, wh: dict) -> dict | None:
     existing_type = existing_source.get("type", "")
     existing_cert = existing_source.get("certainty", "")
 
+    # Hand-verified sources outrank a Wowhead trainer signal (same rule as extract's
+    # preservation); otherwise the per-spell trainer audit would overwrite MANUAL ones.
+    if existing_cert == "MANUAL":
+        return None
+
     # Don't reclassify REPUTATION — DB2 faction data is authoritative.
     if existing_type == "REPUTATION":
         return None
 
     source_types = wh.get("source", [])
     has_training_cost = "trainingCost" in wh
-    has_trainer_source = 6 in source_types
+    has_trainer_source = wowhead.TRAINER in source_types
 
     # Policy: if trainable, always classify as TRAINER.
     if has_training_cost or has_trainer_source:
@@ -314,7 +272,7 @@ def _resolve_source(recipe: dict, wh: dict) -> dict | None:
     # Reclassify when the source is still PENDING, or an over-confident DB2 QUEST.
     demotable = (existing_cert == "PENDING"
                  or (existing_type == "QUEST" and existing_cert == "DB2"))
-    meaningful = [c for c in source_types if c != 1]  # CRAFTED is not acquisition
+    meaningful = [c for c in source_types if c != wowhead.CRAFTED]  # CRAFTED is not acquisition
     if not (demotable and meaningful):
         return None
 
@@ -349,18 +307,15 @@ def _difficulty_from_colors(colors: list[int], expansion: str) -> dict:
     }
 
 
-def process_profession_listview(sources_file, slug: str, expansion: str, dry_run: bool) -> int:
+def process_profession_listview(sources_file, profession, bucket, dry_run: bool) -> int:
     """One-request-per-profession Wowhead pass.
 
     Fills difficulty + seasonId/phaseId + resolves source for every recipe in the
     Sources JSON using a single profession-listview page.
     """
-    with open(sources_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_json(sources_file)
 
-    subdomain = WOWHEAD_SUBDOMAIN.get(expansion, "classic")
-    category = "secondary-skills" if slug in SECONDARY_SKILL_SLUGS else "professions"
-    url = f"https://www.wowhead.com/{subdomain}/spells/{category}/{slug}"
+    url = wowhead.listview_url(bucket, profession)
     print(f"Fetching listview: {url}", file=sys.stderr)
     content = _fetch_page(url)
     if not content:
@@ -383,7 +338,7 @@ def process_profession_listview(sources_file, slug: str, expansion: str, dry_run
             continue
         colors = row.get("colors")
         if colors and len(colors) == 4:
-            recipe["difficulty"] = _difficulty_from_colors(colors, expansion)
+            recipe["difficulty"] = _difficulty_from_colors(colors, bucket.key)
             filled += 1
         # Capture SoD flag + comprehensive wowhead data
         wh = recipe.setdefault("wowhead", {})
@@ -403,8 +358,7 @@ def process_profession_listview(sources_file, slug: str, expansion: str, dry_run
         if new_source:
             recipe["source"] = new_source
 
-    with open(sources_file, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
+    atomic_write_json(sources_file, data)
 
     print(f"  Filled difficulty: {filled}; seasonal(seasonId): {seasonal}; "
           f"no listview match: {len(missing)}", file=sys.stderr)
@@ -418,9 +372,9 @@ def process_profession_listview(sources_file, slug: str, expansion: str, dry_run
                 if r.get("source", {}).get("certainty") == "PENDING"]
     if residual:
         print(f"  Residual PENDING sources: {len(residual)} -> per-spell fallback", file=sys.stderr)
-        # Use the same subdomain the listview used, not a hardcoded "classic".
-        # Without this, WotLK residuals would re-fetch on /classic/ instead of /wotlk/.
-        process_profession(sources_file, False, residual, subdomain, False)
+        # Propagate the result: a failed residual fetch used to leave PENDING
+        # sources behind while the run exited 0.
+        return process_profession(sources_file, False, residual, bucket, False)
     return 0
 
 
@@ -451,7 +405,7 @@ def process_profession(
     sources_file: Path,
     dry_run: bool,
     specific_spells: list[int] | None,
-    expansion: str = "tbc",
+    bucket=None,
     force: bool = False,
 ) -> int:
     """Single-pass Wowhead data fetch for a profession.
@@ -461,8 +415,7 @@ def process_profession(
     - Source type resolution (TRAINER/VENDOR/DROP/QUEST)
     - Comprehensive wowhead data (reagents, creates, quality, NPCs)
     """
-    with open(sources_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_json(sources_file)
 
     # Find recipes that need fetching
     recipes_to_fetch = []
@@ -525,7 +478,7 @@ def process_profession(
         src_type = recipe.get("source", {}).get("type", "?")
         print(f"  Spell {spell_id} ({recipe['name']}, {src_type})...", file=sys.stderr, end=" ")
 
-        wowhead_data = fetch_wowhead_spell(int(spell_id), expansion)
+        wowhead_data = fetch_wowhead_spell(int(spell_id), bucket)
         if not wowhead_data:
             print("FAILED (no data)", file=sys.stderr)
             failed += 1
@@ -539,7 +492,7 @@ def process_profession(
                 "green": wowhead_data["green"],
                 "gray": wowhead_data["gray"],
                 "certainty": "WOWHEAD",
-                "expansion": expansion,
+                "expansion": bucket.key,
             }
         else:
             no_colors.append({"spell_id": spell_id, "name": recipe["name"]})
@@ -568,8 +521,7 @@ def process_profession(
 
         # Save progress every 10 items
         if updated % 10 == 0:
-            with open(sources_file, "w", encoding="utf-8") as f:
-                json.dump(data, f, indent=2)
+            atomic_write_json(sources_file, data)
             print(f"  [Saved: {updated} fetched, {reclassified} reclassified]", file=sys.stderr)
 
         # Rate limit
@@ -577,8 +529,7 @@ def process_profession(
 
     # Write back
     if updated > 0:
-        with open(sources_file, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
+        atomic_write_json(sources_file, data)
 
     # Summary
     print(f"\nComplete for {sources_file.stem}:", file=sys.stderr)
@@ -598,49 +549,41 @@ def process_profession(
     return 0
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Fetch recipe data from Wowhead (single-pass: difficulty + source + trainer audit)"
     )
-    parser.add_argument("--profession", required=True, help="Profession name")
-    parser.add_argument(
-        "--sources-dir",
-        type=Path,
-        default=Path("Data/Sources"),
-        help="Base sources directory (expansion subfolder added automatically)",
-    )
+    add_bucket_argument(parser)
+    parser.add_argument("--profession", required=True, help="Profession name, key or folder")
+    parser.add_argument("--sources-dir", type=Path, default=REPO_ROOT / "Data" / "Sources",
+                        help="Base sources directory (bucket folder added automatically)")
     parser.add_argument("--dry-run", action="store_true", help="Show what would be fetched")
     parser.add_argument("--spells", type=int, nargs="+", help="Specific spell IDs to fetch")
-    parser.add_argument("--expansion", default="tbc", help="Wowhead expansion subdomain (default: tbc)")
     parser.add_argument("--force", action="store_true", help="Re-fetch all recipes even if already verified")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
-    # Map expansion subdomain to folder name.
-    # "classic" is an alias for "vanilla" (both write to Data/Sources/Vanilla).
-    exp_folder = {"sod": "SoD", "vanilla": "Vanilla", "classic": "Vanilla", "tbc": "TBC",
-                  "wotlk": "WotLK", "cata": "Cata"}.get(
-        args.expansion.lower(), args.expansion.upper()
-    )
+    bucket = get_bucket(args.bucket)
+    try:
+        profession = bucket.profession(args.profession)
+    except UnknownProfessionError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 1
 
-    # Find sources file
-    prof_name = args.profession.replace(" ", "")
-    sources_file = args.sources_dir / exp_folder / f"{prof_name}.json"
-
+    sources_file = args.sources_dir / bucket.folder / f"{profession.folder}.json"
     if not sources_file.exists():
-        print(f"Sources file not found: {sources_file}", file=sys.stderr)
+        print(f"ERROR: bucket '{bucket.key}': sources file not found: {sources_file}", file=sys.stderr)
         print("Run extract_db2_sources.py first.", file=sys.stderr)
         return 1
 
-    # Use a single listview request for continuous-tier expansions and SoD.
-    # TBC keeps the per-spell path (already generated + stable; no high-volume profs like Inscription).
-    if args.expansion.lower() in ("sod", "wotlk", "vanilla", "classic"):
-        slug = PROFESSION_SLUGS.get(prof_name.lower())
-        if not slug:
-            print(f"No Wowhead slug for profession: {args.profession}", file=sys.stderr)
+    if bucket.enrich == "wowhead-listview":
+        try:
+            wowhead.profession_slug(profession)
+        except ValueError as e:
+            print(f"ERROR: bucket '{bucket.key}': {e}", file=sys.stderr)
             return 1
-        return process_profession_listview(sources_file, slug, args.expansion.lower(), args.dry_run)
+        return process_profession_listview(sources_file, profession, bucket, args.dry_run)
 
-    return process_profession(sources_file, args.dry_run, args.spells, args.expansion, args.force)
+    return process_profession(sources_file, args.dry_run, args.spells, bucket, args.force)
 
 
 if __name__ == "__main__":
