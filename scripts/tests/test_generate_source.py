@@ -46,13 +46,12 @@ def test_structural_starter_source_is_emitted():
     assert "16980" in lua
 
 
-def test_unknown_source_recipe_is_ejected_not_emitted():
-    # UNKNOWN-source recipes (e.g. SoD-exclusive Tinkers/feasts not yet Wowhead-sourced)
-    # are skipped during generation: no raise, and the recipe is absent from the Lua.
+def test_unknown_source_recipe_raises_in_generate_lua():
+    # generate_lua no longer ejects UNKNOWN silently: extract_recipes rejects it first, and
+    # the emitter's unhandled-type raise is the backstop.
     unknown_src = {"type": "UNKNOWN", "certainty": "WOWHEAD"}
-    lua = gr.generate_lua([_recipe(unknown_src)], _PROF, _BUCKET)
-    assert "16980" not in lua
-    assert "Rune Edge" not in lua
+    with pytest.raises(ValueError):
+        gr.generate_lua([_recipe(unknown_src)], _PROF, _BUCKET)
 
 
 def test_discovery_with_itemid_emits_type_and_itemid():
@@ -81,23 +80,6 @@ def test_quest_emits_itemid():
     lua = gr.generate_lua([_recipe(src)], _PROF, _BUCKET)
     assert "type = C.SOURCE_TYPE.QUEST," in lua
     assert "itemId = 238649," in lua
-
-
-def test_unknown_ejected_but_vendor_still_emitted():
-    # Mixing one UNKNOWN + one VENDOR: only the VENDOR survives generation.
-    unknown = {"id": 16980, "name": "Rune Edge", "skillRequired": 250,
-               "skillRange": {"orange": 250, "yellow": 260, "green": 270, "gray": 280},
-               "reagents": [], "expansion": "SOD", "recipe_item": None,
-               "source": {"type": "UNKNOWN", "certainty": "WOWHEAD"}}
-    vendor = {"id": 99999, "name": "Vendor Plan", "skillRequired": 250,
-              "skillRange": {"orange": 250, "yellow": 260, "green": 270, "gray": 280},
-              "reagents": [], "expansion": "SOD", "recipe_item": None,
-              "source": {"type": "VENDOR", "certainty": "CROSS", "itemId": 12826, "cost": 20000}}
-    lua = gr.generate_lua([unknown, vendor], _PROF, _BUCKET)
-    assert "16980" not in lua
-    assert "Rune Edge" not in lua
-    assert "99999" in lua
-    assert "Vendor Plan" in lua
 
 
 # ---------------------------------------------------------------------------

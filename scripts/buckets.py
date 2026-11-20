@@ -32,7 +32,7 @@ class Profession:
     skill_line: int
 
 
-# Mirrors generate_recipes.py PROFESSIONS; folder = display name without spaces.
+# Every pipeline script (generate_recipes.py included) imports this table; folder = display name without spaces.
 PROFESSIONS: dict[str, Profession] = {
     p.folder: p for p in (
         Profession("FirstAid", "firstAid", "First Aid", "FIRST_AID", 129),

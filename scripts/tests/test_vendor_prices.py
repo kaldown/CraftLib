@@ -137,8 +137,8 @@ def test_lua_tbc_carries_profile_tag():
 
 # --- emit_vendor_prices END-TO-END (profile->flavor split; the regression gap) --------------
 # This is the seam the unit tests missed: emit_vendor_prices receives a PROFILE token but must
-# pass the LEGACY flavor ("DEFAULT"/"SOD") to compute (for allowlist scoping) while emitting the
-# PROFILE token as the guard tag. A token like "TBC" must NOT drop a "flavors": ["DEFAULT"] entry.
+# pass the bucket's registry vendor_scope ("DEFAULT"/"SOD") to compute (for allowlist scoping)
+# while emitting the PROFILE token as the guard tag. A token like "TBC" must NOT drop a "flavors": ["DEFAULT"] entry.
 
 def _write_allowlist(tmp_path):
     # Two verified reagents: one GLOBAL (no flavors), one scoped DEFAULT-only (like Simple Flour).
@@ -160,8 +160,8 @@ def _emit_details():
 
 @pytest.mark.parametrize("profile_token", ["TBC", "WOTLK"])
 def test_emit_continuous_tier_keeps_default_only_reagent(tmp_path, profile_token):
-    # A continuous-tier profile (TBC/WotLK/Vanilla) maps to the DEFAULT allowlist bucket, so the
-    # DEFAULT-only reagent MUST be present and the file MUST carry the real profile guard tag.
+    # TBC and WotLK have vendor_scope DEFAULT (Vanilla's is SOD: the Era build lacks DEFAULT-only
+    # reagents), so the DEFAULT-only reagent MUST be present and the file MUST carry the real profile guard tag.
     out = gr.emit_vendor_prices(_emit_details(), get_bucket(profile_token.lower()), tmp_path,
                                 allowlist_path=_write_allowlist(tmp_path))
     lua = out.read_text()

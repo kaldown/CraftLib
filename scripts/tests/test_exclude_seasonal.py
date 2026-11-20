@@ -1,4 +1,4 @@
-"""Tests for the --exclude-seasonal filter in generate_recipes.py.
+"""Tests for the exclude_seasonal bucket field (Vanilla) in generate_recipes.py.
 
 WHY: The Era build's Wowhead /classic listview returns both Vanilla and
 Season-of-Discovery recipes.  SoD-only ones carry seasonId==2.  They do not
@@ -52,7 +52,8 @@ def _make_data_and_indexes(spell_ids):
             _SPELL_VANILLA: "Bolt of Woolen Cloth",
             _SPELL_SEASONAL: "Phoenix Bindings",
         },
-        "item_names": {str(int(sid) + 1): f"Item{sid}" for sid in spell_ids},
+        "item_names": {**{str(int(sid) + 1): f"Item{sid}" for sid in spell_ids},
+                       "2589": "Linen Cloth"},
         "item_details": {},
         "recipe_items": {},
         "trivial_ranks": {},
@@ -100,10 +101,10 @@ def test_seasonal_recipe_excluded_when_flag_set():
     skipped_ids = {s["id"] for s in skipped}
 
     assert _SPELL_SEASONAL not in recipe_ids, (
-        "Seasonal recipe (seasonId=2) must be excluded when --exclude-seasonal is set"
+        "Seasonal recipe (seasonId=2) must be excluded when the bucket sets exclude_seasonal"
     )
     assert _SPELL_VANILLA in recipe_ids, (
-        "Non-seasonal recipe must still be included when --exclude-seasonal is set"
+        "Non-seasonal recipe must still be included when the bucket sets exclude_seasonal"
     )
     assert _SPELL_SEASONAL in skipped_ids, (
         "Excluded seasonal recipe must appear in skipped list"
@@ -128,13 +129,13 @@ def test_seasonal_recipe_included_when_flag_not_set():
 
     recipes, skipped = gen.extract_recipes(
         data, indexes, _PROF, _OFF,
-        verified_sources=verified,  # flag OFF -- SoD / TBC / WotLK path
+        verified_sources=verified,  # exclude_seasonal off -- SoD / TBC / WotLK buckets
     )
 
     recipe_ids = {str(r["id"]) for r in recipes}
 
     assert _SPELL_SEASONAL in recipe_ids, (
-        "Without --exclude-seasonal the seasonal recipe must still be emitted "
+        "With exclude_seasonal off the seasonal recipe must still be emitted "
         "(SoD pipeline relies on this)"
     )
     assert _SPELL_VANILLA in recipe_ids, (

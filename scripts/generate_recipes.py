@@ -6,18 +6,76 @@ Usage:
 """
 
 import argparse
-import csv
 import json
 import sys
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import db2
-from buckets import (PROFESSIONS, Profession, UnknownProfessionError,
+from buckets import (BUCKETS, PROFESSIONS, Profession, UnknownProfessionError,
                      add_bucket_argument, get_bucket)
 from db2 import CanaryError, ColumnContractError
 from pipeline_io import atomic_write_text
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
+EMITTABLE_SOURCE_TYPES = ("TRAINER", "REPUTATION", "VENDOR", "DROP", "QUEST", "DISCOVERY", "STARTER")
+EXCEPTION_CATEGORIES = {"exclude": "exclude", "reagentless": "reagentless",
+                        "shipNeedsReview": "ship_needs_review"}
+
+
+class GenerateError(ValueError):
+    """A data gap that must be aligned (or explicitly excepted with a reason) before release."""
+
+
+@dataclass(frozen=True)
+class Exceptions:
+    """spell id (str) -> reason, per category, for ONE bucket."""
+    exclude: dict = field(default_factory=dict)
+    reagentless: dict = field(default_factory=dict)
+    ship_needs_review: dict = field(default_factory=dict)
+
+
+def load_exceptions(path: Path, bucket) -> Exceptions:
+    """Read this bucket's entries from generate_exceptions.json.
+
+    WHY a missing file is an empty Exceptions: exceptions only ever RELAX a hard failure,
+    so absence can only make generation stricter. WHY the whole file is validated (not just
+    this bucket): a typo'd bucket key would otherwise silently exempt nothing.
+    """
+    path = Path(path)
+    if not path.is_file():
+        return Exceptions()
+    with open(path, encoding="utf-8") as f:
+        raw = json.load(f)
+    result = {k: {} for k in EXCEPTION_CATEGORIES.values()}
+    for key, body in raw.items():
+        if key == "_doc":
+            continue
+        if key not in BUCKETS:
+            raise GenerateError(f"{path.name}: unknown bucket key {key!r}; valid: {sorted(BUCKETS)}")
+        seen: set[str] = set()
+        for category, groups in body.items():
+            if category not in EXCEPTION_CATEGORIES:
+                raise GenerateError(f"{path.name} {key}: unknown category {category!r}; "
+                                    f"valid: {sorted(EXCEPTION_CATEGORIES)}")
+            for group in groups:
+                spells, reason = group.get("spells"), group.get("reason")
+                if not spells:
+                    raise GenerateError(f"{path.name} {key}/{category}: empty 'spells' list")
+                if not isinstance(reason, str) or not reason.strip():
+                    raise GenerateError(f"{path.name} {key}/{category}: every entry needs a reason")
+                for sp in spells:
+                    # bool is an int subclass; reject it explicitly.
+                    if not isinstance(sp, int) or isinstance(sp, bool):
+                        raise GenerateError(f"{path.name} {key}/{category}: spell {sp!r} is not an int")
+                    if str(sp) in seen:
+                        raise GenerateError(f"{path.name} {key}: spell {sp} listed twice in one bucket")
+                    seen.add(str(sp))
+                    if key == bucket.key:
+                        result[EXCEPTION_CATEGORIES[category]][str(sp)] = reason
+    return Exceptions(**result)
 
 
 def escape_lua_string(s: str) -> str:
@@ -45,12 +103,6 @@ def load_verified_sources(sources_dir: Path, profession_name: str) -> dict | Non
         for spell_id, recipe in data.get("recipes", {}).items()
     }
 
-
-
-def load_csv(path: Path) -> list[dict]:
-    """Load CSV file as list of dicts."""
-    with open(path, "r", encoding="utf-8") as f:
-        return list(csv.DictReader(f))
 
 
 def load_vendor_reagents(path: Path) -> dict:
@@ -287,6 +339,8 @@ def extract_recipes(
     bucket,
     verified_sources: dict | None = None,
     removed: set[str] | None = None,
+    exceptions: Exceptions | None = None,
+    used: set[str] | None = None,
 ) -> tuple[list[dict], list[dict]]:
     """Extract recipes for a profession from SkillLineAbility.
 
@@ -295,6 +349,9 @@ def extract_recipes(
         without verified difficulty data (likely removed/never-implemented).
     """
     skill_line_id = profession.skill_line
+    exceptions = exceptions or Exceptions()
+    used = used if used is not None else set()
+    sources = verified_sources or {}
     force_expansion = bucket.fixed_expansion
     exclude_seasonal = bucket.exclude_seasonal
     recipes = []
@@ -325,36 +382,71 @@ def extract_recipes(
         # Get crafted item (optional - enchantments don't create items)
         item_id = indexes["crafted_items"].get(spell_id)
 
-        # Must have reagents to be a crafting/enchanting recipe
-        if not indexes["spell_reagents"].get(spell_id):
+        # Sources first: a spell absent from them was never a recipe of this bucket (rank
+        # rows, removed/never-implemented). Only reagent-bearing ones are worth logging.
+        verified_recipe = sources.get(spell_id)
+        has_reagents = bool(indexes["spell_reagents"].get(spell_id))
+        spell_name = indexes["spell_names"].get(spell_id, "")
+        if verified_recipe is None:
+            if has_reagents:
+                skipped_recipes.append({"id": spell_id, "name": spell_name or f"spell {spell_id}",
+                                        "reason": "not in sources"})
             continue
 
-        # Skip recipes not in verified sources (likely removed/never-implemented)
-        if verified_sources:
-            verified_recipe = verified_sources.get(spell_id)
-            if not verified_recipe:
-                spell_name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
-                skipped_recipes.append({"id": spell_id, "name": spell_name, "reason": "not in sources"})
-                continue
+        where = (f"bucket '{bucket.key}' {profession.name} spell {spell_id} "
+                 f"({spell_name or verified_recipe.get('name', '?')!r})")
 
-            # WHY exclude_seasonal: the Era build's Wowhead /classic listview returns BOTH
-            # Vanilla and Season-of-Discovery recipes; SoD-only ones carry seasonId==2. These
-            # do not exist on a non-SoD Era/Vanilla client and must be excluded from the Vanilla
-            # bucket. The SoD bucket keeps them via its own pipeline (--flavor sod). This flag
-            # defaults OFF so TBC/WotLK/SoD generation is unaffected.
-            if exclude_seasonal and verified_recipe.get("seasonId"):
-                spell_name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
-                skipped_recipes.append({"id": spell_id, "name": spell_name, "reason": "seasonal (seasonId)"})
-                continue
+        # WHY exclude_seasonal: the Era build's Wowhead /classic listview returns BOTH
+        # Vanilla and Season-of-Discovery recipes; SoD-only ones carry seasonId==2. These
+        # do not exist on a non-SoD Era/Vanilla client and must be excluded from the Vanilla
+        # bucket (registry field exclude_seasonal).
+        if exclude_seasonal and verified_recipe.get("seasonId"):
+            skipped_recipes.append({"id": spell_id, "name": spell_name, "reason": "seasonal (seasonId)"})
+            continue
+
+        if spell_id in exceptions.exclude:
+            used.add(spell_id)
+            skipped_recipes.append({"id": spell_id, "name": spell_name,
+                                    "reason": f"excluded: {exceptions.exclude[spell_id]}"})
+            continue
 
         # Get verified difficulty — Wowhead data is REQUIRED, no DB2 fallback
-        verified_recipe = verified_sources.get(spell_id) if verified_sources else None
         verified_difficulty = verified_recipe.get("difficulty") if verified_recipe else None
 
         if not verified_difficulty or verified_difficulty.get("certainty") not in ("WOWHEAD", "CRAFTDUMP"):
-            spell_name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
             skipped_recipes.append({"id": spell_id, "name": spell_name, "reason": "no WOWHEAD difficulty"})
             continue
+
+        # Fail-loud gates, in the order the exceptions file documents. WHY here (after the
+        # difficulty skip): recipes without difficulty are not shipped, so they cannot ship bad data.
+        if not has_reagents:
+            if spell_id not in exceptions.reagentless:
+                raise GenerateError(f"{where} has no reagents; add it to generate_exceptions.json "
+                                    f"reagentless with a reason, or fix the data")
+            used.add(spell_id)
+        if not spell_name:
+            raise GenerateError(f"{where} has no name in SpellName (build data gap)")
+        for reagent_id, _count in indexes["spell_reagents"].get(spell_id, []):
+            if not indexes["item_names"].get(reagent_id):
+                raise GenerateError(f"{where}: reagent item {reagent_id} has no name in ItemSparse")
+        source = verified_recipe.get("source")
+        if not source:
+            raise GenerateError(f"{where} has no source data. Run fetch_wowhead_sources.py to populate.")
+        if source.get("certainty") == "PENDING":
+            raise GenerateError(f"{where} has a PENDING source. Run fetch_wowhead_sources.py to verify.")
+        if source.get("type") not in EMITTABLE_SOURCE_TYPES:
+            raise GenerateError(f"{where} has source type {source.get('type')!r}, which cannot be emitted; "
+                                f"add it to generate_exceptions.json exclude with a reason, or align the source")
+        if source.get("needsReview") or source.get("reviewReason"):
+            if spell_id not in exceptions.ship_needs_review:
+                raise GenerateError(f"{where} source is flagged for review "
+                                    f"({source.get('reviewReason') or 'needsReview'}); align it, or add it to "
+                                    f"generate_exceptions.json shipNeedsReview with a reason")
+            used.add(spell_id)
+        if source["type"] == "REPUTATION":
+            missing = [k for k in ("factionId", "factionName", "level", "itemId", "cost") if k not in source]
+            if missing:
+                raise GenerateError(f"{where} REPUTATION source is missing {missing}; align before release")
 
         orange = verified_difficulty["orange"]
         yellow = verified_difficulty["yellow"]
@@ -413,7 +505,7 @@ def extract_recipes(
         for reagent_id, count in indexes["spell_reagents"].get(spell_id, []):
             reagents.append({
                 "itemId": int(reagent_id),
-                "name": indexes["item_names"].get(reagent_id, f"Unknown-{reagent_id}"),
+                "name": indexes["item_names"][reagent_id],
                 "count": count,
             })
 
@@ -436,7 +528,7 @@ def extract_recipes(
 
         recipe = {
             "id": int(spell_id),
-            "name": indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}"),
+            "name": spell_name,
             "skillRequired": skill_required,
             "skillRange": {
                 "orange": orange,
@@ -453,25 +545,7 @@ def extract_recipes(
             recipe["itemId"] = int(item_id)
             recipe["itemName"] = indexes["item_names"].get(item_id, f"Unknown-{item_id}")
 
-        # Source from verified sources — REQUIRED
-        if verified_recipe:
-            source = verified_recipe.get("source")
-            if not source:
-                raise ValueError(
-                    f"Recipe '{recipe['name']}' (spell {spell_id}) has no source data. "
-                    f"Run fetch_wowhead_sources.py to populate."
-                )
-            if source.get("certainty") == "PENDING":
-                raise ValueError(
-                    f"Recipe '{recipe['name']}' (spell {spell_id}) has PENDING source. "
-                    f"Run fetch_wowhead_sources.py to verify."
-                )
-            recipe["source"] = source
-        else:
-            raise ValueError(
-                f"Recipe '{recipe['name']}' (spell {spell_id}) has no verified source entry. "
-                f"Run extract_db2_sources.py then fetch_wowhead_sources.py first."
-            )
+        recipe["source"] = source
 
         recipes.append(recipe)
 
@@ -511,10 +585,6 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
 
         # Source
         source = recipe["source"]
-        if source["type"] == "UNKNOWN":
-            print(f"  Ejected UNKNOWN-source recipe: {recipe['id']} ({recipe['name']!r})",
-                  file=sys.stderr)
-            continue
         source_lines = [f'            type = C.SOURCE_TYPE.{source["type"]},']
         if source["type"] == "TRAINER":
             source_lines.append(f'            npcName = "Any {prof_name} Trainer",')
@@ -620,7 +690,7 @@ def main(argv: list[str] | None = None) -> int:
     version = args.version or bucket.build
     data_dir = args.data_dir / version
     if not data_dir.exists():
-        print(f"Data directory not found: {data_dir}", file=sys.stderr)
+        print(f"ERROR: bucket '{bucket.key}': data directory not found: {data_dir}", file=sys.stderr)
         return 1
 
     if args.profession:
@@ -657,34 +727,49 @@ def main(argv: list[str] | None = None) -> int:
 
         removed_spells = load_removed(args.sources_dir, bucket)
         bucket_sources = args.sources_dir / bucket.folder
+        exceptions_path = args.sources_dir / "generate_exceptions.json"
+        exceptions = load_exceptions(exceptions_path, bucket)
 
         for profession in professions:
             verified_sources = load_verified_sources(bucket_sources, profession.name)
             if verified_sources:
                 print(f"Loaded {len(verified_sources)} verified sources for {profession.name}", file=sys.stderr)
 
+            used: set[str] = set()
             recipes, skipped = extract_recipes(
                 data, indexes, profession, bucket, verified_sources,
-                removed_spells.get(profession.name, set()))
+                removed_spells.get(profession.name, set()), exceptions, used)
 
             if skipped:
                 print(f"Skipped {len(skipped)} recipes for {profession.name}:", file=sys.stderr)
                 for r in skipped:
                     print(f"  - {r['id']}: {r['name']} ({r.get('reason', 'unknown')})", file=sys.stderr)
 
+            # WHY stale-entry warnings: an exception that no longer fires means the data was
+            # aligned (or the spell left the sources); keeping it would hide a future regression.
+            for category, entries in (("exclude", exceptions.exclude),
+                                      ("reagentless", exceptions.reagentless),
+                                      ("shipNeedsReview", exceptions.ship_needs_review)):
+                for spell, _reason in entries.items():
+                    if spell in (verified_sources or {}) and spell not in used:
+                        nm = (verified_sources[spell] or {}).get("name", "?")
+                        print(f"WARNING: generate_exceptions.json {bucket.key}/{category} spell "
+                              f"{spell} ({nm}) is no longer needed", file=sys.stderr)
+
             if not recipes:
-                print(f"No recipes found for {profession.name}", file=sys.stderr)
-                continue
+                raise GenerateError(f"bucket '{bucket.key}': no recipes emitted for {profession.name}; "
+                                    f"check its sources and exceptions")
 
             lua_code = generate_lua(recipes, profession, bucket)
             output_file = args.output_dir / bucket.folder / profession.folder / "Recipes.lua"
             output_file.parent.mkdir(parents=True, exist_ok=True)
             atomic_write_text(output_file, lua_code)
-            # Count EMITTED recipes only: generate_lua ejects UNKNOWN-source recipes.
-            emitted = sum(1 for r in recipes if r["source"]["type"] != "UNKNOWN")
-            print(f"Generated {output_file}: {emitted} recipes", file=sys.stderr)
+            print(f"Generated {output_file}: {len(recipes)} recipes", file=sys.stderr)
     except (ValueError, ColumnContractError, CanaryError, FileNotFoundError) as e:
-        print(f"ERROR: {e}", file=sys.stderr)
+        # Always name the bucket (vanilla and sod share one DB2 build); GenerateErrors already do.
+        msg = str(e)
+        print(f"ERROR: {msg if f'bucket {chr(39)}{bucket.key}{chr(39)}' in msg else f'bucket {chr(39)}{bucket.key}{chr(39)}: {msg}'}",
+              file=sys.stderr)
         return 2
 
     return 0
