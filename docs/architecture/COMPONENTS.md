@@ -47,11 +47,18 @@ CraftLib/
 │       └── Tailoring/Recipes.lua         # 314 recipes
 │
 ├── scripts/                              # Python 3 data generation pipeline
+│   ├── buckets.py                        # Bucket registry: builds, professions, per-bucket flags
+│   ├── pipeline.py                       # Fail-fast driver behind the Makefile targets
 │   ├── extract_db2_sources.py            # Phase 1: Extract sources from DB2 tables
 │   ├── fetch_wowhead_sources.py          # Phase 2: Verify PENDING sources + fetch difficulty from Wowhead
+│   ├── reconcile_cross_bucket.py         # Inherit a parent bucket's verified source (SoD from TBC)
+│   ├── verify_trainer_sources.py         # Per-spell Wowhead check of remaining trainer guesses
+│   ├── assert_no_pending.py              # Gate: no PENDING source left
+│   ├── assert_no_unaligned.py            # Gate: no uncorroborated cross-bucket source left
+│   ├── audit_sources.py                  # Offline audit of source classifications
 │   ├── generate_recipes.py               # Phase 3: Generate Lua from verified sources
-│   ├── validate_sources.py               # Validation: detect suspicious source classifications
-│   └── source_overrides.json             # Manual DROP overrides for ambiguous recipe items
+│   ├── db2.py, wowhead.py, pipeline_io.py  # Shared helpers (column contract, Wowhead, atomic writes)
+│   └── tests/                            # pytest + Lua tests (`make test`)
 │
 ├── vendor/
 │   └── db2-parser/                       # Git submodule: DB2 data fetcher
@@ -180,10 +187,13 @@ The per-profession JSON files are the source of truth for `generate_recipes.py`.
 | Script | Phase | Purpose |
 |--------|-------|---------|
 | `extract_db2_sources.py` | 1 | Extract recipe sources from DB2 CSV tables. Auto-detects TRAINER, REPUTATION, QUEST; marks ambiguous items as PENDING. |
-| `fetch_wowhead_sources.py` | 2 | Verify PENDING sources via Wowhead XML/HTML. Also fetches difficulty levels (`--difficulty` flag). Rate-limited. |
+| `fetch_wowhead_sources.py` | 2 | Verify PENDING sources and fetch difficulty from Wowhead in one pass (profession listview or per-spell pages, per bucket). Rate-limited. |
+| `reconcile_cross_bucket.py` | 2 | Inherit the parent bucket's verified non-trainer source for the same spell (SoD from TBC). |
+| `verify_trainer_sources.py` | 2 | Resumable per-spell Wowhead check of the trainer guesses left after reconcile. |
+| `assert_no_pending.py`, `assert_no_unaligned.py` | gate | Fail when a PENDING or uncorroborated source remains. |
+| `audit_sources.py` | gate | Offline audit (`make audit`); hard findings fail the buckets that require it. |
 | `generate_recipes.py` | 3 | Generate Lua data files from verified sources. Applies orange=0 threshold logic (ADR-005), filters removed recipes. |
-| `validate_sources.py` | - | Detect suspicious source classifications (e.g., high-skill TRAINER recipes). |
-| `source_overrides.json` | - | Manual DROP overrides for recipe items that DB2 misclassifies. |
+| `pipeline.py` | - | Runs every stage of a bucket in order and stops at the first failure (`make <bucket>-all`, `make <bucket>-generate OUT=<dir>`). |
 
 See [ADDING_PROFESSIONS.md](/docs/development/ADDING_PROFESSIONS.md) for the full pipeline workflow.
 
@@ -193,7 +203,7 @@ See [ADDING_PROFESSIONS.md](/docs/development/ADDING_PROFESSIONS.md) for the ful
 
 Downloads CSV files for specific game build versions, used as input for the CraftLib data generation scripts. Contains its own schema documentation for the 10 DB2 tables used by CraftLib.
 
-**Key command**: `make -C vendor/db2-parser latest EXPANSION=2` fetches CSVs for the latest TBC build.
+**Key command**: `make fetch-data` (or `make <bucket>-fetch`) fetches the CSVs of each bucket's pinned build; builds are pinned in `scripts/buckets.py`, never "latest".
 
 ## .github/workflows/release.yml
 

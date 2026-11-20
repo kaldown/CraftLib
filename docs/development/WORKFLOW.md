@@ -69,16 +69,48 @@ EOF
 git status && git log --oneline -1
 ```
 
+## Data Pipeline Commands
+
+The pipeline is driven per client bucket (`vanilla`, `tbc`, `wotlk`, `sod`; `make list-buckets`
+shows them with their pinned builds). Every target reads the bucket registry in
+`scripts/buckets.py`.
+
+| Command | What it does |
+|---------|--------------|
+| `make fetch-data [BUCKET=<b>]` | Fetch the pinned DB2 build(s) into `vendor/db2-parser/artifacts/` |
+| `make <bucket>-fetch` | Fetch one bucket's pinned DB2 build |
+| `make <bucket>-all [PROFESSION=<name>]` | Full pipeline (network): extract, enrich, gates and audit, then generate; rewrites `Data/Sources` and `Data/` in place and stops at the first failing step |
+| `make <bucket>-generate OUT=<dir>` | Offline: regenerate the bucket's Lua from the tracked sources into `<dir>`; `OUT` is required, `OUT=Data` rewrites the shipped files deliberately |
+| `make vendor-prices OUT=<dir> [BUCKET=<b>]` | Offline: regenerate `VendorPrices.lua` (same `OUT` rule) |
+| `make audit` | Audit the tracked source classifications |
+| `make test` | pytest, both Lua tests and the `luac5.1 -p` lint |
+
+`ARGS="..."` passes extra flags to `scripts/pipeline.py` (for example
+`ARGS="--steps assert-no-pending,generate"`). `<bucket>-all` and `<bucket>-fetch` reject `OUT`;
+to run `-all` against other directories pass `ARGS="--sources-dir <dir> --output-dir <dir>"`.
+
+### Exit codes
+
+Every pipeline script and the driver use one convention, so a failing make target tells you what
+kind of problem stopped it:
+
+| Code | Meaning |
+|------|---------|
+| 0 | Success |
+| 1 | Usage/config error or gate finding: unknown profession, a bucket that does not use the stage, a missing DB2 build directory (wrong `--version`/`--data-dir`), a PENDING or uncorroborated source left for `assert_no_*`, a hard audit finding |
+| 2 | Input-data error: a missing or malformed input file, a DB2 column-contract or canary failure, a generate gate, a failed or unusable Wowhead fetch |
+
+argparse itself exits 2 on bad command-line syntax (unknown flag, invalid choice, missing required
+argument); the driver's own command-line checks (`--steps`, `--version` with `--all`) do the same.
+
 ## Adding a New Profession
 
-1. **Extract DB2 sources**: `python scripts/extract_db2_sources.py --version X.X.X.XXXXX --profession [name]`
-2. **Verify uncertain sources**: `python scripts/fetch_wowhead_sources.py --profession [name]`
-3. **Generate Recipes.lua**: `python scripts/generate_recipes.py --version X.X.X.XXXXX --profession [name]`
-4. **Add to TOC**: Update `CraftLib.toc` with new file path
-5. **Validate sources**: Run `python scripts/validate_sources.py --profession [name]`
-6. **Test**: See [TESTING.md](TESTING.md)
-7. **Document**: Update README profession coverage table
-8. **Commit**: Follow documentation workflow above
+1. **Register it**: add it to `scripts/buckets.py` (`PROFESSIONS` and the bucket's `professions`)
+2. **Fetch, extract, enrich, gate and generate**: `make <bucket>-all PROFESSION=<name>`
+3. **Add to TOC**: Update `CraftLib.toc` with the new `Data/<Bucket>/<Profession>/Recipes.lua`
+4. **Test**: `make test` (the consistency test checks registry, TOC and `Data/` agree); see [TESTING.md](TESTING.md)
+5. **Document**: Update README profession coverage table
+6. **Commit**: Follow documentation workflow above
 
 See [ADDING_PROFESSIONS.md](ADDING_PROFESSIONS.md) for detailed steps.
 

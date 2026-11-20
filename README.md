@@ -127,7 +127,7 @@ python scripts/fetch_wowhead_sources.py --bucket tbc --profession FirstAid
 python scripts/generate_recipes.py --bucket tbc --profession FirstAid
 ```
 
-Verified sources are tracked under `Data/Sources/<Bucket>/*.json` for reproducibility. 55 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`). The pipeline is driven per client bucket by the Makefile - `make vanilla-all`, `make tbc-all`, `make wotlk-all`, and `make sod-all` run fetch, extract, Wowhead enrichment, the no-pending / no-unaligned gates, generation and the audit from the bucket's own pinned game build, and stop at the first failing step. `make <bucket>-generate` regenerates offline from the tracked sources (`OUT=<dir>` writes elsewhere); `make list-buckets` shows the buckets.
+Verified sources are tracked under `Data/Sources/<Bucket>/*.json` for reproducibility. 55 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`). The pipeline is driven per client bucket by the Makefile - `make vanilla-all`, `make tbc-all`, `make wotlk-all`, and `make sod-all` run fetch, extract, Wowhead enrichment, the no-pending / no-unaligned gates and the audit from the bucket's own pinned game build, and only then generation; they stop at the first failing step, so no Lua file is rewritten unless every gate passed. `make <bucket>-generate OUT=<dir>` regenerates offline from the tracked sources into `<dir>`; `OUT` is required, and `OUT=Data` rewrites the shipped files deliberately (the same applies to `make vendor-prices`). `make list-buckets` shows the buckets.
 
 ### Data Sources
 

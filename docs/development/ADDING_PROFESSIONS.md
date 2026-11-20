@@ -6,6 +6,26 @@ This guide walks through adding recipe data for a new profession to CraftLib usi
 
 > **Before you start:** Check `Data/Sources/removed_recipes.json` for known removed recipes, and review this guide's notes on Wowhead URL patterns and rate limiting.
 
+> **Runbook note:** the per-script command examples in `vendor/db2-parser/DATA_PIPELINE.md` predate the
+> `--bucket` flag (they still show `--expansion`). Until that runbook is updated, use the commands in
+> this guide, `make help`, or each script's `--help`.
+
+## Step 0: Register the Profession
+
+Every pipeline stage and the Makefile read the bucket registry in `scripts/buckets.py`, so a new
+profession is registered there first:
+
+1. If the profession is new to CraftLib, add a `Profession(...)` entry to `PROFESSIONS`
+   (folder, key, display name, `PROFESSION_ID` constant name, skill line id), and its constant to
+   `PROFESSION_ID` in `Core/Constants.lua`. For Wowhead enrichment it also needs a slug in
+   `PROFESSION_SLUGS` in `scripts/wowhead.py`.
+2. Add its folder name to the `professions` tuple of each bucket that should carry it.
+3. Add `Data/<Bucket>/<Profession>/Recipes.lua` to `CraftLib.toc` (Step 6) and commit the bucket's
+   `Data/Sources/<Bucket>/<Profession>.json` and generated Lua.
+
+`scripts/tests/test_consistency.py` checks the registry against `Core/Constants.lua`, `CraftLib.toc`
+and the `Data/` tree, so `make test` fails until all of these agree.
+
 ## Data Pipeline
 
 ```
@@ -24,19 +44,21 @@ DB2 (wago.tools)          Wowhead
 
 ## Season of Discovery (SoD)
 
-SoD data is generated **wholesale** from the latest `wow_classic_era` DB2 build (the Era build
-*is* the live SoD data) plus Wowhead's `/classic/` profession listview. The whole flow is one
-command:
+SoD data is generated **wholesale** from the bucket's pinned `wow_classic_era` DB2 build (the
+`build` in `scripts/buckets.py`; the Era build *is* the live SoD data) plus Wowhead's `/classic/`
+profession listview. The whole flow is one command:
 
 ```bash
 make sod-all
 ```
 
 This runs, for every profession of the bucket: `extract_db2_sources.py --bucket sod` -> `reconcile_cross_bucket.py` ->
-`fetch_wowhead_sources.py` -> `verify_trainer_sources.py` -> the `assert_no_pending.py` / `assert_no_unaligned.py` gates ->
-`generate_recipes.py`, writing `Data/SoD/<Profession>/Recipes.lua`, then the audit and vendor prices. The driver
-(`scripts/pipeline.py`) stops at the first failing step. Use `make sod-all PROFESSION=Tailoring` for one profession and
-`ARGS="--steps assert-no-pending,generate"` for a subset; `make sod-generate` is the offline regeneration.
+`fetch_wowhead_sources.py` -> `verify_trainer_sources.py` -> the `assert_no_pending.py` / `assert_no_unaligned.py` gates;
+then the audit; then `generate_recipes.py` for every profession, writing `Data/SoD/<Profession>/Recipes.lua`; then vendor
+prices. The driver (`scripts/pipeline.py`) stops at the first failing step, so no Lua file is rewritten unless every gate
+and the audit passed. Use `make sod-all PROFESSION=Tailoring` for one profession and
+`ARGS="--steps assert-no-pending,generate"` for a subset; `make sod-generate OUT=<dir>` is the offline regeneration
+(`OUT` is required; `OUT=Data` rewrites the shipped files deliberately).
 
 Key differences from the TBC flow:
 
@@ -48,12 +70,11 @@ Key differences from the TBC flow:
   filled in that one pass. Secondary skills (Cooking, First Aid) are fetched from Wowhead's
   `secondary-skills` category automatically.
 - **SoD generation (`generate_recipes.py --bucket sod`):** writes `Data/SoD/`, tags every recipe `C.EXPANSION.SOD`, emits
-  `flavor = "SOD"`, and uses milestones `{ 75, 150, 225, 300 }` (cap 300, no 375).
+  `profile = "SOD"` (the runtime load guard), and uses milestones `{ 75, 150, 225, 300 }` (cap 300, no 375).
 - **Cross-validation:** the generator checks Wowhead yellow/gray against DB2
   `TrivialSkillLineRankLow`/`High` and logs `CROSS-CHECK MISMATCH` lines for review.
-- **Not yet in the TOC:** `Data/SoD/` is intentionally **not** wired into `CraftLib.toc` yet.
-  Runtime selection of the SoD bucket lands in a later stage; adding it now would merge SoD into
-  the default dataset.
+- **Loaded from the TOC like every bucket:** `Data/SoD/` is listed in `CraftLib.toc`; at runtime the
+  profile guard in `RegisterProfession` registers it only on a Season of Discovery client.
 
 The rest of this guide covers the per-profession TBC flow.
 
