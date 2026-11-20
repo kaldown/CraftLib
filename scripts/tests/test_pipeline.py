@@ -117,6 +117,33 @@ def test_unknown_profession_exits_1(capsys, cmd):
     assert out == "" and err.startswith("ERROR:") and "Jewelcrafting" in err
 
 
+def _python_steps(bucket):
+    opts = _opts()
+    steps = pipeline.plan_all(bucket, [bucket.profession(f) for f in bucket.professions], opts)
+    return [s for s in steps if s.argv[0] == sys.executable]
+
+
+@pytest.mark.parametrize("key", list(BUCKETS))
+def test_every_planned_step_parses_with_its_scripts_own_parser(key):
+    """Each python step's argv must be accepted by that script's argparse.
+
+    WHY: plan_all builds argv lists by hand; a flag renamed in a script would
+    otherwise surface only mid-run (after the network steps) as an argparse exit 2.
+    """
+    import importlib
+    bucket = get_bucket(key)
+    steps = _python_steps(bucket)
+    assert {s.name for s in steps} >= {"extract", "enrich", "assert-no-pending",
+                                       "assert-no-unaligned", "audit", "generate", "vendor-prices"}
+    for s in steps:
+        module = importlib.import_module(Path(s.argv[1]).stem)
+        try:
+            args = module.build_parser().parse_args(s.argv[2:])
+        except SystemExit:
+            pytest.fail(f"{key}: step {s.name} ({s.profession}) argv rejected: {s.argv[1:]}")
+        assert args.bucket == key, (s.name, args)
+
+
 def test_generate_subcommand_is_offline(capsys):
     assert pipeline.main(["generate", "--bucket", "tbc", "--dry-run"]) == 0
     out = capsys.readouterr().out.splitlines()
