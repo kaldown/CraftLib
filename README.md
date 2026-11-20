@@ -110,24 +110,24 @@ CraftLib recipe data uses a three-phase pipeline for verified source accuracy:
 
 ```bash
 # Extract certain sources (TRAINER, REPUTATION, QUEST) from DB2
-python scripts/extract_db2_sources.py --version 2.5.5.65463 --profession FirstAid
+python scripts/extract_db2_sources.py --bucket tbc --profession FirstAid
 ```
 
 ### Phase 2: Verify Sources and Difficulty from Wowhead
 
 ```bash
 # Single-pass: fetches difficulty + source + trainer status from Wowhead
-python scripts/fetch_wowhead_sources.py --profession FirstAid
+python scripts/fetch_wowhead_sources.py --bucket tbc --profession FirstAid
 ```
 
 ### Phase 3: Generate Recipes.lua
 
 ```bash
 # Generate Lua from verified sources (fails if any PENDING)
-python scripts/generate_recipes.py --version 2.5.5.65463 --profession FirstAid
+python scripts/generate_recipes.py --bucket tbc --profession FirstAid
 ```
 
-Verified sources are tracked under `Data/Sources/<Bucket>/*.json` for reproducibility. 55 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`). The pipeline is driven per client by the Makefile - `make vanilla-all`, `make wotlk-all`, and `make sod-all` regenerate each bucket from its own pinned game build.
+Verified sources are tracked under `Data/Sources/<Bucket>/*.json` for reproducibility. 55 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`). The pipeline is driven per client bucket by the Makefile - `make vanilla-all`, `make tbc-all`, `make wotlk-all`, and `make sod-all` run fetch, extract, Wowhead enrichment, the no-pending / no-unaligned gates, generation and the audit from the bucket's own pinned game build, and stop at the first failing step. `make <bucket>-generate` regenerates offline from the tracked sources (`OUT=<dir>` writes elsewhere); `make list-buckets` shows the buckets.
 
 ### Data Sources
 

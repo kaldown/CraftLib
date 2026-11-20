@@ -32,19 +32,22 @@ command:
 make sod-all
 ```
 
-This runs, for every profession: `extract_db2_sources.py --expansion sod` -> `fetch_wowhead_sources.py
---expansion sod` -> `generate_recipes.py --flavor sod`, writing `Data/SoD/<Profession>/Recipes.lua`.
+This runs, for every profession of the bucket: `extract_db2_sources.py --bucket sod` -> `reconcile_cross_bucket.py` ->
+`fetch_wowhead_sources.py` -> `verify_trainer_sources.py` -> the `assert_no_pending.py` / `assert_no_unaligned.py` gates ->
+`generate_recipes.py`, writing `Data/SoD/<Profession>/Recipes.lua`, then the audit and vendor prices. The driver
+(`scripts/pipeline.py`) stops at the first failing step. Use `make sod-all PROFESSION=Tailoring` for one profession and
+`ARGS="--steps assert-no-pending,generate"` for a subset; `make sod-generate` is the offline regeneration.
 
 Key differences from the TBC flow:
 
-- **Pinned build:** `1.15.8.67156` (set via `SOD_VERSION` in the Makefile). Fetch it with
+- **Pinned build:** `1.15.8.67156` (the bucket's `build` in `scripts/buckets.py`). Fetch it with
   `make sod-fetch`.
-- **`--expansion sod` (fetcher):** a one-request-per-profession **listview** pass. A single
+- **SoD enrichment (`fetch_wowhead_sources.py --bucket sod`):** a one-request-per-profession **listview** pass. A single
   Wowhead profession page embeds every recipe's 4-color difficulty array, so ~300 per-spell
   requests collapse to 1. Difficulty, `seasonId`/`phaseId` (the SoD-only flag), and source are
   filled in that one pass. Secondary skills (Cooking, First Aid) are fetched from Wowhead's
   `secondary-skills` category automatically.
-- **`--flavor sod` (generator):** writes `Data/SoD/`, tags every recipe `C.EXPANSION.SOD`, emits
+- **SoD generation (`generate_recipes.py --bucket sod`):** writes `Data/SoD/`, tags every recipe `C.EXPANSION.SOD`, emits
   `flavor = "SOD"`, and uses milestones `{ 75, 150, 225, 300 }` (cap 300, no 375).
 - **Cross-validation:** the generator checks Wowhead yellow/gray against DB2
   `TrivialSkillLineRankLow`/`High` and logs `CROSS-CHECK MISMATCH` lines for review.
@@ -59,7 +62,7 @@ The rest of this guide covers the per-profession TBC flow.
 Run the extraction script to get initial sources from DB2 data:
 
 ```bash
-python scripts/extract_db2_sources.py --version 2.5.5.65463 --profession [Profession]
+python scripts/extract_db2_sources.py --bucket tbc --profession [Profession]
 ```
 
 This creates `Data/Sources/TBC/[Profession].json` with:
@@ -72,24 +75,24 @@ For any PENDING sources, fetch from Wowhead:
 
 ```bash
 # Preview what will be fetched
-python scripts/fetch_wowhead_sources.py --profession [Profession] --dry-run
+python scripts/fetch_wowhead_sources.py --bucket tbc --profession [Profession] --dry-run
 
 # Fetch and verify
-python scripts/fetch_wowhead_sources.py --profession [Profession]
+python scripts/fetch_wowhead_sources.py --bucket tbc --profession [Profession]
 ```
 
 ## Step 3: Fetch Difficulty Levels
 
 **IMPORTANT:** DB2 does not contain accurate difficulty (orange) values. You MUST fetch from Wowhead.
 The fetcher is single-pass: the same `fetch_wowhead_sources.py` run that resolves sources (Step 2)
-also fills difficulty, so no separate flag is needed - just use the correct `--expansion`.
+also fills difficulty, so no separate flag is needed - just use the correct `--bucket`.
 
 ```bash
 # Preview
-python scripts/fetch_wowhead_sources.py --profession [Profession] --dry-run
+python scripts/fetch_wowhead_sources.py --bucket tbc --profession [Profession] --dry-run
 
-# Fetch (difficulty + source in one pass; use correct expansion!)
-python scripts/fetch_wowhead_sources.py --profession [Profession] --expansion tbc
+# Fetch (difficulty + source in one pass; use the correct bucket!)
+python scripts/fetch_wowhead_sources.py --bucket tbc --profession [Profession]
 ```
 
 This adds verified difficulty to each recipe:
@@ -132,7 +135,7 @@ for sid, r in d['recipes'].items():
 
 **Reference:**
 - `Data/Sources/removed_recipes.json` - Known removed recipes per expansion
-- Use `--expansion tbc` for TBC Wowhead URLs, `--expansion classic` for vanilla
+- The bucket (`--bucket tbc`, `vanilla`, ...) selects the Wowhead URL path; never mix buckets
 - Wowhead rate limits after ~100 requests; wait 2-4 hours between batches
 
 ## Step 4: Commit Verified Sources
@@ -147,7 +150,7 @@ git commit -m "feat(data): verify [Profession] sources and difficulty"
 Generate the Lua file from verified sources:
 
 ```bash
-python scripts/generate_recipes.py --version 2.5.5.65463 --profession [Profession]
+python scripts/generate_recipes.py --bucket tbc --profession [Profession]
 ```
 
 **Notes:**
@@ -201,6 +204,6 @@ git commit -m "feat(data): add [Profession] recipes for TBC"
 - Not specifying vendor locations for VENDOR sources
 - **Skipping difficulty fetch** - DB2 does not have orange values; calculated values are inaccurate for some recipes
 - **Relying on calculated difficulty** - Always fetch from Wowhead for accurate data
-- **Using wrong Wowhead expansion URL** - Use `--expansion tbc` for TBC recipes, `--expansion classic` for vanilla
+- **Using the wrong bucket** - pass `--bucket tbc` for TBC recipes, `--bucket vanilla` for Vanilla; the bucket picks the Wowhead URL path
 - **Including removed recipes** - DB2 contains beta/removed recipes; check Wowhead comments for "removed" or "never implemented"
 - **Not updating removed recipes** - After every Wowhead session, add newly discovered removed recipes to `Data/Sources/removed_recipes.json`

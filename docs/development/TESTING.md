@@ -87,11 +87,14 @@ After verifying CraftLib works standalone, test with LazyProf:
 After modifying Python scripts, verify the pipeline still works:
 
 ```bash
-# Validate existing recipe source classifications
-python scripts/validate_sources.py --expansion tbc
+# Run everything (pytest, both Lua tests, luac lint)
+make test
+
+# Audit the tracked source classifications
+make audit
 
 # Test generation for a single profession (requires DB2 artifacts)
-python scripts/generate_recipes.py --version 2.5.5.65463 --profession FirstAid
+python scripts/generate_recipes.py --bucket tbc --profession FirstAid --output-dir /tmp/craftlib-out
 
 # Verify recipe count matches expected
 # Compare output against existing Recipes.lua

@@ -1,151 +1,69 @@
-.PHONY: clean fetch-data generate update-data extract-sources verify-sources vendor-prices wotlk-all vanilla-all tbc-retag
+# Pipeline entry points. Bucket targets are generated from the bucket registry
+# (scripts/buckets.py), so an unknown bucket simply has no target and the step
+# list lives in scripts/pipeline.py, not here.
+PYTHON ?= python3
+PIPELINE = $(PYTHON) scripts/pipeline.py
 
-PYTHON := python3
-EXPANSION ?= 2
-DB2_DIR := vendor/db2-parser
+# WHY fail here: an empty list would silently generate zero bucket targets.
+BUCKETS := $(shell $(PYTHON) scripts/buckets.py keys)
+ifeq ($(strip $(BUCKETS)),)
+$(error bucket registry unreadable: '$(PYTHON) scripts/buckets.py keys' printed nothing)
+endif
+
+# Optional knobs: PROFESSION=Tailoring, OUT=<dir> (generate into a scratch dir
+# instead of Data/), ARGS="..." (extra pipeline flags, e.g. --steps a,b).
+PROF_ARG = $(if $(PROFESSION),--profession "$(PROFESSION)")
+OUT_ARG = $(if $(OUT),--output-dir $(OUT))
+
+.PHONY: help clean fetch-data vendor-prices audit list-buckets test test-python test-lua lint-lua \
+	$(addsuffix -all,$(BUCKETS)) $(addsuffix -fetch,$(BUCKETS)) $(addsuffix -generate,$(BUCKETS))
+
+help:
+	@echo "Per bucket ($(BUCKETS)):"
+	@echo "  make <bucket>-all        full pipeline (network): fetch, extract, enrich, gates, generate"
+	@echo "  make <bucket>-fetch      fetch the bucket's pinned DB2 build"
+	@echo "  make <bucket>-generate   offline: regenerate Recipes.lua + vendor prices (OUT=dir)"
+	@echo "  PROFESSION=<name> limits a bucket target to one profession; ARGS=... passes pipeline flags"
+	@echo "Other:"
+	@echo "  fetch-data [BUCKET=b]    fetch DB2 builds (all buckets by default)"
+	@echo "  vendor-prices [BUCKET=b] [OUT=dir]"
+	@echo "  audit  list-buckets  test  test-python  test-lua  lint-lua  clean"
+
+# A failing step makes pipeline.py exit non-zero, which stops make: gates are real gates.
+$(addsuffix -all,$(BUCKETS)): %-all:
+	@$(PIPELINE) all --bucket $* $(PROF_ARG) $(ARGS)
+
+$(addsuffix -fetch,$(BUCKETS)): %-fetch:
+	@$(PIPELINE) fetch --bucket $*
+
+$(addsuffix -generate,$(BUCKETS)): %-generate:
+	@$(PIPELINE) generate --bucket $* $(PROF_ARG) $(OUT_ARG) $(ARGS)
+
+fetch-data:
+	@$(PIPELINE) fetch $(if $(BUCKET),--bucket $(BUCKET),--all)
+
+vendor-prices:
+	@$(PIPELINE) vendor-prices $(if $(BUCKET),--bucket $(BUCKET),--all) $(OUT_ARG)
+
+audit:
+	@$(PYTHON) scripts/audit_sources.py
+
+list-buckets:
+	@$(PIPELINE) list
+
+test: test-python test-lua lint-lua
+
+test-python:
+	@$(PYTHON) -m pytest scripts/tests -q
+
+test-lua:
+	@lua5.1 scripts/tests/test_profile.lua
+	@lua5.1 scripts/tests/test_vendor_prices.lua
+
+lint-lua:
+	@luac5.1 -p Core/*.lua $$(find Data -name '*.lua')
 
 # Remove build artifacts
 clean:
 	@rm -f *.zip *.tar.gz
 	@echo "Cleaned build artifacts"
-
-# Fetch DB2 data for expansion (default: TBC)
-fetch-data:
-	@make -C $(DB2_DIR) latest EXPANSION=$(EXPANSION)
-
-# Phase 1: Extract sources from DB2 (detects TRAINER, REPUTATION, QUEST; marks others as PENDING)
-# Usage: make extract-sources VERSION=2.5.5.65463 PROFESSION=FirstAid
-extract-sources:
-ifndef VERSION
-	$(error VERSION required. Run 'make fetch-data' first, check vendor/db2-parser/artifacts/ for version.)
-endif
-ifndef PROFESSION
-	$(error PROFESSION required. Example: make extract-sources VERSION=2.5.5.65463 PROFESSION=FirstAid)
-endif
-	@$(PYTHON) scripts/extract_db2_sources.py --version $(VERSION) --profession $(PROFESSION)
-
-# Phase 2: Verify PENDING sources via Wowhead (determines VENDOR vs DROP)
-# Usage: make verify-sources PROFESSION=FirstAid
-verify-sources:
-ifndef PROFESSION
-	$(error PROFESSION required. Example: make verify-sources PROFESSION=FirstAid)
-endif
-	@$(PYTHON) scripts/fetch_wowhead_sources.py --profession $(PROFESSION)
-
-# Phase 3: Generate Recipes.lua from verified sources
-# Usage: make generate VERSION=2.5.5.65463 PROFESSION=FirstAid
-# Or generate all: make generate VERSION=2.5.5.65463
-generate:
-ifndef VERSION
-	$(error VERSION required. Run 'make fetch-data' first, check vendor/db2-parser/artifacts/ for version.)
-endif
-ifdef PROFESSION
-	@$(PYTHON) scripts/generate_recipes.py --version $(VERSION) --expansion $(EXPANSION) --profession $(PROFESSION)
-else
-	@$(PYTHON) scripts/generate_recipes.py --version $(VERSION) --expansion $(EXPANSION)
-endif
-
-# Full pipeline for a single profession: extract -> verify -> generate
-# Usage: make update-profession VERSION=2.5.5.65463 PROFESSION=FirstAid
-update-profession:
-ifndef VERSION
-	$(error VERSION required. Run 'make fetch-data' first, check vendor/db2-parser/artifacts/ for version.)
-endif
-ifndef PROFESSION
-	$(error PROFESSION required. Example: make update-profession VERSION=2.5.5.65463 PROFESSION=FirstAid)
-endif
-	@echo "=== Phase 1: Extracting sources from DB2 ==="
-	@$(PYTHON) scripts/extract_db2_sources.py --version $(VERSION) --profession $(PROFESSION)
-	@echo ""
-	@echo "=== Phase 2: Verifying sources via Wowhead ==="
-	@$(PYTHON) scripts/fetch_wowhead_sources.py --profession $(PROFESSION)
-	@echo ""
-	@echo "=== Phase 3: Generating Recipes.lua ==="
-	@$(PYTHON) scripts/generate_recipes.py --version $(VERSION) --expansion $(EXPANSION) --profession $(PROFESSION)
-
-# Convenience: fetch + generate all professions
-update-data:
-	@make -C $(DB2_DIR) latest EXPANSION=$(EXPANSION)
-	@VERSION=$$(ls -1 $(DB2_DIR)/artifacts | sort -V | tail -1) && \
-	echo "Using version: $$VERSION" && \
-	$(PYTHON) scripts/generate_recipes.py --version $$VERSION --expansion $(EXPANSION)
-	@VERSION=$$(ls -1 $(DB2_DIR)/artifacts | sort -V | tail -1) && \
-	$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version $$VERSION --expansion $(EXPANSION)
-
-SOD_VERSION ?= 1.15.8.67156
-WOTLK_VERSION ?= 3.4.5.63697
-SOD_PROFS := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tailoring Cooking FirstAid
-
-# Fetch the SoD/Era DB2 build
-sod-fetch:
-	@make -C $(DB2_DIR) fetch VERSION=$(SOD_VERSION)
-
-# Full SoD pipeline for all professions:
-# extract -> cross-bucket reconcile -> listview verify -> trainer-tail verify
-# -> assert no PENDING -> generate
-sod-all: sod-fetch
-	@for p in $(SOD_PROFS); do \
-	  echo "=== $$p ==="; \
-	  $(PYTHON) scripts/extract_db2_sources.py --version $(SOD_VERSION) --profession $$p --expansion sod; \
-	  $(PYTHON) scripts/reconcile_cross_bucket.py --profession $$p --db2-itemsparse $(DB2_DIR)/artifacts/$(SOD_VERSION)/ItemSparse.csv; \
-	  $(PYTHON) scripts/fetch_wowhead_sources.py --profession $$p --expansion sod; \
-	  $(PYTHON) scripts/verify_trainer_sources.py --profession $$p --expansion sod; \
-	  $(PYTHON) scripts/assert_no_pending.py Data/Sources/SoD/$$p.json; \
-	  $(PYTHON) scripts/assert_no_unaligned.py Data/Sources/SoD/$$p.json; \
-	  $(PYTHON) scripts/generate_recipes.py --version $(SOD_VERSION) --flavor sod \
-	    --data-dir $(DB2_DIR)/artifacts --profession $$p; \
-	  sleep 2; \
-	done
-	@$(PYTHON) scripts/audit_sources.py
-	@$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version $(SOD_VERSION) \
-	  --flavor sod --data-dir $(DB2_DIR)/artifacts
-
-# Emit the vendor-price tables for both flavors from the cached DB2 builds.
-vendor-prices:
-	@$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version 2.5.5.65895 \
-	  --expansion 2 --data-dir $(DB2_DIR)/artifacts
-	@$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version $(SOD_VERSION) \
-	  --flavor sod --data-dir $(DB2_DIR)/artifacts
-
-audit:
-	@$(PYTHON) scripts/audit_sources.py
-
-# ---- Continuous-progression profiles (Vanilla/TBC/WotLK) -------------------
-# WOTLK_VERSION is pinned in Phase 0. TBC reuses the existing cached build.
-TBC_VERSION   ?= 2.5.5.65895
-WOTLK_PROFS   := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tailoring Cooking FirstAid Mining Jewelcrafting Inscription
-VANILLA_PROFS := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tailoring Cooking FirstAid Mining
-TBC_PROFS     := Alchemy Blacksmithing Enchanting Engineering Leatherworking Tailoring Cooking FirstAid Mining Jewelcrafting
-
-# Simple classic flow for one continuous tier.
-# $(1)=expansion-string (vanilla/tbc/wotlk) $(2)=expansion-int $(3)=build $(4)=profs
-# $(5)=extra flags forwarded to assert_no_pending AND generate_recipes (default empty).
-#     Example: --exclude-seasonal for the Vanilla bucket; both scripts accept this flag.
-define TIER_PIPELINE
-	@make -C $(DB2_DIR) fetch VERSION=$(3)
-	@for p in $(4); do \
-	  echo "=== $(1) $$p ==="; \
-	  $(PYTHON) scripts/extract_db2_sources.py --version $(3) --profession $$p --expansion $(1); \
-	  $(PYTHON) scripts/fetch_wowhead_sources.py --profession $$p --expansion $(1); \
-	  $(PYTHON) scripts/assert_no_pending.py Data/Sources/$(call CAP,$(1))/$$p.json $(5); \
-	  $(PYTHON) scripts/generate_recipes.py --version $(3) --expansion $(2) \
-	    --data-dir $(DB2_DIR)/artifacts --profession $$p $(5); \
-	  sleep 2; \
-	done
-	@$(PYTHON) scripts/generate_recipes.py --vendor-prices-only --version $(3) \
-	  --expansion $(2) --data-dir $(DB2_DIR)/artifacts
-endef
-# Folder-name capitalizer (vanilla->Vanilla, tbc->TBC, wotlk->WotLK)
-CAP = $(if $(filter $(1),tbc),TBC,$(if $(filter $(1),wotlk),WotLK,Vanilla))
-
-wotlk-all:
-	$(call TIER_PIPELINE,wotlk,3,$(WOTLK_VERSION),$(WOTLK_PROFS))
-
-vanilla-all:
-	# WHY --exclude-seasonal: the Era build's Wowhead /classic data returns both Vanilla and
-	# SoD recipes; SoD-only ones carry seasonId==2 and must not appear in the Vanilla bucket.
-	$(call TIER_PIPELINE,vanilla,1,$(SOD_VERSION),$(VANILLA_PROFS),--exclude-seasonal)
-
-# Re-generate the existing TBC bucket so its files carry profile="TBC".
-tbc-retag:
-	$(call TIER_PIPELINE,tbc,2,$(TBC_VERSION),$(TBC_PROFS))
