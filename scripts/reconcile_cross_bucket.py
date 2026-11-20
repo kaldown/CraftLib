@@ -17,7 +17,7 @@ from pathlib import Path
 from buckets import (INHERIT_CERTAINTY, INHERIT_TYPES, UnknownProfessionError,
                      add_bucket_argument, get_bucket)
 from db2 import ColumnContractError, load_csv_checked
-from pipeline_io import atomic_write_json, load_json
+from pipeline_io import KeepTrainerError, atomic_write_json, load_json, load_keep_trainer
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -67,10 +67,6 @@ def _created_item(recipe: dict):
     if isinstance(creates, list) and creates:
         return creates[0]
     return None
-
-
-def _load_allowlist(path: Path) -> set:
-    return set(str(s) for s in load_json(path).get("keepTrainer", []))
 
 
 def build_default_index(default_path: Path) -> dict:
@@ -156,7 +152,11 @@ def main(argv: list[str] | None = None) -> int:
         if not keep_path.exists():
             print(f"ERROR: bucket '{child.key}': keep-trainer file missing: {keep_path}", file=sys.stderr)
             return 2
-        allowlist = _load_allowlist(keep_path)
+        try:
+            allowlist = load_keep_trainer(keep_path)
+        except KeepTrainerError as e:
+            print(f"ERROR: bucket '{child.key}': {e}", file=sys.stderr)
+            return 2
 
     its_path = args.db2_itemsparse or (
         REPO_ROOT / "vendor" / "db2-parser" / "artifacts" / child.build / "ItemSparse.csv")

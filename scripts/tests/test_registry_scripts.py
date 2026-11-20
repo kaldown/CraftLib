@@ -118,8 +118,15 @@ def test_audit_unknown_folder_exits_2(tmp_path, capsys):
     assert "Cata" in capsys.readouterr().err
 
 
+def _full_tree(tmp_path, sod_recipes):
+    for folder in ("Vanilla", "TBC", "WotLK"):
+        _w(tmp_path / folder / "Alchemy.json", {})
+    _w(tmp_path / "SoD" / "Alchemy.json", sod_recipes)
+    (tmp_path / "sod_keep_trainer.json").write_text(json.dumps({"keepTrainer": []}))
+
+
 def test_audit_bucket_scope(tmp_path):
-    _w(tmp_path / "SoD" / "Alchemy.json", MISMATCH)
+    _full_tree(tmp_path, MISMATCH)
     assert au.main(["--sources-dir", str(tmp_path)]) == 1
     assert au.main(["--sources-dir", str(tmp_path), "--bucket", "vanilla"]) == 0
     assert au.main(["--sources-dir", str(tmp_path), "--bucket", "sod"]) == 1
@@ -132,3 +139,58 @@ def test_assert_no_pending_uses_registry_seasonal(tmp_path):
     base = ["--profession", "Alchemy", "--sources-dir", str(tmp_path)]
     assert anp.main(["--bucket", "vanilla", *base]) == 0
     assert anp.main(["--bucket", "tbc", *base]) == 1
+
+
+def test_audit_missing_parent_folder_exits_2(tmp_path, capsys):
+    _w(tmp_path / "SoD" / "Alchemy.json", {})
+    (tmp_path / "sod_keep_trainer.json").write_text(json.dumps({"keepTrainer": []}))
+    assert au.main(["--sources-dir", str(tmp_path), "--bucket", "sod"]) == 2
+    assert "TBC" in capsys.readouterr().err
+
+
+def test_audit_missing_parent_twin_exits_2(tmp_path, capsys):
+    _full_tree(tmp_path, {})
+    _w(tmp_path / "SoD" / "Cooking.json", {})
+    assert au.main(["--sources-dir", str(tmp_path), "--bucket", "sod"]) == 2
+    assert "Cooking.json" in capsys.readouterr().err
+
+
+def test_audit_missing_keep_file_exits_2(tmp_path, capsys):
+    _full_tree(tmp_path, {})
+    (tmp_path / "sod_keep_trainer.json").unlink()
+    assert au.main(["--sources-dir", str(tmp_path), "--bucket", "sod"]) == 2
+    assert "sod_keep_trainer.json" in capsys.readouterr().err
+
+
+def test_audit_missing_or_empty_scoped_folder_exits_2(tmp_path, capsys):
+    assert au.main(["--sources-dir", str(tmp_path / "nope"), "--bucket", "sod"]) == 2
+    (tmp_path / "Vanilla").mkdir()
+    assert au.main(["--sources-dir", str(tmp_path), "--bucket", "vanilla"]) == 2
+    assert "Vanilla" in capsys.readouterr().err
+
+
+def test_keep_trainer_without_key_exits_2(tmp_path, capsys):
+    _full_tree(tmp_path, {})
+    (tmp_path / "sod_keep_trainer.json").write_text(json.dumps({"keeptrainer": ["1"]}))
+    assert au.main(["--sources-dir", str(tmp_path), "--bucket", "sod"]) == 2
+    assert "keepTrainer" in capsys.readouterr().err
+
+
+def test_reconcile_keep_trainer_without_key_exits_2(tmp_path, capsys):
+    _w(tmp_path / "SoD" / "Leatherworking.json", {})
+    _w(tmp_path / "TBC" / "Leatherworking.json", {})
+    (tmp_path / "sod_keep_trainer.json").write_text(json.dumps({"keep": []}))
+    its = tmp_path / "ItemSparse.csv"
+    its.write_text("ID,BuyPrice,MinFactionID\n")
+    rc = rcb.main(["--bucket", "sod", "--profession", "Leatherworking",
+                   "--sources-dir", str(tmp_path), "--db2-itemsparse", str(its)])
+    assert rc == 2
+    assert "keepTrainer" in capsys.readouterr().err
+
+
+def test_audit_scope_compares_bucket_key_not_identity(tmp_path):
+    import dataclasses
+    _w(tmp_path / "SoD" / "Alchemy.json", MISMATCH)
+    clone = dataclasses.replace(get_bucket("sod"))
+    hard, _ = au.audit(tmp_path, clone)
+    assert len(hard) == 1

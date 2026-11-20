@@ -35,3 +35,19 @@ def atomic_write_json(path: Path, data) -> None:
 def load_json(path: Path):
     with open(path, encoding="utf-8") as f:
         return json.load(f)
+
+
+class KeepTrainerError(ValueError):
+    pass
+
+
+def load_keep_trainer(path: Path) -> set:
+    """The keep-trainer allowlist as a set of spell-id strings.
+
+    Strict on purpose: a missing/misspelled key must not read as an empty list, or
+    reconcile would overwrite every deliberately kept trainer recipe.
+    """
+    data = load_json(path)
+    if not isinstance(data, dict) or not isinstance(data.get("keepTrainer"), list):
+        raise KeepTrainerError(f"{path}: expected an object with a 'keepTrainer' list")
+    return {str(s) for s in data["keepTrainer"]}

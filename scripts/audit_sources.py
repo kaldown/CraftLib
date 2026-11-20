@@ -18,7 +18,7 @@ from pathlib import Path
 
 from buckets import (BUCKETS, INHERIT_CERTAINTY, INHERIT_TYPES, UnknownBucketError,
                      bucket_for_folder)
-from pipeline_io import load_json
+from pipeline_io import KeepTrainerError, load_json, load_keep_trainer
 from wowhead import EXPECTED_CODE as EXPECT
 
 
@@ -30,6 +30,39 @@ def _created(recipe):
 def _has_training_cost(recipe):
     wh = recipe.get("wowhead", {})
     return "trainingCost" in wh or "trainingcost" in wh
+
+
+class AuditInputError(RuntimeError):
+    pass
+
+
+def validate_inputs(sources_dir: Path, only_bucket=None) -> None:
+    """Raise AuditInputError if an input the audit needs is missing.
+
+    WHY: a gate that treats missing data as empty passes green without running
+    check 2 (or any check). Every in-scope bucket needs its folder with at least
+    one profession file; a bucket with a parent also needs the parent folder, the
+    parent twin of every child file, and its keep-trainer file.
+    """
+    scope = list(BUCKETS.values()) if only_bucket is None else [BUCKETS[only_bucket.key]]
+    for b in scope:
+        folder = sources_dir / b.folder
+        files = sorted(folder.glob("*.json")) if folder.is_dir() else []
+        if not files:
+            raise AuditInputError(f"bucket '{b.key}': no sources found in {folder}")
+        if b.reconcile_parent is None:
+            continue
+        parent = BUCKETS[b.reconcile_parent]
+        if not (sources_dir / parent.folder).is_dir():
+            raise AuditInputError(
+                f"bucket '{b.key}': parent folder missing: {sources_dir / parent.folder}")
+        for f in files:
+            twin = sources_dir / parent.folder / f.name
+            if not twin.is_file():
+                raise AuditInputError(f"bucket '{b.key}': parent sources file missing: {twin}")
+        if b.keep_trainer_file is not None and not (sources_dir / b.keep_trainer_file).is_file():
+            raise AuditInputError(
+                f"bucket '{b.key}': keep-trainer file missing: {sources_dir / b.keep_trainer_file}")
 
 
 def audit(sources_dir: Path, only_bucket=None):
@@ -48,7 +81,7 @@ def audit(sources_dir: Path, only_bucket=None):
     # Check 1: Wowhead cross-check. Hardness comes from the registry (audit_hard).
     for folder, profs in buckets.items():
         bucket = bucket_for_folder(folder)
-        if only_bucket is not None and bucket is not only_bucket:
+        if only_bucket is not None and bucket.key != only_bucket.key:
             continue
         for prof, data in profs.items():
             for sid, recipe in data.get("recipes", {}).items():
@@ -77,15 +110,16 @@ def audit(sources_dir: Path, only_bucket=None):
     for child in BUCKETS.values():
         if child.reconcile_parent is None:
             continue
-        if only_bucket is not None and child is not only_bucket:
+        if only_bucket is not None and child.key != only_bucket.key:
             continue
         parent = BUCKETS[child.reconcile_parent]
         # Spell IDs in the keep-trainer file are intentional child-specific trainer recipes.
         keep_trainer = set()
         if child.keep_trainer_file is not None:
             keep_path = sources_dir / child.keep_trainer_file
+            # Absence is rejected by validate_inputs (main); audit() itself stays usable on partial trees.
             if keep_path.exists():
-                keep_trainer = set(load_json(keep_path).get("keepTrainer", []))
+                keep_trainer = load_keep_trainer(keep_path)
         parent_index = {}
         for prof, data in buckets.get(parent.folder, {}).items():
             for sid, recipe in data.get("recipes", {}).items():
@@ -119,9 +153,14 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--warn-only", action="store_true", help="Exit 0 even on hard findings")
     args = parser.parse_args(argv)
 
+    only = BUCKETS[args.bucket] if args.bucket else None
     try:
-        hard, warn = audit(args.sources_dir, BUCKETS[args.bucket] if args.bucket else None)
-    except UnknownBucketError as e:
+        # Unknown folders first (names the folder), then required inputs, then the audit.
+        for p in sorted(args.sources_dir.glob("*/*.json")):
+            bucket_for_folder(p.parent.name)
+        validate_inputs(args.sources_dir, only)
+        hard, warn = audit(args.sources_dir, only)
+    except (UnknownBucketError, AuditInputError, KeepTrainerError) as e:
         print(f"ERROR: {e}", file=sys.stderr)
         return 2
     for f in warn:
