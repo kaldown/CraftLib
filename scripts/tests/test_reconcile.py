@@ -1,5 +1,7 @@
 import json
+import pytest
 import reconcile_cross_bucket as rcb
+from db2 import ColumnContractError
 
 
 def _write(tmp_path, name, recipes):
@@ -63,7 +65,8 @@ def test_load_itemsparse(tmp_path):
     idx = rcb.load_itemsparse(p)
     assert idx["2406"] == {"BuyPrice": 100, "MinFactionID": 0}
     assert idx["19442"] == {"BuyPrice": 100000, "MinFactionID": 529}
-    assert rcb.load_itemsparse(tmp_path / "nope.csv") == {}
+    with pytest.raises(ColumnContractError):
+        rcb.load_itemsparse(tmp_path / "nope.csv")
 
 
 def test_inherits_manual_vendor_with_matching_cost(tmp_path):

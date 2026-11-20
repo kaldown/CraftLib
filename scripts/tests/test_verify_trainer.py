@@ -1,5 +1,8 @@
 import json
 import verify_trainer_sources as vt
+from buckets import get_bucket
+
+SOD = get_bucket("sod")
 
 
 def test_classify_keeps_trainer_on_trainer_code():
@@ -44,7 +47,7 @@ def test_run_resumes_and_writes(tmp_path, monkeypatch):
         return '$.extend(g_spells[2158], {"name":"Fine Leather Boots","source":[4]});'
     monkeypatch.setattr(vt, "_FETCH", fake_fetch)
 
-    vt.run(sources, state_dir, expansion="classic", base_delay=0, on_block="exit")
+    vt.run(sources, state_dir, bucket=SOD, base_delay=0, on_block="exit")
 
     out = json.loads(sources.read_text())["recipes"]["2158"]["source"]
     assert out["type"] == "QUEST" and out["certainty"] == "WOWHEAD"
@@ -59,6 +62,6 @@ def test_run_skips_uncorroborated_marker(tmp_path, monkeypatch):
         "reviewReason": "cross-bucket-uncorroborated"}}}}))
     called = []
     monkeypatch.setattr(vt, "_FETCH", lambda url: called.append(url) or "")
-    vt.run(sources, tmp_path / ".fetch_state", expansion="classic", base_delay=0, on_block="exit")
+    vt.run(sources, tmp_path / ".fetch_state", bucket=SOD, base_delay=0, on_block="exit")
     assert called == []  # marker recipe must NOT be fetched/processed
     assert json.loads(sources.read_text())["recipes"]["300"]["source"]["reviewReason"] == "cross-bucket-uncorroborated"

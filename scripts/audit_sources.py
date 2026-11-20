@@ -5,23 +5,21 @@ Two checks, offline:
   1. Wowhead cross-check: where a recipe stores wowhead.source, flag if our
      source.type's expected acquisition code is absent (CRAFTED=1-only and empty
      arrays ignored; REPUTATION skipped; TRAINER excused if trainingCost present).
-  2. Cross-bucket consistency: a SoD TRAINER whose DEFAULT same-spell entry is a
-     WOWHEAD non-trainer source (created items agree) is flagged.
+  2. Cross-bucket consistency: a child-bucket TRAINER whose reconcile-parent
+     same-spell entry is a trusted non-trainer source (created items agree) is flagged.
 
 Exit 1 on any hard finding unless --warn-only. needsReview entries are warnings.
 """
 import argparse
 import glob
-import json
 import os
 import sys
 from pathlib import Path
 
-EXPECT = {"DROP": 2, "VENDOR": 5, "QUEST": 4, "TRAINER": 6, "STARTER": 10, "DISCOVERY": 7}
-# Cross-bucket trust tiers (must mirror reconcile_cross_bucket's widening exactly;
-# deliberately duplicated - there is no shared module to import from).
-INHERIT_CERTAINTY = {"WOWHEAD", "MANUAL", "DB2"}
-INHERIT_TYPES = {"DROP", "VENDOR", "QUEST", "REPUTATION", "STARTER", "DISCOVERY"}
+from buckets import (BUCKETS, INHERIT_CERTAINTY, INHERIT_TYPES, UnknownBucketError,
+                     bucket_for_folder)
+from pipeline_io import load_json
+from wowhead import EXPECTED_CODE as EXPECT
 
 
 def _created(recipe):
@@ -34,27 +32,24 @@ def _has_training_cost(recipe):
     return "trainingCost" in wh or "trainingcost" in wh
 
 
-def audit(sources_dir: Path):
+def audit(sources_dir: Path, only_bucket=None):
+    """Return (hard, warn). Raises UnknownBucketError for a folder the registry does not know.
+
+    only_bucket: a Bucket to restrict to (check 1 on its folder, check 2 only if it has a parent).
+    """
     hard, warn = [], []
     buckets = {}
     for p in sorted(glob.glob(os.path.join(str(sources_dir), "*", "*.json"))):
-        flavor = os.path.basename(os.path.dirname(p))
+        folder = os.path.basename(os.path.dirname(p))
+        bucket_for_folder(folder)   # fail loud on an unregistered folder rather than guess its hardness
         prof = os.path.basename(p)[:-5]
-        buckets.setdefault(flavor, {})[prof] = json.load(open(p))
+        buckets.setdefault(folder, {})[prof] = load_json(Path(p))
 
-    # Load the keep-trainer allowlist (one level up from bucket subdirs; absent = empty)
-    keep_trainer = set()
-    allowlist_path = sources_dir / "sod_keep_trainer.json"
-    if allowlist_path.exists():
-        try:
-            data = json.load(open(allowlist_path))
-            keep_trainer = set(data.get("keepTrainer", []))
-        except (json.JSONDecodeError, OSError):
-            pass
-
-    # Check 1: Wowhead cross-check
-    # SoD mismatches are hard; DEFAULT/TBC mismatches are deferred warnings (frozen this release).
-    for flavor, profs in buckets.items():
+    # Check 1: Wowhead cross-check. Hardness comes from the registry (audit_hard).
+    for folder, profs in buckets.items():
+        bucket = bucket_for_folder(folder)
+        if only_bucket is not None and bucket is not only_bucket:
+            continue
         for prof, data in profs.items():
             for sid, recipe in data.get("recipes", {}).items():
                 s = recipe.get("source", {})
@@ -62,7 +57,7 @@ def audit(sources_dir: Path):
                 if t == "REPUTATION":
                     continue
                 if s.get("needsReview"):
-                    warn.append((flavor, prof, sid, recipe.get("name"), "needsReview", t, None))
+                    warn.append((folder, prof, sid, recipe.get("name"), "needsReview", t, None))
                     continue
                 whsrc = recipe.get("wowhead", {}).get("source")
                 if not whsrc:
@@ -74,47 +69,61 @@ def audit(sources_dir: Path):
                 if t in EXPECT and exp not in whsrc:
                     if t == "TRAINER" and _has_training_cost(recipe):
                         continue
-                    finding = (flavor, prof, sid, recipe.get("name"), "wowhead-mismatch", t, whsrc)
-                    if flavor == "SoD":
-                        hard.append(finding)
-                    else:
-                        warn.append(finding)
+                    finding = (folder, prof, sid, recipe.get("name"), "wowhead-mismatch", t, whsrc)
+                    (hard if bucket.audit_hard else warn).append(finding)
 
-    # Check 2: cross-bucket consistency (SoD TRAINER vs DEFAULT WOWHEAD non-trainer)
-    # Spell IDs in the keep-trainer allowlist are intentional SoD-specific trainer recipes.
-    default_index = {}
-    for prof, data in buckets.get("TBC", {}).items():
-        for sid, recipe in data.get("recipes", {}).items():
-            s = recipe.get("source", {})
-            if s.get("certainty") in INHERIT_CERTAINTY and s.get("type") in INHERIT_TYPES:
-                default_index[sid] = (s.get("type"), _created(recipe))
-    for prof, data in buckets.get("SoD", {}).items():
-        for sid, recipe in data.get("recipes", {}).items():
-            s = recipe.get("source", {})
-            if s.get("type") != "TRAINER":
-                continue
-            if sid in keep_trainer:
-                continue
-            if s.get("reviewReason") == "cross-bucket-uncorroborated":
-                continue   # owned by assert_no_unaligned (avoid double-gating)
-            d = default_index.get(sid)
-            if not d:
-                continue
-            sod_created = _created(recipe)
-            if sod_created is not None and d[1] is not None and sod_created != d[1]:
-                continue
-            hard.append(("SoD", prof, sid, recipe.get("name"), "cross-bucket", d[0], None))
+    # Check 2: cross-bucket consistency, for every bucket that declares a reconcile parent
+    # (a child TRAINER whose parent twin is a trusted non-trainer source, created items agree).
+    for child in BUCKETS.values():
+        if child.reconcile_parent is None:
+            continue
+        if only_bucket is not None and child is not only_bucket:
+            continue
+        parent = BUCKETS[child.reconcile_parent]
+        # Spell IDs in the keep-trainer file are intentional child-specific trainer recipes.
+        keep_trainer = set()
+        if child.keep_trainer_file is not None:
+            keep_path = sources_dir / child.keep_trainer_file
+            if keep_path.exists():
+                keep_trainer = set(load_json(keep_path).get("keepTrainer", []))
+        parent_index = {}
+        for prof, data in buckets.get(parent.folder, {}).items():
+            for sid, recipe in data.get("recipes", {}).items():
+                s = recipe.get("source", {})
+                if s.get("certainty") in INHERIT_CERTAINTY and s.get("type") in INHERIT_TYPES:
+                    parent_index[sid] = (s.get("type"), _created(recipe))
+        for prof, data in buckets.get(child.folder, {}).items():
+            for sid, recipe in data.get("recipes", {}).items():
+                s = recipe.get("source", {})
+                if s.get("type") != "TRAINER":
+                    continue
+                if sid in keep_trainer:
+                    continue
+                if s.get("reviewReason") == "cross-bucket-uncorroborated":
+                    continue   # owned by assert_no_unaligned (avoid double-gating)
+                d = parent_index.get(sid)
+                if not d:
+                    continue
+                child_created = _created(recipe)
+                if child_created is not None and d[1] is not None and child_created != d[1]:
+                    continue
+                hard.append((child.folder, prof, sid, recipe.get("name"), "cross-bucket", d[0], None))
 
     return hard, warn
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Audit recipe source classifications")
     parser.add_argument("--sources-dir", type=Path, default=Path("Data/Sources"))
+    parser.add_argument("--bucket", choices=list(BUCKETS), help="Restrict the audit to one bucket")
     parser.add_argument("--warn-only", action="store_true", help="Exit 0 even on hard findings")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
-    hard, warn = audit(args.sources_dir)
+    try:
+        hard, warn = audit(args.sources_dir, BUCKETS[args.bucket] if args.bucket else None)
+    except UnknownBucketError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 2
     for f in warn:
         print(f"  WARN  {f[0]}/{f[1]} spell={f[2]} {f[3]!r} [{f[4]}]", file=sys.stderr)
     for f in hard:

@@ -20,6 +20,7 @@ import json
 import fetch_wowhead_sources as fw
 import reconcile_cross_bucket as rcb
 import verify_trainer_sources as vt
+from buckets import get_bucket
 
 
 def _write(path, recipes):
@@ -75,7 +76,7 @@ def test_cross_and_marker_survive_full_chain(tmp_path, monkeypatch):
     called = []
     monkeypatch.setattr(vt, "_FETCH", lambda url: called.append(url) or "")
     vt.run(sod_path, tmp_path / ".fetch_state",
-           expansion="classic", base_delay=0, on_block="exit")
+           bucket=get_bucket("sod"), base_delay=0, on_block="exit")
 
     # The marker recipe (sid "200") must be excluded from the candidate set.
     assert all("spell=200" not in u for u in called)

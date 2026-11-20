@@ -12,13 +12,12 @@ Never emits PENDING. Idempotent + resumable via a sidecar checkpoint. Atomic
 writes (temp + os.replace) make it Ctrl-C safe. Stdlib only.
 
 Usage:
-    python scripts/verify_trainer_sources.py --profession Leatherworking --expansion sod
-    python scripts/verify_trainer_sources.py --profession Leatherworking --resume
+    python scripts/verify_trainer_sources.py --bucket sod --profession Leatherworking
+    python scripts/verify_trainer_sources.py --bucket sod --profession Leatherworking --limit 20
 """
 import argparse
 import gzip
 import json
-import os
 import random
 import re
 import sys
@@ -28,24 +27,13 @@ import urllib.request
 from datetime import date
 from pathlib import Path
 
-_HEADERS = {
-    "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                   "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15"),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Accept-Encoding": "gzip",
-    "Referer": "https://www.wowhead.com/",
-    "Sec-Fetch-Dest": "document",
-    "Sec-Fetch-Mode": "navigate",
-    "Sec-Fetch-Site": "same-origin",
-    "Upgrade-Insecure-Requests": "1",
-}
+from buckets import UnknownProfessionError, add_bucket_argument, get_bucket
+from pipeline_io import atomic_write_json, load_json
+from wowhead import (ACQUISITION_PRIORITY, CRAFTED, HEADERS, TRAINER, fix_js_object,
+                     g_spells_extend_pattern, spell_url)
+
 _BACKOFF = [5, 15, 45, 120]
 _TERMINAL = {"done", "needsReview"}
-
-
-def _fix_js_object(js_text: str) -> str:
-    return re.sub(r'(?<=[{,])(\s*)([a-zA-Z_]\w*)(\s*):', r'\1"\2"\3:', js_text)
 
 
 def _FETCH(url: str):
@@ -55,7 +43,7 @@ def _FETCH(url: str):
     transport error. Separated so run() can back off appropriately.
     """
     try:
-        req = urllib.request.Request(url, headers=_HEADERS)
+        req = urllib.request.Request(url, headers=HEADERS)
         with urllib.request.urlopen(req, timeout=30) as resp:
             body = resp.read()
             if (resp.headers.get("Content-Encoding") or "") == "gzip":
@@ -74,11 +62,10 @@ def parse_spell_page(html: str, spell_id: int, expected_name: str):
     parsed AND the name matches (soft-block / wrong-page guard). Else None."""
     if not html:
         return None
-    pattern = rf'\$\.extend\(g_spells\[{spell_id}\],\s*(\{{[^;]*?\}})\s*\)'
-    m = re.search(pattern, html)
+    m = re.search(g_spells_extend_pattern(spell_id), html)
     if not m:
         return None
-    for text in (m.group(1), _fix_js_object(m.group(1))):
+    for text in (m.group(1), fix_js_object(m.group(1))):
         try:
             blob = json.loads(text)
             break
@@ -99,34 +86,15 @@ def classify(source_array, has_training_cost: bool):
     """(decisionType, needsReview). Conservative: keep TRAINER unless there is
     positive non-trainer evidence."""
     types = source_array or []
-    if 6 in types or has_training_cost:
+    if TRAINER in types or has_training_cost:
         return ("TRAINER", False)
-    meaningful = [c for c in types if c != 1]
+    meaningful = [c for c in types if c != CRAFTED]
     if not meaningful:
         return ("TRAINER", True)  # no acquisition evidence -> keep + flag
-    if 5 in types:
-        return ("VENDOR", True)
-    if 2 in types:
-        return ("DROP", True)
-    if 4 in types:
-        return ("QUEST", True)
-    if 10 in types:
-        return ("STARTER", True)
-    if 7 in types:
-        return ("DISCOVERY", True)
+    for code, decision in ACQUISITION_PRIORITY:
+        if code in types:
+            return (decision, True)
     return ("TRAINER", True)
-
-
-def _load(path: Path) -> dict:
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def _atomic_write(path: Path, data: dict) -> None:
-    tmp = str(path) + ".tmp"
-    with open(tmp, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-    os.replace(tmp, path)
 
 
 def _apply(recipe: dict, decision: str, needs_review: bool, training_cost=None) -> None:
@@ -142,12 +110,12 @@ def _apply(recipe: dict, decision: str, needs_review: bool, training_cost=None) 
     recipe["source"] = src
 
 
-def run(sources_path: Path, state_dir: Path, expansion: str = "classic",
+def run(sources_path: Path, state_dir: Path, bucket,
         base_delay: float = 1.5, on_block: str = "sleep", limit: int = 0) -> int:
-    data = _load(sources_path)
+    data = load_json(sources_path)
     state_dir.mkdir(parents=True, exist_ok=True)
     state_path = state_dir / sources_path.name
-    state = _load(state_path) if state_path.exists() else {"version": 1, "spells": {}}
+    state = load_json(state_path) if state_path.exists() else {"version": 1, "spells": {}}
     spells = state["spells"]
 
     candidates = []
@@ -164,10 +132,11 @@ def run(sources_path: Path, state_dir: Path, expansion: str = "classic",
     print(f"  {sources_path.stem}: {len(candidates)} trainer/DB2 to verify", file=sys.stderr)
 
     consecutive_blocks = 0
+    failed_ids = []  # ids that ended 'failed' in THIS run (stale state from earlier runs is retried above)
     for sid in candidates:
         recipe = data["recipes"][sid]
         name = recipe.get("name", "")
-        url = f"https://www.wowhead.com/{expansion}/spell={sid}"
+        url = spell_url(bucket, int(sid))
         parsed = None
         for attempt in range(len(_BACKOFF) + 1):
             html = _FETCH(url)
@@ -182,10 +151,12 @@ def run(sources_path: Path, state_dir: Path, expansion: str = "classic",
             consecutive_blocks += 1
             spells[sid] = {"status": "failed", "attempts": spells.get(sid, {}).get("attempts", 0) + 1,
                            "lastError": "no-valid-page"}
-            _atomic_write(state_path, state)
+            failed_ids.append(sid)
+            atomic_write_json(state_path, state)
             if consecutive_blocks >= 3:
                 if on_block == "exit":
                     print("  Persistent block -> saved checkpoint, exiting for resume.", file=sys.stderr)
+                    print(f"  Failed spells: {failed_ids}", file=sys.stderr)
                     return 2
                 print("  Persistent block -> long sleep, then continue.", file=sys.stderr)
                 time.sleep(_BACKOFF[-1])
@@ -194,40 +165,51 @@ def run(sources_path: Path, state_dir: Path, expansion: str = "classic",
         consecutive_blocks = 0
         decision, needs_review = classify(parsed["source"], "trainingCost" in parsed)
         _apply(recipe, decision, needs_review, parsed.get("trainingCost"))
-        _atomic_write(sources_path, data)
+        atomic_write_json(sources_path, data)
         spells[sid] = {"status": "needsReview" if needs_review else "done",
                        "fetchedAt": date.today().isoformat(),
                        "attempts": spells.get(sid, {}).get("attempts", 0) + 1,
                        "decision": decision}
-        _atomic_write(state_path, state)
+        atomic_write_json(state_path, state)
         print(f"    spell {sid} ({name}): -> {decision}{' [review]' if needs_review else ''}",
               file=sys.stderr)
         time.sleep(base_delay + random.uniform(0, 0.5) if base_delay else 0)
 
     review = [sid for sid, st in spells.items() if st.get("status") == "needsReview"]
     print(f"  Done. needsReview: {len(review)} -> {review[:20]}", file=sys.stderr)
+    if failed_ids:
+        # A pipeline must not read a run with unverified spells as success.
+        print(f"  ERROR: {len(failed_ids)} spell(s) failed verification: {failed_ids}", file=sys.stderr)
+        return 2
     return 0
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description="Resumable SoD trainer-tail verifier")
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Resumable trainer-tail verifier")
+    add_bucket_argument(parser)
     parser.add_argument("--profession", required=True)
-    parser.add_argument("--expansion", default="sod")
     parser.add_argument("--sources-dir", type=Path, default=Path("Data/Sources"))
     parser.add_argument("--base-delay", type=float, default=1.5)
     parser.add_argument("--on-block", choices=["sleep", "exit"], default="sleep")
     parser.add_argument("--limit", type=int, default=0)
-    parser.add_argument("--resume", action="store_true", default=True)  # resume is always on
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
-    exp_folder = {"sod": "SoD", "classic": "SoD", "tbc": "TBC"}.get(args.expansion.lower(), "SoD")
-    subdomain = "classic" if args.expansion.lower() in ("sod", "classic") else args.expansion.lower()
-    sources_path = args.sources_dir / exp_folder / f"{args.profession}.json"
-    state_dir = args.sources_dir / exp_folder / ".fetch_state"
-    if not sources_path.exists():
-        print(f"Sources file not found: {sources_path}", file=sys.stderr)
+    bucket = get_bucket(args.bucket)
+    if not bucket.verify_trainers:
+        print(f"ERROR: bucket '{bucket.key}' does not use trainer verification "
+              f"(verify_trainers is false)", file=sys.stderr)
         return 1
-    return run(sources_path, state_dir, expansion=subdomain,
+    try:
+        prof = bucket.profession(args.profession)
+    except UnknownProfessionError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 1
+    sources_path = args.sources_dir / bucket.folder / f"{prof.folder}.json"
+    state_dir = args.sources_dir / bucket.folder / ".fetch_state"
+    if not sources_path.exists():
+        print(f"ERROR: bucket '{bucket.key}': sources file not found: {sources_path}", file=sys.stderr)
+        return 2
+    return run(sources_path, state_dir, bucket,
                base_delay=args.base_delay, on_block=args.on_block, limit=args.limit)
 
 

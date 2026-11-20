@@ -2,44 +2,53 @@
 """Fail if any recipe source is still PENDING (generate_recipes.py would crash).
 
 Usage:
-    assert_no_pending.py <sources.json> [--exclude-seasonal]
+    assert_no_pending.py --bucket <key> --profession <Name> [--sources-dir DIR]
 
---exclude-seasonal: skip recipes whose source JSON carries a truthy seasonId.
-    WHY: the Vanilla bucket uses --exclude-seasonal in generate_recipes.py to
-    drop SoD-only recipes (seasonId==2) that do not exist on a non-SoD Era
-    client.  Those recipes will never be resolvable on the Vanilla pipeline,
-    but that is intentional -- the gate must agree with generate to avoid
-    blocking a correctly-filtered bucket.
+Seasonal recipes (truthy seasonId) are skipped when the bucket's registry entry
+sets exclude_seasonal.
+    WHY: generate_recipes.py drops SoD-only recipes (seasonId==2) for the Vanilla
+    bucket; they will never be resolvable there, and the gate must agree with
+    generate or it blocks a correctly-filtered bucket forever. Reading the same
+    registry flag makes the two agree by construction instead of by hand.
 """
-import json
+import argparse
 import sys
 from pathlib import Path
 
+from buckets import UnknownProfessionError, add_bucket_argument, get_bucket
+from pipeline_io import load_json
 
-def main() -> int:
-    args = sys.argv[1:]
-    exclude_seasonal = "--exclude-seasonal" in args
-    paths = [a for a in args if not a.startswith("-")]
-    if not paths:
-        print("usage: assert_no_pending.py <sources.json> [--exclude-seasonal]",
-              file=sys.stderr)
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Fail if any source is still PENDING")
+    add_bucket_argument(parser)
+    parser.add_argument("--profession", required=True)
+    parser.add_argument("--sources-dir", type=Path, default=REPO_ROOT / "Data" / "Sources")
+    args = parser.parse_args(argv)
+
+    bucket = get_bucket(args.bucket)
+    try:
+        prof = bucket.profession(args.profession)
+    except UnknownProfessionError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
         return 1
-    path = Path(paths[0])
-    data = json.loads(path.read_text())
+    path = args.sources_dir / bucket.folder / f"{prof.folder}.json"
+    if not path.is_file():
+        print(f"ERROR: bucket '{bucket.key}': sources file not found: {path}", file=sys.stderr)
+        return 2
+    data = load_json(path)
     pending = []
     for sid, r in data.get("recipes", {}).items():
         if r.get("source", {}).get("certainty") != "PENDING":
             continue
-        # WHY skip seasonal when flag set: seasonal recipes (seasonId truthy) are
-        # excluded at generate time via --exclude-seasonal; the PENDING status is
-        # irrelevant because generate never reaches them.  Treating them as gate
-        # failures would block a correctly-filtered Vanilla run permanently.
-        if exclude_seasonal and r.get("seasonId"):
+        if bucket.exclude_seasonal and r.get("seasonId"):
             continue
         pending.append(sid)
     if pending:
-        print(f"ERROR: {len(pending)} PENDING sources remain in {path}: {pending[:20]}",
-              file=sys.stderr)
+        print(f"ERROR: bucket '{bucket.key}': {len(pending)} PENDING sources remain in {path}: "
+              f"{pending[:20]}", file=sys.stderr)
         return 1
     return 0
 
