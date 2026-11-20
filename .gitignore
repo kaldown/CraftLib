@@ -24,6 +24,7 @@ docs/agents/
 # Only transient verifier state and temp files stay ignored.
 Data/Sources/**/.fetch_state/
 Data/Sources/**/*.tmp
+Data/**/*.tmp
 
 # DB2 artifacts (downloaded from wago.tools)
 artifacts/
