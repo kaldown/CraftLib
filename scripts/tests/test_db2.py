@@ -5,7 +5,8 @@ from pathlib import Path
 import pytest
 
 import db2
-from buckets import BUCKETS, get_bucket
+import extract_db2_sources as ex
+from buckets import BUCKETS, PROFESSIONS, get_bucket
 from db2 import (CanaryError, CanaryResult, ColumnContractError, REQUIRED_COLUMNS,
                  check_canaries, load_table, measure_canaries, required_columns)
 from tests.fixture_build import FIXTURE_VERSION, write_build
@@ -14,21 +15,11 @@ ARTIFACTS = Path(__file__).resolve().parents[2] / "vendor" / "db2-parser" / "art
 
 
 def _measure(build_dir: Path, bucket) -> CanaryResult:
-    """Replicates the extractor's inclusion rule on raw tables."""
-    sparse_ids = {r["ID"] for r in load_table(build_dir, "ItemSparse", bucket)}
-    crafted = {r["SpellID"]: r["EffectItemType"]
-               for r in load_table(build_dir, "SpellEffect", bucket)
-               if r["Effect"] == "24" and r["EffectItemType"] not in ("", "0")}
-    reagents = set()
-    for r in load_table(build_dir, "SpellReagents", bucket):
-        if any(r[f"Reagent_{i}"] not in ("", "0") and r[f"ReagentCount_{i}"] not in ("", "0")
-               for i in range(8)):
-            reagents.add(r["SpellID"])
-    teaching = {r["SpellID"] for r in load_table(build_dir, "ItemEffect", bucket)
-                if r["ParentItemID"] not in ("", "0") and r["ParentItemID"] in sparse_ids}
-    sla = load_table(build_dir, "SkillLineAbility", bucket)
-    lines = {str(p) for p in (129, 185, 171, 164, 333, 202, 755, 165, 197, 186, 773)}
-    return measure_canaries(sla, lines, crafted, reagents, teaching)
+    """Measures through the extractor's own index builder, not a copy of its rules."""
+    ix = ex.build_indexes(build_dir, bucket, check=False)
+    lines = {PROFESSIONS[f].skill_line for f in bucket.professions}
+    return measure_canaries(ix["skill_line_abilities"], lines, ix["crafted_items"],
+                            ix["has_reagents"], ix["recipe_items"])
 
 
 def test_load_csv_checked_names_table_column_build(tmp_path):

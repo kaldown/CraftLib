@@ -10,30 +10,25 @@ Marks uncertain sources as PENDING for Wowhead verification:
 - Recipe item exists with BuyPrice > 0 (could be VENDOR or DROP)
 
 Usage:
-    python extract_db2_sources.py --version 2.5.5.65463 --profession FirstAid
+    python extract_db2_sources.py --bucket tbc --profession FirstAid
 """
 
 import argparse
-import csv
-import json
 import sys
+from collections import Counter
 from datetime import date
 from pathlib import Path
 
-# Profession SkillLine IDs
-PROFESSIONS = {
-    129: {"key": "firstAid", "name": "First Aid"},
-    185: {"key": "cooking", "name": "Cooking"},
-    171: {"key": "alchemy", "name": "Alchemy"},
-    164: {"key": "blacksmithing", "name": "Blacksmithing"},
-    333: {"key": "enchanting", "name": "Enchanting"},
-    202: {"key": "engineering", "name": "Engineering"},
-    755: {"key": "jewelcrafting", "name": "Jewelcrafting"},
-    165: {"key": "leatherworking", "name": "Leatherworking"},
-    197: {"key": "tailoring", "name": "Tailoring"},
-    186: {"key": "mining", "name": "Mining"},
-    773: {"key": "inscription", "name": "Inscription"},
-}
+import db2
+from buckets import PROFESSIONS, Profession, UnknownProfessionError, add_bucket_argument, get_bucket
+from db2 import CanaryError, ColumnContractError, REQUIRED_COLUMNS, load_csv_checked, load_table
+from pipeline_io import atomic_write_json, load_json
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
+# Certainties DB2 can re-derive on every run. Anything else (WOWHEAD, MANUAL, CROSS,
+# REMOVED, ...) is verified or curated state that a re-extract must not overwrite.
+RECOMPUTABLE_CERTAINTIES = frozenset({"DB2", "PENDING"})
 
 REP_LEVELS = {
     4: "Friendly",
@@ -43,108 +38,108 @@ REP_LEVELS = {
 }
 
 
-def load_csv(path: Path) -> list[dict]:
-    """Load CSV file as list of dicts."""
-    with open(path, "r", encoding="utf-8") as f:
-        return list(csv.DictReader(f))
-
-
-def load_existing_sources(sources_file: Path) -> dict:
-    """Load existing sources file if it exists."""
+def load_existing_sources(sources_file: Path) -> dict | None:
+    """Load the existing sources file, or None when this profession is new."""
     if sources_file.exists():
-        with open(sources_file, "r", encoding="utf-8") as f:
-            return json.load(f)
+        return load_json(sources_file)
     return None
 
 
-def build_indexes(data_dir: Path) -> dict:
-    """Build lookup indexes from DB2 CSVs."""
+def build_indexes(data_dir: Path, bucket, check: bool = True) -> dict:
+    """Build lookup indexes from DB2 CSVs and check the canaries.
+
+    data_dir is the build directory (e.g. artifacts/2.5.5.65895). Tables go
+    through the column contract so a renamed column fails here, not as silently
+    missing reagents or teaching items later.
+    """
+    data_dir = Path(data_dir)
     indexes = {}
 
-    # Spell names
-    spell_names = load_csv(data_dir / "SpellName.csv")
+    def table(name):
+        return load_table(data_dir, name, bucket)
+
     indexes["spell_names"] = {
-        row["ID"]: row.get("Name_lang", "")
-        for row in spell_names
-        if row.get("Name_lang")
+        row["ID"]: row["Name_lang"] for row in table("SpellName") if row["Name_lang"]
     }
 
-    # Item details
-    item_sparse = load_csv(data_dir / "ItemSparse.csv")
+    item_sparse = table("ItemSparse")
     indexes["item_details"] = {row["ID"]: row for row in item_sparse}
     indexes["item_names"] = {
-        row["ID"]: row.get("Display_lang", "")
-        for row in item_sparse
-        if row.get("Display_lang")
+        row["ID"]: row["Display_lang"] for row in item_sparse if row["Display_lang"]
     }
 
-    # Faction names
-    factions = load_csv(data_dir / "Faction.csv")
     indexes["faction_names"] = {
-        row["ID"]: row.get("Name_lang", "")
-        for row in factions
-        if row.get("Name_lang")
+        row["ID"]: row["Name_lang"] for row in table("Faction") if row["Name_lang"]
     }
 
     # Crafted items (SpellEffect with Effect=24)
-    spell_effects = load_csv(data_dir / "SpellEffect.csv")
     indexes["crafted_items"] = {}
-    for row in spell_effects:
-        if row.get("Effect") == "24":
-            spell_id = row.get("SpellID")
-            item_id = row.get("EffectItemType")
+    for row in table("SpellEffect"):
+        if row["Effect"] == "24":
+            spell_id = row["SpellID"]
+            item_id = row["EffectItemType"]
             if not item_id or item_id == "0":
                 print(f"  WARNING: SpellEffect Effect=24 has no EffectItemType for spell {spell_id}", file=sys.stderr)
                 continue
             if spell_id:
                 indexes["crafted_items"][spell_id] = item_id
 
-    # Spell reagents: spell_id -> True (has reagents)
-    spell_reagents_csv = load_csv(data_dir / "SpellReagents.csv")
+    # Spells with at least one populated reagent slot
     indexes["has_reagents"] = set()
-    for row in spell_reagents_csv:
-        spell_id = row.get("SpellID") or row.get("ID")
+    for row in table("SpellReagents"):
+        spell_id = row["SpellID"]
         if not spell_id:
             continue
-        # Check if any reagent slot is populated
         for i in range(8):
-            item_id = row.get(f"Reagent_{i}", "0")
-            count = row.get(f"ReagentCount_{i}", "0")
+            item_id = row[f"Reagent_{i}"]
+            count = row[f"ReagentCount_{i}"]
             if item_id and item_id != "0" and count and count != "0":
                 indexes["has_reagents"].add(spell_id)
                 break
 
-    # Recipe items (ItemEffect: items that teach spells)
-    # Only include items that exist in ItemSparse (some old items were removed)
-    item_effects = load_csv(data_dir / "ItemEffect.csv")
+    # Recipe items (ItemEffect: items that teach spells).
+    # Only include items that exist in ItemSparse (some old items were removed).
     indexes["recipe_items"] = {}
-    for row in item_effects:
-        spell_id = row.get("SpellID")
-        item_id = row.get("ParentItemID")
+    for row in table("ItemEffect"):
+        spell_id = row["SpellID"]
+        item_id = row["ParentItemID"]
         if spell_id and item_id and item_id != "0":
             if item_id in indexes["item_details"]:
                 indexes["recipe_items"][spell_id] = item_id
 
-    # SkillLineAbility
-    indexes["skill_line_abilities"] = load_csv(data_dir / "SkillLineAbility.csv")
+    indexes["skill_line_abilities"] = table("SkillLineAbility")
 
     indexes["recipe_items_fallback"] = {}
     indexes["item_details_fallback"] = {}
+
+    # Canaries run before anything is written: a broken join must not produce a
+    # plausible-looking (and then merged-in) partial result. check=False lets a test
+    # measure a deliberately broken build and assert on the canary itself.
+    if not check:
+        return indexes
+    result = db2.measure_canaries(
+        indexes["skill_line_abilities"],
+        {PROFESSIONS[f].skill_line for f in bucket.professions},
+        indexes["crafted_items"], indexes["has_reagents"], indexes["recipe_items"])
+    db2.check_canaries(bucket, result, data_dir.name)
     return indexes
 
 
 def add_fallback_indexes(indexes: dict, fallback_dir: Path) -> None:
     """Populate fallback recipe_items + item_details from another DB2 build."""
+    fallback_dir = Path(fallback_dir)
     if not fallback_dir.exists():
         return
-    item_sparse = load_csv(fallback_dir / "ItemSparse.csv")
+    item_sparse = load_csv_checked(fallback_dir / "ItemSparse.csv", "ItemSparse",
+                                   REQUIRED_COLUMNS["ItemSparse"])
     details = {row["ID"]: row for row in item_sparse}
     indexes["item_details_fallback"] = details
-    item_effects = load_csv(fallback_dir / "ItemEffect.csv")
+    item_effects = load_csv_checked(fallback_dir / "ItemEffect.csv", "ItemEffect",
+                                    REQUIRED_COLUMNS["ItemEffect"])
     fb = {}
     for row in item_effects:
-        sid = row.get("SpellID")
-        iid = row.get("ParentItemID")
+        sid = row["SpellID"]
+        iid = row["ParentItemID"]
         if sid and iid and iid != "0" and iid in details:
             fb[sid] = iid
     indexes["recipe_items_fallback"] = fb
@@ -217,21 +212,53 @@ def detect_source(spell_id: str, indexes: dict) -> dict:
     }
 
 
+def preserve_source(source: dict | None) -> bool:
+    """True when an existing source must survive a re-extract.
+
+    A review marker on a DB2 source is human state DB2 cannot re-derive, so it
+    protects the source even though DB2 certainty is otherwise recomputable.
+    """
+    if not source:
+        return False
+    return (source.get("certainty") not in RECOMPUTABLE_CERTAINTIES
+            or "needsReview" in source or "reviewReason" in source)
+
+
+def merge_recipe(existing: dict | None, name: str, detected: dict) -> dict:
+    """Merge a freshly detected source into an existing recipe entry.
+
+    Copying the existing entry keeps difficulty/wowhead/seasonId/phaseId (and
+    any future key) in their original order; only name and, when allowed, source change.
+    """
+    if existing is None:
+        return {"name": name, "source": detected}
+    merged = dict(existing)
+    merged["name"] = name
+    if not preserve_source(existing.get("source")):
+        merged["source"] = detected
+    return merged
+
+
 def extract_profession_sources(
-    skill_line_id: int,
-    profession: dict,
+    profession: Profession,
     indexes: dict,
     version: str,
     existing: dict | None,
-) -> dict:
-    """Extract sources for a profession."""
+) -> tuple[dict, list[str]]:
+    """Extract sources for a profession, merging into the existing document.
+
+    Returns (document, orphan spell ids). Orphans are existing entries whose spell
+    is not in this build; they are kept unchanged (after the live ones) so a build
+    that dropped a spell cannot silently delete curated data.
+    """
+    old_recipes = (existing or {}).get("recipes", {})
     recipes = {}
 
     for row in indexes["skill_line_abilities"]:
-        if row.get("SkillLine") != str(skill_line_id):
+        if row["SkillLine"] != str(profession.skill_line):
             continue
 
-        spell_id = row.get("Spell")
+        spell_id = row["Spell"]
         if not spell_id:
             continue
 
@@ -240,130 +267,91 @@ def extract_profession_sources(
             continue
 
         name = indexes["spell_names"].get(spell_id, f"Unknown-{spell_id}")
+        prev = old_recipes.get(spell_id)
+        # Skip detection when the old source is kept anyway: detection can raise on
+        # data gaps that a curated source has already resolved.
+        if prev is not None and preserve_source(prev.get("source")):
+            detected = prev["source"]
+        else:
+            detected = detect_source(spell_id, indexes)
+        recipes[spell_id] = merge_recipe(prev, name, detected)
 
-        # Check if we have existing WOWHEAD-verified data
-        if existing and spell_id in existing.get("recipes", {}):
-            existing_source = existing["recipes"][spell_id].get("source", {})
-            if existing_source.get("certainty") == "WOWHEAD":
-                # Preserve WOWHEAD-verified sources
-                recipes[spell_id] = {
-                    "name": name,
-                    "source": existing_source,
-                }
-                continue
+    orphans = [sid for sid in old_recipes if sid not in recipes]
+    for sid in orphans:
+        recipes[sid] = old_recipes[sid]
 
-        # Detect source from DB2
-        source = detect_source(spell_id, indexes)
-        recipes[spell_id] = {
-            "name": name,
-            "source": source,
-        }
-
-    return {
-        "profession": profession["key"],
-        "version": version,
-        "generated": date.today().isoformat(),
-        "recipes": recipes,
-    }
+    doc = dict(existing) if existing else {}
+    doc["profession"] = profession.key
+    doc["version"] = version
+    doc["generated"] = date.today().isoformat()
+    doc["recipes"] = recipes
+    return doc, orphans
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Extract recipe sources from DB2")
-    parser.add_argument("--version", required=True, help="DB2 build version")
-    parser.add_argument("--profession", required=True, help="Profession name or key")
-    parser.add_argument(
-        "--data-dir",
-        type=Path,
-        default=Path("vendor/db2-parser/artifacts"),
-        help="DB2 artifacts directory",
-    )
-    parser.add_argument(
-        "--output-dir",
-        type=Path,
-        default=Path("Data/Sources"),
-        help="Base output directory for source files (expansion subfolder added automatically)",
-    )
-    parser.add_argument(
-        "--expansion",
-        default="tbc",
-        help="Target expansion (classic, tbc, wotlk, cata). Default: tbc",
-    )
+    add_bucket_argument(parser)
+    parser.add_argument("--profession", required=True, help="Profession name, key or folder")
+    parser.add_argument("--version", help="DB2 build version (default: the bucket's pinned build)")
+    parser.add_argument("--data-dir", type=Path,
+                        default=REPO_ROOT / "vendor" / "db2-parser" / "artifacts",
+                        help="DB2 artifacts directory")
+    parser.add_argument("--output-dir", type=Path, default=REPO_ROOT / "Data" / "Sources",
+                        help="Base directory; writes <output-dir>/<Bucket>/<Profession>.json")
     parser.add_argument("--fallback-version", default=None,
                         help="DB2 build to consult for missing ItemEffect links (e.g. 2.5.5.65895)")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
-    # Map expansion to folder name.
-    # "classic" is an alias for "vanilla" (both write to Data/Sources/Vanilla).
-    exp_folder = {"sod": "SoD", "vanilla": "Vanilla", "classic": "Vanilla", "tbc": "TBC",
-                  "wotlk": "WotLK", "cata": "Cata"}.get(
-        args.expansion.lower(), args.expansion.upper()
-    )
-
-    # Find profession
-    prof_key = args.profession.lower().replace(" ", "")
-    profession = None
-    skill_line_id = None
-    for sid, p in PROFESSIONS.items():
-        if p["key"].lower() == prof_key or p["name"].lower().replace(" ", "") == prof_key:
-            profession = p
-            skill_line_id = sid
-            break
-
-    if not profession:
-        print(f"Unknown profession: {args.profession}", file=sys.stderr)
+    bucket = get_bucket(args.bucket)
+    try:
+        profession = bucket.profession(args.profession)
+    except UnknownProfessionError as e:
+        print(f"Unknown profession: {e}", file=sys.stderr)
         return 1
 
-    # Build data path
-    data_dir = args.data_dir / args.version
+    version = args.version or bucket.build
+    data_dir = args.data_dir / version
     if not data_dir.exists():
-        print(f"Data directory not found: {data_dir}", file=sys.stderr)
+        print(f"ERROR: bucket '{bucket.key}': data directory not found: {data_dir}", file=sys.stderr)
         return 1
 
-    # Load existing sources (to preserve WOWHEAD entries)
-    expansion_dir = args.output_dir / exp_folder
-    output_file = expansion_dir / f"{profession['name'].replace(' ', '')}.json"
-    existing = load_existing_sources(output_file)
+    output_file = args.output_dir / bucket.folder / f"{profession.folder}.json"
 
-    # Build indexes
-    print(f"Loading DB2 data from {data_dir}...", file=sys.stderr)
-    indexes = build_indexes(data_dir)
-    fb = args.fallback_version
-    if fb:
-        add_fallback_indexes(indexes, args.data_dir / fb)
-    print(
-        f"Built indexes: {len(indexes['spell_names'])} spells, "
-        f"{len(indexes['recipe_items'])} recipe items",
-        file=sys.stderr,
-    )
+    try:
+        existing = load_existing_sources(output_file)
+        print(f"Loading DB2 data from {data_dir}...", file=sys.stderr)
+        indexes = build_indexes(data_dir, bucket)
+        if args.fallback_version:
+            add_fallback_indexes(indexes, args.data_dir / args.fallback_version)
+        print(
+            f"Built indexes: {len(indexes['spell_names'])} spells, "
+            f"{len(indexes['recipe_items'])} recipe items",
+            file=sys.stderr,
+        )
+        sources, orphans = extract_profession_sources(profession, indexes, version, existing)
+    except (ValueError, ColumnContractError, CanaryError, FileNotFoundError) as e:
+        print(f"ERROR: bucket '{bucket.key}': {e}", file=sys.stderr)
+        return 2
 
-    # Extract sources
-    sources = extract_profession_sources(
-        skill_line_id, profession, indexes, args.version, existing
-    )
+    if orphans:
+        print(f"WARNING: {len(orphans)} recipes in {output_file} are not in build {version}; "
+              f"kept unchanged: {', '.join(orphans[:20])}", file=sys.stderr)
 
-    # Count by certainty
-    certainty_counts = {"DB2": 0, "WOWHEAD": 0, "PENDING": 0}
-    for recipe in sources["recipes"].values():
-        cert = recipe["source"].get("certainty", "PENDING")
-        certainty_counts[cert] = certainty_counts.get(cert, 0) + 1
+    certainty_counts = Counter(r["source"].get("certainty", "PENDING")
+                               for r in sources["recipes"].values())
 
-    # Write output
-    expansion_dir.mkdir(parents=True, exist_ok=True)
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(sources, f, indent=2)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    atomic_write_json(output_file, sources)
 
     print(f"\nWrote {output_file}", file=sys.stderr)
     print(f"  Total recipes: {len(sources['recipes'])}", file=sys.stderr)
-    print(f"  DB2 certain:   {certainty_counts['DB2']}", file=sys.stderr)
-    print(f"  WOWHEAD:       {certainty_counts['WOWHEAD']}", file=sys.stderr)
-    print(f"  PENDING:       {certainty_counts['PENDING']}", file=sys.stderr)
+    for cert in ("DB2", "WOWHEAD", "PENDING"):
+        print(f"  {cert + ':':<14} {certainty_counts.get(cert, 0)}", file=sys.stderr)
 
-    if certainty_counts["PENDING"] > 0:
-        print(
-            f"\n⚠ {certainty_counts['PENDING']} recipes need Wowhead verification.",
-            file=sys.stderr,
-        )
-        print("Run: python scripts/fetch_wowhead_sources.py --profession FirstAid", file=sys.stderr)
+    if certainty_counts.get("PENDING", 0) > 0:
+        print(f"\n{certainty_counts['PENDING']} recipes need Wowhead verification.", file=sys.stderr)
+        print("Run: python scripts/fetch_wowhead_sources.py "
+              f"--profession {profession.folder}", file=sys.stderr)
 
     return 0
 
