@@ -14,7 +14,9 @@ Output, under <sources-dir>/<Bucket>/ingame/:
 These are the highest-authority facts for the Forever resolver (recipe presence,
 learned state, trainer learn skill, vendor prices).
 
-Exit codes follow pipeline.py: 0 ok, 1 usage/config, 2 the report has no recognised section.
+Exit codes follow pipeline.py: 0 ok, 1 usage/config, 2 the report has no recognised section,
+its recipe list is truncated, or the list's profession is not one of the bucket's (the other
+sections are still imported in both cases).
 """
 import argparse
 import re
@@ -212,14 +214,36 @@ def _load(path: Path, default):
     return load_json(path) if path.exists() else default
 
 
+def recipe_profession(bucket, report: ProbeReport):
+    """The bucket profession the report's recipe list belongs to, or None."""
+    by_line = {PROFESSIONS[f].skill_line: PROFESSIONS[f] for f in bucket.professions}
+    return by_line.get((report.profession or {}).get("skillLine"))
+
+
+def unfiled_recipes(bucket, report: ProbeReport) -> "str | None":
+    """Why a complete recipe list cannot be filed under a profession, or None."""
+    if report.recipe_error or not report.recipes or recipe_profession(bucket, report):
+        return None
+    prof = report.profession or {}
+    line = prof.get("skillLine")
+    if line is None:
+        return "recipe capture not imported: the profession window names no skill line"
+    # The name from the line _profession took the skill line from (child, else base).
+    child = prof.get("child") or {}
+    name = (child if child.get("professionID") else prof.get("base") or {}).get(
+        "professionName")
+    what = f"skill line {line}" + (f" ({name})" if name else "")
+    return (f"recipe capture not imported: {what} is not a profession of bucket "
+            f"'{bucket.key}'")
+
+
 def merge_into(sources_dir: Path, bucket, report: ProbeReport) -> "list[Path]":
     """Write the report's captures under <sources_dir>/<bucket.folder>/ingame/."""
     ingame = Path(sources_dir) / bucket.folder / "ingame"
     ingame.mkdir(parents=True, exist_ok=True)
     today = report.captured or date.today().isoformat()
     written: list[Path] = []
-    by_line = {p.skill_line: p for p in PROFESSIONS.values() if p.folder in bucket.professions}
-    by_name = {p.name.lower(): p for p in by_line.values()}
+    by_name = {PROFESSIONS[f].name.lower(): PROFESSIONS[f] for f in bucket.professions}
 
     def capture(prof):
         path = ingame / f"{prof.folder}.json"
@@ -236,11 +260,11 @@ def merge_into(sources_dir: Path, bucket, report: ProbeReport) -> "list[Path]":
     if report.recipe_error:
         print(f"error: recipe capture refused: {report.recipe_error}", file=sys.stderr)
     elif report.recipes:
-        prof = by_line.get((report.profession or {}).get("skillLine"))
+        prof = recipe_profession(bucket, report)
         if prof is None:
-            # Not fileable: say so rather than silently dropping the owner's capture.
-            print("warning: recipe capture skipped: profession not recognised for this bucket",
-                  file=sys.stderr)
+            # Not fileable: say so rather than silently dropping the owner's capture (main
+            # then exits 2, after the other sections are written).
+            print(f"error: {unfiled_recipes(bucket, report)}", file=sys.stderr)
         else:
             path, cap = capture(prof)
             # A fresh recipe list is the whole truth for the profession: replace, never merge.
@@ -321,7 +345,7 @@ def main(argv: "list[str] | None" = None) -> int:
             return 2
         for p in merge_into(args.sources_dir, bucket, report):
             print(f"wrote {p}")
-        if report.recipe_error:
+        if report.recipe_error or unfiled_recipes(bucket, report):
             return 2  # the rest of the report was imported; the recipe list was not
     except (OSError, InputFileError) as e:
         print(f"error: {e}", file=sys.stderr)

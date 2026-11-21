@@ -247,6 +247,22 @@ def test_refused_recipes_still_import_other_sections(tmp_path):
     assert (ingame / "Currencies.json").exists() and not (ingame / "Tailoring.json").exists()
 
 
+def test_recipe_capture_of_an_unknown_profession_exits_2(tmp_path, capsys):
+    # Jewelcrafting (755) is not a Forever profession: the recipe list cannot be filed.
+    text = window().replace(kvline(197, "Tailoring", 160, 225, "nil", "Classic"),
+                            kvline(755, "Jewelcrafting", 1, 75, "nil", "Classic"))
+    f = tmp_path / "r.txt"
+    f.write_text(text + "\n\n== currencies ==\ncurrency Honor qty 1 id 7\n", encoding="utf-8")
+    src = tmp_path / "src"
+    assert import_probe.main(["--bucket", "forever", "--input", str(f), "--sources-dir", str(src)]) == 2
+    err = capsys.readouterr().err
+    assert "skill line 755" in err and "Jewelcrafting" in err
+    # The other sections are still imported first.
+    ingame = src / "Forever" / "ingame"
+    assert (ingame / "Currencies.json").exists()
+    assert sorted(p.name for p in ingame.iterdir()) == ["Currencies.json"]
+
+
 def test_separate_stamps(tmp_path, bucket):
     merge_into(tmp_path, bucket, parse_report(REPORT))
     later = parse_report("LPProbe report 2026-12-01 10:00\n== trainer ==\n"
