@@ -114,6 +114,9 @@ class Bucket:
     held_back: tuple[str, ...] = ()       # professions failing the coverage gate: not written, not in TOC
     vendor_explicit_scope: bool = False   # emit only allowlist entries naming this scope explicitly
     shipped: bool = True                  # False = pipeline-only; consistency checks skip it
+    # The client the generated Lua headers name; None = "<folder> Classic" (the Classic
+    # buckets' wording, kept byte for byte).
+    client_name: str | None = None
 
     def profession(self, name: str) -> Profession:
         """Resolve a profession by folder/key/display name, ignoring case and spaces."""
@@ -256,7 +259,7 @@ BUCKETS: dict[str, Bucket] = {
         #   Thorium, and the Forever-only rows.
         # An in-game trainer/recipe capture (scripts/import_probe.py) releases both.
         held_back=("Engineering", "Mining"), vendor_explicit_scope=True,
-        shipped=True),
+        shipped=True, client_name="WoW Forever"),
 }
 
 

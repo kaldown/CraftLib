@@ -160,9 +160,15 @@ def test_forever_header_names_the_wiki():
         {"type": "TRAINER", "certainty": "WIKI"})
 
 
+def test_forever_header_names_the_client():
+    lua = _lua({"type": "TRAINER", "certainty": "WIKI"})
+    assert "-- Tailoring recipes for WoW Forever\n" in lua
+    assert "Forever Classic" not in lua
+
+
 def test_classic_header_is_unchanged():
     lua = _lua({"type": "TRAINER", "certainty": "WOWHEAD"}, bucket="tbc")
-    assert "-- Generated from DB2 data\nlocal ADDON_NAME" in lua
+    assert "-- Tailoring recipes for TBC Classic\n-- Generated from DB2 data\nlocal ADDON_NAME" in lua
 
 
 def test_classic_trainer_lines_are_unchanged():
