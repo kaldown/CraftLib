@@ -259,6 +259,50 @@ def test_strict_difficulty_exits_2(tmp_path, monkeypatch, capsys, field, value):
     assert not _lua_path(out).exists()
 
 
+# --- resolver notes and the milestones -------------------------------------------
+
+def test_source_notes_reach_the_review(tmp_path, monkeypatch):
+    def edit(r):
+        r["1002"]["forever"] = {"notes": ["wiki row skill 9 differs from ITEM orange 15",
+                                          "in-game trainer teaches it; DB2 also has teaching "
+                                          "item 6002"]}
+        r["1004"]["forever"] = {"notes": ["wiki says vendor; price not in DB2 or wiki"]}
+    rc, _art, src, _out = _run(tmp_path, monkeypatch, edit=edit)
+    assert rc == 0
+    # Shipped (1002) and excluded (1004) recipes alike, sorted by spell and text.
+    assert _review(src)["notes"] == [
+        [1002, "Fixture Vest", "in-game trainer teaches it; DB2 also has teaching item 6002"],
+        [1002, "Fixture Vest", "wiki row skill 9 differs from ITEM orange 15"],
+        [1004, "Fixture Boots", "wiki says vendor; price not in DB2 or wiki"]]
+    md = (src / "Forever" / "REVIEW.md").read_text()
+    assert "### Notes (3)" in md
+    assert "- 1004 Fixture Boots: wiki says vendor; price not in DB2 or wiki" in md
+
+
+def test_malformed_source_notes_exit_2(tmp_path, monkeypatch, capsys):
+    def edit(r):
+        r["1002"]["forever"] = {"notes": "not a list"}
+    rc, *_ = _run(tmp_path, monkeypatch, edit=edit)
+    assert rc == 2
+    assert "1002" in capsys.readouterr().err
+
+
+def test_unverified_milestones_are_announced(tmp_path, monkeypatch, capsys):
+    rc, _art, src, _out = _run(tmp_path, monkeypatch)
+    assert rc == 0
+    note = "milestones (75, 150, 225, 300) not yet confirmed in game"
+    assert note in capsys.readouterr().err
+    assert "Milestones (75, 150, 225, 300) not yet confirmed in game." in (
+        src / "Forever" / "REVIEW.md").read_text()
+    _bucket(monkeypatch, milestones_verified=True)
+    assert _generate(*_run_dirs(tmp_path)) == 0
+    assert "not yet confirmed" not in capsys.readouterr().err
+
+
+def _run_dirs(tmp_path):
+    return tmp_path / "art", tmp_path / "src", tmp_path / "out"
+
+
 # --- the coverage gate -------------------------------------------------------------
 
 def test_failing_coverage_exits_2_and_still_writes_the_review(tmp_path, monkeypatch, capsys):

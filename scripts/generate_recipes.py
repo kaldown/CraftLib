@@ -8,8 +8,9 @@ Every bucket-specific switch comes from the registry (scripts/buckets.py), so th
 buckets regenerate byte for byte. A bucket with review_policy "exclude" (Forever) leaves
 out the recipes its sources mark for review instead of failing, and on every run writes
 <sources>/<Folder>/review/<Prof>.json and <sources>/<Folder>/REVIEW.md (review_report.py)
-listing what was left out and the per-profession coverage; a profession failing the
-coverage gate (coverage_floor / coverage_max_gap) fails the run unless it is held back.
+listing what was left out, the resolver's notes and the per-profession coverage; a
+profession failing the coverage gate (coverage_floor / coverage_max_gap) fails the run
+unless it is held back.
 """
 
 import argparse
@@ -914,9 +915,11 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
 
 
 def gate_profession(recipes: list[dict], skipped: list[dict], profession: Profession, bucket,
-                    bucket_sources: Path, output_file: Path) -> bool:
+                    bucket_sources: Path, output_file: Path,
+                    sources: dict | None = None) -> bool:
     """Review report + coverage gate (plan ruling R4); True when the Lua is to be written.
 
+    sources: the profession's sources, whose resolver notes the review lists.
     WHY the review files are written before the gate raises: a failing profession is
     exactly the one whose excluded recipes a human has to read.
     """
@@ -929,7 +932,8 @@ def gate_profession(recipes: list[dict], skipped: list[dict], profession: Profes
         review_dir = bucket_sources / "review"
         review_report.write_profession(
             review_dir, profession.folder,
-            review_report.profession_data(cov, held, recipes, excluded, bucket))
+            review_report.profession_data(cov, held, recipes, excluded, bucket,
+                                          review_report.source_notes(sources)))
         atomic_write_text(bucket_sources / "REVIEW.md", review_report.render(review_dir, bucket))
     failures = review_report.gate_failures(cov, bucket)
     where = f"bucket '{bucket.key}' {profession.name}"
@@ -1013,6 +1017,12 @@ def main(argv: list[str] | None = None) -> int:
         bucket_sources = args.sources_dir / bucket.folder
         exceptions_path = args.sources_dir / "generate_exceptions.json"
         exceptions = load_exceptions(exceptions_path, bucket)
+        if not bucket.milestones_verified:
+            # Every recipe range and the coverage cap rest on these; say so on every run
+            # until an in-game capture confirms them (REVIEW.md says it too).
+            print(f"NOTE: bucket '{bucket.key}' milestones "
+                  f"({', '.join(str(m) for m in bucket.milestones)}) not yet confirmed in game",
+                  file=sys.stderr)
 
         for profession in professions:
             verified_sources = load_verified_sources(bucket_sources, profession.name)
@@ -1048,7 +1058,7 @@ def main(argv: list[str] | None = None) -> int:
 
             output_file = args.output_dir / bucket.folder / profession.folder / "Recipes.lua"
             if not gate_profession(recipes, skipped, profession, bucket, bucket_sources,
-                                   output_file):
+                                   output_file, verified_sources):
                 continue
 
             if not recipes:

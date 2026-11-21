@@ -6,6 +6,7 @@ generator calls this module once per profession:
 
   coverage()          shipped vs in-game recipes and the largest skill gap;
   gate_failures()     why the profession fails the registry's coverage gate, if it does;
+  source_notes()      the resolver's notes kept in the sources (forever.notes);
   profession_data()   the facts behind one profession's review file;
   write_profession()  writes <sources>/<Folder>/review/<Prof>.json (sorted, deterministic);
   render()            rebuilds <sources>/<Folder>/REVIEW.md from every review file.
@@ -105,14 +106,41 @@ def reason_group(reason: str) -> str:
 
 # --- review/<Prof>.json --------------------------------------------------------------
 
+def source_notes(sources: "dict | None") -> "list[tuple[str, str, str]]":
+    """(spell id, name, note) for every note the enrich step kept on a recipe.
+
+    The notes are where the resolver records what a human should know about a recipe it
+    did resolve (or reviewed): an in-game fact that disagrees with the wiki, a vendor price
+    neither DB2 nor the wiki has, a DB2 faction on a drop. They describe the sources, so
+    shipped and excluded recipes alike are listed.
+    """
+    out = []
+    for sid, recipe in (sources or {}).items():
+        notes = ((recipe or {}).get("forever") or {}).get("notes")
+        if notes is None:
+            continue
+        # Fail loud: a malformed list would otherwise vanish from the report.
+        if not isinstance(notes, list) or not all(isinstance(n, str) and n.strip()
+                                                  for n in notes):
+            raise ValueError(f"spell {sid}: forever.notes must be a list of non-empty strings, "
+                             f"not {notes!r}")
+        name = recipe.get("name") or f"spell {sid}"
+        out += [(sid, name, n) for n in notes]
+    return out
+
+
 def _ratio(n: int, d: int) -> float:
     # Rounded so the tracked JSON does not carry 17-digit floats.
     return round(n / d, 4) if d else 0.0
 
 
 def profession_data(cov: Coverage, held_back: bool, shipped: "list[dict]",
-                    excluded: "list[tuple[str, str, str]]", bucket) -> dict:
-    """The review file's content for one profession (write_profession sorts it)."""
+                    excluded: "list[tuple[str, str, str]]", bucket,
+                    notes: "list[tuple[str, str, str]]" = ()) -> dict:
+    """The review file's content for one profession (write_profession sorts it).
+
+    notes: source_notes() of the profession's sources.
+    """
     gated = bucket.coverage_floor is not None
     return {
         "coverage": {
@@ -131,6 +159,7 @@ def profession_data(cov: Coverage, held_back: bool, shipped: "list[dict]",
         },
         "heldBack": held_back,
         "excluded": [[int(sid), name, reason] for sid, name, reason in excluded],
+        "notes": [[int(sid), name, note] for sid, name, note in notes],
         "unknownSource": [[r["id"], r["name"]] for r in shipped
                           if r["source"]["type"] == "UNKNOWN"],
         "orangeFrom": dict(Counter(r.get("difficultyOrigin") or "?" for r in shipped)),
@@ -145,6 +174,8 @@ def write_profession(review_dir: Path, folder: str, data: dict) -> Path:
                               key=lambda e: (e[0], e[2]))
     data["unknownSource"] = sorted(([int(e[0]), e[1]] for e in data["unknownSource"]),
                                    key=lambda e: e[0])
+    data["notes"] = sorted(([int(e[0]), e[1], e[2]] for e in data["notes"]),
+                           key=lambda e: (e[0], e[2]))
     review_dir = Path(review_dir)
     review_dir.mkdir(parents=True, exist_ok=True)
     path = review_dir / f"{folder}.json"
@@ -154,7 +185,8 @@ def write_profession(review_dir: Path, folder: str, data: dict) -> Path:
 
 def load_profession(path: Path) -> dict:
     data = load_json(path)
-    keys = ("coverage", "heldBack", "excluded", "unknownSource", "orangeFrom", "sourceTypes")
+    keys = ("coverage", "heldBack", "excluded", "notes", "unknownSource", "orangeFrom",
+            "sourceTypes")
     if not isinstance(data, dict) or any(k not in data for k in keys):
         raise ValueError(f"{path}: not a review file (expected keys {', '.join(keys)})")
     return data
@@ -217,8 +249,15 @@ def render(review_dir: Path, bucket) -> str:
         "`no skill-up:`. Share is shipped / in game; known-source share is shipped with a "
         f"known source / in game. Largest gap is the longest run of skill points in 1-{cap - 1} "
         "where no shipped recipe has skillRequired <= p < gray. "
-        f"Coverage gate: {gate}; a held-back profession is not written.",
+        f"Coverage gate: {gate}; a held-back profession is not written. Notes are what the "
+        "resolver recorded about a recipe (shipped or excluded) for a human to check.",
         "",
+    ]
+    if not bucket.milestones_verified:
+        # The registry's milestones are an assumption until a capture shows maxSkillLevel.
+        out += [f"Milestones ({', '.join(str(m) for m in bucket.milestones)}) not yet "
+                f"confirmed in game.", ""]
+    out += [
         "## Coverage",
         "",
         "| Profession | Shipped | In game | Share | Known-source share | Largest gap | Held back |",
@@ -250,5 +289,8 @@ def render(review_dir: Path, bucket) -> str:
         unknown = data["unknownSource"]
         out += ["", f"### UNKNOWN source ({len(unknown)})", ""]
         out += [f"- {sid} {name}" for sid, name in unknown] or ["none"]
+        notes = data["notes"]
+        out += ["", f"### Notes ({len(notes)})", ""]
+        out += [f"- {sid} {name}: {note}" for sid, name, note in notes] or ["none"]
     out.append("")
     return "\n".join(out)

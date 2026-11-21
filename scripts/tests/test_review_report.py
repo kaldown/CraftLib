@@ -86,7 +86,7 @@ def test_no_gate_without_a_floor():
 
 # --- review/<Prof>.json and REVIEW.md ----------------------------------------------
 
-def _data(held=False, excluded=None, shipped=None):
+def _data(held=False, excluded=None, shipped=None, notes=()):
     shipped = shipped if shipped is not None else [_r(5, 1, 300), _r(3, 1, 300, "UNKNOWN")]
     excluded = excluded if excluded is not None else [
         ("20", "Zeta", "no wiki row"), ("4", "Delta", "no wiki row: row 'x' taken by spell 9"),
@@ -95,7 +95,67 @@ def _data(held=False, excluded=None, shipped=None):
     for r in shipped:
         r["difficultyOrigin"] = "WIKI"
     cov = rr.coverage(shipped, excluded, 300)
-    return rr.profession_data(cov, held, shipped, excluded, FOREVER)
+    return rr.profession_data(cov, held, shipped, excluded, FOREVER, notes)
+
+
+NOTES = [("20", "Zeta", "wiki says vendor; price not in DB2 or wiki"),
+         ("5", "Recipe 5", "wiki row skill 80 differs from ITEM orange 55"),
+         ("5", "Recipe 5", "in-game trainer teaches it; DB2 also has teaching item 6004")]
+
+
+def test_notes_are_stored_sorted_and_stable(tmp_path):
+    path = rr.write_profession(tmp_path / "review", "Tailoring", _data(notes=NOTES))
+    first = path.read_bytes()
+    assert rr.load_profession(path)["notes"] == [
+        [5, "Recipe 5", "in-game trainer teaches it; DB2 also has teaching item 6004"],
+        [5, "Recipe 5", "wiki row skill 80 differs from ITEM orange 55"],
+        [20, "Zeta", "wiki says vendor; price not in DB2 or wiki"]]
+    rr.write_profession(tmp_path / "review", "Tailoring", _data(notes=list(reversed(NOTES))))
+    assert path.read_bytes() == first
+
+
+def test_render_lists_the_notes(tmp_path):
+    review = tmp_path / "review"
+    rr.write_profession(review, "Tailoring", _data(notes=NOTES))
+    rr.write_profession(review, "Alchemy", _data(excluded=[]))
+    md = rr.render(review, FOREVER)
+    tailoring = _section(md, "Tailoring")
+    assert "### Notes (3)\n\n- 5 Recipe 5: in-game trainer teaches it; DB2 also has " \
+           "teaching item 6004\n" in tailoring
+    assert "- 20 Zeta: wiki says vendor; price not in DB2 or wiki" in tailoring
+    assert "### Notes (0)\n\nnone" in _section(md, "Alchemy")
+
+
+def test_source_notes_reads_every_recipe():
+    sources = {"20": {"name": "Zeta", "forever": {"notes": ["b", "a"]}},
+               "5": {"name": "Recipe 5"}, "7": {"name": "Eta", "forever": {}}}
+    assert sorted(rr.source_notes(sources)) == [("20", "Zeta", "a"), ("20", "Zeta", "b")]
+    assert rr.source_notes(None) == []
+
+
+@pytest.mark.parametrize("bad", [{"notes": "one"}, {"notes": [1]}, {"notes": [""]}])
+def test_source_notes_refuses_a_malformed_list(bad):
+    with pytest.raises(ValueError) as e:
+        rr.source_notes({"20": {"name": "Zeta", "forever": bad}})
+    assert "20" in str(e.value)
+
+
+def test_review_file_without_notes_is_refused(tmp_path):
+    path = rr.write_profession(tmp_path / "review", "Tailoring", _data())
+    data = rr.load_profession(path)
+    del data["notes"]
+    path.write_text(__import__("json").dumps(data), encoding="utf-8")
+    with pytest.raises(ValueError, match="notes"):
+        rr.load_profession(path)
+
+
+def test_render_says_the_milestones_are_unconfirmed(tmp_path):
+    review = tmp_path / "review"
+    rr.write_profession(review, "Tailoring", _data())
+    line = "Milestones (75, 150, 225, 300) not yet confirmed in game."
+    assert line in rr.render(review, FOREVER)
+    verified = dataclasses.replace(FOREVER, milestones_verified=True)
+    assert "not yet confirmed" not in rr.render(review, verified)
 
 
 def test_write_profession_is_sorted_and_stable(tmp_path):

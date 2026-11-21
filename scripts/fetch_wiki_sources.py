@@ -21,7 +21,8 @@ Writes back into <sources>/<Folder>/<Prof>.json, atomically:
   MANUAL   -> a MANUAL source: the recipe is untouched (hand-verified state wins over any
               automatic value); a MANUAL difficulty alone: kept as is, only the source is
               resolved (or becomes a review, the difficulty still kept).
-Resolver notes go to "forever": {"notes": [...]} and are rewritten on every run. No PENDING
+Resolver notes go to "forever": {"notes": [...]} and are rewritten on every run; the
+generator lists them in the bucket's review files (REVIEW.md). No PENDING
 source survives this step, so the assert-no-pending gate after it passes by construction.
 
 Usage:
