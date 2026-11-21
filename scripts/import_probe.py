@@ -296,11 +296,13 @@ def ingame_facts(capture: "dict | None", spell_id: str, spell_name: str) -> "Ing
     recipes = capture.get("recipes") or {}
     # An empty recipe list means "not captured", not "nothing exists" (R8 would exclude all).
     present = (spell_id in recipes) if recipes else None
-    entry = (capture.get("trainer") or {}).get(normalize(spell_name))
+    key = normalize(spell_name)
+    entry = (capture.get("trainer") or {}).get(key)
     if entry is None:
         return IngameFacts(present=present, trainer_skill=None)
+    # The key goes along: spells of one name reach the same entry (trainer_ambiguities).
     return IngameFacts(present=present, trainer_skill=entry["skill"],
-                       trainer_cost=entry.get("cost"))
+                       trainer_cost=entry.get("cost"), trainer_key=key)
 
 
 def main(argv: "list[str] | None" = None) -> int:

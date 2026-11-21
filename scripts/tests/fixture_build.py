@@ -73,8 +73,11 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
                 extra_teaching: tuple[tuple[int, int], ...] = (),
                 extra_items: dict[int, tuple[str, int, int]] | None = None,
                 spell_totems: list[dict] | None = None,
-                totem_categories: list[dict] | None = None) -> Path:
+                totem_categories: list[dict] | None = None,
+                spell_names: dict[int, str] | None = None) -> Path:
     """extra_teaching: (spell, item) links appended after the regular ones, in order.
+    spell_names: spell id -> a SpellName replacing the fixture's (e.g. two spells sharing
+    one name, like an old and a revised recipe).
     extra_items: item id -> (name, RequiredSkill, RequiredSkillRank), extra ItemSparse
     rows (buy 100, sell 25, no faction) for the items extra_teaching links to.
     spell_totems / totem_categories (xitem only) replace the default tool rows: Fixture
@@ -95,7 +98,7 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
         sla.append({"ID": n, "SkillLine": 197, "Spell": spell,
                     "TrivialSkillLineRankLow": lo, "TrivialSkillLineRankHigh": hi})
         if sid not in omit_spell_names:
-            names.append({"ID": spell, "Name_lang": name})
+            names.append({"ID": spell, "Name_lang": (spell_names or {}).get(spell, name)})
         if creates is not None:
             effects.append({"ID": n, "SpellID": spell, "Effect": 24, "EffectItemType": creates})
         if regs:

@@ -268,6 +268,34 @@ def test_ingame_capture_decides_trainer_skill_and_absence(tmp_path):
     assert "forever" not in _recipes(src)["1001"]
 
 
+# --- an in-game trainer entry two spells share by name -------------------------------
+
+# 1002 renamed to 1001's name, like an old Classic spell next to its revised Forever one.
+SAME_NAME = {"spell_names": {1002: "Fixture Bolt"}}
+BOLT_TRAINER = {"fixture bolt": {"skill": 5, "cost": 10}}
+
+
+def test_trainer_entry_matching_two_spells_is_a_review_for_both(tmp_path):
+    art, src = write_forever_tree(tmp_path, **SAME_NAME)
+    _capture(src, [], BOLT_TRAINER)        # trainer only: no recipe list says which is in game
+    assert fw.main(forever_enrich_argv(art, src)) == 0
+    r = _recipes(src)
+    reason = "ambiguous: in-game trainer entry 'fixture bolt' matches spells 1001, 1002"
+    for sid in ("1001", "1002"):
+        assert r[sid]["source"]["reviewReason"] == reason, sid
+        assert "difficulty" not in r[sid]
+
+
+def test_trainer_entry_goes_to_the_spell_the_recipe_capture_keeps(tmp_path):
+    art, src = write_forever_tree(tmp_path, **SAME_NAME)
+    _capture(src, ["1001", "1003", "1004"], BOLT_TRAINER)    # 1002 is not in game
+    assert fw.main(forever_enrich_argv(art, src)) == 0
+    r = _recipes(src)
+    assert r["1001"]["source"] == {"type": "TRAINER", "certainty": "INGAME", "trainingCost": 10}
+    assert r["1002"]["source"]["reviewReason"] == \
+        "not in game: absent from the in-game recipe list"
+
+
 # One row reached by two spells: 1001 through its link target, 1002 through its display text.
 SHARED_ROW = FOREVER_WIKITEXT.replace("[[Fixture Bolt Item]]", "[[Fixture Bolt Item|Fixture Vest Item]]")
 SHARED_ROW = SHARED_ROW.replace("| [[Fixture Vest Item]] || 15 ||  || Old || Vendor\n|-\n", "")

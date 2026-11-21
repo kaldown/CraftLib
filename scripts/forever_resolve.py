@@ -58,10 +58,13 @@ class IngameFacts:
     captured. trainer_skill: the skill the in-game trainer asks for; None = the
     trainer list does not have it (or was not captured). trainer_cost: the copper price
     the trainer showed; None when the probe printed nil or there is no trainer entry.
+    trainer_key: the (normalized) name the trainer entry is filed under, None without one;
+    trainer_ambiguities groups spells by it.
     """
     present: "bool | None"
     trainer_skill: "int | None"
     trainer_cost: "int | None" = None
+    trainer_key: "str | None" = None
 
 
 @dataclass(frozen=True)
@@ -264,12 +267,38 @@ def match_wiki(facts: RecipeFacts, index, aliases, claims,
     return kept[0]
 
 
+def trainer_ambiguities(ingame: "dict[str, IngameFacts | None]") -> "dict[str, str]":
+    """spell id -> review reason for each spell whose in-game trainer entry another spell
+    of the profession also reaches.
+
+    WHY: the probe lists trainer entries by name only, and an old Classic spell and its
+    revised Forever spell share one (measured 66 same-name groups on 1.60.1.71037). Typing
+    both TRAINER with the trainer's skill would ship one entry's facts twice, once on a
+    spell the trainer may not teach. A spell a recipe capture marks absent does not count:
+    it is excluded as not in game, so the entry is the remaining spell's.
+    """
+    by_key: dict[str, list[str]] = {}
+    for sid, capture in ingame.items():
+        if capture is None or capture.trainer_skill is None or capture.present is False:
+            continue
+        by_key.setdefault(capture.trainer_key, []).append(sid)
+    out: dict[str, str] = {}
+    for key, spells in by_key.items():
+        if len(spells) < 2:
+            continue
+        ids = sorted(spells, key=int)
+        reason = f"ambiguous: in-game trainer entry '{key}' matches spells {', '.join(ids)}"
+        out.update(dict.fromkeys(ids, reason))
+    return out
+
+
 # --- resolution --------------------------------------------------------------------
 
 def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | None",
             cross_oranges: "Sequence[tuple[str, int]] | None",
             cross_trainer: "CrossTrainer | None" = None, *,
-            manual_difficulty: "dict | None" = None) -> Resolution:
+            manual_difficulty: "dict | None" = None,
+            trainer_review: "str | None" = None) -> Resolution:
     """Apply R8 (in game), R5 (skill-up), R1 (orange) then R2 + R12 (source), in that order.
 
     wiki is the match_wiki result. cross_oranges holds (bucket name, orange) per cross
@@ -277,7 +306,8 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
     gray equal that bucket's; the first one within 1..yellow is used. cross_trainer is
     the R12 evidence, already checked by the caller. manual_difficulty is a hand-aligned
     (certainty MANUAL) difficulty the recipe already has: R1 is skipped, it comes back
-    unchanged, and only the source is resolved.
+    unchanged, and only the source is resolved. trainer_review is the
+    trainer_ambiguities reason for this spell, if any.
     """
     # R8 first: a recipe the game does not have must not count toward coverage, so it
     # is reported as such whatever else is wrong with it.
@@ -288,6 +318,11 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
         reason = (NO_SKILL_UP if facts.yellow == facts.gray
                   else f"no skill-up: yellow {facts.yellow} above gray {facts.gray}")
         return Resolution(None, None, reason)
+    if trainer_review is not None:
+        # After the two checks above, so a recipe the game lacks or one without a skill-up
+        # keeps that reason; before every source rule, because the trainer entry would win
+        # them all for a spell it may not teach.
+        return Resolution(None, None, trainer_review)
     notes: list[str] = []
     row = wiki if isinstance(wiki, WikiRow) else None
     trainer_skill = ingame.trainer_skill if ingame is not None else None

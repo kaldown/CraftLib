@@ -42,7 +42,7 @@ import extract_db2_sources as extract
 from buckets import ENRICH_SCRIPTS, UnknownProfessionError, add_bucket_argument, get_bucket
 from db2 import CanaryError, ColumnContractError
 from forever_resolve import (CrossTrainer, RecipeFacts, Resolution, assign_owners,
-                             build_claims, match_wiki, resolve)
+                             build_claims, match_wiki, resolve, trainer_ambiguities)
 from import_probe import ingame_facts
 from pipeline_io import atomic_write_json, load_json
 # The summary groups reviews exactly as REVIEW.md does, so the two counts agree.
@@ -347,6 +347,8 @@ def enrich(doc: dict, bucket, profession, indexes: dict, rows, aliases: dict,
     claims = build_claims(list(facts.values()), index, ingame=ingame)
     # A shared row goes to the claimant whose teaching-item rank equals its skill.
     owners = assign_owners(list(facts.values()), index, claims, aliases)
+    # A trainer entry that several spells reach by name decides none of them.
+    trainer_reviews = trainer_ambiguities(ingame)
 
     summary = Summary(recipes=len(recipes))
     for sid, recipe in recipes.items():
@@ -366,7 +368,8 @@ def enrich(doc: dict, bucket, profession, indexes: dict, rows, aliases: dict,
             # recipe whose source is MANUAL too was skipped above, untouched).
             difficulty = recipe.get("difficulty") or {}
             manual = difficulty if difficulty.get("certainty") == "MANUAL" else None
-            res = resolve(f, match, ingame[sid], oranges, trainer, manual_difficulty=manual)
+            res = resolve(f, match, ingame[sid], oranges, trainer, manual_difficulty=manual,
+                          trainer_review=trainer_reviews.get(sid))
         apply_resolution(recipe, res, f)
         if res.review is None:
             # A MANUAL difficulty carries no orangeFrom; it counts under its certainty.

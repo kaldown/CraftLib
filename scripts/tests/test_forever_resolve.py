@@ -2,7 +2,8 @@
 import pytest
 
 from forever_resolve import (CrossTrainer, IngameFacts, RecipeFacts, Resolution,
-                             assign_owners, build_claims, match_wiki, resolve)
+                             assign_owners, build_claims, match_wiki, resolve,
+                             trainer_ambiguities)
 from wiki import UNRECOGNISED_COST, WikiRow, index_rows
 
 FAVOR = "Merchant's Favor"
@@ -254,6 +255,33 @@ def test_trainer_cost_needs_the_in_game_trainer_to_decide():
     res = resolve(facts(), row("TRAINER", skill=40),
                   IngameFacts(present=True, trainer_skill=None, trainer_cost=250), None)
     assert res.source == {"type": "TRAINER", "certainty": "WIKI"}
+
+
+def _trained(present, key="linen cloak"):
+    return IngameFacts(present=present, trainer_skill=40, trainer_key=key)
+
+
+def test_trainer_entry_reaching_two_spells_is_ambiguous_for_both():
+    ingame = {"439128": _trained(None), "3496": _trained(True), "2000": _trained(None, "x"),
+              "2001": IngameFacts(present=None, trainer_skill=None), "2002": None}
+    reason = "ambiguous: in-game trainer entry 'linen cloak' matches spells 3496, 439128"
+    assert trainer_ambiguities(ingame) == {"3496": reason, "439128": reason}
+
+
+def test_trainer_entry_ignores_a_spell_the_capture_marks_absent():
+    assert trainer_ambiguities({"3496": _trained(False), "439128": _trained(True)}) == {}
+
+
+def test_ambiguous_trainer_entry_is_a_review_after_the_in_game_and_skill_up_checks():
+    reason = "ambiguous: in-game trainer entry 'linen cloak' matches spells 3496, 439128"
+    res = resolve(facts(), row("TRAINER", skill=40), _trained(None), None,
+                  trainer_review=reason)
+    assert (res.review, res.source) == (reason, None)
+    # A recipe the game lacks, or one without a skill-up, keeps that reason.
+    assert resolve(facts(), row(), _trained(False), None, trainer_review=reason).review == \
+        "not in game: absent from the in-game recipe list"
+    assert resolve(facts(yellow=135), row(), _trained(None), None,
+                   trainer_review=reason).review == "no skill-up: yellow == gray"
 
 
 def test_ingame_trainer_decides_an_unmatched_recipe():
