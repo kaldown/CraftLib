@@ -788,7 +788,10 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
     lines = [
         f"-- Data/{exp_name}/{prof_name.replace(' ', '')}/Recipes.lua",
         f"-- {prof_name} recipes for {exp_name} Classic",
-        f"-- Generated from DB2 data",
+        # A wiki-enriched bucket takes sources and some learn skills from the wiki tables;
+        # the Classic headers stay as they are (byte-for-byte baseline).
+        "-- Generated from DB2 data and the Warcraft Wiki recipe tables"
+        if bucket.enrich == "wiki" else "-- Generated from DB2 data",
         "local ADDON_NAME, CraftLib = ...",
         "local C = CraftLib.Constants",
         "",

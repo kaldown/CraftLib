@@ -176,6 +176,18 @@ def _counts(counter: dict) -> str:
     return ", ".join(f"{k} {counter[k]}" for k in sorted(counter)) or "none"
 
 
+def _held_back_reason(cov: dict, bucket) -> str:
+    """The gate's own wording for why a held-back profession fails (or that it passes)."""
+    # WHY the share from the counts: the stored share is rounded to 4 digits, and
+    # gate_failures prints 3, so reusing it would round twice.
+    failures = gate_failures(Coverage(
+        shipped=cov["shipped"], in_game=cov["inGame"],
+        share=cov["shipped"] / cov["inGame"] if cov["inGame"] else 0.0,
+        known_source=cov["knownSource"], max_gap=cov["maxGap"],
+        gap=tuple(cov["gap"]) if cov["gap"] else None), bucket)
+    return "; ".join(failures) or "passes the coverage gate; remove it from held_back to ship it"
+
+
 def render(review_dir: Path, bucket) -> str:
     """REVIEW.md for the bucket, from every review/<Prof>.json present (registry order)."""
     review_dir = Path(review_dir)
@@ -222,8 +234,10 @@ def render(review_dir: Path, bucket) -> str:
         out += ["", f"Not generated yet: {', '.join(missing)}."]
 
     for prof, data in profs:
-        out += ["", f"## {prof}", "",
-                f"Orange from: {_counts(data['orangeFrom'])}. "
+        out += ["", f"## {prof}", ""]
+        if data["heldBack"]:
+            out += [f"Held back (not shipped): {_held_back_reason(data['coverage'], bucket)}.", ""]
+        out += [f"Orange from: {_counts(data['orangeFrom'])}. "
                 f"Sources: {_counts(data['sourceTypes'])}.",
                 "", f"Excluded: {len(data['excluded'])}."]
         groups: dict[str, list] = {}

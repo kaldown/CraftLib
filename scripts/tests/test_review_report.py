@@ -172,3 +172,34 @@ def test_render_formats_the_share_from_the_counts(tmp_path):
                         rr.profession_data(cov, False, [], [], FOREVER))
     assert "| Tailoring | 373 | 429 | 86.9% | 86.9% | 0 | no |" in rr.render(tmp_path / "review",
                                                                            FOREVER)
+
+
+def _section(md: str, prof: str) -> str:
+    start = md.index(f"## {prof}\n")
+    end = md.find("\n## ", start + 1)
+    return md[start:] if end == -1 else md[start:end]
+
+
+def test_render_states_why_a_profession_is_held_back(tmp_path):
+    review = tmp_path / "review"
+    # 2 of 5 in game: below the 0.75 floor.
+    rr.write_profession(review, "Tailoring", _data(held=True))
+    # Shipped only from skill 30: points 1-29 have no recipe.
+    rr.write_profession(review, "Mining", _data(held=True, excluded=[],
+                                                 shipped=[_r(5, 30, 300)]))
+    md = rr.render(review, FOREVER)
+    assert _section(md, "Tailoring").startswith(
+        "## Tailoring\n\nHeld back (not shipped): share 0.400 (2 of 5 in game) below the "
+        "floor 0.75.\n")
+    assert _section(md, "Mining").startswith(
+        "## Mining\n\nHeld back (not shipped): largest gap 29 skill points (1-29) above the "
+        "maximum 10.\n")
+
+
+def test_render_held_back_but_passing_says_so(tmp_path):
+    review = tmp_path / "review"
+    rr.write_profession(review, "Alchemy", _data(held=True, excluded=[]))
+    rr.write_profession(review, "Tailoring", _data())
+    md = rr.render(review, FOREVER)
+    assert "Held back (not shipped): passes the coverage gate" in _section(md, "Alchemy")
+    assert "Held back" not in _section(md, "Tailoring")

@@ -155,6 +155,16 @@ def test_trainer_npc_name_is_escaped():
     assert 'npcName = "Old \\"Bob\\" \\\\ Smith",' in src
 
 
+def test_forever_header_names_the_wiki():
+    assert "-- Generated from DB2 data and the Warcraft Wiki recipe tables\n" in _lua(
+        {"type": "TRAINER", "certainty": "WIKI"})
+
+
+def test_classic_header_is_unchanged():
+    lua = _lua({"type": "TRAINER", "certainty": "WOWHEAD"}, bucket="tbc")
+    assert "-- Generated from DB2 data\nlocal ADDON_NAME" in lua
+
+
 def test_classic_trainer_lines_are_unchanged():
     lua = _lua({"type": "TRAINER", "certainty": "WOWHEAD", "trainingCost": 50}, bucket="tbc")
     assert ('            type = C.SOURCE_TYPE.TRAINER,\n'
