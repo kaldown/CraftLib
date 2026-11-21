@@ -5,6 +5,7 @@ Only facts (skill, source kind, cost) are extracted; no wiki prose is stored.
 import json
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
@@ -36,8 +37,12 @@ def fetch_wikitext(title, cache_dir, *, offline=False,
         "format": "json", "redirects": 1,
     })
     req = urllib.request.Request(f"{API_URL}?{query}", headers={"User-Agent": USER_AGENT})
-    with opener(req, timeout=60) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
+    try:
+        with opener(req, timeout=60) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    # URLError covers HTTPError; ValueError covers bad JSON/UTF-8; OSError timeouts.
+    except (urllib.error.URLError, OSError, ValueError) as exc:
+        raise WikiError(f"fetching {title!r} failed: {exc}") from exc
     if "error" in data:
         raise WikiError(f"wiki error for {title!r}: {data['error'].get('code')}")
     try:
@@ -153,8 +158,11 @@ def parse_rows(wikitext):
         if not cols or not s.startswith("|") or s[:2] in ("|-", "|+", "|}"):
             continue
         cells = [c.strip() for c in s[1:].split("||")]
-        if len(cells) <= max(cols.values()):
-            continue
+        # A row may omit trailing cells (the wiki drops an empty Source): pad so
+        # it is kept as UNKNOWN rather than silently lost.
+        cells += [""] * (max(cols.values()) + 1 - len(cells))
+        if not cells[cols["item"]]:
+            raise WikiError(f"line {line_no}: table row has no Item cell: {s!r}")
         key, display = _link_parts(cells[cols["item"]])
         source = cells[cols["source"]]
         kind, currency, rep = classify_source(source)

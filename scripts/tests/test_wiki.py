@@ -121,3 +121,33 @@ def test_fetch_success_writes_cache_and_sleeps(tmp_path):
     assert slept == [3.0]
     assert seen[0].get_header("User-agent") == "data-pipeline/1.0"
     assert "action=parse" in seen[0].full_url and "redirects=1" in seen[0].full_url
+
+
+def test_short_row_is_kept_as_unknown():
+    wt = ("{|\n! Item !! Skill !! Type !! Source\n|-\n"
+          "| [[Enchant Cloak - Stealth]] || 300 ||  || Old\n"
+          "|-\n| [[Short One]] || 5\n|}\n")
+    rows = parse_rows(wt)
+    assert [r.key for r in rows] == ["enchant cloak - stealth", "short one"]
+    assert rows[1].kind == "UNKNOWN" and rows[1].skill == 5
+
+
+def test_row_without_item_cell_raises():
+    with pytest.raises(WikiError, match="no Item"):
+        parse_rows("{|\n! Item !! Skill !! Source\n|-\n|\n|}\n")
+
+
+@pytest.mark.parametrize("body", [b"not json", b'{"parse": {}}'])
+def test_fetch_bad_payload_is_wiki_error(tmp_path, body):
+    with pytest.raises(WikiError, match="Page T"):
+        fetch_wikitext("Page T", tmp_path, opener=lambda r, **k: FakeResp(body),
+                       sleep=lambda s: None)
+
+
+def test_fetch_transport_error_is_wiki_error(tmp_path):
+    import urllib.error
+
+    def op(req, **k):
+        raise urllib.error.URLError("boom")
+    with pytest.raises(WikiError, match="Page T"):
+        fetch_wikitext("Page T", tmp_path, opener=op, sleep=lambda s: None)
