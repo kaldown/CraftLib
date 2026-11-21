@@ -21,7 +21,7 @@ end
 | Function | Returns | Description |
 |----------|---------|-------------|
 | `CraftLib:IsReady()` | boolean | Check if CraftLib has loaded data; always `false` on an unsupported client |
-| `CraftLib:GetActiveProfile()` | string/nil | `"VANILLA"`, `"TBC"`, `"WOTLK"` or `"SOD"`; `nil` on an unsupported client |
+| `CraftLib:GetActiveProfile()` | string/nil | `"VANILLA"`, `"TBC"`, `"WOTLK"`, `"SOD"` or `"FOREVER"`; `nil` on an unsupported client |
 | `CraftLib:GetActiveFlavor()` | string/nil | Back-compat `"DEFAULT"` or `"SOD"`; `nil` on an unsupported client |
 | `CraftLib:GetProfessions()` | table | All registered professions |
 | `CraftLib:GetProfession(key)` | table/nil | Single profession by key |
@@ -188,7 +188,7 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
 ```lua
 {
     type = "unknown",
-    itemId = 12345,                   -- Teaching item ID (optional)
+    itemId = 12345,                   -- Teaching item ID (always present)
 }
 ```
 The source is not established. The recipe is usable only when learned, owned or bought; it is a

@@ -20,7 +20,7 @@ Comprehensive crafting recipe database and API for World of Warcraft addon devel
 ## Features
 
 - Complete recipe data with skill levels, reagents, and difficulty thresholds
-- Source information for every recipe (trainers, vendors, quests, drops, reputation, discovery)
+- Source information for every recipe (trainers, vendors, quests, drops, reputation, discovery), or on WoW Forever an `unknown` marker where no source is established yet
 - Fast lookups by spell ID or crafted item ID
 - Skill-based filtering and difficulty calculation
 - Per-expansion data: one install serves Classic Era / Vanilla, Season of Discovery, The Burning Crusade, Wrath of the Lich King, and WoW Forever - it detects the running client and loads the matching recipe set automatically
@@ -37,7 +37,7 @@ CraftLib bundles a separate, cumulative recipe set for each Classic-family clien
 | Wrath of the Lich King Classic | 11 (+ Inscription) | 450 |
 | WoW Forever (1.60) | 7 (Engineering and Mining pending in-game confirmation) | 300 |
 
-Professions: Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring, Cooking, First Aid, Mining - plus Jewelcrafting (TBC and later) and Inscription (WotLK). Every recipe carries Wowhead-verified difficulty thresholds and a real acquisition source.
+Professions: Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring, Cooking, First Aid, Mining - plus Jewelcrafting (TBC and later) and Inscription (WotLK). On the Classic clients every recipe carries Wowhead-verified difficulty thresholds and an acquisition source from the game data or Wowhead. The WoW Forever data is built without Wowhead: its thresholds come from the game data, the Classic data for recipes that did not change, the Warcraft Wiki and in-game captures, and 295 of its 1,767 recipes carry the `unknown` source marker because no source could be established yet.
 
 ## Usage
 
@@ -136,15 +136,17 @@ The Forever bucket differs from the Classic ones: its recipe facts come from the
 
 - **Wiki pages**: `scripts/fetch_wiki_sources.py` reads one wiki page per profession through `api.php?action=parse`, waits at least 3 seconds between fetches, and caches the result in `Data/Sources/Forever/.wiki_cache/` (not tracked). Only facts are stored.
 - **Aliases**: `Data/Sources/Forever/wiki_aliases.json` maps a spell id to the wiki row it should use when names differ or a row is ambiguous.
-- **In-game captures**: the `/lpprobe` report from the client is saved to a file and imported with `python3 scripts/import_probe.py --bucket forever --input <file>`; it writes tracked `Data/Sources/Forever/ingame/<Profession>.json` (recipe list, trainer learn skills), `Merchants.json` and `Currencies.json`. An in-game fact outranks the wiki, and a recipe absent from a captured recipe list is excluded as not in game.
-- **Review**: `Data/Sources/Forever/review/` and `Data/Sources/Forever/REVIEW.md` are generated; they list every excluded recipe with its reason and the per-profession coverage table. Do not edit them by hand.
+- **In-game captures**: the `/lpprobe` report from the client is saved to a file and imported with `python3 scripts/import_probe.py --bucket forever --input <file>`; it writes tracked `Data/Sources/Forever/ingame/<Profession>.json` (recipe list, trainer learn skills and prices), `Merchants.json` and `Currencies.json`. An in-game fact outranks the wiki, and a recipe absent from a captured recipe list is excluded as not in game. Trainer entries are matched by spell name: when several spells of a profession share the name (an old recipe next to its revised one), the entry decides none of them and each becomes a review, unless the recipe list marks the others as not in game. A recipe list whose profession is not one of the bucket's is refused (exit 2).
+- **Review**: `Data/Sources/Forever/review/` and `Data/Sources/Forever/REVIEW.md` are generated; they list every excluded recipe with its reason, the per-profession coverage table, and the notes the resolver kept on shipped and excluded recipes (an in-game fact that disagrees with the wiki, a vendor price neither the game data nor the wiki has, a wiki row whose skill differs from the chosen orange). Do not edit them by hand.
 - **Coverage gate and held_back**: a profession ships only when at least 75% of its in-game skill-up recipes are shipped and no run of more than 10 skill points in 1-299 is left uncovered. A profession that fails is listed in `held_back` in `scripts/buckets.py`; it is not written and not in `CraftLib.toc`. Engineering and Mining are held back at the moment; an in-game capture of their trainers and recipe lists releases them (remove the name from `held_back`, regenerate, add the files to the TOC).
 - **Orange threshold precedence**: in-game trainer capture, then the teaching item's required skill, then the Vanilla/SoD bucket's verified value (only when yellow and gray agree), then the wiki skill; a recipe with none of these is excluded rather than guessed.
 
 ### Data Sources
 
-- **DB2 Tables:** Spell, SpellName, SpellEffect, SpellReagents, Item, ItemSparse, SkillLine, SkillLineAbility, ItemEffect, Faction
-- **Wowhead:** Source verification (VENDOR vs DROP) and difficulty thresholds
+- **DB2 Tables:** SpellName, SpellEffect, SpellReagents, ItemSparse, SkillLine, SkillLineAbility, ItemEffect, Faction; for WoW Forever also ItemXItemEffect (teaching items) and SpellTotems / TotemCategory (required tools)
+- **Wowhead:** Source verification (VENDOR vs DROP) and difficulty thresholds for the Classic clients
+- **Warcraft Wiki:** the WoW Forever per-profession recipe tables (acquisition source, learn skill, Merchant's Favor prices), read through the wiki API and cached locally
+- **In-game captures:** WoW Forever trainer and recipe lists from the `/lpprobe` report (none imported yet)
 - **Fetcher:** [db2-parser](https://github.com/kaldown/db2-parser) submodule
 
 ## Addons Using CraftLib
@@ -159,7 +161,7 @@ One install serves every live Classic-family client - CraftLib detects which one
 - Season of Discovery
 - The Burning Crusade Classic
 - Wrath of the Lich King Classic - including the Titan (3.80) seasonal WotLK client
-- WoW Forever (1.60) - 1,767 recipes across seven professions; about 70% have an established source, the rest carry the `unknown` source marker
+- WoW Forever (1.60) - 1,767 recipes across seven professions; 1,472 (83%) have an established source, the other 295 (17%) carry the `unknown` source marker
 
 Hardcore runs on the Classic Era client and is covered by the Vanilla data.
 
