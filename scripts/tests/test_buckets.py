@@ -144,3 +144,12 @@ def test_existing_buckets_keep_defaults():
         assert b.item_effect_join == "parent" and b.review_policy == "raise"
         assert not b.allow_unknown_source and b.shipped
         assert not b.has_tools and b.held_back == () and not b.wiki_pages
+
+
+def test_registry_rejects_wiki_pages_for_professions_outside_the_bucket():
+    # A page for a profession the bucket does not have is never fetched: a typo or a stale entry.
+    forever = get_bucket("forever")
+    bad = dataclasses.replace(forever, wiki_pages={**forever.wiki_pages,
+                                                   "Jewelcrafting": "Forever jewelcrafting"})
+    with pytest.raises(RegistryError, match="Jewelcrafting"):
+        _validate_registry({"forever": bad, "vanilla": get_bucket("vanilla")})

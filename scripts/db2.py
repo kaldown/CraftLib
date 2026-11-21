@@ -155,9 +155,11 @@ def teaching_skill_lines(build_dir: Path, bucket, skill_line_abilities: Iterable
 
 # Names DB2 gives retired or test items that still link to a live spell (measured on
 # 1.60.1.71037, e.g. "Pattern: Double-stitched Leather Gloves OLD" for Guardian Cloak,
-# "Deprecated Recipe: Elixir of Fortitude"). Case-sensitive on purpose: "Old"/"Bold"
-# and "Testament" are ordinary words in real item names.
-PLACEHOLDER_NAME = re.compile(r"\bOLD\b|\(OLD\)|\[PH\]|[Dd]eprecated|DEPRECATED|\bTEST\b|zzOLD")
+# "Deprecated Recipe: Elixir of Fortitude"; 21 items there carry UNUSED, e.g.
+# "UNUSED ITEM", "[UNUSED] Letter Cookie"). Case-sensitive on purpose: "Old"/"Bold",
+# "Testament" and "Unused" are ordinary words in real item names.
+PLACEHOLDER_NAME = re.compile(
+    r"\bOLD\b|\(OLD\)|\[PH\]|[Dd]eprecated|DEPRECATED|\bTEST\b|zzOLD|\bUNUSED\b")
 
 
 def _item_field(item_id: str, row: dict, column: str) -> str:

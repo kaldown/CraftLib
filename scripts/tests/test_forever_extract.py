@@ -47,6 +47,9 @@ def test_extract_main_forever_fixture(tmp_path, capsys):
     err = capsys.readouterr().err
     assert "fetch_wiki_sources.py --bucket forever --profession Tailoring" in err
     assert "fetch_wowhead_sources.py" not in err
+    # Every DB2 source of a wiki bucket is provisional, TRAINER/DB2 included, not only PENDING.
+    assert "All 4 sources are provisional until the wiki step resolves them" in err
+    assert "need wiki verification" not in err
 
 
 def test_enrich_hint_names_the_bucket_enrich_step():

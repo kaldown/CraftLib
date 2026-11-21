@@ -53,7 +53,14 @@ PROFESSIONS: dict[str, Profession] = {
 INHERIT_TYPES = {"DROP", "VENDOR", "QUEST", "REPUTATION", "STARTER", "DISCOVERY"}  # STARTER/DISCOVERY are structural (no cost/itemId; corroboration-exempt)
 INHERIT_CERTAINTY = {"WOWHEAD", "MANUAL", "DB2"}               # WOWHEAD + hand-verified MANUAL + DB2
 
-_ENRICH = {"wowhead-listview", "wowhead-per-spell", "wiki"}
+# Enrich mode -> the stage script that runs it. One table so the pipeline's enrich step
+# and extract's next-step hint cannot name different tools for the same bucket.
+ENRICH_SCRIPTS: Mapping[str, str] = MappingProxyType({
+    "wowhead-listview": "fetch_wowhead_sources",
+    "wowhead-per-spell": "fetch_wowhead_sources",
+    "wiki": "fetch_wiki_sources",
+})
+_ENRICH = frozenset(ENRICH_SCRIPTS)
 _VENDOR_SCOPES = {"SOD", "DEFAULT", "FOREVER"}
 _EXPANSIONS = {"VANILLA", "TBC", "WOTLK", "CATA", "MOP", "SOD", "FOREVER"}
 
@@ -254,6 +261,10 @@ def _validate_registry(buckets: Mapping[str, Bucket]) -> None:
             missing = [p for p in b.professions if p not in b.wiki_pages]
             if missing:
                 bad(f"enrich 'wiki' but wiki_pages lacks professions {missing}")
+        # A page for a profession the bucket lacks is never fetched: a typo or a stale entry.
+        stray_pages = [p for p in b.wiki_pages if p not in b.professions]
+        if stray_pages:
+            bad(f"wiki_pages names professions not in the bucket: {stray_pages}")
         if b.cross_orange_bucket is not None and (
                 b.cross_orange_bucket not in buckets or b.cross_orange_bucket == k):
             bad(f"invalid cross_orange_bucket '{b.cross_orange_bucket}'")

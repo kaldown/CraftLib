@@ -253,15 +253,18 @@ def test_choose_xitem_ignores_item_of_another_profession():
 @pytest.mark.parametrize("name", [
     "Deprecated Recipe: Elixir of Fortitude", "DEPRECATED Plans: X", "deprecated thing",
     "Pattern: Double-stitched Leather Gloves OLD", "Pattern: Gloves (OLD)",
-    "[PH] Recipe: X", "TEST Pattern", "zzOLDPattern: X"])
+    "[PH] Recipe: X", "TEST Pattern", "zzOLDPattern: X",
+    # Measured on 1.60.1.71037: "UNUSED ITEM", "[UNUSED] Letter Cookie", "UNUSED - Cloak ...".
+    "UNUSED ITEM", "[UNUSED] Pattern: X", "Pattern: Cloak UNUSED", "UNUSED - Pattern: X"])
 def test_choose_xitem_only_placeholder_returns_none(name):
     assert _choose(["7001"], {"7001": _item(50, "197", name)}) is None
 
 
 @pytest.mark.parametrize("name", ["Recipe: Old Blanchy Feast", "Pattern: Bold Cloak",
-                                  "Plans: Testament Helm"])
+                                  "Plans: Testament Helm", "Pattern: Unused Cloak",
+                                  "Pattern: UNUSEDCLOAK"])
 def test_choose_xitem_placeholder_regex_needs_whole_markers(name):
-    # "Old"/"Bold"/"Testament" are real words in item names, not placeholder markers.
+    # "Old"/"Bold"/"Testament"/"Unused" are real words in item names, not placeholder markers.
     assert _choose(["7001"], {"7001": _item(50, "197", name)}) == "7001"
 
 

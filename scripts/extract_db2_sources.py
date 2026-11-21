@@ -10,6 +10,11 @@ Identifies sources with certainty from DB2:
 Marks uncertain sources as PENDING for Wowhead verification:
 - Recipe item exists with BuyPrice > 0 (could be VENDOR or DROP)
 
+On a wiki-enriched bucket (Forever, registry enrich="wiki") every source written here is
+provisional, DB2 certainty included: TRAINER/DB2 only means "no teaching item in DB2".
+The wiki step (fetch_wiki_sources.py) re-resolves each recipe's source and learn skill
+from DB2 facts, the wiki row and the in-game capture, and replaces these sources.
+
 Usage:
     python extract_db2_sources.py --bucket tbc --profession FirstAid
 """
@@ -21,7 +26,8 @@ from datetime import date
 from pathlib import Path
 
 import db2
-from buckets import PROFESSIONS, Profession, UnknownProfessionError, add_bucket_argument, get_bucket
+from buckets import (ENRICH_SCRIPTS, PROFESSIONS, Profession, UnknownProfessionError,
+                     add_bucket_argument, get_bucket)
 from db2 import CanaryError, ColumnContractError, REQUIRED_COLUMNS, load_csv_checked, load_table
 from pipeline_io import atomic_write_json, load_json
 
@@ -304,11 +310,11 @@ def extract_profession_sources(
 
 
 def enrich_hint(bucket, profession: Profession) -> str:
-    """The command that resolves this bucket's PENDING sources next."""
-    # WHY per bucket: Forever is enriched from the wiki, not Wowhead; a fixed hint
-    # sent Forever runs to the wrong tool.
-    script = "fetch_wiki_sources.py" if bucket.enrich == "wiki" else "fetch_wowhead_sources.py"
-    return f"python scripts/{script} --bucket {bucket.key} --profession {profession.folder}"
+    """The command that runs this bucket's enrich step next."""
+    # WHY the registry table: Forever is enriched from the wiki, not Wowhead; a fixed hint
+    # sent Forever runs to the wrong tool, and a second copy of the rule could drift.
+    script = ENRICH_SCRIPTS[bucket.enrich]
+    return f"python scripts/{script}.py --bucket {bucket.key} --profession {profession.folder}"
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -383,9 +389,14 @@ def main(argv: list[str] | None = None) -> int:
     for cert in ("DB2", "WOWHEAD", "PENDING"):
         print(f"  {cert + ':':<14} {certainty_counts.get(cert, 0)}", file=sys.stderr)
 
-    if certainty_counts.get("PENDING", 0) > 0:
-        where = "wiki" if bucket.enrich == "wiki" else "Wowhead"
-        print(f"\n{certainty_counts['PENDING']} recipes need {where} verification.", file=sys.stderr)
+    if bucket.enrich == "wiki":
+        # WHY all of them, not the PENDING count: the wiki step replaces every DB2 source
+        # of this bucket, so the DB2 line above is not a count of settled recipes.
+        print(f"\nAll {len(sources['recipes'])} sources are provisional until the wiki step "
+              f"resolves them.", file=sys.stderr)
+        print(f"Run: {enrich_hint(bucket, profession)}", file=sys.stderr)
+    elif certainty_counts.get("PENDING", 0) > 0:
+        print(f"\n{certainty_counts['PENDING']} recipes need Wowhead verification.", file=sys.stderr)
         print(f"Run: {enrich_hint(bucket, profession)}", file=sys.stderr)
 
     return 0

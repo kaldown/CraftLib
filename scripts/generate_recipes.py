@@ -224,7 +224,8 @@ def emit_vendor_prices(item_details: dict, bucket, output_dir: Path, allowlist_p
 def load_all_data(data_dir: Path, bucket) -> dict:
     """Load the DB2 tables the generator reads, through the column contract.
 
-    Spell/Item/SkillLine are not loaded: they were never read.
+    Spell and Item are not loaded: they were never read. SkillLine is read only on the
+    xitem teaching join (db2.teaching_skill_lines, below), never as a table of its own.
     """
     print(f"Loading data from {data_dir}...", file=sys.stderr)
     data = {}
