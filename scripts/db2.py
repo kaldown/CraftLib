@@ -10,6 +10,7 @@ Two silent-corruption modes this guards against:
     reagent / teaching-item link and fail below a per-bucket floor.
 """
 import csv
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Container, Iterable, Sequence
@@ -25,8 +26,8 @@ class CanaryError(RuntimeError):
 
 # Union of what extract_db2_sources.py and generate_recipes.py read. Tables the
 # DB2 dump keys by ID list it explicitly; the others are read by their join column.
-# Not every bucket reads every table (see bucket_tables): ItemXItemEffect only for
-# the "xitem" teaching join, SpellTotems/TotemCategory only for has_tools buckets.
+# Not every bucket reads every table (see bucket_tables): ItemXItemEffect and SkillLine
+# only for the "xitem" teaching join, SpellTotems/TotemCategory only for has_tools buckets.
 REQUIRED_COLUMNS: dict[str, tuple[str, ...]] = {
     "SkillLineAbility": ("SkillLine", "Spell", "TrivialSkillLineRankLow", "TrivialSkillLineRankHigh"),
     "SpellReagents": ("SpellID",
@@ -39,6 +40,7 @@ REQUIRED_COLUMNS: dict[str, tuple[str, ...]] = {
                    "MinReputation", "VendorStackCount"),
     "SpellName": ("ID", "Name_lang"),
     "Faction": ("ID", "Name_lang"),
+    "SkillLine": ("ID", "ParentSkillLineID"),
     "SpellTotems": ("SpellID", "RequiredTotemCategoryID_0", "RequiredTotemCategoryID_1",
                     "Totem_0", "Totem_1"),
     "TotemCategory": ("ID", "Name_lang"),
@@ -55,7 +57,8 @@ def bucket_tables(bucket) -> tuple[str, ...]:
     """
     tables = list(_BASE_TABLES)
     if bucket.item_effect_join == "xitem":
-        tables.append("ItemXItemEffect")
+        # SkillLine stays out of the Classic paths: only the xitem choice reads it.
+        tables += ["ItemXItemEffect", "SkillLine"]
     if bucket.has_tools:
         tables += ["SpellTotems", "TotemCategory"]
     return tuple(tables)
@@ -126,17 +129,61 @@ def teaching_items(build_dir: Path, bucket) -> dict[str, list[str]]:
     raise ValueError(f"bucket '{bucket.key}': unknown item_effect_join '{bucket.item_effect_join}'")
 
 
+def teaching_skill_lines(build_dir: Path, bucket, skill_line_abilities: Iterable[dict],
+                         profession_lines: Iterable) -> dict[str, frozenset[str]]:
+    """spell id -> the skill lines its teaching item may require (the xitem choice only).
+
+    For each SkillLineAbility row on one of profession_lines: that line plus every
+    SkillLine whose ParentSkillLineID is that line (Forever gives each profession one
+    child line, e.g. First Aid 129 -> 2942, which its manuals require).
+    """
+    if bucket.item_effect_join != "xitem":
+        # WHY {} without reading SkillLine: the parent choice ignores skill lines, and
+        # the Classic paths must not start depending on another table.
+        return {}
+    roots = {str(line) for line in profession_lines}
+    allowed = {line: {line} for line in roots}
+    for row in load_table(build_dir, "SkillLine", bucket):
+        if row["ParentSkillLineID"] in allowed:
+            allowed[row["ParentSkillLineID"]].add(row["ID"])
+    out: dict[str, set[str]] = {}
+    for row in skill_line_abilities:
+        if row["SkillLine"] in allowed and _is_id(row["Spell"]):
+            out.setdefault(row["Spell"], set()).update(allowed[row["SkillLine"]])
+    return {spell: frozenset(lines) for spell, lines in out.items()}
+
+
+# Names DB2 gives retired or test items that still link to a live spell (measured on
+# 1.60.1.71037, e.g. "Pattern: Double-stitched Leather Gloves OLD" for Guardian Cloak,
+# "Deprecated Recipe: Elixir of Fortitude"). Case-sensitive on purpose: "Old"/"Bold"
+# and "Testament" are ordinary words in real item names.
+PLACEHOLDER_NAME = re.compile(r"\bOLD\b|\(OLD\)|\[PH\]|[Dd]eprecated|DEPRECATED|\bTEST\b|zzOLD")
+
+
+def _item_field(item_id: str, row: dict, column: str) -> str:
+    value = row.get(column)
+    if value is None or value == "":
+        # Fail loud: a choice made on a guessed value picks a wrong teaching item silently.
+        raise ValueError(f"teaching item {item_id}: {column} missing")
+    return value
+
+
 def _required_skill_rank(item_id: str, row: dict) -> int:
+    value = _item_field(item_id, row, "RequiredSkillRank")
     try:
-        return int(row["RequiredSkillRank"])
-    except (KeyError, TypeError, ValueError):
-        # Fail loud: ranking on a guessed rank would pick a wrong teaching item silently.
-        raise ValueError(f"teaching item {item_id}: RequiredSkillRank missing or not a number "
-                         f"({row.get('RequiredSkillRank')!r})") from None
+        return int(value)
+    except ValueError:
+        raise ValueError(f"teaching item {item_id}: RequiredSkillRank is not a number "
+                         f"({value!r})") from None
 
 
-def choose_teaching_item(bucket, candidates: list[str], item_details: dict[str, dict]) -> str | None:
-    """Pick the one teaching item of a spell; only candidates in item_details count."""
+def choose_teaching_item(bucket, candidates: list[str], item_details: dict[str, dict],
+                         skill_lines: Container[str]) -> str | None:
+    """Pick the one teaching item of a spell; only candidates in item_details count.
+
+    skill_lines (xitem only) holds the lines a teaching item of this spell may require,
+    see teaching_skill_lines; the parent rule ignores it.
+    """
     present = [c for c in candidates if c in item_details]
     if not present:
         return None
@@ -147,12 +194,20 @@ def choose_teaching_item(bucket, candidates: list[str], item_details: dict[str, 
         # Classic sources outside this plan.
         return present[-1]
     if bucket.item_effect_join == "xitem":
-        # WHY the lowest positive RequiredSkillRank (plan ruling R1): on 1.60.1.71037,
-        # 122 of the 132 several-item recipes are an Enchanting formula (rank > 0)
-        # linked next to a rank-0 "Enchant ..." item that teaches nothing, so rank 0
-        # must lose. Ties and all-zero fall back to the lowest numeric id so the pick
-        # is stable across runs.
+        # WHY drop items that do not require the profession, and placeholders: on
+        # 1.60.1.71037, 125 of the 132 several-item spells carry an "Enchant ..." scroll
+        # copy (RequiredSkill 0) or a retired item next to the real recipe, and 56
+        # profession recipes have only such an item (55 Enchanting scroll copies, 1
+        # "Deprecated Recipe"). Neither teaches the recipe, so none left = no item.
+        present = [c for c in present
+                   if _item_field(c, item_details[c], "RequiredSkill") in skill_lines
+                   and not PLACEHOLDER_NAME.search(item_details[c].get("Display_lang") or "")]
+        # WHY the lowest positive RequiredSkillRank (plan ruling R1): that is the rank
+        # the recipe item really asks for. Ties and all-zero fall back to the lowest
+        # numeric id so the pick is stable across runs.
         ranked = [(_required_skill_rank(c, item_details[c]), int(c)) for c in present]
+        if not ranked:
+            return None
         positive = [r for r in ranked if r[0] > 0]
         if positive:
             return str(min(positive)[1])  # (rank, id) tuples: lowest rank, then lowest id

@@ -203,10 +203,12 @@ BUCKETS: dict[str, Bucket] = {
         removed_recipes=None,
         canary_floor_reagents=0.95, canary_floor_teaching=0.60,
         # This build's DB2 columns differ from the Classic ones; override by name.
+        # RequiredSkillRank/RequiredSkill drive the teaching-item choice (db2.choose_teaching_item).
         column_overrides=MappingProxyType({
             "ItemEffect": ("ID", "SpellID"),
             "ItemSparse": ("ID", "Display_lang", "BuyPrice", "SellPrice", "MinFactionID",
-                           "MinReputation", "VendorStackCount", "RequiredSkillRank"),
+                           "MinReputation", "VendorStackCount", "RequiredSkillRank",
+                           "RequiredSkill"),
         }),
         item_effect_join="xitem", has_tools=True,
         difficulty_certainties=("INGAME", "DB2", "CROSS", "WIKI"),

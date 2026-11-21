@@ -4,7 +4,7 @@ Tailoring only (skill line 197). Row shapes follow real wago.tools CSVs closely
 enough for the column contract: each header is the contract's REQUIRED_COLUMNS
 plus an ID column where the contract has none. join="xitem" writes the Forever
 shape instead: the contract of the Forever bucket (its column overrides), the
-ItemXItemEffect link table and the tool tables.
+ItemXItemEffect link table, SkillLine (child lines) and the tool tables.
 """
 import csv
 import json
@@ -38,6 +38,11 @@ _ITEMS = {
 }
 # Teaching-item RequiredSkillRank (only the xitem shape has the column); unlisted -> 0.
 _RSR = {6002: 15, 6003: 35, 6004: 0}
+# Teaching items require Tailoring (197); every other item requires no skill (0).
+_TEACHING_SKILL = 197
+# SkillLine rows of the xitem shape: id -> ParentSkillLineID. Like the real build,
+# each profession line has one child line (Tailoring 197 -> 2948, First Aid 129 -> 2942).
+_SKILL_LINES = {197: 0, 2948: 197, 129: 0, 2942: 129, 164: 0}
 
 
 def _columns(table: str, join: str) -> list[str]:
@@ -65,8 +70,12 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
                 omit_spell_names: set[str] = frozenset(),
                 omit_item_names: set[str] = frozenset(),
                 join: str = "parent",
-                extra_teaching: tuple[tuple[int, int], ...] = ()) -> Path:
-    """extra_teaching: (spell, item) links appended after the regular ones, in order."""
+                extra_teaching: tuple[tuple[int, int], ...] = (),
+                extra_items: dict[int, tuple[str, int, int]] | None = None) -> Path:
+    """extra_teaching: (spell, item) links appended after the regular ones, in order.
+    extra_items: item id -> (name, RequiredSkill, RequiredSkillRank), extra ItemSparse
+    rows (buy 100, sell 25, no faction) for the items extra_teaching links to.
+    """
     if join not in ("parent", "xitem"):
         raise ValueError(f"unknown join '{join}'")
     omit_columns = omit_columns or {}
@@ -109,12 +118,19 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
         tables["SpellTotems"] = [{"ID": 1, "SpellID": 1002, "RequiredTotemCategoryID_0": 162,
                                   "RequiredTotemCategoryID_1": 0, "Totem_0": 0, "Totem_1": 0}]
         tables["TotemCategory"] = [{"ID": 162, "Name_lang": "Blacksmith Hammer"}]
+        tables["SkillLine"] = [{"ID": k, "ParentSkillLineID": v} for k, v in _SKILL_LINES.items()]
+    teaching_ids = {item for *_, item in _SPELLS.values() if item is not None}
     items = [{"ID": i, "Display_lang": "" if str(i) in omit_item_names else v[0],
               "BuyPrice": v[1], "SellPrice": v[2], "MinFactionID": v[3],
               "MinReputation": v[4], "VendorStackCount": 1,
               # Dropped by the writer (extrasaction="ignore") when the shape has no such column.
-              "RequiredSkillRank": _RSR.get(i, 0)}
+              "RequiredSkillRank": _RSR.get(i, 0),
+              "RequiredSkill": _TEACHING_SKILL if i in teaching_ids else 0}
              for i, v in _ITEMS.items()]
+    items += [{"ID": i, "Display_lang": name, "BuyPrice": 100, "SellPrice": 25,
+               "MinFactionID": 0, "MinReputation": 0, "VendorStackCount": 1,
+               "RequiredSkillRank": rank, "RequiredSkill": skill}
+              for i, (name, skill, rank) in (extra_items or {}).items()]
 
     tables.update({"SkillLineAbility": sla, "SpellName": names, "SpellEffect": effects,
                    "SpellReagents": reagents, "ItemSparse": items,

@@ -116,7 +116,8 @@ def test_forever_entry_values():
     assert dict(f.column_overrides) == {
         "ItemEffect": ("ID", "SpellID"),
         "ItemSparse": ("ID", "Display_lang", "BuyPrice", "SellPrice", "MinFactionID",
-                       "MinReputation", "VendorStackCount", "RequiredSkillRank")}
+                       "MinReputation", "VendorStackCount", "RequiredSkillRank",
+                       "RequiredSkill")}
     assert (f.item_effect_join, f.has_tools) == ("xitem", True)
     assert f.difficulty_certainties == ("INGAME", "DB2", "CROSS", "WIKI")
     assert (f.review_policy, f.allow_unknown_source, f.strict_difficulty) == ("exclude", True, True)

@@ -37,12 +37,54 @@ def test_extract_forever_fixture(tmp_path):
     _assert_fixture_sources(doc["recipes"])
 
 
-def test_extract_main_forever_fixture(tmp_path):
+def test_extract_main_forever_fixture(tmp_path, capsys):
     write_build(tmp_path / "art", join="xitem")
     assert ex.main(["--bucket", "forever", "--profession", "Tailoring",
                     "--version", FIXTURE_VERSION, "--data-dir", str(tmp_path / "art"),
                     "--output-dir", str(tmp_path / "src")]) == 0
     _assert_fixture_sources(load_json(tmp_path / "src" / "Forever" / "Tailoring.json")["recipes"])
+    # Forever is enriched from the wiki, so the next-step hint must name that tool.
+    err = capsys.readouterr().err
+    assert "fetch_wiki_sources.py --bucket forever --profession Tailoring" in err
+    assert "fetch_wowhead_sources.py" not in err
+
+
+def test_enrich_hint_names_the_bucket_enrich_step():
+    tailoring = PROFESSIONS["Tailoring"]
+    assert ex.enrich_hint(FOREVER, tailoring) == (
+        "python scripts/fetch_wiki_sources.py --bucket forever --profession Tailoring")
+    for key in ("tbc", "vanilla", "wotlk", "sod"):
+        assert ex.enrich_hint(get_bucket(key), tailoring) == (
+            f"python scripts/fetch_wowhead_sources.py --bucket {key} --profession Tailoring")
+
+
+# Extra links for spells of the fixture, shaped like the real Forever cases:
+#   1002 also links to an OLD placeholder with a lower rank than its real pattern,
+#   1001 (trainer-taught) links only to a scroll copy that requires no skill,
+#   1003 also links to an item of the Tailoring child line 2948 with a lower rank.
+_EXTRA_ITEMS = {6102: ("Pattern: Fixture Vest OLD", 197, 5),
+                6101: ("Fixture Bolt Scroll", 0, 0),
+                6103: ("Manual: Fixture Cloak", 2948, 30)}
+_EXTRA_LINKS = ((1002, 6102), (1001, 6101), (1003, 6103))
+
+
+def test_extract_forever_skips_placeholder_and_scroll_items(tmp_path):
+    root = write_build(tmp_path, join="xitem", extra_items=_EXTRA_ITEMS,
+                       extra_teaching=_EXTRA_LINKS)
+    indexes = ex.build_indexes(root / FIXTURE_VERSION, _forever_test_bucket())
+    items = indexes["recipe_items"]
+    assert items["1002"] == "6002"          # OLD placeholder ignored despite its lower rank
+    assert "1001" not in items              # scroll copy only: no teaching item
+    assert items["1003"] == "6103"          # child-line item kept (and has the lowest rank)
+    assert ex.detect_source("1001", indexes) == {"type": "TRAINER", "certainty": "DB2"}
+
+
+def test_generate_indexes_forever_skip_placeholder_and_scroll_items(tmp_path):
+    root = write_build(tmp_path, join="xitem", extra_items=_EXTRA_ITEMS,
+                       extra_teaching=_EXTRA_LINKS)
+    bucket = _forever_test_bucket()
+    indexes = gen.build_indexes(gen.load_all_data(root / FIXTURE_VERSION, bucket), bucket)
+    assert indexes["recipe_items"] == {"1002": "6002", "1003": "6103", "1004": "6004"}
 
 
 def test_extract_forever_xitem_missing_link_table_exits_2(tmp_path):

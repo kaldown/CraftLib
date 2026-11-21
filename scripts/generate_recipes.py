@@ -236,6 +236,11 @@ def load_all_data(data_dir: Path, bucket) -> dict:
     # teaching join, the same one extract uses, instead of as a raw table.
     data["TeachingItems"] = db2.teaching_items(data_dir, bucket)
     print(f"  Loaded teaching items for {len(data['TeachingItems'])} spells", file=sys.stderr)
+    # The skill lines each spell's teaching item may require ({} for the parent join,
+    # which reads no SkillLine table).
+    data["TeachingSkillLines"] = db2.teaching_skill_lines(
+        data_dir, bucket, data["SkillLineAbility"],
+        {PROFESSIONS[f].skill_line for f in bucket.professions})
     return data
 
 
@@ -324,7 +329,8 @@ def build_indexes(data: dict, bucket) -> dict:
         else:
             # xitem ranks candidates by RequiredSkillRank, which lives on the ItemSparse row.
             present = indexes["item_details"]
-        item_id = db2.choose_teaching_item(bucket, candidates, present)
+        item_id = db2.choose_teaching_item(bucket, candidates, present,
+                                           data["TeachingSkillLines"].get(spell_id, frozenset()))
         if item_id is not None:
             indexes["recipe_items"][spell_id] = item_id
 

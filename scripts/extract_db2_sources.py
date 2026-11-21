@@ -98,17 +98,23 @@ def build_indexes(data_dir: Path, bucket, check: bool = True) -> dict:
                 indexes["has_reagents"].add(spell_id)
                 break
 
+    indexes["skill_line_abilities"] = table("SkillLineAbility")
+
     # Recipe items: spell -> the one item that teaches it, through the bucket's join
     # (ItemEffect.ParentItemID on Classic, ItemXItemEffect on Forever). Only items that
     # exist in ItemSparse count (some old items were removed): detect_source reads
     # their prices and faction, and would otherwise fail on a link to nothing.
+    # On xitem only spells on the bucket's profession lines can get an item (the
+    # RequiredSkill check needs the spell's line); nothing else reads this index.
+    spell_lines = db2.teaching_skill_lines(
+        data_dir, bucket, indexes["skill_line_abilities"],
+        {PROFESSIONS[f].skill_line for f in bucket.professions})
     indexes["recipe_items"] = {}
     for spell_id, candidates in db2.teaching_items(data_dir, bucket).items():
-        item_id = db2.choose_teaching_item(bucket, candidates, indexes["item_details"])
+        item_id = db2.choose_teaching_item(bucket, candidates, indexes["item_details"],
+                                           spell_lines.get(spell_id, frozenset()))
         if item_id is not None:
             indexes["recipe_items"][spell_id] = item_id
-
-    indexes["skill_line_abilities"] = table("SkillLineAbility")
 
     indexes["recipe_items_fallback"] = {}
     indexes["item_details_fallback"] = {}
@@ -297,6 +303,14 @@ def extract_profession_sources(
     return doc, orphans
 
 
+def enrich_hint(bucket, profession: Profession) -> str:
+    """The command that resolves this bucket's PENDING sources next."""
+    # WHY per bucket: Forever is enriched from the wiki, not Wowhead; a fixed hint
+    # sent Forever runs to the wrong tool.
+    script = "fetch_wiki_sources.py" if bucket.enrich == "wiki" else "fetch_wowhead_sources.py"
+    return f"python scripts/{script} --bucket {bucket.key} --profession {profession.folder}"
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Extract recipe sources from DB2")
     add_bucket_argument(parser)
@@ -370,9 +384,9 @@ def main(argv: list[str] | None = None) -> int:
         print(f"  {cert + ':':<14} {certainty_counts.get(cert, 0)}", file=sys.stderr)
 
     if certainty_counts.get("PENDING", 0) > 0:
-        print(f"\n{certainty_counts['PENDING']} recipes need Wowhead verification.", file=sys.stderr)
-        print("Run: python scripts/fetch_wowhead_sources.py "
-              f"--profession {profession.folder}", file=sys.stderr)
+        where = "wiki" if bucket.enrich == "wiki" else "Wowhead"
+        print(f"\n{certainty_counts['PENDING']} recipes need {where} verification.", file=sys.stderr)
+        print(f"Run: {enrich_hint(bucket, profession)}", file=sys.stderr)
 
     return 0
 
