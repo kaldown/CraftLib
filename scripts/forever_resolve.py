@@ -112,7 +112,9 @@ def _candidates(facts: RecipeFacts, index) -> "tuple[str | None, list[WikiRow]]"
     return None, []
 
 
-def build_claims(facts: "list[RecipeFacts]", index) -> "dict[str, list[str]]":
+def build_claims(facts: "list[RecipeFacts]", index,
+                 ingame: "dict[str, IngameFacts | None] | None" = None
+                 ) -> "dict[str, list[str]]":
     """Row key -> spell ids (first-seen order) of the profession whose candidates include it.
 
     Built over every recipe of one profession, before any alias is applied: a row
@@ -120,9 +122,18 @@ def build_claims(facts: "list[RecipeFacts]", index) -> "dict[str, list[str]]":
     stay ambiguous until they get an alias too (never a silent second owner).
     Keyed by the row's own key, not the lookup key, so two spells reaching one row
     through its link target and its display text are both counted.
+
+    ingame maps spell id -> that spell's IngameFacts (the same values resolve gets).
+    A spell the capture marks absent claims nothing: R8 excludes it anyway, and its
+    claim would otherwise keep the revised spell that IS in game ambiguous, which is
+    exactly the old/revised pair a capture is meant to decide.
     """
+    ingame = ingame or {}
     claims: dict[str, list[str]] = {}
     for f in facts:
+        capture = ingame.get(f.spell_id)
+        if capture is not None and capture.present is False:
+            continue
         _key, rows = _candidates(f, index)
         for r in rows:
             ids = claims.setdefault(r.key, [])
@@ -213,6 +224,10 @@ def _orange(facts, wiki, row, trainer_skill, cross_orange, notes):
     # against lower tiers; out of 1..yellow it is a contradiction for a human (the
     # generator asserts orange <= yellow), never a reason to take a weaker value.
     if trainer_skill is not None:
+        if row is None:
+            # The trainer decides even an unmatched recipe; keep why the wiki could not
+            # (a stale alias or an ambiguity stays visible in REVIEW.md).
+            notes.append(f"in-game trainer decides it; wiki: {wiki}")
         if not 1 <= trainer_skill <= yellow:
             return f"no learn skill: in-game trainer skill {trainer_skill} outside 1-{yellow}"
         if row is not None and row.skill is not None and row.skill != trainer_skill:
@@ -265,6 +280,10 @@ def _source(facts, wiki, row, trainer_skill, notes):
     if row is None:
         # Spec D15: no wiki row (or an ambiguous one) -> review, never a default source.
         return wiki
+    if row.currency is not None and row.currency <= 0:
+        # A Merchant's Favor amount of 0 would read as a free recipe; such a cell is
+        # one this parser does not understand, not a price.
+        return f"unrecognised wiki cost: '{row.raw_source}'"
     if row.rep_level is not None:
         if facts.min_faction <= 0:
             # The wiki rep level alone carries no faction id or name to emit.

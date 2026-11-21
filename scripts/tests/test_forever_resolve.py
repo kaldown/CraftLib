@@ -407,3 +407,64 @@ def test_unpriced_vendor_with_db2_faction_is_unknown_and_keeps_faction_note():
     assert res.source == {"type": "UNKNOWN", "certainty": "WIKI", "itemId": 6003}
     assert "wiki says vendor; price not in DB2 or wiki" in res.notes
     assert any("Thorium Brotherhood" in n and "6003" in n for n in res.notes)
+
+
+# --- review round: absent spells, zero costs, in-game decisions ---------------------
+
+def test_absent_spell_releases_its_wiki_row():
+    # Old Classic spell next to its revised Forever spell, both item-taught: the capture
+    # says the old one is not in game, so the row belongs to the revised spell (R8).
+    r = row("VENDOR")
+    idx = index_rows([r])
+    old = facts(spell_id="3496", **ITEM)
+    new = facts(spell_id="439128", **ITEM)
+    ingame = {"3496": IngameFacts(present=False, trainer_skill=None),
+              "439128": IngameFacts(present=True, trainer_skill=None)}
+    claims = build_claims([old, new], idx, ingame)
+    assert claims == {"linen cloak": ["439128"]}
+    assert match_wiki(new, idx, {}, claims) is r
+    res = resolve(new, match_wiki(new, idx, {}, claims), ingame["439128"], None)
+    assert res.source == {"type": "VENDOR", "certainty": "WIKI", "itemId": 6002, "cost": 500}
+    old_res = resolve(old, match_wiki(old, idx, {}, claims), ingame["3496"], None)
+    assert old_res.review == "not in game: absent from the in-game recipe list"
+
+
+@pytest.mark.parametrize("ingame", [
+    None,
+    {},
+    {"3496": None, "439128": None},
+    {"3496": IngameFacts(present=None, trainer_skill=None),
+     "439128": IngameFacts(present=None, trainer_skill=None)},
+])
+def test_claims_without_an_absence_keep_both_spells(ingame):
+    idx = index_rows([row()])
+    fs = [facts(spell_id="3496"), facts(spell_id="439128")]
+    assert build_claims(fs, idx, ingame) == {"linen cloak": ["3496", "439128"]}
+
+
+@pytest.mark.parametrize("wiki_row", [
+    pytest.param(row("VENDOR", currency=0, raw="{{cost|mfvr=0}}"), id="vendor"),
+    pytest.param(row("VENDOR", currency=0, rep_level="Honored",
+                     raw="{{text|honored|Honored}}; {{cost|mfvr=0}}"), id="faction-less-rep"),
+])
+def test_zero_currency_is_review(wiki_row):
+    # mfvr=0 would read as a free recipe; it is a wiki cell we do not understand.
+    res = resolve(facts(**ITEM), wiki_row, None, None)
+    assert res.review == f"unrecognised wiki cost: '{wiki_row.raw_source}'"
+
+
+@pytest.mark.parametrize("failed", [
+    "no wiki row",
+    "ambiguous: wiki row 'linen cloak' matches spells 3496, 439128",
+    "bad alias: 0 wiki rows named 'linen cloak' with skill 70",
+])
+def test_ingame_decision_keeps_failed_match_as_note(failed):
+    res = resolve(facts(), failed, IngameFacts(present=True, trainer_skill=40), None)
+    assert res.source == {"type": "TRAINER", "certainty": "INGAME"}
+    assert res.notes == (f"in-game trainer decides it; wiki: {failed}",)
+
+
+def test_rejected_ingame_skill_keeps_failed_match_as_note():
+    res = resolve(facts(), "no wiki row", IngameFacts(present=True, trainer_skill=96), None)
+    assert res.review == "no learn skill: in-game trainer skill 96 outside 1-95"
+    assert res.notes == ("in-game trainer decides it; wiki: no wiki row",)
