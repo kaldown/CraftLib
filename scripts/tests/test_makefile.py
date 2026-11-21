@@ -26,9 +26,9 @@ def _run(tmp_path, override=None):
 
 
 def test_unknown_bucket_target_fails():
-    r = _make("forever-all")
+    r = _make("nope-all")
     assert r.returncode != 0
-    assert "No rule to make target" in r.stderr and "forever-all" in r.stderr, r.stderr
+    assert "No rule to make target" in r.stderr and "nope-all" in r.stderr, r.stderr
 
 
 def test_failing_gate_stops_make(tmp_path):

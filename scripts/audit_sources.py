@@ -48,7 +48,8 @@ def validate_inputs(sources_dir: Path, only_bucket=None) -> None:
     one profession file; a bucket with a parent also needs the parent folder, the
     parent twin of every child file, and its keep-trainer file.
     """
-    scope = list(BUCKETS.values()) if only_bucket is None else [BUCKETS[only_bucket.key]]
+    # WHY: an unshipped bucket has no sources yet; the unrestricted audit guards what ships.
+    scope = [b for b in BUCKETS.values() if b.shipped] if only_bucket is None else [BUCKETS[only_bucket.key]]
     for b in scope:
         folder = sources_dir / b.folder
         files = sorted(folder.glob("*.json")) if folder.is_dir() else []
@@ -87,6 +88,8 @@ def audit(sources_dir: Path, only_bucket=None):
         bucket = bucket_for_folder(folder)
         if only_bucket is not None and bucket.key != only_bucket.key:
             continue
+        if only_bucket is None and not bucket.shipped:
+            continue  # unshipped buckets are audited only when asked for by name
         for prof, data in profs.items():
             for sid, recipe in data.get("recipes", {}).items():
                 s = recipe.get("source", {})
@@ -115,6 +118,8 @@ def audit(sources_dir: Path, only_bucket=None):
         if child.reconcile_parent is None:
             continue
         if only_bucket is not None and child.key != only_bucket.key:
+            continue
+        if only_bucket is None and not child.shipped:
             continue
         parent = BUCKETS[child.reconcile_parent]
         # Spell IDs in the keep-trainer file are intentional child-specific trainer recipes.

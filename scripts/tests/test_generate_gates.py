@@ -106,7 +106,7 @@ def test_reputation_missing_field_raises_generate_error(tmp_path, capsys):
 
 
 @pytest.mark.parametrize("doc", [
-    {"forever": {}},
+    {"nope": {}},
     {"tbc": {"skip": [{"spells": [1], "reason": "r"}]}},
     {"tbc": {"exclude": [{"spells": [1], "reason": ""}]}},
     {"tbc": {"exclude": [{"spells": ["x"], "reason": "r"}]}},

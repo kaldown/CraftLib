@@ -157,5 +157,5 @@ def test_fetch_all_dedupes_and_never_calls_latest(capsys):
     out = capsys.readouterr().out
     lines = [l for l in out.splitlines() if " fetch VERSION=" in l]
     assert sorted(l.rsplit("VERSION=", 1)[1] for l in lines) == [
-        "1.15.8.67156", "2.5.5.65895", "3.4.5.63697"]
+        "1.15.8.67156", "1.60.1.71037", "2.5.5.65895", "3.4.5.63697"]
     assert "latest" not in out

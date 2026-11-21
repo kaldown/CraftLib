@@ -141,6 +141,8 @@ def test_reextract_tracked_sources_is_stable():
     # differs from the tracked (earlier-derived) value. Fixed in Phase 2 D9.
     known_tbc_diffs = {"42558", "46134", "46132"}
     for key, bucket in BUCKETS.items():
+        if not bucket.shipped:
+            continue  # no tracked sources to compare against yet
         build_dir = ARTIFACTS / bucket.build
         if not build_dir.is_dir():
             pytest.skip(f"build {bucket.build} not cached")

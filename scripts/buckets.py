@@ -53,11 +53,15 @@ PROFESSIONS: dict[str, Profession] = {
 INHERIT_TYPES = {"DROP", "VENDOR", "QUEST", "REPUTATION", "STARTER", "DISCOVERY"}  # STARTER/DISCOVERY are structural (no cost/itemId; corroboration-exempt)
 INHERIT_CERTAINTY = {"WOWHEAD", "MANUAL", "DB2"}               # WOWHEAD + hand-verified MANUAL + DB2
 
-_ENRICH = {"wowhead-listview", "wowhead-per-spell"}
-_VENDOR_SCOPES = {"SOD", "DEFAULT"}
-_EXPANSIONS = {"VANILLA", "TBC", "WOTLK", "CATA", "MOP", "SOD"}
+_ENRICH = {"wowhead-listview", "wowhead-per-spell", "wiki"}
+_VENDOR_SCOPES = {"SOD", "DEFAULT", "FOREVER"}
+_EXPANSIONS = {"VANILLA", "TBC", "WOTLK", "CATA", "MOP", "SOD", "FOREVER"}
 
 _EMPTY: Mapping[str, tuple[str, ...]] = MappingProxyType({})
+_NO_WIKI: Mapping[str, str] = MappingProxyType({})
+
+_ITEM_EFFECT_JOINS = {"parent", "xitem"}
+_REVIEW_POLICIES = {"raise", "exclude"}
 
 
 @dataclass(frozen=True)
@@ -82,6 +86,22 @@ class Bucket:
     canary_floor_reagents: float
     canary_floor_teaching: float
     column_overrides: Mapping[str, tuple[str, ...]] = field(default=_EMPTY)
+    # Everything below defaults to the behaviour the four Classic buckets already
+    # have, so adding a field never changes their generated output.
+    item_effect_join: str = "parent"      # "parent" (ItemEffect.ParentItemID) | "xitem" (ItemXItemEffect link table)
+    has_tools: bool = False               # emit the tools field (Forever only; Classic backfill deferred)
+    difficulty_certainties: tuple[str, ...] = ("WOWHEAD", "CRAFTDUMP")  # certainties that may carry a difficulty
+    review_policy: str = "raise"          # "raise" = a review aborts generation; "exclude" = it drops the recipe
+    allow_unknown_source: bool = False    # only Forever may emit UNKNOWN sources
+    strict_difficulty: bool = False       # assert 1 <= orange <= yellow <= green <= gray
+    milestones_verified: bool = True      # False = milestones are an unconfirmed assumption
+    coverage_floor: float | None = None   # min share of in-game skill-up recipes shipped
+    coverage_max_gap: int | None = None   # max skill points (1..299) with no shipped recipe
+    wiki_pages: Mapping[str, str] = field(default=_NO_WIKI)  # profession folder -> wiki page title
+    cross_orange_bucket: str | None = None  # bucket whose WOWHEAD orange may be borrowed (CROSS)
+    held_back: tuple[str, ...] = ()       # professions failing the coverage gate: not written, not in TOC
+    vendor_explicit_scope: bool = False   # emit only allowlist entries naming this scope explicitly
+    shipped: bool = True                  # False = pipeline-only; consistency checks skip it
 
     def profession(self, name: str) -> Profession:
         """Resolve a profession by folder/key/display name, ignoring case and spaces."""
@@ -99,6 +119,19 @@ _VANILLA_PROFS = ("Alchemy", "Blacksmithing", "Enchanting", "Engineering",
                   "Leatherworking", "Tailoring", "Cooking", "FirstAid", "Mining")
 _TBC_PROFS = _VANILLA_PROFS + ("Jewelcrafting",)
 _WOTLK_PROFS = _TBC_PROFS + ("Inscription",)
+
+# Wiki page title per profession folder (Forever recipes are enriched from the wiki).
+_FOREVER_WIKI_PAGES = MappingProxyType({
+    "FirstAid": "Forever first aid recipes",
+    "Blacksmithing": "Forever blacksmithing plans",
+    "Leatherworking": "Forever leatherworking patterns",
+    "Alchemy": "Forever alchemy recipes",
+    "Cooking": "Forever cooking recipes",
+    "Mining": "Forever mining techniques",
+    "Tailoring": "Forever tailoring patterns",
+    "Engineering": "Forever engineering schematics",
+    "Enchanting": "Forever enchanting formulas",
+})
 
 _VANILLA_MILESTONES = (75, 150, 225, 300)
 
@@ -156,6 +189,34 @@ BUCKETS: dict[str, Bucket] = {
         # (today's generator found no removed_recipes.sod.json).
         removed_recipes=None,
         canary_floor_reagents=0.95, canary_floor_teaching=0.03),
+    "forever": Bucket(
+        key="forever", profile="FOREVER", folder="Forever",
+        product="wowf", build="1.60.1.71037",
+        professions=_VANILLA_PROFS,
+        # Unverified until the owner's in-game probe reports maxSkillLevel (milestones_verified).
+        milestones=_VANILLA_MILESTONES,
+        fixed_expansion="FOREVER",
+        enrich="wiki", wowhead_subdomain="forever",
+        exclude_seasonal=False, vendor_scope="FOREVER",
+        reconcile_parent=None, keep_trainer_file=None,
+        verify_trainers=False, audit_hard=False,
+        removed_recipes=None,
+        canary_floor_reagents=0.95, canary_floor_teaching=0.60,
+        # This build's DB2 columns differ from the Classic ones; override by name.
+        column_overrides=MappingProxyType({
+            "ItemEffect": ("ID", "SpellID"),
+            "ItemSparse": ("ID", "Display_lang", "BuyPrice", "SellPrice", "MinFactionID",
+                           "MinReputation", "VendorStackCount", "RequiredSkillRank"),
+        }),
+        item_effect_join="xitem", has_tools=True,
+        difficulty_certainties=("INGAME", "DB2", "CROSS", "WIKI"),
+        review_policy="exclude", allow_unknown_source=True, strict_difficulty=True,
+        milestones_verified=False, coverage_floor=0.90, coverage_max_gap=10,
+        wiki_pages=_FOREVER_WIKI_PAGES, cross_orange_bucket="vanilla",
+        held_back=(), vendor_explicit_scope=True,
+        # Flipped to True by the task that generates Data/Forever; until then the
+        # consistency checks (TOC, Data dirs) must not expect files that do not exist.
+        shipped=False),
 }
 
 
@@ -183,6 +244,27 @@ def _validate_registry(buckets: Mapping[str, Bucket]) -> None:
             v = getattr(b, name)
             if not (0 < v <= 1):
                 bad(f"{name} {v} outside (0, 1]")
+        if b.item_effect_join not in _ITEM_EFFECT_JOINS:
+            bad(f"item_effect_join '{b.item_effect_join}' not in {sorted(_ITEM_EFFECT_JOINS)}")
+        if b.review_policy not in _REVIEW_POLICIES:
+            bad(f"review_policy '{b.review_policy}' not in {sorted(_REVIEW_POLICIES)}")
+        if b.enrich == "wiki":
+            missing = [p for p in b.professions if p not in b.wiki_pages]
+            if missing:
+                bad(f"enrich 'wiki' but wiki_pages lacks professions {missing}")
+        if b.cross_orange_bucket is not None and (
+                b.cross_orange_bucket not in buckets or b.cross_orange_bucket == k):
+            bad(f"invalid cross_orange_bucket '{b.cross_orange_bucket}'")
+        stray = [p for p in b.held_back if p not in b.professions]
+        if stray:
+            bad(f"held_back names professions not in the bucket: {stray}")
+        # The coverage gate is two-part (share AND gap); half a gate is a config error.
+        if (b.coverage_floor is None) != (b.coverage_max_gap is None):
+            bad("set both or neither of coverage_floor and coverage_max_gap")
+        if b.coverage_floor is not None and not (0 < b.coverage_floor <= 1):
+            bad(f"coverage_floor {b.coverage_floor} outside (0, 1]")
+        if b.coverage_max_gap is not None and b.coverage_max_gap < 1:
+            bad(f"coverage_max_gap {b.coverage_max_gap} must be >= 1")
         if b.folder in seen_folder:
             bad(f"folder '{b.folder}' also used by '{seen_folder[b.folder]}'")
         if b.profile in seen_profile:

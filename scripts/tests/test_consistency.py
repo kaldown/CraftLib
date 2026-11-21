@@ -22,6 +22,17 @@ def _constants_block(name: str) -> dict[str, str]:
     return {k: v.strip() for k, v in re.findall(r"([A-Z_]+)\s*=\s*([^,\n]+),?", body)}
 
 
+def _shipped():
+    # WHY: a bucket flagged shipped=False has no Data/ files or TOC lines yet; the
+    # consistency checks guard what ships, so they skip it until it is flipped.
+    return [b for b in BUCKETS.values() if b.shipped]
+
+
+def _written(b):
+    # Held-back professions fail the coverage gate: not written, not in the TOC.
+    return [p for p in b.professions if p not in b.held_back]
+
+
 def _toc_data_lines() -> list[str]:
     lines = (ROOT / "CraftLib.toc").read_text(encoding="utf-8").splitlines()
     return [ln.strip() for ln in lines if ln.strip() and not ln.startswith("#")]
@@ -52,9 +63,9 @@ def test_toc_lists_exactly_the_registry_data_files():
     lines = _toc_data_lines()
     data = [ln for ln in lines if ln.startswith("Data/")]
     expected = set()
-    for b in BUCKETS.values():
+    for b in _shipped():
         expected.add(f"Data/{b.folder}/VendorPrices.lua")
-        expected |= {f"Data/{b.folder}/{p}/Recipes.lua" for p in b.professions}
+        expected |= {f"Data/{b.folder}/{p}/Recipes.lua" for p in _written(b)}
     assert len(data) == len(set(data)), f"duplicate TOC data lines: {sorted(d for d in set(data) if data.count(d) > 1)}"
     assert set(data) == expected, f"TOC only: {sorted(set(data) - expected)}; registry only: {sorted(expected - set(data))}"
     for d in data:
@@ -67,24 +78,25 @@ def test_toc_lists_exactly_the_registry_data_files():
 
 
 def test_data_dirs_match_registry():
-    folders = {b.folder for b in BUCKETS.values()}
+    folders = {b.folder for b in _shipped()}
     on_disk = {p.name for p in (ROOT / "Data").iterdir() if p.is_dir() and p.name != "Sources"}
     assert on_disk == folders, f"Data/ dirs only on disk: {on_disk - folders}; only in registry: {folders - on_disk}"
-    for b in BUCKETS.values():
+    for b in _shipped():
         subdirs = {p.name for p in (ROOT / "Data" / b.folder).iterdir() if p.is_dir()}
-        assert subdirs == set(b.professions), f"Data/{b.folder} subdirs {sorted(subdirs)} != professions {sorted(b.professions)}"
+        assert subdirs == set(_written(b)), f"Data/{b.folder} subdirs {sorted(subdirs)} != professions {sorted(_written(b))}"
+        # Sources JSON is required for every profession of a shipped bucket, held back or not.
         for prof in b.professions:
             src = ROOT / "Data" / "Sources" / b.folder / f"{prof}.json"
             assert src.is_file(), f"missing source file: {src.relative_to(ROOT)}"
 
 
 def test_shipped_files_carry_profile_and_milestones():
-    for b in BUCKETS.values():
+    for b in _shipped():
         profile_tag = f'profile = "{b.profile}"'
         # Legacy tag accepted for sod only: remove when SoD is regenerated (Phase 2).
         accepted = [profile_tag] + ([f'flavor = "{b.profile}"'] if b.key == "sod" else [])
         files = [ROOT / "Data" / b.folder / "VendorPrices.lua"]
-        files += [ROOT / "Data" / b.folder / p / "Recipes.lua" for p in b.professions]
+        files += [ROOT / "Data" / b.folder / p / "Recipes.lua" for p in _written(b)]
         for f in files:
             text = f.read_text(encoding="utf-8")
             assert any(t in text for t in accepted), f"{f.relative_to(ROOT)} lacks any of {accepted}"

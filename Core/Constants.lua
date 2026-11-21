@@ -17,6 +17,7 @@ CraftLib.Constants = {
         DRAGONFLIGHT = 10,
         TWW = 11,
         SOD = 12,  -- Season of Discovery (parallel ruleset; selected by flavor, not ordinal)
+        FOREVER = 13,  -- WoW Forever client (its own ruleset; selected by profile, not ordinal)
     },
 
     -- Client lineage the load-guard keys on (distinct from per-recipe expansion metadata).
@@ -34,6 +35,7 @@ CraftLib.Constants = {
         TBC = "TBC",
         WOTLK = "WOTLK",
         SOD = "SOD",
+        FOREVER = "FOREVER",
     },
 
     -- Recipe source types
@@ -46,6 +48,9 @@ CraftLib.Constants = {
         STARTER = "starter",
         DISCOVERY = "discovery",
         WORLD_DROP = "world_drop",
+        -- Only the Forever bucket emits this: the source is not established, so the recipe
+        -- is usable only when learned, owned or bought. Never a cost claim.
+        UNKNOWN = "unknown",
     },
 
     -- Profession IDs (spell IDs)

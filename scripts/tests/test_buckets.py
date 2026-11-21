@@ -13,7 +13,7 @@ REPO = Path(__file__).resolve().parents[2]
 
 
 def test_registry_keys_and_order():
-    assert list(BUCKETS) == ["vanilla", "tbc", "wotlk", "sod"]
+    assert list(BUCKETS) == ["vanilla", "tbc", "wotlk", "sod", "forever"]
 
 
 def test_registry_values():
@@ -47,8 +47,8 @@ def test_registry_values():
 
 
 def test_get_bucket_unknown_raises_listing_known():
-    with pytest.raises(UnknownBucketError, match="vanilla, tbc, wotlk, sod"):
-        get_bucket("forever")
+    with pytest.raises(UnknownBucketError, match="vanilla, tbc, wotlk, sod, forever"):
+        get_bucket("nope")
 
 
 def test_bucket_for_folder():
@@ -68,13 +68,23 @@ def test_add_bucket_argument_rejects_unknown_and_missing():
     p = argparse.ArgumentParser()
     add_bucket_argument(p)
     assert p.parse_args(["--bucket", "sod"]).bucket == "sod"
-    for argv in (["--bucket", "forever"], []):
+    for argv in (["--bucket", "nope"], []):
         with pytest.raises(SystemExit):
             p.parse_args(argv)
 
 
 @pytest.mark.parametrize("change", [
-    {"enrich": "wiki"},
+    {"enrich": "wiki"},  # tbc has no wiki_pages
+    {"review_policy": "maybe"},
+    {"item_effect_join": "other"},
+    {"cross_orange_bucket": "nope"},
+    {"cross_orange_bucket": "tbc"},
+    {"held_back": ("Jewelcrafting", "Fishing")},
+    {"coverage_floor": 0.9},
+    {"coverage_max_gap": 10},
+    {"coverage_floor": 0.9, "coverage_max_gap": 10, "held_back": ("Inscription",)},
+    {"coverage_floor": 1.5, "coverage_max_gap": 10},
+    {"coverage_floor": 0.0, "coverage_max_gap": 10},
     {"professions": ("Fishing",)},
     {"reconcile_parent": "tbc"},
     {"milestones": (75, 75)},
@@ -89,4 +99,47 @@ def test_registry_validation_rejects_bad_entries(change):
 def test_cli_keys():
     r = subprocess.run([sys.executable, "scripts/buckets.py", "keys"], cwd=REPO,
                        capture_output=True, text=True)
-    assert r.stdout == "vanilla tbc wotlk sod\n"
+    assert r.stdout == "vanilla tbc wotlk sod forever\n"
+
+
+def test_forever_entry_values():
+    f = get_bucket("forever")
+    assert (f.key, f.profile, f.folder, f.product, f.build) == (
+        "forever", "FOREVER", "Forever", "wowf", "1.60.1.71037")
+    assert f.professions == get_bucket("vanilla").professions
+    assert f.milestones == (75, 150, 225, 300)
+    assert (f.fixed_expansion, f.enrich, f.wowhead_subdomain) == ("FOREVER", "wiki", "forever")
+    assert not f.exclude_seasonal and f.vendor_scope == "FOREVER"
+    assert f.reconcile_parent is None and f.keep_trainer_file is None
+    assert not f.verify_trainers and not f.audit_hard and f.removed_recipes is None
+    assert (f.canary_floor_reagents, f.canary_floor_teaching) == (0.95, 0.60)
+    assert dict(f.column_overrides) == {
+        "ItemEffect": ("ID", "SpellID"),
+        "ItemSparse": ("ID", "Display_lang", "BuyPrice", "SellPrice", "MinFactionID",
+                       "MinReputation", "VendorStackCount", "RequiredSkillRank")}
+    assert (f.item_effect_join, f.has_tools) == ("xitem", True)
+    assert f.difficulty_certainties == ("INGAME", "DB2", "CROSS", "WIKI")
+    assert (f.review_policy, f.allow_unknown_source, f.strict_difficulty) == ("exclude", True, True)
+    assert not f.milestones_verified
+    assert (f.coverage_floor, f.coverage_max_gap) == (0.90, 10)
+    assert f.cross_orange_bucket == "vanilla" and f.held_back == ()
+    assert f.vendor_explicit_scope and not f.shipped
+    assert dict(f.wiki_pages) == {
+        "FirstAid": "Forever first aid recipes",
+        "Blacksmithing": "Forever blacksmithing plans",
+        "Leatherworking": "Forever leatherworking patterns",
+        "Alchemy": "Forever alchemy recipes",
+        "Cooking": "Forever cooking recipes",
+        "Mining": "Forever mining techniques",
+        "Tailoring": "Forever tailoring patterns",
+        "Engineering": "Forever engineering schematics",
+        "Enchanting": "Forever enchanting formulas"}
+    assert f.profession("first aid").skill_line == 129
+
+
+def test_existing_buckets_keep_defaults():
+    for k in ("vanilla", "tbc", "wotlk", "sod"):
+        b = get_bucket(k)
+        assert b.item_effect_join == "parent" and b.review_policy == "raise"
+        assert not b.allow_unknown_source and b.shipped
+        assert not b.has_tools and b.held_back == () and not b.wiki_pages

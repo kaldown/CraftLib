@@ -42,7 +42,7 @@ def test_main_sod_uses_fixed_expansion(tmp_path):
 
 def test_main_unknown_bucket_rejected(tmp_path):
     with pytest.raises(SystemExit):
-        gr.main(["--bucket", "forever"])
+        gr.main(["--bucket", "nope"])
 
 
 def test_main_unknown_profession_exits_1(tmp_path):
