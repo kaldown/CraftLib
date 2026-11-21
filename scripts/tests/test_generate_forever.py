@@ -213,7 +213,8 @@ def test_failing_coverage_exits_2_and_still_writes_the_review(tmp_path, monkeypa
     assert rc == 2
     err = capsys.readouterr().err
     assert "Tailoring" in err and "coverage" in err
-    assert "0.750" in err and "80-299" in err
+    # 3 of 4 meets the 0.75 floor (R4 as amended); the gap above skill 79 still fails.
+    assert "80-299" in err and "below the floor" not in err
     assert not _lua_path(out).exists()
     cov = _review(src)["coverage"]
     assert (cov["shipped"], cov["inGame"], cov["maxGap"], cov["gap"]) == (3, 4, 220, [80, 299])
@@ -350,3 +351,35 @@ def test_missing_sources_file_exits_2_and_writes_no_review(tmp_path, monkeypatch
     assert _generate(art, src, tmp_path / "out") == 2
     assert "no sources file" in capsys.readouterr().err
     assert not (src / "Forever" / "review").exists()
+
+
+# --- Task 8b: unnamed reagents, MANUAL difficulty ------------------------------------
+
+def test_unnamed_reagent_is_excluded_with_its_reason(tmp_path, monkeypatch):
+    # Measured 85 resolved recipes on 1.60.1.71037 whose reagent ItemSparse does not name;
+    # under review_policy "exclude" they are listed, not a stop for the whole profession.
+    rc, _art, src, out = _run(tmp_path, monkeypatch, omit_item_names={"2320"})
+    assert rc == 0
+    assert "id = 1002," not in _lua_path(out).read_text()
+    assert [1002, "Fixture Vest", "reagent 2320 has no name in this build"] in \
+        _review(src)["excluded"]
+
+
+def test_manual_difficulty_ships(tmp_path, monkeypatch):
+    def edit(r):
+        r["1001"]["difficulty"] = {"orange": 1, "yellow": 10, "green": 25, "gray": 40,
+                                   "certainty": "MANUAL"}
+    rc, _art, src, out = _run(tmp_path, monkeypatch, edit=edit)
+    assert rc == 0
+    assert "id = 1001," in _lua_path(out).read_text()
+    assert _review(src)["orangeFrom"] == {"ITEM": 2, "MANUAL": 1}
+
+
+def test_manual_difficulty_still_passes_the_strict_check(tmp_path, monkeypatch, capsys):
+    def edit(r):
+        r["1001"]["difficulty"] = {"orange": 11, "yellow": 10, "green": 25, "gray": 40,
+                                   "certainty": "MANUAL"}
+    rc, *_ = _run(tmp_path, monkeypatch, edit=edit)
+    assert rc == 2
+    assert "strict difficulty" in capsys.readouterr().err
+

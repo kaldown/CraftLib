@@ -1,8 +1,8 @@
 """Forever resolver: learn skill (orange) and source precedence (plan rulings R1, R2, R5, R8)."""
 import pytest
 
-from forever_resolve import (IngameFacts, RecipeFacts, Resolution, assign_owners,
-                             build_claims, match_wiki, resolve)
+from forever_resolve import (CrossTrainer, IngameFacts, RecipeFacts, Resolution,
+                             assign_owners, build_claims, match_wiki, resolve)
 from wiki import WikiRow, index_rows
 
 FAVOR = "Merchant's Favor"
@@ -146,7 +146,8 @@ ORANGE_CASES = [
                          ORANGE_CASES)
 def test_orange_precedence(extra, wiki_skill, trainer, cross, orange, origin, certainty):
     ingame = IngameFacts(present=True, trainer_skill=trainer) if trainer is not None else None
-    res = resolve(facts(**extra), row("VENDOR", skill=wiki_skill), ingame, cross)
+    oranges = [("Vanilla", cross)] if cross is not None else None
+    res = resolve(facts(**extra), row("VENDOR", skill=wiki_skill), ingame, oranges)
     assert res.review is None
     assert res.difficulty["orange"] == orange
     assert res.difficulty["orangeFrom"] == origin
@@ -591,3 +592,111 @@ def test_taken_row_claimant_still_resolves_through_the_in_game_trainer():
 def test_match_without_owners_is_unchanged():
     idx, old, new, claims, _owners = _shared(old_rsr=25, new_rsr=40)
     assert match_wiki(new, idx, {}, claims).startswith("ambiguous: wiki row")
+
+
+# --- cross orange from several buckets, in registry order ---------------------------
+
+def test_cross_orange_falls_back_to_the_second_bucket():
+    # The caller passes only guarded oranges (WOWHEAD, equal yellow and gray); the
+    # resolver still rejects 0 and above-yellow ones, then tries the next bucket.
+    for first in (0, 60):
+        res = resolve(facts(yellow=50, gray=70, **ITEM), row("VENDOR", skill=15), None,
+                      [("Vanilla", first), ("SoD", 7)])
+        assert (res.difficulty["orange"], res.difficulty["orangeFrom"]) == (7, "CROSS")
+    res = resolve(facts(yellow=50, gray=70, **ITEM), row("VENDOR", skill=15), None,
+                  [("Vanilla", 60), ("SoD", 7)])
+    assert res.notes == ("Vanilla orange 60 above yellow 50 ignored",)
+
+
+def test_cross_orange_first_bucket_wins():
+    res = resolve(facts(yellow=50, gray=70, **ITEM), row("VENDOR", skill=15), None,
+                  [("Vanilla", 5), ("SoD", 7)])
+    assert res.difficulty["orange"] == 5 and res.notes == ()
+
+
+# --- R12: a verified trainer source from another bucket ------------------------------
+
+SOD_TRAINER = CrossTrainer(bucket="SoD", certainty="WOWHEAD")
+R12_NOTE = "trainer per SoD (WOWHEAD); not on the wiki"
+
+
+def test_cross_trainer_without_wiki_row_or_item_is_a_trainer():
+    res = resolve(facts(), "no wiki row", None, [("SoD", 40)], SOD_TRAINER)
+    assert res.review is None
+    assert res.source == {"type": "TRAINER", "certainty": "CROSS"}
+    assert res.difficulty["orange"] == 40 and res.difficulty["orangeFrom"] == "CROSS"
+    assert res.notes == (R12_NOTE,)
+
+
+def test_cross_trainer_manual_certainty_is_named_in_the_note():
+    res = resolve(facts(), "no wiki row", None, [("Vanilla", 40)],
+                  CrossTrainer(bucket="SoD", certainty="MANUAL"))
+    assert res.source == {"type": "TRAINER", "certainty": "CROSS"}
+    assert res.notes == ("trainer per SoD (MANUAL); not on the wiki",)
+
+
+@pytest.mark.parametrize("raw", ["?", ""])
+def test_cross_trainer_replaces_an_unknown_wiki_source_without_item(raw):
+    # The wiki row still gives the orange (R1 WIKI) when no bucket lends one.
+    res = resolve(facts(), row("UNKNOWN", skill=30, raw=raw), None, None, SOD_TRAINER)
+    assert res.source == {"type": "TRAINER", "certainty": "CROSS"}
+    assert (res.difficulty["orange"], res.difficulty["orangeFrom"]) == (30, "WIKI")
+    assert res.notes == (R12_NOTE,)
+
+
+def test_cross_trainer_without_an_orange_stays_excluded():
+    # R1 still decides the orange: no in-game, no item, no cross orange, no wiki row.
+    res = resolve(facts(), "no wiki row", None, None, SOD_TRAINER)
+    assert res.review == "no wiki row"
+
+
+def test_cross_trainer_ignored_when_a_teaching_item_exists():
+    # Forever's own data says an item teaches it: the two signals do not agree.
+    res = resolve(facts(rsr=10, **ITEM), "no wiki row", None, None, SOD_TRAINER)
+    assert res.review == "no wiki row"
+    res = resolve(facts(**ITEM), row("UNKNOWN", skill=30, raw="?"), None, None, SOD_TRAINER)
+    assert res.source == {"type": "UNKNOWN", "certainty": "WIKI", "itemId": 6002}
+
+
+@pytest.mark.parametrize("wiki_row, expected", [
+    pytest.param(row("DROP"), "drop per wiki but DB2 has no teaching item", id="drop"),
+    pytest.param(row("VENDOR"), "vendor per wiki but DB2 has no teaching item", id="vendor"),
+    pytest.param(row("CRAFTED", raw="Crafted"), "unsupported wiki source: 'Crafted'",
+                 id="crafted"),
+    pytest.param(row("UNKNOWN", rep_level="Honored", raw="{{text|honored|Honored}}"),
+                 "reputation level without DB2 faction", id="rep-level-only"),
+    pytest.param(row("TRAINER"), {"type": "TRAINER", "certainty": "WIKI"}, id="wiki-trainer"),
+])
+def test_cross_trainer_ignored_when_the_wiki_names_a_source(wiki_row, expected):
+    # A wiki kind other than "?" / empty still wins; R12 only fills what the wiki leaves open.
+    res = resolve(facts(), wiki_row, None, None, SOD_TRAINER)
+    if isinstance(expected, str):
+        assert res.review == expected
+    else:
+        assert res.source == expected and res.notes == ()
+
+
+@pytest.mark.parametrize("failed", [
+    "no wiki row: row 'linen cloak' taken by spell 9",
+    "ambiguous: wiki row 'linen cloak' matches spells 1, 2",
+    "bad alias: 0 wiki rows named 'x' with skill 5",
+])
+def test_cross_trainer_ignored_when_the_match_failed_otherwise(failed):
+    # Only a recipe the wiki does not describe at all: a taken or ambiguous row belongs to
+    # an old/revised pair, where the other spell may be the one the game teaches.
+    res = resolve(facts(), failed, None, [("SoD", 40)], SOD_TRAINER)
+    assert res.review == failed
+
+
+def test_cross_trainer_loses_to_the_in_game_trainer():
+    res = resolve(facts(), "no wiki row", IngameFacts(present=True, trainer_skill=20),
+                  [("SoD", 40)], SOD_TRAINER)
+    assert res.source == {"type": "TRAINER", "certainty": "INGAME"}
+    assert res.difficulty["orange"] == 20
+    assert R12_NOTE not in res.notes
+
+
+def test_cross_trainer_does_not_bring_back_a_recipe_absent_in_game():
+    res = resolve(facts(), "no wiki row", IngameFacts(present=False, trainer_skill=None),
+                  [("SoD", 40)], SOD_TRAINER)
+    assert res.review.startswith("not in game:")

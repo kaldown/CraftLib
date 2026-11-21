@@ -1,10 +1,10 @@
 """Resolve the learn skill (orange) and the source of a Forever recipe.
 
 Pure and table-driven, no I/O: the wiki enrich step gathers the facts (DB2 build,
-the matched Warcraft Wiki row, the owner's in-game capture, the Vanilla bucket's
-orange) and this module applies the fixed precedence of the plan's rulings R1, R2,
-R5 and R8. A value that cannot be established is never guessed: the recipe gets a
-review reason instead, and the generator excludes it and lists it in REVIEW.md.
+the matched Warcraft Wiki row, the owner's in-game capture, the cross buckets' oranges
+and trainer sources) and this module applies the fixed precedence of the plan's rulings
+R1, R2, R5, R8 and R12. A value that cannot be established is never guessed: the recipe
+gets a review reason instead, and the generator excludes it and lists it in REVIEW.md.
 
 Later steps read review reasons by prefix, so keep these wordings:
 "not in game:" and "no skill-up:" mark recipes that do not count as in game for the
@@ -13,6 +13,7 @@ row" (alone, or ": row '<key>' taken by spell <id>") marks a recipe the wiki doe
 describe.
 """
 from dataclasses import dataclass
+from typing import Sequence
 
 from wiki import WikiRow, normalize
 
@@ -59,6 +60,18 @@ class IngameFacts:
     """
     present: "bool | None"
     trainer_skill: "int | None"
+
+
+@dataclass(frozen=True)
+class CrossTrainer:
+    """Another bucket's verified trainer source for the same, unchanged recipe (R12).
+
+    The caller has checked it (fetch_wiki_sources.cross_trainer): source TRAINER with
+    certainty WOWHEAD or MANUAL, and that bucket's yellow AND gray equal this build's.
+    bucket is the display name the note uses (the bucket's folder, e.g. "SoD").
+    """
+    bucket: str
+    certainty: str
 
 
 @dataclass(frozen=True)
@@ -252,11 +265,14 @@ def match_wiki(facts: RecipeFacts, index, aliases, claims,
 # --- resolution --------------------------------------------------------------------
 
 def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | None",
-            cross_orange: "int | None") -> Resolution:
-    """Apply R8 (in game), R5 (skill-up), R1 (orange) then R2 (source), in that order.
+            cross_oranges: "Sequence[tuple[str, int]] | None",
+            cross_trainer: "CrossTrainer | None" = None) -> Resolution:
+    """Apply R8 (in game), R5 (skill-up), R1 (orange) then R2 + R12 (source), in that order.
 
-    wiki is the match_wiki result. cross_orange is the Vanilla bucket's WOWHEAD orange
-    for this spell, passed only when Forever's yellow AND gray equal Vanilla's.
+    wiki is the match_wiki result. cross_oranges holds (bucket name, orange) per cross
+    bucket in registry order, each a WOWHEAD orange passed only when Forever's yellow AND
+    gray equal that bucket's; the first one within 1..yellow is used. cross_trainer is
+    the R12 evidence, already checked by the caller.
     """
     # R8 first: a recipe the game does not have must not count toward coverage, so it
     # is reported as such whatever else is wrong with it.
@@ -271,11 +287,11 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
     row = wiki if isinstance(wiki, WikiRow) else None
     trainer_skill = ingame.trainer_skill if ingame is not None else None
 
-    orange = _orange(facts, wiki, row, trainer_skill, cross_orange, notes)
+    orange = _orange(facts, wiki, row, trainer_skill, cross_oranges or (), notes)
     if isinstance(orange, str):
         return Resolution(None, None, orange, tuple(notes))
     value, origin = orange
-    source = _source(facts, wiki, row, trainer_skill, notes)
+    source = _source(facts, wiki, row, trainer_skill, cross_trainer, notes)
     if isinstance(source, str):
         return Resolution(None, None, source, tuple(notes))
     difficulty = {
@@ -291,7 +307,7 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
     return Resolution(source, difficulty, None, tuple(notes))
 
 
-def _orange(facts, wiki, row, trainer_skill, cross_orange, notes):
+def _orange(facts, wiki, row, trainer_skill, cross_oranges, notes):
     """(orange, orangeFrom) per R1, or a review reason."""
     yellow = facts.yellow
     # INGAME first: the trainer's skill requirement is the game itself. Not checked
@@ -319,12 +335,13 @@ def _orange(facts, wiki, row, trainer_skill, cross_orange, notes):
                      f"above yellow {yellow} ignored")
     # CROSS before WIKI: on unchanged recipes (same yellow and gray) the wiki skill
     # disagreed with the Wowhead-verified Vanilla orange on most of them. 0 is the
-    # Vanilla "learned at 0" convention (ADR-005), not a learn skill to copy.
-    if cross_orange is not None:
-        if 0 < cross_orange <= yellow:
-            return cross_orange, "CROSS"
-        if cross_orange > yellow:
-            notes.append(f"Vanilla orange {cross_orange} above yellow {yellow} ignored")
+    # "learned at 0" convention (ADR-005), not a learn skill to copy; an unusable orange
+    # falls through to the next bucket, then to the wiki.
+    for bucket, cross in cross_oranges:
+        if 0 < cross <= yellow:
+            return cross, "CROSS"
+        if cross > yellow:
+            notes.append(f"{bucket} orange {cross} above yellow {yellow} ignored")
     if row is None:
         # No matched row: the failed match is the root cause to report.
         return wiki
@@ -340,8 +357,8 @@ def _orange(facts, wiki, row, trainer_skill, cross_orange, notes):
     return skill, "WIKI"
 
 
-def _source(facts, wiki, row, trainer_skill, notes):
-    """The source dict per R2, or a review reason."""
+def _source(facts, wiki, row, trainer_skill, cross_trainer, notes):
+    """The source dict per R2 (and R12 where the wiki leaves it open), or a review reason."""
     item = int(facts.teaching_item) if facts.teaching_item is not None else None
     # The in-game trainer list wins over every wiki kind and over a DB2 teaching item:
     # the owner saw a trainer teach it. Disagreements are kept as notes (spec D16a).
@@ -352,6 +369,11 @@ def _source(facts, wiki, row, trainer_skill, notes):
             notes.append(f"in-game trainer teaches it; DB2 also has teaching item {item}")
         return {"type": "TRAINER", "certainty": "INGAME"}
     if row is None:
+        # R12 only for a recipe the wiki does not list at all. A row taken by another
+        # spell or an ambiguous one marks an old/revised pair, where the other spell may
+        # be the one the game teaches; a bad alias needs fixing, not a fallback.
+        if wiki == NO_WIKI_ROW and item is None and cross_trainer is not None:
+            return _cross_trainer(cross_trainer, notes)
         # Spec D15: no wiki row (or an ambiguous one) -> review, never a default source.
         return wiki
     if row.currency is not None and row.currency <= 0:
@@ -404,10 +426,23 @@ def _source(facts, wiki, row, trainer_skill, notes):
         return source
     if kind == "UNKNOWN":
         if item is None:
+            # Reached only for a "?" or empty cell: a reputation level alone returned above.
+            if cross_trainer is not None:
+                return _cross_trainer(cross_trainer, notes)
             return "unknown source and no teaching item"
         return _unknown(item)
     # CRAFTED and any other text: no source type says it faithfully.
     return f"unsupported wiki source: '{row.raw_source}'"
+
+
+def _cross_trainer(cross: CrossTrainer, notes):
+    # R12: two independent signals agree - Forever's own DB2 has no teaching item for the
+    # recipe, and another bucket's verified source for the unchanged recipe (same yellow
+    # and gray) is a trainer. Measured 2026-11-21: Mining's wiki page has no recipe table
+    # and Engineering shipped nothing at skill 1-24 without it. No trainingCost: that
+    # bucket's price is not Forever's.
+    notes.append(f"trainer per {cross.bucket} ({cross.certainty}); not on the wiki")
+    return {"type": "TRAINER", "certainty": "CROSS"}
 
 
 def _unknown(item):

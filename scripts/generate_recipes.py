@@ -603,9 +603,18 @@ def extract_recipes(
             used.add(spell_id)
         if not spell_name:
             raise GenerateError(f"{where} has no name in SpellName (build data gap)")
-        for reagent_id, _count in indexes["spell_reagents"].get(spell_id, []):
-            if not indexes["item_names"].get(reagent_id):
-                raise GenerateError(f"{where}: reagent item {reagent_id} has no name in ItemSparse")
+        unnamed = [r for r, _count in indexes["spell_reagents"].get(spell_id, [])
+                   if not indexes["item_names"].get(r)]
+        if unnamed:
+            if bucket.review_policy != "exclude":
+                raise GenerateError(f"{where}: reagent item {unnamed[0]} has no name in ItemSparse")
+            # Measured on 1.60.1.71037 (2026-11-21): 8 resolved recipes with the wiki alone,
+            # 85 once SoD's trainer sources resolve more, all SoD-era spells whose reagent
+            # this build does not name. No faithful reagent line can be written, and one
+            # such recipe must not stop its whole profession. Listed in REVIEW.md.
+            skipped_recipes.append({"id": spell_id, "name": display_name,
+                                    "reason": f"reagent {unnamed[0]} has no name in this build"})
+            continue
         source = verified_recipe.get("source")
         if not source:
             raise GenerateError(f"{where} has no source data. Run fetch_wowhead_sources.py to populate.")

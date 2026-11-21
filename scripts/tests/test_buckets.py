@@ -77,8 +77,11 @@ def test_add_bucket_argument_rejects_unknown_and_missing():
     {"enrich": "wiki"},  # tbc has no wiki_pages
     {"review_policy": "maybe"},
     {"item_effect_join": "other"},
-    {"cross_orange_bucket": "nope"},
-    {"cross_orange_bucket": "tbc"},
+    {"cross_orange_buckets": ("nope",)},
+    {"cross_orange_buckets": ("tbc",)},                 # itself
+    {"cross_orange_buckets": "vanilla"},                # a str, not a tuple of names
+    {"cross_source_bucket": "nope"},
+    {"cross_source_bucket": "tbc"},                     # itself
     {"held_back": ("Jewelcrafting", "Fishing")},
     {"coverage_floor": 0.9},
     {"coverage_max_gap": 10},
@@ -119,11 +122,14 @@ def test_forever_entry_values():
                        "MinReputation", "VendorStackCount", "RequiredSkillRank",
                        "RequiredSkill")}
     assert (f.item_effect_join, f.has_tools) == ("xitem", True)
-    assert f.difficulty_certainties == ("INGAME", "DB2", "CROSS", "WIKI")
+    # MANUAL: a hand-aligned value, listed in REVIEW.md like the others (Task 8b).
+    assert f.difficulty_certainties == ("INGAME", "DB2", "CROSS", "WIKI", "MANUAL")
     assert (f.review_policy, f.allow_unknown_source, f.strict_difficulty) == ("exclude", True, True)
     assert not f.milestones_verified
-    assert (f.coverage_floor, f.coverage_max_gap) == (0.90, 10)
-    assert f.cross_orange_bucket == "vanilla" and f.held_back == ()
+    # R4 as amended 2026-11-21: floor 0.75 (was 0.90), the gap check unchanged.
+    assert (f.coverage_floor, f.coverage_max_gap) == (0.75, 10)
+    assert f.cross_orange_buckets == ("vanilla", "sod") and f.held_back == ()
+    assert f.cross_source_bucket == "sod"           # R12
     assert f.vendor_explicit_scope and not f.shipped
     assert dict(f.wiki_pages) == {
         "FirstAid": "Forever first aid recipes",
@@ -144,6 +150,7 @@ def test_existing_buckets_keep_defaults():
         assert b.item_effect_join == "parent" and b.review_policy == "raise"
         assert not b.allow_unknown_source and b.shipped
         assert not b.has_tools and b.held_back == () and not b.wiki_pages
+        assert b.cross_orange_buckets == () and b.cross_source_bucket is None
 
 
 def test_registry_rejects_wiki_pages_for_professions_outside_the_bucket():

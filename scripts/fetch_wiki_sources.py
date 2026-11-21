@@ -9,8 +9,10 @@ it gathers the facts and lets forever_resolve decide (plan rulings R1, R2, R5, R
   * the profession's Warcraft Wiki table, cached in <sources>/<Folder>/.wiki_cache/;
   * <sources>/<Folder>/wiki_aliases.json (optional): spell id -> the wiki row to use;
   * <sources>/<Folder>/ingame/<Prof>.json (optional): the owner's in-game capture;
-  * <sources>/<cross bucket folder>/<Prof>.json: the cross bucket's Wowhead orange, used
-    only when its yellow AND gray equal this build's (the resolver relies on this check).
+  * <sources>/<cross bucket folder>/<Prof>.json for every registry cross bucket: each
+    cross_orange_buckets entry lends its Wowhead orange, and the cross_source_bucket its
+    verified TRAINER source (R12), only when its yellow AND gray equal this build's (the
+    resolver relies on these checks).
 
 Writes back into <sources>/<Folder>/<Prof>.json, atomically:
   resolved -> "source" and "difficulty" from the resolver;
@@ -37,8 +39,8 @@ from pathlib import Path
 import extract_db2_sources as extract
 from buckets import ENRICH_SCRIPTS, UnknownProfessionError, add_bucket_argument, get_bucket
 from db2 import CanaryError, ColumnContractError
-from forever_resolve import (RecipeFacts, Resolution, assign_owners, build_claims,
-                             match_wiki, resolve)
+from forever_resolve import (CrossTrainer, RecipeFacts, Resolution, assign_owners,
+                             build_claims, match_wiki, resolve)
 from import_probe import ingame_facts
 from pipeline_io import atomic_write_json, load_json
 # The summary groups reviews exactly as REVIEW.md does, so the two counts agree.
@@ -103,16 +105,28 @@ def load_capture(path: Path, version: str) -> "dict | None":
     return cap
 
 
-def load_cross(sources_dir: Path, bucket, profession) -> dict:
-    """spell id -> recipe of the cross bucket's twin file; {} when there is no twin."""
-    if bucket.cross_orange_bucket is None:
-        return {}
-    cross = get_bucket(bucket.cross_orange_bucket)
+def cross_bucket_keys(bucket) -> "tuple[str, ...]":
+    """Every bucket the enrich step reads a twin file from, each once, orange ones first."""
+    keys = list(bucket.cross_orange_buckets)
+    if bucket.cross_source_bucket is not None and bucket.cross_source_bucket not in keys:
+        keys.append(bucket.cross_source_bucket)
+    return tuple(keys)
+
+
+def load_crosses(sources_dir: Path, bucket, profession) -> "dict[str, dict]":
+    """cross bucket key -> load_cross of it, for every cross_bucket_keys entry."""
+    return {k: load_cross(sources_dir, k, profession) for k in cross_bucket_keys(bucket)}
+
+
+def load_cross(sources_dir: Path, cross_key: str, profession) -> dict:
+    """spell id -> recipe of one cross bucket's twin file; {} when there is no twin."""
+    cross = get_bucket(cross_key)
     if profession.folder not in cross.professions:
         return {}  # the cross bucket never had this profession: nothing to borrow
     path = Path(sources_dir) / cross.folder / f"{profession.folder}.json"
     if not path.is_file():
-        # WHY fail, not skip: every CROSS orange would silently fall to the weaker wiki skill.
+        # WHY fail, not skip: every CROSS orange would silently fall to the weaker wiki
+        # skill, and every R12 trainer would become a review.
         raise FileNotFoundError(f"cross bucket '{cross.key}' sources not found: {path}")
     data = load_json(path)
     recipes = data.get("recipes") if isinstance(data, dict) else None
@@ -135,8 +149,52 @@ def cross_orange(cross_recipe: "dict | None", yellow: int, gray: int) -> "int | 
         return None
     orange = difficulty.get("orange")
     # 0 (ADR-005 "learned at 0") and values above yellow are passed on: the resolver
-    # rejects those itself and says so in a note.
+    # rejects those itself, says so in a note and tries the next bucket.
     return orange if type(orange) is int else None
+
+
+# R12: certainties that make a cross bucket's TRAINER source trustworthy. WOWHEAD (788
+# SoD recipes) and hand-verified MANUAL; DB2 is extract's guess and CROSS is itself
+# borrowed, so neither is independent evidence.
+_CROSS_TRAINER_CERTAINTIES = ("WOWHEAD", "MANUAL")
+
+
+def cross_trainer(cross_recipe: "dict | None", yellow: int, gray: int) -> "str | None":
+    """The certainty of the cross bucket's trainer source, or None when it may not be used.
+
+    Plan R12: only a TRAINER source with certainty WOWHEAD or MANUAL, and only when this
+    build's yellow AND gray equal the cross bucket's, i.e. the recipe is unchanged. The
+    difficulty's own certainty does not matter: yellow and gray are DB2 facts in every
+    bucket (CraftLib hard rule 9). forever_resolve.resolve trusts the caller on this.
+    """
+    recipe = cross_recipe or {}
+    source = recipe.get("source") or {}
+    if (source.get("type") != "TRAINER"
+            or source.get("certainty") not in _CROSS_TRAINER_CERTAINTIES):
+        return None
+    difficulty = recipe.get("difficulty") or {}
+    if difficulty.get("yellow") != yellow or difficulty.get("gray") != gray:
+        return None
+    return source["certainty"]
+
+
+def cross_evidence(bucket, crosses: "dict[str, dict]", facts: RecipeFacts
+                   ) -> "tuple[list[tuple[str, int]], CrossTrainer | None]":
+    """The resolver's cross inputs for one recipe: guarded oranges in registry order, and
+    the R12 trainer evidence. Named by bucket folder, as the resolver's notes show them."""
+    sid = facts.spell_id
+    oranges = []
+    for key in bucket.cross_orange_buckets:
+        orange = cross_orange(crosses[key].get(sid), facts.yellow, facts.gray)
+        if orange is not None:
+            oranges.append((get_bucket(key).folder, orange))
+    trainer = None
+    if bucket.cross_source_bucket is not None:
+        key = bucket.cross_source_bucket
+        certainty = cross_trainer(crosses[key].get(sid), facts.yellow, facts.gray)
+        if certainty is not None:
+            trainer = CrossTrainer(get_bucket(key).folder, certainty)
+    return oranges, trainer
 
 
 # --- DB2 facts ----------------------------------------------------------------------
@@ -239,6 +297,7 @@ class Summary:
     manual: int = 0
     orange_from: Counter = field(default_factory=Counter)
     source_types: Counter = field(default_factory=Counter)
+    cross_trainers: int = 0               # TRAINER sources from a cross bucket (R12)
     reviews: Counter = field(default_factory=Counter)
 
 
@@ -255,9 +314,12 @@ def check_recipes(doc, path: Path) -> None:
                 raise ValueError(f"{path}: recipe {sid}: '{key}' is not an object")
 
 
-def enrich(doc: dict, profession, indexes: dict, rows, aliases: dict,
-           capture: "dict | None", cross: dict, version: str) -> Summary:
-    """Resolve every non-MANUAL recipe of doc["recipes"] in place."""
+def enrich(doc: dict, bucket, profession, indexes: dict, rows, aliases: dict,
+           capture: "dict | None", crosses: "dict[str, dict]", version: str) -> Summary:
+    """Resolve every non-MANUAL recipe of doc["recipes"] in place.
+
+    crosses is load_crosses' result: cross bucket key -> spell id -> recipe.
+    """
     recipes = doc["recipes"]
     ranks = skill_ranks(indexes, profession, set(recipes))
     facts: dict[str, RecipeFacts] = {}
@@ -287,11 +349,14 @@ def enrich(doc: dict, profession, indexes: dict, rows, aliases: dict,
                                          f"row for spell {sid} in build {version}")
         else:
             match = match_wiki(f, index, aliases, claims, owners)
-            res = resolve(f, match, ingame[sid], cross_orange(cross.get(sid), f.yellow, f.gray))
+            oranges, trainer = cross_evidence(bucket, crosses, f)
+            res = resolve(f, match, ingame[sid], oranges, trainer)
         apply_resolution(recipe, res, f)
         if res.review is None:
             summary.orange_from[res.difficulty["orangeFrom"]] += 1
             summary.source_types[res.source["type"]] += 1
+            if res.source == {"type": "TRAINER", "certainty": "CROSS"}:
+                summary.cross_trainers += 1
         else:
             summary.reviews[review_group(res.review)] += 1
     return summary
@@ -306,6 +371,7 @@ def print_summary(path: Path, s: Summary) -> None:
         print(f"    orangeFrom {origin}: {s.orange_from.get(origin, 0)}", file=out)
     for kind in sorted(s.source_types):
         print(f"    source {kind}: {s.source_types[kind]}", file=out)
+    print(f"  TRAINER from a cross bucket (R12): {s.cross_trainers}", file=out)
     print(f"  UNKNOWN source: {s.source_types.get('UNKNOWN', 0)}", file=out)
     print(f"  Reviews: {sum(s.reviews.values())}", file=out)
     for reason, n in sorted(s.reviews.items(), key=lambda kv: (-kv[1], kv[0])):
@@ -370,19 +436,22 @@ def main(argv: "list[str] | None" = None) -> int:
         # Local inputs first, the network last: a bad file must fail before a wiki request.
         aliases = load_aliases(folder / "wiki_aliases.json")
         capture = load_capture(folder / "ingame" / f"{profession.folder}.json", version)
-        cross = load_cross(args.sources_dir, bucket, profession)
+        crosses = load_crosses(args.sources_dir, bucket, profession)
         indexes = extract.build_indexes(data_dir, bucket)
         rows = parse_rows(fetch_wikitext(title, folder / ".wiki_cache", offline=args.offline))
-        summary = enrich(doc, profession, indexes, rows, aliases, capture, cross, version)
+        summary = enrich(doc, bucket, profession, indexes, rows, aliases, capture, crosses,
+                         version)
     except (ValueError, FileNotFoundError, ColumnContractError, CanaryError, WikiError) as e:
         print(f"ERROR: bucket '{bucket.key}': {e}", file=sys.stderr)
         return 2
 
     if not rows:
         # Not an error: Mining's page has no recipe table (measured 2026-11-21). Every
-        # recipe the in-game trainer does not decide becomes a review, visibly.
+        # recipe neither the in-game trainer nor a cross bucket's trainer source (R12)
+        # decides becomes a review, visibly.
         print(f"WARNING: wiki page {title!r} has no recipe table (Item/Skill/Source); "
-              f"recipes without an in-game trainer entry become reviews", file=sys.stderr)
+              f"recipes without an in-game or cross-bucket trainer source become reviews",
+              file=sys.stderr)
     atomic_write_json(sources_file, doc)
     print_summary(sources_file, summary)
     return 0

@@ -220,13 +220,15 @@ def write_wiki_cache(sources_dir: Path, text: str = FOREVER_WIKITEXT, *,
 
 
 def write_forever_tree(root: Path, *, wikitext: str = FOREVER_WIKITEXT,
-                       vanilla_recipes: dict | None = None, **build_kw) -> tuple[Path, Path]:
+                       vanilla_recipes: dict | None = None, sod_recipes: dict | None = None,
+                       **build_kw) -> tuple[Path, Path]:
     """(artifacts dir, sources dir) ready for the Forever enrich step.
 
     root/art holds the xitem build (build_kw goes to write_build, e.g. extra_teaching);
     root/src holds the Forever Tailoring sources written by the real extract step, the
-    seeded wiki cache, and the Vanilla twin the CROSS orange is read from
-    (vanilla_recipes, empty by default so nothing is borrowed).
+    seeded wiki cache, and the Vanilla and SoD twins the CROSS orange (both) and the R12
+    trainer evidence (SoD) are read from (vanilla_recipes / sod_recipes, empty by
+    default so nothing is borrowed).
     """
     import extract_db2_sources  # the stage itself, so the fixture cannot drift from it
     art = write_build(Path(root) / "art", join="xitem", **build_kw)
@@ -237,11 +239,12 @@ def write_forever_tree(root: Path, *, wikitext: str = FOREVER_WIKITEXT,
     if rc != 0:
         raise RuntimeError(f"fixture extract failed with exit {rc}")
     write_wiki_cache(src, wikitext)
-    vanilla = src / "Vanilla"
-    vanilla.mkdir(parents=True, exist_ok=True)
-    (vanilla / "Tailoring.json").write_text(
-        json.dumps({"profession": "tailoring", "recipes": vanilla_recipes or {}}, indent=2),
-        encoding="utf-8")
+    for folder, recipes in (("Vanilla", vanilla_recipes), ("SoD", sod_recipes)):
+        twin = src / folder
+        twin.mkdir(parents=True, exist_ok=True)
+        (twin / "Tailoring.json").write_text(
+            json.dumps({"profession": "tailoring", "recipes": recipes or {}}, indent=2),
+            encoding="utf-8")
     return art, src
 
 

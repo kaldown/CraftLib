@@ -105,7 +105,10 @@ class Bucket:
     coverage_floor: float | None = None   # min share of in-game skill-up recipes shipped
     coverage_max_gap: int | None = None   # max skill points (1..299) with no shipped recipe
     wiki_pages: Mapping[str, str] = field(default=_NO_WIKI)  # profession folder -> wiki page title
-    cross_orange_bucket: str | None = None  # bucket whose WOWHEAD orange may be borrowed (CROSS)
+    # Buckets whose WOWHEAD orange may be borrowed (CROSS), tried in this order.
+    cross_orange_buckets: tuple[str, ...] = ()
+    # Bucket whose verified TRAINER source may type a recipe the wiki leaves open (R12).
+    cross_source_bucket: str | None = None
     held_back: tuple[str, ...] = ()       # professions failing the coverage gate: not written, not in TOC
     vendor_explicit_scope: bool = False   # emit only allowlist entries naming this scope explicitly
     shipped: bool = True                  # False = pipeline-only; consistency checks skip it
@@ -218,10 +221,22 @@ BUCKETS: dict[str, Bucket] = {
                            "RequiredSkill"),
         }),
         item_effect_join="xitem", has_tools=True,
-        difficulty_certainties=("INGAME", "DB2", "CROSS", "WIKI"),
+        # MANUAL: a hand-aligned value; REVIEW.md counts it like the other origins.
+        difficulty_certainties=("INGAME", "DB2", "CROSS", "WIKI", "MANUAL"),
         review_policy="exclude", allow_unknown_source=True, strict_difficulty=True,
-        milestones_verified=False, coverage_floor=0.90, coverage_max_gap=10,
-        wiki_pages=_FOREVER_WIKI_PAGES, cross_orange_bucket="vanilla",
+        # R4 as amended 2026-11-21: floor 0.75 (was 0.90). Measured that day, only Cooking
+        # and First Aid reached 0.90. Each shipped recipe is established on its own, so
+        # holding a profession back makes no shipped value truer; the gap check keeps the
+        # path continuous, and every exclusion stays listed in REVIEW.md.
+        milestones_verified=False, coverage_floor=0.75, coverage_max_gap=10,
+        # SoD after Vanilla: both carry Wowhead-verified oranges for the same Classic-era
+        # spells, and SoD fills in where Vanilla's yellow or gray differ from Forever's
+        # (or its orange is unusable, e.g. the ADR-005 "learned at 0").
+        wiki_pages=_FOREVER_WIKI_PAGES, cross_orange_buckets=("vanilla", "sod"),
+        # R12: 788 SoD recipes carry a Wowhead-verified TRAINER source. The Forever wiki
+        # has no table for Mining and none of Engineering's skill 1-24 recipes, which
+        # left those ranges without a shipped recipe (measured 2026-11-21).
+        cross_source_bucket="sod",
         held_back=(), vendor_explicit_scope=True,
         # Flipped to True by the task that generates Data/Forever; until then the
         # consistency checks (TOC, Data dirs) must not expect files that do not exist.
@@ -265,9 +280,18 @@ def _validate_registry(buckets: Mapping[str, Bucket]) -> None:
         stray_pages = [p for p in b.wiki_pages if p not in b.professions]
         if stray_pages:
             bad(f"wiki_pages names professions not in the bucket: {stray_pages}")
-        if b.cross_orange_bucket is not None and (
-                b.cross_orange_bucket not in buckets or b.cross_orange_bucket == k):
-            bad(f"invalid cross_orange_bucket '{b.cross_orange_bucket}'")
+        # A bare string would iterate as its letters: require the tuple of names.
+        if not isinstance(b.cross_orange_buckets, tuple):
+            bad(f"cross_orange_buckets must be a tuple of bucket keys, "
+                f"not {b.cross_orange_buckets!r}")
+        for name in b.cross_orange_buckets:
+            if name not in buckets or name == k:
+                bad(f"invalid cross_orange_buckets entry '{name}'")
+        if len(set(b.cross_orange_buckets)) != len(b.cross_orange_buckets):
+            bad(f"cross_orange_buckets lists a bucket twice: {b.cross_orange_buckets}")
+        if b.cross_source_bucket is not None and (
+                b.cross_source_bucket not in buckets or b.cross_source_bucket == k):
+            bad(f"invalid cross_source_bucket '{b.cross_source_bucket}'")
         stray = [p for p in b.held_back if p not in b.professions]
         if stray:
             bad(f"held_back names professions not in the bucket: {stray}")

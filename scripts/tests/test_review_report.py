@@ -64,14 +64,19 @@ def test_share_counts_only_in_game_exclusions():
     cov = rr.coverage(shipped, excluded, 300)
     assert (cov.shipped, cov.in_game, cov.known_source) == (10, 12, 9)
     assert cov.share == pytest.approx(10 / 12)
-    assert any("share" in f for f in rr.gate_failures(cov, FOREVER))
+    assert rr.gate_failures(cov, FOREVER) == []           # 10 of 12 meets the 0.75 floor
+    stricter = dataclasses.replace(FOREVER, coverage_floor=0.90)
+    assert any("share" in f for f in rr.gate_failures(cov, stricter))
 
 
 def test_share_exactly_at_the_floor_passes():
-    shipped = [_r(i, 1, 300) for i in range(9)]
+    # 3 of 4 is exactly the 0.75 floor (R4 as amended 2026-11-21); one fewer fails.
+    shipped = [_r(i, 1, 300) for i in range(3)]
     cov = rr.coverage(shipped, [("101", "a", "no wiki row")], 300)
-    assert cov.share == 0.9
+    assert cov.share == 0.75
     assert rr.gate_failures(cov, FOREVER) == []
+    below = rr.coverage(shipped[:2], [("101", "a", "no wiki row")], 300)
+    assert any("share" in f for f in rr.gate_failures(below, FOREVER))
 
 
 def test_no_gate_without_a_floor():
@@ -157,3 +162,4 @@ def test_profession_data_records_the_gate():
     ungated = dataclasses.replace(FOREVER, coverage_floor=None, coverage_max_gap=None)
     cov = rr.coverage([], [], 300)
     assert rr.profession_data(cov, False, [], [], ungated)["coverage"]["passes"] is None
+

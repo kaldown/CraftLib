@@ -70,6 +70,7 @@ def test_enrich_resolves_every_fixture_recipe(tmp_path, capsys):
     err = capsys.readouterr().err
     for line in ("orangeFrom ITEM: 2", "orangeFrom WIKI: 1", "source TRAINER: 1",
                  "source VENDOR: 1", "source REPUTATION: 1", "UNKNOWN source: 0",
+                 "TRAINER from a cross bucket (R12): 0",
                  "Reviews: 1", "no wiki row: 1"):
         assert line in err, line
 
@@ -134,13 +135,95 @@ def test_cross_orange_ignored_when_thresholds_or_certainty_differ(tmp_path, yell
     assert _recipes(src)["1001"]["difficulty"] == _diff(1, 10, 40, "WIKI")
 
 
-def test_missing_cross_bucket_sources_exits_2(tmp_path, capsys):
+@pytest.mark.parametrize("folder", ["Vanilla", "SoD"])
+def test_missing_cross_bucket_sources_exits_2(tmp_path, capsys, folder):
     art, src = write_forever_tree(tmp_path)
-    (src / "Vanilla" / "Tailoring.json").unlink()
+    (src / folder / "Tailoring.json").unlink()
     before = _sources(src).read_text(encoding="utf-8")
     assert fw.main(forever_enrich_argv(art, src)) == 2
-    assert "Vanilla" in capsys.readouterr().err
+    assert folder in capsys.readouterr().err
     assert _sources(src).read_text(encoding="utf-8") == before
+
+
+def test_cross_orange_falls_back_to_sod(tmp_path):
+    # Vanilla's yellow differs (the recipe changed there), SoD's matches: SoD lends it.
+    rc, _art, src = _run(tmp_path, vanilla_recipes={"1001": _vanilla(5, 12, 40)},
+                         sod_recipes={"1001": _vanilla(7, 10, 40)})
+    assert rc == 0
+    assert _recipes(src)["1001"]["difficulty"] == _diff(7, 10, 40, "CROSS")
+
+
+def test_cross_orange_prefers_vanilla(tmp_path):
+    rc, _art, src = _run(tmp_path, vanilla_recipes={"1001": _vanilla(5, 10, 40)},
+                         sod_recipes={"1001": _vanilla(7, 10, 40)})
+    assert rc == 0
+    assert _recipes(src)["1001"]["difficulty"] == _diff(5, 10, 40, "CROSS")
+
+
+# --- R12: SoD's verified trainer source for a recipe the wiki does not describe -----
+
+def _sod_trainer(yellow=10, gray=40, certainty="WOWHEAD", kind="TRAINER", diff="WOWHEAD"):
+    recipe = _vanilla(5, yellow, gray, diff)
+    recipe["source"] = {"type": kind, "certainty": certainty, "trainingCost": 50}
+    return recipe
+
+
+# Fixture Bolt (1001, no teaching item) loses its wiki row.
+NO_BOLT_ROW = FOREVER_WIKITEXT.replace("| [[Fixture Bolt Item]] || 1 ||  || Old || Trainer\n|-\n", "")
+
+
+def test_cross_trainer_guard_unit():
+    assert fw.cross_trainer(_sod_trainer(), 10, 40) == "WOWHEAD"
+    assert fw.cross_trainer(_sod_trainer(certainty="MANUAL"), 10, 40) == "MANUAL"
+    # The difficulty's certainty does not matter: yellow and gray are DB2 facts anywhere.
+    assert fw.cross_trainer(_sod_trainer(diff="CRAFTDUMP"), 10, 40) == "WOWHEAD"
+    assert fw.cross_trainer(_sod_trainer(certainty="DB2"), 10, 40) is None
+    assert fw.cross_trainer(_sod_trainer(certainty="CROSS"), 10, 40) is None
+    assert fw.cross_trainer(_sod_trainer(kind="DROP"), 10, 40) is None
+    assert fw.cross_trainer(_sod_trainer(yellow=12), 10, 40) is None
+    assert fw.cross_trainer(_sod_trainer(gray=45), 10, 40) is None
+    assert fw.cross_trainer({"source": {"type": "TRAINER", "certainty": "WOWHEAD"}},
+                            10, 40) is None                         # no difficulty
+    assert fw.cross_trainer(None, 10, 40) is None
+
+
+def test_sod_trainer_resolves_a_recipe_missing_from_the_wiki(tmp_path, capsys):
+    rc, _art, src = _run(tmp_path, wikitext=NO_BOLT_ROW, sod_recipes={"1001": _sod_trainer()})
+    assert rc == 0
+    assert "TRAINER from a cross bucket (R12): 1" in capsys.readouterr().err
+    r = _recipes(src)["1001"]
+    # No trainingCost: SoD's cost is not Forever's.
+    assert r["source"] == {"type": "TRAINER", "certainty": "CROSS"}
+    assert r["difficulty"] == _diff(5, 10, 40, "CROSS")
+    assert r["forever"] == {"notes": ["trainer per SoD (WOWHEAD); not on the wiki"]}
+
+
+@pytest.mark.parametrize("sod", [_sod_trainer(certainty="DB2"), _sod_trainer(yellow=12),
+                                 _sod_trainer(gray=45)],
+                         ids=["sod-db2", "sod-yellow-differs", "sod-gray-differs"])
+def test_sod_trainer_not_trusted_stays_a_review(tmp_path, sod):
+    rc, _art, src = _run(tmp_path, wikitext=NO_BOLT_ROW, sod_recipes={"1001": sod},
+                         vanilla_recipes={"1001": _vanilla(5, 10, 40)})
+    assert rc == 0
+    assert _recipes(src)["1001"]["source"]["reviewReason"] == "no wiki row"
+
+
+def test_sod_trainer_ignored_for_a_recipe_with_a_teaching_item(tmp_path):
+    # Fixture Boots (1004) has pattern 6004 and no wiki row: Forever's own data disagrees.
+    rc, _art, src = _run(tmp_path, sod_recipes={"1004": _sod_trainer(60, 100)},
+                         vanilla_recipes={"1004": _vanilla(55, 60, 100)})
+    assert rc == 0
+    assert _recipes(src)["1004"]["source"]["reviewReason"] == "no wiki row"
+
+
+def test_sod_trainer_loses_to_the_in_game_trainer(tmp_path):
+    art, src = write_forever_tree(tmp_path, wikitext=NO_BOLT_ROW,
+                                  sod_recipes={"1001": _sod_trainer()})
+    _capture(src, ["1001", "1002", "1003", "1004"], {"fixture bolt": {"skill": 3, "cost": 10}})
+    assert fw.main(forever_enrich_argv(art, src)) == 0
+    r = _recipes(src)["1001"]
+    assert r["source"] == {"type": "TRAINER", "certainty": "INGAME"}
+    assert r["difficulty"] == _diff(3, 10, 40, "INGAME")
 
 
 # --- in-game captures and aliases ---------------------------------------------------
