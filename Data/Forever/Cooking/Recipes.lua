@@ -1,6 +1,6 @@
 -- Data/Forever/Cooking/Recipes.lua
 -- Cooking recipes for Forever Classic
--- Generated from DB2 data
+-- Generated from DB2 data and the Warcraft Wiki recipe tables
 local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 

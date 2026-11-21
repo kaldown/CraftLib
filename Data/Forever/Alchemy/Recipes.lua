@@ -1,6 +1,6 @@
 -- Data/Forever/Alchemy/Recipes.lua
 -- Alchemy recipes for Forever Classic
--- Generated from DB2 data
+-- Generated from DB2 data and the Warcraft Wiki recipe tables
 local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
@@ -444,7 +444,7 @@ local recipes = {
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Alchemy Trainer",
+            npcName = "Special trainer",
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -826,7 +826,7 @@ local recipes = {
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Alchemy Trainer",
+            npcName = "Special trainer",
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1136,7 +1136,7 @@ local recipes = {
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Alchemy Trainer",
+            npcName = "Special trainer",
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1680,7 +1680,7 @@ local recipes = {
         },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Alchemy Trainer",
+            npcName = "Special trainer",
         },
         expansion = C.EXPANSION.FOREVER,
     },

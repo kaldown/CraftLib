@@ -415,6 +415,8 @@ Excluded: 41.
 
 ## Engineering
 
+Held back (not shipped): largest gap 24 skill points (1-24) above the maximum 10.
+
 Orange from: CROSS 69, ITEM 161, WIKI 1. Sources: DROP 46, QUEST 5, REPUTATION 2, TRAINER 70, UNKNOWN 53, VENDOR 55.
 
 Excluded: 44.
@@ -1043,6 +1045,8 @@ Excluded: 4.
 - 1259349 Surgical Tourniquet
 
 ## Mining
+
+Held back (not shipped): share 0.444 (4 of 9 in game) below the floor 0.75; largest gap 115 skill points (185-299) above the maximum 10.
 
 Orange from: CROSS 4. Sources: TRAINER 4.
 
