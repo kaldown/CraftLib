@@ -235,9 +235,10 @@ BUCKETS: dict[str, Bucket] = {
         # spells, and SoD fills in where Vanilla's yellow or gray differ from Forever's
         # (or its orange is unusable, e.g. the ADR-005 "learned at 0").
         wiki_pages=_FOREVER_WIKI_PAGES, cross_orange_buckets=("vanilla", "sod"),
-        # R12: 788 SoD recipes carry a Wowhead-verified TRAINER source. The Forever wiki
-        # has no table for Mining and none of Engineering's skill 1-24 recipes, which
-        # left those ranges without a shipped recipe (measured 2026-11-21).
+        # R12: 420 SoD recipes carry a verified (unflagged) Wowhead TRAINER source; the
+        # 368 flagged ones are the verifier's unverified default and are not used. The
+        # Forever wiki has no table for Mining and none of Engineering's skill 1-24
+        # recipes, which left those ranges without a shipped recipe (measured 2026-11-21).
         cross_source_bucket="sod",
         # Merchant's Favor prices (spec D16); with a currency field, cost 0 is never a price.
         allow_currency_cost=True, reject_zero_cost=True,

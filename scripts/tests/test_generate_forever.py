@@ -357,7 +357,7 @@ def test_missing_sources_file_exits_2_and_writes_no_review(tmp_path, monkeypatch
 # --- Task 8b: unnamed reagents, MANUAL difficulty ------------------------------------
 
 def test_unnamed_reagent_is_excluded_with_its_reason(tmp_path, monkeypatch):
-    # Measured 85 resolved recipes on 1.60.1.71037 whose reagent ItemSparse does not name;
+    # Measured 8 resolved recipes on 1.60.1.71037 whose reagent ItemSparse does not name;
     # under review_policy "exclude" they are listed, not a stop for the whole profession.
     rc, _art, src, out = _run(tmp_path, monkeypatch, omit_item_names={"2320"})
     assert rc == 0

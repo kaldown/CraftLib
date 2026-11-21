@@ -266,13 +266,16 @@ def match_wiki(facts: RecipeFacts, index, aliases, claims,
 
 def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | None",
             cross_oranges: "Sequence[tuple[str, int]] | None",
-            cross_trainer: "CrossTrainer | None" = None) -> Resolution:
+            cross_trainer: "CrossTrainer | None" = None, *,
+            manual_difficulty: "dict | None" = None) -> Resolution:
     """Apply R8 (in game), R5 (skill-up), R1 (orange) then R2 + R12 (source), in that order.
 
     wiki is the match_wiki result. cross_oranges holds (bucket name, orange) per cross
     bucket in registry order, each a WOWHEAD orange passed only when Forever's yellow AND
     gray equal that bucket's; the first one within 1..yellow is used. cross_trainer is
-    the R12 evidence, already checked by the caller.
+    the R12 evidence, already checked by the caller. manual_difficulty is a hand-aligned
+    (certainty MANUAL) difficulty the recipe already has: R1 is skipped, it comes back
+    unchanged, and only the source is resolved.
     """
     # R8 first: a recipe the game does not have must not count toward coverage, so it
     # is reported as such whatever else is wrong with it.
@@ -286,6 +289,15 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
     notes: list[str] = []
     row = wiki if isinstance(wiki, WikiRow) else None
     trainer_skill = ingame.trainer_skill if ingame is not None else None
+
+    if manual_difficulty is not None:
+        # Hand-verified state wins over any automatic value (as a MANUAL source does in the
+        # enrich step); what disagrees with it is kept visible as a note.
+        _manual_notes(facts, manual_difficulty, trainer_skill, notes)
+        source = _source(facts, wiki, row, trainer_skill, cross_trainer, notes)
+        if isinstance(source, str):
+            return Resolution(None, None, source, tuple(notes))
+        return Resolution(source, manual_difficulty, None, tuple(notes))
 
     orange = _orange(facts, wiki, row, trainer_skill, cross_oranges or (), notes)
     if isinstance(orange, str):
@@ -305,6 +317,17 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
         "orangeFrom": origin,
     }
     return Resolution(source, difficulty, None, tuple(notes))
+
+
+def _manual_notes(facts, manual, trainer_skill, notes):
+    yg = (manual.get("yellow"), manual.get("gray"))
+    if yg != (facts.yellow, facts.gray):
+        # A new build may have moved the thresholds since the value was aligned.
+        notes.append(f"MANUAL difficulty yellow/gray {yg[0]}/{yg[1]} differ from DB2 "
+                     f"{facts.yellow}/{facts.gray}")
+    if trainer_skill is not None and trainer_skill != manual.get("orange"):
+        notes.append(f"in-game trainer skill {trainer_skill} differs from MANUAL orange "
+                     f"{manual.get('orange')}")
 
 
 def _orange(facts, wiki, row, trainer_skill, cross_oranges, notes):
@@ -373,7 +396,7 @@ def _source(facts, wiki, row, trainer_skill, cross_trainer, notes):
         # spell or an ambiguous one marks an old/revised pair, where the other spell may
         # be the one the game teaches; a bad alias needs fixing, not a fallback.
         if wiki == NO_WIKI_ROW and item is None and cross_trainer is not None:
-            return _cross_trainer(cross_trainer, notes)
+            return _cross_trainer(cross_trainer, None, notes)
         # Spec D15: no wiki row (or an ambiguous one) -> review, never a default source.
         return wiki
     if row.currency is not None and row.currency <= 0:
@@ -426,22 +449,25 @@ def _source(facts, wiki, row, trainer_skill, cross_trainer, notes):
         return source
     if kind == "UNKNOWN":
         if item is None:
-            # Reached only for a "?" or empty cell: a reputation level alone returned above.
+            # Reached for a "?", empty or template-only cell (wiki.classify_source strips
+            # templates it does not read); a reputation level or a cost returned above.
             if cross_trainer is not None:
-                return _cross_trainer(cross_trainer, notes)
+                return _cross_trainer(cross_trainer, row, notes)
             return "unknown source and no teaching item"
         return _unknown(item)
     # CRAFTED and any other text: no source type says it faithfully.
     return f"unsupported wiki source: '{row.raw_source}'"
 
 
-def _cross_trainer(cross: CrossTrainer, notes):
+def _cross_trainer(cross: CrossTrainer, row, notes):
     # R12: two independent signals agree - Forever's own DB2 has no teaching item for the
     # recipe, and another bucket's verified source for the unchanged recipe (same yellow
     # and gray) is a trainer. Measured 2026-11-21: Mining's wiki page has no recipe table
     # and Engineering shipped nothing at skill 1-24 without it. No trainingCost: that
     # bucket's price is not Forever's.
-    notes.append(f"trainer per {cross.bucket} ({cross.certainty}); not on the wiki")
+    # The note says which half of the wiki evidence was missing: the row or its source.
+    wiki_state = "no wiki row" if row is None else "wiki source unknown"
+    notes.append(f"trainer per {cross.bucket} ({cross.certainty}); {wiki_state}")
     return {"type": "TRAINER", "certainty": "CROSS"}
 
 

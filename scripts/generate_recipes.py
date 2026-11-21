@@ -623,10 +623,10 @@ def extract_recipes(
         if unnamed:
             if bucket.review_policy != "exclude":
                 raise GenerateError(f"{where}: reagent item {unnamed[0]} has no name in ItemSparse")
-            # Measured on 1.60.1.71037 (2026-11-21): 8 resolved recipes with the wiki alone,
-            # 85 once SoD's trainer sources resolve more, all SoD-era spells whose reagent
-            # this build does not name. No faithful reagent line can be written, and one
-            # such recipe must not stop its whole profession. Listed in REVIEW.md.
+            # Measured on 1.60.1.71037 (2026-11-21): 8 resolved recipes, all SoD-era spells
+            # whose reagent this build does not name. No faithful reagent line can be
+            # written, and one such recipe must not stop its whole profession. Listed in
+            # REVIEW.md.
             skipped_recipes.append({"id": spell_id, "name": display_name,
                                     "reason": f"reagent {unnamed[0]} has no name in this build"})
             continue

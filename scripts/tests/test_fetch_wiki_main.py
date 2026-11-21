@@ -162,10 +162,19 @@ def test_cross_orange_prefers_vanilla(tmp_path):
 
 # --- R12: SoD's verified trainer source for a recipe the wiki does not describe -----
 
-def _sod_trainer(yellow=10, gray=40, certainty="WOWHEAD", kind="TRAINER", diff="WOWHEAD"):
+def _sod_trainer(yellow=10, gray=40, certainty="WOWHEAD", kind="TRAINER", diff="WOWHEAD",
+                 **flags):
     recipe = _vanilla(5, yellow, gray, diff)
-    recipe["source"] = {"type": kind, "certainty": certainty, "trainingCost": 50}
+    recipe["source"] = {"type": kind, "certainty": certainty, "trainingCost": 50, **flags}
     return recipe
+
+
+# The SoD verifier's default when Wowhead shows no acquisition: TRAINER kept, but flagged
+# (368 of the 788 SoD TRAINER/WOWHEAD records; none of them has a training cost).
+SOD_UNVERIFIED = {"name": "Fixture Bolt",
+                  "source": {"type": "TRAINER", "certainty": "WOWHEAD", "needsReview": True},
+                  "difficulty": {"orange": 5, "yellow": 10, "green": 25, "gray": 40,
+                                 "certainty": "WOWHEAD"}}
 
 
 # Fixture Bolt (1001, no teaching item) loses its wiki row.
@@ -185,6 +194,10 @@ def test_cross_trainer_guard_unit():
     assert fw.cross_trainer({"source": {"type": "TRAINER", "certainty": "WOWHEAD"}},
                             10, 40) is None                         # no difficulty
     assert fw.cross_trainer(None, 10, 40) is None
+    # A flagged record is the verifier's unverified default, not trainer evidence.
+    assert fw.cross_trainer(SOD_UNVERIFIED, 10, 40) is None
+    assert fw.cross_trainer(_sod_trainer(needsReview=True), 10, 40) is None
+    assert fw.cross_trainer(_sod_trainer(reviewReason="no acquisition"), 10, 40) is None
 
 
 def test_sod_trainer_resolves_a_recipe_missing_from_the_wiki(tmp_path, capsys):
@@ -195,12 +208,13 @@ def test_sod_trainer_resolves_a_recipe_missing_from_the_wiki(tmp_path, capsys):
     # No trainingCost: SoD's cost is not Forever's.
     assert r["source"] == {"type": "TRAINER", "certainty": "CROSS"}
     assert r["difficulty"] == _diff(5, 10, 40, "CROSS")
-    assert r["forever"] == {"notes": ["trainer per SoD (WOWHEAD); not on the wiki"]}
+    assert r["forever"] == {"notes": ["trainer per SoD (WOWHEAD); no wiki row"]}
 
 
 @pytest.mark.parametrize("sod", [_sod_trainer(certainty="DB2"), _sod_trainer(yellow=12),
-                                 _sod_trainer(gray=45)],
-                         ids=["sod-db2", "sod-yellow-differs", "sod-gray-differs"])
+                                 _sod_trainer(gray=45), SOD_UNVERIFIED],
+                         ids=["sod-db2", "sod-yellow-differs", "sod-gray-differs",
+                              "sod-needs-review"])
 def test_sod_trainer_not_trusted_stays_a_review(tmp_path, sod):
     rc, _art, src = _run(tmp_path, wikitext=NO_BOLT_ROW, sod_recipes={"1001": sod},
                          vanilla_recipes={"1001": _vanilla(5, 10, 40)})
@@ -452,3 +466,40 @@ def test_empty_wiki_page_warns_and_reviews_everything(tmp_path, capsys):
     assert "WARNING" in capsys.readouterr().err
     r = _recipes(src)
     assert {x["source"]["type"] for x in r.values()} == {"UNRESOLVED"}
+
+
+
+# --- a hand-aligned (MANUAL) difficulty survives a re-enrich -------------------------
+
+MANUAL_DIFF = {"orange": 12, "yellow": 20, "green": 40, "gray": 60, "certainty": "MANUAL"}
+
+
+def test_manual_difficulty_survives_and_the_source_is_resolved(tmp_path):
+    # 1002 would take ITEM 15; the hand-aligned 12 stays, the wiki still gives the source.
+    art, src = write_forever_tree(tmp_path)
+    _edit(src, lambda r: r["1002"].__setitem__("difficulty", dict(MANUAL_DIFF)))
+    for _ in range(2):          # a second run must not lose it either
+        assert fw.main(forever_enrich_argv(art, src)) == 0
+        r = _recipes(src)["1002"]
+        assert r["difficulty"] == MANUAL_DIFF
+        assert r["source"] == {"type": "VENDOR", "certainty": "WIKI", "itemId": 6002,
+                               "cost": 500}
+
+
+def test_manual_difficulty_survives_a_review(tmp_path, capsys):
+    # 1004 has no wiki row: its source becomes a review, the MANUAL difficulty is kept.
+    art, src = write_forever_tree(tmp_path)
+    manual = {"orange": 55, "yellow": 60, "green": 80, "gray": 100, "certainty": "MANUAL"}
+    _edit(src, lambda r: r["1004"].__setitem__("difficulty", dict(manual)))
+    assert fw.main(forever_enrich_argv(art, src)) == 0
+    r = _recipes(src)["1004"]
+    assert r["source"]["reviewReason"] == "no wiki row"
+    assert r["difficulty"] == manual
+
+
+def test_manual_difficulty_counts_in_the_summary(tmp_path, capsys):
+    art, src = write_forever_tree(tmp_path)
+    _edit(src, lambda r: r["1002"].__setitem__("difficulty", dict(MANUAL_DIFF)))
+    assert fw.main(forever_enrich_argv(art, src)) == 0
+    err = capsys.readouterr().err
+    assert "orangeFrom MANUAL: 1" in err and "orangeFrom ITEM: 1" in err

@@ -617,7 +617,8 @@ def test_cross_orange_first_bucket_wins():
 # --- R12: a verified trainer source from another bucket ------------------------------
 
 SOD_TRAINER = CrossTrainer(bucket="SoD", certainty="WOWHEAD")
-R12_NOTE = "trainer per SoD (WOWHEAD); not on the wiki"
+R12_NOTE = "trainer per SoD (WOWHEAD); no wiki row"
+R12_ROW_NOTE = "trainer per SoD (WOWHEAD); wiki source unknown"
 
 
 def test_cross_trainer_without_wiki_row_or_item_is_a_trainer():
@@ -632,7 +633,7 @@ def test_cross_trainer_manual_certainty_is_named_in_the_note():
     res = resolve(facts(), "no wiki row", None, [("Vanilla", 40)],
                   CrossTrainer(bucket="SoD", certainty="MANUAL"))
     assert res.source == {"type": "TRAINER", "certainty": "CROSS"}
-    assert res.notes == ("trainer per SoD (MANUAL); not on the wiki",)
+    assert res.notes == ("trainer per SoD (MANUAL); no wiki row",)
 
 
 @pytest.mark.parametrize("raw", ["?", ""])
@@ -641,7 +642,8 @@ def test_cross_trainer_replaces_an_unknown_wiki_source_without_item(raw):
     res = resolve(facts(), row("UNKNOWN", skill=30, raw=raw), None, None, SOD_TRAINER)
     assert res.source == {"type": "TRAINER", "certainty": "CROSS"}
     assert (res.difficulty["orange"], res.difficulty["orangeFrom"]) == (30, "WIKI")
-    assert res.notes == (R12_NOTE,)
+    # The recipe IS on the wiki; only its source is not.
+    assert res.notes == (R12_ROW_NOTE,)
 
 
 def test_cross_trainer_without_an_orange_stays_excluded():
@@ -700,3 +702,47 @@ def test_cross_trainer_does_not_bring_back_a_recipe_absent_in_game():
     res = resolve(facts(), "no wiki row", IngameFacts(present=False, trainer_skill=None),
                   [("SoD", 40)], SOD_TRAINER)
     assert res.review.startswith("not in game:")
+
+
+
+# --- a hand-aligned (MANUAL) difficulty: only the source is resolved -----------------
+
+MANUAL_DIFF = {"orange": 33, "yellow": 95, "green": 115, "gray": 135, "certainty": "MANUAL"}
+
+
+def test_manual_difficulty_is_kept_and_only_the_source_resolved():
+    res = resolve(facts(rsr=55, **ITEM), row("VENDOR", skill=80), None, [("Vanilla", 20)],
+                  manual_difficulty=MANUAL_DIFF)
+    assert res.source == {"type": "VENDOR", "certainty": "WIKI", "itemId": 6002, "cost": 500}
+    assert res.difficulty == MANUAL_DIFF            # not ITEM 55, CROSS 20 or WIKI 80
+    assert res.notes == ()
+
+
+def test_manual_difficulty_needs_no_automatic_orange():
+    # No item, no cross orange, a wiki skill above yellow: no orange could be resolved,
+    # but the hand-aligned one stands and the wiki row still gives the source.
+    res = resolve(facts(), row("TRAINER", skill=120), None, None, manual_difficulty=MANUAL_DIFF)
+    assert res.source == {"type": "TRAINER", "certainty": "WIKI"}
+    assert res.difficulty == MANUAL_DIFF
+
+
+def test_manual_difficulty_does_not_resolve_a_missing_source():
+    res = resolve(facts(), "no wiki row", None, None, manual_difficulty=MANUAL_DIFF)
+    assert res.review == "no wiki row"
+
+
+def test_manual_difficulty_still_honours_absence_in_game():
+    res = resolve(facts(), row("TRAINER"), IngameFacts(present=False, trainer_skill=None), None,
+                  manual_difficulty=MANUAL_DIFF)
+    assert res.review.startswith("not in game:")
+
+
+def test_manual_difficulty_notes_disagreeing_facts():
+    # Kept either way (a person aligned it), but REVIEW-visible notes say what disagrees.
+    res = resolve(facts(yellow=90), row("TRAINER", skill=40), IngameFacts(True, 40), None,
+                  manual_difficulty=MANUAL_DIFF)
+    assert res.source == {"type": "TRAINER", "certainty": "INGAME"}
+    assert res.difficulty == MANUAL_DIFF
+    assert res.notes == (
+        "MANUAL difficulty yellow/gray 95/135 differ from DB2 90/135",
+        "in-game trainer skill 40 differs from MANUAL orange 33")

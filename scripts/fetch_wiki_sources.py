@@ -18,7 +18,9 @@ Writes back into <sources>/<Folder>/<Prof>.json, atomically:
   resolved -> "source" and "difficulty" from the resolver;
   review   -> source {"type": "UNRESOLVED", "certainty": "REVIEW", "needsReview": true,
               "reviewReason": <reason>} (+ "itemId" of the teaching item), no "difficulty";
-  MANUAL   -> untouched: hand-verified state wins over any automatic value.
+  MANUAL   -> a MANUAL source: the recipe is untouched (hand-verified state wins over any
+              automatic value); a MANUAL difficulty alone: kept as is, only the source is
+              resolved (or becomes a review, the difficulty still kept).
 Resolver notes go to "forever": {"notes": [...]} and are rewritten on every run. No PENDING
 source survives this step, so the assert-no-pending gate after it passes by construction.
 
@@ -50,7 +52,7 @@ from wiki import WikiError, fetch_wikitext, index_rows, normalize, parse_rows
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # Summary order of orangeFrom: the R1 precedence, strongest first.
-_ORANGE_ORDER = ("INGAME", "ITEM", "CROSS", "WIKI")
+_ORANGE_ORDER = ("INGAME", "ITEM", "CROSS", "WIKI", "MANUAL")
 
 
 # --- optional and cross-bucket inputs -----------------------------------------------
@@ -153,17 +155,18 @@ def cross_orange(cross_recipe: "dict | None", yellow: int, gray: int) -> "int | 
     return orange if type(orange) is int else None
 
 
-# R12: certainties that make a cross bucket's TRAINER source trustworthy. WOWHEAD (788
-# SoD recipes) and hand-verified MANUAL; DB2 is extract's guess and CROSS is itself
-# borrowed, so neither is independent evidence.
+# R12: certainties that make a cross bucket's TRAINER source trustworthy. WOWHEAD and
+# hand-verified MANUAL; DB2 is extract's guess and CROSS is itself borrowed, so neither
+# is independent evidence.
 _CROSS_TRAINER_CERTAINTIES = ("WOWHEAD", "MANUAL")
 
 
 def cross_trainer(cross_recipe: "dict | None", yellow: int, gray: int) -> "str | None":
     """The certainty of the cross bucket's trainer source, or None when it may not be used.
 
-    Plan R12: only a TRAINER source with certainty WOWHEAD or MANUAL, and only when this
-    build's yellow AND gray equal the cross bucket's, i.e. the recipe is unchanged. The
+    Plan R12: only an unflagged TRAINER source with certainty WOWHEAD or MANUAL, and only
+    when this build's yellow AND gray equal the cross bucket's, i.e. the recipe is
+    unchanged. The
     difficulty's own certainty does not matter: yellow and gray are DB2 facts in every
     bucket (CraftLib hard rule 9). forever_resolve.resolve trusts the caller on this.
     """
@@ -171,6 +174,12 @@ def cross_trainer(cross_recipe: "dict | None", yellow: int, gray: int) -> "str |
     source = recipe.get("source") or {}
     if (source.get("type") != "TRAINER"
             or source.get("certainty") not in _CROSS_TRAINER_CERTAINTIES):
+        return None
+    if source.get("needsReview") or source.get("reviewReason"):
+        # The SoD verifier keeps TRAINER and flags it when Wowhead shows no acquisition at
+        # all (verify_trainer_sources.classify): 368 of the 788 SoD TRAINER/WOWHEAD records,
+        # none with a training cost. That is a default, not evidence; the 420 unflagged
+        # ones (each with its trainingCost) are the verified trainers.
         return None
     difficulty = recipe.get("difficulty") or {}
     if difficulty.get("yellow") != yellow or difficulty.get("gray") != gray:
@@ -275,8 +284,11 @@ def apply_resolution(recipe: dict, res: Resolution, facts: "RecipeFacts | None")
     else:
         recipe["source"] = review_source(res.review, facts)
         # WHY drop it: a review has no trustworthy thresholds, and one left from an earlier
-        # run (or from Wowhead) would read as if it had.
-        recipe.pop("difficulty", None)
+        # run (or from Wowhead) would read as if it had. A hand-aligned (MANUAL) one is
+        # kept: it is true whatever the source turns out to be, and the review excludes
+        # the recipe anyway until the source is aligned.
+        if (recipe.get("difficulty") or {}).get("certainty") != "MANUAL":
+            recipe.pop("difficulty", None)
     forever = dict(recipe.get("forever") or {})
     # Rewritten every run: a note about an input that has changed since must not linger.
     if res.notes:
@@ -309,7 +321,7 @@ def check_recipes(doc, path: Path) -> None:
         # Named per spell: a bare AttributeError would hide which entry is broken.
         if not isinstance(recipe, dict):
             raise ValueError(f"{path}: recipe {sid} is not an object")
-        for key in ("source", "forever"):
+        for key in ("source", "difficulty", "forever"):
             if recipe.get(key) is not None and not isinstance(recipe[key], dict):
                 raise ValueError(f"{path}: recipe {sid}: '{key}' is not an object")
 
@@ -350,10 +362,16 @@ def enrich(doc: dict, bucket, profession, indexes: dict, rows, aliases: dict,
         else:
             match = match_wiki(f, index, aliases, claims, owners)
             oranges, trainer = cross_evidence(bucket, crosses, f)
-            res = resolve(f, match, ingame[sid], oranges, trainer)
+            # A MANUAL difficulty keeps its thresholds; only the source is resolved (a
+            # recipe whose source is MANUAL too was skipped above, untouched).
+            difficulty = recipe.get("difficulty") or {}
+            manual = difficulty if difficulty.get("certainty") == "MANUAL" else None
+            res = resolve(f, match, ingame[sid], oranges, trainer, manual_difficulty=manual)
         apply_resolution(recipe, res, f)
         if res.review is None:
-            summary.orange_from[res.difficulty["orangeFrom"]] += 1
+            # A MANUAL difficulty carries no orangeFrom; it counts under its certainty.
+            summary.orange_from[res.difficulty.get("orangeFrom")
+                                or res.difficulty["certainty"]] += 1
             summary.source_types[res.source["type"]] += 1
             if res.source == {"type": "TRAINER", "certainty": "CROSS"}:
                 summary.cross_trainers += 1
