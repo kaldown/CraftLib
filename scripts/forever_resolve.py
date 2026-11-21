@@ -18,6 +18,7 @@ CURRENCY_NAME = "Merchant's Favor"
 NOT_IN_GAME = "not in game: absent from the in-game recipe list"
 NO_SKILL_UP = "no skill-up: yellow == gray"
 NO_WIKI_ROW = "no wiki row"
+UNPRICED_VENDOR_NOTE = "wiki says vendor; price not in DB2 or wiki"
 
 # orangeFrom -> difficulty.certainty. An item rank is a DB2 fact, hence DB2.
 _CERTAINTY = {"INGAME": "INGAME", "ITEM": "DB2", "CROSS": "CROSS", "WIKI": "WIKI"}
@@ -265,9 +266,18 @@ def _source(facts, wiki, row, trainer_skill, notes):
         # Spec D15: no wiki row (or an ambiguous one) -> review, never a default source.
         return wiki
     if row.rep_level is not None:
-        # The wiki rep level alone carries no faction id or name to emit.
         if facts.min_faction <= 0:
-            return "reputation level without DB2 faction"
+            # The wiki rep level alone carries no faction id or name to emit.
+            if item is None:
+                return "reputation level without DB2 faction"
+            # R2 as amended 2026-11-21: UNKNOWN with the item, not excluded. All 20
+            # such rows (Alchemy, Merchant's Favor; MinFactionID 0 on 1.60.1.71037) name
+            # a commerce faction DB2 does not carry; excluding them would hide recipes
+            # the player has already learned, and UNKNOWN makes no claim about the cost.
+            price = f" for {row.currency} {CURRENCY_NAME}" if row.currency is not None else ""
+            notes.append(f"wiki: {row.rep_level} with a commerce faction{price}; "
+                         f"faction not in DB2")
+            return _unknown(item)
         if row.rep_level != facts.rep_level:
             notes.append(f"wiki reputation level {row.rep_level} differs from DB2 "
                          f"{facts.rep_level}")
@@ -276,8 +286,7 @@ def _source(facts, wiki, row, trainer_skill, notes):
         # R2 keeps the wiki kind (no faction-gated source type fits a drop or a quest),
         # but the DB2 faction requirement is a fact the data would otherwise lose
         # (15 recipes on 1.60.1.71037 with the wiki of 2026-11-21), so REVIEW.md lists it.
-        notes.append(f"DB2 faction {facts.min_faction} {facts.faction_name} {facts.rep_level} "
-                     f"on teaching item {item}; wiki source '{row.raw_source}'")
+        notes.append(_faction_note(facts, item, row))
     if kind in _TRAINER_KINDS:
         # D15 covers only trainer/automatic recipes WITHOUT an item; with one, wiki and
         # DB2 disagree on how it is learned and neither may silently win.
@@ -290,7 +299,7 @@ def _source(facts, wiki, row, trainer_skill, notes):
             source["npcName"] = "Special trainer"
         return source
     if kind == "VENDOR":
-        return _vendor(facts, row, item)
+        return _vendor(facts, row, item, notes)
     if kind == "DROP":
         if item is None:
             return "drop per wiki but DB2 has no teaching item"
@@ -301,16 +310,25 @@ def _source(facts, wiki, row, trainer_skill, notes):
             source["itemId"] = item
         return source
     if kind == "UNKNOWN":
-        # R3: UNKNOWN ships only with the item, so it stays "usable when owned or
-        # bought" and is never a claim about where it comes from or what it costs.
         if item is None:
             return "unknown source and no teaching item"
-        return {"type": "UNKNOWN", "certainty": "WIKI", "itemId": item}
+        return _unknown(item)
     # CRAFTED and any other text: no source type says it faithfully.
     return f"unsupported wiki source: '{row.raw_source}'"
 
 
-def _vendor(facts, row, item):
+def _unknown(item):
+    # R3: UNKNOWN ships only with the item, so it stays "usable when owned or bought"
+    # and is never a claim about where it comes from or what it costs.
+    return {"type": "UNKNOWN", "certainty": "WIKI", "itemId": item}
+
+
+def _faction_note(facts, item, row):
+    return (f"DB2 faction {facts.min_faction} {facts.faction_name} {facts.rep_level} "
+            f"on teaching item {item}; wiki source '{row.raw_source}'")
+
+
+def _vendor(facts, row, item, notes):
     if item is None:
         return "vendor per wiki but DB2 has no teaching item"
     if row.currency is not None:
@@ -322,7 +340,14 @@ def _vendor(facts, row, item):
         # does, and BuyPrice is then the true price.
         price = {"cost": facts.buy_price}
     else:
-        return f"vendor per wiki but teaching item {item} has no BuyPrice"
+        # R2 as amended 2026-11-21: no price in DB2 (BuyPrice 0) or on the wiki
+        # (measured 75 recipes, e.g. "Plans: Justice Greaves"). A VENDOR without a cost
+        # reads as free downstream, and excluding would hide recipes the player has
+        # already learned, so ship UNKNOWN with the item and say what the wiki claimed.
+        notes.append(UNPRICED_VENDOR_NOTE)
+        if facts.min_faction > 0:
+            notes.append(_faction_note(facts, item, row))
+        return _unknown(item)
     if facts.min_faction > 0:
         # A DB2 faction on the item makes a plain wiki "Vendor" a reputation vendor.
         if not facts.faction_name or not facts.rep_level:

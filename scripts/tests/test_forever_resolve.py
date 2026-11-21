@@ -46,8 +46,8 @@ R2_CASES = [
                  {"type": "VENDOR", "certainty": "WIKI", "itemId": 6002, "cost": 500},
                  id="vendor-buyprice"),
     pytest.param(row("VENDOR"), dict(teaching_item="6002", buy_price=0),
-                 "vendor per wiki but teaching item 6002 has no BuyPrice",
-                 id="vendor-without-buyprice"),
+                 {"type": "UNKNOWN", "certainty": "WIKI", "itemId": 6002},
+                 id="vendor-without-buyprice-is-unknown"),
     pytest.param(row("VENDOR"), {},
                  "vendor per wiki but DB2 has no teaching item", id="vendor-without-item"),
     pytest.param(row("VENDOR"), REP,
@@ -77,7 +77,12 @@ R2_CASES = [
                  id="currency-vendor-db2-faction-is-reputation"),
     pytest.param(row("VENDOR", currency=60, rep_level="Honored",
                      raw="{{text|honored|Honored}}; {{cost|mfvr=60}}"), ITEM,
-                 "reputation level without DB2 faction", id="wiki-rep-without-db2-faction"),
+                 {"type": "UNKNOWN", "certainty": "WIKI", "itemId": 6002},
+                 id="wiki-rep-without-db2-faction-is-unknown"),
+    pytest.param(row("VENDOR", currency=60, rep_level="Honored",
+                     raw="{{text|honored|Honored}}; {{cost|mfvr=60}}"), {},
+                 "reputation level without DB2 faction",
+                 id="wiki-rep-without-db2-faction-or-item"),
     pytest.param(row("DROP", raw="Drop; [[Rath'mael]]"), ITEM,
                  {"type": "DROP", "certainty": "WIKI", "itemId": 6002}, id="drop"),
     pytest.param(row("DROP"), {},
@@ -369,4 +374,36 @@ def test_db2_faction_on_non_vendor_source_adds_note(kind):
     res = resolve(facts(**REP), row(kind, raw="?" if kind == "UNKNOWN" else kind.title()),
                   None, None)
     assert res.source["type"] == kind
+    assert any("Thorium Brotherhood" in n and "6003" in n for n in res.notes)
+
+
+# R2 as amended 2026-11-21: a price or faction the data cannot establish ships as
+# UNKNOWN (never a free VENDOR), with a note saying what the wiki claimed.
+AMENDED_UNKNOWN = [
+    pytest.param(row("VENDOR"), dict(teaching_item="6002", buy_price=0),
+                 ["wiki says vendor; price not in DB2 or wiki"], id="unpriced-vendor"),
+    pytest.param(row("VENDOR", currency=180, rep_level="Honored",
+                     raw="{{text|honored|Honored}}; {{cost|mfvr=180}}"), ITEM,
+                 ["wiki: Honored with a commerce faction for 180 Merchant's Favor; "
+                  "faction not in DB2"], id="faction-less-rep-with-currency"),
+    pytest.param(row("VENDOR", rep_level="Friendly",
+                     raw="{{text|friendly|Friendly}}; Vendor"), ITEM,
+                 ["wiki: Friendly with a commerce faction; faction not in DB2"],
+                 id="faction-less-rep-without-currency"),
+]
+
+
+@pytest.mark.parametrize("wiki_row, extra, notes", AMENDED_UNKNOWN)
+def test_amended_unknown_source_and_note(wiki_row, extra, notes):
+    res = resolve(facts(**extra), wiki_row, None, None)
+    assert res.review is None
+    assert res.source == {"type": "UNKNOWN", "certainty": "WIKI", "itemId": 6002}
+    assert "cost" not in res.source and "currency" not in res.source
+    assert list(res.notes) == notes
+
+
+def test_unpriced_vendor_with_db2_faction_is_unknown_and_keeps_faction_note():
+    res = resolve(facts(**dict(REP, buy_price=0)), row("VENDOR"), None, None)
+    assert res.source == {"type": "UNKNOWN", "certainty": "WIKI", "itemId": 6003}
+    assert "wiki says vendor; price not in DB2 or wiki" in res.notes
     assert any("Thorium Brotherhood" in n and "6003" in n for n in res.notes)
