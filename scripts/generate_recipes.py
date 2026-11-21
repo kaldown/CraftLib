@@ -810,7 +810,11 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
         where = f"spell {recipe['id']} ({recipe['name']!r})"
         source_lines = [f'            type = C.SOURCE_TYPE.{source["type"]},']
         if source["type"] == "TRAINER":
-            source_lines.append(f'            npcName = "Any {prof_name} Trainer",')
+            # WHY the source's own npcName first: the Forever wiki marks some recipes
+            # "Special trainer" (R2), and the generic text would send the player to any
+            # trainer. Only Forever sources carry npcName, so Classic output is unchanged.
+            npc_name = source.get("npcName") or f"Any {prof_name} Trainer"
+            source_lines.append(f'            npcName = "{escape_lua_string(npc_name)}",')
             if "trainingCost" in source:
                 source_lines.append(f'            trainingCost = {source["trainingCost"]},')
         elif source["type"] == "REPUTATION":

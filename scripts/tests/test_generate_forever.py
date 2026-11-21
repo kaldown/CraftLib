@@ -127,6 +127,41 @@ def test_tool_without_a_name_exits_2(tmp_path, monkeypatch, capsys, tree, missin
     assert not _lua_path(out).exists()
 
 
+# R2: the wiki's "Special trainer" reaches the source as npcName.
+SPECIAL_ROW = FOREVER_WIKITEXT.replace("[[Fixture Bolt Item]] || 1 ||  || Old || Trainer",
+                                       "[[Fixture Bolt Item]] || 1 ||  || Old || Special trainer")
+
+
+def test_special_trainer_keeps_its_npc_name(tmp_path, monkeypatch):
+    rc, _art, _src, out = _run(tmp_path, monkeypatch, wikitext=SPECIAL_ROW)
+    assert rc == 0
+    source = _source_part(_block(_lua_path(out).read_text(), 1001))
+    assert "type = C.SOURCE_TYPE.TRAINER," in source
+    assert 'npcName = "Special trainer",' in source
+    # WHY: the generic text would send the player to any trainer.
+    assert "Any Tailoring Trainer" not in source
+
+
+def test_trainer_without_npc_name_keeps_the_generic_text(tmp_path, monkeypatch):
+    rc, _art, _src, out = _run(tmp_path, monkeypatch)
+    assert rc == 0
+    source = _source_part(_block(_lua_path(out).read_text(), 1001))
+    assert 'npcName = "Any Tailoring Trainer",' in source
+
+
+def test_trainer_npc_name_is_escaped():
+    src = _source_part(_block(_lua({"type": "TRAINER", "certainty": "WIKI",
+                                    "npcName": 'Old "Bob" \\ Smith'}), 2001))
+    assert 'npcName = "Old \\"Bob\\" \\\\ Smith",' in src
+
+
+def test_classic_trainer_lines_are_unchanged():
+    lua = _lua({"type": "TRAINER", "certainty": "WOWHEAD", "trainingCost": 50}, bucket="tbc")
+    assert ('            type = C.SOURCE_TYPE.TRAINER,\n'
+            '            npcName = "Any Tailoring Trainer",\n'
+            '            trainingCost = 50,\n        },') in lua
+
+
 def test_unknown_source_emits_type_and_item(tmp_path, monkeypatch):
     rc, _art, src, out = _run(tmp_path, monkeypatch, wikitext=UNKNOWN_ROW)
     assert rc == 0
