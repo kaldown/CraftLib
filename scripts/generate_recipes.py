@@ -19,8 +19,8 @@ from pathlib import Path
 
 import db2
 import review_report
-from buckets import (BUCKETS, PROFESSIONS, Profession, UnknownProfessionError,
-                     add_bucket_argument, get_bucket)
+from buckets import (BUCKETS, ENRICH_SCRIPTS, PROFESSIONS, Profession,
+                     UnknownProfessionError, add_bucket_argument, get_bucket)
 from db2 import CanaryError, ColumnContractError
 from pipeline_io import atomic_write_text, load_json
 
@@ -444,18 +444,29 @@ def difficulty_skip_reason(bucket, difficulty) -> str:
             f"({', '.join(bucket.difficulty_certainties)})")
 
 
-def check_price(where: str, source: dict) -> None:
+def check_price(where: str, source: dict, bucket) -> None:
     """A VENDOR/REPUTATION source must carry a copper cost or a currency price.
 
     WHY fail loud: a missing price reads as free downstream and corrupts the cheapest
     path (PROJECT MANTRA). A currency recipe (Forever's Merchant's Favor) has no copper
     price, so it carries no cost key at all; cost = 0 next to it would read as free.
+    Currency is accepted only from a bucket whose registry entry allows it, and cost = 0
+    is refused where the registry says so (reject_zero_cost).
     """
     currency = source.get("currency")
     if "cost" not in source and currency is None:
         raise GenerateError(f"{where} {source['type']} source has neither cost nor currency; "
                             f"align before release")
+    if currency is not None and not bucket.allow_currency_cost:
+        # A Classic consumer has never seen the field; it would read the recipe as unpriced.
+        raise GenerateError(f"{where}: bucket '{bucket.key}' has no currency prices, but the "
+                            f"source has currency {currency!r}; align before release")
     if currency is None:
+        # WHY only where the registry says so: the Classic buckets ship cost-0 vendor and
+        # reputation rows today (backlog, Phase 1 audit) and must regenerate byte for byte.
+        if bucket.reject_zero_cost and not (type(source["cost"]) is int and source["cost"] > 0):
+            raise GenerateError(f"{where}: cost {source['cost']!r} would read as free; give "
+                                f"the true price, a currency, or exclude the recipe")
         return
     ok = (isinstance(currency, dict) and isinstance(currency.get("name"), str)
           and currency["name"].strip()
@@ -468,8 +479,8 @@ def check_price(where: str, source: dict) -> None:
                             f"free; drop the cost key or align it")
 
 
-def price_lines(where: str, source: dict) -> list[str]:
-    check_price(where, source)
+def price_lines(where: str, source: dict, bucket) -> list[str]:
+    check_price(where, source, bucket)
     lines = []
     if "cost" in source:
         lines.append(f'            cost = {source["cost"]},')
@@ -560,21 +571,25 @@ def extract_recipes(
         where = (f"bucket '{bucket.key}' {profession.name} spell {spell_id} "
                  f"({spell_name or verified_recipe.get('name', '?')!r})")
 
+        # One name for every skipped entry, so a recipe without a SpellName row is still
+        # named in the log and in REVIEW.md (the sources keep extract's name for it).
+        display_name = spell_name or verified_recipe.get("name") or f"spell {spell_id}"
+
         # WHY exclude_seasonal: the Era build's Wowhead /classic listview returns BOTH
         # Vanilla and Season-of-Discovery recipes; SoD-only ones carry seasonId==2. These
         # do not exist on a non-SoD Era/Vanilla client and must be excluded from the Vanilla
         # bucket (registry field exclude_seasonal).
         if exclude_seasonal and verified_recipe.get("seasonId"):
-            skipped_recipes.append({"id": spell_id, "name": spell_name, "reason": "seasonal (seasonId)"})
+            skipped_recipes.append({"id": spell_id, "name": display_name,
+                                    "reason": "seasonal (seasonId)"})
             continue
 
         if spell_id in exceptions.exclude:
             used.add(spell_id)
-            skipped_recipes.append({"id": spell_id, "name": spell_name,
+            skipped_recipes.append({"id": spell_id, "name": display_name,
                                     "reason": f"excluded: {exceptions.exclude[spell_id]}"})
             continue
 
-        display_name = spell_name or verified_recipe.get("name") or f"spell {spell_id}"
         if bucket.review_policy == "exclude":
             # Pre-flight Ruling 2: a review (UNRESOLVED, no difficulty) is excluded with its
             # own reason BEFORE the difficulty and source-type gates, or REVIEW.md would
@@ -616,10 +631,12 @@ def extract_recipes(
                                     "reason": f"reagent {unnamed[0]} has no name in this build"})
             continue
         source = verified_recipe.get("source")
+        # The bucket's own enrich step fills the source (the wiki step for Forever).
+        enrich_script = f"{ENRICH_SCRIPTS[bucket.enrich]}.py"
         if not source:
-            raise GenerateError(f"{where} has no source data. Run fetch_wowhead_sources.py to populate.")
+            raise GenerateError(f"{where} has no source data. Run {enrich_script} to populate.")
         if source.get("certainty") == "PENDING":
-            raise GenerateError(f"{where} has a PENDING source. Run fetch_wowhead_sources.py to verify.")
+            raise GenerateError(f"{where} has a PENDING source. Run {enrich_script} to verify.")
         if source.get("type") not in emittable_source_types(bucket):
             raise GenerateError(f"{where} has source type {source.get('type')!r}, which cannot be emitted; "
                                 f"add it to generate_exceptions.json exclude with a reason, or align the source")
@@ -636,7 +653,7 @@ def extract_recipes(
             if missing:
                 raise GenerateError(f"{where} REPUTATION source is missing {missing}; align before release")
         if source["type"] in ("VENDOR", "REPUTATION"):
-            check_price(where, source)
+            check_price(where, source, bucket)
         if source["type"] == UNKNOWN_SOURCE_TYPE and "itemId" not in source:
             # R3: UNKNOWN is "usable when owned or bought"; without the item there is
             # nothing to own or buy, and the recipe would read as freely available.
@@ -802,12 +819,12 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
             source_lines.append(f'            factionName = "{escaped_faction}",')
             source_lines.append(f'            level = "{source["level"]}",')
             source_lines.append(f'            itemId = {source["itemId"]},')
-            source_lines += price_lines(where, source)
+            source_lines += price_lines(where, source, bucket)
         elif source["type"] == "VENDOR":
             if "itemId" not in source:
                 raise GenerateError(f"VENDOR source for {where} missing itemId; align before release")
             source_lines.append(f'            itemId = {source["itemId"]},')
-            source_lines += price_lines(where, source)
+            source_lines += price_lines(where, source, bucket)
         elif source["type"] == "DROP":
             if "itemId" in source:
                 source_lines.append(f'            itemId = {source["itemId"]},')

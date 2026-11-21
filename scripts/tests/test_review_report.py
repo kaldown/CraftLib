@@ -163,3 +163,12 @@ def test_profession_data_records_the_gate():
     cov = rr.coverage([], [], 300)
     assert rr.profession_data(cov, False, [], [], ungated)["coverage"]["passes"] is None
 
+
+def test_render_formats_the_share_from_the_counts(tmp_path):
+    # 373 / 429 = 0.86946: rounding the stored 0.8695 again would print 87.0%.
+    cov = rr.Coverage(shipped=373, in_game=429, share=373 / 429, known_source=373,
+                      max_gap=0, gap=None)
+    rr.write_profession(tmp_path / "review", "Tailoring",
+                        rr.profession_data(cov, False, [], [], FOREVER))
+    assert "| Tailoring | 373 | 429 | 86.9% | 86.9% | 0 | no |" in rr.render(tmp_path / "review",
+                                                                           FOREVER)

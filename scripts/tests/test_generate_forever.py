@@ -15,6 +15,7 @@ import pytest
 
 import buckets
 import generate_recipes as gr
+import review_report as rr
 from pipeline_io import load_json
 from tests.fixture_build import (FIXTURE_VERSION, FOREVER_WIKITEXT, write_build,
                                  write_resolved_forever, write_sources)
@@ -383,3 +384,87 @@ def test_manual_difficulty_still_passes_the_strict_check(tmp_path, monkeypatch, 
     assert rc == 2
     assert "strict difficulty" in capsys.readouterr().err
 
+
+# --- Task 7 review minors ------------------------------------------------------------
+
+def test_currency_is_refused_on_a_bucket_without_currency_costs():
+    with pytest.raises(gr.GenerateError) as e:
+        _lua({"type": "VENDOR", "certainty": "WOWHEAD", "itemId": 7, "currency": _FAVOR},
+             bucket="tbc")
+    assert "2001" in str(e.value) and "currency" in str(e.value)
+
+
+@pytest.mark.parametrize("source", [
+    {"type": "VENDOR", "certainty": "MANUAL", "itemId": 7, "cost": 0},
+    {**_REP, "cost": 0},
+], ids=["vendor", "reputation"])
+def test_forever_zero_cost_is_refused(source):
+    # cost = 0 reads as a free recipe; Forever has a currency field for non-gold prices.
+    with pytest.raises(gr.GenerateError) as e:
+        _lua(source)
+    assert "2001" in str(e.value)
+
+
+def test_classic_zero_cost_lines_are_unchanged():
+    # The Classic buckets ship cost-0 rows today (backlog); they must regenerate byte for byte.
+    lua = _lua({"type": "VENDOR", "certainty": "WOWHEAD", "itemId": 7, "cost": 0}, bucket="tbc")
+    assert "            itemId = 7,\n            cost = 0,\n        }," in lua
+
+
+def test_classic_vendor_without_cost_still_exits_2(tmp_path, capsys):
+    write_build(tmp_path / "art")
+    src = write_sources(tmp_path / "src", "TBC", recipes_override={1002: {
+        "name": "Fixture Vest",
+        "source": {"type": "VENDOR", "certainty": "WOWHEAD", "itemId": 6002},
+        "difficulty": {"orange": 15, "yellow": 20, "green": 40, "gray": 60,
+                       "certainty": "WOWHEAD"}}})
+    rc = gr.main(["--bucket", "tbc", "--profession", "Tailoring", "--version", FIXTURE_VERSION,
+                  "--data-dir", str(tmp_path / "art"), "--sources-dir", str(src),
+                  "--output-dir", str(tmp_path / "out")])
+    assert rc == 2
+    err = capsys.readouterr().err
+    assert "1002" in err and "neither cost nor currency" in err
+
+
+def test_no_source_error_names_the_bucket_enrich_script(tmp_path, monkeypatch, capsys):
+    rc, *_ = _run(tmp_path, monkeypatch, edit=lambda r: r["1001"].__setitem__("source", {}))
+    assert rc == 2
+    err = capsys.readouterr().err
+    assert "fetch_wiki_sources.py" in err and "fetch_wowhead" not in err
+
+
+def test_exception_excluded_recipe_keeps_its_name(tmp_path, monkeypatch):
+    # Without a SpellName row the review must still name the recipe (the sources name).
+    _bucket(monkeypatch, **NO_GATE)
+    art, src = write_resolved_forever(tmp_path, omit_spell_names={"1001"})
+    (src / "generate_exceptions.json").write_text(json.dumps(
+        {"forever": {"exclude": [{"spells": [1001], "reason": "test reason"}]}}))
+    assert _generate(art, src, tmp_path / "out") == 0
+    assert [1001, "Unknown-1001", "excluded: test reason"] in _review(src)["excluded"]
+
+
+def test_seasonal_skip_keeps_its_name(tmp_path, capsys):
+    write_build(tmp_path / "art", omit_spell_names={"1001"})
+    src = write_sources(tmp_path / "src", "Vanilla", recipes_override={1001: {
+        "name": "Fixture Bolt", "seasonId": 2,
+        "source": {"type": "TRAINER", "certainty": "WOWHEAD"},
+        "difficulty": {"orange": 1, "yellow": 10, "green": 25, "gray": 40,
+                       "certainty": "WOWHEAD"}}})
+    rc = gr.main(["--bucket", "vanilla", "--profession", "Tailoring",
+                  "--version", FIXTURE_VERSION, "--data-dir", str(tmp_path / "art"),
+                  "--sources-dir", str(src), "--output-dir", str(tmp_path / "out")])
+    assert rc == 0
+    assert "1001: Fixture Bolt (seasonal (seasonId))" in capsys.readouterr().err
+
+
+def test_one_profession_run_keeps_the_other_review_files(tmp_path, monkeypatch):
+    _bucket(monkeypatch, **NO_GATE)
+    art, src = write_resolved_forever(tmp_path)
+    cov = rr.coverage([], [("1", "Elsewhere", "no wiki row")], 300)
+    rr.write_profession(src / "Forever" / "review", "FirstAid",
+                        rr.profession_data(cov, False, [], [("1", "Elsewhere", "no wiki row")],
+                                           buckets.get_bucket("forever")))
+    assert _generate(art, src, tmp_path / "out") == 0
+    md = (src / "Forever" / "REVIEW.md").read_text()
+    assert "| FirstAid | 0 | 1 |" in md and "| Tailoring |" in md
+    assert "- 1 Elsewhere: no wiki row" in md

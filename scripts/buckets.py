@@ -109,6 +109,8 @@ class Bucket:
     cross_orange_buckets: tuple[str, ...] = ()
     # Bucket whose verified TRAINER source may type a recipe the wiki leaves open (R12).
     cross_source_bucket: str | None = None
+    allow_currency_cost: bool = False     # a VENDOR/REPUTATION price may be a currency
+    reject_zero_cost: bool = False        # cost = 0 is refused (it reads as free)
     held_back: tuple[str, ...] = ()       # professions failing the coverage gate: not written, not in TOC
     vendor_explicit_scope: bool = False   # emit only allowlist entries naming this scope explicitly
     shipped: bool = True                  # False = pipeline-only; consistency checks skip it
@@ -237,6 +239,8 @@ BUCKETS: dict[str, Bucket] = {
         # has no table for Mining and none of Engineering's skill 1-24 recipes, which
         # left those ranges without a shipped recipe (measured 2026-11-21).
         cross_source_bucket="sod",
+        # Merchant's Favor prices (spec D16); with a currency field, cost 0 is never a price.
+        allow_currency_cost=True, reject_zero_cost=True,
         held_back=(), vendor_explicit_scope=True,
         # Flipped to True by the task that generates Data/Forever; until then the
         # consistency checks (TOC, Data dirs) must not expect files that do not exist.

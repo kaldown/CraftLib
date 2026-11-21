@@ -162,8 +162,10 @@ def load_profession(path: Path) -> dict:
 
 # --- REVIEW.md -----------------------------------------------------------------------
 
-def _pct(x: float) -> str:
-    return f"{x * 100:.1f}%"
+def _pct(n: int, d: int) -> str:
+    # From the counts, not the stored 4-digit share: rounding twice turns 373/429
+    # (86.946%) into 87.0%.
+    return f"{n / d * 100:.1f}%" if d else "0.0%"
 
 
 def _gap(cov: dict) -> str:
@@ -212,8 +214,9 @@ def render(review_dir: Path, bucket) -> str:
     ]
     for prof, data in profs:
         c = data["coverage"]
-        out.append(f"| {prof} | {c['shipped']} | {c['inGame']} | {_pct(c['share'])} | "
-                   f"{_pct(c['knownSourceShare'])} | {_gap(c)} | "
+        out.append(f"| {prof} | {c['shipped']} | {c['inGame']} | "
+                   f"{_pct(c['shipped'], c['inGame'])} | "
+                   f"{_pct(c['knownSource'], c['inGame'])} | {_gap(c)} | "
                    f"{'yes' if data['heldBack'] else 'no'} |")
     if missing:
         out += ["", f"Not generated yet: {', '.join(missing)}."]

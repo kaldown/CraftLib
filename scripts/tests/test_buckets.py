@@ -130,6 +130,7 @@ def test_forever_entry_values():
     assert (f.coverage_floor, f.coverage_max_gap) == (0.75, 10)
     assert f.cross_orange_buckets == ("vanilla", "sod") and f.held_back == ()
     assert f.cross_source_bucket == "sod"           # R12
+    assert f.allow_currency_cost and f.reject_zero_cost
     assert f.vendor_explicit_scope and not f.shipped
     assert dict(f.wiki_pages) == {
         "FirstAid": "Forever first aid recipes",
@@ -151,6 +152,7 @@ def test_existing_buckets_keep_defaults():
         assert not b.allow_unknown_source and b.shipped
         assert not b.has_tools and b.held_back == () and not b.wiki_pages
         assert b.cross_orange_buckets == () and b.cross_source_bucket is None
+        assert not b.allow_currency_cost and not b.reject_zero_cost
 
 
 def test_registry_rejects_wiki_pages_for_professions_outside_the_bucket():
