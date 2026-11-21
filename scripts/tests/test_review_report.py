@@ -140,13 +140,19 @@ def test_source_notes_refuses_a_malformed_list(bad):
     assert "20" in str(e.value)
 
 
-def test_review_file_without_notes_is_refused(tmp_path):
-    path = rr.write_profession(tmp_path / "review", "Tailoring", _data())
+def test_review_file_from_before_notes_says_they_are_not_recorded(tmp_path):
+    # Generating one profession re-renders REVIEW.md from every review file; one written
+    # before notes existed must neither stop the run nor read as "no notes".
+    review = tmp_path / "review"
+    path = rr.write_profession(review, "Tailoring", _data(notes=NOTES))
+    rr.write_profession(review, "Alchemy", _data())
     data = rr.load_profession(path)
     del data["notes"]
     path.write_text(__import__("json").dumps(data), encoding="utf-8")
-    with pytest.raises(ValueError, match="notes"):
-        rr.load_profession(path)
+    md = rr.render(review, FOREVER)
+    assert "### Notes (not recorded)\n\nThis review file predates notes; regenerate " \
+           "Tailoring." in _section(md, "Tailoring")
+    assert "### Notes (0)" in _section(md, "Alchemy")
 
 
 def test_render_says_the_milestones_are_unconfirmed(tmp_path):

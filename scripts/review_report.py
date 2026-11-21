@@ -186,8 +186,10 @@ def write_profession(review_dir: Path, folder: str, data: dict) -> Path:
 
 def load_profession(path: Path) -> dict:
     data = load_json(path)
-    keys = ("coverage", "heldBack", "excluded", "notes", "unknownSource", "orangeFrom",
-            "sourceTypes")
+    # "notes" is not required: a file written before notes existed stays readable, and
+    # render says its notes were not recorded (generating one profession re-renders
+    # REVIEW.md from every file, so a strict check would stop the run that updates it).
+    keys = ("coverage", "heldBack", "excluded", "unknownSource", "orangeFrom", "sourceTypes")
     if not isinstance(data, dict) or any(k not in data for k in keys):
         raise ValueError(f"{path}: not a review file (expected keys {', '.join(keys)})")
     return data
@@ -290,8 +292,12 @@ def render(review_dir: Path, bucket) -> str:
         unknown = data["unknownSource"]
         out += ["", f"### UNKNOWN source ({len(unknown)})", ""]
         out += [f"- {sid} {name}" for sid, name in unknown] or ["none"]
-        notes = data["notes"]
-        out += ["", f"### Notes ({len(notes)})", ""]
-        out += [f"- {sid} {name}: {note}" for sid, name, note in notes] or ["none"]
+        notes = data.get("notes")
+        if notes is None:
+            out += ["", "### Notes (not recorded)", "",
+                    f"This review file predates notes; regenerate {prof}."]
+        else:
+            out += ["", f"### Notes ({len(notes)})", ""]
+            out += [f"- {sid} {name}: {note}" for sid, name, note in notes] or ["none"]
     out.append("")
     return "\n".join(out)
