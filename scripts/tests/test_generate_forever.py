@@ -127,7 +127,7 @@ def test_tool_without_a_name_exits_2(tmp_path, monkeypatch, capsys, tree, missin
     assert not _lua_path(out).exists()
 
 
-# R2: the wiki's "Special trainer" reaches the source as npcName.
+# The wiki's "Special trainer" reaches the source as npcName.
 SPECIAL_ROW = FOREVER_WIKITEXT.replace("[[Fixture Bolt Item]] || 1 ||  || Old || Trainer",
                                        "[[Fixture Bolt Item]] || 1 ||  || Old || Special trainer")
 
@@ -316,7 +316,7 @@ def test_failing_coverage_exits_2_and_still_writes_the_review(tmp_path, monkeypa
     assert rc == 2
     err = capsys.readouterr().err
     assert "Tailoring" in err and "coverage" in err
-    # 3 of 4 meets the 0.75 floor (R4 as amended); the gap above skill 79 still fails.
+    # 3 of 4 meets the 0.75 floor; the gap above skill 79 still fails.
     assert "80-299" in err and "below the floor" not in err
     assert not _lua_path(out).exists()
     cov = _review(src)["coverage"]

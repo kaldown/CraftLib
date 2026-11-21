@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import the owner's in-game probe reports (plan R8) into tracked JSON captures.
+"""Import the owner's in-game probe reports into tracked JSON captures.
 
 The probe (/lpprobe on the WoW Forever client) prints a plain-text report; chat cannot
 be copied out of the client, so the owner pastes it into a file and runs:
@@ -202,7 +202,8 @@ def parse_report(text: str) -> ProbeReport:
                 r.currencies[c.group(1)] = {"id": _int_or_none(c.group(3))}
     r.profession = _profession(base, child)
     if "profession window" in r.sections:
-        # R8 excludes every DB2 recipe absent from a capture, so a partial list is worse than none.
+        # Every DB2 recipe absent from a capture is excluded as not in game, so a partial
+        # list is worse than none.
         if window_errors:
             r.recipe_error = window_errors[0]
         elif declared is not None and declared != len(r.recipes):
@@ -318,7 +319,8 @@ def ingame_facts(capture: "dict | None", spell_id: str, spell_name: str) -> "Ing
     if not capture:
         return None
     recipes = capture.get("recipes") or {}
-    # An empty recipe list means "not captured", not "nothing exists" (R8 would exclude all).
+    # An empty recipe list means "not captured", not "nothing exists" (that would exclude
+    # every recipe as not in game).
     present = (spell_id in recipes) if recipes else None
     key = normalize(spell_name)
     entry = (capture.get("trainer") or {}).get(key)

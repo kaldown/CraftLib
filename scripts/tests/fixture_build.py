@@ -229,8 +229,8 @@ def write_forever_tree(root: Path, *, wikitext: str = FOREVER_WIKITEXT,
 
     root/art holds the xitem build (build_kw goes to write_build, e.g. extra_teaching);
     root/src holds the Forever Tailoring sources written by the real extract step, the
-    seeded wiki cache, and the Vanilla and SoD twins the CROSS orange (both) and the R12
-    trainer evidence (SoD) are read from (vanilla_recipes / sod_recipes, empty by
+    seeded wiki cache, and the Vanilla and SoD twins the CROSS orange (both) and the
+    cross-bucket trainer evidence (SoD) are read from (vanilla_recipes / sod_recipes, empty by
     default so nothing is borrowed).
     """
     import extract_db2_sources  # the stage itself, so the fixture cannot drift from it

@@ -192,8 +192,8 @@ def choose_teaching_item(bucket, candidates: list[str], item_details: dict[str, 
     if bucket.item_effect_join == "parent":
         # WHY the last row: the Classic extract has always let the last ItemEffect row
         # win, and the re-extract stability test pins the Classic sources to that rule.
-        # Several-item spells are Phase 2's D9; a different pick here would change
-        # Classic sources outside this plan.
+        # Choosing among several items is left to a later change for the Classic
+        # buckets; a different pick here would change their tracked sources.
         return present[-1]
     if bucket.item_effect_join == "xitem":
         # WHY drop items that do not require the profession, and placeholders: on
@@ -204,8 +204,8 @@ def choose_teaching_item(bucket, candidates: list[str], item_details: dict[str, 
         present = [c for c in present
                    if _item_field(c, item_details[c], "RequiredSkill") in skill_lines
                    and not PLACEHOLDER_NAME.search(item_details[c].get("Display_lang") or "")]
-        # WHY the lowest positive RequiredSkillRank (plan ruling R1): that is the rank
-        # the recipe item really asks for. Ties and all-zero fall back to the lowest
+        # WHY the lowest positive RequiredSkillRank: that is the rank the recipe item
+        # really asks for, and it can become the learn skill (orange). Ties and all-zero fall back to the lowest
         # numeric id so the pick is stable across runs.
         ranked = [(_required_skill_rank(c, item_details[c]), int(c)) for c in present]
         if not ranked:

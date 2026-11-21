@@ -60,7 +60,7 @@ def test_enrich_resolves_every_fixture_recipe(tmp_path, capsys):
         "factionName": THORIUM, "level": "Honored",
         "currency": {"name": "Merchant's Favor", "amount": 60}}
     assert r["1003"]["difficulty"] == _diff(35, 40, 80, "ITEM")
-    # Ruling 2: a review replaces the DB2 source (never left PENDING) and drops difficulty.
+    # A review replaces the DB2 source (never left PENDING) and drops difficulty.
     assert r["1004"]["source"] == {"type": "UNRESOLVED", "certainty": "REVIEW",
                                    "needsReview": True, "reviewReason": "no wiki row",
                                    "itemId": 6004}
@@ -70,7 +70,7 @@ def test_enrich_resolves_every_fixture_recipe(tmp_path, capsys):
     err = capsys.readouterr().err
     for line in ("orangeFrom ITEM: 2", "orangeFrom WIKI: 1", "source TRAINER: 1",
                  "source VENDOR: 1", "source REPUTATION: 1", "UNKNOWN source: 0",
-                 "TRAINER from a cross bucket (R12): 0",
+                 "TRAINER from a cross bucket: 0",
                  "Reviews: 1", "no wiki row: 1"):
         assert line in err, line
 
@@ -160,7 +160,7 @@ def test_cross_orange_prefers_vanilla(tmp_path):
     assert _recipes(src)["1001"]["difficulty"] == _diff(5, 10, 40, "CROSS")
 
 
-# --- R12: SoD's verified trainer source for a recipe the wiki does not describe -----
+# --- SoD's verified trainer source for a recipe the wiki does not describe ---------
 
 def _sod_trainer(yellow=10, gray=40, certainty="WOWHEAD", kind="TRAINER", diff="WOWHEAD",
                  **flags):
@@ -203,7 +203,7 @@ def test_cross_trainer_guard_unit():
 def test_sod_trainer_resolves_a_recipe_missing_from_the_wiki(tmp_path, capsys):
     rc, _art, src = _run(tmp_path, wikitext=NO_BOLT_ROW, sod_recipes={"1001": _sod_trainer()})
     assert rc == 0
-    assert "TRAINER from a cross bucket (R12): 1" in capsys.readouterr().err
+    assert "TRAINER from a cross bucket: 1" in capsys.readouterr().err
     r = _recipes(src)["1001"]
     # No trainingCost: SoD's cost is not Forever's.
     assert r["source"] == {"type": "TRAINER", "certainty": "CROSS"}

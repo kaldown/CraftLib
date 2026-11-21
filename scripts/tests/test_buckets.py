@@ -126,12 +126,12 @@ def test_forever_entry_values():
     assert f.difficulty_certainties == ("INGAME", "DB2", "CROSS", "WIKI", "MANUAL")
     assert (f.review_policy, f.allow_unknown_source, f.strict_difficulty) == ("exclude", True, True)
     assert not f.milestones_verified
-    # R4 as amended 2026-11-21: floor 0.75 (was 0.90), the gap check unchanged.
+    # Floor 0.75 (first set at 0.90), the gap check unchanged.
     assert (f.coverage_floor, f.coverage_max_gap) == (0.75, 10)
     assert f.cross_orange_buckets == ("vanilla", "sod")
     # Measured 2026-11-21: both fail the coverage gate until an in-game capture.
     assert f.held_back == ("Engineering", "Mining")
-    assert f.cross_source_bucket == "sod"           # R12
+    assert f.cross_source_bucket == "sod"           # SoD's verified trainer sources
     assert f.allow_currency_cost and f.reject_zero_cost
     assert f.vendor_explicit_scope and f.shipped
     assert dict(f.wiki_pages) == {

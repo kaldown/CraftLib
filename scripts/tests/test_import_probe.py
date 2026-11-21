@@ -1,4 +1,4 @@
-"""Import of the owner's /lpprobe reports into tracked in-game captures (plan R8)."""
+"""Import of the owner's /lpprobe reports into tracked in-game captures."""
 import json
 
 import pytest

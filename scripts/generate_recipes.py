@@ -29,9 +29,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 EMITTABLE_SOURCE_TYPES = ("TRAINER", "REPUTATION", "VENDOR", "DROP", "QUEST", "DISCOVERY", "STARTER")
-# Plan ruling R3: UNKNOWN ("source not established; usable only when learned, owned or
-# bought") ships only from a bucket whose registry entry allows it (Forever); every other
-# bucket still fails loud on it.
+# UNKNOWN ("source not established; usable only when learned, owned or bought") ships
+# only from a bucket whose registry entry allows it (Forever); every other bucket still
+# fails loud on it.
 UNKNOWN_SOURCE_TYPE = "UNKNOWN"
 EXCEPTION_CATEGORIES = {"exclude": "exclude", "reagentless": "reagentless",
                         "shipNeedsReview": "ship_needs_review"}
@@ -157,9 +157,9 @@ def compute_vendor_prices(allowlist: dict, item_details: dict, scope: str, *,
     for item_id_str, meta in allowlist.items():
         flavors = meta.get("flavors")
         if explicit:
-            # Plan ruling R7: an unscoped entry was verified on the Classic clients, which
-            # says nothing about a vendor on another ruleset (Forever). Until an entry names
-            # the scope it is absent, so the first Forever table is empty, never borrowed.
+            # An unscoped entry was verified on the Classic clients, which says nothing
+            # about a vendor on another ruleset (Forever). Until an entry names the scope
+            # it is absent, so the first Forever table is empty, never borrowed.
             if not flavors or scope not in flavors:
                 continue
         # WHY skip (not fail) when flavor-scoped out: a DEFAULT-only reagent (e.g. Simple
@@ -261,8 +261,8 @@ def load_all_data(data_dir: Path, bucket) -> dict:
     tables = ["SpellName", "SpellEffect", "SpellReagents", "ItemSparse",
               "SkillLineAbility", "Faction"]
     if bucket.has_tools:
-        # Only tool buckets read these (plan ruling R6): the Classic paths must not start
-        # depending on two more tables, and their Lua must stay byte for byte.
+        # Only tool buckets read these: the Classic paths must not start depending on two
+        # more tables, and their Lua must stay byte for byte.
         tables += ["SpellTotems", "TotemCategory"]
     for table in tables:
         data[table] = db2.load_table(data_dir, table, bucket)
@@ -449,8 +449,8 @@ def check_price(where: str, source: dict, bucket) -> None:
     """A VENDOR/REPUTATION source must carry a copper cost or a currency price.
 
     WHY fail loud: a missing price reads as free downstream and corrupts the cheapest
-    path (PROJECT MANTRA). A currency recipe (Forever's Merchant's Favor) has no copper
-    price, so it carries no cost key at all; cost = 0 next to it would read as free.
+    path. A currency recipe (Forever's Merchant's Favor) has no copper price, so it
+    carries no cost key at all; cost = 0 next to it would read as free.
     Currency is accepted only from a bucket whose registry entry allows it, and cost = 0
     is refused where the registry says so (reject_zero_cost).
     """
@@ -464,7 +464,7 @@ def check_price(where: str, source: dict, bucket) -> None:
                             f"source has currency {currency!r}; align before release")
     if currency is None:
         # WHY only where the registry says so: the Classic buckets ship cost-0 vendor and
-        # reputation rows today (backlog, Phase 1 audit) and must regenerate byte for byte.
+        # reputation rows today (a known gap) and must regenerate byte for byte.
         if bucket.reject_zero_cost and not (type(source["cost"]) is int and source["cost"] > 0):
             raise GenerateError(f"{where}: cost {source['cost']!r} would read as free; give "
                                 f"the true price, a currency, or exclude the recipe")
@@ -493,7 +493,8 @@ def price_lines(where: str, source: dict, bucket) -> list[str]:
 
 
 def check_strict_difficulty(where: str, difficulty: dict) -> None:
-    """Plan ruling R5: thresholds a learn skill and DB2's yellow/gray can both be true of."""
+    """Thresholds a learn skill and DB2's yellow/gray can both be true of: orange 1 or
+    more and at most yellow, green the midpoint of yellow and gray."""
     values = [difficulty.get(k) for k in ("orange", "yellow", "green", "gray")]
     if any(type(v) is not int for v in values):
         raise GenerateError(f"{where} fails the strict difficulty check: thresholds {values} "
@@ -592,8 +593,8 @@ def extract_recipes(
             continue
 
         if bucket.review_policy == "exclude":
-            # Pre-flight Ruling 2: a review (UNRESOLVED, no difficulty) is excluded with its
-            # own reason BEFORE the difficulty and source-type gates, or REVIEW.md would
+            # A recipe under review (UNRESOLVED, no difficulty) is excluded with its own
+            # reason BEFORE the difficulty and source-type gates, or REVIEW.md would
             # record "no difficulty" instead of why it is under review.
             reason = review_reason(verified_recipe.get("source"))
             if reason is not None:
@@ -656,7 +657,7 @@ def extract_recipes(
         if source["type"] in ("VENDOR", "REPUTATION"):
             check_price(where, source, bucket)
         if source["type"] == UNKNOWN_SOURCE_TYPE and "itemId" not in source:
-            # R3: UNKNOWN is "usable when owned or bought"; without the item there is
+            # UNKNOWN is "usable when owned or bought"; without the item there is
             # nothing to own or buy, and the recipe would read as freely available.
             raise GenerateError(f"{where} UNKNOWN source has no itemId; align before release")
         if bucket.strict_difficulty:
@@ -815,7 +816,7 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
         source_lines = [f'            type = C.SOURCE_TYPE.{source["type"]},']
         if source["type"] == "TRAINER":
             # WHY the source's own npcName first: the Forever wiki marks some recipes
-            # "Special trainer" (R2), and the generic text would send the player to any
+            # "Special trainer", and the generic text would send the player to any
             # trainer. Only Forever sources carry npcName, so Classic output is unchanged.
             npc_name = source.get("npcName") or f"Any {prof_name} Trainer"
             source_lines.append(f'            npcName = "{escape_lua_string(npc_name)}",')
@@ -849,7 +850,7 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
         elif source["type"] == "STARTER":
             pass   # structural source: bare type line only (no itemId/cost)
         elif source["type"] == UNKNOWN_SOURCE_TYPE and bucket.allow_unknown_source:
-            # R3: always with the item, so a consumer can offer it only when owned or bought.
+            # Always with the item, so a consumer can offer it only when owned or bought.
             if "itemId" not in source:
                 raise GenerateError(f"UNKNOWN source for {where} has no itemId; align before release")
             source_lines.append(f'            itemId = {source["itemId"]},')
@@ -917,7 +918,7 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
 def gate_profession(recipes: list[dict], skipped: list[dict], profession: Profession, bucket,
                     bucket_sources: Path, output_file: Path,
                     sources: dict | None = None) -> bool:
-    """Review report + coverage gate (plan ruling R4); True when the Lua is to be written.
+    """Review report + coverage gate; True when the Lua is to be written.
 
     sources: the profession's sources, whose resolver notes the review lists.
     WHY the review files are written before the gate raises: a failing profession is

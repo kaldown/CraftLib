@@ -1,4 +1,4 @@
-"""Coverage gate (plan ruling R4) and the review report of a review_policy "exclude" bucket.
+"""Coverage gate and the review report of a review_policy "exclude" bucket.
 
 A bucket that excludes the recipes it cannot establish (Forever) instead of failing on
 them must show what it left out, or "shipped" silently means "whatever was easy". The
@@ -24,7 +24,7 @@ from pathlib import Path
 from forever_resolve import NO_WIKI_ROW
 from pipeline_io import atomic_write_text, load_json
 
-# Reasons for recipes that do not count as "in game" (R4): the game lacks them, or they
+# Reasons for recipes that do not count as "in game": the game lacks them, or they
 # give no skill-up, so leaving them out costs a player nothing. The wordings are
 # forever_resolve's (NOT_IN_GAME, NO_SKILL_UP); every other reason counts as in game.
 NOT_IN_GAME_PREFIXES = ("not in game:", "no skill-up:")
@@ -48,7 +48,7 @@ def counts_in_game(reason: str) -> bool:
 
 def coverage(shipped: "list[dict]", excluded: "list[tuple[str, str, str]]",
              cap: int) -> Coverage:
-    """R4 numbers for one profession.
+    """Coverage numbers for one profession: shipped, in game, share and the largest gap.
 
     shipped: the generator's recipe dicts (skillRequired, skillRange.gray, source.type).
     excluded: (spell id, name, reason) of every recipe the generator left out.
@@ -60,7 +60,8 @@ def coverage(shipped: "list[dict]", excluded: "list[tuple[str, str, str]]",
     known = sum(1 for r in shipped if r["source"]["type"] != "UNKNOWN")
     covered = [False] * cap          # index p for p in 1..cap-1; index 0 unused
     for r in shipped:
-        # A recipe learned above the cap (the wiki lists 315/320, kept per R10) covers nothing.
+        # A recipe learned above the cap (the wiki lists 315/320; kept, they are true data)
+        # covers nothing.
         for p in range(max(1, r["skillRequired"]), min(cap, r["skillRange"]["gray"])):
             covered[p] = True
     best, best_run, start = 0, None, None

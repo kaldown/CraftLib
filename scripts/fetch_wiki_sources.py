@@ -2,7 +2,7 @@
 """Resolve the source and learn skill of every recipe of one wiki-enriched profession.
 
 The enrich step of a bucket whose registry entry says enrich="wiki" (Forever). Per recipe
-it gathers the facts and lets forever_resolve decide (plan rulings R1, R2, R5, R8):
+it gathers the facts and lets forever_resolve decide its learn skill and source:
   * DB2, the bucket's build: yellow/gray of the profession's SkillLineAbility row, the
     created item, the chosen teaching item (db2.choose_teaching_item, so scroll copies and
     placeholders never count) and that item's RequiredSkillRank, BuyPrice and faction;
@@ -11,7 +11,7 @@ it gathers the facts and lets forever_resolve decide (plan rulings R1, R2, R5, R
   * <sources>/<Folder>/ingame/<Prof>.json (optional): the owner's in-game capture;
   * <sources>/<cross bucket folder>/<Prof>.json for every registry cross bucket: each
     cross_orange_buckets entry lends its Wowhead orange, and the cross_source_bucket its
-    verified TRAINER source (R12), only when its yellow AND gray equal this build's (the
+    verified TRAINER source, only when its yellow AND gray equal this build's (the
     resolver relies on these checks).
 
 Writes back into <sources>/<Folder>/<Prof>.json, atomically:
@@ -52,7 +52,7 @@ from wiki import WikiError, fetch_wikitext, index_rows, normalize, parse_rows
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
-# Summary order of orangeFrom: the R1 precedence, strongest first.
+# Summary order of orangeFrom: the orange precedence, strongest first.
 _ORANGE_ORDER = ("INGAME", "ITEM", "CROSS", "WIKI", "MANUAL")
 
 
@@ -102,8 +102,8 @@ def load_capture(path: Path, version: str) -> "dict | None":
                          f"objects as import_probe.py writes them)")
     build = cap.get("build")
     if build and build != version:
-        # Not fatal: the owner's capture may predate a client patch, and R8 decides on it
-        # anyway; the warning says why a recipe may be "not in game" unexpectedly.
+        # Not fatal: the owner's capture may predate a client patch, and a recipe absent
+        # from it is still excluded as not in game; the warning says why a recipe may be "not in game" unexpectedly.
         print(f"WARNING: {path} was captured on build {build}, not {version}", file=sys.stderr)
     return cap
 
@@ -129,7 +129,8 @@ def load_cross(sources_dir: Path, cross_key: str, profession) -> dict:
     path = Path(sources_dir) / cross.folder / f"{profession.folder}.json"
     if not path.is_file():
         # WHY fail, not skip: every CROSS orange would silently fall to the weaker wiki
-        # skill, and every R12 trainer would become a review.
+        # skill, and every recipe typed by the cross bucket's trainer source would become
+        # a review.
         raise FileNotFoundError(f"cross bucket '{cross.key}' sources not found: {path}")
     data = load_json(path)
     recipes = data.get("recipes") if isinstance(data, dict) else None
@@ -141,7 +142,7 @@ def load_cross(sources_dir: Path, cross_key: str, profession) -> dict:
 def cross_orange(cross_recipe: "dict | None", yellow: int, gray: int) -> "int | None":
     """The cross bucket's orange for the same spell, or None when it may not be borrowed.
 
-    Plan R1: only a Wowhead-verified orange, and only when this build's yellow AND gray
+    Only a Wowhead-verified orange, and only when this build's yellow AND gray
     equal the cross bucket's, i.e. the recipe is unchanged. forever_resolve.resolve does
     not repeat this check; it trusts the caller.
     """
@@ -156,7 +157,7 @@ def cross_orange(cross_recipe: "dict | None", yellow: int, gray: int) -> "int | 
     return orange if type(orange) is int else None
 
 
-# R12: certainties that make a cross bucket's TRAINER source trustworthy. WOWHEAD and
+# Certainties that make a cross bucket's TRAINER source trustworthy. WOWHEAD and
 # hand-verified MANUAL; DB2 is extract's guess and CROSS is itself borrowed, so neither
 # is independent evidence.
 _CROSS_TRAINER_CERTAINTIES = ("WOWHEAD", "MANUAL")
@@ -165,11 +166,10 @@ _CROSS_TRAINER_CERTAINTIES = ("WOWHEAD", "MANUAL")
 def cross_trainer(cross_recipe: "dict | None", yellow: int, gray: int) -> "str | None":
     """The certainty of the cross bucket's trainer source, or None when it may not be used.
 
-    Plan R12: only an unflagged TRAINER source with certainty WOWHEAD or MANUAL, and only
-    when this build's yellow AND gray equal the cross bucket's, i.e. the recipe is
-    unchanged. The
-    difficulty's own certainty does not matter: yellow and gray are DB2 facts in every
-    bucket (CraftLib hard rule 9). forever_resolve.resolve trusts the caller on this.
+    Only an unflagged TRAINER source with certainty WOWHEAD or MANUAL, and only when this
+    build's yellow AND gray equal the cross bucket's, i.e. the recipe is unchanged. The
+    difficulty's own certainty does not matter: yellow and gray come from DB2 in every
+    bucket. forever_resolve.resolve trusts the caller on this.
     """
     recipe = cross_recipe or {}
     source = recipe.get("source") or {}
@@ -191,7 +191,8 @@ def cross_trainer(cross_recipe: "dict | None", yellow: int, gray: int) -> "str |
 def cross_evidence(bucket, crosses: "dict[str, dict]", facts: RecipeFacts
                    ) -> "tuple[list[tuple[str, int]], CrossTrainer | None]":
     """The resolver's cross inputs for one recipe: guarded oranges in registry order, and
-    the R12 trainer evidence. Named by bucket folder, as the resolver's notes show them."""
+    the cross bucket's trainer evidence. Named by bucket folder, as the resolver's notes
+    show them."""
     sid = facts.spell_id
     oranges = []
     for key in bucket.cross_orange_buckets:
@@ -269,7 +270,8 @@ def recipe_facts(spell_id: str, name: str, ranks: "tuple[int, int]",
 # --- writing one recipe -------------------------------------------------------------
 
 def review_source(reason: str, facts: "RecipeFacts | None") -> dict:
-    """Ruling 2: a review replaces the DB2 source, so no PENDING survives this step."""
+    """The source of a recipe under review: it replaces the DB2 source, so no PENDING
+    source survives this step (the generator excludes it with this reason)."""
     source = {"type": "UNRESOLVED", "certainty": "REVIEW", "needsReview": True,
               "reviewReason": reason}
     if facts is not None and facts.teaching_item is not None:
@@ -310,7 +312,7 @@ class Summary:
     manual: int = 0
     orange_from: Counter = field(default_factory=Counter)
     source_types: Counter = field(default_factory=Counter)
-    cross_trainers: int = 0               # TRAINER sources from a cross bucket (R12)
+    cross_trainers: int = 0               # TRAINER sources from a cross bucket
     reviews: Counter = field(default_factory=Counter)
 
 
@@ -393,7 +395,7 @@ def print_summary(path: Path, s: Summary) -> None:
         print(f"    orangeFrom {origin}: {s.orange_from.get(origin, 0)}", file=out)
     for kind in sorted(s.source_types):
         print(f"    source {kind}: {s.source_types[kind]}", file=out)
-    print(f"  TRAINER from a cross bucket (R12): {s.cross_trainers}", file=out)
+    print(f"  TRAINER from a cross bucket: {s.cross_trainers}", file=out)
     print(f"  UNKNOWN source: {s.source_types.get('UNKNOWN', 0)}", file=out)
     print(f"  Reviews: {sum(s.reviews.values())}", file=out)
     for reason, n in sorted(s.reviews.items(), key=lambda kv: (-kv[1], kv[0])):
@@ -469,8 +471,8 @@ def main(argv: "list[str] | None" = None) -> int:
 
     if not rows:
         # Not an error: Mining's page has no recipe table (measured 2026-11-21). Every
-        # recipe neither the in-game trainer nor a cross bucket's trainer source (R12)
-        # decides becomes a review, visibly.
+        # recipe neither the in-game trainer nor a cross bucket's trainer source decides
+        # becomes a review, visibly.
         print(f"WARNING: wiki page {title!r} has no recipe table (Item/Skill/Source); "
               f"recipes without an in-game or cross-bucket trainer source become reviews",
               file=sys.stderr)

@@ -1,4 +1,4 @@
-"""Forever resolver: learn skill (orange) and source precedence (plan rulings R1, R2, R5, R8)."""
+"""Forever resolver: in game, skill-up, learn skill (orange) and source precedence."""
 import pytest
 
 from forever_resolve import (CrossTrainer, IngameFacts, RecipeFacts, Resolution,
@@ -28,7 +28,7 @@ REP = dict(teaching_item="6003", buy_price=1000, min_faction=59,
            faction_name="Thorium Brotherhood", rep_level="Honored")
 
 
-# One row per R2 line: (wiki row, extra facts, expected source or review).
+# One row per wiki source rule: (wiki row, extra facts, expected source or review).
 R2_CASES = [
     pytest.param(row("STARTER", skill=1, raw="Automatic"), {},
                  {"type": "STARTER", "certainty": "WIKI"}, id="automatic-starter"),
@@ -439,16 +439,16 @@ def test_claims_list_each_spell_once():
 
 @pytest.mark.parametrize("kind", ["UNKNOWN", "DROP", "QUEST"])
 def test_db2_faction_on_non_vendor_source_adds_note(kind):
-    # R2 keeps the wiki kind, but the DB2 faction requirement must stay visible in REVIEW.md.
+    # The wiki kind is kept, but the DB2 faction requirement must stay visible in REVIEW.md.
     res = resolve(facts(**REP), row(kind, raw="?" if kind == "UNKNOWN" else kind.title()),
                   None, None)
     assert res.source["type"] == kind
     assert any("Thorium Brotherhood" in n and "6003" in n for n in res.notes)
 
 
-# R2 as amended 2026-11-21: a price or faction the data cannot establish ships as
+# A price or faction the data cannot establish ships as
 # UNKNOWN (never a free VENDOR), with a note saying what the wiki claimed.
-AMENDED_UNKNOWN = [
+UNESTABLISHED_UNKNOWN = [
     pytest.param(row("VENDOR"), dict(teaching_item="6002", buy_price=0),
                  ["wiki says vendor; price not in DB2 or wiki"], id="unpriced-vendor"),
     pytest.param(row("VENDOR", currency=180, rep_level="Honored",
@@ -462,8 +462,8 @@ AMENDED_UNKNOWN = [
 ]
 
 
-@pytest.mark.parametrize("wiki_row, extra, notes", AMENDED_UNKNOWN)
-def test_amended_unknown_source_and_note(wiki_row, extra, notes):
+@pytest.mark.parametrize("wiki_row, extra, notes", UNESTABLISHED_UNKNOWN)
+def test_unestablished_price_or_faction_is_unknown_with_a_note(wiki_row, extra, notes):
     res = resolve(facts(**extra), wiki_row, None, None)
     assert res.review is None
     assert res.source == {"type": "UNKNOWN", "certainty": "WIKI", "itemId": 6002}
@@ -482,7 +482,7 @@ def test_unpriced_vendor_with_db2_faction_is_unknown_and_keeps_faction_note():
 
 def test_absent_spell_releases_its_wiki_row():
     # Old Classic spell next to its revised Forever spell, both item-taught: the capture
-    # says the old one is not in game, so the row belongs to the revised spell (R8).
+    # says the old one is not in game, so the row belongs to the revised spell.
     r = row("VENDOR")
     idx = index_rows([r])
     old = facts(spell_id="3496", **ITEM)
@@ -688,7 +688,7 @@ def test_cross_orange_first_bucket_wins():
     assert res.difficulty["orange"] == 5 and res.notes == ()
 
 
-# --- R12: a verified trainer source from another bucket ------------------------------
+# --- a verified trainer source from another bucket -----------------------------------
 
 SOD_TRAINER = CrossTrainer(bucket="SoD", certainty="WOWHEAD")
 R12_NOTE = "trainer per SoD (WOWHEAD); no wiki row"
@@ -712,7 +712,7 @@ def test_cross_trainer_manual_certainty_is_named_in_the_note():
 
 @pytest.mark.parametrize("raw", ["?", ""])
 def test_cross_trainer_replaces_an_unknown_wiki_source_without_item(raw):
-    # The wiki row still gives the orange (R1 WIKI) when no bucket lends one.
+    # The wiki row still gives the orange (WIKI) when no bucket lends one.
     res = resolve(facts(), row("UNKNOWN", skill=30, raw=raw), None, None, SOD_TRAINER)
     assert res.source == {"type": "TRAINER", "certainty": "CROSS"}
     assert (res.difficulty["orange"], res.difficulty["orangeFrom"]) == (30, "WIKI")
@@ -721,7 +721,8 @@ def test_cross_trainer_replaces_an_unknown_wiki_source_without_item(raw):
 
 
 def test_cross_trainer_without_an_orange_stays_excluded():
-    # R1 still decides the orange: no in-game, no item, no cross orange, no wiki row.
+    # The orange precedence still applies: no in-game, no item, no cross orange, no wiki
+    # row.
     res = resolve(facts(), "no wiki row", None, None, SOD_TRAINER)
     assert res.review == "no wiki row"
 
@@ -744,7 +745,8 @@ def test_cross_trainer_ignored_when_a_teaching_item_exists():
     pytest.param(row("TRAINER"), {"type": "TRAINER", "certainty": "WIKI"}, id="wiki-trainer"),
 ])
 def test_cross_trainer_ignored_when_the_wiki_names_a_source(wiki_row, expected):
-    # A wiki kind other than "?" / empty still wins; R12 only fills what the wiki leaves open.
+    # A wiki kind other than "?" / empty still wins; the cross bucket only fills what the
+    # wiki leaves open.
     res = resolve(facts(), wiki_row, None, None, SOD_TRAINER)
     if isinstance(expected, str):
         assert res.review == expected

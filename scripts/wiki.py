@@ -16,7 +16,7 @@ from pipeline_io import atomic_write_text
 API_URL = "https://warcraft.wiki.gg/api.php"
 # Generic client name: no project or personal names go to the wiki.
 USER_AGENT = "data-pipeline/1.0"
-# Politeness delay between network fetches (R9).
+# Politeness delay between network fetches: at least 3 s, one page per profession.
 FETCH_DELAY_S = 3.0
 
 

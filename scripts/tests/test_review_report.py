@@ -1,4 +1,4 @@
-"""Coverage (plan ruling R4) and the review files of a review_policy "exclude" bucket."""
+"""Coverage and the review files of a review_policy "exclude" bucket."""
 import dataclasses
 
 import pytest
@@ -70,7 +70,7 @@ def test_share_counts_only_in_game_exclusions():
 
 
 def test_share_exactly_at_the_floor_passes():
-    # 3 of 4 is exactly the 0.75 floor (R4 as amended 2026-11-21); one fewer fails.
+    # 3 of 4 is exactly the 0.75 floor; one fewer fails.
     shipped = [_r(i, 1, 300) for i in range(3)]
     cov = rr.coverage(shipped, [("101", "a", "no wiki row")], 300)
     assert cov.share == 0.75

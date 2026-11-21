@@ -2,9 +2,14 @@
 
 Pure and table-driven, no I/O: the wiki enrich step gathers the facts (DB2 build,
 the matched Warcraft Wiki row, the owner's in-game capture, the cross buckets' oranges
-and trainer sources) and this module applies the fixed precedence of the plan's rulings
-R1, R2, R5, R8 and R12. A value that cannot be established is never guessed: the recipe
-gets a review reason instead, and the generator excludes it and lists it in REVIEW.md.
+and trainer sources) and this module applies a fixed precedence: a recipe the in-game
+capture lacks is not in game; one whose yellow equals its gray gives no skill-up; the
+orange comes from the in-game trainer, else the teaching item's RequiredSkillRank, else
+a cross bucket's verified orange for the unchanged recipe, else the wiki skill; the
+source comes from the in-game trainer, else the wiki row's source cell (with the DB2
+teaching item and faction), else a cross bucket's verified trainer source. A value that
+cannot be established is never guessed: the recipe gets a review reason instead, and the
+generator excludes it and lists it in REVIEW.md.
 
 Later steps read review reasons by prefix, so keep these wordings:
 "not in game:" and "no skill-up:" mark recipes that do not count as in game for the
@@ -69,7 +74,7 @@ class IngameFacts:
 
 @dataclass(frozen=True)
 class CrossTrainer:
-    """Another bucket's verified trainer source for the same, unchanged recipe (R12).
+    """Another bucket's verified trainer source for the same, unchanged recipe.
 
     The caller has checked it (fetch_wiki_sources.cross_trainer): source TRAINER with
     certainty WOWHEAD or MANUAL, and that bucket's yellow AND gray equal this build's.
@@ -121,7 +126,7 @@ def _candidates(facts: RecipeFacts, index) -> "tuple[str | None, list[WikiRow]]"
     """(key, rows) of the first candidate key that has rows; (None, []) when none.
 
     WHY item name first and the spell name only as a fallback (not both at once): the
-    wiki tables are keyed by the created item's name (spec D15); the spell name is
+    wiki tables are keyed by the created item's name; the spell name is
     there for enchants, which create no item. Merging both would make a recipe
     ambiguous whenever its spell name happens to be another row's item name.
     """
@@ -145,7 +150,7 @@ def build_claims(facts: "list[RecipeFacts]", index,
     through its link target and its display text are both counted.
 
     ingame maps spell id -> that spell's IngameFacts (the same values resolve gets).
-    A spell the capture marks absent claims nothing: R8 excludes it anyway, and its
+    A spell the capture marks absent claims nothing: it is excluded as not in game, and its
     claim would otherwise keep the revised spell that IS in game ambiguous, which is
     exactly the old/revised pair a capture is meant to decide.
     """
@@ -172,7 +177,7 @@ def assign_owners(facts: "list[RecipeFacts]", index, claims,
                   aliases=None) -> "dict[WikiRow, str]":
     """Wiki row -> the one spell of the profession it belongs to.
 
-    Ruling 2026-11-21, aliases first:
+    Aliases first:
       * an alias naming exactly one row makes its spell that row's owner, whether or not
         the row is shared. WHY even an unshared row: a spell reaching it by name would
         otherwise ship the same source and skill a second time.
@@ -299,21 +304,21 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
             cross_trainer: "CrossTrainer | None" = None, *,
             manual_difficulty: "dict | None" = None,
             trainer_review: "str | None" = None) -> Resolution:
-    """Apply R8 (in game), R5 (skill-up), R1 (orange) then R2 + R12 (source), in that order.
+    """Decide in game, then skill-up, then the orange, then the source, in that order.
 
     wiki is the match_wiki result. cross_oranges holds (bucket name, orange) per cross
     bucket in registry order, each a WOWHEAD orange passed only when Forever's yellow AND
     gray equal that bucket's; the first one within 1..yellow is used. cross_trainer is
-    the R12 evidence, already checked by the caller. manual_difficulty is a hand-aligned
-    (certainty MANUAL) difficulty the recipe already has: R1 is skipped, it comes back
-    unchanged, and only the source is resolved. trainer_review is the
-    trainer_ambiguities reason for this spell, if any.
+    the cross bucket's trainer evidence, already checked by the caller. manual_difficulty
+    is a hand-aligned (certainty MANUAL) difficulty the recipe already has: no orange is
+    chosen, it comes back unchanged, and only the source is resolved. trainer_review is
+    the trainer_ambiguities reason for this spell, if any.
     """
-    # R8 first: a recipe the game does not have must not count toward coverage, so it
+    # In game first: a recipe the game does not have must not count toward coverage, so it
     # is reported as such whatever else is wrong with it.
     if ingame is not None and ingame.present is False:
         return Resolution(None, None, NOT_IN_GAME)
-    # R5: a recipe that is gray from the start gives no skill-up (camping crafts).
+    # A recipe that is gray from the start gives no skill-up (camping crafts).
     if facts.yellow >= facts.gray:
         reason = (NO_SKILL_UP if facts.yellow == facts.gray
                   else f"no skill-up: yellow {facts.yellow} above gray {facts.gray}")
@@ -347,8 +352,8 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
     difficulty = {
         "orange": value,
         "yellow": facts.yellow,
-        # R5 / spec D14: floor((yellow + gray) / 2) held for 99.8% of shipped
-        # Classic-era recipes; DB2 has no green column.
+        # floor((yellow + gray) / 2) held for 99.8% of shipped Classic-era recipes; DB2
+        # has no green column.
         "green": (facts.yellow + facts.gray) // 2,
         "gray": facts.gray,
         "certainty": _CERTAINTY[origin],
@@ -369,7 +374,7 @@ def _manual_notes(facts, manual, trainer_skill, notes):
 
 
 def _orange(facts, wiki, row, trainer_skill, cross_oranges, notes):
-    """(orange, orangeFrom) per R1, or a review reason."""
+    """(orange, orangeFrom), strongest evidence first, or a review reason."""
     yellow = facts.yellow
     # INGAME first: the trainer's skill requirement is the game itself. Not checked
     # against lower tiers; out of 1..yellow it is a contradiction for a human (the
@@ -382,8 +387,8 @@ def _orange(facts, wiki, row, trainer_skill, cross_oranges, notes):
         if not 1 <= trainer_skill <= yellow:
             return f"no learn skill: in-game trainer skill {trainer_skill} outside 1-{yellow}"
         if row is not None and row.skill is not None and row.skill != trainer_skill:
-            # Spec D16a: where in-game and the wiki disagree, in-game wins and the
-            # recipe is recorded in REVIEW.md.
+            # Where in-game and the wiki disagree, in-game wins and the note lists the
+            # recipe in REVIEW.md.
             notes.append(f"in-game trainer skill {trainer_skill} differs from wiki skill "
                          f"{row.skill}")
         return trainer_skill, "INGAME"
@@ -429,10 +434,11 @@ def _note_wiki_skill(row, orange, origin, notes):
 
 
 def _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes):
-    """The source dict per R2 (and R12 where the wiki leaves it open), or a review reason."""
+    """The source dict (from the in-game trainer, the wiki row, or a cross bucket's trainer
+    where the wiki leaves it open), or a review reason."""
     item = int(facts.teaching_item) if facts.teaching_item is not None else None
     # The in-game trainer list wins over every wiki kind and over a DB2 teaching item:
-    # the owner saw a trainer teach it. Disagreements are kept as notes (spec D16a).
+    # the owner saw a trainer teach it. Disagreements are kept as notes (REVIEW.md).
     if trainer_skill is not None:
         if row is not None and row.kind != "TRAINER":
             notes.append(f"in-game trainer teaches it; wiki source '{row.raw_source}'")
@@ -445,12 +451,13 @@ def _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes)
             source["trainingCost"] = trainer_cost
         return source
     if row is None:
-        # R12 only for a recipe the wiki does not list at all. A row taken by another
-        # spell or an ambiguous one marks an old/revised pair, where the other spell may
-        # be the one the game teaches; a bad alias needs fixing, not a fallback.
+        # A cross bucket's trainer only for a recipe the wiki does not list at all. A row
+        # taken by another spell or an ambiguous one marks an old/revised pair, where the
+        # other spell may be the one the game teaches; a bad alias needs fixing, not a
+        # fallback.
         if wiki == NO_WIKI_ROW and item is None and cross_trainer is not None:
             return _cross_trainer(cross_trainer, None, notes)
-        # Spec D15: no wiki row (or an ambiguous one) -> review, never a default source.
+        # No wiki row (or an ambiguous one) -> review, never a default source.
         return wiki
     if row.kind == UNRECOGNISED_COST or (row.currency is not None and row.currency <= 0):
         # A Merchant's Favor amount of 0 would read as a free recipe, and one that is not
@@ -463,7 +470,7 @@ def _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes)
             # The wiki rep level alone carries no faction id or name to emit.
             if item is None:
                 return "reputation level without DB2 faction"
-            # R2 as amended 2026-11-21: UNKNOWN with the item, not excluded. All 20
+            # UNKNOWN with the item, not excluded. All 20
             # such rows (Alchemy, Merchant's Favor; MinFactionID 0 on 1.60.1.71037) name
             # a commerce faction DB2 does not carry; excluding them would hide recipes
             # the player has already learned, and UNKNOWN makes no claim about the cost.
@@ -476,13 +483,14 @@ def _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes)
                          f"{facts.rep_level}")
     kind = row.kind
     if facts.min_faction > 0 and kind in ("DROP", "QUEST", "UNKNOWN"):
-        # R2 keeps the wiki kind (no faction-gated source type fits a drop or a quest),
+        # The wiki kind is kept (no faction-gated source type fits a drop or a quest),
         # but the DB2 faction requirement is a fact the data would otherwise lose
         # (15 recipes on 1.60.1.71037 with the wiki of 2026-11-21), so REVIEW.md lists it.
         notes.append(_faction_note(facts, item, row))
     if kind in _TRAINER_KINDS:
-        # D15 covers only trainer/automatic recipes WITHOUT an item; with one, wiki and
-        # DB2 disagree on how it is learned and neither may silently win.
+        # A trainer/automatic source is taken from the wiki only for a recipe WITHOUT a
+        # teaching item; with one, wiki and DB2 disagree on how it is learned and neither
+        # may silently win.
         if item is not None:
             return f"trainer per wiki but DB2 has teaching item {item}"
         if kind == "STARTER":
@@ -515,7 +523,7 @@ def _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes)
 
 
 def _cross_trainer(cross: CrossTrainer, row, notes):
-    # R12: two independent signals agree - Forever's own DB2 has no teaching item for the
+    # Two independent signals agree - Forever's own DB2 has no teaching item for the
     # recipe, and another bucket's verified source for the unchanged recipe (same yellow
     # and gray) is a trainer. Measured 2026-11-21: Mining's wiki page has no recipe table
     # and Engineering shipped nothing at skill 1-24 without it. No trainingCost: that
@@ -527,7 +535,7 @@ def _cross_trainer(cross: CrossTrainer, row, notes):
 
 
 def _unknown(item):
-    # R3: UNKNOWN ships only with the item, so it stays "usable when owned or bought"
+    # UNKNOWN ships only with the item, so it stays "usable when owned or bought"
     # and is never a claim about where it comes from or what it costs.
     return {"type": "UNKNOWN", "certainty": "WIKI", "itemId": item}
 
@@ -542,14 +550,15 @@ def _vendor(facts, row, item, notes):
         return "vendor per wiki but DB2 has no teaching item"
     if row.currency is not None:
         # WHY no cost key: a Merchant's Favor recipe has no gold price, and cost = 0
-        # (or the item BuyPrice) would read as free or as gold (spec D16).
+        # (or the item BuyPrice) would read as free or as gold.
         price = {"currency": {"name": CURRENCY_NAME, "amount": row.currency}}
     elif facts.buy_price > 0:
-        # Hard rule 12: BuyPrice alone never proves a vendor; the wiki saying Vendor
-        # does, and BuyPrice is then the true price.
+        # BuyPrice alone never proves a vendor (the game data sets one on most items,
+        # drops and gathered goods included); the wiki saying Vendor does, and BuyPrice is
+        # then the true price.
         price = {"cost": facts.buy_price}
     else:
-        # R2 as amended 2026-11-21: no price in DB2 (BuyPrice 0) or on the wiki
+        # No price in DB2 (BuyPrice 0) or on the wiki
         # (measured 75 recipes, e.g. "Plans: Justice Greaves"). A VENDOR without a cost
         # reads as free downstream, and excluding would hide recipes the player has
         # already learned, so ship UNKNOWN with the item and say what the wiki claimed.

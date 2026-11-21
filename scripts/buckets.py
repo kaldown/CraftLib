@@ -107,7 +107,8 @@ class Bucket:
     wiki_pages: Mapping[str, str] = field(default=_NO_WIKI)  # profession folder -> wiki page title
     # Buckets whose WOWHEAD orange may be borrowed (CROSS), tried in this order.
     cross_orange_buckets: tuple[str, ...] = ()
-    # Bucket whose verified TRAINER source may type a recipe the wiki leaves open (R12).
+    # Bucket whose verified TRAINER source may type a recipe the wiki leaves open (no wiki
+    # row, or an unknown source) when this build has no teaching item for it.
     cross_source_bucket: str | None = None
     allow_currency_cost: bool = False     # a VENDOR/REPUTATION price may be a currency
     reject_zero_cost: bool = False        # cost = 0 is refused (it reads as free)
@@ -229,8 +230,8 @@ BUCKETS: dict[str, Bucket] = {
         # MANUAL: a hand-aligned value; REVIEW.md counts it like the other origins.
         difficulty_certainties=("INGAME", "DB2", "CROSS", "WIKI", "MANUAL"),
         review_policy="exclude", allow_unknown_source=True, strict_difficulty=True,
-        # R4 as amended 2026-11-21: floor 0.75 (was 0.90). Measured that day, only Cooking
-        # and First Aid reached 0.90. Each shipped recipe is established on its own, so
+        # Floor 0.75 (first set at 0.90): measured 2026-11-21, only Cooking and First Aid
+        # reached 0.90. Each shipped recipe is established on its own, so
         # holding a profession back makes no shipped value truer; the gap check keeps the
         # path continuous, and every exclusion stays listed in REVIEW.md.
         milestones_verified=False, coverage_floor=0.75, coverage_max_gap=10,
@@ -238,12 +239,14 @@ BUCKETS: dict[str, Bucket] = {
         # spells, and SoD fills in where Vanilla's yellow or gray differ from Forever's
         # (or its orange is unusable, e.g. the ADR-005 "learned at 0").
         wiki_pages=_FOREVER_WIKI_PAGES, cross_orange_buckets=("vanilla", "sod"),
-        # R12: 420 SoD recipes carry a verified (unflagged) Wowhead TRAINER source; the
+        # A recipe the wiki leaves open and DB2 gives no teaching item may take SoD's
+        # verified trainer source. 420 SoD recipes carry one (unflagged Wowhead); the
         # 368 flagged ones are the verifier's unverified default and are not used. The
         # Forever wiki has no table for Mining and none of Engineering's skill 1-24
         # recipes, which left those ranges without a shipped recipe (measured 2026-11-21).
         cross_source_bucket="sod",
-        # Merchant's Favor prices (spec D16); with a currency field, cost 0 is never a price.
+        # Merchant's Favor prices (a currency, no copper cost); with a currency field, cost 0
+        # is never a price.
         allow_currency_cost=True, reject_zero_cost=True,
         # WHY held back (coverage gate; DB2 1.60.1.71037 and the wiki of 2026-11-21):
         # - Engineering ships 231/267 (86.5%) but nothing at skill 1-24 (gap 24 > 10):
@@ -251,12 +254,12 @@ BUCKETS: dict[str, Bucket] = {
         #   source and only flagged SoD trainer records.
         # - Mining ships 4/9 (44.4% < 75%) with a gap of 115 (185-299). Its thresholds
         #   equal Vanilla 1.15.8's (all 16 shared spells), but its wiki page has no recipe
-        #   table, so only R12 can type a smelt: Silver, Bronze, Iron and Gold ship that
-        #   way. Copper and Elementium/Obsidian-Infused Thorium (Classic trainer source
-        #   not Wowhead-verified), Tin (Classic yellow 0, DB2 50) and Heavy Thorium
-        #   (Forever only) get "no wiki row". The other 9 give no skill-up (yellow ==
-        #   gray, R5): the Classic smelts Steel, Mithril, Truesilver, Dark Iron and
-        #   Thorium, and the Forever-only rows.
+        #   table, so only SoD's trainer source can type a smelt: Silver, Bronze, Iron
+        #   and Gold ship that way. Copper and Elementium/Obsidian-Infused Thorium
+        #   (Classic trainer source not Wowhead-verified), Tin (Classic yellow 0, DB2 50)
+        #   and Heavy Thorium (Forever only) get "no wiki row". The other 9 give no
+        #   skill-up (yellow == gray): the Classic smelts Steel, Mithril, Truesilver, Dark
+        #   Iron and Thorium, and the Forever-only rows.
         # An in-game trainer/recipe capture (scripts/import_probe.py) releases both.
         held_back=("Engineering", "Mining"), vendor_explicit_scope=True,
         shipped=True, client_name="WoW Forever"),
