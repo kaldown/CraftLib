@@ -242,11 +242,18 @@ BUCKETS: dict[str, Bucket] = {
         cross_source_bucket="sod",
         # Merchant's Favor prices (spec D16); with a currency field, cost 0 is never a price.
         allow_currency_cost=True, reject_zero_cost=True,
-        # WHY held back (coverage gate, wiki and DB2 of 2026-11-21): Engineering ships
-        # 231/267 (86.5%) but nothing at skill 1-24 (gap 24 > 10: Rough Blasting Powder,
-        # Rough Dynamite and Crafted Light Shot have no source on the wiki and only flagged
-        # SoD trainer records). Mining ships 4/9 (44.4% < 75%) with a gap of 115 (185-299):
-        # its wiki page has no recipe table and Forever changed the smelting thresholds.
+        # WHY held back (coverage gate; DB2 1.60.1.71037 and the wiki of 2026-11-21):
+        # - Engineering ships 231/267 (86.5%) but nothing at skill 1-24 (gap 24 > 10):
+        #   Rough Blasting Powder, Rough Dynamite and Crafted Light Shot have a '?' wiki
+        #   source and only flagged SoD trainer records.
+        # - Mining ships 4/9 (44.4% < 75%) with a gap of 115 (185-299). Its thresholds
+        #   equal Vanilla 1.15.8's (all 16 shared spells), but its wiki page has no recipe
+        #   table, so only R12 can type a smelt: Silver, Bronze, Iron and Gold ship that
+        #   way. Copper and Elementium/Obsidian-Infused Thorium (Classic trainer source
+        #   not Wowhead-verified), Tin (Classic yellow 0, DB2 50) and Heavy Thorium
+        #   (Forever only) get "no wiki row". The other 9 give no skill-up (yellow ==
+        #   gray, R5): the Classic smelts Steel, Mithril, Truesilver, Dark Iron and
+        #   Thorium, and the Forever-only rows.
         # An in-game trainer/recipe capture (scripts/import_probe.py) releases both.
         held_back=("Engineering", "Mining"), vendor_explicit_scope=True,
         shipped=True),
