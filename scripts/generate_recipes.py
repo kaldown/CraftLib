@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
-"""Generate CraftLib recipe Lua files from DB2 data.
+"""Generate CraftLib recipe Lua files from DB2 data and the bucket's resolved sources.
 
 Usage:
     python generate_recipes.py --bucket tbc
+
+Every bucket-specific switch comes from the registry (scripts/buckets.py), so the Classic
+buckets regenerate byte for byte. A bucket with review_policy "exclude" (Forever) leaves
+out the recipes its sources mark for review instead of failing, and on every run writes
+<sources>/<Folder>/review/<Prof>.json and <sources>/<Folder>/REVIEW.md (review_report.py)
+listing what was left out and the per-profession coverage; a profession failing the
+coverage gate (coverage_floor / coverage_max_gap) fails the run unless it is held back.
 """
 
 import argparse
@@ -11,6 +18,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 import db2
+import review_report
 from buckets import (BUCKETS, PROFESSIONS, Profession, UnknownProfessionError,
                      add_bucket_argument, get_bucket)
 from db2 import CanaryError, ColumnContractError
@@ -20,6 +28,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 EMITTABLE_SOURCE_TYPES = ("TRAINER", "REPUTATION", "VENDOR", "DROP", "QUEST", "DISCOVERY", "STARTER")
+# Plan ruling R3: UNKNOWN ("source not established; usable only when learned, owned or
+# bought") ships only from a bucket whose registry entry allows it (Forever); every other
+# bucket still fails loud on it.
+UNKNOWN_SOURCE_TYPE = "UNKNOWN"
 EXCEPTION_CATEGORIES = {"exclude": "exclude", "reagentless": "reagentless",
                         "shipNeedsReview": "ship_needs_review"}
 
@@ -76,6 +88,12 @@ def load_exceptions(path: Path, bucket) -> Exceptions:
     return Exceptions(**result)
 
 
+def emittable_source_types(bucket) -> tuple[str, ...]:
+    if bucket.allow_unknown_source:
+        return EMITTABLE_SOURCE_TYPES + (UNKNOWN_SOURCE_TYPE,)
+    return EMITTABLE_SOURCE_TYPES
+
+
 def escape_lua_string(s: str) -> str:
     """Escape special characters for Lua string literals."""
     return s.replace("\\", "\\\\").replace('"', '\\"')
@@ -121,8 +139,11 @@ def load_item_details(data_dir: Path, bucket) -> dict:
     return {row["ID"]: row for row in db2.load_table(data_dir, "ItemSparse", bucket)}
 
 
-def compute_vendor_prices(allowlist: dict, item_details: dict, scope: str) -> list[dict]:
+def compute_vendor_prices(allowlist: dict, item_details: dict, scope: str, *,
+                          explicit: bool = False) -> list[dict]:
     """Per-unit vendor BUY prices for the allowlisted reagents present in this vendor scope.
+
+    explicit (registry vendor_explicit_scope): only entries whose flavors name the scope.
 
     WHY divide by VendorStackCount: DB2 BuyPrice is the price for one VendorStackCount
     BATCH, not per unit; vials sell in stacks of 5, so storing the raw value would
@@ -134,9 +155,15 @@ def compute_vendor_prices(allowlist: dict, item_details: dict, scope: str) -> li
     entries: list[dict] = []
     for item_id_str, meta in allowlist.items():
         flavors = meta.get("flavors")
+        if explicit:
+            # Plan ruling R7: an unscoped entry was verified on the Classic clients, which
+            # says nothing about a vendor on another ruleset (Forever). Until an entry names
+            # the scope it is absent, so the first Forever table is empty, never borrowed.
+            if not flavors or scope not in flavors:
+                continue
         # WHY skip (not fail) when flavor-scoped out: a DEFAULT-only reagent (e.g. Simple
         # Flour, absent from the Era/SoD build) must be ABSENT from the SoD table, not an error.
-        if flavors and scope not in flavors:
+        elif flavors and scope not in flavors:
             continue
         name = meta.get("name", f"item {item_id_str}")
         row = item_details.get(item_id_str)
@@ -206,7 +233,8 @@ def emit_vendor_prices(item_details: dict, bucket, output_dir: Path, allowlist_p
     # vocabulary. Vanilla and SoD share the Era build, where DEFAULT-only reagents (e.g.
     # Simple Flour) are absent, so both scope to "SOD"; the emitted guard tag still
     # carries the real profile.
-    entries = compute_vendor_prices(allowlist, item_details, bucket.vendor_scope)  # may fail loud
+    entries = compute_vendor_prices(allowlist, item_details, bucket.vendor_scope,
+                                    explicit=bucket.vendor_explicit_scope)  # may fail loud
     unverified = [e for e in entries if not e["verified"]]
     if unverified:
         names = ", ".join(f"{e['name']}({e['itemId']})" for e in unverified)
@@ -229,8 +257,13 @@ def load_all_data(data_dir: Path, bucket) -> dict:
     """
     print(f"Loading data from {data_dir}...", file=sys.stderr)
     data = {}
-    for table in ("SpellName", "SpellEffect", "SpellReagents", "ItemSparse",
-                  "SkillLineAbility", "Faction"):
+    tables = ["SpellName", "SpellEffect", "SpellReagents", "ItemSparse",
+              "SkillLineAbility", "Faction"]
+    if bucket.has_tools:
+        # Only tool buckets read these (plan ruling R6): the Classic paths must not start
+        # depending on two more tables, and their Lua must stay byte for byte.
+        tables += ["SpellTotems", "TotemCategory"]
+    for table in tables:
         data[table] = db2.load_table(data_dir, table, bucket)
         print(f"  Loaded {table}: {len(data[table])} rows", file=sys.stderr)
     # ItemEffect (and ItemXItemEffect on Forever) are read through the bucket's
@@ -335,7 +368,46 @@ def build_indexes(data: dict, bucket) -> dict:
         if item_id is not None:
             indexes["recipe_items"][spell_id] = item_id
 
+    if bucket.has_tools:
+        indexes["totem_names"] = {row["ID"]: row["Name_lang"]
+                                  for row in data["TotemCategory"] if row.get("Name_lang")}
+        indexes["spell_tools"] = build_spell_tools(data["SpellTotems"])
+
     return indexes
+
+
+def build_spell_tools(rows: list[dict]) -> dict[str, tuple[list[str], list[str]]]:
+    """spell id -> (tool category ids, tool item ids), slot order, unset (0) slots dropped."""
+    out: dict[str, tuple[list[str], list[str]]] = {}
+    for row in rows:
+        spell = row["SpellID"]
+        if spell in out:
+            # Measured none on 1.60.1.71037. Two rows could not both be the recipe's one
+            # requirement, and picking one would drop a tool silently.
+            raise GenerateError(f"spell {spell} has several SpellTotems rows; align the tools")
+        cats = [row[f"RequiredTotemCategoryID_{i}"] for i in (0, 1)]
+        items = [row[f"Totem_{i}"] for i in (0, 1)]
+        # An unset slot is written as 0 by the DB2 dump; it names no tool.
+        out[spell] = ([c for c in cats if c and c != "0"], [i for i in items if i and i != "0"])
+    return out
+
+
+def recipe_tools(where: str, spell_id: str, indexes: dict) -> list[dict]:
+    """The tools a recipe needs: categories first (any item of the category works), then
+    specific items. A tool without a name is a build data gap, never an unnamed tool."""
+    cats, items = indexes["spell_tools"].get(spell_id, ([], []))
+    tools = []
+    for cat in cats:
+        name = indexes["totem_names"].get(cat)
+        if not name:
+            raise GenerateError(f"{where}: tool category {cat} has no name in TotemCategory")
+        tools.append({"categoryId": int(cat), "name": name})
+    for item in items:
+        name = indexes["item_names"].get(item)
+        if not name:
+            raise GenerateError(f"{where}: tool item {item} has no name in ItemSparse")
+        tools.append({"itemId": int(item), "name": name})
+    return tools
 
 
 def build_trivial_ranks(data: dict) -> dict:
@@ -353,6 +425,75 @@ def build_trivial_ranks(data: dict) -> dict:
         if high > 0:
             out[spell_id] = (low, high)
     return out
+
+
+def review_reason(source) -> str | None:
+    """The review a source carries (needsReview / reviewReason), or None."""
+    if not isinstance(source, dict) or not (source.get("needsReview") or source.get("reviewReason")):
+        return None
+    return source.get("reviewReason") or "needs review (no reason recorded)"
+
+
+def difficulty_skip_reason(bucket, difficulty) -> str:
+    if bucket.review_policy == "raise":
+        return "no WOWHEAD difficulty"   # the Classic log wording, unchanged
+    # An excluded recipe is listed in REVIEW.md, so say exactly why it was not shipped.
+    if not difficulty:
+        return "no difficulty"
+    return (f"difficulty certainty {difficulty.get('certainty')!r} not accepted "
+            f"({', '.join(bucket.difficulty_certainties)})")
+
+
+def check_price(where: str, source: dict) -> None:
+    """A VENDOR/REPUTATION source must carry a copper cost or a currency price.
+
+    WHY fail loud: a missing price reads as free downstream and corrupts the cheapest
+    path (PROJECT MANTRA). A currency recipe (Forever's Merchant's Favor) has no copper
+    price, so it carries no cost key at all; cost = 0 next to it would read as free.
+    """
+    currency = source.get("currency")
+    if "cost" not in source and currency is None:
+        raise GenerateError(f"{where} {source['type']} source has neither cost nor currency; "
+                            f"align before release")
+    if currency is None:
+        return
+    ok = (isinstance(currency, dict) and isinstance(currency.get("name"), str)
+          and currency["name"].strip()
+          # type() is int rejects bool, which Python counts as an int.
+          and type(currency.get("amount")) is int and currency["amount"] > 0)
+    if not ok:
+        raise GenerateError(f"{where}: currency {currency!r} needs a name and a positive amount")
+    if "cost" in source and not (type(source["cost"]) is int and source["cost"] > 0):
+        raise GenerateError(f"{where}: cost {source['cost']!r} next to a currency would read as "
+                            f"free; drop the cost key or align it")
+
+
+def price_lines(where: str, source: dict) -> list[str]:
+    check_price(where, source)
+    lines = []
+    if "cost" in source:
+        lines.append(f'            cost = {source["cost"]},')
+    if "currency" in source:
+        c = source["currency"]
+        lines.append(f'            currency = {{ name = "{escape_lua_string(c["name"])}", '
+                     f'amount = {c["amount"]} }},')
+    return lines
+
+
+def check_strict_difficulty(where: str, difficulty: dict) -> None:
+    """Plan ruling R5: thresholds a learn skill and DB2's yellow/gray can both be true of."""
+    values = [difficulty.get(k) for k in ("orange", "yellow", "green", "gray")]
+    if any(type(v) is not int for v in values):
+        raise GenerateError(f"{where} fails the strict difficulty check: thresholds {values} "
+                            f"are not all integers")
+    orange, yellow, green, gray = values
+    # green = floor((yellow + gray) / 2) is how the Forever step derives it (DB2 has no
+    # green column), so any other value means the difficulty was edited or mixed up.
+    if not (1 <= orange <= yellow <= green <= gray) or green != (yellow + gray) // 2:
+        raise GenerateError(
+            f"{where} fails the strict difficulty check: orange {orange}, yellow {yellow}, "
+            f"green {green}, gray {gray} (needs 1 <= orange <= yellow <= green <= gray and "
+            f"green == (yellow + gray) // 2)")
 
 
 def extract_recipes(
@@ -433,11 +574,24 @@ def extract_recipes(
                                     "reason": f"excluded: {exceptions.exclude[spell_id]}"})
             continue
 
-        # Get verified difficulty — Wowhead data is REQUIRED, no DB2 fallback
+        display_name = spell_name or verified_recipe.get("name") or f"spell {spell_id}"
+        if bucket.review_policy == "exclude":
+            # Pre-flight Ruling 2: a review (UNRESOLVED, no difficulty) is excluded with its
+            # own reason BEFORE the difficulty and source-type gates, or REVIEW.md would
+            # record "no difficulty" instead of why it is under review.
+            reason = review_reason(verified_recipe.get("source"))
+            if reason is not None:
+                skipped_recipes.append({"id": spell_id, "name": display_name, "reason": reason})
+                continue
+
+        # Get verified difficulty — the bucket names which certainties may carry one
+        # (Wowhead for Classic, no DB2 fallback; in-game/DB2/cross/wiki for Forever).
         verified_difficulty = verified_recipe.get("difficulty") if verified_recipe else None
 
-        if not verified_difficulty or verified_difficulty.get("certainty") not in ("WOWHEAD", "CRAFTDUMP"):
-            skipped_recipes.append({"id": spell_id, "name": spell_name, "reason": "no WOWHEAD difficulty"})
+        if (not verified_difficulty
+                or verified_difficulty.get("certainty") not in bucket.difficulty_certainties):
+            skipped_recipes.append({"id": spell_id, "name": display_name,
+                                    "reason": difficulty_skip_reason(bucket, verified_difficulty)})
             continue
 
         # Fail-loud gates, in the order the exceptions file documents. WHY here (after the
@@ -457,7 +611,7 @@ def extract_recipes(
             raise GenerateError(f"{where} has no source data. Run fetch_wowhead_sources.py to populate.")
         if source.get("certainty") == "PENDING":
             raise GenerateError(f"{where} has a PENDING source. Run fetch_wowhead_sources.py to verify.")
-        if source.get("type") not in EMITTABLE_SOURCE_TYPES:
+        if source.get("type") not in emittable_source_types(bucket):
             raise GenerateError(f"{where} has source type {source.get('type')!r}, which cannot be emitted; "
                                 f"add it to generate_exceptions.json exclude with a reason, or align the source")
         if source.get("needsReview") or source.get("reviewReason"):
@@ -467,9 +621,19 @@ def extract_recipes(
                                     f"generate_exceptions.json shipNeedsReview with a reason")
             used.add(spell_id)
         if source["type"] == "REPUTATION":
-            missing = [k for k in ("factionId", "factionName", "level", "itemId", "cost") if k not in source]
+            missing = [k for k in ("factionId", "factionName", "level", "itemId") if k not in source]
+            if "cost" not in source and "currency" not in source:
+                missing.append("cost or currency")
             if missing:
                 raise GenerateError(f"{where} REPUTATION source is missing {missing}; align before release")
+        if source["type"] in ("VENDOR", "REPUTATION"):
+            check_price(where, source)
+        if source["type"] == UNKNOWN_SOURCE_TYPE and "itemId" not in source:
+            # R3: UNKNOWN is "usable when owned or bought"; without the item there is
+            # nothing to own or buy, and the recipe would read as freely available.
+            raise GenerateError(f"{where} UNKNOWN source has no itemId; align before release")
+        if bucket.strict_difficulty:
+            check_strict_difficulty(where, verified_difficulty)
 
         orange = verified_difficulty["orange"]
         yellow = verified_difficulty["yellow"]
@@ -562,7 +726,16 @@ def extract_recipes(
             "reagents": reagents,
             "expansion": expansion,
             "recipe_item": indexes["recipe_items"].get(spell_id),
+            # Not emitted: the review report counts where each shipped orange came from.
+            "difficultyOrigin": verified_difficulty.get("orangeFrom") or verified_difficulty.get("certainty"),
         }
+
+        if bucket.has_tools:
+            tools = recipe_tools(where, spell_id, indexes)
+            # WHY only when non-empty: most recipes need no tool, and an absent field (nil)
+            # already says so without one empty table per recipe.
+            if tools:
+                recipe["tools"] = tools
 
         if item_id:
             recipe["itemId"] = int(item_id)
@@ -608,6 +781,7 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
 
         # Source
         source = recipe["source"]
+        where = f"spell {recipe['id']} ({recipe['name']!r})"
         source_lines = [f'            type = C.SOURCE_TYPE.{source["type"]},']
         if source["type"] == "TRAINER":
             source_lines.append(f'            npcName = "Any {prof_name} Trainer",')
@@ -619,13 +793,12 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
             source_lines.append(f'            factionName = "{escaped_faction}",')
             source_lines.append(f'            level = "{source["level"]}",')
             source_lines.append(f'            itemId = {source["itemId"]},')
-            source_lines.append(f'            cost = {source["cost"]},')
+            source_lines += price_lines(where, source)
         elif source["type"] == "VENDOR":
-            if "itemId" not in source or "cost" not in source:
-                raise ValueError(f"VENDOR source for spell {recipe['id']} ({recipe['name']!r}) "
-                                 f"missing cost/itemId; align before release")
+            if "itemId" not in source:
+                raise GenerateError(f"VENDOR source for {where} missing itemId; align before release")
             source_lines.append(f'            itemId = {source["itemId"]},')
-            source_lines.append(f'            cost = {source["cost"]},')
+            source_lines += price_lines(where, source)
         elif source["type"] == "DROP":
             if "itemId" in source:
                 source_lines.append(f'            itemId = {source["itemId"]},')
@@ -641,6 +814,11 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
                 source_lines.append(f'            itemId = {source["itemId"]},')
         elif source["type"] == "STARTER":
             pass   # structural source: bare type line only (no itemId/cost)
+        elif source["type"] == UNKNOWN_SOURCE_TYPE and bucket.allow_unknown_source:
+            # R3: always with the item, so a consumer can offer it only when owned or bought.
+            if "itemId" not in source:
+                raise GenerateError(f"UNKNOWN source for {where} has no itemId; align before release")
+            source_lines.append(f'            itemId = {source["itemId"]},')
         else:
             raise ValueError(f"Unhandled source type {source['type']!r} for spell "
                              f"{recipe['id']} ({recipe['name']!r})")
@@ -664,6 +842,14 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
         if reagents_str:
             lines.append(reagents_str)
         lines.append("        },")
+        if recipe.get("tools"):
+            # One line: a recipe needs at most four tools, and categories come first.
+            tools = ", ".join(
+                f'{{ categoryId = {t["categoryId"]}, name = "{escape_lua_string(t["name"])}" }}'
+                if "categoryId" in t else
+                f'{{ itemId = {t["itemId"]}, name = "{escape_lua_string(t["name"])}" }}'
+                for t in recipe["tools"])
+            lines.append(f"        tools = {{ {tools} }},")
         lines.append("        source = {")
         lines.append(source_str)
         lines.append("        },")
@@ -692,6 +878,44 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
     lines.append("")
 
     return "\n".join(lines)
+
+
+def gate_profession(recipes: list[dict], skipped: list[dict], profession: Profession, bucket,
+                    bucket_sources: Path, output_file: Path) -> bool:
+    """Review report + coverage gate (plan ruling R4); True when the Lua is to be written.
+
+    WHY the review files are written before the gate raises: a failing profession is
+    exactly the one whose excluded recipes a human has to read.
+    """
+    if bucket.review_policy != "exclude" and bucket.coverage_floor is None:
+        return True   # the Classic buckets: no review report, no gate
+    excluded = [(r["id"], r["name"], r.get("reason", "unknown")) for r in skipped]
+    cov = review_report.coverage(recipes, excluded, max(bucket.milestones))
+    held = profession.folder in bucket.held_back
+    if bucket.review_policy == "exclude":
+        review_dir = bucket_sources / "review"
+        review_report.write_profession(
+            review_dir, profession.folder,
+            review_report.profession_data(cov, held, recipes, excluded, bucket))
+        atomic_write_text(bucket_sources / "REVIEW.md", review_report.render(review_dir, bucket))
+    failures = review_report.gate_failures(cov, bucket)
+    where = f"bucket '{bucket.key}' {profession.name}"
+    if held:
+        if not failures and bucket.coverage_floor is not None:
+            print(f"WARNING: {where} passes the coverage gate (share {cov.share:.3f}, largest "
+                  f"gap {cov.max_gap}) but is in held_back; remove it from held_back to ship it",
+                  file=sys.stderr)
+        print(f"{where} held back: {output_file} not written", file=sys.stderr)
+        if output_file.exists():
+            # Not deleted (a generate run never removes files), but a stale file would
+            # ship data the gate no longer stands behind.
+            print(f"WARNING: {output_file} is left from an earlier run; delete it", file=sys.stderr)
+        return False
+    if failures:
+        raise GenerateError(f"{where} fails the coverage gate: {'; '.join(failures)}; "
+                            f"see {bucket_sources / 'REVIEW.md'}, align the data, or list "
+                            f"the profession in the registry's held_back")
+    return True
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -759,6 +983,12 @@ def main(argv: list[str] | None = None) -> int:
 
         for profession in professions:
             verified_sources = load_verified_sources(bucket_sources, profession.name)
+            if verified_sources is None and bucket.review_policy == "exclude":
+                # WHY before anything is written: without a sources file every recipe reads
+                # "not in sources", and the tracked review files would report that as data.
+                raise GenerateError(f"bucket '{bucket.key}': no sources file for {profession.name} "
+                                    f"in {bucket_sources}; run the pipeline's extract and enrich "
+                                    f"steps first")
             if verified_sources:
                 print(f"Loaded {len(verified_sources)} verified sources for {profession.name}", file=sys.stderr)
 
@@ -783,12 +1013,16 @@ def main(argv: list[str] | None = None) -> int:
                         print(f"WARNING: generate_exceptions.json {bucket.key}/{category} spell "
                               f"{spell} ({nm}) is no longer needed", file=sys.stderr)
 
+            output_file = args.output_dir / bucket.folder / profession.folder / "Recipes.lua"
+            if not gate_profession(recipes, skipped, profession, bucket, bucket_sources,
+                                   output_file):
+                continue
+
             if not recipes:
                 raise GenerateError(f"bucket '{bucket.key}': no recipes emitted for {profession.name}; "
                                     f"check its sources and exceptions")
 
             lua_code = generate_lua(recipes, profession, bucket)
-            output_file = args.output_dir / bucket.folder / profession.folder / "Recipes.lua"
             output_file.parent.mkdir(parents=True, exist_ok=True)
             atomic_write_text(output_file, lua_code)
             print(f"Generated {output_file}: {len(recipes)} recipes", file=sys.stderr)

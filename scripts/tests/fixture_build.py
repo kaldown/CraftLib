@@ -71,10 +71,14 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
                 omit_item_names: set[str] = frozenset(),
                 join: str = "parent",
                 extra_teaching: tuple[tuple[int, int], ...] = (),
-                extra_items: dict[int, tuple[str, int, int]] | None = None) -> Path:
+                extra_items: dict[int, tuple[str, int, int]] | None = None,
+                spell_totems: list[dict] | None = None,
+                totem_categories: list[dict] | None = None) -> Path:
     """extra_teaching: (spell, item) links appended after the regular ones, in order.
     extra_items: item id -> (name, RequiredSkill, RequiredSkillRank), extra ItemSparse
     rows (buy 100, sell 25, no faction) for the items extra_teaching links to.
+    spell_totems / totem_categories (xitem only) replace the default tool rows: Fixture
+    Vest (1002) needs a Blacksmith Hammer (category 162).
     """
     if join not in ("parent", "xitem"):
         raise ValueError(f"unknown join '{join}'")
@@ -115,9 +119,11 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
                                 for n, (spell, _item) in enumerate(links, start=1)]
         tables["ItemXItemEffect"] = [{"ID": 900 + n, "ItemEffectID": 100 + n, "ItemID": item}
                                      for n, (_spell, item) in enumerate(links, start=1)]
-        tables["SpellTotems"] = [{"ID": 1, "SpellID": 1002, "RequiredTotemCategoryID_0": 162,
-                                  "RequiredTotemCategoryID_1": 0, "Totem_0": 0, "Totem_1": 0}]
-        tables["TotemCategory"] = [{"ID": 162, "Name_lang": "Blacksmith Hammer"}]
+        tables["SpellTotems"] = spell_totems if spell_totems is not None else [
+            {"ID": 1, "SpellID": 1002, "RequiredTotemCategoryID_0": 162,
+             "RequiredTotemCategoryID_1": 0, "Totem_0": 0, "Totem_1": 0}]
+        tables["TotemCategory"] = (totem_categories if totem_categories is not None
+                                   else [{"ID": 162, "Name_lang": "Blacksmith Hammer"}])
         tables["SkillLine"] = [{"ID": k, "ParentSkillLineID": v} for k, v in _SKILL_LINES.items()]
     teaching_ids = {item for *_, item in _SPELLS.values() if item is not None}
     items = [{"ID": i, "Display_lang": "" if str(i) in omit_item_names else v[0],
@@ -243,3 +249,17 @@ def forever_enrich_argv(art: Path, src: Path, *extra: str) -> list[str]:
     """fetch_wiki_sources.main argv for the fixture tree, offline."""
     return ["--bucket", "forever", "--profession", "Tailoring", "--version", FIXTURE_VERSION,
             "--data-dir", str(art), "--sources-dir", str(src), "--offline", *extra]
+
+
+def write_resolved_forever(root: Path, **tree_kw) -> tuple[Path, Path]:
+    """(artifacts dir, sources dir) with Forever Tailoring resolved by the real wiki step.
+
+    write_forever_tree, then fetch_wiki_sources.main offline: the generator reads the
+    sources exactly as the enrich stage writes them, so the fixture cannot drift from it.
+    """
+    import fetch_wiki_sources
+    art, src = write_forever_tree(root, **tree_kw)
+    rc = fetch_wiki_sources.main(forever_enrich_argv(art, src))
+    if rc != 0:
+        raise RuntimeError(f"fixture wiki enrich failed with exit {rc}")
+    return art, src

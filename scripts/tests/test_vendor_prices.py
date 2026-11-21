@@ -19,7 +19,8 @@ def test_allowlist_is_valid_and_well_shaped():
         assert isinstance(meta.get("name"), str) and meta["name"], f"{item_id} needs a name"
         assert "verified" in meta, f"{item_id} needs an explicit verified flag"
         if "flavors" in meta:
-            assert set(meta["flavors"]) <= {"DEFAULT", "SOD"}, f"{item_id} bad flavors"
+            # FOREVER: a Forever entry must name its scope (registry vendor_explicit_scope).
+            assert set(meta["flavors"]) <= {"DEFAULT", "SOD", "FOREVER"}, f"{item_id} bad flavors"
 
 
 def test_known_vendor_reagents_present_and_gating_items_absent():

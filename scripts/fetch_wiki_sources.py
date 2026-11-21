@@ -29,7 +29,6 @@ unknown profession, a missing DB2 build directory, sources extracted from anothe
 wiki fetch or --offline without a cached page, a DB2 column-contract or canary failure).
 """
 import argparse
-import re
 import sys
 from collections import Counter
 from dataclasses import dataclass, field
@@ -38,10 +37,12 @@ from pathlib import Path
 import extract_db2_sources as extract
 from buckets import ENRICH_SCRIPTS, UnknownProfessionError, add_bucket_argument, get_bucket
 from db2 import CanaryError, ColumnContractError
-from forever_resolve import (NO_WIKI_ROW, RecipeFacts, Resolution, assign_owners,
-                             build_claims, match_wiki, resolve)
+from forever_resolve import (RecipeFacts, Resolution, assign_owners, build_claims,
+                             match_wiki, resolve)
 from import_probe import ingame_facts
 from pipeline_io import atomic_write_json, load_json
+# The summary groups reviews exactly as REVIEW.md does, so the two counts agree.
+from review_report import reason_group as review_group
 from wiki import WikiError, fetch_wikitext, index_rows, normalize, parse_rows
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -239,18 +240,6 @@ class Summary:
     orange_from: Counter = field(default_factory=Counter)
     source_types: Counter = field(default_factory=Counter)
     reviews: Counter = field(default_factory=Counter)
-
-
-_TAKEN = re.compile(rf"^{re.escape(NO_WIKI_ROW)}: row .* taken by spell \d+$")
-
-
-def review_group(reason: str) -> str:
-    """A review reason's prefix (text before ':'), numbers folded, for the summary counts."""
-    if _TAKEN.match(reason):
-        # Counted apart: the row exists but belongs to another spell, which an alias or a
-        # capture can settle; a missing row needs the wiki itself.
-        return f"{NO_WIKI_ROW} (taken by another spell)"
-    return re.sub(r"\d+", "N", reason.split(":", 1)[0])
 
 
 def check_recipes(doc, path: Path) -> None:

@@ -8,7 +8,7 @@ import re
 from pathlib import Path
 
 from buckets import BUCKETS, PROFESSIONS
-from generate_recipes import EMITTABLE_SOURCE_TYPES
+from generate_recipes import emittable_source_types
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -46,7 +46,8 @@ def test_profiles_match_constants():
 
 def test_source_types_and_expansions_exist_in_constants():
     src = set(_constants_block("SOURCE_TYPE"))
-    missing = set(EMITTABLE_SOURCE_TYPES) - src
+    # Over every bucket: Forever also emits UNKNOWN (registry allow_unknown_source).
+    missing = {t for b in BUCKETS.values() for t in emittable_source_types(b)} - src
     assert not missing, f"emittable source types missing from SOURCE_TYPE: {sorted(missing)}"
 
     exp = set(_constants_block("EXPANSION"))
