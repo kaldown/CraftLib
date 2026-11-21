@@ -44,6 +44,7 @@ REPORT = "\n".join([
     "rank values (rank, max, modifier) 152 225 0",
     "services 3 format: index | name | type | subText | reqLevel | skill req (name rank met) | cost | link",
     "1 | Linen Cloak | available |  | 5 | Tailoring 35 true | 100 | Linen Cloak<item:2570>",
+    "4 | Mystery Pattern | available |  | 5 | Tailoring 50 true | nil | nil",
     "2 | Apprentice Tailoring | available |  | 1 | nil nil nil | 10 | nil",
     "3 | Heavy Linen Bandage | available |  | 1 | First Aid 40 true | 150 | nil",
     "",
@@ -74,6 +75,7 @@ def test_parse_report():
     }
     assert r.trainer == [
         {"name": "Linen Cloak", "skillName": "Tailoring", "skill": 35, "cost": 100},
+        {"name": "Mystery Pattern", "skillName": "Tailoring", "skill": 50, "cost": None},
         {"name": "Heavy Linen Bandage", "skillName": "First Aid", "skill": 40, "cost": 150},
     ]
     assert r.merchants == {"Tharynn Bouden": {"items": {
@@ -133,10 +135,12 @@ def test_merge_writes_profession_files(tmp_path, bucket):
     assert names == {"Tailoring.json", "FirstAid.json", "Merchants.json", "Currencies.json"}
     assert all(p.parent == ingame for p in paths)
     t = load(ingame / "Tailoring.json")
-    assert t["build"] == "1.60.1.71037" and t["captured"] == "2026-11-21"
+    assert t["build"] == "1.60.1.71037"
+    assert t["recipesCaptured"] == t["trainerCaptured"] == "2026-11-21"
     assert t["profession"]["skillLine"] == 197
     assert set(t["recipes"]) == {"2963", "3915", "12045"}
-    assert t["trainer"] == {"linen cloak": {"skill": 35, "cost": 100}}
+    assert t["trainer"] == {"linen cloak": {"skill": 35, "cost": 100},
+                    "mystery pattern": {"skill": 50, "cost": None}}
     fa = load(ingame / "FirstAid.json")
     assert fa["trainer"] == {"heavy linen bandage": {"skill": 40, "cost": 150}}
     assert fa["recipes"] == {} and fa["profession"] is None
@@ -160,6 +164,7 @@ def test_trainer_only_reimport_keeps_recipes(tmp_path, bucket):
     assert set(t["recipes"]) == {"2963", "3915", "12045"}
     assert t["profession"]["skillLine"] == 197
     assert t["trainer"] == {"linen cloak": {"skill": 35, "cost": 100},
+                            "mystery pattern": {"skill": 50, "cost": None},
                             "linen belt": {"skill": 60, "cost": 200}}
 
 
@@ -206,3 +211,56 @@ def test_cli(tmp_path, capsys):
     assert (src / "Forever" / "ingame" / "Tailoring.json").exists()
     f.write_text("nothing here\n", encoding="utf-8")
     assert import_probe.main(["--bucket", "forever", "--input", str(f), "--sources-dir", str(src)]) == 2
+
+
+def window(*extra, all_n=1):
+    return "\n".join([
+        "== profession window ==",
+        "base: " + kvline(197, "Tailoring", 160, 225, "nil", "Classic"),
+        f"recipes all={all_n} filtered(visible)={all_n}",
+        "5000 | Only Recipe | true | Easy | 1 | true | 1 | 90 |  |  |  | ",
+        *extra,
+    ])
+
+
+def test_truncated_recipe_list_is_refused(tmp_path, bucket, capsys):
+    for text, why in ((window("CAPPED at 6000 lines"), "CAPPED"),
+                      (window("SECTION ERROR: boom"), "SECTION ERROR"),
+                      (window(all_n=2), "all=2")):
+        r = parse_report(text)
+        assert why in r.recipe_error
+        assert merge_into(tmp_path, bucket, r) == []
+        assert why in capsys.readouterr().err
+    assert not (tmp_path / "Forever" / "ingame" / "Tailoring.json").exists()
+    assert parse_report(window()).recipe_error is None
+
+
+def test_refused_recipes_still_import_other_sections(tmp_path):
+    f = tmp_path / "r.txt"
+    f.write_text(window("CAPPED at 6000 lines") + "\n\n== currencies ==\ncurrency Honor qty 1 id 7\n",
+                 encoding="utf-8")
+    src = tmp_path / "src"
+    assert import_probe.main(["--bucket", "forever", "--input", str(f), "--sources-dir", str(src)]) == 2
+    ingame = src / "Forever" / "ingame"
+    assert (ingame / "Currencies.json").exists() and not (ingame / "Tailoring.json").exists()
+
+
+def test_separate_stamps(tmp_path, bucket):
+    merge_into(tmp_path, bucket, parse_report(REPORT))
+    later = parse_report("LPProbe report 2026-12-01 10:00\n== trainer ==\n"
+                         "1 | Linen Belt | available |  | 5 | Tailoring 60 true | 200 | nil\n")
+    later.build = "9.9.9.9"
+    t = load(merge_into(tmp_path, bucket, later)[0])
+    assert (t["recipesCaptured"], t["trainerCaptured"]) == ("2026-11-21", "2026-12-01")
+    assert t["build"] == "1.60.1.71037"
+
+
+def test_skipped_trainer_skills_are_reported(tmp_path, bucket, capsys):
+    r = parse_report("== trainer ==\n1 | Apprentice Riding | available |  | 1 | Riding 1 true | 40 | nil\n")
+    assert merge_into(tmp_path, bucket, r) == []
+    assert "Riding" in capsys.readouterr().err
+
+
+def test_nil_merchant_name_is_null():
+    r = parse_report("== merchant ==\nnpc V guid x filter 1\n1 | 5 | nil | 1 | 1 | -1 | false | nil | \n")
+    assert r.merchants["V"]["items"]["5"]["name"] is None

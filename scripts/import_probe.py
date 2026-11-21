@@ -56,6 +56,8 @@ class ProbeReport:
     merchants: dict = field(default_factory=dict)
     currencies: dict = field(default_factory=dict)
     sections: set = field(default_factory=set)
+    # Why the profession window's recipe list cannot be trusted (None = complete).
+    recipe_error: "str | None" = None
 
     @property
     def recognised(self) -> bool:
@@ -120,9 +122,9 @@ def _trainer(fields: list) -> "dict | None":
     m = _SKILL_REQ.match(fields[5].strip())
     if not m or m.group(1) == "nil":
         return None  # no skill requirement (e.g. the rank-up spell): nothing to learn from
-    cost = _int_or_none(fields[6])
+    # nil cost stays None: 0 would claim the recipe is free.
     return {"name": fields[1], "skillName": m.group(1), "skill": int(m.group(2)),
-            "cost": cost if cost is not None else 0}
+            "cost": _int_or_none(fields[6])}
 
 
 def _merchant_item(fields: list) -> "tuple[str, dict] | None":
@@ -130,7 +132,7 @@ def _merchant_item(fields: list) -> "tuple[str, dict] | None":
     if len(fields) < 7 or not fields[1].strip().isdigit():
         return None
     return fields[1].strip(), {
-        "name": fields[2],
+        "name": _val(fields[2]),  # the probe prints nil for an unreadable item
         "price": _int_or_none(fields[3]),
         "stack": _int_or_none(fields[4]),
         "extendedCost": fields[6].strip() == "true",
@@ -143,6 +145,8 @@ def parse_report(text: str) -> ProbeReport:
     section = None
     base = child = None
     npc = None
+    declared = None   # the probe's own "recipes all=N" count
+    window_errors: list = []
     for raw in text.splitlines():
         line = raw.rstrip()
         m = _SECTION.match(line)
@@ -159,12 +163,19 @@ def parse_report(text: str) -> ProbeReport:
             # "1.60.1 71037" -> the bucket's "1.60.1.71037" spelling.
             r.build = f"{b.group(1)}.{b.group(2)}"
         if line.startswith("SECTION ERROR"):
+            if section == "profession window":
+                window_errors.append("SECTION ERROR")
             continue
         if section == "profession window":
             if line.startswith("base:"):
                 base = _parse_kv(line[5:])
             elif line.startswith("child:"):
                 child = _parse_kv(line[6:])
+            elif line.startswith("CAPPED at"):
+                window_errors.append("list truncated (CAPPED)")
+            elif line.startswith("recipes all="):
+                m2 = re.match(r"recipes all=(\d+)", line)
+                declared = int(m2.group(1)) if m2 else None
             elif _ROW.match(line):
                 rec = _recipe(_SEP.split(line))
                 if rec:
@@ -188,6 +199,12 @@ def parse_report(text: str) -> ProbeReport:
             if c:
                 r.currencies[c.group(1)] = {"id": _int_or_none(c.group(3))}
     r.profession = _profession(base, child)
+    if "profession window" in r.sections:
+        # R8 excludes every DB2 recipe absent from a capture, so a partial list is worse than none.
+        if window_errors:
+            r.recipe_error = window_errors[0]
+        elif declared is not None and declared != len(r.recipes):
+            r.recipe_error = f"parsed {len(r.recipes)} recipes but the probe reported all={declared}"
     return r
 
 
@@ -206,16 +223,19 @@ def merge_into(sources_dir: Path, bucket, report: ProbeReport) -> "list[Path]":
 
     def capture(prof):
         path = ingame / f"{prof.folder}.json"
-        cap = _load(path, {"build": None, "captured": today, "profession": None,
-                           "recipes": {}, "trainer": {}})
+        cap = _load(path, {"build": None, "profession": None, "recipes": {},
+                           "trainer": {}, "recipesCaptured": None, "trainerCaptured": None})
         if path not in written:
             written.append(path)
-        cap["build"] = report.build or cap.get("build")
-        cap["captured"] = today
+        # Older files had one "captured" stamp; keep the keys uniform.
+        cap.setdefault("recipesCaptured", None)
+        cap.setdefault("trainerCaptured", None)
         return path, cap
 
     pending: dict = {}
-    if report.recipes:
+    if report.recipe_error:
+        print(f"error: recipe capture refused: {report.recipe_error}", file=sys.stderr)
+    elif report.recipes:
         prof = by_line.get((report.profession or {}).get("skillLine"))
         if prof is None:
             # Not fileable: say so rather than silently dropping the owner's capture.
@@ -226,11 +246,15 @@ def merge_into(sources_dir: Path, bucket, report: ProbeReport) -> "list[Path]":
             # A fresh recipe list is the whole truth for the profession: replace, never merge.
             cap["recipes"] = report.recipes
             cap["profession"] = report.profession
+            cap["recipesCaptured"] = today
+            cap["build"] = report.build or cap.get("build")
             pending[path] = cap
+    skipped: set = set()
     for t in report.trainer:
         prof = by_name.get(t["skillName"].lower())
         if prof is None:
-            continue  # a skill outside this bucket's professions (e.g. Riding)
+            skipped.add(t["skillName"])  # outside this bucket's professions (e.g. Riding)
+            continue
         path = ingame / f"{prof.folder}.json"
         cap = pending.get(path)
         if cap is None:
@@ -238,6 +262,12 @@ def merge_into(sources_dir: Path, bucket, report: ProbeReport) -> "list[Path]":
             pending[path] = cap
         # Keyed by normalized spell name so the resolver finds it from a DB2 name.
         cap["trainer"][normalize(t["name"])] = {"skill": t["skill"], "cost": t["cost"]}
+        cap["trainerCaptured"] = today
+        # A trainer-only import must not relabel an earlier recipe capture's build.
+        cap["build"] = cap.get("build") or report.build
+    if skipped:
+        print("warning: skipped trainer lines for skills outside this bucket: "
+              + ", ".join(sorted(skipped)), file=sys.stderr)
     for path, cap in pending.items():
         atomic_write_json(path, cap)
 
@@ -286,6 +316,8 @@ def main(argv: "list[str] | None" = None) -> int:
             return 2
         for p in merge_into(args.sources_dir, bucket, report):
             print(f"wrote {p}")
+        if report.recipe_error:
+            return 2  # the rest of the report was imported; the recipe list was not
     except (OSError, InputFileError) as e:
         print(f"error: {e}", file=sys.stderr)
         return 2
