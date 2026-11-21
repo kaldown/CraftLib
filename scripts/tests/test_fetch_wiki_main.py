@@ -236,7 +236,7 @@ def test_sod_trainer_loses_to_the_in_game_trainer(tmp_path):
     _capture(src, ["1001", "1002", "1003", "1004"], {"fixture bolt": {"skill": 3, "cost": 10}})
     assert fw.main(forever_enrich_argv(art, src)) == 0
     r = _recipes(src)["1001"]
-    assert r["source"] == {"type": "TRAINER", "certainty": "INGAME"}
+    assert r["source"] == {"type": "TRAINER", "certainty": "INGAME", "trainingCost": 10}
     assert r["difficulty"] == _diff(3, 10, 40, "INGAME")
 
 
@@ -257,7 +257,8 @@ def test_ingame_capture_decides_trainer_skill_and_absence(tmp_path):
     _capture(src, ["1001", "1002", "1003"], {"fixture bolt": {"skill": 5, "cost": 10}})
     assert fw.main(forever_enrich_argv(art, src)) == 0
     r = _recipes(src)
-    assert r["1001"]["source"] == {"type": "TRAINER", "certainty": "INGAME"}
+    # The trainer's price reaches the source: the generator emits it as trainingCost.
+    assert r["1001"]["source"] == {"type": "TRAINER", "certainty": "INGAME", "trainingCost": 10}
     assert r["1001"]["difficulty"] == _diff(5, 10, 40, "INGAME")
     assert r["1001"]["forever"] == {"notes": ["in-game trainer skill 5 differs from wiki skill 1"]}
     assert r["1004"]["source"]["reviewReason"] == "not in game: absent from the in-game recipe list"

@@ -237,6 +237,25 @@ def test_ingame_trainer_agreeing_with_wiki_adds_no_note():
     assert res.notes == ()
 
 
+@pytest.mark.parametrize("cost,expected", [
+    (250, {"type": "TRAINER", "certainty": "INGAME", "trainingCost": 250}),
+    (0, {"type": "TRAINER", "certainty": "INGAME"}),       # 0 would read as free
+    (None, {"type": "TRAINER", "certainty": "INGAME"}),    # the probe printed nil
+    (True, {"type": "TRAINER", "certainty": "INGAME"}),    # a bool is not a price
+], ids=["positive", "zero", "unknown", "bool"])
+def test_ingame_trainer_cost_ships_only_when_positive(cost, expected):
+    res = resolve(facts(), row("TRAINER", skill=40),
+                  IngameFacts(present=True, trainer_skill=40, trainer_cost=cost), None)
+    assert res.source == expected
+
+
+def test_trainer_cost_needs_the_in_game_trainer_to_decide():
+    # The cost belongs to the trainer entry; a recipe the trainer does not decide has none.
+    res = resolve(facts(), row("TRAINER", skill=40),
+                  IngameFacts(present=True, trainer_skill=None, trainer_cost=250), None)
+    assert res.source == {"type": "TRAINER", "certainty": "WIKI"}
+
+
 def test_ingame_trainer_decides_an_unmatched_recipe():
     res = resolve(facts(), "ambiguous: 2 wiki rows named 'linen cloak'",
                   IngameFacts(present=None, trainer_skill=40), None)

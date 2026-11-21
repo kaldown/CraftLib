@@ -297,7 +297,10 @@ def ingame_facts(capture: "dict | None", spell_id: str, spell_name: str) -> "Ing
     # An empty recipe list means "not captured", not "nothing exists" (R8 would exclude all).
     present = (spell_id in recipes) if recipes else None
     entry = (capture.get("trainer") or {}).get(normalize(spell_name))
-    return IngameFacts(present=present, trainer_skill=entry["skill"] if entry else None)
+    if entry is None:
+        return IngameFacts(present=present, trainer_skill=None)
+    return IngameFacts(present=present, trainer_skill=entry["skill"],
+                       trainer_cost=entry.get("cost"))
 
 
 def main(argv: "list[str] | None" = None) -> int:

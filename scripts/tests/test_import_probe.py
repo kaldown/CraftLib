@@ -195,9 +195,11 @@ def test_merchants_merge_by_npc(tmp_path, bucket):
 
 
 def test_ingame_facts():
-    cap = {"recipes": {"3915": {}}, "trainer": {"linen cloak": {"skill": 35, "cost": 100}}}
+    cap = {"recipes": {"3915": {}}, "trainer": {"linen cloak": {"skill": 35, "cost": 100},
+                                                "linen belt": {"skill": 60, "cost": None}}}
     assert ingame_facts(None, "3915", "Linen Cloak") is None
-    assert ingame_facts(cap, "3915", "Linen Cloak") == IngameFacts(True, 35)
+    assert ingame_facts(cap, "3915", "Linen Cloak") == IngameFacts(True, 35, 100)
+    assert ingame_facts(cap, "999", "Linen Belt") == IngameFacts(False, 60, None)
     assert ingame_facts(cap, "999", "Unknown Thing") == IngameFacts(False, None)
     empty = {"recipes": {}, "trainer": {}}
     assert ingame_facts(empty, "3915", "Linen Cloak") == IngameFacts(None, None)

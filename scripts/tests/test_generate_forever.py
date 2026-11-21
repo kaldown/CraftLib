@@ -172,6 +172,13 @@ def test_classic_trainer_lines_are_unchanged():
             '            trainingCost = 50,\n        },') in lua
 
 
+def test_ingame_trainer_cost_is_emitted():
+    lua = _lua({"type": "TRAINER", "certainty": "INGAME", "trainingCost": 250})
+    assert ('            type = C.SOURCE_TYPE.TRAINER,\n'
+            '            npcName = "Any Tailoring Trainer",\n'
+            '            trainingCost = 250,\n        },') in lua
+
+
 def test_unknown_source_emits_type_and_item(tmp_path, monkeypatch):
     rc, _art, src, out = _run(tmp_path, monkeypatch, wikitext=UNKNOWN_ROW)
     assert rc == 0

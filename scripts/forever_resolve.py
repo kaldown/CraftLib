@@ -56,10 +56,12 @@ class IngameFacts:
 
     present: in the captured recipe list; None = the profession's recipes were not
     captured. trainer_skill: the skill the in-game trainer asks for; None = the
-    trainer list does not have it (or was not captured).
+    trainer list does not have it (or was not captured). trainer_cost: the copper price
+    the trainer showed; None when the probe printed nil or there is no trainer entry.
     """
     present: "bool | None"
     trainer_skill: "int | None"
+    trainer_cost: "int | None" = None
 
 
 @dataclass(frozen=True)
@@ -289,12 +291,13 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
     notes: list[str] = []
     row = wiki if isinstance(wiki, WikiRow) else None
     trainer_skill = ingame.trainer_skill if ingame is not None else None
+    trainer_cost = ingame.trainer_cost if ingame is not None else None
 
     if manual_difficulty is not None:
         # Hand-verified state wins over any automatic value (as a MANUAL source does in the
         # enrich step); what disagrees with it is kept visible as a note.
         _manual_notes(facts, manual_difficulty, trainer_skill, notes)
-        source = _source(facts, wiki, row, trainer_skill, cross_trainer, notes)
+        source = _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes)
         if isinstance(source, str):
             return Resolution(None, None, source, tuple(notes))
         return Resolution(source, manual_difficulty, None, tuple(notes))
@@ -303,7 +306,7 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
     if isinstance(orange, str):
         return Resolution(None, None, orange, tuple(notes))
     value, origin = orange
-    source = _source(facts, wiki, row, trainer_skill, cross_trainer, notes)
+    source = _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes)
     if isinstance(source, str):
         return Resolution(None, None, source, tuple(notes))
     difficulty = {
@@ -380,7 +383,7 @@ def _orange(facts, wiki, row, trainer_skill, cross_oranges, notes):
     return skill, "WIKI"
 
 
-def _source(facts, wiki, row, trainer_skill, cross_trainer, notes):
+def _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes):
     """The source dict per R2 (and R12 where the wiki leaves it open), or a review reason."""
     item = int(facts.teaching_item) if facts.teaching_item is not None else None
     # The in-game trainer list wins over every wiki kind and over a DB2 teaching item:
@@ -390,7 +393,12 @@ def _source(facts, wiki, row, trainer_skill, cross_trainer, notes):
             notes.append(f"in-game trainer teaches it; wiki source '{row.raw_source}'")
         if item is not None:
             notes.append(f"in-game trainer teaches it; DB2 also has teaching item {item}")
-        return {"type": "TRAINER", "certainty": "INGAME"}
+        source = {"type": "TRAINER", "certainty": "INGAME"}
+        # Only a positive price: 0 would read as a free recipe and None is an unread one
+        # (the probe printed nil); type() is int also rejects a JSON true.
+        if type(trainer_cost) is int and trainer_cost > 0:
+            source["trainingCost"] = trainer_cost
+        return source
     if row is None:
         # R12 only for a recipe the wiki does not list at all. A row taken by another
         # spell or an ambiguous one marks an old/revised pair, where the other spell may
