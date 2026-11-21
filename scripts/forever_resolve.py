@@ -15,7 +15,7 @@ describe.
 from dataclasses import dataclass
 from typing import Sequence
 
-from wiki import WikiRow, normalize
+from wiki import UNRECOGNISED_COST, WikiRow, normalize
 
 CURRENCY_NAME = "Merchant's Favor"
 NOT_IN_GAME = "not in game: absent from the in-game recipe list"
@@ -399,9 +399,11 @@ def _source(facts, wiki, row, trainer_skill, cross_trainer, notes):
             return _cross_trainer(cross_trainer, None, notes)
         # Spec D15: no wiki row (or an ambiguous one) -> review, never a default source.
         return wiki
-    if row.currency is not None and row.currency <= 0:
-        # A Merchant's Favor amount of 0 would read as a free recipe; such a cell is
-        # one this parser does not understand, not a price.
+    if row.kind == UNRECOGNISED_COST or (row.currency is not None and row.currency <= 0):
+        # A Merchant's Favor amount of 0 would read as a free recipe, and one that is not
+        # a plain number ("1,200") would be read wrong; either cell is one this parser does
+        # not understand, not a price. Checked before the reputation branch, which would
+        # otherwise ship the recipe.
         return f"unrecognised wiki cost: '{row.raw_source}'"
     if row.rep_level is not None:
         if facts.min_faction <= 0:

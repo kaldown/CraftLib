@@ -3,7 +3,7 @@ import pytest
 
 from forever_resolve import (CrossTrainer, IngameFacts, RecipeFacts, Resolution,
                              assign_owners, build_claims, match_wiki, resolve)
-from wiki import WikiRow, index_rows
+from wiki import UNRECOGNISED_COST, WikiRow, index_rows
 
 FAVOR = "Merchant's Favor"
 
@@ -447,9 +447,14 @@ def test_claims_without_an_absence_keep_both_spells(ingame):
     pytest.param(row("VENDOR", currency=0, raw="{{cost|mfvr=0}}"), id="vendor"),
     pytest.param(row("VENDOR", currency=0, rep_level="Honored",
                      raw="{{text|honored|Honored}}; {{cost|mfvr=0}}"), id="faction-less-rep"),
+    pytest.param(row(UNRECOGNISED_COST, raw="Vendor {{cost|mfvr=1,200}}"), id="unread-cost"),
+    pytest.param(row(UNRECOGNISED_COST, rep_level="Honored",
+                     raw="{{text|honored|Honored}}; {{cost|mfvr=1,200}}"),
+                 id="unread-cost-faction-less-rep"),
 ])
 def test_zero_currency_is_review(wiki_row):
-    # mfvr=0 would read as a free recipe; it is a wiki cell we do not understand.
+    # mfvr=0 would read as a free recipe, and a cost that is not a plain number would be
+    # read wrong: both are wiki cells the parser does not understand.
     res = resolve(facts(**ITEM), wiki_row, None, None)
     assert res.review == f"unrecognised wiki cost: '{wiki_row.raw_source}'"
 

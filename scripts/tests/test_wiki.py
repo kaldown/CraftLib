@@ -4,7 +4,8 @@ import json
 import pytest
 
 import wiki
-from wiki import WikiError, classify_source, fetch_wikitext, index_rows, normalize, parse_rows
+from wiki import (UNRECOGNISED_COST, WikiError, classify_source, fetch_wikitext, index_rows,
+                  normalize, parse_rows)
 
 FIVE = """{|class="darktable"
 |+ Apprentice alchemy recipes
@@ -68,6 +69,28 @@ def test_classify_other_and_trainer():
     assert classify_source("Trainer")[0] == "TRAINER"
     assert classify_source("")[0] == "UNKNOWN"
     assert classify_source("Somewhere else")[0] == "OTHER"
+
+
+@pytest.mark.parametrize("cell,amount", [
+    ("{{cost|mfvr=180}}", 180),
+    ("Vendor {{cost| mfvr = 45 }}", 45),
+    ("{{cost|mfvr=30|g=1}}", 30),
+])
+def test_cost_reads_the_whole_amount(cell, amount):
+    kind, currency, _rep = classify_source(cell)
+    assert (kind, currency) == ("VENDOR", amount)
+
+
+@pytest.mark.parametrize("cell", [
+    "{{cost|mfvr=1,200}}",          # a thousands separator: not 1
+    "Vendor {{cost|mfvr=1.5}}",
+    "{{cost|mfvr=12k}}",
+    "{{cost|mfvr=}}",
+])
+def test_cost_not_a_plain_number_is_unrecognised(cell):
+    # WHY: reading the leading digits would ship a wrong price; the cell goes to review.
+    kind, currency, _rep = classify_source(cell)
+    assert (kind, currency) == (UNRECOGNISED_COST, None)
 
 
 def test_normalize():

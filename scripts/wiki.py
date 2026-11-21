@@ -88,7 +88,14 @@ class WikiRow:
     line_no: int
 
 
-_COST = re.compile(r"\{\{\s*cost\s*\|[^}]*?mfvr\s*=\s*(\d+)", re.I)
+# WHY the number is anchored (it must end at "|" or "}}"): "mfvr=1,200" would otherwise
+# read as 1, a wrong price that looks valid.
+_COST = re.compile(r"\{\{\s*cost\s*\|[^}]*?mfvr\s*=\s*(\d+)\s*[|}]", re.I)
+_COST_ANY = re.compile(r"\{\{\s*cost\s*\|[^}]*?mfvr\s*=", re.I)
+# Source kind of a cell whose Merchant's Favor cost is not a plain whole number. The
+# resolver reviews it whatever the rest of the cell says ("Vendor" would otherwise fall
+# back to the DB2 BuyPrice, a gold price for a currency recipe).
+UNRECOGNISED_COST = "UNRECOGNISED_COST"
 _REP = re.compile(r"\{\{\s*text\s*\|\s*(friendly|honored|revered|exalted)\s*\|", re.I)
 _KEYWORDS = (
     ("automatic", "STARTER"), ("special trainer", "SPECIAL_TRAINER"),
@@ -102,6 +109,8 @@ def classify_source(cell):
     currency = int(cost.group(1)) if cost else None
     rep = _REP.search(cell)
     rep_level = rep.group(1).capitalize() if rep else None
+    if cost is None and _COST_ANY.search(cell):
+        return UNRECOGNISED_COST, None, rep_level
     # Strip templates then links so a keyword inside a link target is not read.
     plain = re.sub(r"\{\{.*?\}\}", " ", cell)
     plain = _LINK.sub(" ", plain)
