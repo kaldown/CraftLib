@@ -1,8 +1,8 @@
 """Forever resolver: learn skill (orange) and source precedence (plan rulings R1, R2, R5, R8)."""
 import pytest
 
-from forever_resolve import (IngameFacts, RecipeFacts, Resolution, build_claims,
-                             match_wiki, resolve)
+from forever_resolve import (IngameFacts, RecipeFacts, Resolution, assign_owners,
+                             build_claims, match_wiki, resolve)
 from wiki import WikiRow, index_rows
 
 FAVOR = "Merchant's Favor"
@@ -468,3 +468,87 @@ def test_rejected_ingame_skill_keeps_failed_match_as_note():
     res = resolve(facts(), "no wiki row", IngameFacts(present=True, trainer_skill=96), None)
     assert res.review == "no learn skill: in-game trainer skill 96 outside 1-95"
     assert res.notes == ("in-game trainer decides it; wiki: no wiki row",)
+
+
+# --- a shared row goes to the spell whose teaching-item rank it states ---------------
+
+def _shared(old_rsr, new_rsr, rows=None, aliases=None):
+    rows = rows or [row("VENDOR", skill=40)]
+    idx = index_rows(rows)
+    old = facts(spell_id="3496", teaching_item="6001", buy_price=500, rsr=old_rsr)
+    new = facts(spell_id="439128", teaching_item="6002", buy_price=500, rsr=new_rsr)
+    claims = build_claims([old, new], idx)
+    owners = assign_owners([old, new], idx, claims, aliases or {})
+    return idx, old, new, claims, owners
+
+
+def test_shared_row_goes_to_the_unique_rank_match():
+    idx, old, new, claims, owners = _shared(old_rsr=25, new_rsr=40)
+    r = idx["linen cloak"][0]
+    assert owners == {r: "439128"}
+    assert match_wiki(new, idx, {}, claims, owners) is r
+    assert match_wiki(old, idx, {}, claims, owners) == (
+        "no wiki row: row 'linen cloak' taken by spell 439128")
+
+
+@pytest.mark.parametrize("old_rsr,new_rsr", [(40, 40), (25, 30), (0, 0)],
+                         ids=["both-match", "none-match", "no-ranks"])
+def test_shared_row_without_a_unique_rank_match_stays_ambiguous(old_rsr, new_rsr):
+    idx, old, new, claims, owners = _shared(old_rsr, new_rsr)
+    assert owners == {}
+    for f in (old, new):
+        assert match_wiki(f, idx, {}, claims, owners) == (
+            "ambiguous: wiki row 'linen cloak' matches spells 3496, 439128")
+
+
+def test_shared_row_without_a_skill_has_no_owner():
+    idx, old, new, claims, owners = _shared(old_rsr=40, new_rsr=40,
+                                            rows=[row("VENDOR", skill=None)])
+    assert owners == {}
+
+
+def test_alias_overrides_rank_ownership():
+    # 3496's alias names the shared row: it takes it, and the row is never handed to
+    # 439128 by rank as well (one row, one owner); 439128 stays ambiguous.
+    aliases = {"3496": {"key": "Linen Cloak", "skill": 40}}
+    idx, old, new, claims, owners = _shared(old_rsr=25, new_rsr=40, aliases=aliases)
+    r = idx["linen cloak"][0]
+    assert owners == {}
+    assert match_wiki(old, idx, aliases, claims, owners) is r
+    assert match_wiki(new, idx, aliases, claims, owners).startswith("ambiguous: wiki row")
+
+
+def test_spell_aliased_elsewhere_does_not_compete_for_the_row():
+    # 3496's alias points at its own old row; even with an equal rank it is no contender
+    # for the shared row, which goes to 439128.
+    shared, old_row = row("VENDOR", skill=40, line_no=1), row(
+        "VENDOR", skill=10, key="old linen cloak", line_no=2)
+    aliases = {"3496": {"key": "Old Linen Cloak", "skill": 10}}
+    idx, old, new, claims, owners = _shared(old_rsr=40, new_rsr=40,
+                                            rows=[shared, old_row], aliases=aliases)
+    assert owners == {shared: "439128"}
+    assert match_wiki(new, idx, aliases, claims, owners) is shared
+    assert match_wiki(old, idx, aliases, claims, owners) is old_row
+
+
+def test_two_rows_of_one_name_each_get_their_rank_owner():
+    r40, r55 = row("VENDOR", skill=40, line_no=1), row("VENDOR", skill=55, line_no=2)
+    idx, old, new, claims, owners = _shared(old_rsr=40, new_rsr=55, rows=[r40, r55])
+    assert owners == {r40: "3496", r55: "439128"}
+    assert match_wiki(old, idx, {}, claims, owners) is r40
+    assert match_wiki(new, idx, {}, claims, owners) is r55
+
+
+def test_taken_row_claimant_still_resolves_through_the_in_game_trainer():
+    idx, old, new, claims, owners = _shared(old_rsr=25, new_rsr=40)
+    got = match_wiki(old, idx, {}, claims, owners)
+    res = resolve(old, got, IngameFacts(present=True, trainer_skill=30), None)
+    assert res.source == {"type": "TRAINER", "certainty": "INGAME"}
+    assert res.difficulty["orangeFrom"] == "INGAME"
+    assert ("in-game trainer decides it; wiki: no wiki row: row 'linen cloak' taken by "
+            "spell 439128") in res.notes
+
+
+def test_match_without_owners_is_unchanged():
+    idx, old, new, claims, _owners = _shared(old_rsr=25, new_rsr=40)
+    assert match_wiki(new, idx, {}, claims).startswith("ambiguous: wiki row")

@@ -175,13 +175,27 @@ SHARED_ROW = FOREVER_WIKITEXT.replace("[[Fixture Bolt Item]]", "[[Fixture Bolt I
 SHARED_ROW = SHARED_ROW.replace("| [[Fixture Vest Item]] || 15 ||  || Old || Vendor\n|-\n", "")
 
 
-def test_shared_row_is_ambiguous_without_a_capture(tmp_path):
+def test_shared_row_is_ambiguous_when_no_rank_matches_it(tmp_path):
+    # Row skill 1: 1001 has no teaching item, 1002's ranks 15, so neither owns the row.
     rc, _art, src = _run(tmp_path, wikitext=SHARED_ROW)
     assert rc == 0
     r = _recipes(src)
     for sid in ("1001", "1002"):
         assert r[sid]["source"]["reviewReason"] == (
             "ambiguous: wiki row 'fixture bolt item' matches spells 1001, 1002")
+
+
+def test_shared_row_goes_to_the_spell_whose_rank_it_states(tmp_path):
+    # The shared row says Vendor at 15: 1002's pattern asks for rank 15, 1001 has no item.
+    text = SHARED_ROW.replace("[[Fixture Bolt Item|Fixture Vest Item]] || 1 ||  || Old || Trainer",
+                              "[[Fixture Bolt Item|Fixture Vest Item]] || 15 ||  || Old || Vendor")
+    rc, _art, src = _run(tmp_path, wikitext=text)
+    assert rc == 0
+    r = _recipes(src)
+    assert r["1002"]["source"] == {"type": "VENDOR", "certainty": "WIKI", "itemId": 6002,
+                                   "cost": 500}
+    assert r["1001"]["source"]["reviewReason"] == (
+        "no wiki row: row 'fixture bolt item' taken by spell 1002")
 
 
 def test_absent_spell_releases_its_wiki_row(tmp_path):

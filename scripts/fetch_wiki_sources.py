@@ -38,7 +38,8 @@ from pathlib import Path
 import extract_db2_sources as extract
 from buckets import ENRICH_SCRIPTS, UnknownProfessionError, add_bucket_argument, get_bucket
 from db2 import CanaryError, ColumnContractError
-from forever_resolve import RecipeFacts, Resolution, build_claims, match_wiki, resolve
+from forever_resolve import (RecipeFacts, Resolution, assign_owners, build_claims,
+                             match_wiki, resolve)
 from import_probe import ingame_facts
 from pipeline_io import atomic_write_json, load_json
 from wiki import WikiError, fetch_wikitext, index_rows, parse_rows
@@ -254,6 +255,8 @@ def enrich(doc: dict, profession, indexes: dict, rows, aliases: dict,
     # recipe also reaches is still shared, and sharing is what makes a match ambiguous.
     # The capture goes in too, so a spell absent in game releases the rows it reaches.
     claims = build_claims(list(facts.values()), index, ingame=ingame)
+    # A shared row goes to the claimant whose teaching-item rank equals its skill.
+    owners = assign_owners(list(facts.values()), index, claims, aliases)
 
     summary = Summary(recipes=len(recipes))
     for sid, recipe in recipes.items():
@@ -267,7 +270,7 @@ def enrich(doc: dict, profession, indexes: dict, rows, aliases: dict,
             res = Resolution(None, None, f"not in DB2: no {profession.name} SkillLineAbility "
                                          f"row for spell {sid} in build {version}")
         else:
-            match = match_wiki(f, index, aliases, claims)
+            match = match_wiki(f, index, aliases, claims, owners)
             res = resolve(f, match, ingame[sid], cross_orange(cross.get(sid), f.yellow, f.gray))
         apply_resolution(recipe, res, f)
         if res.review is None:
