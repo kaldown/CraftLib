@@ -122,7 +122,7 @@ def test_forever_entry_values():
                        "MinReputation", "VendorStackCount", "RequiredSkillRank",
                        "RequiredSkill")}
     assert (f.item_effect_join, f.has_tools) == ("xitem", True)
-    # MANUAL: a hand-aligned value, listed in REVIEW.md like the others (Task 8b).
+    # MANUAL: a hand-aligned value, listed in REVIEW.md like the others.
     assert f.difficulty_certainties == ("INGAME", "DB2", "CROSS", "WIKI", "MANUAL")
     assert (f.review_policy, f.allow_unknown_source, f.strict_difficulty) == ("exclude", True, True)
     assert not f.milestones_verified

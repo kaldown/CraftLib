@@ -456,7 +456,7 @@ def test_missing_sources_file_exits_2_and_writes_no_review(tmp_path, monkeypatch
     assert not (src / "Forever" / "review").exists()
 
 
-# --- Task 8b: unnamed reagents, MANUAL difficulty ------------------------------------
+# --- unnamed reagents, MANUAL difficulty -----------------------------------------------
 
 def test_unnamed_reagent_is_excluded_with_its_reason(tmp_path, monkeypatch):
     # Measured 8 resolved recipes on 1.60.1.71037 whose reagent ItemSparse does not name;
@@ -487,7 +487,7 @@ def test_manual_difficulty_still_passes_the_strict_check(tmp_path, monkeypatch, 
     assert "strict difficulty" in capsys.readouterr().err
 
 
-# --- Task 7 review minors ------------------------------------------------------------
+# --- bucket guards: currency refusal and other edge cases ------------------------------
 
 def test_currency_is_refused_on_a_bucket_without_currency_costs():
     with pytest.raises(gr.GenerateError) as e:

@@ -29,7 +29,7 @@ REP = dict(teaching_item="6003", buy_price=1000, min_faction=59,
 
 
 # One row per wiki source rule: (wiki row, extra facts, expected source or review).
-R2_CASES = [
+SOURCE_CASES = [
     pytest.param(row("STARTER", skill=1, raw="Automatic"), {},
                  {"type": "STARTER", "certainty": "WIKI"}, id="automatic-starter"),
     pytest.param(row("TRAINER"), {},
@@ -105,7 +105,7 @@ R2_CASES = [
 ]
 
 
-@pytest.mark.parametrize("wiki_row, extra, expected", R2_CASES)
+@pytest.mark.parametrize("wiki_row, extra, expected", SOURCE_CASES)
 def test_source_mapping(wiki_row, extra, expected):
     res = resolve(facts(**extra), wiki_row, None, None)
     if isinstance(expected, str):
@@ -287,6 +287,10 @@ def test_trainer_entry_reaching_two_spells_is_ambiguous_for_both():
               "2001": IngameFacts(present=None, trainer_skill=None), "2002": None}
     reason = "ambiguous: in-game trainer entry 'linen cloak' matches spells 3496, 439128"
     assert trainer_ambiguities(ingame) == {"3496": reason, "439128": reason}
+
+
+def test_trainer_capture_without_an_entry_key_is_never_grouped():
+    assert trainer_ambiguities({"1": _trained(None, None), "2": _trained(None, None)}) == {}
 
 
 def test_trainer_entry_ignores_a_spell_the_capture_marks_absent():
@@ -478,7 +482,7 @@ def test_unpriced_vendor_with_db2_faction_is_unknown_and_keeps_faction_note():
     assert any("Thorium Brotherhood" in n and "6003" in n for n in res.notes)
 
 
-# --- review round: absent spells, zero costs, in-game decisions ---------------------
+# --- absent spells, zero costs, in-game decisions -------------------------------------
 
 def test_absent_spell_releases_its_wiki_row():
     # Old Classic spell next to its revised Forever spell, both item-taught: the capture
@@ -691,8 +695,8 @@ def test_cross_orange_first_bucket_wins():
 # --- a verified trainer source from another bucket -----------------------------------
 
 SOD_TRAINER = CrossTrainer(bucket="SoD", certainty="WOWHEAD")
-R12_NOTE = "trainer per SoD (WOWHEAD); no wiki row"
-R12_ROW_NOTE = "trainer per SoD (WOWHEAD); wiki source unknown"
+CROSS_TRAINER_NOTE = "trainer per SoD (WOWHEAD); no wiki row"
+CROSS_TRAINER_ROW_NOTE = "trainer per SoD (WOWHEAD); wiki source unknown"
 
 
 def test_cross_trainer_without_wiki_row_or_item_is_a_trainer():
@@ -700,7 +704,7 @@ def test_cross_trainer_without_wiki_row_or_item_is_a_trainer():
     assert res.review is None
     assert res.source == {"type": "TRAINER", "certainty": "CROSS"}
     assert res.difficulty["orange"] == 40 and res.difficulty["orangeFrom"] == "CROSS"
-    assert res.notes == (R12_NOTE,)
+    assert res.notes == (CROSS_TRAINER_NOTE,)
 
 
 def test_cross_trainer_manual_certainty_is_named_in_the_note():
@@ -717,7 +721,7 @@ def test_cross_trainer_replaces_an_unknown_wiki_source_without_item(raw):
     assert res.source == {"type": "TRAINER", "certainty": "CROSS"}
     assert (res.difficulty["orange"], res.difficulty["orangeFrom"]) == (30, "WIKI")
     # The recipe IS on the wiki; only its source is not.
-    assert res.notes == (R12_ROW_NOTE,)
+    assert res.notes == (CROSS_TRAINER_ROW_NOTE,)
 
 
 def test_cross_trainer_without_an_orange_stays_excluded():
@@ -771,7 +775,7 @@ def test_cross_trainer_loses_to_the_in_game_trainer():
                   [("SoD", 40)], SOD_TRAINER)
     assert res.source == {"type": "TRAINER", "certainty": "INGAME"}
     assert res.difficulty["orange"] == 20
-    assert R12_NOTE not in res.notes
+    assert CROSS_TRAINER_NOTE not in res.notes
 
 
 def test_cross_trainer_does_not_bring_back_a_recipe_absent_in_game():

@@ -37,7 +37,7 @@ CraftLib bundles a separate, cumulative recipe set for each Classic-family clien
 | Wrath of the Lich King Classic | 11 (+ Inscription) | 450 |
 | WoW Forever (1.60) | 7 (Engineering and Mining pending in-game confirmation) | 300 |
 
-Professions: Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring, Cooking, First Aid, Mining - plus Jewelcrafting (TBC and later) and Inscription (WotLK). On the Classic clients every recipe carries Wowhead-verified difficulty thresholds and an acquisition source from the game data or Wowhead. The WoW Forever data is built without Wowhead: its thresholds come from the game data, the Classic data for recipes that did not change, the Warcraft Wiki and in-game captures, and 295 of its 1,767 recipes carry the `unknown` source marker because no source could be established yet.
+Professions: Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring, Cooking, First Aid, Mining - plus Jewelcrafting (TBC and later) and Inscription (WotLK). On the Classic clients every recipe carries Wowhead-verified difficulty thresholds and an acquisition source from the game data or Wowhead. The WoW Forever data is built without Wowhead: its thresholds come from the game data, the Classic data for recipes that did not change, the Warcraft Wiki and, once imported, in-game captures, and 295 of its 1,767 recipes carry the `unknown` source marker because no source could be established yet.
 
 ## Usage
 
@@ -143,7 +143,7 @@ The Forever bucket differs from the Classic ones: its recipe facts come from the
 
 ### Data Sources
 
-- **DB2 Tables:** SpellName, SpellEffect, SpellReagents, ItemSparse, SkillLine, SkillLineAbility, ItemEffect, Faction; for WoW Forever also ItemXItemEffect (teaching items) and SpellTotems / TotemCategory (required tools)
+- **DB2 Tables:** SpellName, SpellEffect, SpellReagents, ItemSparse, SkillLineAbility, ItemEffect, Faction; SkillLine is read only for the Forever bucket (teaching-item child lines); for WoW Forever also ItemXItemEffect (teaching items) and SpellTotems / TotemCategory (required tools)
 - **Wowhead:** Source verification (VENDOR vs DROP) and difficulty thresholds for the Classic clients
 - **Warcraft Wiki:** the WoW Forever per-profession recipe tables (acquisition source, learn skill, Merchant's Favor prices), read through the wiki API and cached locally
 - **In-game captures:** WoW Forever trainer and recipe lists from the `/lpprobe` report (none imported yet)

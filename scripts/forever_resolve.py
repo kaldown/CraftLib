@@ -284,7 +284,8 @@ def trainer_ambiguities(ingame: "dict[str, IngameFacts | None]") -> "dict[str, s
     """
     by_key: dict[str, list[str]] = {}
     for sid, capture in ingame.items():
-        if capture is None or capture.trainer_skill is None or capture.present is False:
+        if (capture is None or capture.trainer_skill is None or capture.trainer_key is None
+                or capture.present is False):
             continue
         by_key.setdefault(capture.trainer_key, []).append(sid)
     out: dict[str, str] = {}
