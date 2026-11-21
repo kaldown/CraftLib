@@ -2,7 +2,8 @@
 """Extract recipe sources from DB2 data.
 
 Identifies sources with certainty from DB2:
-- TRAINER: No recipe item in ItemEffect table
+- TRAINER: No recipe item (ItemEffect, or ItemXItemEffect on Forever; see
+  db2.teaching_items)
 - REPUTATION: MinFactionID > 0 on recipe item
 - QUEST: BuyPrice=0 AND SellPrice=0 on recipe item
 
@@ -97,15 +98,15 @@ def build_indexes(data_dir: Path, bucket, check: bool = True) -> dict:
                 indexes["has_reagents"].add(spell_id)
                 break
 
-    # Recipe items (ItemEffect: items that teach spells).
-    # Only include items that exist in ItemSparse (some old items were removed).
+    # Recipe items: spell -> the one item that teaches it, through the bucket's join
+    # (ItemEffect.ParentItemID on Classic, ItemXItemEffect on Forever). Only items that
+    # exist in ItemSparse count (some old items were removed): detect_source reads
+    # their prices and faction, and would otherwise fail on a link to nothing.
     indexes["recipe_items"] = {}
-    for row in table("ItemEffect"):
-        spell_id = row["SpellID"]
-        item_id = row["ParentItemID"]
-        if spell_id and item_id and item_id != "0":
-            if item_id in indexes["item_details"]:
-                indexes["recipe_items"][spell_id] = item_id
+    for spell_id, candidates in db2.teaching_items(data_dir, bucket).items():
+        item_id = db2.choose_teaching_item(bucket, candidates, indexes["item_details"])
+        if item_id is not None:
+            indexes["recipe_items"][spell_id] = item_id
 
     indexes["skill_line_abilities"] = table("SkillLineAbility")
 

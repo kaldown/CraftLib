@@ -2,13 +2,16 @@
 
 Tailoring only (skill line 197). Row shapes follow real wago.tools CSVs closely
 enough for the column contract: each header is the contract's REQUIRED_COLUMNS
-plus an ID column where the contract has none.
+plus an ID column where the contract has none. join="xitem" writes the Forever
+shape instead: the contract of the Forever bucket (its column overrides), the
+ItemXItemEffect link table and the tool tables.
 """
 import csv
 import json
 from pathlib import Path
 
-from db2 import REQUIRED_COLUMNS
+from buckets import get_bucket
+from db2 import REQUIRED_COLUMNS, required_columns
 
 FIXTURE_VERSION = "9.9.9.99999"
 
@@ -21,7 +24,7 @@ _SPELLS = {
     # Profession-rank row: no item, no reagents - must not count as a recipe.
     1999: ("Apprentice Tailoring", None, [], (0, 0), None),
 }
-# id -> (name, buy, sell, min faction, min rep)
+# id -> (name, buy, sell, min faction, min rep); RequiredSkillRank lives in _RSR.
 _ITEMS = {
     2589: ("Linen Cloth", 10, 2, 0, 0),
     2320: ("Coarse Thread", 10, 2, 0, 0),
@@ -33,13 +36,23 @@ _ITEMS = {
     6003: ("Pattern: Fixture Cloak", 1000, 250, 59, 5),
     6004: ("Pattern: Fixture Boots", 0, 0, 0, 0),
 }
+# Teaching-item RequiredSkillRank (only the xitem shape has the column); unlisted -> 0.
+_RSR = {6002: 15, 6003: 35, 6004: 0}
 
 
-def _write_csv(path: Path, table: str, rows: list[dict], omit: set[str]) -> None:
-    cols = list(REQUIRED_COLUMNS[table])
+def _columns(table: str, join: str) -> list[str]:
+    if join == "xitem":
+        # The Forever bucket's own contract, so the fixture cannot drift from it.
+        cols = list(required_columns(get_bucket("forever"), table))
+    else:
+        cols = list(REQUIRED_COLUMNS[table])
     if "ID" not in cols:
         cols.insert(0, "ID")
-    cols = [c for c in cols if c not in omit]
+    return cols
+
+
+def _write_csv(path: Path, table: str, rows: list[dict], omit: set[str], join: str) -> None:
+    cols = [c for c in _columns(table, join) if c not in omit]
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
         w.writeheader()
@@ -50,7 +63,12 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
                 omit_columns: dict[str, set[str]] | None = None,
                 teaching_parent_zero: bool = False,
                 omit_spell_names: set[str] = frozenset(),
-                omit_item_names: set[str] = frozenset()) -> Path:
+                omit_item_names: set[str] = frozenset(),
+                join: str = "parent",
+                extra_teaching: tuple[tuple[int, int], ...] = ()) -> Path:
+    """extra_teaching: (spell, item) links appended after the regular ones, in order."""
+    if join not in ("parent", "xitem"):
+        raise ValueError(f"unknown join '{join}'")
     omit_columns = omit_columns or {}
     d = Path(root) / version
     d.mkdir(parents=True, exist_ok=True)
@@ -58,7 +76,7 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
     def omit(t):
         return set(omit_columns.get(t, ()))
 
-    sla, names, effects, reagents, teach = [], [], [], [], []
+    sla, names, effects, reagents, links = [], [], [], [], []
     for n, (spell, (name, creates, regs, (lo, hi), item)) in enumerate(_SPELLS.items(), start=1):
         sid = str(spell)
         sla.append({"ID": n, "SkillLine": 197, "Spell": spell,
@@ -74,18 +92,35 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
                 row[f"Reagent_{i}"], row[f"ReagentCount_{i}"] = r, c
             reagents.append(row)
         if item is not None:
-            teach.append({"ID": n, "SpellID": spell,
-                          "ParentItemID": 0 if teaching_parent_zero else item})
+            links.append((spell, 0 if teaching_parent_zero else item))
+    links.extend(extra_teaching)
+
+    tables = {}
+    if join == "parent":
+        tables["ItemEffect"] = [{"ID": n, "SpellID": spell, "ParentItemID": item}
+                                for n, (spell, item) in enumerate(links, start=1)]
+    else:
+        # Effect and link ids deliberately differ from each other and from the row
+        # number, so a join on the wrong column finds nothing instead of passing by luck.
+        tables["ItemEffect"] = [{"ID": 100 + n, "SpellID": spell}
+                                for n, (spell, _item) in enumerate(links, start=1)]
+        tables["ItemXItemEffect"] = [{"ID": 900 + n, "ItemEffectID": 100 + n, "ItemID": item}
+                                     for n, (_spell, item) in enumerate(links, start=1)]
+        tables["SpellTotems"] = [{"ID": 1, "SpellID": 1002, "RequiredTotemCategoryID_0": 162,
+                                  "RequiredTotemCategoryID_1": 0, "Totem_0": 0, "Totem_1": 0}]
+        tables["TotemCategory"] = [{"ID": 162, "Name_lang": "Blacksmith Hammer"}]
     items = [{"ID": i, "Display_lang": "" if str(i) in omit_item_names else v[0],
               "BuyPrice": v[1], "SellPrice": v[2], "MinFactionID": v[3],
-              "MinReputation": v[4], "VendorStackCount": 1}
+              "MinReputation": v[4], "VendorStackCount": 1,
+              # Dropped by the writer (extrasaction="ignore") when the shape has no such column.
+              "RequiredSkillRank": _RSR.get(i, 0)}
              for i, v in _ITEMS.items()]
 
-    for table, rows in (("SkillLineAbility", sla), ("SpellName", names),
-                        ("SpellEffect", effects), ("SpellReagents", reagents),
-                        ("ItemEffect", teach), ("ItemSparse", items),
-                        ("Faction", [{"ID": 59, "Name_lang": "Thorium Brotherhood"}])):
-        _write_csv(d / f"{table}.csv", table, rows, omit(table))
+    tables.update({"SkillLineAbility": sla, "SpellName": names, "SpellEffect": effects,
+                   "SpellReagents": reagents, "ItemSparse": items,
+                   "Faction": [{"ID": 59, "Name_lang": "Thorium Brotherhood"}]})
+    for table, rows in tables.items():
+        _write_csv(d / f"{table}.csv", table, rows, omit(table), join)
     return Path(root)
 
 

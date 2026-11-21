@@ -229,9 +229,13 @@ def load_all_data(data_dir: Path, bucket) -> dict:
     print(f"Loading data from {data_dir}...", file=sys.stderr)
     data = {}
     for table in ("SpellName", "SpellEffect", "SpellReagents", "ItemSparse",
-                  "SkillLineAbility", "ItemEffect", "Faction"):
+                  "SkillLineAbility", "Faction"):
         data[table] = db2.load_table(data_dir, table, bucket)
         print(f"  Loaded {table}: {len(data[table])} rows", file=sys.stderr)
+    # ItemEffect (and ItemXItemEffect on Forever) are read through the bucket's
+    # teaching join, the same one extract uses, instead of as a raw table.
+    data["TeachingItems"] = db2.teaching_items(data_dir, bucket)
+    print(f"  Loaded teaching items for {len(data['TeachingItems'])} spells", file=sys.stderr)
     return data
 
 
@@ -253,8 +257,8 @@ def load_removed(sources_dir: Path, bucket) -> dict[str, set[str]]:
     return removed
 
 
-def build_indexes(data: dict) -> dict:
-    """Build lookup indexes from raw data."""
+def build_indexes(data: dict, bucket) -> dict:
+    """Build lookup indexes from raw data (bucket selects the teaching-item rule)."""
     indexes = {}
 
     # Spell names: spell_id -> name
@@ -310,10 +314,18 @@ def build_indexes(data: dict) -> dict:
 
     # Recipe items: spell_id -> item_id (items that teach spells)
     indexes["recipe_items"] = {}
-    for row in data["ItemEffect"]:
-        spell_id = row.get("SpellID")
-        item_id = row.get("ParentItemID")
-        if spell_id and item_id and item_id != "0":
+    for spell_id, candidates in data["TeachingItems"].items():
+        if bucket.item_effect_join == "parent":
+            # WHY every candidate counts as present: generate's parent index never
+            # filtered by ItemSparse (it only feeds the canary and the unemitted
+            # recipe_item field), and the Classic buckets must regenerate byte for byte.
+            # The rule itself (last row wins) stays in choose_teaching_item.
+            present = dict.fromkeys(candidates, {})
+        else:
+            # xitem ranks candidates by RequiredSkillRank, which lives on the ItemSparse row.
+            present = indexes["item_details"]
+        item_id = db2.choose_teaching_item(bucket, candidates, present)
+        if item_id is not None:
             indexes["recipe_items"][spell_id] = item_id
 
     return indexes
@@ -720,7 +732,7 @@ def main(argv: list[str] | None = None) -> int:
             return 0
 
         data = load_all_data(data_dir, bucket)
-        indexes = build_indexes(data)
+        indexes = build_indexes(data, bucket)
         indexes["trivial_ranks"] = build_trivial_ranks(data)
         print(f"Built indexes: {len(indexes['spell_names'])} spells, "
               f"{len(indexes['item_names'])} items, "
