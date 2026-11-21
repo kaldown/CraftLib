@@ -23,6 +23,7 @@ CraftLib.vendorBuyPrices = {}
 -- numbers, so a patch bump inside a supported line (2.5.5 -> 2.5.6) keeps working.
 local INTERFACE_PROFILES = {
     { min = 11500, max = 11599, profile = "VANILLA" }, -- Classic Era / Anniversary 1.15.x
+    { min = 16000, max = 19999, profile = "FOREVER" }, -- WoW Forever 1.60 (16001): its own ruleset and bucket
     { min = 20500, max = 20599, profile = "TBC" },     -- TBC Anniversary 2.5.x
     { min = 30300, max = 30499, profile = "WOTLK" },   -- WotLK 3.3.5a (30300) and WotLK Classic 3.4.x
     { min = 38000, max = 38099, profile = "WOTLK" },   -- Titan 3.80.x: seasonal WotLK, uses the WotLK bucket
@@ -41,6 +42,19 @@ end
 -- otherwise the interface number is matched against INTERFACE_PROFILES. C_Seasons/Enum
 -- are nil on TBC/WotLK (guarded).
 function CraftLib:DetectProfile()
+    -- WHY Forever is checked BEFORE the SoD test: its interface (16001) has major digit 1
+    -- like Era, but it is a separate ruleset with its own bucket, and C_Seasons does not
+    -- exist there, so SoD detection must never get a chance to claim or mis-route it.
+    -- The project-id test is explicit (both globals non-nil and equal) because
+    -- WOW_PROJECT_CLASSIC also exists on Forever and is NOT a Forever marker.
+    if WOW_PROJECT_ID ~= nil and WOW_PROJECT_CAMELOT ~= nil
+        and WOW_PROJECT_ID == WOW_PROJECT_CAMELOT then
+        return self.Constants.PROFILE.FOREVER
+    end
+    local forever = GetInterfaceNumber()
+    if forever and forever >= 16000 and forever <= 19999 then
+        return self.Constants.PROFILE.FOREVER
+    end
     if C_Seasons and C_Seasons.GetActiveSeason then
         local sod = (Enum and Enum.SeasonID and Enum.SeasonID.SeasonOfDiscovery) or 2
         if C_Seasons.GetActiveSeason() == sod then

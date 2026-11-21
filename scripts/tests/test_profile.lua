@@ -95,7 +95,8 @@ check("0 -> nil", det(0) == nil)
 check("no GetBuildInfo -> nil", loadCraftLib(nil, false):DetectProfile() == nil)
 check("11404 -> nil", det(11404) == nil)
 check("11508 -> VANILLA", det(11508) == "VANILLA")
-check("16001 -> nil", det(16001) == nil)
+check("16001 -> FOREVER", det(16001) == "FOREVER")
+check("16999 -> FOREVER", det(16999) == "FOREVER")
 check("20505 -> TBC", det(20505) == "TBC")
 check("20506 -> TBC", det(20506) == "TBC")
 check("30300 -> WOTLK", det(30300) == "WOTLK")
@@ -105,19 +106,39 @@ check("38001 -> WOTLK", det(38001) == "WOTLK")
 check("40400 -> nil", det(40400) == nil)
 check("season 2 on 11508 -> SOD", det(11508, 2) == "SOD")
 
--- Unsupported client (WoW Forever 16001)
-local u = loadCraftLib(nil, 16001)
+-- WoW Forever: own bucket, selected by interface or by the camelot project id
+local f = loadCraftLib(nil, 16001)
+check("16001 GetActiveProfile FOREVER", f:GetActiveProfile() == "FOREVER")
+check("16001 GetActiveFlavor DEFAULT", f:GetActiveFlavor() == "DEFAULT")
+f:RegisterProfession("fv", { id = 7, name = "F", profile = "FOREVER", milestones = {75}, recipes = {} })
+f:RegisterProfession("vanilla", { id = 1, name = "V", profile = "VANILLA", milestones = {75}, recipes = {} })
+check("FOREVER dataset registers on Forever", f:GetProfession("fv") ~= nil)
+check("VANILLA dataset skipped on Forever", f:GetProfession("vanilla") == nil)
+local fs = (function()
+    _G.C_Seasons = nil
+    local c = loadCraftLib(2, 16001) -- C_Seasons stub reporting SoD
+    return c
+end)()
+check("16001 with SoD season stub -> FOREVER", fs:DetectProfile() == "FOREVER")
+_G.WOW_PROJECT_ID, _G.WOW_PROJECT_CAMELOT = 18, 18
+check("camelot project id on 11508 -> FOREVER", loadCraftLib(nil, 11508):DetectProfile() == "FOREVER")
+_G.WOW_PROJECT_ID, _G.WOW_PROJECT_CAMELOT = 2, 18
+check("classic project id on 11508 -> VANILLA", loadCraftLib(nil, 11508):DetectProfile() == "VANILLA")
+_G.WOW_PROJECT_ID, _G.WOW_PROJECT_CAMELOT = nil, nil
+
+-- Unsupported client (unknown interface 40400)
+local u = loadCraftLib(nil, 40400)
 regAll(u)
 u:RegisterProfession("sodlegacy", { id = 6, name = "X", flavor = "SOD", milestones = {75}, recipes = {} })
-check("16001 registers nothing", next(u:GetProfessions()) == nil)
-check("16001 IsReady false", u:IsReady() == false)
-check("16001 GetActiveProfile nil", u:GetActiveProfile() == nil)
-check("16001 GetActiveFlavor nil", u:GetActiveFlavor() == nil)
+check("40400 registers nothing", next(u:GetProfessions()) == nil)
+check("40400 IsReady false", u:IsReady() == false)
+check("40400 GetActiveProfile nil", u:GetActiveProfile() == nil)
+check("40400 GetActiveFlavor nil", u:GetActiveFlavor() == nil)
 u:RegisterVendorPrices({ profile = "VANILLA", prices = { [1] = 2 } })
-check("16001 vendor prices not registered", u:GetVendorBuyPrice(1) == nil)
+check("40400 vendor prices not registered", u:GetVendorBuyPrice(1) == nil)
 lastFrame.onEvent(lastFrame, "ADDON_LOADED", "CraftLib")
 local msg = printed[1] or ""
-check("16001 message says not supported", msg:find("is not supported", 1, true) and msg:find("16001", 1, true))
+check("40400 message says not supported", msg:find("is not supported", 1, true) and msg:find("40400", 1, true))
 
 local ok = loadCraftLib(nil, 20505)
 lastFrame.onEvent(lastFrame, "ADDON_LOADED", "CraftLib")

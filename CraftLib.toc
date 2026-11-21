@@ -1,4 +1,4 @@
-## Interface: 11508, 20505, 30300, 30403, 30405, 38001
+## Interface: 11508, 16001, 20505, 30300, 30403, 30405, 38001
 ## Title: CraftLib
 ## Notes: Comprehensive crafting recipe database for WoW addons
 ## Author: kaldown
