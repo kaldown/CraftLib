@@ -1,0 +1,73 @@
+{
+  "coverage": {
+    "cap": 300,
+    "floor": 0.75,
+    "gap": null,
+    "inGame": 29,
+    "knownSource": 23,
+    "knownSourceShare": 0.7931,
+    "maxGap": 0,
+    "maxGapAllowed": 10,
+    "passes": true,
+    "share": 0.9655,
+    "shipped": 28
+  },
+  "excluded": [
+    [
+      30021,
+      "Crystal Infused Bandage",
+      "no wiki row"
+    ],
+    [
+      1230117,
+      "First Aid Kit",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1262996,
+      "Toxin Study",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263001,
+      "Plague Doctor's Laboratory",
+      "no skill-up: yellow == gray"
+    ]
+  ],
+  "heldBack": false,
+  "orangeFrom": {
+    "CROSS": 9,
+    "ITEM": 14,
+    "WIKI": 5
+  },
+  "sourceTypes": {
+    "DROP": 4,
+    "REPUTATION": 1,
+    "STARTER": 1,
+    "TRAINER": 13,
+    "UNKNOWN": 5,
+    "VENDOR": 4
+  },
+  "unknownSource": [
+    [
+      1244435,
+      "Superior Healing Potion"
+    ],
+    [
+      1259344,
+      "Superior Poultice"
+    ],
+    [
+      1259345,
+      "Powerful Poultice"
+    ],
+    [
+      1259348,
+      "Leather Tourniquet"
+    ],
+    [
+      1259349,
+      "Surgical Tourniquet"
+    ]
+  ]
+}

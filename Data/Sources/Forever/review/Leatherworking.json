@@ -1,0 +1,1059 @@
+{
+  "coverage": {
+    "cap": 300,
+    "floor": 0.75,
+    "gap": null,
+    "inGame": 539,
+    "knownSource": 367,
+    "knownSourceShare": 0.6809,
+    "maxGap": 0,
+    "maxGapAllowed": 10,
+    "passes": true,
+    "share": 0.8664,
+    "shipped": 467
+  },
+  "excluded": [
+    [
+      7147,
+      "Guardian Pants",
+      "ambiguous: wiki row 'guardian pants' matches spells 7147, 439114"
+    ],
+    [
+      10482,
+      "Cured Thick Hide",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      10511,
+      "Turtle Scale Breastplate",
+      "ambiguous: wiki row 'turtle scale breastplate' matches spells 10511, 439116"
+    ],
+    [
+      10550,
+      "Nightscape Cloak",
+      "no wiki row"
+    ],
+    [
+      10619,
+      "Dragonscale Gauntlets",
+      "no learn skill: wiki skill 225 above yellow 220"
+    ],
+    [
+      10621,
+      "Wolfshead Helm",
+      "no learn skill: wiki skill 225 above yellow 220"
+    ],
+    [
+      10630,
+      "Gauntlets of the Sea",
+      "no learn skill: wiki skill 230 above yellow 225"
+    ],
+    [
+      10632,
+      "Helm of Fire",
+      "no learn skill: wiki skill 250 above yellow 245"
+    ],
+    [
+      10647,
+      "Feathered Breastplate",
+      "no learn skill: wiki skill 250 above yellow 245"
+    ],
+    [
+      10650,
+      "Dragonscale Breastplate",
+      "no learn skill: wiki skill 255 above yellow 250"
+    ],
+    [
+      19048,
+      "Heavy Scorpid Bracers",
+      "no learn skill: wiki skill 255 above yellow 250"
+    ],
+    [
+      19093,
+      "Onyxia Scale Cloak",
+      "unknown source and no teaching item"
+    ],
+    [
+      19106,
+      "Onyxia Scale Breastplate",
+      "no wiki row"
+    ],
+    [
+      22331,
+      "Rugged Leather",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      22815,
+      "Gordok Ogre Suit",
+      "unknown source and no teaching item"
+    ],
+    [
+      24655,
+      "Green Dragonscale Gauntlets",
+      "no learn skill: wiki skill 280 above yellow 275"
+    ],
+    [
+      24703,
+      "Dreamscale Breastplate",
+      "ambiguous: wiki row 'dreamscale breastplate' matches spells 24703, 1213751"
+    ],
+    [
+      24846,
+      "Spitfire Bracers",
+      "ambiguous: wiki row 'spitfire bracers' matches spells 24846, 1213726"
+    ],
+    [
+      24847,
+      "Spitfire Gauntlets",
+      "ambiguous: wiki row 'spitfire gauntlets' matches spells 24847, 1213728"
+    ],
+    [
+      24848,
+      "Spitfire Breastplate",
+      "ambiguous: wiki row 'spitfire breastplate' matches spells 24848, 1213731"
+    ],
+    [
+      24849,
+      "Sandstalker Bracers",
+      "ambiguous: wiki row 'sandstalker bracers' matches spells 24849, 1213717"
+    ],
+    [
+      24850,
+      "Sandstalker Gauntlets",
+      "ambiguous: wiki row 'sandstalker gauntlets' matches spells 24850, 1213720"
+    ],
+    [
+      24851,
+      "Sandstalker Breastplate",
+      "ambiguous: wiki row 'sandstalker breastplate' matches spells 24851, 1213723"
+    ],
+    [
+      28219,
+      "Polar Tunic",
+      "ambiguous: wiki row 'polar tunic' matches spells 28219, 1223780"
+    ],
+    [
+      28220,
+      "Polar Gloves",
+      "ambiguous: wiki row 'polar gloves' matches spells 28220, 1223782"
+    ],
+    [
+      28221,
+      "Polar Bracers",
+      "ambiguous: wiki row 'polar bracers' matches spells 28221, 1223784"
+    ],
+    [
+      28222,
+      "Icy Scale Breastplate",
+      "ambiguous: wiki row 'icy scale breastplate' matches spells 28222, 1223774"
+    ],
+    [
+      28223,
+      "Icy Scale Gauntlets",
+      "ambiguous: wiki row 'icy scale gauntlets' matches spells 28223, 1223776"
+    ],
+    [
+      28224,
+      "Icy Scale Bracers",
+      "ambiguous: wiki row 'icy scale bracers' matches spells 28224, 1223778"
+    ],
+    [
+      28472,
+      "Bramblewood Helm",
+      "ambiguous: wiki row 'bramblewood helm' matches spells 28472, 1213738"
+    ],
+    [
+      28473,
+      "Bramblewood Boots",
+      "ambiguous: wiki row 'bramblewood boots' matches spells 28473, 1213736"
+    ],
+    [
+      28474,
+      "Bramblewood Belt",
+      "ambiguous: wiki row 'bramblewood belt' matches spells 28474, 1213734"
+    ],
+    [
+      44953,
+      "Winter Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      429354,
+      "Void-Touched Leather Gloves",
+      "unknown source and no teaching item"
+    ],
+    [
+      429869,
+      "Void-Touched Leather Gauntlets",
+      "unknown source and no teaching item"
+    ],
+    [
+      435949,
+      "Glowing Hyperconductive Scale Coif",
+      "reagent 213372 has no name in this build"
+    ],
+    [
+      435951,
+      "Gneuro-Conductive Channeler's Hood",
+      "reagent 213372 has no name in this build"
+    ],
+    [
+      435953,
+      "Rad-Resistant Scale Hood",
+      "reagent 213372 has no name in this build"
+    ],
+    [
+      439114,
+      "Guardian Pants",
+      "ambiguous: wiki row 'guardian pants' matches spells 7147, 439114"
+    ],
+    [
+      439116,
+      "Turtle Scale Breastplate",
+      "ambiguous: wiki row 'turtle scale breastplate' matches spells 10511, 439116"
+    ],
+    [
+      446183,
+      "Paranoia Mantle",
+      "unknown source and no teaching item"
+    ],
+    [
+      446185,
+      "Shrieking Spaulders",
+      "unknown source and no teaching item"
+    ],
+    [
+      446186,
+      "Cacophonous Chain Shoulderguards",
+      "unknown source and no teaching item"
+    ],
+    [
+      446189,
+      "Shoulderpads of Obsession",
+      "unknown source and no teaching item"
+    ],
+    [
+      446190,
+      "Wailing Chain Mantle",
+      "unknown source and no teaching item"
+    ],
+    [
+      446192,
+      "Membrane of Dark Neurosis",
+      "unknown source and no teaching item"
+    ],
+    [
+      451706,
+      "Screaming Chain Pauldrons",
+      "unknown source and no teaching item"
+    ],
+    [
+      461692,
+      "Synthetic Gordok Ogre Suit",
+      "unknown source and no teaching item"
+    ],
+    [
+      462227,
+      "Honed Blue Dragonscale Leggings",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213513,
+      "Glowing Chitin Armor Kit",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213519,
+      "Sharpened Chitin Armor Kit",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213521,
+      "Razorbramble Cowl",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213523,
+      "Razorbramble Shoulderpads",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213525,
+      "Razorbramble Leathers",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213717,
+      "Sandstalker Bracers",
+      "ambiguous: wiki row 'sandstalker bracers' matches spells 24849, 1213717"
+    ],
+    [
+      1213720,
+      "Sandstalker Gauntlets",
+      "ambiguous: wiki row 'sandstalker gauntlets' matches spells 24850, 1213720"
+    ],
+    [
+      1213723,
+      "Sandstalker Breastplate",
+      "ambiguous: wiki row 'sandstalker breastplate' matches spells 24851, 1213723"
+    ],
+    [
+      1213726,
+      "Spitfire Bracers",
+      "ambiguous: wiki row 'spitfire bracers' matches spells 24846, 1213726"
+    ],
+    [
+      1213728,
+      "Spitfire Gauntlets",
+      "ambiguous: wiki row 'spitfire gauntlets' matches spells 24847, 1213728"
+    ],
+    [
+      1213731,
+      "Spitfire Breastplate",
+      "ambiguous: wiki row 'spitfire breastplate' matches spells 24848, 1213731"
+    ],
+    [
+      1213734,
+      "Bramblewood Belt",
+      "ambiguous: wiki row 'bramblewood belt' matches spells 28474, 1213734"
+    ],
+    [
+      1213736,
+      "Bramblewood Boots",
+      "ambiguous: wiki row 'bramblewood boots' matches spells 28473, 1213736"
+    ],
+    [
+      1213738,
+      "Bramblewood Helm",
+      "ambiguous: wiki row 'bramblewood helm' matches spells 28472, 1213738"
+    ],
+    [
+      1213751,
+      "Dreamscale Breastplate",
+      "ambiguous: wiki row 'dreamscale breastplate' matches spells 24703, 1213751"
+    ],
+    [
+      1214303,
+      "Dreamscale Kilt",
+      "unknown source and no teaching item"
+    ],
+    [
+      1223774,
+      "Icy Scale Breastplate",
+      "ambiguous: wiki row 'icy scale breastplate' matches spells 28222, 1223774"
+    ],
+    [
+      1223776,
+      "Icy Scale Gauntlets",
+      "ambiguous: wiki row 'icy scale gauntlets' matches spells 28223, 1223776"
+    ],
+    [
+      1223778,
+      "Icy Scale Bracers",
+      "ambiguous: wiki row 'icy scale bracers' matches spells 28224, 1223778"
+    ],
+    [
+      1223780,
+      "Polar Tunic",
+      "ambiguous: wiki row 'polar tunic' matches spells 28219, 1223780"
+    ],
+    [
+      1223782,
+      "Polar Gloves",
+      "ambiguous: wiki row 'polar gloves' matches spells 28220, 1223782"
+    ],
+    [
+      1223784,
+      "Polar Bracers",
+      "ambiguous: wiki row 'polar bracers' matches spells 28221, 1223784"
+    ],
+    [
+      1229432,
+      "Camp Tent",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1254986,
+      "Mender's Mail Gauntlets",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1254987,
+      "Skirmisher's Mail Gauntlets",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1254988,
+      "Skycaller's Mail Gauntlets",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1254989,
+      "Stalker's Mail Gauntlets",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255000,
+      "Mender's Mail Bracers",
+      "no learn skill: wiki skill 225 above yellow 220"
+    ],
+    [
+      1255001,
+      "Skirmisher's Mail Bracers",
+      "no learn skill: wiki skill 225 above yellow 220"
+    ],
+    [
+      1255002,
+      "Skycaller's Mail Bracers",
+      "no learn skill: wiki skill 225 above yellow 220"
+    ],
+    [
+      1255003,
+      "Stalker's Mail Bracers",
+      "no learn skill: wiki skill 225 above yellow 220"
+    ],
+    [
+      1255008,
+      "Mender's Mail Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255009,
+      "Skirmisher's Mail Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255010,
+      "Skycaller's Mail Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255011,
+      "Stalker's Mail Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255036,
+      "Mender's Leather Gauntlets",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255037,
+      "Skycaller's Leather Gauntlets",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255038,
+      "Warden's Leather Gauntlets",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255039,
+      "Skulker's Leather Gauntlets",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255040,
+      "Prowler's Leather Gauntlets",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255060,
+      "Mender's Leather Shoes",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255061,
+      "Skycaller's Leather Shoes",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255062,
+      "Warden's Leather Shoes",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255063,
+      "Skulker's Leather Shoes",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255064,
+      "Prowler's Leather Shoes",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255075,
+      "Mender's Leather Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255076,
+      "Skycaller's Leather Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255077,
+      "Skirmisher's Leather Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255078,
+      "Warden's Leather Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255079,
+      "Stalker's Leather Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255080,
+      "Skulker's Leather Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255081,
+      "Prowler's Leather Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255088,
+      "Wisdom's Leather Helm",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255089,
+      "Stormrider's Leather Helm",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255090,
+      "Totemic Leather Helm",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255091,
+      "Defender's Leather Helm",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255092,
+      "Trapper's Leather Helm",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255093,
+      "Brawler's Leather Helm",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255110,
+      "Wisdom's Leather Pants",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255111,
+      "Stormrider's Leather Pants",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255112,
+      "Totemic Leather Pants",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255113,
+      "Defender's Leather Pants",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255114,
+      "Trapper's Leather Pants",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255115,
+      "Brawler's Leather Pants",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255131,
+      "Wisdom's Leather Armor",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255132,
+      "Stormrider's Leather Armor",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255133,
+      "Totemic Leather Armor",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255134,
+      "Defender's Leather Armor",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255135,
+      "Trapper's Leather Armor",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255136,
+      "Brawler's Leather Armor",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255143,
+      "Moonglow Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255144,
+      "Murloc Scale Shoes",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255145,
+      "Dark Leather Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1255146,
+      "Black Whelp Slippers",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263031,
+      "Tanning Rack",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263079,
+      "Sewing Machine",
+      "no skill-up: yellow == gray"
+    ]
+  ],
+  "heldBack": false,
+  "orangeFrom": {
+    "CROSS": 8,
+    "ITEM": 404,
+    "WIKI": 55
+  },
+  "sourceTypes": {
+    "DROP": 148,
+    "QUEST": 12,
+    "REPUTATION": 51,
+    "STARTER": 6,
+    "TRAINER": 57,
+    "UNKNOWN": 100,
+    "VENDOR": 93
+  },
+  "unknownSource": [
+    [
+      461649,
+      "Living Green Dragonscale Leggings"
+    ],
+    [
+      461677,
+      "Living Green Dragonscale Gauntlets"
+    ],
+    [
+      1226689,
+      "Scarlet Quiver"
+    ],
+    [
+      1226690,
+      "Scarlet Ammo Pouch"
+    ],
+    [
+      1254967,
+      "Pristine Scorpid Leggings"
+    ],
+    [
+      1254968,
+      "Black Dragonscale Helm"
+    ],
+    [
+      1254969,
+      "Blue Dragonscale Helm"
+    ],
+    [
+      1254970,
+      "Red Dragonscale Leggings"
+    ],
+    [
+      1254971,
+      "Charged Scorpid Boots"
+    ],
+    [
+      1254972,
+      "Supple Scorpid Sabatons"
+    ],
+    [
+      1254973,
+      "Charged Scorpid Leggings"
+    ],
+    [
+      1254975,
+      "Charged Scorpid Vest"
+    ],
+    [
+      1254976,
+      "Supple Scorpid Helm"
+    ],
+    [
+      1254977,
+      "Charged Scorpid Gauntlets"
+    ],
+    [
+      1254978,
+      "Supple Scorpid Belt"
+    ],
+    [
+      1254979,
+      "Heavy Scorpid Boots"
+    ],
+    [
+      1254980,
+      "Charged Scorpid Bracers"
+    ],
+    [
+      1254981,
+      "Supple Scorpid Shoulders"
+    ],
+    [
+      1254990,
+      "Charged Scorpid Shoulders"
+    ],
+    [
+      1254991,
+      "Supple Scorpid Bracers"
+    ],
+    [
+      1254992,
+      "Charged Scorpid Helm"
+    ],
+    [
+      1254993,
+      "Supple Scorpid Leggings"
+    ],
+    [
+      1254998,
+      "Charged Scorpid Belt"
+    ],
+    [
+      1254999,
+      "Supple Scorpid Boots"
+    ],
+    [
+      1255012,
+      "Ironfeather Leggings"
+    ],
+    [
+      1255013,
+      "Warbear Helm"
+    ],
+    [
+      1255014,
+      "Timbermaw Tunic"
+    ],
+    [
+      1255015,
+      "Dawn Armor"
+    ],
+    [
+      1255016,
+      "Living Crown"
+    ],
+    [
+      1255017,
+      "Blue Suede Hat"
+    ],
+    [
+      1255018,
+      "Tooled Leather Pants"
+    ],
+    [
+      1255019,
+      "Blue Suede Bracers"
+    ],
+    [
+      1255020,
+      "Tooled Leather Epaulets"
+    ],
+    [
+      1255021,
+      "Blue Suede Belt"
+    ],
+    [
+      1255022,
+      "Tooled Leather Bracers"
+    ],
+    [
+      1255023,
+      "Wicked Leather Shoulders"
+    ],
+    [
+      1255025,
+      "Tooled Leather Crown"
+    ],
+    [
+      1255026,
+      "Blue Suede Shoulders"
+    ],
+    [
+      1255027,
+      "Tooled Leather Gauntlets"
+    ],
+    [
+      1255028,
+      "Wicked Leather Boots"
+    ],
+    [
+      1255029,
+      "Blue Suede Pants"
+    ],
+    [
+      1255041,
+      "Blue Suede Gloves"
+    ],
+    [
+      1255042,
+      "Tooled Leather Boots"
+    ],
+    [
+      1255048,
+      "Blue Suede Shoes"
+    ],
+    [
+      1255049,
+      "Tooled Leather Belt"
+    ],
+    [
+      1292920,
+      "Grovekeeper Trousers"
+    ],
+    [
+      1292921,
+      "Grovekeeper Grips"
+    ],
+    [
+      1292923,
+      "Grovekeeper Shoulderpads"
+    ],
+    [
+      1292924,
+      "Grovekeeper Stompers"
+    ],
+    [
+      1292925,
+      "Grovekeeper Kilt"
+    ],
+    [
+      1292926,
+      "Grovekeeper Mitts"
+    ],
+    [
+      1292927,
+      "Grovekeeper Mantle"
+    ],
+    [
+      1292928,
+      "Grovekeeper Sandals"
+    ],
+    [
+      1292929,
+      "Grovekeeper Legguards"
+    ],
+    [
+      1292930,
+      "Grovekeeper Handguards"
+    ],
+    [
+      1292931,
+      "Grovekeeper Pauldrons"
+    ],
+    [
+      1292932,
+      "Grovekeeper Boots"
+    ],
+    [
+      1292933,
+      "Grovekeeper Leggings"
+    ],
+    [
+      1292934,
+      "Grovekeeper Gauntlets"
+    ],
+    [
+      1292935,
+      "Grovekeeper Spaulders"
+    ],
+    [
+      1292936,
+      "Grovekeeper Treads"
+    ],
+    [
+      1292937,
+      "Wildstalker's Legguards"
+    ],
+    [
+      1292938,
+      "Wildstalker's Gauntlets"
+    ],
+    [
+      1292939,
+      "Wildstalker's Spaulders"
+    ],
+    [
+      1292940,
+      "Wildstalker's Greaves"
+    ],
+    [
+      1292965,
+      "Grimstitch Pants"
+    ],
+    [
+      1292966,
+      "Grimstitch Gloves"
+    ],
+    [
+      1292967,
+      "Grimstitch Spaulders"
+    ],
+    [
+      1292968,
+      "Grimstitch Boots"
+    ],
+    [
+      1292969,
+      "Spiritcaller Leggings"
+    ],
+    [
+      1292970,
+      "Spiritcaller Grips"
+    ],
+    [
+      1292971,
+      "Spiritcaller Spaulders"
+    ],
+    [
+      1292972,
+      "Spiritcaller Treads"
+    ],
+    [
+      1292973,
+      "Spiritcaller Pants"
+    ],
+    [
+      1292974,
+      "Spiritcaller Gauntlets"
+    ],
+    [
+      1292975,
+      "Spiritcaller Epaulets"
+    ],
+    [
+      1292976,
+      "Spiritcaller Greaves"
+    ],
+    [
+      1297126,
+      "Bileblister Claws"
+    ],
+    [
+      1297127,
+      "Bileblister Girdle"
+    ],
+    [
+      1297128,
+      "Bileblister Boots"
+    ],
+    [
+      1297129,
+      "Hivethrasher's Claws"
+    ],
+    [
+      1297130,
+      "Hivethrasher's Girdle"
+    ],
+    [
+      1297131,
+      "Hivethrasher's Boots"
+    ],
+    [
+      1297132,
+      "Scalegut Clenchers"
+    ],
+    [
+      1297133,
+      "Scalegut Belt"
+    ],
+    [
+      1297134,
+      "Scalegut Treaders"
+    ],
+    [
+      1297135,
+      "Broodwatcher's Clenchers"
+    ],
+    [
+      1297136,
+      "Broodwatcher's Belt"
+    ],
+    [
+      1297137,
+      "Broodwatcher's Treaders"
+    ],
+    [
+      1299914,
+      "Spiritcaller Kilt"
+    ],
+    [
+      1299915,
+      "Spiritcaller Gloves"
+    ],
+    [
+      1299916,
+      "Spiritcaller Mantle"
+    ],
+    [
+      1299917,
+      "Spiritcaller Boots"
+    ],
+    [
+      1306526,
+      "Elderwild Waistcord"
+    ],
+    [
+      1306527,
+      "Outlaw's Collar"
+    ],
+    [
+      1306528,
+      "Elderwild Pants"
+    ],
+    [
+      1306529,
+      "Eternity Pauldrons"
+    ],
+    [
+      1306530,
+      "Tranquil Wristguards"
+    ],
+    [
+      1306531,
+      "Mourning Handguards"
+    ],
+    [
+      1306532,
+      "Wild Leather Armor Kit"
+    ]
+  ]
+}

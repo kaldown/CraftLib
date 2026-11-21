@@ -1,0 +1,7644 @@
+{
+  "profession": "blacksmithing",
+  "version": "1.60.1.71037",
+  "generated": "2026-11-21",
+  "recipes": {
+    "2660": {
+      "name": "Rough Sharpening Stone",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "2661": {
+      "name": "Copper Chain Belt",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 30,
+        "yellow": 70,
+        "green": 90,
+        "gray": 110,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2662": {
+      "name": "Copper Chain Pants",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 50,
+        "green": 70,
+        "gray": 90,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "2663": {
+      "name": "Copper Bracers",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "2664": {
+      "name": "Runed Copper Bracers",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 65,
+        "yellow": 90,
+        "green": 102,
+        "gray": 115,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2665": {
+      "name": "Coarse Sharpening Stone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 40,
+        "green": 47,
+        "gray": 55,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2666": {
+      "name": "Runed Copper Belt",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 45,
+        "yellow": 85,
+        "green": 105,
+        "gray": 125,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2667": {
+      "name": "Runed Copper Breastplate",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 2881
+      },
+      "difficulty": {
+        "orange": 55,
+        "yellow": 95,
+        "green": 115,
+        "gray": 135,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "2668": {
+      "name": "Rough Bronze Leggings",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 120,
+        "green": 135,
+        "gray": 150,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2670": {
+      "name": "Rough Bronze Cuirass",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 120,
+        "green": 135,
+        "gray": 150,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2672": {
+      "name": "Patterned Bronze Bracers",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 95,
+        "yellow": 125,
+        "green": 140,
+        "gray": 155,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2674": {
+      "name": "Heavy Sharpening Stone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 100,
+        "green": 107,
+        "gray": 115,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2675": {
+      "name": "Shining Silver Breastplate",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 150,
+        "green": 165,
+        "gray": 180,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2737": {
+      "name": "Copper Mace",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 15,
+        "yellow": 55,
+        "green": 75,
+        "gray": 95,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "2740": {
+      "name": "Bronze Mace",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 115,
+        "green": 130,
+        "gray": 145,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2741": {
+      "name": "Bronze Axe",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 120,
+        "green": 135,
+        "gray": 150,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2738": {
+      "name": "Copper Axe",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 20,
+        "yellow": 60,
+        "green": 80,
+        "gray": 100,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "2739": {
+      "name": "Copper Shortsword",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 65,
+        "green": 85,
+        "gray": 105,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "2742": {
+      "name": "Bronze Shortsword",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 95,
+        "yellow": 125,
+        "green": 140,
+        "gray": 155,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3115": {
+      "name": "Rough Weightstone",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "3117": {
+      "name": "Heavy Weightstone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 100,
+        "green": 107,
+        "gray": 115,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3116": {
+      "name": "Coarse Weightstone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 40,
+        "green": 47,
+        "gray": 55,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3292": {
+      "name": "Heavy Copper Broadsword",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 70,
+        "yellow": 110,
+        "green": 130,
+        "gray": 150,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3293": {
+      "name": "Copper Battle Axe",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 30,
+        "yellow": 70,
+        "green": 90,
+        "gray": 110,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3294": {
+      "name": "Thick War Axe",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 45,
+        "yellow": 85,
+        "green": 105,
+        "gray": 125,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3295": {
+      "name": "Deadly Bronze Poniard",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 2883
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 145,
+        "gray": 160,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3296": {
+      "name": "Heavy Bronze Mace",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 135,
+        "green": 150,
+        "gray": 165,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3297": {
+      "name": "Mighty Iron Hammer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 3608
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 150,
+        "green": 165,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3319": {
+      "name": "Copper Chain Boots",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 20,
+        "yellow": 60,
+        "green": 80,
+        "gray": 100,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3320": {
+      "name": "Rough Grinding Stone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3321": {
+      "name": "Copper Chain Vest",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 3609
+      },
+      "difficulty": {
+        "orange": 30,
+        "yellow": 70,
+        "green": 90,
+        "gray": 110,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3323": {
+      "name": "Runed Copper Gauntlets",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 35,
+        "yellow": 75,
+        "green": 95,
+        "gray": 115,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3324": {
+      "name": "Runed Copper Pants",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 35,
+        "yellow": 75,
+        "green": 95,
+        "gray": 115,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3325": {
+      "name": "Gemmed Copper Gauntlets",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 3610
+      },
+      "difficulty": {
+        "orange": 35,
+        "yellow": 75,
+        "green": 95,
+        "gray": 115,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3326": {
+      "name": "Coarse Grinding Stone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 50,
+        "green": 70,
+        "gray": 90,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3328": {
+      "name": "Rough Bronze Shoulders",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 115,
+        "green": 130,
+        "gray": 145,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3330": {
+      "name": "Silvered Bronze Shoulders",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 2882
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 145,
+        "gray": 160,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3331": {
+      "name": "Silvered Bronze Boots",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 135,
+        "green": 150,
+        "gray": 165,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3333": {
+      "name": "Silvered Bronze Gauntlets",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 140,
+        "green": 155,
+        "gray": 170,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3334": {
+      "name": "Green Iron Boots",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 3611
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 150,
+        "green": 165,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3336": {
+      "name": "Green Iron Gauntlets",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 3612
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 155,
+        "green": 170,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3337": {
+      "name": "Heavy Grinding Stone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 100,
+        "green": 112,
+        "gray": 125,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3491": {
+      "name": "Big Bronze Knife",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 110,
+        "green": 125,
+        "gray": 140,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3492": {
+      "name": "Hardened Iron Shortsword",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12162,
+        "cost": 3000
+      },
+      "difficulty": {
+        "orange": 135,
+        "yellow": 160,
+        "green": 172,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3493": {
+      "name": "Jade Serpentblade",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 3866
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3494": {
+      "name": "Solid Iron Maul",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 10858,
+        "cost": 3000
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 155,
+        "green": 167,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3495": {
+      "name": "Golden Iron Destroyer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 3867
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 182,
+        "gray": 195,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3496": {
+      "name": "Moonsteel Broadsword",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row: row 'moonsteel broadsword' taken by spell 439128",
+        "itemId": 12163
+      }
+    },
+    "3497": {
+      "name": "Frost Tiger Blade",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 3868
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 212,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3498": {
+      "name": "Massive Iron Axe",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12164,
+        "cost": 4400
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 185,
+        "green": 197,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3500": {
+      "name": "Shadow Crescent Axe",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 3869
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 212,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3501": {
+      "name": "Green Iron Bracers",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 177,
+        "gray": 190,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3502": {
+      "name": "Green Iron Helm",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 182,
+        "gray": 195,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3503": {
+      "name": "Golden Scale Coif",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row: row 'golden scale coif' taken by spell 439126",
+        "itemId": 6047
+      }
+    },
+    "3504": {
+      "name": "Green Iron Shoulders",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 3870
+      },
+      "difficulty": {
+        "orange": 135,
+        "yellow": 160,
+        "green": 172,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3505": {
+      "name": "Golden Scale Shoulders",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row: row 'golden scale shoulders' taken by spell 439130",
+        "itemId": 3871
+      }
+    },
+    "3506": {
+      "name": "Green Iron Leggings",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 155,
+        "green": 167,
+        "gray": 180,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3507": {
+      "name": "Golden Scale Leggings",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row: row 'golden scale leggings' taken by spell 439132",
+        "itemId": 3872
+      }
+    },
+    "3508": {
+      "name": "Green Iron Hauberk",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 180,
+        "green": 192,
+        "gray": 205,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "3511": {
+      "name": "Golden Scale Cuirass",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row: row 'golden scale cuirass' taken by spell 439124",
+        "itemId": 3873
+      }
+    },
+    "3513": {
+      "name": "Polished Steel Boots",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 3874
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 185,
+        "green": 197,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3515": {
+      "name": "Golden Scale Boots",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row: row 'golden scale boots' taken by spell 439122",
+        "itemId": 3875
+      }
+    },
+    "6518": {
+      "name": "Iridescent Hammer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 5543
+      },
+      "difficulty": {
+        "orange": 115,
+        "yellow": 145,
+        "green": 160,
+        "gray": 175,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6517": {
+      "name": "Pearl-handled Dagger",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 115,
+        "green": 130,
+        "gray": 145,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2671": {
+      "name": "Rough Bronze Bracers",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "2673": {
+      "name": "Silvered Bronze Breastplate",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 5578
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 135,
+        "green": 150,
+        "gray": 165,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7224": {
+      "name": "Steel Weapon Chain",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6046
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 190,
+        "green": 202,
+        "gray": 215,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7223": {
+      "name": "Golden Scale Bracers",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 185,
+        "green": 197,
+        "gray": 210,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "7221": {
+      "name": "Iron Shield Spike",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6044
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 155,
+        "green": 170,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7222": {
+      "name": "Iron Counterweight",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6045
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 177,
+        "gray": 190,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7408": {
+      "name": "Heavy Copper Maul",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 80,
+        "green": 100,
+        "gray": 120,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "7817": {
+      "name": "Rough Bronze Boots",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 70,
+        "yellow": 100,
+        "green": 115,
+        "gray": 130,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "7818": {
+      "name": "Silver Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 80,
+        "green": 82,
+        "gray": 85,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "8366": {
+      "name": "Ironforge Chain",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "8367": {
+      "name": "Ironforge Breastplate",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 6735
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 115,
+        "green": 135,
+        "gray": 155,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "8368": {
+      "name": "Ironforge Gauntlets",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "8768": {
+      "name": "Iron Buckle",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 127,
+        "gray": 130,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "8880": {
+      "name": "Copper Dagger",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 65,
+        "green": 85,
+        "gray": 105,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9811": {
+      "name": "Barbaric Iron Shoulders",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 7978
+      },
+      "difficulty": {
+        "orange": 135,
+        "yellow": 160,
+        "green": 172,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9813": {
+      "name": "Barbaric Iron Breastplate",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 7979
+      },
+      "difficulty": {
+        "orange": 135,
+        "yellow": 160,
+        "green": 172,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9814": {
+      "name": "Barbaric Iron Helm",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 7980
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9818": {
+      "name": "Barbaric Iron Boots",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 7981
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 180,
+        "green": 192,
+        "gray": 205,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9820": {
+      "name": "Barbaric Iron Gloves",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 7982
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 185,
+        "green": 197,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9916": {
+      "name": "Steel Breastplate",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 212,
+        "gray": 225,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9918": {
+      "name": "Solid Sharpening Stone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 180,
+        "gray": 185,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9921": {
+      "name": "Solid Weightstone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 180,
+        "gray": 185,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9920": {
+      "name": "Solid Grinding Stone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 180,
+        "gray": 185,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9926": {
+      "name": "Heavy Mithril Shoulder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9928": {
+      "name": "Heavy Mithril Gauntlet",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9931": {
+      "name": "Mithril Plate Pants",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 205,
+        "green": 215,
+        "gray": 225,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9933": {
+      "name": "Heavy Mithril Pants",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 7975
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 205,
+        "green": 215,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9935": {
+      "name": "Steel Plate Helm",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 210,
+        "green": 220,
+        "gray": 230,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9937": {
+      "name": "Mithril Plate Bracers",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 7995,
+        "cost": 6000
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 210,
+        "green": 220,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9939": {
+      "name": "Mithril Shield Spike",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 7976
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 210,
+        "green": 220,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9942": {
+      "name": "Mithril Plate Gloves",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "9945": {
+      "name": "Ornate Mithril Pants",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 7983
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 225,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9950": {
+      "name": "Ornate Mithril Gloves",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 7984
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 225,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9952": {
+      "name": "Ornate Mithril Shoulders",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 7985
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 230,
+        "gray": 240,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9954": {
+      "name": "Truesilver Gauntlets",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 230,
+        "gray": 240,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9957": {
+      "name": "Orcish War Leggings",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 7994
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9959": {
+      "name": "Heavy Mithril Breastplate",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9961": {
+      "name": "Mithril Coif",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9964": {
+      "name": "Mithril Spurs",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 7989
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9966": {
+      "name": "Mithril Plate Shoulders",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 7991
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9968": {
+      "name": "Heavy Mithril Boots",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9970": {
+      "name": "Heavy Mithril Helm",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 7990
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9972": {
+      "name": "Ornate Mithril Breastplate",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 240 above yellow 235"
+      }
+    },
+    "9974": {
+      "name": "Truesilver Breastplate",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 250,
+        "gray": 260,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9979": {
+      "name": "Ornate Mithril Boots",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 245 above yellow 240"
+      }
+    },
+    "9980": {
+      "name": "Ornate Mithril Helm",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 245 above yellow 240"
+      }
+    },
+    "9983": {
+      "name": "Copper Claymore",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 65,
+        "green": 85,
+        "gray": 105,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9985": {
+      "name": "Bronze Warhammer",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 155,
+        "green": 170,
+        "gray": 185,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "9986": {
+      "name": "Bronze Greatsword",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 135,
+        "green": 150,
+        "gray": 165,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9987": {
+      "name": "Bronze Battle Axe",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 140,
+        "green": 155,
+        "gray": 170,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9993": {
+      "name": "Heavy Mithril Axe",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 210,
+        "green": 222,
+        "gray": 235,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "9995": {
+      "name": "Blue Glittering Axe",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 7992
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 220,
+        "green": 232,
+        "gray": 245,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9997": {
+      "name": "Wicked Mithril Blade",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 8029
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "10001": {
+      "name": "Big Black Mace",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 230,
+        "green": 242,
+        "gray": 255,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "10003": {
+      "name": "The Shatterer",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "10005": {
+      "name": "Dazzling Mithril Rapier",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 7993
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 240,
+        "green": 252,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "10007": {
+      "name": "Phantom Blade",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "10009": {
+      "name": "Runed Mithril Hammer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 8028
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 245,
+        "green": 257,
+        "gray": 270,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "10011": {
+      "name": "Blight",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "10013": {
+      "name": "Ebon Shiv",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 8030,
+        "cost": 10000
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 255,
+        "green": 267,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "10015": {
+      "name": "Truesilver Champion",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "11643": {
+      "name": "Golden Scale Gauntlets",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row: row 'golden scale gauntlets' taken by spell 439120",
+        "itemId": 9367
+      }
+    },
+    "12260": {
+      "name": "Rough Copper Vest",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "12259": {
+      "name": "Silvered Bronze Leggings",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 10424
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 155,
+        "green": 167,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "11454": {
+      "name": "Inlaid Mithril Cylinder",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unsupported wiki source: 'Crafted'",
+        "itemId": 10713
+      }
+    },
+    "14379": {
+      "name": "Golden Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 130,
+        "green": 132,
+        "gray": 135,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "14380": {
+      "name": "Truesilver Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 180,
+        "green": 182,
+        "gray": 185,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "15296": {
+      "name": "Dark Iron Plate",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11612
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15293": {
+      "name": "Dark Iron Mail",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11614
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 275,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15292": {
+      "name": "Dark Iron Pulverizer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11610
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15294": {
+      "name": "Dark Iron Sunderer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11611
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15295": {
+      "name": "Dark Iron Shoulders",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11615
+      },
+      "difficulty": {
+        "orange": 255,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15972": {
+      "name": "Glinting Steel Dagger",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 180,
+        "green": 192,
+        "gray": 205,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "15973": {
+      "name": "Searing Golden Blade",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12261
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 190,
+        "green": 202,
+        "gray": 215,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16641": {
+      "name": "Dense Sharpening Stone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 230,
+        "green": 232,
+        "gray": 235,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "16640": {
+      "name": "Dense Weightstone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 230,
+        "green": 232,
+        "gray": 235,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "16639": {
+      "name": "Dense Grinding Stone",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 230,
+        "green": 232,
+        "gray": 235,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "16642": {
+      "name": "Thorium Armor",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12682
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16643": {
+      "name": "Thorium Belt",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12683
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16644": {
+      "name": "Thorium Bracers",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12684
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 260,
+        "gray": 270,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16645": {
+      "name": "Radiant Belt",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12685
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 255,
+        "green": 265,
+        "gray": 275,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16646": {
+      "name": "Imperial Plate Shoulders",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12687
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16647": {
+      "name": "Imperial Plate Belt",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12688
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16648": {
+      "name": "Radiant Breastplate",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12689
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 275,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16649": {
+      "name": "Imperial Plate Bracers",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12690
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 275,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16651": {
+      "name": "Thorium Shield Spike",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12692
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16652": {
+      "name": "Thorium Boots",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12693
+      },
+      "difficulty": {
+        "orange": 255,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16653": {
+      "name": "Thorium Helm",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12694
+      },
+      "difficulty": {
+        "orange": 255,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16654": {
+      "name": "Radiant Gloves",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12695
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16667": {
+      "name": "Demon Forged Breastplate",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12696
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16656": {
+      "name": "Radiant Boots",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12697
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16660": {
+      "name": "Dawnbringer Shoulders",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 12698,
+        "factionId": 529,
+        "factionName": "Argent Dawn",
+        "level": "Revered",
+        "cost": 22000
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16655": {
+      "name": "Fiery Plate Gauntlets",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12699
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16657": {
+      "name": "Imperial Plate Boots",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12700
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16658": {
+      "name": "Imperial Plate Helm",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12701
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16659": {
+      "name": "Radiant Circlet",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12702
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16662": {
+      "name": "Thorium Leggings",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12704
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16663": {
+      "name": "Imperial Plate Chest",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12705
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16664": {
+      "name": "Runic Plate Shoulders",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12706
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16665": {
+      "name": "Runic Plate Boots",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12707
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16724": {
+      "name": "Whitesoul Helm",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12711
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16725": {
+      "name": "Radiant Leggings",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12713
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 300,
+        "green": 310,
+        "gray": 320,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16726": {
+      "name": "Runic Plate Helm",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12714
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 300,
+        "green": 310,
+        "gray": 320,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16730": {
+      "name": "Imperial Plate Leggings",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12715
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 300,
+        "green": 310,
+        "gray": 320,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16729": {
+      "name": "Lionheart Helm",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12717
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16731": {
+      "name": "Runic Breastplate",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12718
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 315,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16732": {
+      "name": "Runic Plate Leggings",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12719
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 315,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16741": {
+      "name": "Stronghold Gauntlets",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12720
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16742": {
+      "name": "Enchanted Thorium Helm",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12725
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16744": {
+      "name": "Enchanted Thorium Leggings",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12726
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16745": {
+      "name": "Enchanted Thorium Breastplate",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12727
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16960": {
+      "name": "Thorium Greatsword",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "16965": {
+      "name": "Bleakwood Hew",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "16967": {
+      "name": "Inlaid Thorium Hammer",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "16969": {
+      "name": "Ornate Thorium Handaxe",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12819,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 275,
+        "green": 287,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16970": {
+      "name": "Dawn's Edge",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12821
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 275,
+        "green": 287,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16971": {
+      "name": "Huge Thorium Battleaxe",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12823,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 255,
+        "yellow": 280,
+        "green": 292,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16973": {
+      "name": "Enchanted Battlehammer",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12824
+      },
+      "difficulty": {
+        "orange": 255,
+        "yellow": 280,
+        "green": 292,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16978": {
+      "name": "Blazing Rapier",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 12825
+      },
+      "difficulty": {
+        "orange": 255,
+        "yellow": 280,
+        "green": 292,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16980": {
+      "name": "Rune Edge",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "16983": {
+      "name": "Serenity",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12827
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 285,
+        "green": 297,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16984": {
+      "name": "Volcanic Hammer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12828
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 290,
+        "green": 302,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16985": {
+      "name": "Corruption",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12830
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 290,
+        "green": 302,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16986": {
+      "name": "Blood Talon",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "16987": {
+      "name": "Darkspear",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "16988": {
+      "name": "Hammer of the Titans",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12833
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16990": {
+      "name": "Arcanite Champion",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12834
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16991": {
+      "name": "Annihilator",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 300 above yellow 295",
+        "itemId": 12835
+      },
+      "forever": {
+        "notes": [
+          "teaching item 12835 RequiredSkillRank 300 above yellow 295 ignored"
+        ]
+      }
+    },
+    "16992": {
+      "name": "Frostguard",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12836
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16993": {
+      "name": "Masterwork Stormhammer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12837
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16994": {
+      "name": "Arcanite Reaper",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12838
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "16995": {
+      "name": "Heartseeker",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 12839
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19666": {
+      "name": "Silver Skeleton Key",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 75,
+        "green": 85,
+        "gray": 95,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "19667": {
+      "name": "Golden Skeleton Key",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 135,
+        "gray": 145,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "19668": {
+      "name": "Truesilver Skeleton Key",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 185,
+        "gray": 195,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "19669": {
+      "name": "Arcanite Skeleton Key",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "20201": {
+      "name": "Arcanite Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "20874": {
+      "name": "Dark Iron Bracers",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 17051,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Friendly",
+        "cost": 70000
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20872": {
+      "name": "Fiery Chain Girdle",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 17049,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Honored",
+        "cost": 90000
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20876": {
+      "name": "Dark Iron Leggings",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 17052,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Revered",
+        "cost": 180000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20873": {
+      "name": "Fiery Chain Shoulders",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 17053,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Revered",
+        "cost": 200000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20897": {
+      "name": "Dark Iron Destroyer",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 17060,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Honored",
+        "cost": 220000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20890": {
+      "name": "Dark Iron Reaver",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 17059,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Honored",
+        "cost": 220000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "21161": {
+      "name": "Sulfuron Hammer",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'sulfuron hammer' matches spells 21161, 460460",
+        "itemId": 18592
+      }
+    },
+    "21913": {
+      "name": "Edge of Winter",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 17706
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 190,
+        "green": 202,
+        "gray": 215,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "22757": {
+      "name": "Elemental Sharpening Stone",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 300 above yellow 275",
+        "itemId": 18264
+      },
+      "forever": {
+        "notes": [
+          "teaching item 18264 RequiredSkillRank 300 above yellow 275 ignored"
+        ]
+      }
+    },
+    "23632": {
+      "name": "Girdle of the Dawn",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19203,
+        "factionId": 529,
+        "factionName": "Argent Dawn",
+        "level": "Honored",
+        "cost": 22000
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23633": {
+      "name": "Gloves of the Dawn",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19205,
+        "factionId": 529,
+        "factionName": "Argent Dawn",
+        "level": "Revered",
+        "cost": 40000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23636": {
+      "name": "Dark Iron Helm",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19206,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Honored",
+        "cost": 60000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23637": {
+      "name": "Dark Iron Gauntlets",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19207,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Revered",
+        "cost": 80000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23638": {
+      "name": "Black Amnesty",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19208,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Revered",
+        "cost": 70000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23639": {
+      "name": "Blackfury",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19209,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Revered",
+        "cost": 70000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23650": {
+      "name": "Ebon Hand",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 300 above yellow 295",
+        "itemId": 19210
+      },
+      "forever": {
+        "notes": [
+          "teaching item 19210 RequiredSkillRank 300 above yellow 295 ignored"
+        ]
+      }
+    },
+    "23652": {
+      "name": "Blackguard",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 300 above yellow 295",
+        "itemId": 19211
+      },
+      "forever": {
+        "notes": [
+          "teaching item 19211 RequiredSkillRank 300 above yellow 295 ignored"
+        ]
+      }
+    },
+    "23653": {
+      "name": "Nightfall",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 300 above yellow 295",
+        "itemId": 19212
+      },
+      "forever": {
+        "notes": [
+          "teaching item 19212 RequiredSkillRank 300 above yellow 295 ignored"
+        ]
+      }
+    },
+    "24136": {
+      "name": "Bloodsoul Breastplate",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19776,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Revered",
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24138": {
+      "name": "Bloodsoul Gauntlets",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19778,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Friendly",
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24137": {
+      "name": "Bloodsoul Shoulders",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19777,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Honored",
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24139": {
+      "name": "Darksoul Breastplate",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19779,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Revered",
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24140": {
+      "name": "Darksoul Leggings",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19780,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Honored",
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24141": {
+      "name": "Darksoul Shoulders",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19781,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Friendly",
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24399": {
+      "name": "Dark Iron Boots",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 20040,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Exalted",
+        "cost": 80000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24914": {
+      "name": "Darkrune Breastplate",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 20554
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24912": {
+      "name": "Darkrune Gauntlets",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 20553
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24913": {
+      "name": "Darkrune Helm",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 20555
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "27585": {
+      "name": "Heavy Obsidian Belt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'heavy obsidian belt' matches spells 27585, 1213746"
+      }
+    },
+    "27588": {
+      "name": "Light Obsidian Belt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'light obsidian belt' matches spells 27588, 1213748"
+      }
+    },
+    "27586": {
+      "name": "Jagged Obsidian Shield",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 22219,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Revered",
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "27589": {
+      "name": "Black Grasp of the Destroyer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 22220
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "27590": {
+      "name": "Obsidian Mail Tunic",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 22221,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Exalted",
+        "cost": 80000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "27587": {
+      "name": "Thick Obsidian Breastplate",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 22222
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "27830": {
+      "name": "Persuader",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 22390
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "27829": {
+      "name": "Titanic Leggings",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 22388
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "27832": {
+      "name": "Sageblade",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 22389
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "28244": {
+      "name": "Icebane Bracers",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 22705
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "DB2 faction 749 Hydraxian Waterlords Revered on teaching item 22705; wiki source '?'"
+        ]
+      }
+    },
+    "28242": {
+      "name": "Icebane Breastplate",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 22703
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "DB2 faction 529 Argent Dawn Exalted on teaching item 22703; wiki source '?'"
+        ]
+      }
+    },
+    "28243": {
+      "name": "Icebane Gauntlets",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 22704
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "DB2 faction 529 Argent Dawn Revered on teaching item 22704; wiki source '?'"
+        ]
+      }
+    },
+    "28461": {
+      "name": "Ironvine Breastplate",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'ironvine breastplate' matches spells 28461, 1213715"
+      }
+    },
+    "28462": {
+      "name": "Ironvine Gloves",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'ironvine gloves' matches spells 28462, 1213711"
+      }
+    },
+    "28463": {
+      "name": "Ironvine Belt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'ironvine belt' matches spells 28463, 1213709"
+      }
+    },
+    "427061": {
+      "name": "Mantle of the Second War",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 150 above yellow 140",
+        "itemId": 210779
+      },
+      "forever": {
+        "notes": [
+          "teaching item 210779 RequiredSkillRank 150 above yellow 140 ignored"
+        ]
+      }
+    },
+    "429348": {
+      "name": "Shifting Silver Breastplate",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "430397": {
+      "name": "Blackfathom Sharpening Stone",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "435910": {
+      "name": "Low-Background Truesilver Plates",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 215384,
+        "cost": 25000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "435908": {
+      "name": "Tempered Interference-Negating Helmet",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 215155,
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 230,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "435906": {
+      "name": "Reflective Truesilver Braincage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 215383,
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 230,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "439120": {
+      "name": "Golden Scale Gauntlets",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: 2 wiki rows named 'golden scale gauntlets'",
+        "itemId": 217274
+      }
+    },
+    "439122": {
+      "name": "Golden Scale Boots",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: 2 wiki rows named 'golden scale boots'",
+        "itemId": 217276
+      }
+    },
+    "439124": {
+      "name": "Golden Scale Cuirass",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: 2 wiki rows named 'golden scale cuirass'",
+        "itemId": 217278
+      }
+    },
+    "439126": {
+      "name": "Golden Scale Coif",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: 2 wiki rows named 'golden scale coif'",
+        "itemId": 217280
+      }
+    },
+    "439130": {
+      "name": "Golden Scale Shoulders",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: 2 wiki rows named 'golden scale shoulders'",
+        "itemId": 217284
+      }
+    },
+    "439132": {
+      "name": "Golden Scale Leggings",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: 2 wiki rows named 'golden scale leggings'",
+        "itemId": 217286
+      }
+    },
+    "439128": {
+      "name": "Moonsteel Broadsword",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: 2 wiki rows named 'moonsteel broadsword'",
+        "itemId": 217282
+      }
+    },
+    "446191": {
+      "name": "Baleful Pauldrons",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "446188": {
+      "name": "Fearmonger's Shoulderguards",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "446179": {
+      "name": "Shoulderplates of Dread",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "460460": {
+      "name": "Sulfuron Hammer",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'sulfuron hammer' matches spells 21161, 460460",
+        "itemId": 227727
+      }
+    },
+    "461667": {
+      "name": "Tempered Dark Iron Plate",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 227901
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 315,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "461647": {
+      "name": "Skyrider's Masterwork Stormhammer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 227905
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "461651": {
+      "name": "Fiery Plate Gauntlets of the Hidden Technique",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 227909
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "461712": {
+      "name": "Refined Hammer of the Titans",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "461714": {
+      "name": "Desecration",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "461716": {
+      "name": "Deadly Heartseeker",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "461718": {
+      "name": "Tranquility",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "461675": {
+      "name": "Refined Arcanite Reaper",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 228114
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "461669": {
+      "name": "Refined Arcanite Champion",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 228117
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "461730": {
+      "name": "Hardened Frostguard",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 228310
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "461733": {
+      "name": "Finely-Enchanted Battlehammer",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 228311
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 305,
+        "green": 317,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "461735": {
+      "name": "Invincible Mail",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 228312
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "461671": {
+      "name": "Stronger-hold Gauntlets",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 228250
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "461737": {
+      "name": "Tempest Gauntlets",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 228313
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 325,
+        "gray": 335,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "461739": {
+      "name": "Warcrest of the Great Chief",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 228314
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "461743": {
+      "name": "Sageblade of the Archmagus",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 228315
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1213709": {
+      "name": "Ironvine Belt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'ironvine belt' matches spells 28463, 1213709"
+      }
+    },
+    "1213711": {
+      "name": "Ironvine Gloves",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'ironvine gloves' matches spells 28462, 1213711"
+      }
+    },
+    "1213715": {
+      "name": "Ironvine Breastplate",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'ironvine breastplate' matches spells 28461, 1213715"
+      }
+    },
+    "1213748": {
+      "name": "Light Obsidian Belt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'light obsidian belt' matches spells 27588, 1213748"
+      }
+    },
+    "1213746": {
+      "name": "Heavy Obsidian Belt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'heavy obsidian belt' matches spells 27585, 1213746"
+      }
+    },
+    "1213481": {
+      "name": "Razorspike Headcage",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213484": {
+      "name": "Razorspike Shoulderplate",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213490": {
+      "name": "Razorspike Battleplate",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213492": {
+      "name": "Obsidian Reaver",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213643": {
+      "name": "Obsidian Grinding Stone",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213498": {
+      "name": "Obsidian Champion",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213500": {
+      "name": "Obsidian Destroyer",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213502": {
+      "name": "Obsidian Stormhammer",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213504": {
+      "name": "Obsidian Sageblade",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213506": {
+      "name": "Obsidian Defender",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1214137": {
+      "name": "Obsidian Heartseeker",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1214257": {
+      "name": "Black Grasp of the Destroyer",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'black grasp of the destroyer' matches spells 27589, 1214257"
+      }
+    },
+    "1214270": {
+      "name": "Jagged Obsidian Shield",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'jagged obsidian shield' matches spells 27586, 1214270"
+      }
+    },
+    "1214274": {
+      "name": "Obsidian Mail Tunic",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'obsidian mail tunic' matches spells 27590, 1214274"
+      }
+    },
+    "1214309": {
+      "name": "Dreamscale Visor",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1215507": {
+      "name": "Thick Obsidian Breastplate",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'thick obsidian breastplate' matches spells 27587, 1215507"
+      }
+    },
+    "1223787": {
+      "name": "Icebane Breastplate",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'icebane breastplate' matches spells 28242, 1223787"
+      }
+    },
+    "1223789": {
+      "name": "Icebane Gauntlets",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'icebane gauntlets' matches spells 28243, 1223789"
+      }
+    },
+    "1223791": {
+      "name": "Icebane Bracers",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'icebane bracers' matches spells 28244, 1223791"
+      }
+    },
+    "1224631": {
+      "name": "Scarlet Soldier's Helmet",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 238322
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1224632": {
+      "name": "Scarlet Soldier's Spaulders",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 238323
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1224633": {
+      "name": "Scarlet Soldier's Chestplate",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 238324
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1224635": {
+      "name": "Scarlet Soldier's Protectors",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 238325
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 260,
+        "green": 282,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1224636": {
+      "name": "Scarlet Soldier's Grips",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 238326
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 270,
+        "green": 287,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1224637": {
+      "name": "Scarlet Soldier's Waistguard",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 238327
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 260,
+        "green": 282,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1224638": {
+      "name": "Scarlet Soldier's Legplates",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 238328
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 280,
+        "green": 292,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1224639": {
+      "name": "Scarlet Soldier's Stompers",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 238329
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 270,
+        "green": 287,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1230171": {
+      "name": "Sharpening Wheel",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "1245287": {
+      "name": "Copper Rod",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1252229": {
+      "name": "Gemmed Copper Boots",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251332
+      }
+    },
+    "1252230": {
+      "name": "Strange Copper Boots",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251333
+      }
+    },
+    "1252231": {
+      "name": "Glowing Copper Boots",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251334
+      }
+    },
+    "1252232": {
+      "name": "Sterling Silver Boots",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251335
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 145,
+        "gray": 160,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252233": {
+      "name": "Sterling Silver Leggings",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251336
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 135,
+        "green": 150,
+        "gray": 165,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252234": {
+      "name": "Sterling Silver Gauntlet",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251337
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 135,
+        "green": 150,
+        "gray": 165,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252235": {
+      "name": "Sterling Silver Shoulders",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251338
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 140,
+        "green": 155,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252236": {
+      "name": "Sterling Silver Breastplate",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251339
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 155,
+        "green": 170,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252237": {
+      "name": "Veteran's Chain Shirt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251340
+      }
+    },
+    "1252238": {
+      "name": "Guard's Chain Shirt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251341
+      }
+    },
+    "1252239": {
+      "name": "Protector's Chain Shirt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251342
+      }
+    },
+    "1252240": {
+      "name": "Acolyte's Chain Shirt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251343
+      }
+    },
+    "1252241": {
+      "name": "Crusader's Chain Shirt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251344
+      }
+    },
+    "1252242": {
+      "name": "Veteran's Chain Leggings",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251345
+      }
+    },
+    "1252243": {
+      "name": "Guard's Chain Leggings",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251346
+      }
+    },
+    "1252244": {
+      "name": "Protector's Chain Leggings",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251347
+      }
+    },
+    "1252245": {
+      "name": "Acolyte's Chain Leggings",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251348
+      }
+    },
+    "1252246": {
+      "name": "Crusader's Chain Leggings",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251349
+      }
+    },
+    "1252247": {
+      "name": "Veteran's Chain Helm",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251350
+      }
+    },
+    "1252248": {
+      "name": "Guard's Chain Helm",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251351
+      }
+    },
+    "1252249": {
+      "name": "Protector's Chain Helm",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251352
+      }
+    },
+    "1252250": {
+      "name": "Acolyte's Chain Helm",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251353
+      }
+    },
+    "1252251": {
+      "name": "Crusader's Chain Helm",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251354
+      }
+    },
+    "1252252": {
+      "name": "Veteran's Boots",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251355,
+        "cost": 2125
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 115,
+        "green": 130,
+        "gray": 145,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252253": {
+      "name": "Guard's Boots",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251356,
+        "cost": 2125
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 115,
+        "green": 130,
+        "gray": 145,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252254": {
+      "name": "Protector's Boots",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251357,
+        "cost": 2125
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 115,
+        "green": 130,
+        "gray": 145,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252255": {
+      "name": "Acolyte's Boots",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251358,
+        "cost": 2125
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 115,
+        "green": 130,
+        "gray": 145,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252256": {
+      "name": "Crusader's Boots",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251359,
+        "cost": 2125
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 115,
+        "green": 130,
+        "gray": 145,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252257": {
+      "name": "Veteran's Gloves",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251360
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 110,
+        "green": 125,
+        "gray": 140,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252258": {
+      "name": "Guard's Gloves",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251361
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 110,
+        "green": 125,
+        "gray": 140,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252259": {
+      "name": "Protector's Gloves",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251362
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 110,
+        "green": 125,
+        "gray": 140,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252260": {
+      "name": "Acolyte's Gloves",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251363
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 110,
+        "green": 125,
+        "gray": 140,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252261": {
+      "name": "Crusader's Gloves",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251364
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 110,
+        "green": 125,
+        "gray": 140,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252262": {
+      "name": "Veteran's Chain Belt",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251365,
+        "cost": 1125
+      },
+      "difficulty": {
+        "orange": 45,
+        "yellow": 85,
+        "green": 105,
+        "gray": 125,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252263": {
+      "name": "Guard's Chain Belt",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251366,
+        "cost": 1125
+      },
+      "difficulty": {
+        "orange": 45,
+        "yellow": 85,
+        "green": 105,
+        "gray": 125,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252264": {
+      "name": "Protector's Chain Belt",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251367,
+        "cost": 1125
+      },
+      "difficulty": {
+        "orange": 45,
+        "yellow": 85,
+        "green": 105,
+        "gray": 125,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252265": {
+      "name": "Acolyte's Chain Belt",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251368,
+        "cost": 1125
+      },
+      "difficulty": {
+        "orange": 45,
+        "yellow": 85,
+        "green": 105,
+        "gray": 125,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252266": {
+      "name": "Crusader's Chain Belt",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251369,
+        "cost": 1125
+      },
+      "difficulty": {
+        "orange": 45,
+        "yellow": 85,
+        "green": 105,
+        "gray": 125,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252267": {
+      "name": "Veteran's Silvered Chain Shirt",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251370,
+        "cost": 2750
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 140,
+        "green": 155,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252268": {
+      "name": "Guard's Silvered Chain Shirt",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251371,
+        "cost": 2750
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 140,
+        "green": 155,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252269": {
+      "name": "Protector's Silvered Chain Shirt",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251372,
+        "cost": 2750
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 140,
+        "green": 155,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252270": {
+      "name": "Acolyte's Silvered Chain Shirt",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251373,
+        "cost": 2750
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 140,
+        "green": 155,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252271": {
+      "name": "Crusader's Silvered Chain Shirt",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251374,
+        "cost": 2750
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 140,
+        "green": 155,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252272": {
+      "name": "Veteran's Silvered Chain Leggings",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251375
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 155,
+        "green": 170,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252273": {
+      "name": "Guard's Silvered Chain Leggings",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251376
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 155,
+        "green": 170,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252274": {
+      "name": "Protector's Silvered Chain Leggings",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251377
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 155,
+        "green": 170,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252275": {
+      "name": "Acolyte's Silvered Chain Leggings",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251378
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 155,
+        "green": 170,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252276": {
+      "name": "Crusader's Silvered Chain Leggings",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251379
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 155,
+        "green": 170,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252277": {
+      "name": "Veteran's Silvered Chain Helm",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251380
+      },
+      "difficulty": {
+        "orange": 95,
+        "yellow": 125,
+        "green": 140,
+        "gray": 155,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252278": {
+      "name": "Guard's Silvered Chain Helm",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251381
+      },
+      "difficulty": {
+        "orange": 95,
+        "yellow": 125,
+        "green": 140,
+        "gray": 155,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252279": {
+      "name": "Protector's Silvered Chain Helm",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251382
+      },
+      "difficulty": {
+        "orange": 95,
+        "yellow": 125,
+        "green": 140,
+        "gray": 155,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252280": {
+      "name": "Acolyte's Silvered Chain Helm",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251383
+      },
+      "difficulty": {
+        "orange": 95,
+        "yellow": 125,
+        "green": 140,
+        "gray": 155,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252281": {
+      "name": "Crusader's Silvered Chain Helm",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251384
+      },
+      "difficulty": {
+        "orange": 95,
+        "yellow": 125,
+        "green": 140,
+        "gray": 155,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252282": {
+      "name": "Hard Gold Cuirass",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251385
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 182,
+        "gray": 195,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252283": {
+      "name": "Hard Gold Boots",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251386
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252284": {
+      "name": "Hard Gold Bracers",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251387
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 185,
+        "green": 197,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252285": {
+      "name": "Hard Gold Leggings",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251388
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 190,
+        "green": 202,
+        "gray": 215,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252286": {
+      "name": "Hard Gold Coif",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251389
+      },
+      "difficulty": {
+        "orange": 170,
+        "yellow": 195,
+        "green": 207,
+        "gray": 220,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252287": {
+      "name": "Hard Gold Gauntlet",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 251390
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 212,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252288": {
+      "name": "Hard Gold Pauldrons",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251391
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 212,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252289": {
+      "name": "Shining Mithril Breastplate",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251392
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 225,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252290": {
+      "name": "Shining Mithril Pauldrons",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251393
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 225,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252291": {
+      "name": "Shining Mithril Boots",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251394
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 230,
+        "gray": 240,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252292": {
+      "name": "Shining Mithril Helm",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251395
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 235,
+        "green": 245,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252293": {
+      "name": "Shining Mithril Pants",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251396
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 250,
+        "gray": 260,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252294": {
+      "name": "Shining Mithril Gauntlet",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251397
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 250,
+        "gray": 260,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252295": {
+      "name": "Officer's Boots",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251398
+      }
+    },
+    "1252296": {
+      "name": "Sentinel's Boots",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251399
+      }
+    },
+    "1252297": {
+      "name": "Warder's Boots",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251400
+      }
+    },
+    "1252298": {
+      "name": "Prefect's Boots",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251401
+      }
+    },
+    "1252299": {
+      "name": "Justicar's Boots",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251402
+      }
+    },
+    "1252300": {
+      "name": "Officer's Gloves",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251403
+      }
+    },
+    "1252301": {
+      "name": "Sentinel's Gloves",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251404
+      }
+    },
+    "1252302": {
+      "name": "Warder's Gloves",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251405
+      }
+    },
+    "1252303": {
+      "name": "Prefect's Gloves",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251406
+      }
+    },
+    "1252304": {
+      "name": "Justicar's Gloves",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251407
+      }
+    },
+    "1252305": {
+      "name": "Officer's Belt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251408
+      }
+    },
+    "1252306": {
+      "name": "Sentinel's Belt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251409
+      }
+    },
+    "1252307": {
+      "name": "Warder's Belt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251410
+      }
+    },
+    "1252308": {
+      "name": "Prefect's Belt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251411
+      }
+    },
+    "1252309": {
+      "name": "Justicar's Belt",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 251412
+      }
+    },
+    "1252310": {
+      "name": "Officer's Sabatons",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251413,
+        "cost": 6000
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252311": {
+      "name": "Sentinel's Sabatons",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251414,
+        "cost": 6000
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252312": {
+      "name": "Warder's Sabatons",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251415,
+        "cost": 6000
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252313": {
+      "name": "Prefect's Sabatons",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251416,
+        "cost": 6000
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252314": {
+      "name": "Justicar's Sabatons",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251417,
+        "cost": 6000
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252315": {
+      "name": "Officer's Gauntlet",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251418,
+        "cost": 4375
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 212,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252316": {
+      "name": "Sentinel's Gauntlet",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251419,
+        "cost": 4375
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 212,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252317": {
+      "name": "Warder's Gauntlet",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251420,
+        "cost": 4375
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 212,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252318": {
+      "name": "Prefect's Gauntlet",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251421,
+        "cost": 4375
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 212,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252319": {
+      "name": "Justicar's Gauntlet",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251422,
+        "cost": 4375
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 212,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252320": {
+      "name": "Officer's Waistguard",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251423,
+        "cost": 6250
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252321": {
+      "name": "Sentinel's Waistguard",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251424,
+        "cost": 6250
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252322": {
+      "name": "Warder's Waistguard",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251425,
+        "cost": 6250
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252323": {
+      "name": "Prefect's Waistguard",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251426,
+        "cost": 6250
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252324": {
+      "name": "Justicar's Waistguard",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251427,
+        "cost": 6250
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252325": {
+      "name": "Officer's Pauldrons",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251428,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252326": {
+      "name": "Sentinel's Pauldrons",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251429,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252327": {
+      "name": "Warder's Pauldrons",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251430,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252328": {
+      "name": "Prefect's Pauldrons",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251431,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252329": {
+      "name": "Justicar's Pauldrons",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251432,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252330": {
+      "name": "Officer's Wristguards",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251433,
+        "cost": 5625
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252331": {
+      "name": "Sentinel's Wristguards",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251434,
+        "cost": 5625
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252332": {
+      "name": "Warder's Wristguards",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251435,
+        "cost": 5625
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252333": {
+      "name": "Prefect's Wristguards",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251436,
+        "cost": 5625
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252334": {
+      "name": "Justicar's Wristguards",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251437,
+        "cost": 5625
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 250,
+        "green": 262,
+        "gray": 275,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252335": {
+      "name": "Blessed Plate Pauldrons",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251438
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252336": {
+      "name": "Blessed Plate Boots",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251439
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252337": {
+      "name": "Blessed Plate Gauntlet",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251440
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 275,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252338": {
+      "name": "Imperial Plate Gauntlets",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251441
+      },
+      "difficulty": {
+        "orange": 255,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252339": {
+      "name": "Blessed Plate Bracers",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251442
+      },
+      "difficulty": {
+        "orange": 255,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252340": {
+      "name": "Blessed Plate Leggings",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251443
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252341": {
+      "name": "Blessed Plate Belt",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251444
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252342": {
+      "name": "Blessed Plate Helm",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251445
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252343": {
+      "name": "Blessed Plate Chest",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251446
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 300,
+        "green": 310,
+        "gray": 320,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252344": {
+      "name": "Enriched Thorium Breastplate",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251447,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252345": {
+      "name": "Enriched Thorium Leggings",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251448,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252346": {
+      "name": "Enriched Thorium Helm",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251449,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252347": {
+      "name": "Champion's Legplates",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251450
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252348": {
+      "name": "Stalwart Helm",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251451
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252349": {
+      "name": "Martyr's Legplates",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251452
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252350": {
+      "name": "Breastplate of Salvation",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251453
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252351": {
+      "name": "Brass Knuckles",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251454
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 110,
+        "green": 125,
+        "gray": 140,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252352": {
+      "name": "Bronze Dory",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251455
+      },
+      "difficulty": {
+        "orange": 95,
+        "yellow": 125,
+        "green": 140,
+        "gray": 155,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252353": {
+      "name": "Iron Fists",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251456
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 155,
+        "green": 167,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252354": {
+      "name": "Steel Spear",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251457
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 185,
+        "green": 197,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252355": {
+      "name": "Iron Morningstar",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 251458
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 190,
+        "green": 202,
+        "gray": 215,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252356": {
+      "name": "Mithril Shortsword",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251459
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252357": {
+      "name": "Mithril Warhammer",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251460,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 210,
+        "green": 220,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252358": {
+      "name": "Mithril Claws",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251461
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 225,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252359": {
+      "name": "Mithril Claymore",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251462
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 225,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252360": {
+      "name": "Mithril Stiletto",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251463
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252361": {
+      "name": "Charged Mithril Battleaxe",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251464
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 235,
+        "green": 245,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252362": {
+      "name": "Thorium Greatmace",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251465,
+        "cost": 6250
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252363": {
+      "name": "Thorium Cestus",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251466,
+        "cost": 6250
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252364": {
+      "name": "Thorium Poleaxe",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251467
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 292,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252365": {
+      "name": "Bold Dirk",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251468,
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252366": {
+      "name": "Stormcarver",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251469
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "DB2 faction 576 Timbermaw Hold Revered on teaching item 251469; wiki source '?'"
+        ]
+      }
+    },
+    "1252367": {
+      "name": "Bagh Nakh",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 251470
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "DB2 faction 576 Timbermaw Hold Revered on teaching item 251470; wiki source '?'"
+        ]
+      }
+    },
+    "1252368": {
+      "name": "Legionite Glaive",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 251471,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1263041": {
+      "name": "Anvil",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273086
+      }
+    },
+    "1263073": {
+      "name": "Master Forge",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273113
+      }
+    },
+    "1292948": {
+      "name": "Justice Greaves",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273979
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292946": {
+      "name": "Justice Gauntlets",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273977
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292947": {
+      "name": "Justice Spaulders",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273978
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292945": {
+      "name": "Justice Leggings",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273976
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292952": {
+      "name": "Justice Treads",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273983
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292950": {
+      "name": "Justice Gloves",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273981
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292951": {
+      "name": "Justice Epaulets",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273982
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292949": {
+      "name": "Justice Legplates",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273980
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292956": {
+      "name": "Justice Sabatons",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273987
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292954": {
+      "name": "Justice Handguards",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273985
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292955": {
+      "name": "Justice Pauldrons",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273986
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292953": {
+      "name": "Justice Legguards",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 273984
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292984": {
+      "name": "Greaves of Glory",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274015
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292982": {
+      "name": "Gauntlets of Glory",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274013
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292983": {
+      "name": "Shoulders of Glory",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274014
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292981": {
+      "name": "Legplates of Glory",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274012
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292988": {
+      "name": "Sabatons of Glory",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274019
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292986": {
+      "name": "Handguards of Glory",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274017
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292987": {
+      "name": "Pauldrons of Glory",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274018
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1292985": {
+      "name": "Legguards of Glory",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274016
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 325,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "1297138": {
+      "name": "Goregasher Grips",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 275598,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Friendly",
+        "cost": 75000
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 290,
+        "green": 292,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1297139": {
+      "name": "Goregasher Support",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 275599,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Honored",
+        "cost": 75000
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 295,
+        "green": 297,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1297140": {
+      "name": "Goregasher Stompers",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 275600,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Honored",
+        "cost": 75000
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 295,
+        "green": 297,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1297141": {
+      "name": "Clutchlord's Grips",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 275601,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Friendly",
+        "cost": 75000
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 290,
+        "green": 292,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1297142": {
+      "name": "Clutchlord's Support",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 275602,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Honored",
+        "cost": 75000
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 295,
+        "green": 297,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1297143": {
+      "name": "Clutchlord's Stompers",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 275603,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Honored",
+        "cost": 75000
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 295,
+        "green": 297,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301421": {
+      "name": "Cloudy Skyforged Chainmail",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276928,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Honored",
+        "cost": 1250
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 65,
+        "green": 67,
+        "gray": 70,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301422": {
+      "name": "Cloudy Skyforged Wristguards",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276929,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Friendly",
+        "cost": 950
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 55,
+        "green": 57,
+        "gray": 60,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301423": {
+      "name": "Cloudy Skyforged Gauntlets",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276930,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Friendly",
+        "cost": 1100
+      },
+      "difficulty": {
+        "orange": 55,
+        "yellow": 60,
+        "green": 62,
+        "gray": 65,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301424": {
+      "name": "Cloudy Skyforged Chain",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276931,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Friendly",
+        "cost": 950
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 55,
+        "green": 57,
+        "gray": 60,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301425": {
+      "name": "Cloudy Skyforged Legguards",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276932,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Honored",
+        "cost": 1250
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 65,
+        "green": 67,
+        "gray": 70,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301426": {
+      "name": "Cloudy Skyforged Greaves",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276933,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Friendly",
+        "cost": 1100
+      },
+      "difficulty": {
+        "orange": 55,
+        "yellow": 60,
+        "green": 62,
+        "gray": 65,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301445": {
+      "name": "Azure Skyforged Chainmail",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276952,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Honored",
+        "cost": 1250
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 65,
+        "green": 67,
+        "gray": 70,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301446": {
+      "name": "Azure Skyforged Wristguards",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276953,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Friendly",
+        "cost": 950
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 55,
+        "green": 57,
+        "gray": 60,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301447": {
+      "name": "Azure Skyforged Gauntlets",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276954,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Friendly",
+        "cost": 1100
+      },
+      "difficulty": {
+        "orange": 55,
+        "yellow": 60,
+        "green": 62,
+        "gray": 65,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301448": {
+      "name": "Azure Skyforged Chain",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276955,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Friendly",
+        "cost": 950
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 55,
+        "green": 57,
+        "gray": 60,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301449": {
+      "name": "Azure Skyforged Legguards",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276956,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Honored",
+        "cost": 1250
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 65,
+        "green": 67,
+        "gray": 70,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301450": {
+      "name": "Azure Skyforged Greaves",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276957,
+        "factionId": 2758,
+        "factionName": "Nightclaw Druids",
+        "level": "Friendly",
+        "cost": 1100
+      },
+      "difficulty": {
+        "orange": 55,
+        "yellow": 60,
+        "green": 62,
+        "gray": 65,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301526": {
+      "name": "Cloudy Skyforged Helm",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276976,
+        "factionId": 2787,
+        "factionName": "Earthen Ring",
+        "level": "Friendly",
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 185,
+        "green": 187,
+        "gray": 190,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301527": {
+      "name": "Cloudy Skyforged Pauldrons",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276977,
+        "factionId": 2787,
+        "factionName": "Earthen Ring",
+        "level": "Friendly",
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 185,
+        "green": 187,
+        "gray": 190,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301534": {
+      "name": "Azure Skyforged Helm",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276984,
+        "factionId": 2740,
+        "factionName": "Kirin Tor",
+        "level": "Friendly",
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 185,
+        "green": 187,
+        "gray": 190,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1301535": {
+      "name": "Azure Skyforged Pauldrons",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 276985,
+        "factionId": 2740,
+        "factionName": "Kirin Tor",
+        "level": "Friendly",
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 185,
+        "green": 187,
+        "gray": 190,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1302598": {
+      "name": "Rough Copper Chain Boots",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 277673
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 60,
+        "green": 65,
+        "gray": 70,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306533": {
+      "name": "Ironwood Blade",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279308
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306534": {
+      "name": "Forest Defender's Axe",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279309
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306535": {
+      "name": "Greenhammer",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279310
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306536": {
+      "name": "Evergreen Shield",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279311
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306537": {
+      "name": "Depleted Thorium Sabatons",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279312
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306538": {
+      "name": "Heavy Thorium Gauntlets",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279313
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306539": {
+      "name": "Azerothium Legplates",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279314
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1317962": {
+      "name": "Cracked Blacksmith Hammer",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 285289
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 115,
+        "green": 117,
+        "gray": 120,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1317963": {
+      "name": "Mithril Blacksmith Hammer",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 285290
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 200,
+        "green": 202,
+        "gray": 205,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1317964": {
+      "name": "Arcanite Blacksmith Hammer",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 285291
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 275,
+        "green": 277,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    }
+  }
+}

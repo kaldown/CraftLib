@@ -1,0 +1,180 @@
+{
+  "coverage": {
+    "cap": 300,
+    "floor": 0.75,
+    "gap": null,
+    "inGame": 128,
+    "knownSource": 99,
+    "knownSourceShare": 0.7734,
+    "maxGap": 0,
+    "maxGapAllowed": 10,
+    "passes": true,
+    "share": 0.9531,
+    "shipped": 122
+  },
+  "excluded": [
+    [
+      818,
+      "Basic Campfire",
+      "no wiki row"
+    ],
+    [
+      13028,
+      "Goldthorn Tea",
+      "unknown source and no teaching item"
+    ],
+    [
+      24801,
+      "Smoked Desert Dumplings",
+      "unknown source and no teaching item"
+    ],
+    [
+      470359,
+      "Darkclaw Bisque",
+      "reagent 227813 has no name in this build"
+    ],
+    [
+      1247741,
+      "Spinefin Halibut",
+      "unknown source and no teaching item"
+    ],
+    [
+      1255241,
+      "Cleansing Stew",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1262978,
+      "Cookie's Feast",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263067,
+      "Iron Oven",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1270632,
+      "Critter Cookie",
+      "unknown source and no teaching item"
+    ],
+    [
+      1283400,
+      "Journeyman Campfire",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1291341,
+      "Expert Campfire",
+      "no skill-up: yellow == gray"
+    ]
+  ],
+  "heldBack": false,
+  "orangeFrom": {
+    "CROSS": 8,
+    "ITEM": 111,
+    "WIKI": 3
+  },
+  "sourceTypes": {
+    "DROP": 10,
+    "QUEST": 23,
+    "STARTER": 4,
+    "TRAINER": 7,
+    "UNKNOWN": 23,
+    "VENDOR": 55
+  },
+  "unknownSource": [
+    [
+      1225758,
+      "Prowler Steak"
+    ],
+    [
+      1225759,
+      "Filet o' Flank"
+    ],
+    [
+      1225760,
+      "Sunrise Omelette"
+    ],
+    [
+      1225762,
+      "Specklefin Feast"
+    ],
+    [
+      1225763,
+      "Grand Lobster Banquet"
+    ],
+    [
+      1249960,
+      "Triage Tea"
+    ],
+    [
+      1249961,
+      "Sunny Tea"
+    ],
+    [
+      1249962,
+      "Sage's Tea"
+    ],
+    [
+      1250142,
+      "Savory Stag Sliders"
+    ],
+    [
+      1250143,
+      "Soaring Pamplona"
+    ],
+    [
+      1250144,
+      "Bat Hachee"
+    ],
+    [
+      1250145,
+      "Savory Turtle Stew"
+    ],
+    [
+      1250146,
+      "Flank au Poivre"
+    ],
+    [
+      1250147,
+      "Bear Bruscitti"
+    ],
+    [
+      1250148,
+      "Steaming Stag Steak"
+    ],
+    [
+      1250149,
+      "Swiftstrike Steak"
+    ],
+    [
+      1250150,
+      "Raging Raptor Ribs"
+    ],
+    [
+      1250152,
+      "Prehistoric Pulled Raptor"
+    ],
+    [
+      1250153,
+      "Raptor Rouladen"
+    ],
+    [
+      1250155,
+      "Giant Scrambled Eggs"
+    ],
+    [
+      1250158,
+      "Clam Linguine"
+    ],
+    [
+      1295805,
+      "Briny Seafood Stew"
+    ],
+    [
+      1319313,
+      "Plated Armorfish"
+    ]
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "coverage": {
+    "cap": 300,
+    "floor": 0.75,
+    "gap": null,
+    "inGame": 259,
+    "knownSource": 191,
+    "knownSourceShare": 0.7375,
+    "maxGap": 0,
+    "maxGapAllowed": 10,
+    "passes": true,
+    "share": 0.8533,
+    "shipped": 221
+  },
+  "excluded": [
+    [
+      7418,
+      "Enchant Bracer - Inferior Stamina",
+      "unknown source and no teaching item"
+    ],
+    [
+      7428,
+      "Enchant Bracer - Minor Deflect",
+      "unknown source and no teaching item"
+    ],
+    [
+      7771,
+      "Enchant Cloak - Minor Protection",
+      "trainer per wiki but DB2 has teaching item 6345"
+    ],
+    [
+      7863,
+      "Enchant Boots - Minor Stamina",
+      "trainer per wiki but DB2 has teaching item 6376"
+    ],
+    [
+      13882,
+      "Enchant Cloak - Lesser Agility",
+      "no wiki row"
+    ],
+    [
+      14810,
+      "Greater Mystic Wand",
+      "ambiguous: wiki row 'greater mystic wand' matches spells 14810, 439134"
+    ],
+    [
+      430409,
+      "Blackfathom Mana Oil",
+      "unknown source and no teaching item"
+    ],
+    [
+      435481,
+      "Enchant Weapon - Dismantle",
+      "no learn skill: wiki skill 225 above yellow 200"
+    ],
+    [
+      435903,
+      "Enchant Chest - Retricutioner",
+      "no learn skill: wiki skill 225 above yellow 200"
+    ],
+    [
+      439134,
+      "Greater Mystic Wand",
+      "ambiguous: wiki row 'greater mystic wand' matches spells 14810, 439134"
+    ],
+    [
+      446243,
+      "Sigil of Living Dreams",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213593,
+      "Speedstone",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213595,
+      "Tear of the Dreamer",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213598,
+      "Lodestone of Retaliation",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213600,
+      "Enchanted Stopwatch",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213603,
+      "Ruby-Encrusted Broach",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213607,
+      "Scroll: Wrath of the Swarm",
+      "drop per wiki but DB2 has no teaching item"
+    ],
+    [
+      1213610,
+      "Enchanted Repellent",
+      "vendor per wiki but DB2 has no teaching item"
+    ],
+    [
+      1213616,
+      "Enchant Chest - Living Stats",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213628,
+      "Enchanted Prayer Tome",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213633,
+      "Enchanted Totem",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213635,
+      "Enchanted Mushroom",
+      "unknown source and no teaching item"
+    ],
+    [
+      1216005,
+      "Libram of Righteousness",
+      "unknown source and no teaching item"
+    ],
+    [
+      1216007,
+      "Libram of the Exorcist",
+      "unknown source and no teaching item"
+    ],
+    [
+      1216010,
+      "Libram of Sanctity",
+      "unknown source and no teaching item"
+    ],
+    [
+      1216014,
+      "Totem of Pyroclastic Thunder",
+      "unknown source and no teaching item"
+    ],
+    [
+      1216016,
+      "Totem of Thunderous Strikes",
+      "unknown source and no teaching item"
+    ],
+    [
+      1216018,
+      "Totem of Flowing Magma",
+      "unknown source and no teaching item"
+    ],
+    [
+      1216020,
+      "Idol of Sidereal Wrath",
+      "unknown source and no teaching item"
+    ],
+    [
+      1216022,
+      "Idol of Feline Ferocity",
+      "unknown source and no teaching item"
+    ],
+    [
+      1216024,
+      "Idol of Ursin Power",
+      "unknown source and no teaching item"
+    ],
+    [
+      1217189,
+      "Enchant Bracer - Spell Power",
+      "unknown source and no teaching item"
+    ],
+    [
+      1217203,
+      "Enchant Bracer - Agility",
+      "ambiguous: wiki row 'enchant bracer - agility' matches spells 1217203, 1248497"
+    ],
+    [
+      1230643,
+      "Enchanted Lute",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1231128,
+      "Enchant Weapon - Grand Crusader",
+      "no wiki row"
+    ],
+    [
+      1231164,
+      "Enchant Weapon - Grand Sorcerer",
+      "no wiki row"
+    ],
+    [
+      1248752,
+      "Mystic Mushroom",
+      "no wiki row"
+    ],
+    [
+      1249006,
+      "Libram of Invocation",
+      "no wiki row"
+    ],
+    [
+      1263056,
+      "Arcane Salvager",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263082,
+      "Arcane Forge",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1328948,
+      "Enchant Boots - Speed",
+      "no wiki row"
+    ]
+  ],
+  "heldBack": false,
+  "orangeFrom": {
+    "CROSS": 59,
+    "ITEM": 160,
+    "WIKI": 2
+  },
+  "sourceTypes": {
+    "DROP": 61,
+    "QUEST": 2,
+    "REPUTATION": 13,
+    "TRAINER": 61,
+    "UNKNOWN": 30,
+    "VENDOR": 54
+  },
+  "unknownSource": [
+    [
+      22750,
+      "Enchant Weapon - Healing Power"
+    ],
+    [
+      23803,
+      "Enchant Weapon - Mighty Spirit"
+    ],
+    [
+      25079,
+      "Enchant Gloves - Healing Power"
+    ],
+    [
+      25083,
+      "Enchant Cloak - Stealth"
+    ],
+    [
+      1219577,
+      "Enchant Off-Hand - Superior Intellect"
+    ],
+    [
+      1219578,
+      "Enchant Off-Hand - Excellent Spirit"
+    ],
+    [
+      1219581,
+      "Enchant Shield - Excellent Stamina"
+    ],
+    [
+      1220623,
+      "Enchant Shield - Critical Strike"
+    ],
+    [
+      1231139,
+      "Enchant 2H Weapon - Grand Arcanist"
+    ],
+    [
+      1232172,
+      "Enchant 2H Weapon - Grand Inquisitor"
+    ],
+    [
+      1248461,
+      "Twisted Nether Wand"
+    ],
+    [
+      1248497,
+      "Enchant Bracer - Agility"
+    ],
+    [
+      1248500,
+      "Enchant Bracer - Greater Agility"
+    ],
+    [
+      1248505,
+      "Lesser Eternal Wand"
+    ],
+    [
+      1248509,
+      "Dreambough Wand"
+    ],
+    [
+      1248510,
+      "Enchant 2H Weapon - Lesser Agility"
+    ],
+    [
+      1248511,
+      "Enchant 2H Weapon - Lesser Strength"
+    ],
+    [
+      1248515,
+      "Greater Eternal Wand"
+    ],
+    [
+      1248528,
+      "Enchant Gloves - Advanced Skinning"
+    ],
+    [
+      1248599,
+      "Enchant Bracer - Superior Agility"
+    ],
+    [
+      1248668,
+      "Enchant 2H Weapon - Strength"
+    ],
+    [
+      1249107,
+      "Frozen Heart of the Mountain"
+    ],
+    [
+      1249112,
+      "Molten Heart of the Mountain"
+    ],
+    [
+      1249114,
+      "Dormant Heart of the Mountain"
+    ],
+    [
+      1306520,
+      "Torch of Light"
+    ],
+    [
+      1306521,
+      "Steadfast Libram"
+    ],
+    [
+      1306522,
+      "Libram of Infusion"
+    ],
+    [
+      1306523,
+      "Totem of Urgency"
+    ],
+    [
+      1306524,
+      "Idol of Swiftness"
+    ],
+    [
+      1306525,
+      "Idol of the Ursine Twins"
+    ]
+  ]
+}

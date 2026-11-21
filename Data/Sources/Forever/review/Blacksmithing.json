@@ -1,0 +1,872 @@
+{
+  "coverage": {
+    "cap": 300,
+    "floor": 0.75,
+    "gap": null,
+    "inGame": 470,
+    "knownSource": 326,
+    "knownSourceShare": 0.6936,
+    "maxGap": 0,
+    "maxGapAllowed": 10,
+    "passes": true,
+    "share": 0.8234,
+    "shipped": 387
+  },
+  "excluded": [
+    [
+      2660,
+      "Rough Sharpening Stone",
+      "unknown source and no teaching item"
+    ],
+    [
+      2663,
+      "Copper Bracers",
+      "unknown source and no teaching item"
+    ],
+    [
+      2671,
+      "Rough Bronze Bracers",
+      "no wiki row"
+    ],
+    [
+      3115,
+      "Rough Weightstone",
+      "unknown source and no teaching item"
+    ],
+    [
+      3496,
+      "Moonsteel Broadsword",
+      "no wiki row: row 'moonsteel broadsword' taken by spell 439128"
+    ],
+    [
+      3503,
+      "Golden Scale Coif",
+      "no wiki row: row 'golden scale coif' taken by spell 439126"
+    ],
+    [
+      3505,
+      "Golden Scale Shoulders",
+      "no wiki row: row 'golden scale shoulders' taken by spell 439130"
+    ],
+    [
+      3507,
+      "Golden Scale Leggings",
+      "no wiki row: row 'golden scale leggings' taken by spell 439132"
+    ],
+    [
+      3511,
+      "Golden Scale Cuirass",
+      "no wiki row: row 'golden scale cuirass' taken by spell 439124"
+    ],
+    [
+      3515,
+      "Golden Scale Boots",
+      "no wiki row: row 'golden scale boots' taken by spell 439122"
+    ],
+    [
+      8366,
+      "Ironforge Chain",
+      "no wiki row"
+    ],
+    [
+      8368,
+      "Ironforge Gauntlets",
+      "no wiki row"
+    ],
+    [
+      9942,
+      "Mithril Plate Gloves",
+      "no wiki row"
+    ],
+    [
+      9972,
+      "Ornate Mithril Breastplate",
+      "no learn skill: wiki skill 240 above yellow 235"
+    ],
+    [
+      9979,
+      "Ornate Mithril Boots",
+      "no learn skill: wiki skill 245 above yellow 240"
+    ],
+    [
+      9980,
+      "Ornate Mithril Helm",
+      "no learn skill: wiki skill 245 above yellow 240"
+    ],
+    [
+      10003,
+      "The Shatterer",
+      "unknown source and no teaching item"
+    ],
+    [
+      10007,
+      "Phantom Blade",
+      "unknown source and no teaching item"
+    ],
+    [
+      10011,
+      "Blight",
+      "unknown source and no teaching item"
+    ],
+    [
+      10015,
+      "Truesilver Champion",
+      "unknown source and no teaching item"
+    ],
+    [
+      11454,
+      "Inlaid Mithril Cylinder",
+      "unsupported wiki source: 'Crafted'"
+    ],
+    [
+      11643,
+      "Golden Scale Gauntlets",
+      "no wiki row: row 'golden scale gauntlets' taken by spell 439120"
+    ],
+    [
+      12260,
+      "Rough Copper Vest",
+      "unknown source and no teaching item"
+    ],
+    [
+      16960,
+      "Thorium Greatsword",
+      "no wiki row"
+    ],
+    [
+      16965,
+      "Bleakwood Hew",
+      "no wiki row"
+    ],
+    [
+      16967,
+      "Inlaid Thorium Hammer",
+      "no wiki row"
+    ],
+    [
+      16980,
+      "Rune Edge",
+      "no wiki row"
+    ],
+    [
+      16986,
+      "Blood Talon",
+      "no wiki row"
+    ],
+    [
+      16987,
+      "Darkspear",
+      "no wiki row"
+    ],
+    [
+      16991,
+      "Annihilator",
+      "no learn skill: wiki skill 300 above yellow 295"
+    ],
+    [
+      21161,
+      "Sulfuron Hammer",
+      "ambiguous: wiki row 'sulfuron hammer' matches spells 21161, 460460"
+    ],
+    [
+      22757,
+      "Elemental Sharpening Stone",
+      "no learn skill: wiki skill 300 above yellow 275"
+    ],
+    [
+      23650,
+      "Ebon Hand",
+      "no learn skill: wiki skill 300 above yellow 295"
+    ],
+    [
+      23652,
+      "Blackguard",
+      "no learn skill: wiki skill 300 above yellow 295"
+    ],
+    [
+      23653,
+      "Nightfall",
+      "no learn skill: wiki skill 300 above yellow 295"
+    ],
+    [
+      27585,
+      "Heavy Obsidian Belt",
+      "ambiguous: wiki row 'heavy obsidian belt' matches spells 27585, 1213746"
+    ],
+    [
+      27588,
+      "Light Obsidian Belt",
+      "ambiguous: wiki row 'light obsidian belt' matches spells 27588, 1213748"
+    ],
+    [
+      28461,
+      "Ironvine Breastplate",
+      "ambiguous: wiki row 'ironvine breastplate' matches spells 28461, 1213715"
+    ],
+    [
+      28462,
+      "Ironvine Gloves",
+      "ambiguous: wiki row 'ironvine gloves' matches spells 28462, 1213711"
+    ],
+    [
+      28463,
+      "Ironvine Belt",
+      "ambiguous: wiki row 'ironvine belt' matches spells 28463, 1213709"
+    ],
+    [
+      427061,
+      "Mantle of the Second War",
+      "no learn skill: wiki skill 150 above yellow 140"
+    ],
+    [
+      429348,
+      "Shifting Silver Breastplate",
+      "unknown source and no teaching item"
+    ],
+    [
+      430397,
+      "Blackfathom Sharpening Stone",
+      "unknown source and no teaching item"
+    ],
+    [
+      439120,
+      "Golden Scale Gauntlets",
+      "ambiguous: 2 wiki rows named 'golden scale gauntlets'"
+    ],
+    [
+      439122,
+      "Golden Scale Boots",
+      "ambiguous: 2 wiki rows named 'golden scale boots'"
+    ],
+    [
+      439124,
+      "Golden Scale Cuirass",
+      "ambiguous: 2 wiki rows named 'golden scale cuirass'"
+    ],
+    [
+      439126,
+      "Golden Scale Coif",
+      "ambiguous: 2 wiki rows named 'golden scale coif'"
+    ],
+    [
+      439128,
+      "Moonsteel Broadsword",
+      "ambiguous: 2 wiki rows named 'moonsteel broadsword'"
+    ],
+    [
+      439130,
+      "Golden Scale Shoulders",
+      "ambiguous: 2 wiki rows named 'golden scale shoulders'"
+    ],
+    [
+      439132,
+      "Golden Scale Leggings",
+      "ambiguous: 2 wiki rows named 'golden scale leggings'"
+    ],
+    [
+      446179,
+      "Shoulderplates of Dread",
+      "unknown source and no teaching item"
+    ],
+    [
+      446188,
+      "Fearmonger's Shoulderguards",
+      "unknown source and no teaching item"
+    ],
+    [
+      446191,
+      "Baleful Pauldrons",
+      "unknown source and no teaching item"
+    ],
+    [
+      460460,
+      "Sulfuron Hammer",
+      "ambiguous: wiki row 'sulfuron hammer' matches spells 21161, 460460"
+    ],
+    [
+      461712,
+      "Refined Hammer of the Titans",
+      "unknown source and no teaching item"
+    ],
+    [
+      461714,
+      "Desecration",
+      "unknown source and no teaching item"
+    ],
+    [
+      461716,
+      "Deadly Heartseeker",
+      "unknown source and no teaching item"
+    ],
+    [
+      461718,
+      "Tranquility",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213481,
+      "Razorspike Headcage",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213484,
+      "Razorspike Shoulderplate",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213490,
+      "Razorspike Battleplate",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213492,
+      "Obsidian Reaver",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213498,
+      "Obsidian Champion",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213500,
+      "Obsidian Destroyer",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213502,
+      "Obsidian Stormhammer",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213504,
+      "Obsidian Sageblade",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213506,
+      "Obsidian Defender",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213643,
+      "Obsidian Grinding Stone",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213709,
+      "Ironvine Belt",
+      "ambiguous: wiki row 'ironvine belt' matches spells 28463, 1213709"
+    ],
+    [
+      1213711,
+      "Ironvine Gloves",
+      "ambiguous: wiki row 'ironvine gloves' matches spells 28462, 1213711"
+    ],
+    [
+      1213715,
+      "Ironvine Breastplate",
+      "ambiguous: wiki row 'ironvine breastplate' matches spells 28461, 1213715"
+    ],
+    [
+      1213746,
+      "Heavy Obsidian Belt",
+      "ambiguous: wiki row 'heavy obsidian belt' matches spells 27585, 1213746"
+    ],
+    [
+      1213748,
+      "Light Obsidian Belt",
+      "ambiguous: wiki row 'light obsidian belt' matches spells 27588, 1213748"
+    ],
+    [
+      1214137,
+      "Obsidian Heartseeker",
+      "unknown source and no teaching item"
+    ],
+    [
+      1214257,
+      "Black Grasp of the Destroyer",
+      "ambiguous: wiki row 'black grasp of the destroyer' matches spells 27589, 1214257"
+    ],
+    [
+      1214270,
+      "Jagged Obsidian Shield",
+      "ambiguous: wiki row 'jagged obsidian shield' matches spells 27586, 1214270"
+    ],
+    [
+      1214274,
+      "Obsidian Mail Tunic",
+      "ambiguous: wiki row 'obsidian mail tunic' matches spells 27590, 1214274"
+    ],
+    [
+      1214309,
+      "Dreamscale Visor",
+      "unknown source and no teaching item"
+    ],
+    [
+      1215507,
+      "Thick Obsidian Breastplate",
+      "ambiguous: wiki row 'thick obsidian breastplate' matches spells 27587, 1215507"
+    ],
+    [
+      1223787,
+      "Icebane Breastplate",
+      "ambiguous: wiki row 'icebane breastplate' matches spells 28242, 1223787"
+    ],
+    [
+      1223789,
+      "Icebane Gauntlets",
+      "ambiguous: wiki row 'icebane gauntlets' matches spells 28243, 1223789"
+    ],
+    [
+      1223791,
+      "Icebane Bracers",
+      "ambiguous: wiki row 'icebane bracers' matches spells 28244, 1223791"
+    ],
+    [
+      1230171,
+      "Sharpening Wheel",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1245287,
+      "Copper Rod",
+      "unknown source and no teaching item"
+    ],
+    [
+      1252229,
+      "Gemmed Copper Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252230,
+      "Strange Copper Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252231,
+      "Glowing Copper Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252237,
+      "Veteran's Chain Shirt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252238,
+      "Guard's Chain Shirt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252239,
+      "Protector's Chain Shirt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252240,
+      "Acolyte's Chain Shirt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252241,
+      "Crusader's Chain Shirt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252242,
+      "Veteran's Chain Leggings",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252243,
+      "Guard's Chain Leggings",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252244,
+      "Protector's Chain Leggings",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252245,
+      "Acolyte's Chain Leggings",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252246,
+      "Crusader's Chain Leggings",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252247,
+      "Veteran's Chain Helm",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252248,
+      "Guard's Chain Helm",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252249,
+      "Protector's Chain Helm",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252250,
+      "Acolyte's Chain Helm",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252251,
+      "Crusader's Chain Helm",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252295,
+      "Officer's Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252296,
+      "Sentinel's Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252297,
+      "Warder's Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252298,
+      "Prefect's Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252299,
+      "Justicar's Boots",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252300,
+      "Officer's Gloves",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252301,
+      "Sentinel's Gloves",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252302,
+      "Warder's Gloves",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252303,
+      "Prefect's Gloves",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252304,
+      "Justicar's Gloves",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252305,
+      "Officer's Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252306,
+      "Sentinel's Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252307,
+      "Warder's Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252308,
+      "Prefect's Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1252309,
+      "Justicar's Belt",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263041,
+      "Anvil",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263073,
+      "Master Forge",
+      "no skill-up: yellow == gray"
+    ]
+  ],
+  "heldBack": false,
+  "orangeFrom": {
+    "CROSS": 7,
+    "ITEM": 314,
+    "WIKI": 66
+  },
+  "sourceTypes": {
+    "DROP": 124,
+    "QUEST": 27,
+    "REPUTATION": 44,
+    "TRAINER": 73,
+    "UNKNOWN": 61,
+    "VENDOR": 58
+  },
+  "unknownSource": [
+    [
+      9957,
+      "Orcish War Leggings"
+    ],
+    [
+      28242,
+      "Icebane Breastplate"
+    ],
+    [
+      28243,
+      "Icebane Gauntlets"
+    ],
+    [
+      28244,
+      "Icebane Bracers"
+    ],
+    [
+      461651,
+      "Fiery Plate Gauntlets of the Hidden Technique"
+    ],
+    [
+      461733,
+      "Finely-Enchanted Battlehammer"
+    ],
+    [
+      1252284,
+      "Hard Gold Bracers"
+    ],
+    [
+      1252285,
+      "Hard Gold Leggings"
+    ],
+    [
+      1252289,
+      "Shining Mithril Breastplate"
+    ],
+    [
+      1252290,
+      "Shining Mithril Pauldrons"
+    ],
+    [
+      1252292,
+      "Shining Mithril Helm"
+    ],
+    [
+      1252293,
+      "Shining Mithril Pants"
+    ],
+    [
+      1252294,
+      "Shining Mithril Gauntlet"
+    ],
+    [
+      1252335,
+      "Blessed Plate Pauldrons"
+    ],
+    [
+      1252336,
+      "Blessed Plate Boots"
+    ],
+    [
+      1252337,
+      "Blessed Plate Gauntlet"
+    ],
+    [
+      1252338,
+      "Imperial Plate Gauntlets"
+    ],
+    [
+      1252339,
+      "Blessed Plate Bracers"
+    ],
+    [
+      1252340,
+      "Blessed Plate Leggings"
+    ],
+    [
+      1252341,
+      "Blessed Plate Belt"
+    ],
+    [
+      1252342,
+      "Blessed Plate Helm"
+    ],
+    [
+      1252343,
+      "Blessed Plate Chest"
+    ],
+    [
+      1252347,
+      "Champion's Legplates"
+    ],
+    [
+      1252348,
+      "Stalwart Helm"
+    ],
+    [
+      1252349,
+      "Martyr's Legplates"
+    ],
+    [
+      1252350,
+      "Breastplate of Salvation"
+    ],
+    [
+      1252359,
+      "Mithril Claymore"
+    ],
+    [
+      1252361,
+      "Charged Mithril Battleaxe"
+    ],
+    [
+      1252364,
+      "Thorium Poleaxe"
+    ],
+    [
+      1252366,
+      "Stormcarver"
+    ],
+    [
+      1252367,
+      "Bagh Nakh"
+    ],
+    [
+      1292945,
+      "Justice Leggings"
+    ],
+    [
+      1292946,
+      "Justice Gauntlets"
+    ],
+    [
+      1292947,
+      "Justice Spaulders"
+    ],
+    [
+      1292948,
+      "Justice Greaves"
+    ],
+    [
+      1292949,
+      "Justice Legplates"
+    ],
+    [
+      1292950,
+      "Justice Gloves"
+    ],
+    [
+      1292951,
+      "Justice Epaulets"
+    ],
+    [
+      1292952,
+      "Justice Treads"
+    ],
+    [
+      1292953,
+      "Justice Legguards"
+    ],
+    [
+      1292954,
+      "Justice Handguards"
+    ],
+    [
+      1292955,
+      "Justice Pauldrons"
+    ],
+    [
+      1292956,
+      "Justice Sabatons"
+    ],
+    [
+      1292981,
+      "Legplates of Glory"
+    ],
+    [
+      1292982,
+      "Gauntlets of Glory"
+    ],
+    [
+      1292983,
+      "Shoulders of Glory"
+    ],
+    [
+      1292984,
+      "Greaves of Glory"
+    ],
+    [
+      1292985,
+      "Legguards of Glory"
+    ],
+    [
+      1292986,
+      "Handguards of Glory"
+    ],
+    [
+      1292987,
+      "Pauldrons of Glory"
+    ],
+    [
+      1292988,
+      "Sabatons of Glory"
+    ],
+    [
+      1306533,
+      "Ironwood Blade"
+    ],
+    [
+      1306534,
+      "Forest Defender's Axe"
+    ],
+    [
+      1306535,
+      "Greenhammer"
+    ],
+    [
+      1306536,
+      "Evergreen Shield"
+    ],
+    [
+      1306537,
+      "Depleted Thorium Sabatons"
+    ],
+    [
+      1306538,
+      "Heavy Thorium Gauntlets"
+    ],
+    [
+      1306539,
+      "Azerothium Legplates"
+    ],
+    [
+      1317962,
+      "Cracked Blacksmith Hammer"
+    ],
+    [
+      1317963,
+      "Mithril Blacksmith Hammer"
+    ],
+    [
+      1317964,
+      "Arcanite Blacksmith Hammer"
+    ]
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "coverage": {
+    "cap": 300,
+    "floor": 0.75,
+    "gap": [
+      185,
+      299
+    ],
+    "inGame": 9,
+    "knownSource": 4,
+    "knownSourceShare": 0.4444,
+    "maxGap": 115,
+    "maxGapAllowed": 10,
+    "passes": false,
+    "share": 0.4444,
+    "shipped": 4
+  },
+  "excluded": [
+    [
+      2657,
+      "Smelt Copper",
+      "no wiki row"
+    ],
+    [
+      3304,
+      "Smelt Tin",
+      "no wiki row"
+    ],
+    [
+      3569,
+      "Smelt Steel",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      10097,
+      "Smelt Mithril",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      10098,
+      "Smelt Truesilver",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      14891,
+      "Smelt Dark Iron",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      16153,
+      "Smelt Thorium",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      22967,
+      "Smelt Elementium",
+      "no wiki row"
+    ],
+    [
+      1213638,
+      "Smelt Obsidian-Infused Thorium Bar",
+      "no wiki row"
+    ],
+    [
+      1230161,
+      "Lodestone",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1249637,
+      "Smelt Azerothium",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1262975,
+      "Rock Garden",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263071,
+      "Molten Foundry",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1306126,
+      "Smelt Heavy Thorium",
+      "no wiki row"
+    ]
+  ],
+  "heldBack": true,
+  "orangeFrom": {
+    "CROSS": 4
+  },
+  "sourceTypes": {
+    "TRAINER": 4
+  },
+  "unknownSource": []
+}

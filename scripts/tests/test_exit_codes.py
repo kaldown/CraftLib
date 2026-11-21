@@ -21,7 +21,8 @@ BROKEN = '{"recipes": {"1": '   # truncated write
 
 
 def _tree(tmp_path, broken_folder):
-    for folder in ("Vanilla", "TBC", "WotLK", "SoD"):
+    # Every shipped bucket: the unrestricted audit requires each one's folder.
+    for folder in ("Vanilla", "TBC", "WotLK", "SoD", "Forever"):
         d = tmp_path / folder
         d.mkdir(parents=True, exist_ok=True)
         (d / "Tailoring.json").write_text(json.dumps({"recipes": {}}), encoding="utf-8")

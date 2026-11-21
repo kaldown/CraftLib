@@ -1,0 +1,4128 @@
+{
+  "profession": "engineering",
+  "version": "1.60.1.71037",
+  "generated": "2026-11-21",
+  "recipes": {
+    "3918": {
+      "name": "Rough Blasting Powder",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "3919": {
+      "name": "Rough Dynamite",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "3920": {
+      "name": "Crafted Light Shot",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "3922": {
+      "name": "Handful of Copper Bolts",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 30,
+        "yellow": 45,
+        "green": 52,
+        "gray": 60,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3923": {
+      "name": "Rough Copper Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 30,
+        "yellow": 60,
+        "green": 75,
+        "gray": 90,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3924": {
+      "name": "Copper Tube",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 80,
+        "green": 95,
+        "gray": 110,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3925": {
+      "name": "Rough Boomstick",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 80,
+        "green": 95,
+        "gray": 110,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3977": {
+      "name": "Crude Scope",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 90,
+        "green": 105,
+        "gray": 120,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3973": {
+      "name": "Silver Contact",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 110,
+        "green": 125,
+        "gray": 140,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3926": {
+      "name": "Copper Modulator",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 65,
+        "yellow": 95,
+        "green": 110,
+        "gray": 125,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3928": {
+      "name": "Mechanical Squirrel",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 4408
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 105,
+        "green": 120,
+        "gray": 135,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3929": {
+      "name": "Coarse Blasting Powder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 85,
+        "green": 90,
+        "gray": 95,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3930": {
+      "name": "Crafted Heavy Shot",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 85,
+        "green": 90,
+        "gray": 95,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3931": {
+      "name": "Coarse Dynamite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 90,
+        "green": 97,
+        "gray": 105,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3932": {
+      "name": "Target Dummy",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 115,
+        "green": 130,
+        "gray": 145,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3933": {
+      "name": "Small Seaforium Charge",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 4409
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 145,
+        "gray": 160,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3934": {
+      "name": "Flying Tiger Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 145,
+        "gray": 160,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3936": {
+      "name": "Deadly Blunderbuss",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 130,
+        "green": 142,
+        "gray": 155,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3937": {
+      "name": "Large Copper Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 105,
+        "green": 130,
+        "gray": 155,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3938": {
+      "name": "Bronze Tube",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 105,
+        "green": 130,
+        "gray": 155,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3978": {
+      "name": "Standard Scope",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 135,
+        "green": 147,
+        "gray": 160,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3939": {
+      "name": "Lovingly Crafted Boomstick",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13309,
+        "cost": 1000
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 145,
+        "green": 157,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3940": {
+      "name": "Shadow Goggles",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 4410
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 145,
+        "green": 157,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3941": {
+      "name": "Small Bronze Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 120,
+        "green": 145,
+        "gray": 170,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3942": {
+      "name": "Whirring Bronze Gizmo",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 150,
+        "gray": 175,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3944": {
+      "name": "Flame Deflector",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 4411
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 150,
+        "gray": 175,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3945": {
+      "name": "Heavy Blasting Powder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 135,
+        "gray": 145,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3946": {
+      "name": "Heavy Dynamite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 135,
+        "gray": 145,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3947": {
+      "name": "Crafted Solid Shot",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 135,
+        "gray": 145,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3949": {
+      "name": "Silver-plated Shotgun",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 155,
+        "green": 167,
+        "gray": 180,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3950": {
+      "name": "Big Bronze Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 140,
+        "green": 165,
+        "gray": 190,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3952": {
+      "name": "Minor Recombobulator",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 14639
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 177,
+        "gray": 190,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3953": {
+      "name": "Bronze Framework",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 145,
+        "green": 170,
+        "gray": 195,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3954": {
+      "name": "Moonsight Rifle",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 4412
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 182,
+        "gray": 195,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3955": {
+      "name": "Explosive Sheep",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3956": {
+      "name": "Green Tinted Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3957": {
+      "name": "Ice Deflector",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13308,
+        "cost": 1800
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 175,
+        "green": 185,
+        "gray": 195,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3958": {
+      "name": "Iron Strut",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 160,
+        "green": 170,
+        "gray": 180,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3959": {
+      "name": "Discombobulator Ray",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 4413
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 180,
+        "green": 190,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3960": {
+      "name": "Portable Bronze Mortar",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 4414
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 185,
+        "green": 195,
+        "gray": 205,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3961": {
+      "name": "Gyrochronatom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 170,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3962": {
+      "name": "Iron Grenade",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3963": {
+      "name": "Compact Harvest Reaper Kit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3979": {
+      "name": "Accurate Scope",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13310,
+        "cost": 2000
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3965": {
+      "name": "Advanced Target Dummy",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 185,
+        "green": 205,
+        "gray": 225,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3966": {
+      "name": "Craftsman's Monocle",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 4415
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 205,
+        "green": 215,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3967": {
+      "name": "Big Iron Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3968": {
+      "name": "Goblin Land Mine",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 4416
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 225,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3969": {
+      "name": "Mechanical Dragonling",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13311,
+        "cost": 10000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 230,
+        "gray": 240,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3971": {
+      "name": "Gnomish Cloaking Device",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 7742
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 230,
+        "gray": 240,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3972": {
+      "name": "Large Seaforium Charge",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 4417
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6458": {
+      "name": "Ornate Spyglass",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 135,
+        "yellow": 160,
+        "green": 172,
+        "gray": 185,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7430": {
+      "name": "Arclight Spanner",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 70,
+        "green": 80,
+        "gray": 90,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "8243": {
+      "name": "Flash Bomb",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6672
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 185,
+        "green": 205,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "8334": {
+      "name": "Practice Lock",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 115,
+        "green": 122,
+        "gray": 130,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "8339": {
+      "name": "EZ-Thro Dynamite",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6716
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 115,
+        "green": 122,
+        "gray": 130,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "8895": {
+      "name": "Goblin Rocket Boots",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 7192
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9269": {
+      "name": "Gnomish Universal Remote",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 7560
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 150,
+        "green": 162,
+        "gray": 175,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9271": {
+      "name": "Aquadynamic Fish Attractor",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 160,
+        "gray": 170,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "9273": {
+      "name": "Goblin Jumper Cables",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 165 above yellow 160",
+        "itemId": 7561
+      },
+      "forever": {
+        "notes": [
+          "teaching item 7561 RequiredSkillRank 165 above yellow 160 ignored"
+        ]
+      }
+    },
+    "12584": {
+      "name": "Gold Power Core",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12585": {
+      "name": "Solid Blasting Powder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 185,
+        "gray": 195,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12586": {
+      "name": "Solid Dynamite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 185,
+        "gray": 195,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12587": {
+      "name": "Bright-Eye Goggles",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 10601
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 205,
+        "gray": 215,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "12590": {
+      "name": "Gyromatic Micro-Adjustor",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12589": {
+      "name": "Mithril Tube",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12591": {
+      "name": "Unstable Trigger",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12594": {
+      "name": "Fire Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12595": {
+      "name": "Mithril Blunderbuss",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12596": {
+      "name": "Hi-Impact Mithril Slugs",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 210,
+        "green": 230,
+        "gray": 250,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12597": {
+      "name": "Deadly Scope",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 10602,
+        "cost": 3000
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "12599": {
+      "name": "Mithril Casing",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12603": {
+      "name": "Mithril Frag Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12607": {
+      "name": "Catseye Ultra Goggles",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 10603
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 250,
+        "gray": 260,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "12614": {
+      "name": "Mithril Heavy-bore Rifle",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 10604
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 250,
+        "gray": 260,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "12615": {
+      "name": "Spellpower Goggles Xtreme",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 10605
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "12616": {
+      "name": "Parachute Cloak",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 10606
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "12617": {
+      "name": "Deepdive Helmet",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 10607,
+        "cost": 3600
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 260,
+        "gray": 270,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "12618": {
+      "name": "Rose Colored Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 260,
+        "gray": 270,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12619": {
+      "name": "Hi-Explosive Bomb",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 235,
+        "green": 255,
+        "gray": 275,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12620": {
+      "name": "Sniper Scope",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 10608
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "12621": {
+      "name": "Mithril Gyro-Shot",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 245,
+        "green": 265,
+        "gray": 285,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12622": {
+      "name": "Green Lens",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 275,
+        "gray": 285,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12624": {
+      "name": "Mithril Mechanical Dragonling",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 10609,
+        "cost": 4000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "12715": {
+      "name": "Goblin Rocket Fuel Recipe",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "12716": {
+      "name": "Goblin Mortar",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'goblin mortar' matches spells 12716, 13240"
+      }
+    },
+    "12717": {
+      "name": "Goblin Mining Helmet",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 221336
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki says vendor; price not in DB2 or wiki"
+        ]
+      }
+    },
+    "12718": {
+      "name": "Goblin Construction Helmet",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12760": {
+      "name": "Goblin Sapper Charge",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 205,
+        "green": 225,
+        "gray": 245,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12719": {
+      "name": "Explosive Arrow",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "12720": {
+      "name": "Goblin \"Boom\" Box",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "12722": {
+      "name": "Goblin Radio",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "12755": {
+      "name": "Goblin Bomb Dispenser",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12754": {
+      "name": "The Big One",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 235,
+        "green": 255,
+        "gray": 275,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12759": {
+      "name": "Gnomish Death Ray",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12758": {
+      "name": "Goblin Rocket Helmet",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 275,
+        "gray": 285,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12895": {
+      "name": "Inlaid Mithril Cylinder Plans",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "12897": {
+      "name": "Gnomish Goggles",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12899": {
+      "name": "Gnomish Shrink Ray",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 235,
+        "gray": 245,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12900": {
+      "name": "Mobile Alarm",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "12902": {
+      "name": "Gnomish Net-o-Matic Projector",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 240,
+        "gray": 250,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12903": {
+      "name": "Gnomish Harm Prevention Belt",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 235,
+        "green": 245,
+        "gray": 255,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12904": {
+      "name": "Gnomish Ham Radio",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "12905": {
+      "name": "Gnomish Rocket Boots",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12906": {
+      "name": "Gnomish Battle Chicken",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 260,
+        "gray": 270,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12907": {
+      "name": "Gnomish Mind Control Cap",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 255,
+        "green": 265,
+        "gray": 275,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "12908": {
+      "name": "Goblin Dragon Gun",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13240": {
+      "name": "The Mortar: Reloaded",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "15255": {
+      "name": "Mechanical Repair Kit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "15633": {
+      "name": "Lil' Smoky",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 11827
+      }
+    },
+    "15628": {
+      "name": "Pet Bombling",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 11828
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 205,
+        "green": 207,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19567": {
+      "name": "Salt Shaker",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "19788": {
+      "name": "Dense Blasting Powder",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "19790": {
+      "name": "Thorium Grenade",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16041,
+        "cost": 12000
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19792": {
+      "name": "Thorium Rifle",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16043
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19791": {
+      "name": "Thorium Widget",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16042,
+        "cost": 12000
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19793": {
+      "name": "Lifelike Mechanical Toad",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16044
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19794": {
+      "name": "Spellpower Goggles Xtreme Plus",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16045
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19796": {
+      "name": "Dark Iron Rifle",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16048
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19814": {
+      "name": "Masterwork Target Dummy",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16046,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19795": {
+      "name": "Thorium Tube",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16047,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19815": {
+      "name": "Delicate Arcanite Converter",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16050,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 315,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19799": {
+      "name": "Dark Iron Bomb",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16049
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 315,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19800": {
+      "name": "Thorium Shells",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16051
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 315,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19819": {
+      "name": "Voice Amplification Modulator",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16052
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19831": {
+      "name": "Arcane Bomb",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16055
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19830": {
+      "name": "Arcanite Dragonling",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16054
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19825": {
+      "name": "Master Engineer's Goggles",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16053
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "19833": {
+      "name": "Flawless Arcanite Rifle",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16056
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "21940": {
+      "name": "Snowmaster 9000",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 17720
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "22704": {
+      "name": "Field Repair Bot 74A",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 18235
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "22793": {
+      "name": "Biznicks 247x128 Accurascope",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 18290
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "22795": {
+      "name": "Core Marksman Rifle",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 18292
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "22797": {
+      "name": "Force Reactive Disk",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 18291
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23066": {
+      "name": "Red Firework",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 18647,
+        "cost": 1800
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 162,
+        "gray": 175,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23068": {
+      "name": "Green Firework",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 18648,
+        "cost": 1800
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 162,
+        "gray": 175,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23067": {
+      "name": "Blue Firework",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 18649,
+        "cost": 1800
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 162,
+        "gray": 175,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23069": {
+      "name": "EZ-Thro Dynamite II",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 18650,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23070": {
+      "name": "Dense Dynamite",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 260,
+        "gray": 270,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "23071": {
+      "name": "Truesilver Transformer",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 18651,
+        "cost": 12000
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 270,
+        "green": 275,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23077": {
+      "name": "Gyrofreeze Ice Reflector",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 18652,
+        "cost": 12000
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23078": {
+      "name": "Goblin Jumper Cables XL",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 18653
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23079": {
+      "name": "Major Recombobulator",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 18655
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 285,
+        "green": 290,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23080": {
+      "name": "Powerful Seaforium Charge",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 18656,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23081": {
+      "name": "Hyper-Radiant Flame Reflector",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 18657
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23082": {
+      "name": "Ultra-Flash Shadow Reflector",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 18658
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23096": {
+      "name": "Alarm-O-Bot",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 18654
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 275,
+        "green": 280,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23129": {
+      "name": "World Enlarger",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 18661
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 260,
+        "green": 265,
+        "gray": 270,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23489": {
+      "name": "Ultrasafe Transporter - Gadgetzan",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "23486": {
+      "name": "Dimensional Ripper - Everlook",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "23507": {
+      "name": "Snake Burst Firework",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 19027,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 260,
+        "gray": 270,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24356": {
+      "name": "Bloodvine Goggles",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 20000,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Honored",
+        "cost": 120000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24357": {
+      "name": "Bloodvine Lens",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 20001,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Friendly",
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26011": {
+      "name": "Tranquil Mechanical Yeti",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "26416": {
+      "name": "Small Blue Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21724
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 137,
+        "gray": 150,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26417": {
+      "name": "Small Green Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21725
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 137,
+        "gray": 150,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26418": {
+      "name": "Small Red Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21726
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 137,
+        "gray": 150,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26420": {
+      "name": "Large Blue Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21727
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26421": {
+      "name": "Large Green Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21728
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26422": {
+      "name": "Large Red Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21729
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26423": {
+      "name": "Blue Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21730
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26424": {
+      "name": "Green Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21731
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26425": {
+      "name": "Red Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21732
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26426": {
+      "name": "Large Blue Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21733
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 280,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26427": {
+      "name": "Large Green Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21734
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 280,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26428": {
+      "name": "Large Red Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 21735
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 280,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26442": {
+      "name": "Firework Launcher",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 21738
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "26443": {
+      "name": "Firework Cluster Launcher",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 21737
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "28327": {
+      "name": "Steam Tonk Controller",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 22729
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 305,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "424641": {
+      "name": "Shredder Autosalvage Unit",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 210178
+      },
+      "difficulty": {
+        "orange": 135,
+        "yellow": 135,
+        "green": 140,
+        "gray": 145,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "431362": {
+      "name": "Soul Vessel",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 212230,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 205,
+        "green": 210,
+        "gray": 215,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "435956": {
+      "name": "Polished Truesilver Gears",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 215429,
+        "cost": 25000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "435966": {
+      "name": "Ez-Thro Radiation Bomb",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 215432,
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 230,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "435958": {
+      "name": "Whirling Truesilver Gearwall",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 215153,
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 232,
+        "gray": 240,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "435964": {
+      "name": "High-Yield Radiation Bomb",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 215431,
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 230,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "435960": {
+      "name": "Hyperconductive Goldwap",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 215156,
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 230,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "446236": {
+      "name": "Void-Powered Invoker's Vambraces",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "446238": {
+      "name": "Void-Powered Protector's Vambraces",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "446237": {
+      "name": "Void-Powered Slayer's Vambraces",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "461710": {
+      "name": "Fiery Core Sharpshooter Rifle",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213573": {
+      "name": "Arcane Megabomb",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213576": {
+      "name": "The Fumigator",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213578": {
+      "name": "Obsidian Bomb",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213586": {
+      "name": "G00 DV-1B3 Generator",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213588": {
+      "name": "Tuned Force Reactive Disk",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213646": {
+      "name": "Obsidian Blasting Powder",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1214145": {
+      "name": "Obsidian Shotgun",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1217207": {
+      "name": "Obsidian Scope",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1221012": {
+      "name": "Creepy Censor Sensors",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 236872
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 275,
+        "green": 277,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1226206": {
+      "name": "Tinkerbox",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1226207": {
+      "name": "Tinkerbox: Teleport",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1226208": {
+      "name": "Tinkerbox: Nitro Boosts",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1226209": {
+      "name": "Tinkerbox: Magnetic Displacement",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1226210": {
+      "name": "Tinker: Teleport",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1226211": {
+      "name": "Tinker: Nitro Boosts",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1226212": {
+      "name": "Tinker: Magnetic Displacement",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1226213": {
+      "name": "Semisafe Transporter: New Avalon",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 238789
+      }
+    },
+    "1228088": {
+      "name": "Pop-Up Shrub",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 239222
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 255,
+        "green": 257,
+        "gray": 260,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1230656": {
+      "name": "Reagent Bot",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "1249634": {
+      "name": "Sandpaper",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 130,
+        "green": 142,
+        "gray": 155,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "1266893": {
+      "name": "SAF-T Tabs",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264201,
+        "cost": 625
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 25,
+        "green": 27,
+        "gray": 30,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266905": {
+      "name": "SAF-T Dynamite",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264202,
+        "cost": 625
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 25,
+        "green": 30,
+        "gray": 35,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266906": {
+      "name": "SAF-T Copper Bomb",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264203,
+        "cost": 1375
+      },
+      "difficulty": {
+        "orange": 55,
+        "yellow": 55,
+        "green": 60,
+        "gray": 65,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266907": {
+      "name": "EZ-Thro Wrap",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264204,
+        "cost": 2500
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 100,
+        "green": 102,
+        "gray": 105,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266908": {
+      "name": "EZ-Thro Copper Bomb XL",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264205,
+        "cost": 3250
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 130,
+        "green": 155,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266909": {
+      "name": "No Slip SAF-T Padding",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264206,
+        "cost": 3625
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 145,
+        "green": 147,
+        "gray": 150,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266910": {
+      "name": "SAF-T Bronze Bomb",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 264207
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 145,
+        "green": 170,
+        "gray": 195,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266911": {
+      "name": "SAF-T Jumbo Dynamite",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264208
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 160,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266912": {
+      "name": "SAF-T Bell",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264209,
+        "cost": 4375
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 177,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266913": {
+      "name": "Shafety Sheep",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264210
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 212,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266914": {
+      "name": "EZ-Thro Fireproof Fuse",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264211,
+        "cost": 4750
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 190,
+        "green": 192,
+        "gray": 195,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266915": {
+      "name": "EZ-Thro Bronze Mortar",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264212
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 210,
+        "green": 220,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266916": {
+      "name": "EZ-Thro Grenade",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264213
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266917": {
+      "name": "SAF-T Casing",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264214
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 215,
+        "green": 217,
+        "gray": 220,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266918": {
+      "name": "SAF-T Bomb",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264215
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 215,
+        "green": 230,
+        "gray": 245,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266919": {
+      "name": "Emergency Field Cloak",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264216,
+        "cost": 5625
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 255,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266920": {
+      "name": "Compact Critter Carrier",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264217,
+        "cost": 5625
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 230,
+        "green": 232,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266921": {
+      "name": "EZ-Thro Tru-Trigger",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264218
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 240,
+        "green": 242,
+        "gray": 245,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266922": {
+      "name": "Tru-Trigger Frag Bomb",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264219
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266923": {
+      "name": "SAF-T Disposable Parachute",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264220,
+        "cost": 6250
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 280,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266924": {
+      "name": "Gnomish Army Knife",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264221,
+        "cost": 6250
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 252,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266925": {
+      "name": "Loot-A-Rang",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264222,
+        "cost": 6875
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 277,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266926": {
+      "name": "SAF-T Tube",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264223
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 277,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266927": {
+      "name": "SAF-T Clever Dynamite",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264224
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 285,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266928": {
+      "name": "EZ-Thro Shell",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264225
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 285,
+        "green": 287,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266929": {
+      "name": "EZ-Thro Thorium Grenade",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264226
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266930": {
+      "name": "EZ-Thro Dark Bomb",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264227
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266931": {
+      "name": "EZ-Thro Mana Bomb",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264228
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266932": {
+      "name": "EZ-Thro Field Transporter: Gadgetzan",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264229
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266933": {
+      "name": "SAF-T Emergency Ripper: Everlook",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264230
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266934": {
+      "name": "EZ and SAF Field Transporter: Mt. Hyjal",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264231
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266935": {
+      "name": "Ultrasafe Rechargeable Battery",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264232,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266936": {
+      "name": "Dimensional Transporter - Mt. Hyjal",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264233,
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266937": {
+      "name": "Gnomish Poultryizer",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264234,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266938": {
+      "name": "Ultralight Goblin Glider",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264235,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266939": {
+      "name": "Gnomish Weather Machine",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264236
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266940": {
+      "name": "Stealthman 52",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 264237,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266941": {
+      "name": "SAF-T Nitro Boosts",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264238
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266942": {
+      "name": "EZ-Thro Magnetic Displacer",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264239
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1266943": {
+      "name": "SAF-T Teleport",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 264240
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 330,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1263034": {
+      "name": "Repair Bot",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273092
+      }
+    },
+    "1263083": {
+      "name": "Anarchist's Workbench",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273117
+      }
+    },
+    "1286796": {
+      "name": "Hoof-Shaped Foot Pedal",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 269903
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 150,
+        "green": 155,
+        "gray": 160,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1286792": {
+      "name": "Centaur Banner Deployment Device",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 269901
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 190,
+        "green": 197,
+        "gray": 205,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1293088": {
+      "name": "9-60 Battery Pack",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "drop per wiki but DB2 has no teaching item"
+      }
+    },
+    "1293849": {
+      "name": "Swiftfeather Arrow",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274389
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 315,
+        "gray": 320,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1293850": {
+      "name": "Swiftstrike Shot",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274390
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 315,
+        "gray": 320,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1302161": {
+      "name": "Harvester Override Signalcaster",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 277470
+      },
+      "difficulty": {
+        "orange": 65,
+        "yellow": 65,
+        "green": 72,
+        "gray": 80,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306546": {
+      "name": "SAF-T Ultra Precision Scope",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279321
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306547": {
+      "name": "Hyper Deluxe Sniper Rifle Mk XVII",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279322
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1308178": {
+      "name": "Whimsical Waistwrap",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 280321,
+        "cost": 4375
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 180,
+        "green": 182,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1308179": {
+      "name": "Gizmo Girdle",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 280322,
+        "cost": 4375
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 180,
+        "green": 182,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1308180": {
+      "name": "Clanking Cord",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 280323,
+        "cost": 4375
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 180,
+        "green": 182,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1308182": {
+      "name": "Serrated Strap",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 280324
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 180,
+        "green": 182,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1308183": {
+      "name": "Floppy Goggles",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 280325,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 205,
+        "green": 207,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1308184": {
+      "name": "Bent Goggles",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 280326,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 205,
+        "green": 207,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1308185": {
+      "name": "Stuckbutton Goggles",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 280327,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 205,
+        "green": 207,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1308186": {
+      "name": "Dented Goggles",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 280328,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 205,
+        "green": 207,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1317270": {
+      "name": "Unsanctified Grenade",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 284870
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 290,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1317958": {
+      "name": "Satchel of Copper Bombs",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 285285,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 90,
+        "green": 92,
+        "gray": 95,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1317959": {
+      "name": "Satchel of Bronze Bombs",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 285286,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 170,
+        "green": 172,
+        "gray": 175,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1317960": {
+      "name": "Satchel of Iron Bombs",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 285287,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 235,
+        "green": 237,
+        "gray": 240,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1317961": {
+      "name": "Satchel of Dark Iron Bombs",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 285288,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 290,
+        "green": 292,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319154": {
+      "name": "Small Purple Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286076
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 137,
+        "gray": 150,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319155": {
+      "name": "Small White Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286077
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 137,
+        "gray": 150,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319156": {
+      "name": "Small Yellow Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286078
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 125,
+        "green": 137,
+        "gray": 150,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319157": {
+      "name": "Large Purple Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286079
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319158": {
+      "name": "Large White Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286080
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319159": {
+      "name": "Large Yellow Rocket",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286081
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 175,
+        "green": 187,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319160": {
+      "name": "Purple Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286082
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319161": {
+      "name": "White Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286083
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319162": {
+      "name": "Yellow Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286084
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 237,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319163": {
+      "name": "Large Purple Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286085
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 280,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319164": {
+      "name": "Large White Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286086
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 280,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319165": {
+      "name": "Large Yellow Rocket Cluster",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286087
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 275,
+        "green": 280,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    }
+  }
+}

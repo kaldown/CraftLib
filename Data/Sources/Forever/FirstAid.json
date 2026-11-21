@@ -1,0 +1,487 @@
+{
+  "profession": "firstAid",
+  "version": "1.60.1.71037",
+  "generated": "2026-11-21",
+  "recipes": {
+    "3275": {
+      "name": "Linen Bandage",
+      "source": {
+        "type": "STARTER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 30,
+        "green": 45,
+        "gray": 60,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3276": {
+      "name": "Heavy Linen Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 50,
+        "green": 75,
+        "gray": 100,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3277": {
+      "name": "Wool Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 80,
+        "green": 115,
+        "gray": 150,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "3278": {
+      "name": "Heavy Wool Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 115,
+        "yellow": 115,
+        "green": 150,
+        "gray": 185,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7928": {
+      "name": "Silk Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 150,
+        "green": 180,
+        "gray": 210,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7929": {
+      "name": "Heavy Silk Bandage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16112,
+        "cost": 2200
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 180,
+        "green": 210,
+        "gray": 240,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7934": {
+      "name": "Anti-Venom",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 80,
+        "green": 115,
+        "gray": 150,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7935": {
+      "name": "Strong Anti-Venom",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6454
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 130,
+        "green": 165,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "10840": {
+      "name": "Mageweave Bandage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16113,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 210,
+        "green": 240,
+        "gray": 270,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "10841": {
+      "name": "Heavy Mageweave Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 240,
+        "green": 270,
+        "gray": 300,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "18629": {
+      "name": "Runecloth Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 260,
+        "green": 290,
+        "gray": 320,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "18630": {
+      "name": "Heavy Runecloth Bandage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 290,
+        "green": 320,
+        "gray": 350,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "23787": {
+      "name": "Powerful Anti-Venom",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19442,
+        "factionId": 529,
+        "factionName": "Argent Dawn",
+        "level": "Honored",
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 300,
+        "green": 330,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "30021": {
+      "name": "Crystal Infused Bandage",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "470349": {
+      "name": "Dense Runecloth Bandage",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 232434,
+        "cost": 110000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 315,
+        "green": 327,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1230117": {
+      "name": "First Aid Kit",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "1244431": {
+      "name": "Minor Healing Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 55,
+        "green": 75,
+        "gray": 95,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "1244432": {
+      "name": "Lesser Healing Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 55,
+        "yellow": 85,
+        "green": 105,
+        "gray": 125,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "1244433": {
+      "name": "Healing Potion",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 135,
+        "green": 155,
+        "gray": 175,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "1244434": {
+      "name": "Greater Healing Potion",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 255723
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1244435": {
+      "name": "Superior Healing Potion",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 255725
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1244436": {
+      "name": "Major Healing Potion",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 255729,
+        "cost": 80000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 290,
+        "green": 310,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1259349": {
+      "name": "Surgical Tourniquet",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 255730
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 280,
+        "green": 310,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1259348": {
+      "name": "Leather Tourniquet",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 255726
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 250,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1259347": {
+      "name": "Woolen Tourniquet",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 120,
+        "green": 155,
+        "gray": 190,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "1259345": {
+      "name": "Powerful Poultice",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 255731
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 295,
+        "green": 325,
+        "gray": 355,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1259344": {
+      "name": "Superior Poultice",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 255727
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 225,
+        "green": 255,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1259343": {
+      "name": "Clever Poultice",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 255724
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 160,
+        "green": 190,
+        "gray": 220,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1259342": {
+      "name": "Simple Poultice",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 90,
+        "green": 125,
+        "gray": 160,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "1259341": {
+      "name": "Potent Anti-Venom",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 255728
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 230,
+        "green": 260,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1262996": {
+      "name": "Toxin Study",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273105
+      }
+    },
+    "1263001": {
+      "name": "Plague Doctor's Laboratory",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273118
+      }
+    }
+  }
+}

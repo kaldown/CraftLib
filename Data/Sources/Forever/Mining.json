@@ -1,0 +1,215 @@
+{
+  "profession": "mining",
+  "version": "1.60.1.71037",
+  "generated": "2026-11-21",
+  "recipes": {
+    "2658": {
+      "name": "Smelt Silver",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "CROSS"
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 100,
+        "green": 112,
+        "gray": 125,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "trainer per SoD (WOWHEAD); no wiki row"
+        ]
+      }
+    },
+    "2659": {
+      "name": "Smelt Bronze",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "CROSS"
+      },
+      "difficulty": {
+        "orange": 65,
+        "yellow": 65,
+        "green": 90,
+        "gray": 115,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "trainer per SoD (WOWHEAD); no wiki row"
+        ]
+      }
+    },
+    "3308": {
+      "name": "Smelt Gold",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "CROSS"
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 170,
+        "green": 177,
+        "gray": 185,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "trainer per SoD (WOWHEAD); no wiki row"
+        ]
+      }
+    },
+    "3307": {
+      "name": "Smelt Iron",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "CROSS"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 130,
+        "green": 135,
+        "gray": 140,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "trainer per SoD (WOWHEAD); no wiki row"
+        ]
+      }
+    },
+    "3304": {
+      "name": "Smelt Tin",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "3569": {
+      "name": "Smelt Steel",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "2657": {
+      "name": "Smelt Copper",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "10098": {
+      "name": "Smelt Truesilver",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "10097": {
+      "name": "Smelt Mithril",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "14891": {
+      "name": "Smelt Dark Iron",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "16153": {
+      "name": "Smelt Thorium",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "22967": {
+      "name": "Smelt Elementium",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "1213638": {
+      "name": "Smelt Obsidian-Infused Thorium Bar",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "1230161": {
+      "name": "Lodestone",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "1262975": {
+      "name": "Rock Garden",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273097
+      }
+    },
+    "1263071": {
+      "name": "Molten Foundry",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273122
+      }
+    },
+    "1306126": {
+      "name": "Smelt Heavy Thorium",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "1249637": {
+      "name": "Smelt Azerothium",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    }
+  }
+}

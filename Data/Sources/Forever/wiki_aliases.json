@@ -1,0 +1,27 @@
+{
+  "_doc": "Spell id -> the Forever wiki row (key = the row's item link, skill = its Skill cell) for a recipe whose wiki row names the same item differently: a wiki typo or disambiguator, or a Classic item name the game has since changed. Each alias is backed by DB2 facts of build 1.60.1.71037: the teaching item's RequiredSkillRank equals the row's skill, or the created item id carries the row's name in the Vanilla build 1.15.8.67156. Not used to choose between an old and a revised spell; that is left to an in-game capture.",
+  "aliases": {
+    "2329": {"key": "Elixir of Lion's Strength", "skill": 15,
+             "_doc": "item 2454 is Elixir of Lion's Strength in 1.15.8, renamed Elixir of Minor Strength; no teaching item (trainer)"},
+    "3188": {"key": "Elixir of Ogre's Strength", "skill": 150,
+             "_doc": "teaching item 6211 Recipe: Elixir of Ogre's Strength, RequiredSkillRank 150; item now Elixir of Ogre Strength"},
+    "3453": {"key": "Elixir of Detect Lesser Invisibility", "skill": 195,
+             "_doc": "teaching item 3832 Recipe: Elixir of Detect Lesser Invisibility, RequiredSkillRank 195; item now Draught of Detect Lesser Invisibility"},
+    "11459": {"key": "Philosopher's Stone (trinket)", "skill": 225,
+              "_doc": "wiki disambiguator '(trinket)'; teaching item 9303 Recipe: Philosopher's Stone, RequiredSkillRank 225"},
+    "11468": {"key": "Elixir of Dream Vision", "skill": 240,
+              "_doc": "item 9197 is Elixir of Dream Vision in 1.15.8, now Draught of Dream Vision; teaching item 9297 RequiredSkillRank 240"},
+    "11472": {"key": "Elixir of Giants", "skill": 245,
+              "_doc": "teaching item 9298 Recipe: Elixir of Giants, RequiredSkillRank 245; item 9206 now Elixir of Greater Strength"},
+    "11477": {"key": "Elixir of Demonslaying", "skill": 250,
+              "_doc": "item 9224 is Elixir of Demonslaying in 1.15.8, now Potion of Demon Slaying; teaching item 9300 RequiredSkillRank 250"},
+    "20013": {"key": "Enchant Gloves- Greater Strength", "skill": 295,
+              "_doc": "wiki typo (missing space); teaching item 16244 Formula: Enchant Gloves - Greater Strength, RequiredSkillRank 295"},
+    "471400": {"key": "Magnificant Trollshine", "skill": 300,
+               "_doc": "wiki typo (Magnificant); teaching item 232610 Formula: Magnificent Trollshine, RequiredSkillRank 300"},
+    "1248607": {"key": "Enchant 2H Weapon - Might Spell Power", "skill": 300,
+                "_doc": "wiki typo (Might); teaching item 249525 Formula: Enchant 2H Weapon - Mighty Spell Power, RequiredSkillRank 300"},
+    "21144": {"key": "Winter Veil Egg Nog", "skill": 35,
+              "_doc": "wiki article title for the Egg Nog item; teaching item 17201 Recipe: Egg Nog, RequiredSkillRank 35"}
+  }
+}

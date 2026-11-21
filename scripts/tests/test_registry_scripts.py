@@ -120,7 +120,8 @@ def test_audit_unknown_folder_exits_2(tmp_path, capsys):
 
 
 def _full_tree(tmp_path, sod_recipes):
-    for folder in ("Vanilla", "TBC", "WotLK"):
+    # Every shipped bucket: the unrestricted audit requires each one's folder.
+    for folder in ("Vanilla", "TBC", "WotLK", "Forever"):
         _w(tmp_path / folder / "Alchemy.json", {})
     _w(tmp_path / "SoD" / "Alchemy.json", sod_recipes)
     (tmp_path / "sod_keep_trainer.json").write_text(json.dumps({"keepTrainer": []}))

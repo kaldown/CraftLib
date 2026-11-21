@@ -1,0 +1,2132 @@
+{
+  "profession": "cooking",
+  "version": "1.60.1.71037",
+  "generated": "2026-11-21",
+  "recipes": {
+    "2538": {
+      "name": "Charred Wolf Meat",
+      "source": {
+        "type": "STARTER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2539": {
+      "name": "Spiced Wolf Meat",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 10,
+        "yellow": 50,
+        "green": 70,
+        "gray": 90,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "2540": {
+      "name": "Roasted Boar Meat",
+      "source": {
+        "type": "STARTER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "2541": {
+      "name": "Coyote Steak",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "2542": {
+      "name": "Goretusk Liver Pie",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 2697
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "2543": {
+      "name": "Westfall Stew",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 728
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 115,
+        "green": 135,
+        "gray": 155,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "2544": {
+      "name": "Crab Cake",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 115,
+        "green": 135,
+        "gray": 155,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "2545": {
+      "name": "Cooked Crab Claw",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 2698,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 125,
+        "green": 145,
+        "gray": 165,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "2546": {
+      "name": "Dry Pork Ribs",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "2547": {
+      "name": "Redridge Goulash",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 2699
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 135,
+        "green": 155,
+        "gray": 175,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "2548": {
+      "name": "Succulent Pork Ribs",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 2700
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "2549": {
+      "name": "Seasoned Wolf Kabob",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 2701
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "2795": {
+      "name": "Beer Basted Boar Ribs",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 2889
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 60,
+        "green": 80,
+        "gray": 100,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3370": {
+      "name": "Crocolisk Steak",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 3678
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3371": {
+      "name": "Blood Sausage",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 3679
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 100,
+        "green": 120,
+        "gray": 140,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3372": {
+      "name": "Murloc Fin Soup",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 3680
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3373": {
+      "name": "Crocolisk Gumbo",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 3681
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 160,
+        "green": 180,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3376": {
+      "name": "Curiously Tasty Omelet",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 3682
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3377": {
+      "name": "Gooey Spider Cake",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 3683
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3397": {
+      "name": "Big Bear Steak",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 3734
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3398": {
+      "name": "Hot Lion Chops",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 3735
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3399": {
+      "name": "Tasty Lion Steak",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 3736
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "3400": {
+      "name": "Soothing Turtle Bisque",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 3737
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "4094": {
+      "name": "Barbecued Buzzard Wing",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 4609
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6412": {
+      "name": "Kaldorei Spider Kabob",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 5482
+      },
+      "difficulty": {
+        "orange": 10,
+        "yellow": 50,
+        "green": 70,
+        "gray": 90,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6413": {
+      "name": "Scorpid Surprise",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 5483,
+        "cost": 140
+      },
+      "difficulty": {
+        "orange": 20,
+        "yellow": 60,
+        "green": 80,
+        "gray": 100,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6414": {
+      "name": "Roasted Kodo Meat",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 5484,
+        "cost": 240
+      },
+      "difficulty": {
+        "orange": 35,
+        "yellow": 75,
+        "green": 95,
+        "gray": 115,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6415": {
+      "name": "Fillet of Frenzy",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 5485,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6416": {
+      "name": "Strider Stew",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 5486
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6417": {
+      "name": "Dig Rat Stew",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 5487
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6418": {
+      "name": "Crispy Lizard Tail",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 5488,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6419": {
+      "name": "Lean Venison",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 5489,
+        "cost": 1200
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6501": {
+      "name": "Clam Chowder",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 5528,
+        "cost": 800
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "6500": {
+      "name": "Goblin Deviled Clams",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "6499": {
+      "name": "Boiled Clams",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7213": {
+      "name": "Giant Clam Scorcho",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 6039,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7751": {
+      "name": "Brilliant Smallfish",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 6325,
+        "cost": 40
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7752": {
+      "name": "Slitherskin Mackerel",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 6326,
+        "cost": 40
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7753": {
+      "name": "Longjaw Mud Snapper",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 6328,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7754": {
+      "name": "Loch Frenzy Delight",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 6329,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7755": {
+      "name": "Bristle Whisker Catfish",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 6330,
+        "cost": 1200
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7827": {
+      "name": "Rainbow Fin Albacore",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 6368,
+        "cost": 400
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7828": {
+      "name": "Rockscale Cod",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 6369,
+        "cost": 2200
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "8238": {
+      "name": "Savory Deviate Delight",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6661
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 125,
+        "green": 145,
+        "gray": 165,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "8604": {
+      "name": "Herb Baked Egg",
+      "source": {
+        "type": "STARTER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "8607": {
+      "name": "Smoked Bear Meat",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 6892,
+        "cost": 250
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 80,
+        "green": 100,
+        "gray": 120,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "9513": {
+      "name": "Thistle Tea",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 7678
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 100,
+        "green": 120,
+        "gray": 140,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13028": {
+      "name": "Goldthorn Tea",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "15935": {
+      "name": "Crispy Bat Wing",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12226,
+        "cost": 25
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15853": {
+      "name": "Lean Wolf Steak",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12227,
+        "cost": 1600
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15855": {
+      "name": "Roast Raptor",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12228,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15856": {
+      "name": "Hot Wolf Ribs",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12229,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15861": {
+      "name": "Jungle Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12231,
+        "cost": 3000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15863": {
+      "name": "Carrion Surprise",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12232,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15865": {
+      "name": "Mystery Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12233,
+        "cost": 3000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15906": {
+      "name": "Dragonbreath Chili",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12239,
+        "cost": 7000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15910": {
+      "name": "Heavy Kodo Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 12240,
+        "cost": 7000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15915": {
+      "name": "Spiced Chili Crab",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16111,
+        "cost": 12000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "15933": {
+      "name": "Monster Omelet",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16110,
+        "cost": 12000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "818": {
+      "name": "Basic Campfire",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row"
+      }
+    },
+    "18239": {
+      "name": "Cooked Glossy Mightfish",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13940,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "18238": {
+      "name": "Spotted Yellowtail",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13939,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "18241": {
+      "name": "Filet of Redgill",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13941,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "18240": {
+      "name": "Grilled Squid",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13942,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 280,
+        "green": 300,
+        "gray": 320,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "18242": {
+      "name": "Hot Smoked Bass",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13943,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 280,
+        "green": 300,
+        "gray": 320,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "18243": {
+      "name": "Nightfin Soup",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13945,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 290,
+        "green": 310,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "18244": {
+      "name": "Poached Sunscale Salmon",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13946,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 290,
+        "green": 310,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "18245": {
+      "name": "Lobster Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13947,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "18246": {
+      "name": "Mightfish Steak",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13948,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "18247": {
+      "name": "Baked Salmon",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 13949,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20626": {
+      "name": "Undermine Clam Chowder",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16767,
+        "cost": 3000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20916": {
+      "name": "Mithril Headed Trout",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 17062,
+        "cost": 2200
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "21144": {
+      "name": "Egg Nog",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 17201,
+        "cost": 240
+      },
+      "difficulty": {
+        "orange": 35,
+        "yellow": 75,
+        "green": 95,
+        "gray": 115,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "21143": {
+      "name": "Gingerbread Cookie",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 17200,
+        "cost": 25
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 45,
+        "green": 65,
+        "gray": 85,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "21175": {
+      "name": "Spider Sausage",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "22480": {
+      "name": "Tender Wolf Steak",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 18046,
+        "cost": 12000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "22761": {
+      "name": "Runn Tum Tuber Surprise",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 18267
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24418": {
+      "name": "Heavy Crocolisk Stew",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 20075,
+        "cost": 2000
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 160,
+        "green": 180,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "24801": {
+      "name": "Smoked Desert Dumplings",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "25659": {
+      "name": "Dirge's Kickin' Chimaerok Chops",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 21025
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 325,
+        "green": 345,
+        "gray": 365,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25704": {
+      "name": "Smoked Sagefish",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 21099,
+        "cost": 500
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25954": {
+      "name": "Sagefish Delight",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 21219,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "470359": {
+      "name": "Darkclaw Bisque",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 232437,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 325,
+        "green": 345,
+        "gray": 365,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "470370": {
+      "name": "Smoked Redgill",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 232443,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 325,
+        "green": 345,
+        "gray": 365,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1225758": {
+      "name": "Prowler Steak",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 238645
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1225759": {
+      "name": "Filet o' Flank",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 238646
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1225760": {
+      "name": "Sunrise Omelette",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 238647
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1225762": {
+      "name": "Specklefin Feast",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 238649
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1225763": {
+      "name": "Grand Lobster Banquet",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 238650
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 290,
+        "green": 300,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1229737": {
+      "name": "Basic Campfire",
+      "source": {
+        "type": "STARTER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 1,
+        "green": 3,
+        "gray": 5,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "1247741": {
+      "name": "Spinefin Halibut",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1249957": {
+      "name": "Peace Tea",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 249879
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 30,
+        "green": 37,
+        "gray": 45,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249958": {
+      "name": "Royal Tea",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 249880
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 105,
+        "green": 115,
+        "gray": 125,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249959": {
+      "name": "Root Tea",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 249881
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 155,
+        "green": 170,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249960": {
+      "name": "Triage Tea",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249882
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249961": {
+      "name": "Sunny Tea",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249883
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 235,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249962": {
+      "name": "Sage's Tea",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249884
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 260,
+        "green": 275,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249963": {
+      "name": "Venomous Smoothie",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249885,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 30,
+        "green": 37,
+        "gray": 45,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249964": {
+      "name": "Slimy Smoothie",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249886,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 105,
+        "green": 112,
+        "gray": 120,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249965": {
+      "name": "Mrrggl Smrrthle",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249887,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 135,
+        "green": 140,
+        "gray": 145,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249966": {
+      "name": "Calcified Smoothie",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249888,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 185,
+        "green": 190,
+        "gray": 195,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249967": {
+      "name": "Spicy Smoothie",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249889,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 215,
+        "green": 220,
+        "gray": 225,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249968": {
+      "name": "Wicked Smoothie",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249890,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 90
+        }
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 255,
+        "green": 262,
+        "gray": 270,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250142": {
+      "name": "Savory Stag Sliders",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250173
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 230,
+        "green": 237,
+        "gray": 245,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250143": {
+      "name": "Soaring Pamplona",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250174
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 280,
+        "green": 295,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250144": {
+      "name": "Bat Hachee",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250175
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 280,
+        "green": 295,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250145": {
+      "name": "Savory Turtle Stew",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250176
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 280,
+        "green": 295,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250146": {
+      "name": "Flank au Poivre",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250177
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 285,
+        "green": 300,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250147": {
+      "name": "Bear Bruscitti",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250178
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 280,
+        "green": 295,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250148": {
+      "name": "Steaming Stag Steak",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250179
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 280,
+        "green": 295,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250149": {
+      "name": "Swiftstrike Steak",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250180
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 280,
+        "green": 295,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250150": {
+      "name": "Raging Raptor Ribs",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250181
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 280,
+        "green": 295,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250151": {
+      "name": "Bear Brisket",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 250182
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 200,
+        "green": 210,
+        "gray": 220,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250152": {
+      "name": "Prehistoric Pulled Raptor",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250183
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 280,
+        "green": 295,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250153": {
+      "name": "Raptor Rouladen",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250184
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 230,
+        "green": 237,
+        "gray": 245,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250154": {
+      "name": "Twice-Spiced Raptor Slice",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 250185
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 115,
+        "green": 132,
+        "gray": 150,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250155": {
+      "name": "Giant Scrambled Eggs",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250186
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 207,
+        "gray": 220,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250156": {
+      "name": "Tasty Raptor Bites",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 250187
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 35,
+        "green": 55,
+        "gray": 75,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250157": {
+      "name": "Breakfast Omelette",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 250188
+      },
+      "difficulty": {
+        "orange": 75,
+        "yellow": 80,
+        "green": 87,
+        "gray": 95,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1250158": {
+      "name": "Clam Linguine",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 250189
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 280,
+        "green": 295,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1255241": {
+      "name": "Cleansing Stew",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "1270632": {
+      "name": "Critter Cookie",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1270633": {
+      "name": "Skywall Souffle",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 263511
+      },
+      "difficulty": {
+        "orange": 25,
+        "yellow": 30,
+        "green": 37,
+        "gray": 45,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1270635": {
+      "name": "Pincer Bites",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 263513,
+        "cost": 200
+      },
+      "difficulty": {
+        "orange": 35,
+        "yellow": 40,
+        "green": 47,
+        "gray": 55,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1262978": {
+      "name": "Cookie's Feast",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273102
+      }
+    },
+    "1263067": {
+      "name": "Iron Oven",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273115
+      }
+    },
+    "1283400": {
+      "name": "Journeyman Campfire",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273087
+      }
+    },
+    "1291341": {
+      "name": "Expert Campfire",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273101
+      }
+    },
+    "1294014": {
+      "name": "Sweetpaw Jam",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 274415,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 280,
+        "green": 282,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1295805": {
+      "name": "Briny Seafood Stew",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274972
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 230,
+        "gray": 240,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1295834": {
+      "name": "Plain Ol' Paletusk",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 274977,
+        "cost": 2000
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 200,
+        "green": 215,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1252566": {
+      "name": "Savory Whimsyfin Delight",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 251526
+      },
+      "difficulty": {
+        "orange": 85,
+        "yellow": 125,
+        "green": 145,
+        "gray": 165,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1319313": {
+      "name": "Plated Armorfish",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 286153
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 250,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    }
+  }
+}

@@ -1,0 +1,468 @@
+{
+  "coverage": {
+    "cap": 300,
+    "floor": 0.75,
+    "gap": [
+      1,
+      24
+    ],
+    "inGame": 267,
+    "knownSource": 178,
+    "knownSourceShare": 0.6667,
+    "maxGap": 24,
+    "maxGapAllowed": 10,
+    "passes": false,
+    "share": 0.8652,
+    "shipped": 231
+  },
+  "excluded": [
+    [
+      3918,
+      "Rough Blasting Powder",
+      "unknown source and no teaching item"
+    ],
+    [
+      3919,
+      "Rough Dynamite",
+      "unknown source and no teaching item"
+    ],
+    [
+      3920,
+      "Crafted Light Shot",
+      "unknown source and no teaching item"
+    ],
+    [
+      9273,
+      "Goblin Jumper Cables",
+      "no learn skill: wiki skill 165 above yellow 160"
+    ],
+    [
+      12715,
+      "Goblin Rocket Fuel Recipe",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      12716,
+      "Goblin Mortar",
+      "ambiguous: wiki row 'goblin mortar' matches spells 12716, 13240"
+    ],
+    [
+      12719,
+      "Explosive Arrow",
+      "no wiki row"
+    ],
+    [
+      12720,
+      "Goblin \"Boom\" Box",
+      "no wiki row"
+    ],
+    [
+      12722,
+      "Goblin Radio",
+      "no wiki row"
+    ],
+    [
+      12895,
+      "Inlaid Mithril Cylinder Plans",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      12900,
+      "Mobile Alarm",
+      "no wiki row"
+    ],
+    [
+      12904,
+      "Gnomish Ham Radio",
+      "no wiki row"
+    ],
+    [
+      13240,
+      "The Mortar: Reloaded",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      15633,
+      "Lil' Smoky",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      23486,
+      "Dimensional Ripper - Everlook",
+      "unknown source and no teaching item"
+    ],
+    [
+      23489,
+      "Ultrasafe Transporter - Gadgetzan",
+      "unknown source and no teaching item"
+    ],
+    [
+      26011,
+      "Tranquil Mechanical Yeti",
+      "unknown source and no teaching item"
+    ],
+    [
+      446236,
+      "Void-Powered Invoker's Vambraces",
+      "unknown source and no teaching item"
+    ],
+    [
+      446237,
+      "Void-Powered Slayer's Vambraces",
+      "unknown source and no teaching item"
+    ],
+    [
+      446238,
+      "Void-Powered Protector's Vambraces",
+      "unknown source and no teaching item"
+    ],
+    [
+      461710,
+      "Fiery Core Sharpshooter Rifle",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213573,
+      "Arcane Megabomb",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213576,
+      "The Fumigator",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213578,
+      "Obsidian Bomb",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213586,
+      "G00 DV-1B3 Generator",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213588,
+      "Tuned Force Reactive Disk",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213646,
+      "Obsidian Blasting Powder",
+      "unknown source and no teaching item"
+    ],
+    [
+      1214145,
+      "Obsidian Shotgun",
+      "unknown source and no teaching item"
+    ],
+    [
+      1217207,
+      "Obsidian Scope",
+      "unknown source and no teaching item"
+    ],
+    [
+      1226206,
+      "Tinkerbox",
+      "unknown source and no teaching item"
+    ],
+    [
+      1226207,
+      "Tinkerbox: Teleport",
+      "unknown source and no teaching item"
+    ],
+    [
+      1226208,
+      "Tinkerbox: Nitro Boosts",
+      "unknown source and no teaching item"
+    ],
+    [
+      1226209,
+      "Tinkerbox: Magnetic Displacement",
+      "unknown source and no teaching item"
+    ],
+    [
+      1226210,
+      "Tinker: Teleport",
+      "unknown source and no teaching item"
+    ],
+    [
+      1226211,
+      "Tinker: Nitro Boosts",
+      "unknown source and no teaching item"
+    ],
+    [
+      1226212,
+      "Tinker: Magnetic Displacement",
+      "unknown source and no teaching item"
+    ],
+    [
+      1226213,
+      "Semisafe Transporter: New Avalon",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1230656,
+      "Reagent Bot",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263034,
+      "Repair Bot",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263083,
+      "Anarchist's Workbench",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1266941,
+      "SAF-T Nitro Boosts",
+      "reagent 238787 has no name in this build"
+    ],
+    [
+      1266942,
+      "EZ-Thro Magnetic Displacer",
+      "reagent 238788 has no name in this build"
+    ],
+    [
+      1266943,
+      "SAF-T Teleport",
+      "reagent 238786 has no name in this build"
+    ],
+    [
+      1293088,
+      "9-60 Battery Pack",
+      "drop per wiki but DB2 has no teaching item"
+    ]
+  ],
+  "heldBack": true,
+  "orangeFrom": {
+    "CROSS": 69,
+    "ITEM": 161,
+    "WIKI": 1
+  },
+  "sourceTypes": {
+    "DROP": 46,
+    "QUEST": 5,
+    "REPUTATION": 2,
+    "TRAINER": 70,
+    "UNKNOWN": 53,
+    "VENDOR": 55
+  },
+  "unknownSource": [
+    [
+      12717,
+      "Goblin Mining Helmet"
+    ],
+    [
+      15628,
+      "Pet Bombling"
+    ],
+    [
+      22704,
+      "Field Repair Bot 74A"
+    ],
+    [
+      26416,
+      "Small Blue Rocket"
+    ],
+    [
+      26417,
+      "Small Green Rocket"
+    ],
+    [
+      26418,
+      "Small Red Rocket"
+    ],
+    [
+      26420,
+      "Large Blue Rocket"
+    ],
+    [
+      26421,
+      "Large Green Rocket"
+    ],
+    [
+      26422,
+      "Large Red Rocket"
+    ],
+    [
+      26423,
+      "Blue Rocket Cluster"
+    ],
+    [
+      26424,
+      "Green Rocket Cluster"
+    ],
+    [
+      26425,
+      "Red Rocket Cluster"
+    ],
+    [
+      26426,
+      "Large Blue Rocket Cluster"
+    ],
+    [
+      26427,
+      "Large Green Rocket Cluster"
+    ],
+    [
+      26428,
+      "Large Red Rocket Cluster"
+    ],
+    [
+      1221012,
+      "Creepy Censor Sensors"
+    ],
+    [
+      1228088,
+      "Pop-Up Shrub"
+    ],
+    [
+      1266911,
+      "SAF-T Jumbo Dynamite"
+    ],
+    [
+      1266913,
+      "Shafety Sheep"
+    ],
+    [
+      1266915,
+      "EZ-Thro Bronze Mortar"
+    ],
+    [
+      1266916,
+      "EZ-Thro Grenade"
+    ],
+    [
+      1266917,
+      "SAF-T Casing"
+    ],
+    [
+      1266918,
+      "SAF-T Bomb"
+    ],
+    [
+      1266921,
+      "EZ-Thro Tru-Trigger"
+    ],
+    [
+      1266922,
+      "Tru-Trigger Frag Bomb"
+    ],
+    [
+      1266926,
+      "SAF-T Tube"
+    ],
+    [
+      1266927,
+      "SAF-T Clever Dynamite"
+    ],
+    [
+      1266928,
+      "EZ-Thro Shell"
+    ],
+    [
+      1266929,
+      "EZ-Thro Thorium Grenade"
+    ],
+    [
+      1266930,
+      "EZ-Thro Dark Bomb"
+    ],
+    [
+      1266931,
+      "EZ-Thro Mana Bomb"
+    ],
+    [
+      1266932,
+      "EZ-Thro Field Transporter: Gadgetzan"
+    ],
+    [
+      1266933,
+      "SAF-T Emergency Ripper: Everlook"
+    ],
+    [
+      1266934,
+      "EZ and SAF Field Transporter: Mt. Hyjal"
+    ],
+    [
+      1266939,
+      "Gnomish Weather Machine"
+    ],
+    [
+      1293849,
+      "Swiftfeather Arrow"
+    ],
+    [
+      1293850,
+      "Swiftstrike Shot"
+    ],
+    [
+      1306546,
+      "SAF-T Ultra Precision Scope"
+    ],
+    [
+      1306547,
+      "Hyper Deluxe Sniper Rifle Mk XVII"
+    ],
+    [
+      1308182,
+      "Serrated Strap"
+    ],
+    [
+      1317270,
+      "Unsanctified Grenade"
+    ],
+    [
+      1319154,
+      "Small Purple Rocket"
+    ],
+    [
+      1319155,
+      "Small White Rocket"
+    ],
+    [
+      1319156,
+      "Small Yellow Rocket"
+    ],
+    [
+      1319157,
+      "Large Purple Rocket"
+    ],
+    [
+      1319158,
+      "Large White Rocket"
+    ],
+    [
+      1319159,
+      "Large Yellow Rocket"
+    ],
+    [
+      1319160,
+      "Purple Rocket Cluster"
+    ],
+    [
+      1319161,
+      "White Rocket Cluster"
+    ],
+    [
+      1319162,
+      "Yellow Rocket Cluster"
+    ],
+    [
+      1319163,
+      "Large Purple Rocket Cluster"
+    ],
+    [
+      1319164,
+      "Large White Rocket Cluster"
+    ],
+    [
+      1319165,
+      "Large Yellow Rocket Cluster"
+    ]
+  ]
+}

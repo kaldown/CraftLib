@@ -1,0 +1,3984 @@
+{
+  "profession": "enchanting",
+  "version": "1.60.1.71037",
+  "generated": "2026-11-21",
+  "recipes": {
+    "7418": {
+      "name": "Enchant Bracer - Inferior Stamina",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "7420": {
+      "name": "Enchant Chest - Inferior Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 15,
+        "yellow": 70,
+        "green": 90,
+        "gray": 110,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7421": {
+      "name": "Runed Copper Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 5,
+        "green": 7,
+        "gray": 10,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7426": {
+      "name": "Enchant Chest - Minor Absorption",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 90,
+        "green": 110,
+        "gray": 130,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7428": {
+      "name": "Enchant Bracer - Minor Deflect",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "7443": {
+      "name": "Enchant Chest - Minor Intellect",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6342
+      },
+      "difficulty": {
+        "orange": 20,
+        "yellow": 80,
+        "green": 100,
+        "gray": 120,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7454": {
+      "name": "Enchant Cloak - Minor Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 45,
+        "yellow": 95,
+        "green": 115,
+        "gray": 135,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7457": {
+      "name": "Enchant Bracer - Minor Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 50,
+        "yellow": 100,
+        "green": 120,
+        "gray": 140,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7748": {
+      "name": "Enchant Chest - Lesser Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 105,
+        "green": 125,
+        "gray": 145,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7766": {
+      "name": "Enchant Bracer - Minor Spirit",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6344
+      },
+      "difficulty": {
+        "orange": 60,
+        "yellow": 105,
+        "green": 125,
+        "gray": 145,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7771": {
+      "name": "Enchant Cloak - Minor Protection",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "trainer per wiki but DB2 has teaching item 6345",
+        "itemId": 6345
+      }
+    },
+    "7776": {
+      "name": "Enchant Chest - Lesser Intellect",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6346
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 115,
+        "green": 135,
+        "gray": 155,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7779": {
+      "name": "Enchant Bracer - Minor Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 115,
+        "green": 135,
+        "gray": 155,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7782": {
+      "name": "Enchant Bracer - Minor Strength",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6347
+      },
+      "difficulty": {
+        "orange": 80,
+        "yellow": 115,
+        "green": 135,
+        "gray": 155,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7786": {
+      "name": "Enchant Weapon - Minor Beastslayer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6348
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7788": {
+      "name": "Enchant Weapon - Minor Striking",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7745": {
+      "name": "Enchant 2H Weapon - Minor Impact",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7793": {
+      "name": "Enchant 2H Weapon - Lesser Intellect",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 6349,
+        "cost": 500
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7795": {
+      "name": "Runed Silver Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 100,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7857": {
+      "name": "Enchant Chest - Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 145,
+        "green": 165,
+        "gray": 185,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7859": {
+      "name": "Enchant Bracer - Lesser Spirit",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 6375
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 145,
+        "green": 165,
+        "gray": 185,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "7861": {
+      "name": "Enchant Cloak - Lesser Fire Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "7863": {
+      "name": "Enchant Boots - Minor Stamina",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "trainer per wiki but DB2 has teaching item 6376",
+        "itemId": 6376
+      }
+    },
+    "7867": {
+      "name": "Enchant Boots - Minor Agility",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 6377,
+        "cost": 1000
+      },
+      "difficulty": {
+        "orange": 125,
+        "yellow": 150,
+        "green": 170,
+        "gray": 190,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13378": {
+      "name": "Enchant Shield - Minor Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 105,
+        "yellow": 130,
+        "green": 150,
+        "gray": 170,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13380": {
+      "name": "Enchant 2H Weapon - Lesser Spirit",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11038
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 135,
+        "green": 155,
+        "gray": 175,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13419": {
+      "name": "Enchant Cloak - Minor Agility",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11039
+      },
+      "difficulty": {
+        "orange": 110,
+        "yellow": 135,
+        "green": 155,
+        "gray": 175,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13421": {
+      "name": "Enchant Cloak - Lesser Protection",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 115,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13464": {
+      "name": "Enchant Shield - Lesser Protection",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11081
+      },
+      "difficulty": {
+        "orange": 115,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13485": {
+      "name": "Enchant Shield - Lesser Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 155,
+        "green": 175,
+        "gray": 195,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13501": {
+      "name": "Enchant Bracer - Lesser Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 155,
+        "green": 175,
+        "gray": 195,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13503": {
+      "name": "Enchant Weapon - Lesser Striking",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13522": {
+      "name": "Enchant Cloak - Lesser Shadow Resistance",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11098
+      },
+      "difficulty": {
+        "orange": 135,
+        "yellow": 160,
+        "green": 180,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13529": {
+      "name": "Enchant 2H Weapon - Lesser Impact",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13536": {
+      "name": "Enchant Bracer - Lesser Strength",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 11101,
+        "cost": 2500
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13538": {
+      "name": "Enchant Chest - Lesser Absorption",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13607": {
+      "name": "Enchant Chest - Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13612": {
+      "name": "Enchant Gloves - Mining",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11150
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13617": {
+      "name": "Enchant Gloves - Herbalism",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11151
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13620": {
+      "name": "Enchant Gloves - Fishing",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11152
+      },
+      "difficulty": {
+        "orange": 145,
+        "yellow": 170,
+        "green": 190,
+        "gray": 210,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13622": {
+      "name": "Enchant Bracer - Lesser Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13626": {
+      "name": "Enchant Chest - Minor Stats",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13628": {
+      "name": "Runed Golden Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13631": {
+      "name": "Enchant Shield - Lesser Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13635": {
+      "name": "Enchant Cloak - Defense",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13637": {
+      "name": "Enchant Boots - Lesser Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 180,
+        "green": 200,
+        "gray": 220,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13640": {
+      "name": "Enchant Chest - Greater Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 160,
+        "yellow": 180,
+        "green": 200,
+        "gray": 220,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13642": {
+      "name": "Enchant Bracer - Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 185,
+        "green": 205,
+        "gray": 225,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13644": {
+      "name": "Enchant Boots - Lesser Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 170,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13646": {
+      "name": "Enchant Bracer - Lesser Deflection",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 11163,
+        "cost": 3000
+      },
+      "difficulty": {
+        "orange": 170,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13648": {
+      "name": "Enchant Bracer - Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 170,
+        "yellow": 190,
+        "green": 210,
+        "gray": 230,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13653": {
+      "name": "Enchant Weapon - Lesser Beastslayer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11164
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13655": {
+      "name": "Enchant Weapon - Lesser Elemental Slayer",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11165
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13657": {
+      "name": "Enchant Cloak - Fire Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 175,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13659": {
+      "name": "Enchant Shield - Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13661": {
+      "name": "Enchant Bracer - Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 180,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13663": {
+      "name": "Enchant Chest - Greater Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 205,
+        "green": 225,
+        "gray": 245,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13687": {
+      "name": "Enchant Boots - Lesser Spirit",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11167
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 210,
+        "green": 230,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13689": {
+      "name": "Enchant Shield - Lesser Block",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11168
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13693": {
+      "name": "Enchant Weapon - Striking",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 215,
+        "green": 235,
+        "gray": 255,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13695": {
+      "name": "Enchant 2H Weapon - Impact",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13698": {
+      "name": "Enchant Gloves - Skinning",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11166
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13700": {
+      "name": "Enchant Chest - Lesser Stats",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13702": {
+      "name": "Runed Truesilver Rod",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 220,
+        "green": 240,
+        "gray": 260,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13746": {
+      "name": "Enchant Cloak - Greater Defense",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13794": {
+      "name": "Enchant Cloak - Resistance",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13815": {
+      "name": "Enchant Gloves - Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13817": {
+      "name": "Enchant Shield - Stamina",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11202
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13822": {
+      "name": "Enchant Bracer - Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13836": {
+      "name": "Enchant Boots - Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 235,
+        "green": 255,
+        "gray": 275,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13841": {
+      "name": "Enchant Gloves - Advanced Mining",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11203
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 235,
+        "green": 255,
+        "gray": 275,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13846": {
+      "name": "Enchant Bracer - Greater Spirit",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11204
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13858": {
+      "name": "Enchant Chest - Superior Stamina",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13868": {
+      "name": "Enchant Gloves - Advanced Herbalism",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11205
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 265,
+        "gray": 285,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13882": {
+      "name": "Enchant Cloak - Lesser Agility",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row",
+        "itemId": 11206
+      }
+    },
+    "13887": {
+      "name": "Enchant Gloves - Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 265,
+        "gray": 285,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13890": {
+      "name": "Enchant Boots - Minor Speed",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 245,
+        "green": 265,
+        "gray": 285,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13898": {
+      "name": "Enchant Weapon - Fiery Weapon",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11207
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13905": {
+      "name": "Enchant Shield - Greater Spirit",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 270,
+        "gray": 290,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13915": {
+      "name": "Enchant Weapon - Demonslaying",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11208
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 270,
+        "gray": 290,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13917": {
+      "name": "Enchant Chest - Superior Intellect",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 230,
+        "yellow": 250,
+        "green": 270,
+        "gray": 290,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13931": {
+      "name": "Enchant Bracer - Deflection",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 11223,
+        "cost": 5800
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 255,
+        "green": 275,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13933": {
+      "name": "Enchant Shield - Frost Resistance",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11224
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 255,
+        "green": 275,
+        "gray": 295,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13935": {
+      "name": "Enchant Boots - Agility",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 235,
+        "yellow": 255,
+        "green": 275,
+        "gray": 295,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13937": {
+      "name": "Enchant 2H Weapon - Greater Impact",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 280,
+        "gray": 300,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13939": {
+      "name": "Enchant Bracer - Greater Strength",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 280,
+        "gray": 300,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13941": {
+      "name": "Enchant Chest - Stats",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13943": {
+      "name": "Enchant Weapon - Greater Striking",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "13945": {
+      "name": "Enchant Bracer - Greater Stamina",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11225
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13947": {
+      "name": "Enchant Gloves - Riding Skill",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11226
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 290,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "13948": {
+      "name": "Enchant Gloves - Minor Haste",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 290,
+        "gray": 310,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "14293": {
+      "name": "Lesser Magic Wand",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 10,
+        "yellow": 75,
+        "green": 95,
+        "gray": 115,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "14807": {
+      "name": "Greater Magic Wand",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 70,
+        "yellow": 110,
+        "green": 130,
+        "gray": 150,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "14809": {
+      "name": "Lesser Mystic Wand",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 155,
+        "yellow": 175,
+        "green": 195,
+        "gray": 215,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "14810": {
+      "name": "Greater Mystic Wand",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'greater mystic wand' matches spells 14810, 439134"
+      }
+    },
+    "15596": {
+      "name": "Smoking Heart of the Mountain",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 11813
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "17181": {
+      "name": "Enchanted Leather",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "17180": {
+      "name": "Enchanted Thorium",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 250,
+        "green": 255,
+        "gray": 260,
+        "certainty": "CROSS",
+        "orangeFrom": "CROSS"
+      }
+    },
+    "20008": {
+      "name": "Enchant Bracer - Greater Intellect",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16214
+      },
+      "difficulty": {
+        "orange": 255,
+        "yellow": 275,
+        "green": 295,
+        "gray": 315,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20020": {
+      "name": "Enchant Boots - Greater Stamina",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16215
+      },
+      "difficulty": {
+        "orange": 260,
+        "yellow": 280,
+        "green": 300,
+        "gray": 320,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20014": {
+      "name": "Enchant Cloak - Greater Resistance",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16216
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20017": {
+      "name": "Enchant Shield - Greater Stamina",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16217,
+        "cost": 12000
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20009": {
+      "name": "Enchant Bracer - Superior Spirit",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16218
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 310,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20012": {
+      "name": "Enchant Gloves - Greater Agility",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16219
+      },
+      "difficulty": {
+        "orange": 270,
+        "yellow": 290,
+        "green": 310,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20024": {
+      "name": "Enchant Boots - Spirit",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16220
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 315,
+        "gray": 335,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20026": {
+      "name": "Enchant Chest - Major Stamina",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16221,
+        "cost": 16000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 295,
+        "green": 315,
+        "gray": 335,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20016": {
+      "name": "Enchant Shield - Superior Spirit",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16222
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 300,
+        "green": 320,
+        "gray": 340,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20029": {
+      "name": "Enchant Weapon - Icy Chill",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16223
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 325,
+        "gray": 345,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20015": {
+      "name": "Enchant Cloak - Superior Defense",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16224,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 305,
+        "green": 325,
+        "gray": 345,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20028": {
+      "name": "Enchant Chest - Major Intellect",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16242
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20051": {
+      "name": "Runed Arcanite Rod",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 16243,
+        "cost": 22000
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20013": {
+      "name": "Enchant Gloves - Greater Strength",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16244
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20023": {
+      "name": "Enchant Boots - Greater Agility",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16245
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20010": {
+      "name": "Enchant Bracer - Superior Strength",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16246
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20030": {
+      "name": "Enchant 2H Weapon - Superior Impact",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16247
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20033": {
+      "name": "Enchant Weapon - Unholy Weapon",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16248
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20036": {
+      "name": "Enchant 2H Weapon - Major Intellect",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16249
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20031": {
+      "name": "Enchant Weapon - Superior Striking",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16250
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20011": {
+      "name": "Enchant Bracer - Superior Stamina",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16251
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20034": {
+      "name": "Enchant Weapon - Crusader",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16252
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20025": {
+      "name": "Enchant Chest - Greater Stats",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16253
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20032": {
+      "name": "Enchant Weapon - Lifestealing",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16254
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "20035": {
+      "name": "Enchant 2H Weapon - Major Spirit",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 16255
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "21931": {
+      "name": "Enchant Weapon - Winter's Might",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 17725
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 210,
+        "green": 230,
+        "gray": 250,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "22749": {
+      "name": "Enchant Weapon - Spell Power",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 18259
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "22750": {
+      "name": "Enchant Weapon - Healing Power",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 18260
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23799": {
+      "name": "Enchant Weapon - Strength",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19444,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Friendly",
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23800": {
+      "name": "Enchant Weapon - Agility",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19445,
+        "factionId": 576,
+        "factionName": "Timbermaw Hold",
+        "level": "Honored",
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23801": {
+      "name": "Enchant Bracer - Mana Regeneration",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19446,
+        "factionId": 529,
+        "factionName": "Argent Dawn",
+        "level": "Honored",
+        "cost": 30000
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23802": {
+      "name": "Enchant Bracer - Healing Power",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19447,
+        "factionId": 529,
+        "factionName": "Argent Dawn",
+        "level": "Revered",
+        "cost": 60000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "23803": {
+      "name": "Enchant Weapon - Mighty Spirit",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 19448
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "DB2 faction 59 Thorium Brotherhood Honored on teaching item 19448; wiki source '?'"
+        ]
+      }
+    },
+    "23804": {
+      "name": "Enchant Weapon - Mighty Intellect",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 19449,
+        "factionId": 59,
+        "factionName": "Thorium Brotherhood",
+        "level": "Revered",
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25072": {
+      "name": "Enchant Gloves - Threat",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 20726
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25073": {
+      "name": "Enchant Gloves - Shadow Power",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 20727
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25074": {
+      "name": "Enchant Gloves - Frost Power",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 20728
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25078": {
+      "name": "Enchant Gloves - Fire Power",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 20729
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25079": {
+      "name": "Enchant Gloves - Healing Power",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 20730
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25080": {
+      "name": "Enchant Gloves - Superior Agility",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 20731
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25081": {
+      "name": "Enchant Cloak - Greater Fire Resistance",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 20732,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Friendly",
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25082": {
+      "name": "Enchant Cloak - Greater Nature Resistance",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 20733,
+        "factionId": 609,
+        "factionName": "Cenarion Circle",
+        "level": "Honored",
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25083": {
+      "name": "Enchant Cloak - Stealth",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 20734
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25084": {
+      "name": "Enchant Cloak - Subtlety",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 20735
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25086": {
+      "name": "Enchant Cloak - Dodge",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 20736
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25124": {
+      "name": "Minor Wizard Oil",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 20758,
+        "cost": 500
+      },
+      "difficulty": {
+        "orange": 5,
+        "yellow": 30,
+        "green": 47,
+        "gray": 65,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25125": {
+      "name": "Minor Mana Oil",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 20752,
+        "cost": 3000
+      },
+      "difficulty": {
+        "orange": 150,
+        "yellow": 160,
+        "green": 170,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25126": {
+      "name": "Lesser Wizard Oil",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 20753,
+        "cost": 4000
+      },
+      "difficulty": {
+        "orange": 200,
+        "yellow": 210,
+        "green": 220,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25127": {
+      "name": "Lesser Mana Oil",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 20754,
+        "cost": 10000
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 260,
+        "green": 270,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25128": {
+      "name": "Wizard Oil",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 20755,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25129": {
+      "name": "Brilliant Wizard Oil",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 20756,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Honored",
+        "cost": 40000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "25130": {
+      "name": "Brilliant Mana Oil",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 20757,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Friendly",
+        "cost": 40000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "27837": {
+      "name": "Enchant 2H Weapon - Agility",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 22392,
+        "factionId": 576,
+        "factionName": "Timbermaw Hold",
+        "level": "Friendly",
+        "cost": 25000
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 310,
+        "green": 330,
+        "gray": 350,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "430409": {
+      "name": "Blackfathom Mana Oil",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "435481": {
+      "name": "Enchant Weapon - Dismantle",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 225 above yellow 200",
+        "itemId": 215129
+      },
+      "forever": {
+        "notes": [
+          "teaching item 215129 RequiredSkillRank 225 above yellow 200 ignored"
+        ]
+      }
+    },
+    "435903": {
+      "name": "Enchant Chest - Retricutioner",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no learn skill: wiki skill 225 above yellow 200",
+        "itemId": 215138
+      },
+      "forever": {
+        "notes": [
+          "teaching item 215138 RequiredSkillRank 225 above yellow 200 ignored"
+        ]
+      }
+    },
+    "439134": {
+      "name": "Greater Mystic Wand",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'greater mystic wand' matches spells 14810, 439134"
+      }
+    },
+    "439156": {
+      "name": "Sigil of Innovation",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 215141,
+        "cost": 50000
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 225,
+        "green": 227,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "446243": {
+      "name": "Sigil of Living Dreams",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "448624": {
+      "name": "Scroll of Spatial Mending",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 223163
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "463871": {
+      "name": "Enchant Shield - Law of Nature",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 228982,
+        "factionId": 576,
+        "factionName": "Timbermaw Hold",
+        "level": "Revered",
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "463869": {
+      "name": "Conductive Shield Coating",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 228981,
+        "cost": 20000
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "463866": {
+      "name": "Sigil of Flowing Waters",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 228979,
+        "factionId": 749,
+        "factionName": "Hydraxian Waterlords",
+        "level": "Revered",
+        "cost": 100000
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 305,
+        "green": 312,
+        "gray": 320,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "471400": {
+      "name": "Magnificent Trollshine",
+      "source": {
+        "type": "REPUTATION",
+        "certainty": "WIKI",
+        "itemId": 232610,
+        "factionId": 270,
+        "factionName": "Zandalar Tribe",
+        "level": "Honored",
+        "cost": 40000
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 320,
+        "gray": 330,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1213593": {
+      "name": "Speedstone",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213595": {
+      "name": "Tear of the Dreamer",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213598": {
+      "name": "Lodestone of Retaliation",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213600": {
+      "name": "Enchanted Stopwatch",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213603": {
+      "name": "Ruby-Encrusted Broach",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213607": {
+      "name": "Scroll: Wrath of the Swarm",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "drop per wiki but DB2 has no teaching item"
+      }
+    },
+    "1213610": {
+      "name": "Enchanted Repellent",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "vendor per wiki but DB2 has no teaching item"
+      }
+    },
+    "1213616": {
+      "name": "Enchant Chest - Living Stats",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213622": {
+      "name": "Enchant Gloves - Holy Power",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249536,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1213626": {
+      "name": "Enchant Gloves - Arcane Power",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249534,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1213628": {
+      "name": "Enchanted Prayer Tome",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213633": {
+      "name": "Enchanted Totem",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1213635": {
+      "name": "Enchanted Mushroom",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1216005": {
+      "name": "Libram of Righteousness",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1216007": {
+      "name": "Libram of the Exorcist",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1216010": {
+      "name": "Libram of Sanctity",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1216014": {
+      "name": "Totem of Pyroclastic Thunder",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1216016": {
+      "name": "Totem of Thunderous Strikes",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1216018": {
+      "name": "Totem of Flowing Magma",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1216020": {
+      "name": "Idol of Sidereal Wrath",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1216022": {
+      "name": "Idol of Feline Ferocity",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1216024": {
+      "name": "Idol of Ursin Power",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1217189": {
+      "name": "Enchant Bracer - Spell Power",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "unknown source and no teaching item"
+      }
+    },
+    "1217203": {
+      "name": "Enchant Bracer - Agility",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "ambiguous: wiki row 'enchant bracer - agility' matches spells 1217203, 1248497"
+      }
+    },
+    "1219577": {
+      "name": "Enchant Off-Hand - Superior Intellect",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274391
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1219578": {
+      "name": "Enchant Off-Hand - Excellent Spirit",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274392
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1219579": {
+      "name": "Enchant Off-Hand - Wisdom",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 274393,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1219580": {
+      "name": "Enchant 2H Weapon - Spellblasting",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 274394,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1219581": {
+      "name": "Enchant Shield - Excellent Stamina",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274395
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1220623": {
+      "name": "Enchant Shield - Critical Strike",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 274400
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1220624": {
+      "name": "Enchant Bracer - Greater Spellpower",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 274401,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1219587": {
+      "name": "Enchant Cloak - Agility",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 274399,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1230643": {
+      "name": "Enchanted Lute",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray"
+      }
+    },
+    "1231128": {
+      "name": "Enchant Weapon - Grand Crusader",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row",
+        "itemId": 241191
+      }
+    },
+    "1231139": {
+      "name": "Enchant 2H Weapon - Grand Arcanist",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 241195
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 305,
+        "green": 307,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1231164": {
+      "name": "Enchant Weapon - Grand Sorcerer",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row",
+        "itemId": 241201
+      }
+    },
+    "1232172": {
+      "name": "Enchant 2H Weapon - Grand Inquisitor",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 242361
+      },
+      "difficulty": {
+        "orange": 280,
+        "yellow": 305,
+        "green": 307,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1245320": {
+      "name": "Dust to Motes",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 10,
+        "green": 12,
+        "gray": 15,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "1245321": {
+      "name": "Novice's Practice Wand",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "WIKI"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 10,
+        "green": 12,
+        "gray": 15,
+        "certainty": "WIKI",
+        "orangeFrom": "WIKI"
+      }
+    },
+    "1248458": {
+      "name": "Enchant Bracer - Minor Intellect",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 249474
+      },
+      "difficulty": {
+        "orange": 70,
+        "yellow": 110,
+        "green": 130,
+        "gray": 150,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248459": {
+      "name": "Enchant Bracer - Minor Healing Power",
+      "source": {
+        "type": "DROP",
+        "certainty": "WIKI",
+        "itemId": 249475
+      },
+      "difficulty": {
+        "orange": 90,
+        "yellow": 120,
+        "green": 140,
+        "gray": 160,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248752": {
+      "name": "Mystic Mushroom",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row",
+        "itemId": 249476
+      }
+    },
+    "1248754": {
+      "name": "Tenets of the Silver Hand",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249477,
+        "cost": 3250
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248755": {
+      "name": "Polished Driftwood Icon",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249478,
+        "cost": 3250
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248757": {
+      "name": "Enchant Weapon - Insight",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249479,
+        "cost": 3500
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248760": {
+      "name": "Enchant Weapon - Recovery",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249480,
+        "cost": 3500
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248805": {
+      "name": "Enchant Weapon - Revelation",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249481,
+        "cost": 3500
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248703": {
+      "name": "Glimmering Staff",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249482,
+        "cost": 3500
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248739": {
+      "name": "Soulstaff",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249483,
+        "cost": 3500
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248745": {
+      "name": "Orb of Mystic Insight",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249484,
+        "cost": 3500
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248748": {
+      "name": "Orb of Souls",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249485,
+        "cost": 3500
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248461": {
+      "name": "Twisted Nether Wand",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249487
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 205,
+        "green": 225,
+        "gray": 245,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248497": {
+      "name": "Enchant Bracer - Agility",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249488
+      },
+      "difficulty": {
+        "orange": 190,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248974": {
+      "name": "Talons of Wrath",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249493,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249006": {
+      "name": "Libram of Invocation",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row",
+        "itemId": 249494
+      }
+    },
+    "1249015": {
+      "name": "Totem of Ancestral Protection",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249495,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249019": {
+      "name": "Enchant Necklace - Strength",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249496,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249057": {
+      "name": "Enchant Necklace - Spell Power",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249502,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249058": {
+      "name": "Enchant Necklace - Healing Power",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249503,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249059": {
+      "name": "Enchant Necklace - Agility",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249504,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249060": {
+      "name": "Enchant Necklace - Deflection",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249505,
+        "cost": 5250
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249061": {
+      "name": "Radiant Staff",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249506,
+        "cost": 5500
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249064": {
+      "name": "Dreamstaff",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249507,
+        "cost": 5500
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249069": {
+      "name": "Truesilver Conduit",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249508,
+        "cost": 5500
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249070": {
+      "name": "Twisting Essence Jar",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249509,
+        "cost": 5500
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249071": {
+      "name": "Enchant Chest - Absorption",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249510,
+        "cost": 5500
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248510": {
+      "name": "Enchant 2H Weapon - Lesser Agility",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249511
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248509": {
+      "name": "Dreambough Wand",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249512
+      },
+      "difficulty": {
+        "orange": 215,
+        "yellow": 235,
+        "green": 255,
+        "gray": 275,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248511": {
+      "name": "Enchant 2H Weapon - Lesser Strength",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249513
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 240,
+        "green": 260,
+        "gray": 280,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248500": {
+      "name": "Enchant Bracer - Greater Agility",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249514
+      },
+      "difficulty": {
+        "orange": 240,
+        "yellow": 260,
+        "green": 280,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248505": {
+      "name": "Lesser Eternal Wand",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249515
+      },
+      "difficulty": {
+        "orange": 245,
+        "yellow": 265,
+        "green": 285,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248528": {
+      "name": "Enchant Gloves - Advanced Skinning",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249516
+      },
+      "difficulty": {
+        "orange": 250,
+        "yellow": 270,
+        "green": 290,
+        "gray": 310,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249107": {
+      "name": "Frozen Heart of the Mountain",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249519
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249112": {
+      "name": "Molten Heart of the Mountain",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249520
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249114": {
+      "name": "Dormant Heart of the Mountain",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249521
+      },
+      "difficulty": {
+        "orange": 265,
+        "yellow": 285,
+        "green": 305,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248515": {
+      "name": "Greater Eternal Wand",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249522
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248599": {
+      "name": "Enchant Bracer - Superior Agility",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249524
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 315,
+        "green": 335,
+        "gray": 355,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248607": {
+      "name": "Enchant 2H Weapon - Mighty Spell Power",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249525,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248636": {
+      "name": "Enchant 2H Weapon - Mighty Healing Power",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249526,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249128": {
+      "name": "Idol of the Dream",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249529,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249152": {
+      "name": "Libram of Holy Alacrity",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249530,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1249154": {
+      "name": "Totem of Thunder",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249532,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248645": {
+      "name": "Enchant Gloves - Natural Power",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249535,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248650": {
+      "name": "Brilliant Wand",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249537,
+        "cost": 6875
+      },
+      "difficulty": {
+        "orange": 275,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248661": {
+      "name": "Enchant Bracer - Superior Intellect",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249538,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248665": {
+      "name": "Enchant Bracer - Superior Deflection",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 249539,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248460": {
+      "name": "Enchant Bracer - Lesser Agility",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 249486
+      },
+      "difficulty": {
+        "orange": 140,
+        "yellow": 165,
+        "green": 185,
+        "gray": 205,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248498": {
+      "name": "Enchant Bracer - Lesser Healing Power",
+      "source": {
+        "type": "QUEST",
+        "certainty": "WIKI",
+        "itemId": 249489
+      },
+      "difficulty": {
+        "orange": 205,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248640": {
+      "name": "Enchant Gloves - Superior Strength",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 274398,
+        "cost": 7500
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 320,
+        "green": 340,
+        "gray": 360,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1263056": {
+      "name": "Arcane Salvager",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273103
+      }
+    },
+    "1263082": {
+      "name": "Arcane Forge",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no skill-up: yellow == gray",
+        "itemId": 273116
+      }
+    },
+    "1294054": {
+      "name": "Enchant Gloves - Lotus Claw",
+      "source": {
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 274424,
+        "cost": 5000
+      },
+      "difficulty": {
+        "orange": 295,
+        "yellow": 295,
+        "green": 297,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306520": {
+      "name": "Torch of Light",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279295
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306521": {
+      "name": "Steadfast Libram",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279296
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306522": {
+      "name": "Libram of Infusion",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279297
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306523": {
+      "name": "Totem of Urgency",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279298
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306524": {
+      "name": "Idol of Swiftness",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279299
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1306525": {
+      "name": "Idol of the Ursine Twins",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 279300
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 310,
+        "green": 317,
+        "gray": 325,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1248668": {
+      "name": "Enchant 2H Weapon - Strength",
+      "source": {
+        "type": "UNKNOWN",
+        "certainty": "WIKI",
+        "itemId": 249523
+      },
+      "difficulty": {
+        "orange": 290,
+        "yellow": 295,
+        "green": 297,
+        "gray": 300,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      }
+    },
+    "1328948": {
+      "name": "Enchant Boots - Speed",
+      "source": {
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "no wiki row",
+        "itemId": 289560
+      }
+    }
+  }
+}

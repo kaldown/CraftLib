@@ -242,10 +242,14 @@ BUCKETS: dict[str, Bucket] = {
         cross_source_bucket="sod",
         # Merchant's Favor prices (spec D16); with a currency field, cost 0 is never a price.
         allow_currency_cost=True, reject_zero_cost=True,
-        held_back=(), vendor_explicit_scope=True,
-        # Flipped to True by the task that generates Data/Forever; until then the
-        # consistency checks (TOC, Data dirs) must not expect files that do not exist.
-        shipped=False),
+        # WHY held back (coverage gate, wiki and DB2 of 2026-11-21): Engineering ships
+        # 231/267 (86.5%) but nothing at skill 1-24 (gap 24 > 10: Rough Blasting Powder,
+        # Rough Dynamite and Crafted Light Shot have no source on the wiki and only flagged
+        # SoD trainer records). Mining ships 4/9 (44.4% < 75%) with a gap of 115 (185-299):
+        # its wiki page has no recipe table and Forever changed the smelting thresholds.
+        # An in-game trainer/recipe capture (scripts/import_probe.py) releases both.
+        held_back=("Engineering", "Mining"), vendor_explicit_scope=True,
+        shipped=True),
 }
 
 

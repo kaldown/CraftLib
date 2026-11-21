@@ -20,6 +20,7 @@ Data/TBC/VendorPrices.lua
 Data/SoD/VendorPrices.lua
 Data/Vanilla/VendorPrices.lua
 Data/WotLK/VendorPrices.lua
+Data/Forever/VendorPrices.lua
 
 # Data - TBC
 Data/TBC/FirstAid/Recipes.lua
@@ -67,3 +68,13 @@ Data/WotLK/Jewelcrafting/Recipes.lua
 Data/WotLK/Leatherworking/Recipes.lua
 Data/WotLK/Tailoring/Recipes.lua
 Data/WotLK/Inscription/Recipes.lua
+
+# Data - Forever (registers only on a WoW Forever client; profile guard).
+# Engineering and Mining are held back by the coverage gate (scripts/buckets.py).
+Data/Forever/FirstAid/Recipes.lua
+Data/Forever/Cooking/Recipes.lua
+Data/Forever/Alchemy/Recipes.lua
+Data/Forever/Blacksmithing/Recipes.lua
+Data/Forever/Enchanting/Recipes.lua
+Data/Forever/Leatherworking/Recipes.lua
+Data/Forever/Tailoring/Recipes.lua

@@ -1,0 +1,707 @@
+{
+  "coverage": {
+    "cap": 300,
+    "floor": 0.75,
+    "gap": null,
+    "inGame": 429,
+    "knownSource": 327,
+    "knownSourceShare": 0.7622,
+    "maxGap": 0,
+    "maxGapAllowed": 10,
+    "passes": true,
+    "share": 0.8695,
+    "shipped": 373
+  },
+  "excluded": [
+    [
+      2387,
+      "Linen Cloak",
+      "unknown source and no teaching item"
+    ],
+    [
+      2963,
+      "Bolt of Linen Cloth",
+      "unknown source and no teaching item"
+    ],
+    [
+      3861,
+      "Long Silken Cloak",
+      "ambiguous: wiki row 'long silken cloak' matches spells 3861, 439094"
+    ],
+    [
+      3915,
+      "Brown Linen Shirt",
+      "unknown source and no teaching item"
+    ],
+    [
+      7636,
+      "Green Woolen Robe",
+      "no wiki row"
+    ],
+    [
+      8764,
+      "Earthen Vest",
+      "ambiguous: wiki row 'earthen vest' matches spells 8764, 439100"
+    ],
+    [
+      8772,
+      "Crimson Silk Belt",
+      "ambiguous: wiki row 'crimson silk belt' matches spells 8772, 439098"
+    ],
+    [
+      8778,
+      "Boots of Darkness",
+      "no wiki row"
+    ],
+    [
+      12044,
+      "Simple Linen Pants",
+      "unknown source and no teaching item"
+    ],
+    [
+      12048,
+      "Black Mageweave Vest",
+      "ambiguous: wiki row 'black mageweave vest' matches spells 12048, 439086"
+    ],
+    [
+      12049,
+      "Black Mageweave Leggings",
+      "ambiguous: wiki row 'black mageweave leggings' matches spells 12049, 439088"
+    ],
+    [
+      12062,
+      "Stormcloth Pants",
+      "no wiki row"
+    ],
+    [
+      12063,
+      "Stormcloth Gloves",
+      "no wiki row"
+    ],
+    [
+      12068,
+      "Stormcloth Vest",
+      "no wiki row"
+    ],
+    [
+      12083,
+      "Stormcloth Headband",
+      "no wiki row"
+    ],
+    [
+      12087,
+      "Stormcloth Shoulders",
+      "no wiki row"
+    ],
+    [
+      12090,
+      "Stormcloth Boots",
+      "no wiki row"
+    ],
+    [
+      18455,
+      "Bottomless Bag",
+      "ambiguous: wiki row 'bottomless bag' matches spells 18455, 463972"
+    ],
+    [
+      22813,
+      "Gordok Ogre Suit",
+      "unknown source and no teaching item"
+    ],
+    [
+      26086,
+      "Felcloth Bag",
+      "no learn skill: wiki skill 285 above yellow 260"
+    ],
+    [
+      28205,
+      "Glacial Gloves",
+      "ambiguous: wiki row 'glacial gloves' matches spells 28205, 1223764"
+    ],
+    [
+      28207,
+      "Glacial Vest",
+      "ambiguous: wiki row 'glacial vest' matches spells 28207, 1223760"
+    ],
+    [
+      28208,
+      "Glacial Cloak",
+      "ambiguous: wiki row 'glacial cloak' matches spells 28208, 1223762"
+    ],
+    [
+      28209,
+      "Glacial Wrists",
+      "ambiguous: wiki row 'glacial wrists' matches spells 28209, 1223766"
+    ],
+    [
+      429351,
+      "Extraplanar Spidersilk Boots",
+      "unknown source and no teaching item"
+    ],
+    [
+      435610,
+      "Gneuro-Linked Arcano-Filament Monocle",
+      "reagent 213372 has no name in this build"
+    ],
+    [
+      439086,
+      "Black Mageweave Vest",
+      "ambiguous: wiki row 'black mageweave vest' matches spells 12048, 439086"
+    ],
+    [
+      439088,
+      "Black Mageweave Leggings",
+      "ambiguous: wiki row 'black mageweave leggings' matches spells 12049, 439088"
+    ],
+    [
+      439094,
+      "Long Silken Cloak",
+      "ambiguous: wiki row 'long silken cloak' matches spells 3861, 439094"
+    ],
+    [
+      439098,
+      "Crimson Silk Belt",
+      "ambiguous: wiki row 'crimson silk belt' matches spells 8772, 439098"
+    ],
+    [
+      439100,
+      "Earthen Vest",
+      "ambiguous: wiki row 'earthen vest' matches spells 8764, 439100"
+    ],
+    [
+      446193,
+      "Fractured Mind Pauldrons",
+      "unknown source and no teaching item"
+    ],
+    [
+      446194,
+      "Mantle of Insanity",
+      "unknown source and no teaching item"
+    ],
+    [
+      446195,
+      "Shoulderpads of the Deranged",
+      "unknown source and no teaching item"
+    ],
+    [
+      461692,
+      "Synthetic Gordok Ogre Suit",
+      "unknown source and no teaching item"
+    ],
+    [
+      463972,
+      "Bottomless Bag",
+      "ambiguous: wiki row 'bottomless bag' matches spells 18455, 463972"
+    ],
+    [
+      1213527,
+      "Vampiric Cowl",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213530,
+      "Vampiric Shawl",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213532,
+      "Vampiric Robe",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213534,
+      "Qiraji Silk Scarf",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213536,
+      "Qiraji Silk Cape",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213538,
+      "Qiraji Silk Cloak",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213540,
+      "Qiraji Silk Drape",
+      "unknown source and no teaching item"
+    ],
+    [
+      1213740,
+      "Sylvan Shoulders",
+      "ambiguous: wiki row 'sylvan shoulders' matches spells 28482, 1213740"
+    ],
+    [
+      1213742,
+      "Sylvan Crown",
+      "ambiguous: wiki row 'sylvan crown' matches spells 28481, 1213742"
+    ],
+    [
+      1213744,
+      "Sylvan Vest",
+      "ambiguous: wiki row 'sylvan vest' matches spells 28480, 1213744"
+    ],
+    [
+      1214173,
+      "Bolt of Qiraji Silk",
+      "unknown source and no teaching item"
+    ],
+    [
+      1214306,
+      "Dreamscale Bracers",
+      "unknown source and no teaching item"
+    ],
+    [
+      1214307,
+      "Dreamscale Mitts",
+      "unknown source and no teaching item"
+    ],
+    [
+      1223760,
+      "Glacial Vest",
+      "ambiguous: wiki row 'glacial vest' matches spells 28207, 1223760"
+    ],
+    [
+      1223762,
+      "Glacial Cloak",
+      "ambiguous: wiki row 'glacial cloak' matches spells 28208, 1223762"
+    ],
+    [
+      1223764,
+      "Glacial Gloves",
+      "ambiguous: wiki row 'glacial gloves' matches spells 28205, 1223764"
+    ],
+    [
+      1223766,
+      "Glacial Wrists",
+      "ambiguous: wiki row 'glacial wrists' matches spells 28209, 1223766"
+    ],
+    [
+      1223768,
+      "Frosty Vest",
+      "unknown source and no teaching item"
+    ],
+    [
+      1223770,
+      "Frosty Gloves",
+      "unknown source and no teaching item"
+    ],
+    [
+      1223772,
+      "Frosty Wrists",
+      "unknown source and no teaching item"
+    ],
+    [
+      1229504,
+      "Faction Banner",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257368,
+      "Novice Arcanist's Sash",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257369,
+      "Novice Ardent's Sash",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257376,
+      "Filigreed Pristine Gown",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257377,
+      "Filigreed Silky Gown",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257378,
+      "Filigreed Flame Gown",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257379,
+      "Filigreed Shadow Gown",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257380,
+      "Filigreed Pearly Gown",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257381,
+      "Filigreed Shining Gown",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257394,
+      "Filigreed Pristine Leggings",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257395,
+      "Filigreed Silky Leggings",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257396,
+      "Filigreed Flame Leggings",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257397,
+      "Filigreed Shadow Leggings",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257398,
+      "Filigreed Pearly Leggings",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257399,
+      "Filigreed Shining Leggings",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257413,
+      "Filigreed Pristine Circlet",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257414,
+      "Filigreed Silky Circlet",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257415,
+      "Filigreed Flame Circlet",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257416,
+      "Filigreed Shadow Circlet",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257417,
+      "Filigreed Pearly Circlet",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257418,
+      "Filigreed Shining Circlet",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257426,
+      "Gilded Slippers",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257427,
+      "Frothing Slippers",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257428,
+      "Fiery Slippers",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257429,
+      "Black Slippers",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257430,
+      "Golden Slippers",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257431,
+      "Radiant Slippers",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257444,
+      "Gilded Cord",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257445,
+      "Frothing Cord",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257446,
+      "Fiery Cord",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257447,
+      "Black Cord",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257448,
+      "Golden Cord",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257449,
+      "Radiant Cord",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257473,
+      "Gilded Gloves",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257474,
+      "Frothing Gloves",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257475,
+      "Fiery Gloves",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257476,
+      "Black Gloves",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257477,
+      "Golden Gloves",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1257478,
+      "Radiant Gloves",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263032,
+      "Spinning Wheel",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263080,
+      "Loom",
+      "no skill-up: yellow == gray"
+    ],
+    [
+      1263425,
+      "Faction Banner",
+      "no skill-up: yellow == gray"
+    ]
+  ],
+  "heldBack": false,
+  "orangeFrom": {
+    "CROSS": 4,
+    "ITEM": 300,
+    "WIKI": 69
+  },
+  "sourceTypes": {
+    "DROP": 104,
+    "QUEST": 5,
+    "REPUTATION": 39,
+    "TRAINER": 72,
+    "UNKNOWN": 46,
+    "VENDOR": 107
+  },
+  "unknownSource": [
+    [
+      44950,
+      "Green Winter Clothes"
+    ],
+    [
+      44958,
+      "Red Winter Clothes"
+    ],
+    [
+      461727,
+      "Leather-Reinforced Runecloth Bag"
+    ],
+    [
+      1227723,
+      "Crusader's Knapsack"
+    ],
+    [
+      1227724,
+      "Crimson Dawnwoven Bag"
+    ],
+    [
+      1257425,
+      "Earthen Leggings"
+    ],
+    [
+      1257432,
+      "Earthen Silk Slippers"
+    ],
+    [
+      1257433,
+      "Earthen Silk Hood"
+    ],
+    [
+      1257434,
+      "Earthen Silk Gloves"
+    ],
+    [
+      1257436,
+      "Gilded Handwraps"
+    ],
+    [
+      1257462,
+      "Ghostweave Cord"
+    ],
+    [
+      1257463,
+      "Earthenweave Gloves"
+    ],
+    [
+      1257464,
+      "Earthenweave Cord"
+    ],
+    [
+      1257472,
+      "Earthenweave Boots"
+    ],
+    [
+      1257485,
+      "Earthenweave Mantle"
+    ],
+    [
+      1257486,
+      "Earthenweave Vest"
+    ],
+    [
+      1257488,
+      "Earthenweave Leggings"
+    ],
+    [
+      1257489,
+      "Ghostweave Mantle"
+    ],
+    [
+      1257490,
+      "Ghostweave Boots"
+    ],
+    [
+      1257491,
+      "Earthenweave Cuffs"
+    ],
+    [
+      1257492,
+      "Mooncloth Reagent Bag"
+    ],
+    [
+      1257493,
+      "Ghostweave Hood"
+    ],
+    [
+      1257494,
+      "Earthenweave Crown"
+    ],
+    [
+      1257495,
+      "Bottomless Reagent Bag"
+    ],
+    [
+      1292941,
+      "Manaflare Pants"
+    ],
+    [
+      1292942,
+      "Manaflare Gloves"
+    ],
+    [
+      1292943,
+      "Manaflare Mantle"
+    ],
+    [
+      1292944,
+      "Manaflare Boots"
+    ],
+    [
+      1292957,
+      "Pants of Conviction"
+    ],
+    [
+      1292958,
+      "Gloves of Conviction"
+    ],
+    [
+      1292959,
+      "Mantle of Conviction"
+    ],
+    [
+      1292960,
+      "Treads of Conviction"
+    ],
+    [
+      1292961,
+      "Leggings of Conviction"
+    ],
+    [
+      1292962,
+      "Handguards of Conviction"
+    ],
+    [
+      1292963,
+      "Pauldrons of Conviction"
+    ],
+    [
+      1292964,
+      "Boots of Conviction"
+    ],
+    [
+      1292977,
+      "Demonheart Leggings"
+    ],
+    [
+      1292978,
+      "Demonheart Gloves"
+    ],
+    [
+      1292979,
+      "Demonheart Spaulders"
+    ],
+    [
+      1292980,
+      "Demonheart Boots"
+    ],
+    [
+      1306540,
+      "Robes of Fiery Devastation"
+    ],
+    [
+      1306541,
+      "Mana-infused Cord"
+    ],
+    [
+      1306542,
+      "Rime-encrusted Boots"
+    ],
+    [
+      1306543,
+      "Fel Cape"
+    ],
+    [
+      1306544,
+      "Cloak of Earth and Sky"
+    ],
+    [
+      1306545,
+      "Felblood Soul Bag"
+    ]
+  ]
+}
