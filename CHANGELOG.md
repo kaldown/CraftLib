@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- WoW Forever (1.60, interface 16001) recipe data: a dedicated Forever bucket, detected at runtime ahead of the Classic Era / Season of Discovery checks (Forever shares interface major 1 with Classic Era). Built from the pinned 1.60.1.71037 game data plus the Warcraft Wiki recipe tables. Shipped recipes and the share of the in-game recipes that carry a known (non-UNKNOWN) source:
+  - Alchemy 169 (72.0%), Blacksmithing 387 (69.4%), Enchanting 221 (73.7%), Leatherworking 467 (68.1%), Tailoring 373 (76.2%), Cooking 122 (77.3%), First Aid 28 (79.3%) - 1,767 recipes in total.
+  - Engineering and Mining are held back until an in-game capture confirms their trainer and smelting data; they are not loaded on Forever yet.
+  - Recipes whose source could not be established ship with the new `unknown` source type; every excluded recipe and its reason is listed in `Data/Sources/Forever/REVIEW.md`.
+  - Skill-range milestones for Forever (75/150/225/300) are unverified until confirmed in game.
+- New source type `SOURCE_TYPE.UNKNOWN` ("unknown"): the source is not established, so the recipe is usable only when learned, owned or bought. It is never a cost claim. Only the Forever bucket emits it.
+- `source.currency = { name, amount }` for recipes bought with a non-copper currency (Merchant's Favor); such a source has no `cost`, which means "not payable in copper", never free.
+- `recipe.tools`: the tools or tool categories a recipe requires (Forever only for now), as `{ categoryId, name }` or `{ itemId, name }`.
+- `EXPANSION.FOREVER` and profile `FOREVER` (`CraftLib:GetActiveProfile()` returns it on WoW Forever).
+- Maintainer tooling for the Forever bucket: wiki fetch and parse (`scripts/fetch_wiki_sources.py`), resolver (`scripts/forever_resolve.py`), in-game capture import (`scripts/import_probe.py`) and the coverage report (`Data/Sources/Forever/REVIEW.md`).
+
 ### Changed
 - An unrecognized game client now loads no recipe data and says so at login, instead of silently using another client's data. Supported clients (Classic Era / Anniversary 1.15, TBC 2.5, WotLK 3.3.5a and 3.4, Titan 3.80) are unaffected.
 

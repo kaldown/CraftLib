@@ -23,7 +23,7 @@ Comprehensive crafting recipe database and API for World of Warcraft addon devel
 - Source information for every recipe (trainers, vendors, quests, drops, reputation, discovery)
 - Fast lookups by spell ID or crafted item ID
 - Skill-based filtering and difficulty calculation
-- Per-expansion data: one install serves Classic Era / Vanilla, Season of Discovery, The Burning Crusade, and Wrath of the Lich King - it detects the running client and loads the matching recipe set automatically
+- Per-expansion data: one install serves Classic Era / Vanilla, Season of Discovery, The Burning Crusade, Wrath of the Lich King, and WoW Forever - it detects the running client and loads the matching recipe set automatically
 
 ## Coverage
 
@@ -35,6 +35,7 @@ CraftLib bundles a separate, cumulative recipe set for each Classic-family clien
 | Season of Discovery | 9 | 300 |
 | The Burning Crusade Classic | 10 (+ Jewelcrafting) | 375 |
 | Wrath of the Lich King Classic | 11 (+ Inscription) | 450 |
+| WoW Forever (1.60) | 7 (Engineering and Mining pending in-game confirmation) | 300 |
 
 Professions: Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring, Cooking, First Aid, Mining - plus Jewelcrafting (TBC and later) and Inscription (WotLK). Every recipe carries Wowhead-verified difficulty thresholds and a real acquisition source.
 
@@ -85,7 +86,7 @@ end
 | `GetRecipeByProduct(itemId)` | Find all recipes that produce an item |
 | `GetRecipeDifficulty(recipe, skillLevel)` | Get difficulty color |
 | `GetVendorBuyPrice(itemId)` | Per-unit vendor buy price (copper) for confirmed vendor-stocked reagents, or nil |
-| `GetActiveProfile()` | Active client profile: `"VANILLA"`, `"TBC"`, `"WOTLK"`, or `"SOD"`; `nil` on an unsupported client |
+| `GetActiveProfile()` | Active client profile: `"VANILLA"`, `"TBC"`, `"WOTLK"`, `"SOD"`, or `"FOREVER"`; `nil` on an unsupported client |
 
 ## Recipe Data Structure
 
@@ -129,6 +130,17 @@ python scripts/generate_recipes.py --bucket tbc --profession FirstAid
 
 Verified sources are tracked under `Data/Sources/<Bucket>/*.json` for reproducibility. 55 removed/never-implemented recipes are filtered from the output (tracked in `Data/Sources/removed_recipes.json`). The pipeline is driven per client bucket by the Makefile - `make vanilla-all`, `make tbc-all`, `make wotlk-all`, and `make sod-all` run fetch, extract, Wowhead enrichment, the no-pending / no-unaligned gates and the audit from the bucket's own pinned game build, and only then generation; they stop at the first failing step, so no Lua file is rewritten unless the per-profession gates and the audit passed for the whole bucket (the generator's own checks still run one profession at a time, so a generator failure can leave earlier professions already rewritten). `make <bucket>-generate OUT=<dir>` regenerates offline from the tracked sources into `<dir>`; `OUT` is required, and `OUT=Data` rewrites the shipped files deliberately (the same applies to `make vendor-prices`). `make list-buckets` shows the buckets.
 
+### WoW Forever bucket (maintainers)
+
+The Forever bucket differs from the Classic ones: its recipe facts come from the pinned DB2 build `1.60.1.71037` (cached under `vendor/db2-parser/artifacts/1.60.1.71037/`), and what the game data lacks (acquisition source, orange threshold) comes from the Warcraft Wiki recipe tables and from in-game captures. Run `make forever-all` for the whole pipeline or `make forever-generate OUT=<dir>` to regenerate offline from the tracked sources.
+
+- **Wiki pages**: `scripts/fetch_wiki_sources.py` reads one wiki page per profession through `api.php?action=parse`, waits at least 3 seconds between fetches, and caches the result in `Data/Sources/Forever/.wiki_cache/` (not tracked). Only facts are stored.
+- **Aliases**: `Data/Sources/Forever/wiki_aliases.json` maps a spell id to the wiki row it should use when names differ or a row is ambiguous.
+- **In-game captures**: the `/lpprobe` report from the client is saved to a file and imported with `python3 scripts/import_probe.py --bucket forever --input <file>`; it writes tracked `Data/Sources/Forever/ingame/<Profession>.json` (recipe list, trainer learn skills), `Merchants.json` and `Currencies.json`. An in-game fact outranks the wiki, and a recipe absent from a captured recipe list is excluded as not in game.
+- **Review**: `Data/Sources/Forever/review/` and `Data/Sources/Forever/REVIEW.md` are generated; they list every excluded recipe with its reason and the per-profession coverage table. Do not edit them by hand.
+- **Coverage gate and held_back**: a profession ships only when at least 75% of its in-game skill-up recipes are shipped and no run of more than 10 skill points in 1-299 is left uncovered. A profession that fails is listed in `held_back` in `scripts/buckets.py`; it is not written and not in `CraftLib.toc`. Engineering and Mining are held back at the moment; an in-game capture of their trainers and recipe lists releases them (remove the name from `held_back`, regenerate, add the files to the TOC).
+- **Orange threshold precedence**: in-game trainer capture, then the teaching item's required skill, then the Vanilla/SoD bucket's verified value (only when yellow and gray agree), then the wiki skill; a recipe with none of these is excluded rather than guessed.
+
 ### Data Sources
 
 - **DB2 Tables:** Spell, SpellName, SpellEffect, SpellReagents, Item, ItemSparse, SkillLine, SkillLineAbility, ItemEffect, Faction
@@ -147,6 +159,7 @@ One install serves every live Classic-family client - CraftLib detects which one
 - Season of Discovery
 - The Burning Crusade Classic
 - Wrath of the Lich King Classic - including the Titan (3.80) seasonal WotLK client
+- WoW Forever (1.60) - 1,767 recipes across seven professions; about 70% have an established source, the rest carry the `unknown` source marker
 
 Hardcore runs on the Classic Era client and is covered by the Vanilla data.
 

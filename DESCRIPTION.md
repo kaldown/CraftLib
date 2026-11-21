@@ -58,7 +58,7 @@ local difficulty = CraftLib:GetRecipeDifficulty(recipe, 300)
 - `CraftLib:GetRecipeByProduct(itemId)` - Find all recipes that produce an item
 - `CraftLib:GetRecipeDifficulty(recipe, skillLevel)` - Get difficulty color
 - `CraftLib:GetVendorBuyPrice(itemId)` - Per-unit vendor buy price for vendor-stocked reagents (copper, or nil)
-- `CraftLib:GetActiveProfile()` - Active client profile ("VANILLA"/"TBC"/"WOTLK"/"SOD"), or nil on an unsupported client
+- `CraftLib:GetActiveProfile()` - Active client profile ("VANILLA"/"TBC"/"WOTLK"/"SOD"/"FOREVER"), or nil on an unsupported client
 
 ## Supported Game Versions
 
@@ -68,6 +68,7 @@ One install serves every live Classic-family client - CraftLib detects which one
 - Season of Discovery
 - The Burning Crusade Classic
 - Wrath of the Lich King Classic, including the Titan (3.80) seasonal WotLK client (includes Inscription, skill cap 450)
+- WoW Forever (1.60) - seven professions so far; Engineering and Mining follow once confirmed in game
 - Hardcore (Classic Era data)
 
 ## Addons Using CraftLib

@@ -35,8 +35,8 @@ end
 
 ### Unsupported clients
 
-The client is identified by its interface number: 1.15.x, 2.5.x, 3.3.5a / 3.4.x and 3.80.x are
-supported. On any other client CraftLib loads no recipe data, `IsReady()` returns `false`, and
+The client is identified by its interface number: 1.15.x, 2.5.x, 3.3.5a / 3.4.x, 3.80.x and WoW
+Forever 1.60 (interface 16000-19999, profile `FOREVER`) are supported. On any other client CraftLib loads no recipe data, `IsReady()` returns `false`, and
 `GetActiveProfile()` / `GetActiveFlavor()` return `nil` (check `IsReady()` first; never assume a
 profile). A chat message at login states that the client is not supported.
 
@@ -111,6 +111,7 @@ How the table is built (build-time, not shipped):
         { itemId = 2589, name = "Linen Cloth", count = 1 },
     },
     source = { ... },             -- How to obtain recipe (see Source Object below)
+    tools = { ... },              -- Optional, Forever only: required tools (see Tools below)
     expansion = 1,                -- Which expansion added this
 }
 ```
@@ -183,6 +184,31 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
 }
 ```
 
+**Unknown Source (Forever only):**
+```lua
+{
+    type = "unknown",
+    itemId = 12345,                   -- Teaching item ID (optional)
+}
+```
+The source is not established. The recipe is usable only when learned, owned or bought; it is a
+marker, never a cost claim. Consumers must not price it as free or assume a trainer.
+
+**Currency cost (Forever only):** a vendor or reputation source bought with a non-copper currency carries
+```lua
+currency = { name = "Merchant's Favor", amount = 20 },
+```
+and has NO `cost` key. A missing `cost` means "not payable in copper", never free.
+
+### Tools (Forever only)
+
+`recipe.tools` lists what the crafter must hold, each entry either a tool category or one item:
+```lua
+tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { itemId = 2901, name = "Mining Pick" } }
+```
+A `categoryId` entry is satisfied by any item of that category. To find the recipe that makes a tool
+item, use `CraftLib:GetRecipeByProduct(itemId)`. The Classic buckets do not carry tools yet.
+
 ### Reagent Object
 
 ```lua
@@ -198,7 +224,7 @@ The `source` field describes how to obtain a recipe. Structure varies by type:
 Access via `CraftLib.Constants`:
 
 ```lua
--- Expansions
+-- Expansions (FOREVER = 13 and SOD = 12 are parallel rulesets selected by profile)
 CraftLib.Constants.EXPANSION.VANILLA  -- 1
 CraftLib.Constants.EXPANSION.TBC      -- 2
 CraftLib.Constants.EXPANSION.WOTLK    -- 3
@@ -211,6 +237,7 @@ CraftLib.Constants.SOURCE_TYPE.DROP
 CraftLib.Constants.SOURCE_TYPE.REPUTATION
 CraftLib.Constants.SOURCE_TYPE.QUEST
 CraftLib.Constants.SOURCE_TYPE.STARTER
+CraftLib.Constants.SOURCE_TYPE.UNKNOWN    -- Forever only
 CraftLib.Constants.SOURCE_TYPE.DISCOVERY  -- reserved
 CraftLib.Constants.SOURCE_TYPE.WORLD_DROP -- reserved
 
