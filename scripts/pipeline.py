@@ -16,11 +16,11 @@ Exit codes (this driver and every script it runs):
   0  success
   1  usage/config error or gate finding: an unknown profession, a bucket that does
      not use the requested stage, a missing DB2 build directory (wrong --version or
-     --data-dir), a PENDING/uncorroborated source left by assert_no_*, or a hard
-     audit finding
+     --data-dir), sources extracted from another build than the wiki step reads, a
+     PENDING/uncorroborated source left by assert_no_*, or a hard audit finding
   2  input-data error: a missing or malformed input file, a DB2 column-contract or
      canary failure, a generate gate (GenerateError), or a failed or unusable
-     Wowhead fetch
+     Wowhead or wiki fetch (an offline wiki step with no cached page included)
 argparse itself exits 2 on bad command-line syntax (unknown flag, invalid choice,
 missing required argument); this driver's own command-line checks (--steps,
 --version with --all) do the same.
@@ -34,8 +34,8 @@ from pathlib import Path
 from typing import NamedTuple
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from buckets import (BUCKETS, Bucket, Profession, UnknownProfessionError,  # noqa: E402
-                     add_bucket_argument, get_bucket)
+from buckets import (BUCKETS, ENRICH_SCRIPTS, Bucket, Profession,  # noqa: E402
+                     UnknownProfessionError, add_bucket_argument, get_bucket)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = REPO_ROOT / "scripts"
@@ -45,7 +45,7 @@ DB2_DIR = REPO_ROOT / "vendor" / "db2-parser"
 STEP_NAMES = ("fetch", "extract", "reconcile", "enrich", "verify-trainers",
               "assert-no-pending", "assert-no-unaligned", "audit", "generate", "vendor-prices")
 
-# Steps that hit Wowhead: only these need the politeness delay between professions.
+# Steps that hit Wowhead (or the wiki): only these need the politeness delay between professions.
 _NETWORK_STEPS = ("enrich", "verify-trainers")
 _OFFLINE_GENERATE = frozenset({"generate", "vendor-prices"})
 
@@ -91,7 +91,13 @@ def plan_all(bucket: Bucket, professions: list, opts: Options) -> list:
             steps.append(Step("reconcile", _script("reconcile_cross_bucket", bucket, p) + [
                 *src, "--db2-itemsparse",
                 str(opts.data_dir / opts.version / "ItemSparse.csv")], n))
-        steps.append(Step("enrich", _script("fetch_wowhead_sources", bucket, p) + src, n))
+        # The enrich script follows the registry's enrich mode (ENRICH_SCRIPTS).
+        enrich = _script(ENRICH_SCRIPTS[bucket.enrich], bucket, p) + src
+        if bucket.enrich == "wiki":
+            # WHY the build here too: the wiki step resolves from DB2 facts (yellow, gray,
+            # teaching item), so it must read the same build extract just read.
+            enrich += ["--version", opts.version, "--data-dir", str(opts.data_dir)]
+        steps.append(Step("enrich", enrich, n))
         if bucket.verify_trainers:
             # WHY --on-block exit: under a persistent Wowhead block the default "sleep"
             # waits minutes per spell before failing anyway; exiting stops the run fast,

@@ -181,3 +181,64 @@ def write_sources(sources_dir: Path, folder: str, *, recipes_override: dict | No
         json.dumps({"vendorReagents": {"2320": {"name": "Coarse Thread", "verified": True}}},
                    indent=2), encoding="utf-8")
     return sources_dir
+
+
+# --- Forever: wiki cache, extracted sources and the cross bucket twin -------------------
+
+FOREVER_WIKI_TITLE = "Forever tailoring patterns"
+# Rows keyed by the created item's name, like the real Forever pages (5-column layout).
+# No row for Fixture Boots (1004): it must come out as a review, never a default source.
+FOREVER_WIKITEXT = """{|class="darktable zebra sortable"
+|+ Apprentice tailoring patterns
+|-
+! Item !! Skill !! Type !! New? !! Source
+|-
+| [[Fixture Bolt Item]] || 1 ||  || Old || Trainer
+|-
+| [[Fixture Vest Item]] || 15 ||  || Old || Vendor
+|-
+| [[Fixture Cloak Item]] || 35 ||  || {{text|uncommon|NEW}} || {{text|honored|Honored}}; {{cost|mfvr=60}}
+|}
+"""
+
+
+def write_wiki_cache(sources_dir: Path, text: str = FOREVER_WIKITEXT, *,
+                     folder: str = "Forever", title: str = FOREVER_WIKI_TITLE) -> Path:
+    """Seed the wiki cache so the enrich step runs with --offline (tests never fetch)."""
+    cache = Path(sources_dir) / folder / ".wiki_cache"
+    cache.mkdir(parents=True, exist_ok=True)
+    # Same file name rule as wiki.fetch_wikitext.
+    path = cache / (title.replace(" ", "_") + ".wikitext")
+    path.write_text(text, encoding="utf-8")
+    return path
+
+
+def write_forever_tree(root: Path, *, wikitext: str = FOREVER_WIKITEXT,
+                       vanilla_recipes: dict | None = None) -> tuple[Path, Path]:
+    """(artifacts dir, sources dir) ready for the Forever enrich step.
+
+    root/art holds the xitem build; root/src holds the Forever Tailoring sources written
+    by the real extract step, the seeded wiki cache, and the Vanilla twin the CROSS
+    orange is read from (vanilla_recipes, empty by default so nothing is borrowed).
+    """
+    import extract_db2_sources  # the stage itself, so the fixture cannot drift from it
+    art = write_build(Path(root) / "art", join="xitem")
+    src = Path(root) / "src"
+    rc = extract_db2_sources.main(["--bucket", "forever", "--profession", "Tailoring",
+                                   "--version", FIXTURE_VERSION, "--data-dir", str(art),
+                                   "--output-dir", str(src)])
+    if rc != 0:
+        raise RuntimeError(f"fixture extract failed with exit {rc}")
+    write_wiki_cache(src, wikitext)
+    vanilla = src / "Vanilla"
+    vanilla.mkdir(parents=True, exist_ok=True)
+    (vanilla / "Tailoring.json").write_text(
+        json.dumps({"profession": "tailoring", "recipes": vanilla_recipes or {}}, indent=2),
+        encoding="utf-8")
+    return art, src
+
+
+def forever_enrich_argv(art: Path, src: Path, *extra: str) -> list[str]:
+    """fetch_wiki_sources.main argv for the fixture tree, offline."""
+    return ["--bucket", "forever", "--profession", "Tailoring", "--version", FIXTURE_VERSION,
+            "--data-dir", str(art), "--sources-dir", str(src), "--offline", *extra]

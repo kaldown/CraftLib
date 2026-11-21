@@ -159,3 +159,28 @@ def test_fetch_all_dedupes_and_never_calls_latest(capsys):
     assert sorted(l.rsplit("VERSION=", 1)[1] for l in lines) == [
         "1.15.8.67156", "1.60.1.71037", "2.5.5.65895", "3.4.5.63697"]
     assert "latest" not in out
+
+
+def _enrich(key):
+    return next(s for s in _plan(key, "Tailoring") if s.name == "enrich")
+
+
+def test_enrich_step_follows_the_bucket_enrich_mode():
+    forever = _enrich("forever")
+    assert Path(forever.argv[1]).name == "fetch_wiki_sources.py"
+    # The wiki step reads DB2 facts, so it gets the build like extract does.
+    i = forever.argv.index("--version")
+    assert forever.argv[i + 1] == "1.0"
+    assert forever.argv[forever.argv.index("--data-dir") + 1] == "/d"
+    for key in ("tbc", "vanilla", "wotlk", "sod"):
+        step = _enrich(key)
+        assert Path(step.argv[1]).name == "fetch_wowhead_sources.py"
+        assert "--data-dir" not in step.argv
+
+
+def test_enrich_scripts_cover_every_registry_enrich_mode():
+    assert pipeline.ENRICH_SCRIPTS == {"wowhead-listview": "fetch_wowhead_sources",
+                                       "wowhead-per-spell": "fetch_wowhead_sources",
+                                       "wiki": "fetch_wiki_sources"}
+    for b in BUCKETS.values():
+        assert (pipeline.SCRIPTS / f"{pipeline.ENRICH_SCRIPTS[b.enrich]}.py").is_file()
