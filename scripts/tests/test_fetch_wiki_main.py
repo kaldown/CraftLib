@@ -185,7 +185,7 @@ def test_shared_row_is_ambiguous_when_no_rank_matches_it(tmp_path):
             "ambiguous: wiki row 'fixture bolt item' matches spells 1001, 1002")
 
 
-def test_shared_row_goes_to_the_spell_whose_rank_it_states(tmp_path):
+def test_shared_row_goes_to_the_spell_whose_rank_it_states(tmp_path, capsys):
     # The shared row says Vendor at 15: 1002's pattern asks for rank 15, 1001 has no item.
     text = SHARED_ROW.replace("[[Fixture Bolt Item|Fixture Vest Item]] || 1 ||  || Old || Trainer",
                               "[[Fixture Bolt Item|Fixture Vest Item]] || 15 ||  || Old || Vendor")
@@ -196,6 +196,61 @@ def test_shared_row_goes_to_the_spell_whose_rank_it_states(tmp_path):
                                    "cost": 500}
     assert r["1001"]["source"]["reviewReason"] == (
         "no wiki row: row 'fixture bolt item' taken by spell 1002")
+    # A taken row needs a different fix than a missing one, so the summary counts it apart.
+    err = capsys.readouterr().err
+    assert "no wiki row (taken by another spell): 1" in err
+    assert "    no wiki row: 1\n" in err     # 1004, which really has no row
+
+
+def test_alias_takes_a_row_another_spell_reaches_by_name(tmp_path):
+    # 1004's alias names 1001's row, which only 1001 reaches by name: one owner, 1004.
+    art, src = write_forever_tree(tmp_path)
+    _aliases(src, {"1004": {"key": "Fixture Bolt Item", "skill": 1}})
+    assert fw.main(forever_enrich_argv(art, src)) == 0
+    r = _recipes(src)
+    assert r["1001"]["source"]["reviewReason"] == (
+        "no wiki row: row 'fixture bolt item' taken by spell 1004")
+    assert r["1004"]["source"]["reviewReason"] == (
+        "trainer per wiki but DB2 has teaching item 6004")
+
+
+def test_two_aliases_on_one_row_exit_2(tmp_path, capsys):
+    art, src = write_forever_tree(tmp_path)
+    _aliases(src, {"1001": {"key": "Fixture Bolt Item", "skill": 1},
+                   "1004": {"key": "fixture bolt item", "skill": 1}})
+    before = _sources(src).read_text(encoding="utf-8")
+    assert fw.main(forever_enrich_argv(art, src)) == 2
+    err = capsys.readouterr().err
+    assert "1001" in err and "1004" in err
+    assert _sources(src).read_text(encoding="utf-8") == before
+
+
+@pytest.mark.parametrize("item", [(6101, ("Fixture Bolt Scroll", 0, 0)),
+                                  (6105, ("Pattern: Fixture Bolt OLD", 197, 5))],
+                         ids=["scroll-copy", "placeholder"])
+def test_trainer_recipe_whose_only_item_is_not_a_teaching_item(tmp_path, item):
+    # Regression: a scroll copy (RequiredSkill 0) or a placeholder is not obtainable as a
+    # teaching item, so "Trainer" on the wiki is not contradicted by DB2.
+    item_id, spec = item
+    art, src = write_forever_tree(tmp_path, extra_teaching=((1001, item_id),),
+                                  extra_items={item_id: spec})
+    assert fw.main(forever_enrich_argv(art, src)) == 0
+    r = _recipes(src)["1001"]
+    assert r["source"] == {"type": "TRAINER", "certainty": "WIKI"}
+    assert r["difficulty"] == _diff(1, 10, 40, "WIKI")
+
+
+@pytest.mark.parametrize("bad", ["not a recipe", {"name": "x", "source": "TRAINER"},
+                                 {"name": "x", "source": {"type": "VENDOR"},
+                                  "forever": ["note"]}],
+                         ids=["recipe-string", "source-string", "forever-list"])
+def test_malformed_recipe_entry_exits_2_naming_the_spell(tmp_path, capsys, bad):
+    art, src = write_forever_tree(tmp_path)
+    _edit(src, lambda r: r.__setitem__("1003", bad))
+    before = _sources(src).read_text(encoding="utf-8")
+    assert fw.main(forever_enrich_argv(art, src)) == 2
+    assert "1003" in capsys.readouterr().err
+    assert _sources(src).read_text(encoding="utf-8") == before
 
 
 def test_absent_spell_releases_its_wiki_row(tmp_path):

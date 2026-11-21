@@ -120,9 +120,9 @@ def build_claims(facts: "list[RecipeFacts]", index,
     """Row key -> spell ids (first-seen order) of the profession whose candidates include it.
 
     Built over every recipe of one profession, before any alias is applied: a row
-    that an alias gives to one spell still shows as claimed by the others, so they
-    stay ambiguous until they get an alias too (never a silent second owner). A row
-    claimed by several spells may still get one owner from assign_owners.
+    that an alias gives to one spell still shows as claimed by the others. Ownership
+    (aliases, then teaching-item rank) is assign_owners' job; match_wiki tells every
+    other spell reaching an owned row that it is taken (never a silent second owner).
     Keyed by the row's own key, not the lookup key, so two spells reaching one row
     through its link target and its display text are both counted.
 
@@ -152,29 +152,43 @@ def _alias_rows(index, alias) -> "list[WikiRow]":
 
 def assign_owners(facts: "list[RecipeFacts]", index, claims,
                   aliases=None) -> "dict[WikiRow, str]":
-    """Row claimed by several spells -> the one claimant whose teaching item states its skill.
+    """Wiki row -> the one spell of the profession it belongs to.
 
-    Controller ruling 2026-11-21: the owner is the UNIQUE claimant whose chosen teaching
-    item's RequiredSkillRank equals the row's skill (both > 0). WHY that test: on the
-    old/revised pairs (36 in Tailoring alone) the revised spell's pattern asks for exactly
-    the skill the Forever wiki lists, and the rank is a DB2 fact, not a name guess. No
-    match, or several, leaves the row without an owner, so match_wiki keeps it ambiguous.
-
-    WHY aliases first: an alias overrides everything. A row some alias names is never
-    handed out by rank as well (one row, one owner), and a spell with an alias does not
-    compete for the rows its name reaches: its alias already says which row is its own.
+    Ruling 2026-11-21, aliases first:
+      * an alias naming exactly one row makes its spell that row's owner, whether or not
+        the row is shared. WHY even an unshared row: a spell reaching it by name would
+        otherwise ship the same source and skill a second time.
+      * a row several spells claim by name goes to the UNIQUE claimant without an alias
+        whose chosen teaching item's RequiredSkillRank equals the row's skill (both > 0).
+        WHY that test: on the old/revised pairs the revised spell's pattern asks for
+        exactly the skill the Forever wiki lists, and the rank is a DB2 fact, not a name
+        guess. No match, or several, leaves the row without an owner, so match_wiki keeps
+        it ambiguous. A spell with an alias does not compete: its alias says which row is
+        its own.
+    Two aliases naming one row raise ValueError (one row, one owner).
     """
     aliases = aliases or {}
     by_id = {f.spell_id: f for f in facts}
-    aliased = [r for a in aliases.values() for r in _alias_rows(index, a)]
+    owners: dict[WikiRow, str] = {}
+    for sid, alias in aliases.items():
+        # The alias file serves every profession of the bucket: only this one's spells.
+        if sid not in by_id:
+            continue
+        rows = _alias_rows(index, alias)
+        if len(rows) != 1:
+            continue  # a bad alias owns nothing; match_wiki reports it for its spell
+        r = rows[0]
+        if r in owners:
+            raise ValueError(f"aliases of spells {owners[r]} and {sid} both name wiki row "
+                             f"'{r.key}' with skill {r.skill}")
+        owners[r] = sid
     # Every distinct row once: index files a row under its key and its display text.
     rows = {id(r): r for found in index.values() for r in found}.values()
-    owners: dict[WikiRow, str] = {}
     for r in rows:
-        spells = sorted(set(claims.get(r.key, ())), key=int)
-        if len(spells) < 2 or not r.skill or r.skill <= 0:
+        if r in owners or not r.skill or r.skill <= 0:
             continue
-        if any(r is a for a in aliased):
+        spells = sorted(set(claims.get(r.key, ())), key=int)
+        if len(spells) < 2:
             continue
         matches = [s for s in spells
                    if s not in aliases and by_id[s].rsr > 0 and by_id[s].rsr == r.skill]
@@ -187,8 +201,9 @@ def match_wiki(facts: RecipeFacts, index, aliases, claims,
                owners=None) -> "WikiRow | str":
     """The one wiki row describing this recipe, or the reason there is none.
 
-    owners is assign_owners' result: a row several spells claim goes to its owner, and
-    the others are told it is taken. Without owners every such row is ambiguous.
+    owners is assign_owners' result: an owned row goes to its owner only, and every
+    other spell reaching it is told it is taken. Without owners a row several spells
+    claim is ambiguous.
     """
     owners = owners or {}
     alias = aliases.get(facts.spell_id)
@@ -212,18 +227,19 @@ def match_wiki(facts: RecipeFacts, index, aliases, claims,
             rows = same
     kept, taken = [], None
     for r in rows:
+        owner = owners.get(r)
+        # WHY every row, shared or not: an alias may own a row only this spell reaches
+        # by name; one row never gives its source and skill to two spells.
+        if owner is not None and owner != facts.spell_id:
+            taken = taken or (r, owner)
+            continue
         spells = sorted(set(claims.get(r.key, ())), key=int)
         # WHY even after the rank filter: measured 66 wiki rows matching two DB2 spells
         # (an old Classic spell next to its revised Forever spell). One row cannot give
-        # both their source and skill: it goes to its rank owner (assign_owners), and
-        # without one all claimants wait for an alias or in-game.
-        if len(spells) > 1:
-            owner = owners.get(r)
-            if owner is None:
-                return f"ambiguous: wiki row '{r.key}' matches spells {', '.join(spells)}"
-            if owner != facts.spell_id:
-                taken = taken or (r, owner)
-                continue
+        # both their source and skill: without an owner all claimants wait for an alias
+        # or in-game.
+        if owner is None and len(spells) > 1:
+            return f"ambiguous: wiki row '{r.key}' matches spells {', '.join(spells)}"
         kept.append(r)
     if not kept:
         r, owner = taken

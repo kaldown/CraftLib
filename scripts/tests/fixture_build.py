@@ -214,15 +214,16 @@ def write_wiki_cache(sources_dir: Path, text: str = FOREVER_WIKITEXT, *,
 
 
 def write_forever_tree(root: Path, *, wikitext: str = FOREVER_WIKITEXT,
-                       vanilla_recipes: dict | None = None) -> tuple[Path, Path]:
+                       vanilla_recipes: dict | None = None, **build_kw) -> tuple[Path, Path]:
     """(artifacts dir, sources dir) ready for the Forever enrich step.
 
-    root/art holds the xitem build; root/src holds the Forever Tailoring sources written
-    by the real extract step, the seeded wiki cache, and the Vanilla twin the CROSS
-    orange is read from (vanilla_recipes, empty by default so nothing is borrowed).
+    root/art holds the xitem build (build_kw goes to write_build, e.g. extra_teaching);
+    root/src holds the Forever Tailoring sources written by the real extract step, the
+    seeded wiki cache, and the Vanilla twin the CROSS orange is read from
+    (vanilla_recipes, empty by default so nothing is borrowed).
     """
     import extract_db2_sources  # the stage itself, so the fixture cannot drift from it
-    art = write_build(Path(root) / "art", join="xitem")
+    art = write_build(Path(root) / "art", join="xitem", **build_kw)
     src = Path(root) / "src"
     rc = extract_db2_sources.main(["--bucket", "forever", "--profession", "Tailoring",
                                    "--version", FIXTURE_VERSION, "--data-dir", str(art),

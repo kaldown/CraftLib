@@ -508,14 +508,53 @@ def test_shared_row_without_a_skill_has_no_owner():
 
 
 def test_alias_overrides_rank_ownership():
-    # 3496's alias names the shared row: it takes it, and the row is never handed to
-    # 439128 by rank as well (one row, one owner); 439128 stays ambiguous.
+    # 3496's alias names the shared row: it owns it, and the row is never handed to
+    # 439128 by rank as well (one row, one owner); 439128 is told it is taken.
     aliases = {"3496": {"key": "Linen Cloak", "skill": 40}}
     idx, old, new, claims, owners = _shared(old_rsr=25, new_rsr=40, aliases=aliases)
     r = idx["linen cloak"][0]
-    assert owners == {}
+    assert owners == {r: "3496"}
     assert match_wiki(old, idx, aliases, claims, owners) is r
-    assert match_wiki(new, idx, aliases, claims, owners).startswith("ambiguous: wiki row")
+    assert match_wiki(new, idx, aliases, claims, owners) == (
+        "no wiki row: row 'linen cloak' taken by spell 3496")
+
+
+def test_alias_row_reached_by_one_other_spell_by_name_has_one_owner():
+    # 3496's alias names R and its own name does not reach R; 439128 is R's only claimant
+    # by name, so R is not shared. Without alias ownership both would ship R's source.
+    r = row("VENDOR", skill=40)
+    idx = index_rows([r])
+    aliased = facts(spell_id="3496", name="Linen Robe", item_name="Linen Robe", **ITEM)
+    other = facts(spell_id="439128", **ITEM)
+    aliases = {"3496": {"key": "Linen Cloak", "skill": 40}}
+    claims = build_claims([aliased, other], idx)
+    assert claims == {"linen cloak": ["439128"]}
+    owners = assign_owners([aliased, other], idx, claims, aliases)
+    assert owners == {r: "3496"}
+    assert match_wiki(aliased, idx, aliases, claims, owners) is r
+    assert match_wiki(other, idx, aliases, claims, owners) == (
+        "no wiki row: row 'linen cloak' taken by spell 3496")
+
+
+def test_two_aliases_naming_one_row_fail_loud():
+    idx = index_rows([row(skill=40)])
+    a, b = facts(spell_id="3496"), facts(spell_id="439128")
+    aliases = {"3496": {"key": "Linen Cloak", "skill": 40},
+               "439128": {"key": "linen cloak", "skill": 40}}
+    with pytest.raises(ValueError, match="3496 and 439128"):
+        assign_owners([a, b], idx, build_claims([a, b], idx), aliases)
+
+
+def test_alias_of_a_spell_outside_the_profession_owns_nothing():
+    # The alias file serves every profession of the bucket; another profession's alias
+    # must not take a row of this one.
+    r = row(skill=40)
+    idx = index_rows([r])
+    f = facts()
+    aliases = {"99999": {"key": "Linen Cloak", "skill": 40}}
+    owners = assign_owners([f], idx, build_claims([f], idx), aliases)
+    assert owners == {}
+    assert match_wiki(f, idx, aliases, build_claims([f], idx), owners) is r
 
 
 def test_spell_aliased_elsewhere_does_not_compete_for_the_row():
@@ -526,7 +565,7 @@ def test_spell_aliased_elsewhere_does_not_compete_for_the_row():
     aliases = {"3496": {"key": "Old Linen Cloak", "skill": 10}}
     idx, old, new, claims, owners = _shared(old_rsr=40, new_rsr=40,
                                             rows=[shared, old_row], aliases=aliases)
-    assert owners == {shared: "439128"}
+    assert owners == {old_row: "3496", shared: "439128"}
     assert match_wiki(new, idx, aliases, claims, owners) is shared
     assert match_wiki(old, idx, aliases, claims, owners) is old_row
 

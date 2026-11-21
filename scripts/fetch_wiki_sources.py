@@ -38,11 +38,11 @@ from pathlib import Path
 import extract_db2_sources as extract
 from buckets import ENRICH_SCRIPTS, UnknownProfessionError, add_bucket_argument, get_bucket
 from db2 import CanaryError, ColumnContractError
-from forever_resolve import (RecipeFacts, Resolution, assign_owners, build_claims,
-                             match_wiki, resolve)
+from forever_resolve import (NO_WIKI_ROW, RecipeFacts, Resolution, assign_owners,
+                             build_claims, match_wiki, resolve)
 from import_probe import ingame_facts
 from pipeline_io import atomic_write_json, load_json
-from wiki import WikiError, fetch_wikitext, index_rows, parse_rows
+from wiki import WikiError, fetch_wikitext, index_rows, normalize, parse_rows
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -64,6 +64,7 @@ def load_aliases(path: Path) -> dict:
     aliases = data.get("aliases") if isinstance(data, dict) else None
     if not isinstance(aliases, dict):
         raise ValueError(f"{path}: expected an object with an 'aliases' object")
+    named: dict[tuple, str] = {}
     for sid, alias in aliases.items():
         # WHY strict: match_wiki reads both fields unchecked, and a JSON true is an int in
         # Python, so it would silently read as skill 1.
@@ -72,6 +73,12 @@ def load_aliases(path: Path) -> dict:
         if not ok:
             raise ValueError(f"{path}: alias for spell {sid} needs a 'key' string and a "
                              f"'skill' integer")
+        # One row, one owner: two aliases naming the same row would ship it twice.
+        target = (normalize(alias["key"]), alias["skill"])
+        if target in named:
+            raise ValueError(f"{path}: aliases of spells {named[target]} and {sid} both name "
+                             f"'{target[0]}' with skill {target[1]}")
+        named[target] = sid
     return aliases
 
 
@@ -234,9 +241,29 @@ class Summary:
     reviews: Counter = field(default_factory=Counter)
 
 
+_TAKEN = re.compile(rf"^{re.escape(NO_WIKI_ROW)}: row .* taken by spell \d+$")
+
+
 def review_group(reason: str) -> str:
     """A review reason's prefix (text before ':'), numbers folded, for the summary counts."""
+    if _TAKEN.match(reason):
+        # Counted apart: the row exists but belongs to another spell, which an alias or a
+        # capture can settle; a missing row needs the wiki itself.
+        return f"{NO_WIKI_ROW} (taken by another spell)"
     return re.sub(r"\d+", "N", reason.split(":", 1)[0])
+
+
+def check_recipes(doc, path: Path) -> None:
+    """Fail on a sources file the enrich step cannot read entry by entry (exit 2)."""
+    if not isinstance(doc, dict) or not isinstance(doc.get("recipes"), dict):
+        raise ValueError(f"{path}: expected an object with a 'recipes' object")
+    for sid, recipe in doc["recipes"].items():
+        # Named per spell: a bare AttributeError would hide which entry is broken.
+        if not isinstance(recipe, dict):
+            raise ValueError(f"{path}: recipe {sid} is not an object")
+        for key in ("source", "forever"):
+            if recipe.get(key) is not None and not isinstance(recipe[key], dict):
+                raise ValueError(f"{path}: recipe {sid}: '{key}' is not an object")
 
 
 def enrich(doc: dict, profession, indexes: dict, rows, aliases: dict,
@@ -343,8 +370,7 @@ def main(argv: "list[str] | None" = None) -> int:
     title = bucket.wiki_pages[profession.folder]
     try:
         doc = load_json(sources_file)
-        if not isinstance(doc, dict) or not isinstance(doc.get("recipes"), dict):
-            raise ValueError(f"{sources_file}: expected an object with a 'recipes' object")
+        check_recipes(doc, sources_file)
         if doc.get("version") != version:
             # The recipe list and the facts must come from one build, or a spell's
             # thresholds and teaching item would describe a different client.
