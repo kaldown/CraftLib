@@ -155,6 +155,27 @@ def test_orange_precedence(extra, wiki_skill, trainer, cross, orange, origin, ce
     assert res.difficulty["certainty"] == certainty
 
 
+@pytest.mark.parametrize("extra, wiki_skill, cross, note", [
+    pytest.param(dict(rsr=55, **ITEM), 80, None, "wiki row skill 80 differs from ITEM orange 55",
+                 id="item"),
+    pytest.param(dict(yellow=50, gray=70, **ITEM), 15, 1,
+                 "wiki row skill 15 differs from CROSS orange 1", id="cross"),
+    pytest.param(dict(rsr=55, **ITEM), 55, None, None, id="item-agrees"),
+    pytest.param(dict(rsr=55, **ITEM), None, None, None, id="row-without-skill"),
+])
+def test_wiki_skill_differing_from_the_chosen_orange_is_noted(extra, wiki_skill, cross, note):
+    # A row matched by name whose skill disagrees may describe another (renamed) recipe.
+    oranges = [("Vanilla", cross)] if cross is not None else None
+    res = resolve(facts(**extra), row("VENDOR", skill=wiki_skill), None, oranges)
+    assert res.review is None
+    assert res.notes == ((note,) if note else ())
+
+
+def test_no_skill_note_without_a_matched_row():
+    res = resolve(facts(rsr=55, **ITEM), "no wiki row", None, None)
+    assert res.review == "no wiki row" and res.notes == ()
+
+
 def test_difficulty_shape_and_green():
     res = resolve(facts(), row("TRAINER", skill=40), None, None)
     assert res.difficulty == {"orange": 40, "yellow": 95, "green": 115, "gray": 135,
@@ -651,17 +672,18 @@ def test_match_without_owners_is_unchanged():
 def test_cross_orange_falls_back_to_the_second_bucket():
     # The caller passes only guarded oranges (WOWHEAD, equal yellow and gray); the
     # resolver still rejects 0 and above-yellow ones, then tries the next bucket.
+    # The wiki skill equals the orange that wins, so the only note is the rejected bucket's.
     for first in (0, 60):
-        res = resolve(facts(yellow=50, gray=70, **ITEM), row("VENDOR", skill=15), None,
+        res = resolve(facts(yellow=50, gray=70, **ITEM), row("VENDOR", skill=7), None,
                       [("Vanilla", first), ("SoD", 7)])
         assert (res.difficulty["orange"], res.difficulty["orangeFrom"]) == (7, "CROSS")
-    res = resolve(facts(yellow=50, gray=70, **ITEM), row("VENDOR", skill=15), None,
+    res = resolve(facts(yellow=50, gray=70, **ITEM), row("VENDOR", skill=7), None,
                   [("Vanilla", 60), ("SoD", 7)])
     assert res.notes == ("Vanilla orange 60 above yellow 50 ignored",)
 
 
 def test_cross_orange_first_bucket_wins():
-    res = resolve(facts(yellow=50, gray=70, **ITEM), row("VENDOR", skill=15), None,
+    res = resolve(facts(yellow=50, gray=70, **ITEM), row("VENDOR", skill=5), None,
                   [("Vanilla", 5), ("SoD", 7)])
     assert res.difficulty["orange"] == 5 and res.notes == ()
 

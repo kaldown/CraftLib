@@ -391,6 +391,7 @@ def _orange(facts, wiki, row, trainer_skill, cross_oranges, notes):
     # recipe measured; one above yellow is not a learn skill the thresholds allow.
     if facts.teaching_item is not None and facts.rsr > 0:
         if facts.rsr <= yellow:
+            _note_wiki_skill(row, facts.rsr, "ITEM", notes)
             return facts.rsr, "ITEM"
         notes.append(f"teaching item {facts.teaching_item} RequiredSkillRank {facts.rsr} "
                      f"above yellow {yellow} ignored")
@@ -400,6 +401,7 @@ def _orange(facts, wiki, row, trainer_skill, cross_oranges, notes):
     # falls through to the next bucket, then to the wiki.
     for bucket, cross in cross_oranges:
         if 0 < cross <= yellow:
+            _note_wiki_skill(row, cross, "CROSS", notes)
             return cross, "CROSS"
         if cross > yellow:
             notes.append(f"{bucket} orange {cross} above yellow {yellow} ignored")
@@ -416,6 +418,14 @@ def _orange(facts, wiki, row, trainer_skill, cross_oranges, notes):
     if skill < 1:
         return f"no learn skill: wiki skill {skill} below 1"
     return skill, "WIKI"
+
+
+def _note_wiki_skill(row, orange, origin, notes):
+    # WHY: the row is matched by name only, so a recipe renamed or reworked on Forever can
+    # match another recipe's row; its source would then be that recipe's. A skill that
+    # disagrees with the stronger orange is the visible sign, listed in REVIEW.md.
+    if row is not None and row.skill is not None and row.skill != orange:
+        notes.append(f"wiki row skill {row.skill} differs from {origin} orange {orange}")
 
 
 def _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes):
