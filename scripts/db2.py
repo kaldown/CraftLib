@@ -205,8 +205,8 @@ def choose_teaching_item(bucket, candidates: list[str], item_details: dict[str, 
                    if _item_field(c, item_details[c], "RequiredSkill") in skill_lines
                    and not PLACEHOLDER_NAME.search(item_details[c].get("Display_lang") or "")]
         # WHY the lowest positive RequiredSkillRank: that is the rank the recipe item
-        # really asks for, and it can become the learn skill (orange). Ties and all-zero fall back to the lowest
-        # numeric id so the pick is stable across runs.
+        # really asks for, and it can become the learn skill (orange). Ties and all-zero
+        # fall back to the lowest numeric id so the pick is stable across runs.
         ranked = [(_required_skill_rank(c, item_details[c]), int(c)) for c in present]
         if not ranked:
             return None

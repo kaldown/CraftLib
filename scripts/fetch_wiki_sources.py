@@ -103,7 +103,8 @@ def load_capture(path: Path, version: str) -> "dict | None":
     build = cap.get("build")
     if build and build != version:
         # Not fatal: the owner's capture may predate a client patch, and a recipe absent
-        # from it is still excluded as not in game; the warning says why a recipe may be "not in game" unexpectedly.
+        # from it is still excluded as not in game; the warning says why a recipe may be
+        # "not in game" unexpectedly.
         print(f"WARNING: {path} was captured on build {build}, not {version}", file=sys.stderr)
     return cap
 
