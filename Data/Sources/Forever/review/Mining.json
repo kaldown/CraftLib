@@ -88,6 +88,28 @@
     ]
   ],
   "heldBack": true,
+  "notes": [
+    [
+      2658,
+      "Smelt Silver",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      2659,
+      "Smelt Bronze",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      3307,
+      "Smelt Iron",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      3308,
+      "Smelt Gold",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ]
+  ],
   "orangeFrom": {
     "CROSS": 4
   },

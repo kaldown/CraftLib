@@ -2656,6 +2656,11 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 320 differs from CROSS orange 300"
+        ]
       }
     },
     "19091": {
@@ -3094,6 +3099,11 @@
         "gray": 135,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 150 differs from ITEM orange 125"
+        ]
       }
     },
     "23399": {
@@ -3191,6 +3201,11 @@
         "gray": 335,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 300 differs from ITEM orange 295"
+        ]
       }
     },
     "23707": {
@@ -7283,6 +7298,11 @@
         "gray": 285,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 270 differs from ITEM orange 245"
+        ]
       }
     },
     "23628": {
@@ -7303,6 +7323,11 @@
         "gray": 305,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 290 differs from ITEM orange 265"
+        ]
       }
     },
     "16661": {
@@ -7319,6 +7344,11 @@
         "gray": 310,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 295 differs from ITEM orange 270"
+        ]
       }
     },
     "16728": {
@@ -7335,6 +7365,11 @@
         "gray": 310,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 300 differs from ITEM orange 290"
+        ]
       }
     },
     "23629": {
@@ -7355,6 +7390,11 @@
         "gray": 320,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 300 differs from ITEM orange 295"
+        ]
       }
     },
     "16746": {
@@ -7371,6 +7411,11 @@
         "gray": 310,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 300 differs from ITEM orange 295"
+        ]
       }
     },
     "1263031": {

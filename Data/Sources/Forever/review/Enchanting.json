@@ -220,6 +220,53 @@
     ]
   ],
   "heldBack": false,
+  "notes": [
+    [
+      7771,
+      "Enchant Cloak - Minor Protection",
+      "wiki row skill 70 differs from ITEM orange 90"
+    ],
+    [
+      23803,
+      "Enchant Weapon - Mighty Spirit",
+      "DB2 faction 59 Thorium Brotherhood Honored on teaching item 19448; wiki source '?'"
+    ],
+    [
+      25124,
+      "Minor Wizard Oil",
+      "wiki row skill 45 differs from ITEM orange 5"
+    ],
+    [
+      435481,
+      "Enchant Weapon - Dismantle",
+      "teaching item 215129 RequiredSkillRank 225 above yellow 200 ignored"
+    ],
+    [
+      435903,
+      "Enchant Chest - Retricutioner",
+      "teaching item 215138 RequiredSkillRank 225 above yellow 200 ignored"
+    ],
+    [
+      1249107,
+      "Frozen Heart of the Mountain",
+      "wiki row skill 285 differs from ITEM orange 265"
+    ],
+    [
+      1249112,
+      "Molten Heart of the Mountain",
+      "wiki row skill 285 differs from ITEM orange 265"
+    ],
+    [
+      1249114,
+      "Dormant Heart of the Mountain",
+      "wiki row skill 285 differs from ITEM orange 265"
+    ],
+    [
+      1294054,
+      "Enchant Gloves - Lotus Claw",
+      "wiki row skill 290 differs from ITEM orange 295"
+    ]
+  ],
   "orangeFrom": {
     "CROSS": 59,
     "ITEM": 160,

@@ -1,5 +1,5 @@
 -- Data/Forever/Tailoring/Recipes.lua
--- Tailoring recipes for Forever Classic
+-- Tailoring recipes for WoW Forever
 -- Generated from DB2 data and the Warcraft Wiki recipe tables
 local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants

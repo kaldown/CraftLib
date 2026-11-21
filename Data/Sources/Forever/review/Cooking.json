@@ -70,6 +70,28 @@
     ]
   ],
   "heldBack": false,
+  "notes": [
+    [
+      6414,
+      "Roasted Kodo Meat",
+      "wiki row skill 25 differs from ITEM orange 35"
+    ],
+    [
+      6500,
+      "Goblin Deviled Clams",
+      "wiki row skill 150 differs from CROSS orange 125"
+    ],
+    [
+      13028,
+      "Goldthorn Tea",
+      "wiki row skill 215 differs from CROSS orange 175"
+    ],
+    [
+      24801,
+      "Smoked Desert Dumplings",
+      "wiki row skill 325 differs from CROSS orange 285"
+    ]
+  ],
   "orangeFrom": {
     "CROSS": 8,
     "ITEM": 111,

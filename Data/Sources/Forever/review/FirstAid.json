@@ -35,6 +35,53 @@
     ]
   ],
   "heldBack": false,
+  "notes": [
+    [
+      1244434,
+      "Greater Healing Potion",
+      "wiki row skill 175 differs from ITEM orange 155"
+    ],
+    [
+      1244435,
+      "Superior Healing Potion",
+      "wiki row skill 230 differs from ITEM orange 215"
+    ],
+    [
+      1244436,
+      "Major Healing Potion",
+      "wiki row skill 290 differs from ITEM orange 275"
+    ],
+    [
+      1259341,
+      "Potent Anti-Venom",
+      "wiki row skill 230 differs from ITEM orange 215"
+    ],
+    [
+      1259343,
+      "Clever Poultice",
+      "wiki row skill 160 differs from ITEM orange 140"
+    ],
+    [
+      1259344,
+      "Superior Poultice",
+      "wiki row skill 225 differs from ITEM orange 210"
+    ],
+    [
+      1259345,
+      "Powerful Poultice",
+      "wiki row skill 295 differs from ITEM orange 280"
+    ],
+    [
+      1259348,
+      "Leather Tourniquet",
+      "wiki row skill 220 differs from ITEM orange 200"
+    ],
+    [
+      1259349,
+      "Surgical Tourniquet",
+      "wiki row skill 280 differs from ITEM orange 265"
+    ]
+  ],
   "orangeFrom": {
     "CROSS": 9,
     "ITEM": 14,

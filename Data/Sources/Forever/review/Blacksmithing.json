@@ -610,6 +610,628 @@
     ]
   ],
   "heldBack": false,
+  "notes": [
+    [
+      2662,
+      "Copper Chain Pants",
+      "wiki row skill 15 differs from CROSS orange 1"
+    ],
+    [
+      2663,
+      "Copper Bracers",
+      "wiki row skill 20 differs from CROSS orange 1"
+    ],
+    [
+      2667,
+      "Runed Copper Breastplate",
+      "wiki row skill 80 differs from ITEM orange 55"
+    ],
+    [
+      2673,
+      "Silvered Bronze Breastplate",
+      "wiki row skill 130 differs from ITEM orange 105"
+    ],
+    [
+      3115,
+      "Rough Weightstone",
+      "wiki row skill 15 differs from CROSS orange 1"
+    ],
+    [
+      3295,
+      "Deadly Bronze Poniard",
+      "wiki row skill 125 differs from ITEM orange 100"
+    ],
+    [
+      3297,
+      "Mighty Iron Hammer",
+      "wiki row skill 145 differs from ITEM orange 120"
+    ],
+    [
+      3330,
+      "Silvered Bronze Shoulders",
+      "wiki row skill 125 differs from ITEM orange 100"
+    ],
+    [
+      3334,
+      "Green Iron Boots",
+      "wiki row skill 145 differs from ITEM orange 120"
+    ],
+    [
+      3336,
+      "Green Iron Gauntlets",
+      "wiki row skill 150 differs from ITEM orange 125"
+    ],
+    [
+      3492,
+      "Hardened Iron Shortsword",
+      "wiki row skill 160 differs from ITEM orange 135"
+    ],
+    [
+      3493,
+      "Jade Serpentblade",
+      "wiki row skill 175 differs from ITEM orange 150"
+    ],
+    [
+      3494,
+      "Solid Iron Maul",
+      "wiki row skill 155 differs from ITEM orange 130"
+    ],
+    [
+      3495,
+      "Golden Iron Destroyer",
+      "wiki row skill 170 differs from ITEM orange 145"
+    ],
+    [
+      3497,
+      "Frost Tiger Blade",
+      "wiki row skill 200 differs from ITEM orange 175"
+    ],
+    [
+      3498,
+      "Massive Iron Axe",
+      "wiki row skill 185 differs from ITEM orange 160"
+    ],
+    [
+      3500,
+      "Shadow Crescent Axe",
+      "wiki row skill 200 differs from ITEM orange 175"
+    ],
+    [
+      3504,
+      "Green Iron Shoulders",
+      "wiki row skill 160 differs from ITEM orange 135"
+    ],
+    [
+      3513,
+      "Polished Steel Boots",
+      "wiki row skill 185 differs from ITEM orange 160"
+    ],
+    [
+      6518,
+      "Iridescent Hammer",
+      "wiki row skill 140 differs from ITEM orange 115"
+    ],
+    [
+      7221,
+      "Iron Shield Spike",
+      "wiki row skill 150 differs from ITEM orange 125"
+    ],
+    [
+      7222,
+      "Iron Counterweight",
+      "wiki row skill 165 differs from ITEM orange 140"
+    ],
+    [
+      7224,
+      "Steel Weapon Chain",
+      "wiki row skill 190 differs from ITEM orange 165"
+    ],
+    [
+      9811,
+      "Barbaric Iron Shoulders",
+      "wiki row skill 160 differs from ITEM orange 135"
+    ],
+    [
+      9813,
+      "Barbaric Iron Breastplate",
+      "wiki row skill 160 differs from ITEM orange 135"
+    ],
+    [
+      9814,
+      "Barbaric Iron Helm",
+      "wiki row skill 175 differs from ITEM orange 150"
+    ],
+    [
+      9818,
+      "Barbaric Iron Boots",
+      "wiki row skill 180 differs from ITEM orange 155"
+    ],
+    [
+      9820,
+      "Barbaric Iron Gloves",
+      "wiki row skill 185 differs from ITEM orange 160"
+    ],
+    [
+      9933,
+      "Heavy Mithril Pants",
+      "wiki row skill 210 differs from ITEM orange 185"
+    ],
+    [
+      9937,
+      "Mithril Plate Bracers",
+      "wiki row skill 215 differs from ITEM orange 190"
+    ],
+    [
+      9939,
+      "Mithril Shield Spike",
+      "wiki row skill 215 differs from ITEM orange 190"
+    ],
+    [
+      9950,
+      "Ornate Mithril Gloves",
+      "wiki row skill 220 differs from ITEM orange 195"
+    ],
+    [
+      9952,
+      "Ornate Mithril Shoulders",
+      "wiki row skill 225 differs from ITEM orange 200"
+    ],
+    [
+      9957,
+      "Orcish War Leggings",
+      "wiki row skill 230 differs from ITEM orange 205"
+    ],
+    [
+      9964,
+      "Mithril Spurs",
+      "wiki row skill 235 differs from ITEM orange 210"
+    ],
+    [
+      9966,
+      "Mithril Plate Shoulders",
+      "wiki row skill 235 differs from ITEM orange 210"
+    ],
+    [
+      9970,
+      "Heavy Mithril Helm",
+      "wiki row skill 245 differs from ITEM orange 220"
+    ],
+    [
+      9985,
+      "Bronze Warhammer",
+      "wiki row skill 100 differs from CROSS orange 125"
+    ],
+    [
+      9995,
+      "Blue Glittering Axe",
+      "wiki row skill 220 differs from ITEM orange 195"
+    ],
+    [
+      9997,
+      "Wicked Mithril Blade",
+      "wiki row skill 225 differs from ITEM orange 200"
+    ],
+    [
+      10005,
+      "Dazzling Mithril Rapier",
+      "wiki row skill 240 differs from ITEM orange 215"
+    ],
+    [
+      10009,
+      "Runed Mithril Hammer",
+      "wiki row skill 245 differs from ITEM orange 220"
+    ],
+    [
+      10013,
+      "Ebon Shiv",
+      "wiki row skill 255 differs from ITEM orange 230"
+    ],
+    [
+      12259,
+      "Silvered Bronze Leggings",
+      "wiki row skill 155 differs from ITEM orange 130"
+    ],
+    [
+      15292,
+      "Dark Iron Pulverizer",
+      "wiki row skill 265 differs from ITEM orange 240"
+    ],
+    [
+      15293,
+      "Dark Iron Mail",
+      "wiki row skill 270 differs from ITEM orange 245"
+    ],
+    [
+      15294,
+      "Dark Iron Sunderer",
+      "wiki row skill 275 differs from ITEM orange 250"
+    ],
+    [
+      15295,
+      "Dark Iron Shoulders",
+      "wiki row skill 280 differs from ITEM orange 255"
+    ],
+    [
+      15296,
+      "Dark Iron Plate",
+      "wiki row skill 285 differs from ITEM orange 260"
+    ],
+    [
+      15973,
+      "Searing Golden Blade",
+      "wiki row skill 190 differs from ITEM orange 165"
+    ],
+    [
+      16642,
+      "Thorium Armor",
+      "wiki row skill 250 differs from ITEM orange 225"
+    ],
+    [
+      16643,
+      "Thorium Belt",
+      "wiki row skill 250 differs from ITEM orange 225"
+    ],
+    [
+      16644,
+      "Thorium Bracers",
+      "wiki row skill 255 differs from ITEM orange 230"
+    ],
+    [
+      16645,
+      "Radiant Belt",
+      "wiki row skill 260 differs from ITEM orange 235"
+    ],
+    [
+      16646,
+      "Imperial Plate Shoulders",
+      "wiki row skill 265 differs from ITEM orange 240"
+    ],
+    [
+      16647,
+      "Imperial Plate Belt",
+      "wiki row skill 265 differs from ITEM orange 240"
+    ],
+    [
+      16648,
+      "Radiant Breastplate",
+      "wiki row skill 270 differs from ITEM orange 245"
+    ],
+    [
+      16649,
+      "Imperial Plate Bracers",
+      "wiki row skill 270 differs from ITEM orange 245"
+    ],
+    [
+      16651,
+      "Thorium Shield Spike",
+      "wiki row skill 275 differs from ITEM orange 250"
+    ],
+    [
+      16652,
+      "Thorium Boots",
+      "wiki row skill 280 differs from ITEM orange 255"
+    ],
+    [
+      16653,
+      "Thorium Helm",
+      "wiki row skill 280 differs from ITEM orange 255"
+    ],
+    [
+      16654,
+      "Radiant Gloves",
+      "wiki row skill 285 differs from ITEM orange 260"
+    ],
+    [
+      16655,
+      "Fiery Plate Gauntlets",
+      "wiki row skill 290 differs from ITEM orange 265"
+    ],
+    [
+      16656,
+      "Radiant Boots",
+      "wiki row skill 290 differs from ITEM orange 265"
+    ],
+    [
+      16657,
+      "Imperial Plate Boots",
+      "wiki row skill 295 differs from ITEM orange 270"
+    ],
+    [
+      16658,
+      "Imperial Plate Helm",
+      "wiki row skill 295 differs from ITEM orange 270"
+    ],
+    [
+      16659,
+      "Radiant Circlet",
+      "wiki row skill 295 differs from ITEM orange 270"
+    ],
+    [
+      16660,
+      "Dawnbringer Shoulders",
+      "wiki row skill 290 differs from ITEM orange 265"
+    ],
+    [
+      16662,
+      "Thorium Leggings",
+      "wiki row skill 300 differs from ITEM orange 275"
+    ],
+    [
+      16663,
+      "Imperial Plate Chest",
+      "wiki row skill 300 differs from ITEM orange 275"
+    ],
+    [
+      16664,
+      "Runic Plate Shoulders",
+      "wiki row skill 300 differs from ITEM orange 275"
+    ],
+    [
+      16665,
+      "Runic Plate Boots",
+      "wiki row skill 300 differs from ITEM orange 275"
+    ],
+    [
+      16667,
+      "Demon Forged Breastplate",
+      "wiki row skill 285 differs from ITEM orange 260"
+    ],
+    [
+      16724,
+      "Whitesoul Helm",
+      "wiki row skill 300 differs from ITEM orange 290"
+    ],
+    [
+      16725,
+      "Radiant Leggings",
+      "wiki row skill 300 differs from ITEM orange 280"
+    ],
+    [
+      16726,
+      "Runic Plate Helm",
+      "wiki row skill 300 differs from ITEM orange 280"
+    ],
+    [
+      16730,
+      "Imperial Plate Leggings",
+      "wiki row skill 300 differs from ITEM orange 280"
+    ],
+    [
+      16731,
+      "Runic Breastplate",
+      "wiki row skill 300 differs from ITEM orange 285"
+    ],
+    [
+      16732,
+      "Runic Plate Leggings",
+      "wiki row skill 300 differs from ITEM orange 285"
+    ],
+    [
+      16969,
+      "Ornate Thorium Handaxe",
+      "wiki row skill 275 differs from ITEM orange 250"
+    ],
+    [
+      16970,
+      "Dawn's Edge",
+      "wiki row skill 275 differs from ITEM orange 250"
+    ],
+    [
+      16971,
+      "Huge Thorium Battleaxe",
+      "wiki row skill 280 differs from ITEM orange 255"
+    ],
+    [
+      16973,
+      "Enchanted Battlehammer",
+      "wiki row skill 280 differs from ITEM orange 255"
+    ],
+    [
+      16978,
+      "Blazing Rapier",
+      "wiki row skill 280 differs from ITEM orange 255"
+    ],
+    [
+      16983,
+      "Serenity",
+      "wiki row skill 285 differs from ITEM orange 260"
+    ],
+    [
+      16984,
+      "Volcanic Hammer",
+      "wiki row skill 290 differs from ITEM orange 265"
+    ],
+    [
+      16985,
+      "Corruption",
+      "wiki row skill 290 differs from ITEM orange 265"
+    ],
+    [
+      16991,
+      "Annihilator",
+      "teaching item 12835 RequiredSkillRank 300 above yellow 295 ignored"
+    ],
+    [
+      20872,
+      "Fiery Chain Girdle",
+      "wiki row skill 295 differs from ITEM orange 270"
+    ],
+    [
+      20874,
+      "Dark Iron Bracers",
+      "wiki row skill 295 differs from ITEM orange 270"
+    ],
+    [
+      21913,
+      "Edge of Winter",
+      "wiki row skill 190 differs from ITEM orange 165"
+    ],
+    [
+      22757,
+      "Elemental Sharpening Stone",
+      "teaching item 18264 RequiredSkillRank 300 above yellow 275 ignored"
+    ],
+    [
+      23632,
+      "Girdle of the Dawn",
+      "wiki row skill 290 differs from ITEM orange 265"
+    ],
+    [
+      23650,
+      "Ebon Hand",
+      "teaching item 19210 RequiredSkillRank 300 above yellow 295 ignored"
+    ],
+    [
+      23652,
+      "Blackguard",
+      "teaching item 19211 RequiredSkillRank 300 above yellow 295 ignored"
+    ],
+    [
+      23653,
+      "Nightfall",
+      "teaching item 19212 RequiredSkillRank 300 above yellow 295 ignored"
+    ],
+    [
+      28242,
+      "Icebane Breastplate",
+      "DB2 faction 529 Argent Dawn Exalted on teaching item 22703; wiki source '?'"
+    ],
+    [
+      28243,
+      "Icebane Gauntlets",
+      "DB2 faction 529 Argent Dawn Revered on teaching item 22704; wiki source '?'"
+    ],
+    [
+      28244,
+      "Icebane Bracers",
+      "DB2 faction 749 Hydraxian Waterlords Revered on teaching item 22705; wiki source '?'"
+    ],
+    [
+      427061,
+      "Mantle of the Second War",
+      "teaching item 210779 RequiredSkillRank 150 above yellow 140 ignored"
+    ],
+    [
+      1252292,
+      "Shining Mithril Helm",
+      "wiki row skill 235 differs from ITEM orange 215"
+    ],
+    [
+      1252323,
+      "Prefect's Waistguard",
+      "wiki row skill 270 differs from ITEM orange 250"
+    ],
+    [
+      1252366,
+      "Stormcarver",
+      "DB2 faction 576 Timbermaw Hold Revered on teaching item 251469; wiki source '?'"
+    ],
+    [
+      1252367,
+      "Bagh Nakh",
+      "DB2 faction 576 Timbermaw Hold Revered on teaching item 251470; wiki source '?'"
+    ],
+    [
+      1292945,
+      "Justice Leggings",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292946,
+      "Justice Gauntlets",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292947,
+      "Justice Spaulders",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292948,
+      "Justice Greaves",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292949,
+      "Justice Legplates",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292950,
+      "Justice Gloves",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292951,
+      "Justice Epaulets",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292952,
+      "Justice Treads",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292953,
+      "Justice Legguards",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292954,
+      "Justice Handguards",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292955,
+      "Justice Pauldrons",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292956,
+      "Justice Sabatons",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292981,
+      "Legplates of Glory",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292982,
+      "Gauntlets of Glory",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292983,
+      "Shoulders of Glory",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292984,
+      "Greaves of Glory",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292985,
+      "Legguards of Glory",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292986,
+      "Handguards of Glory",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292987,
+      "Pauldrons of Glory",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292988,
+      "Sabatons of Glory",
+      "wiki says vendor; price not in DB2 or wiki"
+    ]
+  ],
   "orangeFrom": {
     "CROSS": 7,
     "ITEM": 314,

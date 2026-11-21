@@ -302,6 +302,11 @@
         "gray": 215,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 175 differs from ITEM orange 155"
+        ]
       }
     },
     "1244435": {
@@ -318,6 +323,11 @@
         "gray": 270,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 230 differs from ITEM orange 215"
+        ]
       }
     },
     "1244436": {
@@ -335,6 +345,11 @@
         "gray": 330,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 290 differs from ITEM orange 275"
+        ]
       }
     },
     "1259349": {
@@ -351,6 +366,11 @@
         "gray": 340,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 280 differs from ITEM orange 265"
+        ]
       }
     },
     "1259348": {
@@ -367,6 +387,11 @@
         "gray": 280,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 220 differs from ITEM orange 200"
+        ]
       }
     },
     "1259347": {
@@ -398,6 +423,11 @@
         "gray": 355,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 295 differs from ITEM orange 280"
+        ]
       }
     },
     "1259344": {
@@ -414,6 +444,11 @@
         "gray": 285,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 225 differs from ITEM orange 210"
+        ]
       }
     },
     "1259343": {
@@ -430,6 +465,11 @@
         "gray": 220,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 160 differs from ITEM orange 140"
+        ]
       }
     },
     "1259342": {
@@ -461,6 +501,11 @@
         "gray": 290,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 230 differs from ITEM orange 215"
+        ]
       }
     },
     "1262996": {

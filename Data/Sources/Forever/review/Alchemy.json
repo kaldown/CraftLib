@@ -150,6 +150,173 @@
     ]
   ],
   "heldBack": false,
+  "notes": [
+    [
+      2329,
+      "Elixir of Minor Strength",
+      "wiki row skill 15 differs from CROSS orange 1"
+    ],
+    [
+      3170,
+      "Minor Troll's Blood Elixir",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      3176,
+      "Lesser Troll's Blood Elixir",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      3177,
+      "Elixir of Lesser Defense",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      7179,
+      "Draught of Water Breathing",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      7845,
+      "Elixir of Fire Power",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      11450,
+      "Elixir of Defense",
+      "wiki row skill 130 differs from CROSS orange 195"
+    ],
+    [
+      11452,
+      "Restorative Potion",
+      "wiki row skill 225 differs from CROSS orange 215"
+    ],
+    [
+      11460,
+      "Draught of Detect Undead",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      11478,
+      "Draught of Detect Demon",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      12609,
+      "Catseye Draught",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      17632,
+      "Alchemist's Stone",
+      "wiki row skill 300 differs from ITEM orange 275"
+    ],
+    [
+      22808,
+      "Draught of Greater Water Breathing",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      1250777,
+      "Elixir of Cunning",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250778,
+      "Elixir of the Phalanx",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250782,
+      "Greater Cleric's Elixir",
+      "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250784,
+      "Elixir of Greater Fortitude",
+      "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250785,
+      "Elixir of Wicked Regeneration",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250786,
+      "Elixir of the Owl",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250787,
+      "Elixir of Sages",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250790,
+      "Greater Mageblood Elixir",
+      "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250792,
+      "Elixir of Nature Power",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250796,
+      "Elixir of Greater Spirit",
+      "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250797,
+      "Elixir of the Whale",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250799,
+      "Elixir of Ferocity",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1250800,
+      "Elixir of the Grizzly",
+      "wiki: Honored with a commerce faction for 240 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1251734,
+      "Major Spellblasting Potion",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1251740,
+      "Major Frenzy Potion",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1251747,
+      "Major Mender's Potion",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1251748,
+      "Potion of Venomous Blood",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1251749,
+      "Caustic Smog Potion",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1251751,
+      "Dragonfire Potion",
+      "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
+    ],
+    [
+      1251752,
+      "Potion of Elemental Purging",
+      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+    ]
+  ],
   "orangeFrom": {
     "CROSS": 30,
     "ITEM": 129,

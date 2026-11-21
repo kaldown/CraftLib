@@ -151,6 +151,11 @@
         "needsReview": true,
         "reviewReason": "trainer per wiki but DB2 has teaching item 6345",
         "itemId": 6345
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 70 differs from ITEM orange 90"
+        ]
       }
     },
     "7776": {
@@ -2250,6 +2255,11 @@
         "gray": 65,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 45 differs from ITEM orange 5"
+        ]
       }
     },
     "25125": {
@@ -3553,6 +3563,11 @@
         "gray": 325,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 285 differs from ITEM orange 265"
+        ]
       }
     },
     "1249112": {
@@ -3569,6 +3584,11 @@
         "gray": 325,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 285 differs from ITEM orange 265"
+        ]
       }
     },
     "1249114": {
@@ -3585,6 +3605,11 @@
         "gray": 325,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 285 differs from ITEM orange 265"
+        ]
       }
     },
     "1248515": {
@@ -3856,6 +3881,11 @@
         "gray": 300,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 290 differs from ITEM orange 295"
+        ]
       }
     },
     "1306520": {

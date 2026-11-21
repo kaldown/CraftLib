@@ -238,6 +238,33 @@
     ]
   ],
   "heldBack": true,
+  "notes": [
+    [
+      3919,
+      "Rough Dynamite",
+      "wiki row skill 30 differs from CROSS orange 1"
+    ],
+    [
+      8895,
+      "Goblin Rocket Boots",
+      "wiki row skill 225 differs from ITEM orange 130"
+    ],
+    [
+      9273,
+      "Goblin Jumper Cables",
+      "teaching item 7561 RequiredSkillRank 165 above yellow 160 ignored"
+    ],
+    [
+      12717,
+      "Goblin Mining Helmet",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      26011,
+      "Tranquil Mechanical Yeti",
+      "wiki row skill 320 differs from CROSS orange 250"
+    ]
+  ],
   "orangeFrom": {
     "CROSS": 69,
     "ITEM": 161,

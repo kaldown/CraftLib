@@ -19,6 +19,11 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 30 differs from CROSS orange 1"
+        ]
       }
     },
     "3920": {
@@ -861,6 +866,11 @@
         "gray": 265,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 225 differs from ITEM orange 130"
+        ]
       }
     },
     "9269": {
@@ -2317,6 +2327,11 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 320 differs from CROSS orange 250"
+        ]
       }
     },
     "26416": {

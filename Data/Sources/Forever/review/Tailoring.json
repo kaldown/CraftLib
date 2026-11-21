@@ -505,6 +505,148 @@
     ]
   ],
   "heldBack": false,
+  "notes": [
+    [
+      2387,
+      "Linen Cloak",
+      "wiki row skill 35 differs from CROSS orange 1"
+    ],
+    [
+      2963,
+      "Bolt of Linen Cloth",
+      "wiki row skill 25 differs from CROSS orange 1"
+    ],
+    [
+      3915,
+      "Brown Linen Shirt",
+      "wiki row skill 35 differs from CROSS orange 1"
+    ],
+    [
+      12081,
+      "Admiral's Hat",
+      "wiki row skill 240 differs from ITEM orange 200"
+    ],
+    [
+      12086,
+      "Shadoweave Mask",
+      "wiki row skill 245 differs from ITEM orange 200"
+    ],
+    [
+      18422,
+      "Cloak of Fire",
+      "wiki row skill 275 differs from ITEM orange 235"
+    ],
+    [
+      23664,
+      "Argent Boots",
+      "wiki row skill 290 differs from ITEM orange 255"
+    ],
+    [
+      23665,
+      "Argent Shoulders",
+      "wiki row skill 300 differs from ITEM orange 290"
+    ],
+    [
+      26403,
+      "Festival Dress",
+      "wiki row skill 250 differs from ITEM orange 205"
+    ],
+    [
+      26407,
+      "Festival Suit",
+      "wiki row skill 250 differs from ITEM orange 205"
+    ],
+    [
+      461727,
+      "Leather-Reinforced Runecloth Bag",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1257492,
+      "Mooncloth Reagent Bag",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292941,
+      "Manaflare Pants",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292942,
+      "Manaflare Gloves",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292943,
+      "Manaflare Mantle",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292944,
+      "Manaflare Boots",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292957,
+      "Pants of Conviction",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292958,
+      "Gloves of Conviction",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292959,
+      "Mantle of Conviction",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292960,
+      "Treads of Conviction",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292961,
+      "Leggings of Conviction",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292962,
+      "Handguards of Conviction",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292963,
+      "Pauldrons of Conviction",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292964,
+      "Boots of Conviction",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292977,
+      "Demonheart Leggings",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292978,
+      "Demonheart Gloves",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292979,
+      "Demonheart Spaulders",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292980,
+      "Demonheart Boots",
+      "wiki says vendor; price not in DB2 or wiki"
+    ]
+  ],
   "orangeFrom": {
     "CROSS": 4,
     "ITEM": 300,

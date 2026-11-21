@@ -640,6 +640,318 @@
     ]
   ],
   "heldBack": false,
+  "notes": [
+    [
+      16650,
+      "Wildthorn Mail",
+      "wiki row skill 270 differs from ITEM orange 245"
+    ],
+    [
+      16661,
+      "Storm Gauntlets",
+      "wiki row skill 295 differs from ITEM orange 270"
+    ],
+    [
+      16728,
+      "Helm of the Great Chief",
+      "wiki row skill 300 differs from ITEM orange 290"
+    ],
+    [
+      16746,
+      "Invulnerable Mail",
+      "wiki row skill 300 differs from ITEM orange 295"
+    ],
+    [
+      19048,
+      "Heavy Scorpid Bracers",
+      "teaching item 15724 RequiredSkillRank 255 above yellow 250 ignored"
+    ],
+    [
+      19093,
+      "Onyxia Scale Cloak",
+      "wiki row skill 320 differs from CROSS orange 300"
+    ],
+    [
+      23190,
+      "Heavy Leather Ball",
+      "wiki row skill 150 differs from ITEM orange 125"
+    ],
+    [
+      23628,
+      "Heavy Timbermaw Belt",
+      "wiki row skill 290 differs from ITEM orange 265"
+    ],
+    [
+      23629,
+      "Heavy Timbermaw Boots",
+      "wiki row skill 300 differs from ITEM orange 295"
+    ],
+    [
+      23706,
+      "Golden Mantle of the Dawn",
+      "wiki row skill 300 differs from ITEM orange 295"
+    ],
+    [
+      1255000,
+      "Mender's Mail Bracers",
+      "teaching item 252907 RequiredSkillRank 225 above yellow 220 ignored"
+    ],
+    [
+      1255001,
+      "Skirmisher's Mail Bracers",
+      "teaching item 252906 RequiredSkillRank 225 above yellow 220 ignored"
+    ],
+    [
+      1255002,
+      "Skycaller's Mail Bracers",
+      "teaching item 252905 RequiredSkillRank 225 above yellow 220 ignored"
+    ],
+    [
+      1255003,
+      "Stalker's Mail Bracers",
+      "teaching item 252904 RequiredSkillRank 225 above yellow 220 ignored"
+    ],
+    [
+      1292920,
+      "Grovekeeper Trousers",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292921,
+      "Grovekeeper Grips",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292923,
+      "Grovekeeper Shoulderpads",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292924,
+      "Grovekeeper Stompers",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292925,
+      "Grovekeeper Kilt",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292926,
+      "Grovekeeper Mitts",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292927,
+      "Grovekeeper Mantle",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292928,
+      "Grovekeeper Sandals",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292929,
+      "Grovekeeper Legguards",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292930,
+      "Grovekeeper Handguards",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292931,
+      "Grovekeeper Pauldrons",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292932,
+      "Grovekeeper Boots",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292933,
+      "Grovekeeper Leggings",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292934,
+      "Grovekeeper Gauntlets",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292935,
+      "Grovekeeper Spaulders",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292936,
+      "Grovekeeper Treads",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292937,
+      "Wildstalker's Legguards",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292938,
+      "Wildstalker's Gauntlets",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292939,
+      "Wildstalker's Spaulders",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292940,
+      "Wildstalker's Greaves",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292965,
+      "Grimstitch Pants",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292966,
+      "Grimstitch Gloves",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292967,
+      "Grimstitch Spaulders",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292968,
+      "Grimstitch Boots",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292969,
+      "Spiritcaller Leggings",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292970,
+      "Spiritcaller Grips",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292971,
+      "Spiritcaller Spaulders",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292972,
+      "Spiritcaller Treads",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292973,
+      "Spiritcaller Pants",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292974,
+      "Spiritcaller Gauntlets",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292975,
+      "Spiritcaller Epaulets",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292976,
+      "Spiritcaller Greaves",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1297126,
+      "Bileblister Claws",
+      "DB2 faction 609 Cenarion Circle Friendly on teaching item 275586; wiki source '?'"
+    ],
+    [
+      1297127,
+      "Bileblister Girdle",
+      "DB2 faction 609 Cenarion Circle Honored on teaching item 275587; wiki source '?'"
+    ],
+    [
+      1297128,
+      "Bileblister Boots",
+      "DB2 faction 609 Cenarion Circle Honored on teaching item 275588; wiki source '?'"
+    ],
+    [
+      1297129,
+      "Hivethrasher's Claws",
+      "DB2 faction 609 Cenarion Circle Friendly on teaching item 275589; wiki source '?'"
+    ],
+    [
+      1297130,
+      "Hivethrasher's Girdle",
+      "DB2 faction 609 Cenarion Circle Honored on teaching item 275590; wiki source '?'"
+    ],
+    [
+      1297131,
+      "Hivethrasher's Boots",
+      "DB2 faction 609 Cenarion Circle Honored on teaching item 275591; wiki source '?'"
+    ],
+    [
+      1297132,
+      "Scalegut Clenchers",
+      "DB2 faction 609 Cenarion Circle Friendly on teaching item 275592; wiki source '?'"
+    ],
+    [
+      1297133,
+      "Scalegut Belt",
+      "DB2 faction 609 Cenarion Circle Honored on teaching item 275593; wiki source '?'"
+    ],
+    [
+      1297134,
+      "Scalegut Treaders",
+      "DB2 faction 609 Cenarion Circle Honored on teaching item 275594; wiki source '?'"
+    ],
+    [
+      1297135,
+      "Broodwatcher's Clenchers",
+      "DB2 faction 609 Cenarion Circle Friendly on teaching item 275595; wiki source '?'"
+    ],
+    [
+      1297136,
+      "Broodwatcher's Belt",
+      "DB2 faction 609 Cenarion Circle Honored on teaching item 275596; wiki source '?'"
+    ],
+    [
+      1297137,
+      "Broodwatcher's Treaders",
+      "DB2 faction 609 Cenarion Circle Honored on teaching item 275597; wiki source '?'"
+    ],
+    [
+      1299914,
+      "Spiritcaller Kilt",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1299915,
+      "Spiritcaller Gloves",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1299916,
+      "Spiritcaller Mantle",
+      "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1299917,
+      "Spiritcaller Boots",
+      "wiki says vendor; price not in DB2 or wiki"
+    ]
+  ],
   "orangeFrom": {
     "CROSS": 8,
     "ITEM": 404,

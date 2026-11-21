@@ -16,6 +16,11 @@
         "gray": 95,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 15 differs from CROSS orange 1"
+        ]
       }
     },
     "2331": {
@@ -673,6 +678,11 @@
         "gray": 255,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 130 differs from CROSS orange 195"
+        ]
       }
     },
     "11451": {
@@ -712,6 +722,11 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 225 differs from CROSS orange 215"
+        ]
       }
     },
     "11453": {
@@ -1480,6 +1495,11 @@
         "gray": 330,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 300 differs from ITEM orange 275"
+        ]
       }
     },
     "17634": {
