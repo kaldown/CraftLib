@@ -22,9 +22,9 @@ OUT_ARG = $(if $(OUT),--output-dir $(OUT))
 # would split the $(if ...) arguments.
 OUT_REQUIRED_MSG = OUT is required: pass OUT=<dir>, or OUT=Data to rewrite the shipped files deliberately
 require_out = $(if $(strip $(OUT)),,$(error $@: $(OUT_REQUIRED_MSG)))
-# WHY reject OUT on the networked targets: they rewrite Data/Sources and Data/ in place
-# and used to ignore OUT silently.
-OUT_IGNORED_MSG = OUT is not used by the networked targets (they rewrite Data/Sources and Data/ in place); for <bucket>-all pass ARGS="--sources-dir <dir> --output-dir <dir>" instead
+# WHY reject OUT on the networked targets: -all rewrites Data/Sources and Data/ in place and
+# -fetch writes only the DB2 cache; both used to ignore OUT silently.
+OUT_IGNORED_MSG = OUT is not used by the networked targets (-all rewrites Data/Sources and Data/ in place; -fetch writes only the DB2 cache); for <bucket>-all pass ARGS="--sources-dir <copy of Data/Sources> --output-dir <dir>" instead
 reject_out = $(if $(strip $(OUT)),$(error $@: $(OUT_IGNORED_MSG)))
 
 .PHONY: help clean fetch-data vendor-prices audit list-buckets test test-python test-lua lint-lua \
@@ -37,7 +37,7 @@ help:
 	@echo "  make <bucket>-generate OUT=<dir>   offline: regenerate Recipes.lua + vendor prices into <dir>"
 	@echo "  PROFESSION=<name> limits a bucket target to one profession; ARGS=... passes pipeline flags"
 	@echo "  OUT is required by the offline targets; OUT=Data rewrites the shipped files deliberately."
-	@echo "  -all and -fetch reject OUT (they rewrite Data/ in place; use ARGS for other dirs)."
+	@echo "  -all and -fetch reject OUT (-all rewrites Data/ in place, -fetch only the DB2 cache; use ARGS for other dirs)."
 	@echo "Other:"
 	@echo "  fetch-data [BUCKET=b]    fetch DB2 builds (all buckets by default)"
 	@echo "  vendor-prices OUT=<dir> [BUCKET=b]"

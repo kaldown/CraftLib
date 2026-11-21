@@ -8,7 +8,9 @@ first non-zero exit stops everything and is returned as the exit code.
 Step order for `all`: fetch; then per profession extract, [reconcile], enrich,
 [verify-trainers], assert-no-pending, assert-no-unaligned; then the audit; then
 generate for every profession; then vendor-prices. No Lua file is rewritten until
-every gate, the audit included, has passed for the whole bucket.
+the per-profession gates and the audit have passed for the whole bucket. The
+generator's own checks still run one profession at a time, so a generator failure
+can leave earlier professions already rewritten.
 
 Exit codes (this driver and every script it runs):
   0  success

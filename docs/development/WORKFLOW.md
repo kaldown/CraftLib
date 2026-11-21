@@ -87,7 +87,8 @@ shows them with their pinned builds). Every target reads the bucket registry in
 
 `ARGS="..."` passes extra flags to `scripts/pipeline.py` (for example
 `ARGS="--steps assert-no-pending,generate"`). `<bucket>-all` and `<bucket>-fetch` reject `OUT`;
-to run `-all` against other directories pass `ARGS="--sources-dir <dir> --output-dir <dir>"`.
+to run `-all` against other directories pass `ARGS="--sources-dir <dir> --output-dir <dir>"`, where the
+sources directory is a full copy of `Data/Sources` (it needs the removed-recipes, keep-trainer and parent-bucket files).
 
 ### Exit codes
 

@@ -55,8 +55,8 @@ make sod-all
 This runs, for every profession of the bucket: `extract_db2_sources.py --bucket sod` -> `reconcile_cross_bucket.py` ->
 `fetch_wowhead_sources.py` -> `verify_trainer_sources.py` -> the `assert_no_pending.py` / `assert_no_unaligned.py` gates;
 then the audit; then `generate_recipes.py` for every profession, writing `Data/SoD/<Profession>/Recipes.lua`; then vendor
-prices. The driver (`scripts/pipeline.py`) stops at the first failing step, so no Lua file is rewritten unless every gate
-and the audit passed. Use `make sod-all PROFESSION=Tailoring` for one profession and
+prices. The driver (`scripts/pipeline.py`) stops at the first failing step, so no Lua file is rewritten unless the per-profession gates
+and the audit passed (the generator's own checks still run one profession at a time). Use `make sod-all PROFESSION=Tailoring` for one profession and
 `ARGS="--steps assert-no-pending,generate"` for a subset; `make sod-generate OUT=<dir>` is the offline regeneration
 (`OUT` is required; `OUT=Data` rewrites the shipped files deliberately).
 
