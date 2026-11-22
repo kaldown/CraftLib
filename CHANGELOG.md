@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-11-22
+
 ### Added
 - WoW Forever (1.60, interface 16001) recipe data: a dedicated Forever bucket, detected at runtime ahead of the Classic Era / Season of Discovery checks (Forever shares interface major 1 with Classic Era). Built from the pinned 1.60.1.71037 game data plus the Warcraft Wiki recipe tables. Shipped recipes and the share of the in-game recipes that carry a known (non-UNKNOWN) source:
   - Alchemy 169 (72.0%), Blacksmithing 387 (69.4%), Enchanting 221 (73.7%), Leatherworking 467 (68.1%), Tailoring 373 (76.2%), Cooking 122 (77.3%), First Aid 28 (79.3%) - 1,767 recipes in total.
