@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.12.0] - 2026-11-22
+
 ### Added
 - WoW Forever: Engineering (233 recipes) and Mining (7 smelting recipes) are now included; all nine professions load on Forever.
 - WoW Forever recipes now also draw on the game data's own marks for recipes learned automatically and on Wowhead's Forever guide tables. 1,961 recipes ship (was 1,767 in seven professions), 78.8% of the in-game recipes with a known source (was 71.2% across the same nine professions). Per profession, shipped and known-source share: Alchemy 166 (87.6%), Blacksmithing 382 (77.4%), Enchanting 228 (83.2%), Engineering 233 (67.9%), Leatherworking 434 (72.9%), Tailoring 361 (82.8%), Cooking 122 (89.0%), First Aid 28 (96.6%), Mining 7 (77.8%).
