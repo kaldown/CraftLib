@@ -8,6 +8,8 @@ it gathers the facts and lets forever_resolve decide its learn skill and source:
     placeholders never count) and that item's RequiredSkillRank, BuyPrice and faction;
   * the profession's Warcraft Wiki table, cached in <sources>/<Folder>/.wiki_cache/;
   * <sources>/<Folder>/wiki_aliases.json (optional): spell id -> the wiki row to use;
+  * <sources>/<Folder>/guide_facts.json (optional): the Wowhead guide tables' facts per
+    spell and per recipe item, written by fetch_wowhead_guides.py;
   * <sources>/<Folder>/ingame/<Prof>.json (optional): the owner's in-game capture;
   * <sources>/<cross bucket folder>/<Prof>.json for every registry cross bucket: each
     cross_orange_buckets entry lends its Wowhead orange, and the cross_source_bucket its
@@ -43,8 +45,10 @@ import extract_db2_sources as extract
 from buckets import ENRICH_SCRIPTS, UnknownProfessionError, add_bucket_argument, get_bucket
 from db2 import CanaryError, ColumnContractError
 from forever_resolve import (CrossTrainer, RecipeFacts, Resolution, assign_owners,
-                             build_claims, match_wiki, resolve, trainer_ambiguities)
+                             build_claims, db2_absence, earliest_learn_skill, match_wiki,
+                             release_trainer_entries, resolve, trainer_ambiguities)
 from import_probe import ingame_facts
+import wowhead_guide
 from pipeline_io import atomic_write_json, load_json
 # The summary groups reviews exactly as REVIEW.md does, so the two counts agree.
 from review_report import reason_group as review_group
@@ -53,7 +57,7 @@ from wiki import WikiError, fetch_wikitext, index_rows, normalize, parse_rows
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # Summary order of orangeFrom: the orange precedence, strongest first.
-_ORANGE_ORDER = ("INGAME", "ITEM", "CROSS", "WIKI", "MANUAL")
+_ORANGE_ORDER = ("INGAME", "AUTO", "ITEM", "GUIDE", "CROSS", "WIKI", "MANUAL")
 
 
 # --- optional and cross-bucket inputs -----------------------------------------------
@@ -184,29 +188,79 @@ def cross_trainer(cross_recipe: "dict | None", yellow: int, gray: int) -> "str |
         # ones (each with its trainingCost) are the verified trainers.
         return None
     difficulty = recipe.get("difficulty") or {}
-    if difficulty.get("yellow") != yellow or difficulty.get("gray") != gray:
+    if difficulty.get("gray") != gray:
         return None
+    if difficulty.get("yellow") != yellow:
+        # Wowhead prints yellow as 0 for a recipe learned at or above its yellow (see
+        # cross_learned): the recipe is still the unchanged one when that bucket teaches
+        # it at or above this build's yellow. Any other yellow means a reworked recipe.
+        learned = (recipe.get("wowhead") or {}).get("learnedAt")
+        if difficulty.get("yellow") != 0 or type(learned) is not int or learned < yellow:
+            return None
     return source["certainty"]
 
 
+def cross_learned(cross_recipe: "dict | None", yellow: int, gray: int) -> "int | None":
+    """The skill the cross bucket's Wowhead record says the unchanged recipe is learned at,
+    when that is above this build's yellow and below its gray; else None.
+
+    WHY a second rule next to cross_orange: Wowhead prints orange and yellow as 0 for a
+    recipe learned at or above its yellow (Smelt Tin: learned at 65, colours 0/0/65/75,
+    while DB2 has yellow 50, gray 75), so cross_orange never matches it. "Unchanged" here
+    means the cross gray equals this build's and the cross yellow is that 0 or this build's.
+    The resolver uses such a skill only when a second source gives the same number.
+    """
+    recipe = cross_recipe or {}
+    difficulty = recipe.get("difficulty") or {}
+    if difficulty.get("certainty") != "WOWHEAD" or difficulty.get("gray") != gray:
+        return None
+    if difficulty.get("yellow") not in (0, yellow):
+        return None
+    learned = (recipe.get("wowhead") or {}).get("learnedAt")
+    return learned if type(learned) is int and yellow < learned < gray else None
+
+
+def cross_learn_hints(bucket, crosses: "dict[str, dict]", facts: RecipeFacts) -> "list[int]":
+    """Every learn skill the cross buckets mention for the same recipe: their orange and
+    their Wowhead learnedAt, whenever their gray equals this build's.
+
+    Hints for the coverage gate only (forever_resolve.earliest_learn_skill), so the guard
+    is the weak one: the same gray says it is the same recipe, not that its learn skill is
+    verified for this client.
+    """
+    hints = []
+    for key in bucket.cross_orange_buckets:
+        recipe = crosses[key].get(facts.spell_id) or {}
+        difficulty = recipe.get("difficulty") or {}
+        if difficulty.get("gray") != facts.gray:
+            continue
+        hints += [v for v in (difficulty.get("orange"),
+                              (recipe.get("wowhead") or {}).get("learnedAt"))
+                  if type(v) is int]
+    return hints
+
+
 def cross_evidence(bucket, crosses: "dict[str, dict]", facts: RecipeFacts
-                   ) -> "tuple[list[tuple[str, int]], CrossTrainer | None]":
-    """The resolver's cross inputs for one recipe: guarded oranges in registry order, and
-    the cross bucket's trainer evidence. Named by bucket folder, as the resolver's notes
-    show them."""
+                   ) -> "tuple[list[tuple[str, int]], CrossTrainer | None, list[tuple[str, int]]]":
+    """The resolver's cross inputs for one recipe: guarded oranges in registry order, the
+    cross bucket's trainer evidence, and the skills learned above yellow (cross_learned).
+    Named by bucket folder, as the resolver's notes show them."""
     sid = facts.spell_id
-    oranges = []
+    oranges, learned = [], []
     for key in bucket.cross_orange_buckets:
         orange = cross_orange(crosses[key].get(sid), facts.yellow, facts.gray)
         if orange is not None:
             oranges.append((get_bucket(key).folder, orange))
+        skill = cross_learned(crosses[key].get(sid), facts.yellow, facts.gray)
+        if skill is not None:
+            learned.append((get_bucket(key).folder, skill))
     trainer = None
     if bucket.cross_source_bucket is not None:
         key = bucket.cross_source_bucket
         certainty = cross_trainer(crosses[key].get(sid), facts.yellow, facts.gray)
         if certainty is not None:
             trainer = CrossTrainer(get_bucket(key).folder, certainty)
-    return oranges, trainer
+    return oranges, trainer, learned
 
 
 # --- DB2 facts ----------------------------------------------------------------------
@@ -232,6 +286,41 @@ def skill_ranks(indexes: dict, profession, spells) -> "dict[str, tuple[int, int]
     return out
 
 
+def ability_facts(indexes: dict, bucket, profession,
+                  spells) -> "dict[str, tuple[int, int, str | None]]":
+    """spell id -> (AcquireMethod, MinSkillLineRank, leftover category name or None) from
+    the profession's SkillLineAbility rows, for spells.
+
+    {} for a bucket that reads neither (acquire_method, leftover_categories): its rows may
+    not have the columns. The category name is the registry leftover category the row's
+    TradeSkillCategoryID names, None for any other category.
+    """
+    if not bucket.acquire_method and not bucket.leftover_categories:
+        return {}
+    leftovers = indexes.get("leftover_categories") or {}
+    out: dict[str, tuple[int, int, str | None]] = {}
+    for row in indexes["skill_line_abilities"]:
+        spell = row["Spell"]
+        if row["SkillLine"] != str(profession.skill_line) or spell not in spells:
+            continue
+        try:
+            method = int(row["AcquireMethod"]) if bucket.acquire_method else 0
+            min_rank = int(row["MinSkillLineRank"]) if bucket.acquire_method else 0
+        except (KeyError, ValueError):
+            # Fail loud: a guessed 0 would read as "learned from a trainer or an item".
+            raise ValueError(f"spell {spell}: {profession.name} SkillLineAbility row has no "
+                             f"numeric AcquireMethod/MinSkillLineRank") from None
+        category = (leftovers.get(row.get("TradeSkillCategoryID") or "")
+                    if bucket.leftover_categories else None)
+        value = (method, min_rank, category)
+        prev = out.setdefault(spell, value)
+        if prev != value:
+            # Like skill_ranks: two rows that disagree cannot both be true.
+            raise ValueError(f"spell {spell}: {profession.name} SkillLineAbility rows disagree "
+                             f"on AcquireMethod/MinSkillLineRank/category: {prev} vs {value}")
+    return out
+
+
 def _item_int(item_id: str, row: dict, column: str) -> int:
     try:
         return int(row[column])
@@ -241,9 +330,11 @@ def _item_int(item_id: str, row: dict, column: str) -> int:
                          f"({row.get(column)!r})") from None
 
 
-def recipe_facts(spell_id: str, name: str, ranks: "tuple[int, int]",
-                 indexes: dict) -> RecipeFacts:
+def recipe_facts(spell_id: str, name: str, ranks: "tuple[int, int]", indexes: dict,
+                 ability: "tuple[int, int, str | None]" = (0, 0, None)) -> RecipeFacts:
+    """ability is the spell's ability_facts entry (the default reads nothing from it)."""
     yellow, gray = ranks
+    acquire, min_rank, leftover_category = ability
     crafted = indexes["crafted_items"].get(spell_id)
     # None for enchants (no created item) and for an unnamed item: the resolver then
     # matches by the spell name.
@@ -262,10 +353,17 @@ def recipe_facts(spell_id: str, name: str, ranks: "tuple[int, int]",
             # name or level into a review naming it, instead of stopping the profession.
             faction_name = indexes["faction_names"].get(str(min_faction))
             rep_level = extract.REP_LEVELS.get(_item_int(item, row, "MinReputation"))
+    # Items the build links to the spell without carrying their data, each once.
+    unlisted = tuple(dict.fromkeys(
+        i for i in indexes.get("teaching_links", {}).get(spell_id, ())
+        if i not in indexes["item_details"]))
     return RecipeFacts(spell_id=spell_id, name=name, item_name=item_name, yellow=yellow,
                        gray=gray, teaching_item=item, rsr=rsr, buy_price=buy_price,
                        min_faction=min_faction, faction_name=faction_name,
-                       rep_level=rep_level)
+                       rep_level=rep_level, acquire=acquire, min_rank=min_rank,
+                       created_item=crafted,
+                       created_missing=bool(crafted) and crafted not in indexes["item_details"],
+                       leftover_category=leftover_category, unlisted_items=unlisted)
 
 
 # --- writing one recipe -------------------------------------------------------------
@@ -281,7 +379,10 @@ def review_source(reason: str, facts: "RecipeFacts | None") -> dict:
     return source
 
 
-def apply_resolution(recipe: dict, res: Resolution, facts: "RecipeFacts | None") -> None:
+def apply_resolution(recipe: dict, res: Resolution, facts: "RecipeFacts | None",
+                     learn_from: "int | None" = None) -> None:
+    """learn_from: for a review, the earliest learn skill any source gives (the coverage
+    gate reads it as forever.learnFrom); ignored for a resolved recipe."""
     if res.review is None:
         recipe["source"] = res.source
         recipe["difficulty"] = res.difficulty
@@ -299,6 +400,10 @@ def apply_resolution(recipe: dict, res: Resolution, facts: "RecipeFacts | None")
         forever["notes"] = list(res.notes)
     else:
         forever.pop("notes", None)
+    if res.review is not None and learn_from is not None:
+        forever["learnFrom"] = learn_from
+    else:
+        forever.pop("learnFrom", None)
     if forever:
         recipe["forever"] = forever
     else:
@@ -314,6 +419,7 @@ class Summary:
     orange_from: Counter = field(default_factory=Counter)
     source_types: Counter = field(default_factory=Counter)
     cross_trainers: int = 0               # TRAINER sources from a cross bucket
+    guide_rows: int = 0                   # recipes the guide tables describe
     reviews: Counter = field(default_factory=Counter)
 
 
@@ -331,20 +437,35 @@ def check_recipes(doc, path: Path) -> None:
 
 
 def enrich(doc: dict, bucket, profession, indexes: dict, rows, aliases: dict,
-           capture: "dict | None", crosses: "dict[str, dict]", version: str) -> Summary:
+           capture: "dict | None", crosses: "dict[str, dict]", version: str,
+           guide_doc: "dict | None" = None) -> Summary:
     """Resolve every non-MANUAL recipe of doc["recipes"] in place.
 
-    crosses is load_crosses' result: cross bucket key -> spell id -> recipe.
+    crosses is load_crosses' result: cross bucket key -> spell id -> recipe. guide_doc is
+    the bucket's guide facts (wowhead_guide.load_facts), None when there are none.
     """
     recipes = doc["recipes"]
     ranks = skill_ranks(indexes, profession, set(recipes))
+    ability = ability_facts(indexes, bucket, profession, set(recipes))
     facts: dict[str, RecipeFacts] = {}
     for sid, recipe in recipes.items():
         if sid in ranks:
             name = indexes["spell_names"].get(sid) or recipe.get("name") or sid
-            facts[sid] = recipe_facts(sid, name, ranks[sid], indexes)
+            facts[sid] = recipe_facts(sid, name, ranks[sid], indexes,
+                                      ability.get(sid, (0, 0, None)))
     index = index_rows(rows)
+    # Guide rows are keyed by spell id; a commerce-table row is keyed by the recipe item
+    # and reaches its spell through the items DB2 links to it (chosen or without data).
+    guides = {}
+    for sid, f in facts.items():
+        linked = ([f.teaching_item] if f.teaching_item is not None else []) + list(f.unlisted_items)
+        found = wowhead_guide.facts_for(guide_doc, sid, linked)
+        if found is not None:
+            guides[sid] = found
     ingame = {sid: ingame_facts(capture, sid, f.name) for sid, f in facts.items()}
+    # A trainer entry shared by name goes to the spell DB2 has, not to one it marks absent.
+    ingame = release_trainer_entries(
+        ingame, {sid for sid, f in facts.items() if db2_absence(f) is not None})
     # Over every recipe of the profession, MANUAL ones included: a row a hand-verified
     # recipe also reaches is still shared, and sharing is what makes a match ambiguous.
     # The capture goes in too, so a spell absent in game releases the rows it reaches.
@@ -354,12 +475,13 @@ def enrich(doc: dict, bucket, profession, indexes: dict, rows, aliases: dict,
     # A trainer entry that several spells reach by name decides none of them.
     trainer_reviews = trainer_ambiguities(ingame)
 
-    summary = Summary(recipes=len(recipes))
+    summary = Summary(recipes=len(recipes), guide_rows=len(guides))
     for sid, recipe in recipes.items():
         if (recipe.get("source") or {}).get("certainty") == "MANUAL":
             summary.manual += 1
             continue
         f = facts.get(sid)
+        learn_from = None
         if f is None:
             # An orphan extract kept from an earlier build: no DB2 facts to resolve from,
             # and its old (possibly PENDING) source must not survive.
@@ -367,14 +489,21 @@ def enrich(doc: dict, bucket, profession, indexes: dict, rows, aliases: dict,
                                          f"row for spell {sid} in build {version}")
         else:
             match = match_wiki(f, index, aliases, claims, owners)
-            oranges, trainer = cross_evidence(bucket, crosses, f)
+            oranges, trainer, learned = cross_evidence(bucket, crosses, f)
             # A MANUAL difficulty keeps its thresholds; only the source is resolved (a
             # recipe whose source is MANUAL too was skipped above, untouched).
             difficulty = recipe.get("difficulty") or {}
             manual = difficulty if difficulty.get("certainty") == "MANUAL" else None
             res = resolve(f, match, ingame[sid], oranges, trainer, manual_difficulty=manual,
-                          trainer_review=trainer_reviews.get(sid))
-        apply_resolution(recipe, res, f)
+                          trainer_review=trainer_reviews.get(sid),
+                          guide=guides.get(sid), cross_learned=learned)
+            if res.review is not None:
+                linked = ([f.teaching_item] if f.teaching_item is not None else []) \
+                    + list(f.unlisted_items)
+                learn_from = earliest_learn_skill(
+                    f, match, ingame[sid], cross_learn_hints(bucket, crosses, f),
+                    wowhead_guide.skills_for(guide_doc, sid, linked))
+        apply_resolution(recipe, res, f, learn_from)
         if res.review is None:
             # A MANUAL difficulty carries no orangeFrom; it counts under its certainty.
             summary.orange_from[res.difficulty.get("orangeFrom")
@@ -397,6 +526,7 @@ def print_summary(path: Path, s: Summary) -> None:
     for kind in sorted(s.source_types):
         print(f"    source {kind}: {s.source_types[kind]}", file=out)
     print(f"  TRAINER from a cross bucket: {s.cross_trainers}", file=out)
+    print(f"  Guide rows: {s.guide_rows} of {s.recipes} recipes", file=out)
     print(f"  UNKNOWN source: {s.source_types.get('UNKNOWN', 0)}", file=out)
     print(f"  Reviews: {sum(s.reviews.values())}", file=out)
     for reason, n in sorted(s.reviews.items(), key=lambda kv: (-kv[1], kv[0])):
@@ -463,9 +593,11 @@ def main(argv: "list[str] | None" = None) -> int:
         capture = load_capture(folder / "ingame" / f"{profession.folder}.json", version)
         crosses = load_crosses(args.sources_dir, bucket, profession)
         indexes = extract.build_indexes(data_dir, bucket)
+        # Written by fetch_wowhead_guides.py; absent = no guide evidence, not an error.
+        guide_doc = wowhead_guide.load_facts(folder / "guide_facts.json")
         rows = parse_rows(fetch_wikitext(title, folder / ".wiki_cache", offline=args.offline))
         summary = enrich(doc, bucket, profession, indexes, rows, aliases, capture, crosses,
-                         version)
+                         version, guide_doc)
     except (ValueError, FileNotFoundError, ColumnContractError, CanaryError, WikiError) as e:
         print(f"ERROR: bucket '{bucket.key}': {e}", file=sys.stderr)
         return 2

@@ -85,3 +85,17 @@ def test_out_on_networked_targets_is_rejected(tmp_path, target):
     assert r.returncode != 0
     assert "OUT" in r.stderr and target.split("-")[1] in r.stderr, r.stderr
     assert "pipeline.py" not in r.stdout
+
+
+def test_offline_force_and_pages_reach_the_pipeline(tmp_path):
+    r = _make("-n", "forever-all", "OFFLINE=1", "FORCE=1", f"PAGES={tmp_path}")
+    assert r.returncode == 0, r.stderr
+    assert "--offline" in r.stdout and "--force" in r.stdout
+    assert f'--pages-dir "{tmp_path}"' in r.stdout
+
+
+def test_switches_are_absent_unless_asked_for():
+    r = _make("-n", "forever-all")
+    assert r.returncode == 0, r.stderr
+    assert "--offline" not in r.stdout and "--force" not in r.stdout
+    assert "--pages-dir" not in r.stdout

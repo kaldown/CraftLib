@@ -3,14 +3,14 @@
     "cap": 300,
     "floor": 0.75,
     "gap": null,
-    "inGame": 193,
-    "knownSource": 139,
-    "knownSourceShare": 0.7202,
+    "inGame": 178,
+    "knownSource": 156,
+    "knownSourceShare": 0.8764,
     "maxGap": 0,
     "maxGapAllowed": 10,
     "passes": true,
-    "share": 0.8756,
-    "shipped": 169
+    "share": 0.9326,
+    "shipped": 166
   },
   "excluded": [
     [
@@ -21,7 +21,7 @@
     [
       3174,
       "Potion of Poison Cleansing",
-      "no wiki row"
+      "not in game: DB2 marks it never learned (AcquireMethod 3)"
     ],
     [
       3450,
@@ -49,6 +49,11 @@
       "unsupported wiki source: 'Crafted'"
     ],
     [
+      17572,
+      "Purification Potion",
+      "not in game: DB2 marks it never learned (AcquireMethod 3)"
+    ],
+    [
       17579,
       "Greater Holy Protection Potion",
       "no wiki row"
@@ -64,59 +69,69 @@
       "unknown source and no teaching item"
     ],
     [
+      435969,
+      "Insulating Gniodine",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 213372 not in this build"
+    ],
+    [
+      435971,
+      "Mildly Irradiated Rejuvenation Potion",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215162 not in this build"
+    ],
+    [
       446226,
       "Flask of Everlasting Nightmares",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221024 not in this build"
     ],
     [
       446851,
       "Jar of Nightmarish Mojo",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221313 not in this build"
     ],
     [
       448085,
       "Flask of Restless Dreams",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 222952 not in this build"
     ],
     [
       1213544,
       "Flask of Unyielding Sorrow",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233966 not in this build"
     ],
     [
       1213546,
       "Flask of Ancient Knowledge",
-      "no wiki row"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233964 not in this build"
     ],
     [
       1213548,
       "Flask of the Old Gods",
-      "no wiki row"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233965 not in this build"
     ],
     [
       1213552,
       "Flask of Madness",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233962 not in this build"
     ],
     [
       1213559,
       "Elixir of the Honey Badger",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233967 not in this build"
     ],
     [
       1213563,
       "Elixir of the Mage-Lord",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233968 not in this build"
     ],
     [
       1213565,
       "Elixir of the Ironside",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233969 not in this build"
     ],
     [
       1213571,
       "Elixir of Alacrity",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233977 not in this build"
     ],
     [
       1230564,
@@ -155,6 +170,11 @@
       2329,
       "Elixir of Minor Strength",
       "wiki row skill 15 differs from CROSS orange 1"
+    ],
+    [
+      2365,
+      "Draught of Tongues",
+      "created item 2460 has no data in this build"
     ],
     [
       3170,
@@ -217,119 +237,70 @@
       "trainer per SoD (WOWHEAD); no wiki row"
     ],
     [
-      1250777,
-      "Elixir of Cunning",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+      1244645,
+      "Lesser Discolored Healing Potion",
+      "wiki row skill 85 differs from GUIDE orange 55"
     ],
     [
-      1250778,
-      "Elixir of the Phalanx",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+      1244646,
+      "Discolored Healing Potion",
+      "wiki row skill 135 differs from GUIDE orange 110"
     ],
     [
-      1250782,
-      "Greater Cleric's Elixir",
-      "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
+      1244647,
+      "Greater Discolored Healing Potion",
+      "wiki row skill 175 differs from GUIDE orange 155"
     ],
     [
-      1250784,
-      "Elixir of Greater Fortitude",
-      "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
+      1244648,
+      "Superior Discolored Healing Potion",
+      "wiki row skill 230 differs from GUIDE orange 215"
     ],
     [
-      1250785,
-      "Elixir of Wicked Regeneration",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+      1245246,
+      "Minor Arcane Elixir",
+      "DB2 marks it learned automatically; guide says TRAINER"
     ],
     [
-      1250786,
-      "Elixir of the Owl",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+      1245250,
+      "Elixir of Minor Force",
+      "DB2 marks it learned automatically; guide says TRAINER"
     ],
     [
-      1250787,
-      "Elixir of Sages",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+      1249632,
+      "Viridian Dye",
+      "wiki row skill 215 differs from GUIDE orange 220"
     ],
     [
-      1250790,
-      "Greater Mageblood Elixir",
-      "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
-    ],
-    [
-      1250792,
-      "Elixir of Nature Power",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-    ],
-    [
-      1250796,
-      "Elixir of Greater Spirit",
-      "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
-    ],
-    [
-      1250797,
-      "Elixir of the Whale",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-    ],
-    [
-      1250799,
-      "Elixir of Ferocity",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-    ],
-    [
-      1250800,
-      "Elixir of the Grizzly",
-      "wiki: Honored with a commerce faction for 240 Merchant's Favor; faction not in DB2"
-    ],
-    [
-      1251734,
-      "Major Spellblasting Potion",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+      1250775,
+      "Revealing Draught",
+      "created item 250326 has no data in this build"
     ],
     [
       1251740,
       "Major Frenzy Potion",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+      "wiki price 180 Merchant's Favor differs from the guide's 240"
     ],
     [
-      1251747,
-      "Major Mender's Potion",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-    ],
-    [
-      1251748,
-      "Potion of Venomous Blood",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-    ],
-    [
-      1251749,
-      "Caustic Smog Potion",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-    ],
-    [
-      1251751,
-      "Dragonfire Potion",
-      "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
-    ],
-    [
-      1251752,
-      "Potion of Elemental Purging",
-      "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+      1251744,
+      "Greater Mender's Potion",
+      "guide says TRAINER; DB2 has teaching item 250991"
     ]
   ],
   "orangeFrom": {
-    "CROSS": 30,
-    "ITEM": 129,
-    "WIKI": 10
+    "AUTO": 3,
+    "CROSS": 29,
+    "GUIDE": 8,
+    "ITEM": 126
   },
   "sourceTypes": {
-    "DROP": 53,
+    "DROP": 52,
     "QUEST": 4,
     "REPUTATION": 7,
     "STARTER": 3,
     "TRAINER": 37,
-    "UNKNOWN": 30,
-    "VENDOR": 35
+    "UNKNOWN": 10,
+    "VENDOR": 53
   },
   "unknownSource": [
     [
@@ -341,96 +312,16 @@
       "Potion of Predatory Senses"
     ],
     [
-      1250777,
-      "Elixir of Cunning"
-    ],
-    [
-      1250778,
-      "Elixir of the Phalanx"
-    ],
-    [
-      1250782,
-      "Greater Cleric's Elixir"
-    ],
-    [
-      1250784,
-      "Elixir of Greater Fortitude"
-    ],
-    [
-      1250785,
-      "Elixir of Wicked Regeneration"
-    ],
-    [
-      1250786,
-      "Elixir of the Owl"
-    ],
-    [
-      1250787,
-      "Elixir of Sages"
-    ],
-    [
-      1250790,
-      "Greater Mageblood Elixir"
-    ],
-    [
-      1250792,
-      "Elixir of Nature Power"
-    ],
-    [
-      1250796,
-      "Elixir of Greater Spirit"
-    ],
-    [
-      1250797,
-      "Elixir of the Whale"
-    ],
-    [
-      1250799,
-      "Elixir of Ferocity"
-    ],
-    [
-      1250800,
-      "Elixir of the Grizzly"
-    ],
-    [
       1251733,
       "Superior Spellblasting Potion"
-    ],
-    [
-      1251734,
-      "Major Spellblasting Potion"
     ],
     [
       1251739,
       "Superior Frenzy Potion"
     ],
     [
-      1251740,
-      "Major Frenzy Potion"
-    ],
-    [
       1251745,
       "Superior Mender's Potion"
-    ],
-    [
-      1251747,
-      "Major Mender's Potion"
-    ],
-    [
-      1251748,
-      "Potion of Venomous Blood"
-    ],
-    [
-      1251749,
-      "Caustic Smog Potion"
-    ],
-    [
-      1251751,
-      "Dragonfire Potion"
-    ],
-    [
-      1251752,
-      "Potion of Elemental Purging"
     ],
     [
       1251753,

@@ -1,7 +1,7 @@
 {
   "profession": "alchemy",
   "version": "1.60.1.71037",
-  "generated": "2026-11-21",
+  "generated": "2026-11-22",
   "recipes": {
     "2329": {
       "name": "Elixir of Minor Strength",
@@ -91,6 +91,11 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no wiki row"
+      },
+      "forever": {
+        "notes": [
+          "created item 2460 has no data in this build"
+        ]
       }
     },
     "3171": {
@@ -145,8 +150,11 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "no wiki row",
+        "reviewReason": "not in game: DB2 marks it never learned (AcquireMethod 3)",
         "itemId": 3394
+      },
+      "forever": {
+        "learnFrom": 120
       }
     },
     "3176": {
@@ -297,6 +305,9 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 3830
+      },
+      "forever": {
+        "learnFrom": 175
       }
     },
     "3451": {
@@ -307,6 +318,9 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 3831
+      },
+      "forever": {
+        "learnFrom": 180
       }
     },
     "3452": {
@@ -464,15 +478,15 @@
       "name": "Elixir of Minor Defense",
       "source": {
         "type": "STARTER",
-        "certainty": "WIKI"
+        "certainty": "DB2"
       },
       "difficulty": {
         "orange": 1,
         "yellow": 55,
         "green": 75,
         "gray": 95,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
       }
     },
     "7257": {
@@ -726,7 +740,8 @@
       "forever": {
         "notes": [
           "wiki row skill 225 differs from CROSS orange 215"
-        ]
+        ],
+        "learnFrom": 215
       }
     },
     "11453": {
@@ -753,6 +768,9 @@
         "needsReview": true,
         "reviewReason": "unsupported wiki source: 'Crafted'",
         "itemId": 10644
+      },
+      "forever": {
+        "learnFrom": 210
       }
     },
     "11458": {
@@ -1345,17 +1363,14 @@
     "17572": {
       "name": "Purification Potion",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 marks it never learned (AcquireMethod 3)",
         "itemId": 13492
       },
-      "difficulty": {
-        "orange": 285,
-        "yellow": 300,
-        "green": 320,
-        "gray": 340,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 285
       }
     },
     "17573": {
@@ -1462,6 +1477,9 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 13500
+      },
+      "forever": {
+        "learnFrom": 290
       }
     },
     "17580": {
@@ -1666,6 +1684,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "24365": {
@@ -1804,35 +1825,27 @@
     "435969": {
       "name": "Insulating Gniodine",
       "source": {
-        "type": "VENDOR",
-        "certainty": "WIKI",
-        "itemId": 215433,
-        "cost": 25000
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 213372 not in this build",
+        "itemId": 215433
       },
-      "difficulty": {
-        "orange": 200,
-        "yellow": 200,
-        "green": 210,
-        "gray": 220,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 200
       }
     },
     "435971": {
       "name": "Mildly Irradiated Rejuvenation Potion",
       "source": {
-        "type": "VENDOR",
-        "certainty": "WIKI",
-        "itemId": 215163,
-        "cost": 50000
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215162 not in this build",
+        "itemId": 215163
       },
-      "difficulty": {
-        "orange": 225,
-        "yellow": 225,
-        "green": 230,
-        "gray": 235,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 225
       }
     },
     "439960": {
@@ -1858,7 +1871,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221024 not in this build"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "446851": {
@@ -1867,7 +1883,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221313 not in this build"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "448085": {
@@ -1876,7 +1895,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 222952 not in this build"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "1213544": {
@@ -1885,7 +1907,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233966 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213548": {
@@ -1894,7 +1919,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "no wiki row"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233965 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213546": {
@@ -1903,7 +1931,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "no wiki row"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233964 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213552": {
@@ -1912,7 +1943,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233962 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213559": {
@@ -1921,7 +1955,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233967 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213563": {
@@ -1930,7 +1967,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233968 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213565": {
@@ -1939,7 +1979,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233969 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213571": {
@@ -1948,7 +1991,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233977 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1230564": {
@@ -1958,6 +2004,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 20
       }
     },
     "1231583": {
@@ -1968,6 +2017,9 @@
         "needsReview": true,
         "reviewReason": "trainer per wiki but DB2 has teaching item 241651",
         "itemId": 241651
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "1244421": {
@@ -1990,154 +2042,189 @@
       "name": "Lesser Discolored Healing Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "npcName": "Special trainer"
       },
       "difficulty": {
-        "orange": 85,
+        "orange": 55,
         "yellow": 85,
         "green": 105,
         "gray": 125,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 85 differs from GUIDE orange 55"
+        ]
       }
     },
     "1244646": {
       "name": "Discolored Healing Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "npcName": "Special trainer"
       },
       "difficulty": {
-        "orange": 135,
+        "orange": 110,
         "yellow": 135,
         "green": 155,
         "gray": 175,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 135 differs from GUIDE orange 110"
+        ]
       }
     },
     "1244647": {
       "name": "Greater Discolored Healing Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "npcName": "Special trainer"
       },
       "difficulty": {
-        "orange": 175,
+        "orange": 155,
         "yellow": 175,
         "green": 195,
         "gray": 215,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 175 differs from GUIDE orange 155"
+        ]
       }
     },
     "1244648": {
       "name": "Superior Discolored Healing Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "npcName": "Special trainer"
-      },
-      "difficulty": {
-        "orange": 230,
-        "yellow": 230,
-        "green": 250,
-        "gray": 270,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
-      }
-    },
-    "1245246": {
-      "name": "Minor Arcane Elixir",
-      "source": {
-        "type": "STARTER",
-        "certainty": "WIKI"
-      },
-      "difficulty": {
-        "orange": 1,
-        "yellow": 10,
-        "green": 12,
-        "gray": 15,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
-      }
-    },
-    "1245250": {
-      "name": "Elixir of Minor Force",
-      "source": {
-        "type": "STARTER",
-        "certainty": "WIKI"
-      },
-      "difficulty": {
-        "orange": 1,
-        "yellow": 10,
-        "green": 12,
-        "gray": 15,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
-      }
-    },
-    "1249630": {
-      "name": "Cerulean Dye",
-      "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
-      },
-      "difficulty": {
-        "orange": 40,
-        "yellow": 50,
-        "green": 70,
-        "gray": 90,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
-      }
-    },
-    "1249631": {
-      "name": "Magenta Dye",
-      "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
-      },
-      "difficulty": {
-        "orange": 120,
-        "yellow": 130,
-        "green": 142,
-        "gray": 155,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
-      }
-    },
-    "1249632": {
-      "name": "Viridian Dye",
-      "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
       },
       "difficulty": {
         "orange": 215,
         "yellow": 230,
         "green": 250,
         "gray": 270,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 230 differs from GUIDE orange 215"
+        ]
       }
     },
-    "1249633": {
-      "name": "Sulfuric Acid",
+    "1245246": {
+      "name": "Minor Arcane Elixir",
+      "source": {
+        "type": "STARTER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 10,
+        "green": 12,
+        "gray": 15,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
+      },
+      "forever": {
+        "notes": [
+          "DB2 marks it learned automatically; guide says TRAINER"
+        ]
+      }
+    },
+    "1245250": {
+      "name": "Elixir of Minor Force",
+      "source": {
+        "type": "STARTER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 10,
+        "green": 12,
+        "gray": 15,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
+      },
+      "forever": {
+        "notes": [
+          "DB2 marks it learned automatically; guide says TRAINER"
+        ]
+      }
+    },
+    "1249630": {
+      "name": "Cerulean Dye",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 40,
         "yellow": 50,
         "green": 70,
         "gray": 90,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      }
+    },
+    "1249631": {
+      "name": "Magenta Dye",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "GUIDE"
+      },
+      "difficulty": {
+        "orange": 120,
+        "yellow": 130,
+        "green": 142,
+        "gray": 155,
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      }
+    },
+    "1249632": {
+      "name": "Viridian Dye",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "GUIDE"
+      },
+      "difficulty": {
+        "orange": 220,
+        "yellow": 230,
+        "green": 250,
+        "gray": 270,
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 215 differs from GUIDE orange 220"
+        ]
+      }
+    },
+    "1249633": {
+      "name": "Sulfuric Acid",
+      "source": {
+        "type": "TRAINER",
+        "certainty": "GUIDE"
+      },
+      "difficulty": {
+        "orange": 40,
+        "yellow": 50,
+        "green": 70,
+        "gray": 90,
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "1250775": {
@@ -2147,6 +2234,12 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "notes": [
+          "created item 250326 has no data in this build"
+        ],
+        "learnFrom": 205
       }
     },
     "1250776": {
@@ -2168,9 +2261,13 @@
     "1250777": {
       "name": "Elixir of Cunning",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250364
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250364,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 275,
@@ -2179,19 +2276,18 @@
         "gray": 285,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250778": {
       "name": "Elixir of the Phalanx",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250365
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250365,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 250,
@@ -2200,18 +2296,13 @@
         "gray": 260,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250779": {
       "name": "Minor Cleric's Elixir",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250366
       },
       "difficulty": {
@@ -2227,7 +2318,7 @@
       "name": "Lesser Cleric's Elixir",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250367,
         "currency": {
           "name": "Merchant's Favor",
@@ -2247,7 +2338,7 @@
       "name": "Cleric's Elixir",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250368
       },
       "difficulty": {
@@ -2262,9 +2353,13 @@
     "1250782": {
       "name": "Greater Cleric's Elixir",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250369
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250369,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 195,
@@ -2273,11 +2368,6 @@
         "gray": 205,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250783": {
@@ -2299,9 +2389,13 @@
     "1250784": {
       "name": "Elixir of Greater Fortitude",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250371
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250371,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 200,
@@ -2310,19 +2404,18 @@
         "gray": 210,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250785": {
       "name": "Elixir of Wicked Regeneration",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250372
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250372,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 285,
@@ -2331,19 +2424,18 @@
         "gray": 295,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250786": {
       "name": "Elixir of the Owl",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250373
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250373,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 280,
@@ -2352,19 +2444,18 @@
         "gray": 290,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250787": {
       "name": "Elixir of Sages",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250374
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250374,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 275,
@@ -2373,18 +2464,13 @@
         "gray": 285,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250788": {
       "name": "Minor Mageblood Elixir",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250375
       },
       "difficulty": {
@@ -2400,7 +2486,7 @@
       "name": "Lesser Mageblood Elixir",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250376,
         "currency": {
           "name": "Merchant's Favor",
@@ -2419,9 +2505,13 @@
     "1250790": {
       "name": "Greater Mageblood Elixir",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250377
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250377,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 175,
@@ -2430,18 +2520,13 @@
         "gray": 185,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250791": {
       "name": "Lesser Arcane Elixir",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250378,
         "currency": {
           "name": "Merchant's Favor",
@@ -2460,9 +2545,13 @@
     "1250792": {
       "name": "Elixir of Nature Power",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250379
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250379,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 285,
@@ -2471,18 +2560,13 @@
         "gray": 295,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250793": {
       "name": "Elixir of Minor Spirit",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250380
       },
       "difficulty": {
@@ -2498,7 +2582,7 @@
       "name": "Elixir of Lesser Spirit",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250381,
         "currency": {
           "name": "Merchant's Favor",
@@ -2518,7 +2602,7 @@
       "name": "Elixir of Spirit",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250382
       },
       "difficulty": {
@@ -2533,9 +2617,13 @@
     "1250796": {
       "name": "Elixir of Greater Spirit",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250383
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250383,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 165,
@@ -2544,19 +2632,18 @@
         "gray": 175,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250797": {
       "name": "Elixir of the Whale",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250384
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250384,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 275,
@@ -2565,11 +2652,6 @@
         "gray": 285,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250798": {
@@ -2591,9 +2673,13 @@
     "1250799": {
       "name": "Elixir of Ferocity",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250386
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250386,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 275,
@@ -2602,19 +2688,18 @@
         "gray": 285,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250800": {
       "name": "Elixir of the Grizzly",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250387
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250387,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -2623,18 +2708,13 @@
         "gray": 310,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 240 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1250801": {
       "name": "Elixir of Lesser Intellect",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250388,
         "currency": {
           "name": "Merchant's Favor",
@@ -2654,7 +2734,7 @@
       "name": "Elixir of Intellect",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250389
       },
       "difficulty": {
@@ -2670,7 +2750,7 @@
       "name": "Minor Spellblasting Potion",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250976
       },
       "difficulty": {
@@ -2686,7 +2766,7 @@
       "name": "Lesser Spellblasting Potion",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250977
       },
       "difficulty": {
@@ -2702,7 +2782,7 @@
       "name": "Spellblasting Potion",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250978,
         "currency": {
           "name": "Merchant's Favor",
@@ -2753,9 +2833,13 @@
     "1251734": {
       "name": "Major Spellblasting Potion",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250981
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250981,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 285,
@@ -2764,18 +2848,13 @@
         "gray": 295,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1251735": {
       "name": "Minor Frenzy Potion",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250982
       },
       "difficulty": {
@@ -2791,7 +2870,7 @@
       "name": "Lesser Frenzy Potion",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250983
       },
       "difficulty": {
@@ -2807,7 +2886,7 @@
       "name": "Frenzy Potion",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250984,
         "currency": {
           "name": "Merchant's Favor",
@@ -2858,9 +2937,13 @@
     "1251740": {
       "name": "Major Frenzy Potion",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250987
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250987,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 290,
@@ -2872,7 +2955,7 @@
       },
       "forever": {
         "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
+          "wiki price 180 Merchant's Favor differs from the guide's 240"
         ]
       }
     },
@@ -2880,7 +2963,7 @@
       "name": "Minor Mender's Potion",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250988
       },
       "difficulty": {
@@ -2896,7 +2979,7 @@
       "name": "Lesser Mender's Potion",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250989
       },
       "difficulty": {
@@ -2912,7 +2995,7 @@
       "name": "Mender's Potion",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250990,
         "currency": {
           "name": "Merchant's Favor",
@@ -2936,6 +3019,12 @@
         "needsReview": true,
         "reviewReason": "trainer per wiki but DB2 has teaching item 250991",
         "itemId": 250991
+      },
+      "forever": {
+        "notes": [
+          "guide says TRAINER; DB2 has teaching item 250991"
+        ],
+        "learnFrom": 180
       }
     },
     "1251745": {
@@ -2957,9 +3046,13 @@
     "1251747": {
       "name": "Major Mender's Potion",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250993
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250993,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 280,
@@ -2968,19 +3061,18 @@
         "gray": 290,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1251748": {
       "name": "Potion of Venomous Blood",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250994
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250994,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 275,
@@ -2989,19 +3081,18 @@
         "gray": 285,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1251749": {
       "name": "Caustic Smog Potion",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250995
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250995,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 265,
@@ -3010,19 +3101,18 @@
         "gray": 275,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1251751": {
       "name": "Dragonfire Potion",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250997
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250997,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 245,
@@ -3031,19 +3121,18 @@
         "gray": 255,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Friendly with a commerce faction for 120 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1251752": {
       "name": "Potion of Elemental Purging",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250998
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250998,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 280,
@@ -3052,11 +3141,6 @@
         "gray": 290,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
-      },
-      "forever": {
-        "notes": [
-          "wiki: Honored with a commerce faction for 180 Merchant's Favor; faction not in DB2"
-        ]
       }
     },
     "1251753": {
@@ -3083,6 +3167,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273085
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1263078": {
@@ -3093,6 +3180,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273112
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "1293559": {

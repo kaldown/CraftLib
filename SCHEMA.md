@@ -303,6 +303,8 @@ end
 
 ## Difficulty Note
 
+`orange` is the skill a recipe is learned at (`skillRequired` follows it). On WoW Forever a few recipes are learned after their yellow threshold, so `orange` may be greater than `yellow` there (always below `gray`): such a recipe is yellow, or already green, from the moment it is learned. Use `yellow`, `green` and `gray` for the color, as `GetRecipeDifficulty` does.
+
 The `skillRange` thresholds define color boundaries, not fixed probabilities. The actual skillup formula is continuous:
 
 ```

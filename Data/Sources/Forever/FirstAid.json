@@ -1,21 +1,21 @@
 {
   "profession": "firstAid",
   "version": "1.60.1.71037",
-  "generated": "2026-11-21",
+  "generated": "2026-11-22",
   "recipes": {
     "3275": {
       "name": "Linen Bandage",
       "source": {
         "type": "STARTER",
-        "certainty": "WIKI"
+        "certainty": "DB2"
       },
       "difficulty": {
         "orange": 1,
         "yellow": 30,
         "green": 45,
         "gray": 60,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
       }
     },
     "3276": {
@@ -241,58 +241,61 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 20
       }
     },
     "1244431": {
       "name": "Minor Healing Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 1,
         "yellow": 55,
         "green": 75,
         "gray": 95,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "1244432": {
       "name": "Lesser Healing Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 55,
         "yellow": 85,
         "green": 105,
         "gray": 125,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "1244433": {
       "name": "Healing Potion",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 110,
         "yellow": 135,
         "green": 155,
         "gray": 175,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "1244434": {
       "name": "Greater Healing Potion",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 255723
       },
       "difficulty": {
@@ -312,8 +315,8 @@
     "1244435": {
       "name": "Superior Healing Potion",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 255725
       },
       "difficulty": {
@@ -355,8 +358,8 @@
     "1259349": {
       "name": "Surgical Tourniquet",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 255730
       },
       "difficulty": {
@@ -376,8 +379,8 @@
     "1259348": {
       "name": "Leather Tourniquet",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 255726
       },
       "difficulty": {
@@ -398,22 +401,22 @@
       "name": "Woolen Tourniquet",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 120,
         "yellow": 120,
         "green": 155,
         "gray": 190,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "1259345": {
       "name": "Powerful Poultice",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "QUEST",
+        "certainty": "GUIDE",
         "itemId": 255731
       },
       "difficulty": {
@@ -433,8 +436,8 @@
     "1259344": {
       "name": "Superior Poultice",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 255727
       },
       "difficulty": {
@@ -455,7 +458,7 @@
       "name": "Clever Poultice",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 255724
       },
       "difficulty": {
@@ -476,22 +479,22 @@
       "name": "Simple Poultice",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 90,
         "yellow": 90,
         "green": 125,
         "gray": 160,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "1259341": {
       "name": "Potent Anti-Venom",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 255728
       },
       "difficulty": {
@@ -516,6 +519,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273105
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1263001": {
@@ -526,6 +532,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273118
+      },
+      "forever": {
+        "learnFrom": 300
       }
     }
   }

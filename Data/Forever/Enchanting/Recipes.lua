@@ -1,10 +1,25 @@
 -- Data/Forever/Enchanting/Recipes.lua
 -- Enchanting recipes for WoW Forever
--- Generated from DB2 data and the Warcraft Wiki recipe tables
+-- Generated from DB2 data, Wowhead guide tables and the Warcraft Wiki recipe tables
 local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
 local recipes = {
+    -- Enchant Bracer - Inferior Stamina (1)
+    {
+        id = 7418,
+        name = "Enchant Bracer - Inferior Stamina",
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 20, green = 22, gray = 25 },
+        reagents = {
+            { itemId = 247786, name = "Mote of Magic", count = 1 },
+        },
+        tools = { { categoryId = 373, name = "Runed Copper Rod" } },
+        source = {
+            type = C.SOURCE_TYPE.STARTER,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Runed Copper Rod (1)
     {
         id = 7421,
@@ -17,8 +32,22 @@ local recipes = {
             { itemId = 247786, name = "Mote of Magic", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Enchanting Trainer",
+            type = C.SOURCE_TYPE.STARTER,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Enchant Bracer - Minor Deflect (1)
+    {
+        id = 7428,
+        name = "Enchant Bracer - Minor Deflect",
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 80, green = 100, gray = 120 },
+        reagents = {
+            { itemId = 10938, name = "Lesser Magic Essence", count = 1 },
+        },
+        tools = { { categoryId = 373, name = "Runed Copper Rod" } },
+        source = {
+            type = C.SOURCE_TYPE.STARTER,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -34,8 +63,7 @@ local recipes = {
         },
         tools = { { categoryId = 373, name = "Runed Copper Rod" } },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Enchanting Trainer",
+            type = C.SOURCE_TYPE.STARTER,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -52,8 +80,7 @@ local recipes = {
         },
         tools = { { categoryId = 373, name = "Runed Copper Rod" } },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Enchanting Trainer",
+            type = C.SOURCE_TYPE.STARTER,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -209,24 +236,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Greater Magic Wand (70)
-    {
-        id = 14807,
-        name = "Greater Magic Wand",
-        itemId = 11288,
-        skillRequired = 70,
-        skillRange = { orange = 70, yellow = 110, green = 130, gray = 150 },
-        reagents = {
-            { itemId = 4470, name = "Simple Wood", count = 1 },
-            { itemId = 10938, name = "Lesser Magic Essence", count = 2 },
-        },
-        tools = { { categoryId = 373, name = "Runed Copper Rod" } },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Enchanting Trainer",
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Enchant Bracer - Minor Intellect (70)
     {
         id = 1248458,
@@ -377,25 +386,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Runed Silver Rod (100)
-    {
-        id = 7795,
-        name = "Runed Silver Rod",
-        itemId = 6339,
-        skillRequired = 100,
-        skillRange = { orange = 100, yellow = 130, green = 150, gray = 170 },
-        reagents = {
-            { itemId = 6338, name = "Silver Rod", count = 1 },
-            { itemId = 10940, name = "Strange Dust", count = 3 },
-            { itemId = 10938, name = "Lesser Magic Essence", count = 4 },
-            { itemId = 1210, name = "Shadowgem", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Enchanting Trainer",
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Enchant Shield - Minor Stamina (105)
     {
         id = 13378,
@@ -443,6 +433,24 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 11039,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Greater Magic Wand (110)
+    {
+        id = 14807,
+        name = "Greater Magic Wand",
+        itemId = 11288,
+        skillRequired = 110,
+        skillRange = { orange = 110, yellow = 110, green = 130, gray = 150 },
+        reagents = {
+            { itemId = 4470, name = "Simple Wood", count = 1 },
+            { itemId = 10938, name = "Lesser Magic Essence", count = 2 },
+        },
+        tools = { { categoryId = 373, name = "Runed Copper Rod" } },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Enchanting Trainer",
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -566,6 +574,25 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
+    -- Runed Silver Rod (130)
+    {
+        id = 7795,
+        name = "Runed Silver Rod",
+        itemId = 6339,
+        skillRequired = 130,
+        skillRange = { orange = 130, yellow = 130, green = 150, gray = 170 },
+        reagents = {
+            { itemId = 6338, name = "Silver Rod", count = 1 },
+            { itemId = 10940, name = "Strange Dust", count = 3 },
+            { itemId = 10938, name = "Lesser Magic Essence", count = 4 },
+            { itemId = 1210, name = "Shadowgem", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Enchanting Trainer",
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Enchant Shield - Lesser Spirit (130)
     {
         id = 13485,
@@ -599,6 +626,27 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
+    -- Mystic Mushroom (130)
+    {
+        id = 1248752,
+        name = "Mystic Mushroom",
+        itemId = 249396,
+        skillRequired = 130,
+        skillRange = { orange = 130, yellow = 140, green = 160, gray = 180 },
+        reagents = {
+            { itemId = 10978, name = "Small Glimmering Shard", count = 1 },
+            { itemId = 10939, name = "Greater Magic Essence", count = 2 },
+            { itemId = 10940, name = "Strange Dust", count = 5 },
+            { itemId = 4605, name = "Red-speckled Mushroom", count = 1 },
+        },
+        tools = { { categoryId = 374, name = "Runed Silver Rod" } },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 249476,
+            currency = { name = "Merchant's Favor", amount = 45 },
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Tenets of the Silver Hand (130)
     {
         id = 1248754,
@@ -616,7 +664,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249477,
-            cost = 3250,
+            currency = { name = "Merchant's Favor", amount = 45 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -637,7 +685,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249478,
-            cost = 3250,
+            currency = { name = "Merchant's Favor", amount = 45 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -745,7 +793,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249482,
-            cost = 3500,
+            currency = { name = "Merchant's Favor", amount = 45 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -768,7 +816,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249483,
-            cost = 3500,
+            currency = { name = "Merchant's Favor", amount = 45 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -788,7 +836,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249484,
-            cost = 3500,
+            currency = { name = "Merchant's Favor", amount = 45 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -808,7 +856,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249485,
-            cost = 3500,
+            currency = { name = "Merchant's Favor", amount = 45 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -829,7 +877,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249479,
-            cost = 3500,
+            currency = { name = "Merchant's Favor", amount = 45 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -850,7 +898,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249480,
-            cost = 3500,
+            currency = { name = "Merchant's Favor", amount = 45 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -871,7 +919,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249481,
-            cost = 3500,
+            currency = { name = "Merchant's Favor", amount = 45 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -993,25 +1041,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Runed Golden Rod (150)
-    {
-        id = 13628,
-        name = "Runed Golden Rod",
-        itemId = 11130,
-        skillRequired = 150,
-        skillRange = { orange = 150, yellow = 175, green = 195, gray = 215 },
-        reagents = {
-            { itemId = 11128, name = "Golden Rod", count = 1 },
-            { itemId = 5500, name = "Iridescent Pearl", count = 1 },
-            { itemId = 11082, name = "Greater Astral Essence", count = 1 },
-            { itemId = 11083, name = "Soul Dust", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Enchanting Trainer",
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Minor Mana Oil (150)
     {
         id = 25125,
@@ -1057,24 +1086,6 @@ local recipes = {
         reagents = {
             { itemId = 11138, name = "Small Glowing Shard", count = 1 },
             { itemId = 11083, name = "Soul Dust", count = 1 },
-        },
-        tools = { { categoryId = 375, name = "Runed Golden Rod" } },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Enchanting Trainer",
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Lesser Mystic Wand (155)
-    {
-        id = 14809,
-        name = "Lesser Mystic Wand",
-        itemId = 11289,
-        skillRequired = 155,
-        skillRange = { orange = 155, yellow = 175, green = 195, gray = 215 },
-        reagents = {
-            { itemId = 11291, name = "Star Wood", count = 1 },
-            { itemId = 11134, name = "Lesser Mystic Essence", count = 1 },
         },
         tools = { { categoryId = 375, name = "Runed Golden Rod" } },
         source = {
@@ -1181,6 +1192,25 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
+    -- Runed Golden Rod (175)
+    {
+        id = 13628,
+        name = "Runed Golden Rod",
+        itemId = 11130,
+        skillRequired = 175,
+        skillRange = { orange = 175, yellow = 175, green = 195, gray = 215 },
+        reagents = {
+            { itemId = 11128, name = "Golden Rod", count = 1 },
+            { itemId = 5500, name = "Iridescent Pearl", count = 1 },
+            { itemId = 11082, name = "Greater Astral Essence", count = 1 },
+            { itemId = 11083, name = "Soul Dust", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Enchanting Trainer",
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Enchant Weapon - Lesser Beastslayer (175)
     {
         id = 13653,
@@ -1224,6 +1254,24 @@ local recipes = {
         reagents = {
             { itemId = 11134, name = "Lesser Mystic Essence", count = 1 },
             { itemId = 7068, name = "Elemental Fire", count = 1 },
+        },
+        tools = { { categoryId = 375, name = "Runed Golden Rod" } },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Enchanting Trainer",
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Lesser Mystic Wand (175)
+    {
+        id = 14809,
+        name = "Lesser Mystic Wand",
+        itemId = 11289,
+        skillRequired = 175,
+        skillRange = { orange = 175, yellow = 175, green = 195, gray = 215 },
+        reagents = {
+            { itemId = 11291, name = "Star Wood", count = 1 },
+            { itemId = 11134, name = "Lesser Mystic Essence", count = 1 },
         },
         tools = { { categoryId = 375, name = "Runed Golden Rod" } },
         source = {
@@ -1386,6 +1434,25 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
+    -- Greater Mystic Wand (195)
+    {
+        id = 14810,
+        name = "Greater Mystic Wand",
+        itemId = 217287,
+        skillRequired = 195,
+        skillRange = { orange = 195, yellow = 195, green = 215, gray = 235 },
+        reagents = {
+            { itemId = 11291, name = "Star Wood", count = 1 },
+            { itemId = 11134, name = "Lesser Mystic Essence", count = 1 },
+            { itemId = 11137, name = "Vision Dust", count = 1 },
+        },
+        tools = { { categoryId = 375, name = "Runed Golden Rod" } },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Enchanting Trainer",
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Enchant 2H Weapon - Impact (200)
     {
         id = 13695,
@@ -1432,25 +1499,6 @@ local recipes = {
             { itemId = 11139, name = "Large Glowing Shard", count = 1 },
         },
         tools = { { categoryId = 375, name = "Runed Golden Rod" } },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Enchanting Trainer",
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Runed Truesilver Rod (200)
-    {
-        id = 13702,
-        name = "Runed Truesilver Rod",
-        itemId = 11145,
-        skillRequired = 200,
-        skillRange = { orange = 200, yellow = 220, green = 240, gray = 260 },
-        reagents = {
-            { itemId = 11144, name = "Truesilver Rod", count = 1 },
-            { itemId = 7971, name = "Black Pearl", count = 1 },
-            { itemId = 11135, name = "Greater Mystic Essence", count = 1 },
-            { itemId = 11137, name = "Vision Dust", count = 1 },
-        },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
@@ -1610,7 +1658,30 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249493,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 120 },
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Libram of Invocation (210)
+    {
+        id = 1249006,
+        name = "Libram of Invocation",
+        itemId = 249442,
+        skillRequired = 210,
+        skillRange = { orange = 210, yellow = 225, green = 245, gray = 265 },
+        reagents = {
+            { itemId = 11178, name = "Large Radiant Shard", count = 3 },
+            { itemId = 11175, name = "Greater Nether Essence", count = 3 },
+            { itemId = 11176, name = "Dream Dust", count = 4 },
+            { itemId = 249430, name = "Magenta Dye", count = 2 },
+            { itemId = 249409, name = "Cerulean Dye", count = 1 },
+            { itemId = 2289, name = "Scroll of Strength II", count = 4 },
+        },
+        tools = { { categoryId = 374, name = "Runed Silver Rod" } },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 249494,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1633,7 +1704,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249495,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1654,7 +1725,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249496,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1675,7 +1746,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249502,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1696,7 +1767,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249503,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1717,7 +1788,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249504,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1738,7 +1809,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249505,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1791,6 +1862,25 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 249512,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Runed Truesilver Rod (220)
+    {
+        id = 13702,
+        name = "Runed Truesilver Rod",
+        itemId = 11145,
+        skillRequired = 220,
+        skillRange = { orange = 220, yellow = 220, green = 240, gray = 260 },
+        reagents = {
+            { itemId = 11144, name = "Truesilver Rod", count = 1 },
+            { itemId = 7971, name = "Black Pearl", count = 1 },
+            { itemId = 11135, name = "Greater Mystic Essence", count = 1 },
+            { itemId = 11137, name = "Vision Dust", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Any Enchanting Trainer",
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1865,7 +1955,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249506,
-            cost = 5500,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1889,7 +1979,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249507,
-            cost = 5500,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1913,7 +2003,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249508,
-            cost = 5500,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1935,7 +2025,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249509,
-            cost = 5500,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1954,7 +2044,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249510,
-            cost = 5500,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2007,6 +2097,43 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Enchanting Trainer",
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Enchant Weapon - Dismantle (225)
+    {
+        id = 435481,
+        name = "Enchant Weapon - Dismantle",
+        skillRequired = 225,
+        skillRange = { orange = 225, yellow = 200, green = 217, gray = 235 },
+        reagents = {
+            { itemId = 11174, name = "Lesser Nether Essence", count = 4 },
+            { itemId = 5637, name = "Large Fang", count = 2 },
+            { itemId = 11177, name = "Small Radiant Shard", count = 2 },
+        },
+        tools = { { categoryId = 375, name = "Runed Golden Rod" } },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 215129,
+            cost = 50000,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Enchant Chest - Retricutioner (225)
+    {
+        id = 435903,
+        name = "Enchant Chest - Retricutioner",
+        skillRequired = 225,
+        skillRange = { orange = 225, yellow = 200, green = 220, gray = 240 },
+        reagents = {
+            { itemId = 11177, name = "Small Radiant Shard", count = 1 },
+            { itemId = 11176, name = "Dream Dust", count = 2 },
+        },
+        tools = { { categoryId = 375, name = "Runed Golden Rod" } },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 215138,
+            cost = 50000,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2662,7 +2789,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249537,
-            cost = 6875,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3590,7 +3717,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249536,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3609,7 +3736,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249534,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3665,7 +3792,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 274393,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3685,7 +3812,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 274394,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3722,7 +3849,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 274399,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3760,7 +3887,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 274401,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3782,7 +3909,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249525,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3804,7 +3931,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249526,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3823,7 +3950,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 274398,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3842,7 +3969,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249535,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3859,7 +3986,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249538,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3876,7 +4003,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249539,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3900,7 +4027,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249529,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3924,7 +4051,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249530,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3948,7 +4075,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 249532,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },

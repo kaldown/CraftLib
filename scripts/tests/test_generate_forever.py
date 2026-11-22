@@ -156,7 +156,8 @@ def test_trainer_npc_name_is_escaped():
 
 
 def test_forever_header_names_the_wiki():
-    assert "-- Generated from DB2 data and the Warcraft Wiki recipe tables\n" in _lua(
+    assert ("-- Generated from DB2 data, Wowhead guide tables and the Warcraft Wiki recipe "
+            "tables\n") in _lua(
         {"type": "TRAINER", "certainty": "WIKI"})
 
 
@@ -250,10 +251,23 @@ def test_difficulty_of_another_certainty_is_excluded_not_shipped(tmp_path, monke
     assert reasons[1001].startswith("difficulty certainty 'WOWHEAD' not accepted")
 
 
-@pytest.mark.parametrize("field,value", [("orange", 0), ("orange", 11), ("green", 24),
-                                         ("gray", 9)],
-                         ids=["orange-0", "orange-above-yellow", "green-not-midpoint",
-                              "gray-below-yellow"])
+def test_learn_skill_above_yellow_ships_with_that_skill_required(tmp_path, monkeypatch):
+    # 1001: yellow 10, gray 40. Learned at 11 it is yellow from the start: orange 11 is a
+    # true learn skill, and the recipe is offered from skill 11 on.
+    def edit(r):
+        r["1001"]["difficulty"]["orange"] = 11
+    rc, _art, _src, out = _run(tmp_path, monkeypatch, edit=edit)
+    assert rc == 0
+    lua = _lua_path(out).read_text()
+    block = lua[lua.index("id = 1001,"):lua.index("id = 1002,")]
+    assert "skillRequired = 11," in block
+    assert "skillRange = { orange = 11, yellow = 10, green = 25, gray = 40 }," in block
+
+
+@pytest.mark.parametrize("field,value", [("orange", 0), ("orange", 40), ("orange", 41),
+                                         ("green", 24), ("gray", 9)],
+                         ids=["orange-0", "orange-at-gray", "orange-above-gray",
+                              "green-not-midpoint", "gray-below-yellow"])
 def test_strict_difficulty_exits_2(tmp_path, monkeypatch, capsys, field, value):
     # 1001 resolves to orange 1, yellow 10, green 25, gray 40.
     def edit(r):
@@ -316,13 +330,34 @@ def test_failing_coverage_exits_2_and_still_writes_the_review(tmp_path, monkeypa
     assert rc == 2
     err = capsys.readouterr().err
     assert "Tailoring" in err and "coverage" in err
-    # 3 of 4 meets the 0.75 floor; the gap above skill 79 still fails.
-    assert "80-299" in err and "below the floor" not in err
+    # 3 of 4 meets the 0.75 floor. Nothing shipped covers skill 80 and above, and the
+    # excluded Fixture Boots (no learn-skill hint, gray 100) could give skill-ups up to 99.
+    assert "80-99" in err and "below the floor" not in err
     assert not _lua_path(out).exists()
     cov = _review(src)["coverage"]
-    assert (cov["shipped"], cov["inGame"], cov["maxGap"], cov["gap"]) == (3, 4, 220, [80, 299])
+    assert (cov["shipped"], cov["inGame"], cov["maxGap"], cov["gap"]) == (3, 4, 20, [80, 99])
     assert cov["passes"] is False
     assert (src / "Forever" / "REVIEW.md").is_file()
+
+
+def test_gap_counts_every_point_when_the_registry_says_so(tmp_path, monkeypatch, capsys):
+    _bucket(monkeypatch, gap_skill_up_only=False)
+    rc, _art, src, _out = _run(tmp_path, monkeypatch, gate=None)
+    assert rc == 2
+    cov = _review(src)["coverage"]
+    assert (cov["maxGap"], cov["gap"]) == (220, [80, 299])
+
+
+def test_learn_skill_hint_later_than_yellow_does_not_hide_a_gap(tmp_path, monkeypatch):
+    # Fixture Boots (yellow 60, gray 100) carries a hint of 95. From yellow on it gives
+    # skill-ups whenever it was learned, so 80-99 stays a gap and the gate still fails.
+    def edit(r):
+        r["1004"]["forever"] = {"learnFrom": 95}
+    rc, _art, src, out = _run(tmp_path, monkeypatch, gate=None, edit=edit)
+    assert rc == 2
+    cov = _review(src)["coverage"]
+    assert (cov["maxGap"], cov["gap"], cov["passes"]) == (20, [80, 99], False)
+    assert not _lua_path(out).exists()
 
 
 def test_held_back_profession_is_not_written(tmp_path, monkeypatch, capsys):
@@ -480,7 +515,7 @@ def test_manual_difficulty_ships(tmp_path, monkeypatch):
 
 def test_manual_difficulty_still_passes_the_strict_check(tmp_path, monkeypatch, capsys):
     def edit(r):
-        r["1001"]["difficulty"] = {"orange": 11, "yellow": 10, "green": 25, "gray": 40,
+        r["1001"]["difficulty"] = {"orange": 40, "yellow": 10, "green": 25, "gray": 40,
                                    "certainty": "MANUAL"}
     rc, *_ = _run(tmp_path, monkeypatch, edit=edit)
     assert rc == 2

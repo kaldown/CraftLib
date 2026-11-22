@@ -1,6 +1,6 @@
 -- Data/Forever/FirstAid/Recipes.lua
 -- First Aid recipes for WoW Forever
--- Generated from DB2 data and the Warcraft Wiki recipe tables
+-- Generated from DB2 data, Wowhead guide tables and the Warcraft Wiki recipe tables
 local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
@@ -270,7 +270,7 @@ local recipes = {
             { itemId = 4291, name = "Silken Thread", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 255726,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -305,7 +305,7 @@ local recipes = {
             { itemId = 2596, name = "Skin of Dwarven Stout", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 255727,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -323,7 +323,7 @@ local recipes = {
             { itemId = 8838, name = "Sungrass", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 255725,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -389,7 +389,7 @@ local recipes = {
             { itemId = 8343, name = "Heavy Silken Thread", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 255730,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -426,7 +426,7 @@ local recipes = {
             { itemId = 2594, name = "Flagon of Dwarven Honeymead", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.QUEST,
             itemId = 255731,
         },
         expansion = C.EXPANSION.FOREVER,

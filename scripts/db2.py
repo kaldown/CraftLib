@@ -27,7 +27,8 @@ class CanaryError(RuntimeError):
 # Union of what extract_db2_sources.py and generate_recipes.py read. Tables the
 # DB2 dump keys by ID list it explicitly; the others are read by their join column.
 # Not every bucket reads every table (see bucket_tables): ItemXItemEffect and SkillLine
-# only for the "xitem" teaching join, SpellTotems/TotemCategory only for has_tools buckets.
+# only for the "xitem" teaching join, SpellTotems/TotemCategory only for has_tools buckets,
+# TradeSkillCategory only for a bucket naming leftover_categories.
 REQUIRED_COLUMNS: dict[str, tuple[str, ...]] = {
     "SkillLineAbility": ("SkillLine", "Spell", "TrivialSkillLineRankLow", "TrivialSkillLineRankHigh"),
     "SpellReagents": ("SpellID",
@@ -44,6 +45,7 @@ REQUIRED_COLUMNS: dict[str, tuple[str, ...]] = {
     "SpellTotems": ("SpellID", "RequiredTotemCategoryID_0", "RequiredTotemCategoryID_1",
                     "Totem_0", "Totem_1"),
     "TotemCategory": ("ID", "Name_lang"),
+    "TradeSkillCategory": ("ID", "Name_lang"),
 }
 
 _BASE_TABLES = ("SkillLineAbility", "SpellReagents", "SpellEffect", "ItemEffect",
@@ -61,7 +63,30 @@ def bucket_tables(bucket) -> tuple[str, ...]:
         tables += ["ItemXItemEffect", "SkillLine"]
     if bucket.has_tools:
         tables += ["SpellTotems", "TotemCategory"]
+    if bucket.leftover_categories:
+        tables.append("TradeSkillCategory")
     return tuple(tables)
+
+
+def leftover_category_ids(build_dir: Path, bucket) -> dict[str, str]:
+    """TradeSkillCategory id -> its name, for the categories the bucket calls leftovers.
+
+    {} without reading the table when the bucket names none (the Classic paths must not
+    start depending on it). A registry name no category carries fails loud: the rule
+    would otherwise switch itself off on a build that renamed the category.
+    """
+    wanted = {name.strip().upper(): name for name in bucket.leftover_categories}
+    if not wanted:
+        return {}
+    out = {row["ID"]: row["Name_lang"] for row in load_table(build_dir, "TradeSkillCategory", bucket)
+           if (row["Name_lang"] or "").strip().upper() in wanted}
+    found = {name.strip().upper() for name in out.values()}
+    missing = [wanted[k] for k in wanted if k not in found]
+    if missing:
+        raise CanaryError(
+            f"bucket '{bucket.key}' build {Path(build_dir).name}: no TradeSkillCategory is "
+            f"named {', '.join(repr(m) for m in missing)} (leftover_categories)")
+    return out
 
 
 def required_columns(bucket, table: str) -> tuple[str, ...]:

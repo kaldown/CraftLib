@@ -1,7 +1,7 @@
 {
   "profession": "mining",
   "version": "1.60.1.71037",
-  "generated": "2026-11-21",
+  "generated": "2026-11-22",
   "recipes": {
     "2658": {
       "name": "Smelt Silver",
@@ -14,8 +14,8 @@
         "yellow": 100,
         "green": 112,
         "gray": 125,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       },
       "forever": {
         "notes": [
@@ -34,8 +34,8 @@
         "yellow": 65,
         "green": 90,
         "gray": 115,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       },
       "forever": {
         "notes": [
@@ -54,8 +54,8 @@
         "yellow": 170,
         "green": 177,
         "gray": 185,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       },
       "forever": {
         "notes": [
@@ -74,8 +74,8 @@
         "yellow": 130,
         "green": 135,
         "gray": 140,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       },
       "forever": {
         "notes": [
@@ -86,10 +86,22 @@
     "3304": {
       "name": "Smelt Tin",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "no wiki row"
+        "type": "TRAINER",
+        "certainty": "CROSS"
+      },
+      "difficulty": {
+        "orange": 65,
+        "yellow": 50,
+        "green": 62,
+        "gray": 75,
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "learn skill 65 above yellow 50: guide and Vanilla learnedAt agree",
+          "trainer per SoD (WOWHEAD); no wiki row"
+        ]
       }
     },
     "3569": {
@@ -99,15 +111,24 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 165
       }
     },
     "2657": {
       "name": "Smelt Copper",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "no wiki row"
+        "type": "STARTER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 25,
+        "green": 47,
+        "gray": 70,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
       }
     },
     "10098": {
@@ -117,6 +138,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 230
       }
     },
     "10097": {
@@ -126,6 +150,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 175
       }
     },
     "14891": {
@@ -135,6 +162,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 230
       }
     },
     "16153": {
@@ -144,6 +174,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "22967": {
@@ -153,6 +186,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no wiki row"
+      },
+      "forever": {
+        "learnFrom": 310
       }
     },
     "1213638": {
@@ -162,6 +198,12 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no wiki row"
+      },
+      "forever": {
+        "notes": [
+          "created item 234003 has no data in this build"
+        ],
+        "learnFrom": 315
       }
     },
     "1230161": {
@@ -171,6 +213,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 20
       }
     },
     "1262975": {
@@ -181,6 +226,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273097
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1263071": {
@@ -191,15 +239,24 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273122
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "1306126": {
       "name": "Smelt Heavy Thorium",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "no wiki row"
+        "type": "TRAINER",
+        "certainty": "GUIDE"
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 300,
+        "green": 307,
+        "gray": 315,
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "1249637": {
@@ -209,6 +266,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 275
       }
     }
   }

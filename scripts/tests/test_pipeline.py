@@ -19,7 +19,8 @@ def _plan(key, prof=None, steps=None):
 
 def test_plan_all_sod_order():
     names = [s.name for s in _plan("sod", "Tailoring")]
-    assert names == list(pipeline.STEP_NAMES)
+    # Every step but "guides": only a bucket naming Wowhead guide pages has that one.
+    assert names == [n for n in pipeline.STEP_NAMES if n != "guides"]
     assert names == ["fetch", "extract", "reconcile", "enrich", "verify-trainers",
                      "assert-no-pending", "assert-no-unaligned", "audit", "generate",
                      "vendor-prices"]
@@ -184,3 +185,64 @@ def test_enrich_scripts_cover_every_registry_enrich_mode():
                                        "wiki": "fetch_wiki_sources"}
     for b in BUCKETS.values():
         assert (pipeline.SCRIPTS / f"{pipeline.ENRICH_SCRIPTS[b.enrich]}.py").is_file()
+
+
+# --- Wowhead guide pages and the offline / force / pages switches ----------------------
+
+def _full_plan(key, **opts):
+    b = get_bucket(key)
+    o = pipeline.Options(version="1.0", data_dir=Path("/d"), sources_dir=Path("/s"),
+                         output_dir=Path("/o"), **opts)
+    return pipeline.plan_all(b, [b.profession(f) for f in b.professions], o)
+
+
+def test_forever_reads_the_guides_once_before_any_profession_step():
+    steps = _full_plan("forever")
+    names = [s.name for s in steps]
+    assert names.count("guides") == 1
+    assert names[:2] == ["fetch", "guides"]
+    guides = steps[1]
+    assert Path(guides.argv[1]).name == "fetch_wowhead_guides.py"
+    assert guides.profession is None and "--offline" not in guides.argv
+    assert guides.argv[guides.argv.index("--sources-dir") + 1] == "/s"
+
+
+@pytest.mark.parametrize("key", ["vanilla", "tbc", "wotlk", "sod"])
+def test_buckets_without_guide_pages_have_no_guides_step(key):
+    assert "guides" not in [s.name for s in _full_plan(key)]
+
+
+def test_offline_plan_never_fetches_and_tells_every_network_step():
+    steps = _full_plan("forever", offline=True, pages_dir=Path("/p"))
+    names = [s.name for s in steps]
+    assert "fetch" not in names and names[0] == "guides"
+    guides = steps[0]
+    assert "--offline" in guides.argv
+    assert guides.argv[guides.argv.index("--pages-dir") + 1] == "/p"
+    enrich = [s for s in steps if s.name == "enrich"]
+    assert enrich and all("--offline" in s.argv for s in enrich)
+    # No other step takes the switch (their parsers would reject it).
+    assert all("--offline" not in s.argv for s in steps if s.name not in ("guides", "enrich"))
+
+
+def test_force_goes_to_the_guides_step_only():
+    steps = _full_plan("forever", force=True)
+    assert [s.name for s in steps if "--force" in s.argv] == ["guides"]
+
+
+def test_offline_is_refused_for_a_bucket_enriched_from_the_network(capsys):
+    assert pipeline.main(["all", "--bucket", "tbc", "--offline", "--dry-run"]) == 2
+    assert "--offline" in capsys.readouterr().err
+
+
+def test_page_switches_are_refused_for_a_bucket_without_guide_pages(capsys):
+    assert pipeline.main(["all", "--bucket", "tbc", "--force", "--dry-run"]) == 2
+    assert pipeline.main(["all", "--bucket", "tbc", "--pages-dir", "/p", "--dry-run"]) == 2
+    assert "guide pages" in capsys.readouterr().err
+
+
+def test_forever_offline_dry_run_prints_no_download(capsys):
+    assert pipeline.main(["all", "--bucket", "forever", "--offline", "--dry-run"]) == 0
+    out = capsys.readouterr().out.splitlines()
+    assert not any(line.startswith("make ") for line in out)
+    assert "fetch_wowhead_guides.py" in out[0] and "--offline" in out[0]

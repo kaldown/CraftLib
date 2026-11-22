@@ -1,15 +1,26 @@
 """Resolve the learn skill (orange) and the source of a Forever recipe.
 
-Pure and table-driven, no I/O: the wiki enrich step gathers the facts (DB2 build,
-the matched Warcraft Wiki row, the owner's in-game capture, the cross buckets' oranges
-and trainer sources) and this module applies a fixed precedence: a recipe the in-game
-capture lacks is not in game; one whose yellow equals its gray gives no skill-up; the
-orange comes from the in-game trainer, else the teaching item's RequiredSkillRank, else
-a cross bucket's verified orange for the unchanged recipe, else the wiki skill; the
-source comes from the in-game trainer, else the wiki row's source cell (with the DB2
-teaching item and faction), else a cross bucket's verified trainer source. A value that
-cannot be established is never guessed: the recipe gets a review reason instead, and the
-generator excludes it and lists it in REVIEW.md.
+Pure and table-driven, no I/O: the wiki enrich step gathers the facts (DB2 build, the
+Wowhead guide tables, the matched Warcraft Wiki row, the owner's in-game capture, the
+cross buckets' oranges and trainer sources) and this module applies one order of trust.
+Strongest first, and a weaker source that disagrees with the winner only adds a note:
+
+  in game      the in-game recipe capture (absent = not in game); then DB2: AcquireMethod 3
+               (never learned), or a leftover trade-skill category whose created item the
+               build has no data for.
+  learn skill  the in-game trainer; DB2 AcquireMethod 1 (learned automatically at
+               MinSkillLineRank); the DB2 teaching item's RequiredSkillRank; the guide
+               table's skill or a cross bucket's verified orange for the unchanged recipe
+               (the later of the two where both exist); the wiki skill.
+  source       the in-game trainer; DB2 AcquireMethod 1 (STARTER); a DB2 teaching item,
+               typed and priced by the guide, else by the wiki; without one, the guide's
+               trainer / automatic row, a cross bucket's verified trainer, the wiki.
+
+A recipe whose yellow equals its gray, or that can only be learned at or above gray, gives
+no skill-up. A learn skill above yellow (and below gray) is accepted from the trainer, the
+item rank or MinSkillLineRank, and from the weaker sources only when two of them agree. A
+value that cannot be established is never guessed: the recipe gets a review reason
+instead, and the generator excludes it and lists it in REVIEW.md.
 
 Later steps read review reasons by prefix, so keep these wordings:
 "not in game:" and "no skill-up:" mark recipes that do not count as in game for the
@@ -28,9 +39,19 @@ NO_SKILL_UP = "no skill-up: yellow == gray"
 NO_WIKI_ROW = "no wiki row"
 UNPRICED_VENDOR_NOTE = "wiki says vendor; price not in DB2 or wiki"
 
-# orangeFrom -> difficulty.certainty. An item rank is a DB2 fact, hence DB2.
-_CERTAINTY = {"INGAME": "INGAME", "ITEM": "DB2", "CROSS": "CROSS", "WIKI": "WIKI"}
+NEVER_LEARNED = "DB2 marks it never learned (AcquireMethod 3)"
+AUTO_LEARNED = "DB2 marks it learned automatically"
+
+# SkillLineAbility.AcquireMethod values this module reads (0 = learned some other way).
+ACQUIRE_AUTO = 1     # learned by itself once the skill reaches MinSkillLineRank
+ACQUIRE_NEVER = 3    # never learned: the row is kept in the build, the recipe is not in game
+
+# orangeFrom -> difficulty.certainty. An item rank and MinSkillLineRank are DB2 facts.
+_CERTAINTY = {"INGAME": "INGAME", "AUTO": "DB2", "ITEM": "DB2", "GUIDE": "GUIDE",
+              "CROSS": "CROSS", "WIKI": "WIKI"}
 _TRAINER_KINDS = ("STARTER", "TRAINER", "SPECIAL_TRAINER")
+# Wiki kinds that say how a recipe is learned; UNKNOWN, a bare cost or other text do not.
+_CLAIM_KINDS = _TRAINER_KINDS + ("VENDOR", "DROP", "QUEST")
 
 
 @dataclass(frozen=True)
@@ -53,6 +74,38 @@ class RecipeFacts:
     min_faction: int
     faction_name: "str | None"
     rep_level: "str | None"
+    # The fields below default to "the bucket does not read this", so a bucket without
+    # these registry switches resolves exactly as before.
+    acquire: int = 0                    # SkillLineAbility.AcquireMethod (ACQUIRE_*)
+    min_rank: int = 0                   # SkillLineAbility.MinSkillLineRank
+    created_item: "str | None" = None   # id of the created item; None for enchants
+    created_missing: bool = False       # the build has no data (ItemSparse) for created_item
+    # Name of the registry leftover category (Bucket.leftover_categories) the recipe sits
+    # in, None when it is in none.
+    leftover_category: "str | None" = None
+    # Items DB2 links as teaching this spell but has no data for, so none of them is
+    # teaching_item; a guide row naming one may still type the recipe.
+    unlisted_items: "tuple[str, ...]" = ()
+
+
+@dataclass(frozen=True)
+class GuideFacts:
+    """What Wowhead's guide tables say about one recipe (wowhead_guide.reduce_rows).
+
+    Hand-written pages, so every field ranks below DB2 and below the in-game capture.
+    A field is None (or empty) when no row gives it or the rows disagree on it; notes say
+    what they disagree on. kind is STARTER, TRAINER, SPECIAL_TRAINER, VENDOR, DROP, QUEST
+    or None; currency is a Merchant's Favor amount (always positive); creates is the
+    created item a row names, checked against DB2's before the row counts.
+    """
+    skill: "int | None" = None
+    kind: "str | None" = None
+    currency: "int | None" = None
+    items: "tuple[int, ...]" = ()
+    creates: "int | None" = None
+    notes: "tuple[str, ...]" = ()
+    # Sold for Merchant's Favor, but the rows give several amounts (currency is None).
+    currency_unsettled: bool = False
 
 
 @dataclass(frozen=True)
@@ -298,13 +351,49 @@ def trainer_ambiguities(ingame: "dict[str, IngameFacts | None]") -> "dict[str, s
     return out
 
 
+def db2_absence(facts: RecipeFacts) -> "str | None":
+    """Why DB2 itself says the recipe is not in game, or None: marked never learned, or in
+    a leftover trade-skill category while its created item has no data in the build."""
+    if facts.acquire == ACQUIRE_NEVER:
+        return NEVER_LEARNED
+    if facts.leftover_category is not None and facts.created_missing:
+        return (f"DB2 category '{facts.leftover_category}', created item "
+                f"{facts.created_item} not in this build")
+    return None
+
+
+def release_trainer_entries(ingame: "dict[str, IngameFacts | None]",
+                            absent) -> "dict[str, IngameFacts | None]":
+    """ingame, with the trainer entry taken away from each spell in `absent` (those DB2
+    marks as not in game) whenever a spell DB2 does have reaches the same entry.
+
+    WHY: trainer entries are matched by name, and an old spell and its revised one share a
+    name. When DB2 says the old one is not in game, the entry is the revised spell's:
+    without this the two would stay ambiguous, and the old one would count as seen at the
+    trainer. A spell the recipe list shows keeps its entry (the capture outranks DB2), and
+    an entry only DB2-absent spells reach stays with them: the trainer teaches something.
+    """
+    def has_entry(c):
+        return c is not None and c.trainer_key is not None and c.trainer_skill is not None
+    live = {c.trainer_key for sid, c in ingame.items()
+            if has_entry(c) and c.present is not False and sid not in absent}
+    out = {}
+    for sid, c in ingame.items():
+        if sid in absent and has_entry(c) and c.present is not True and c.trainer_key in live:
+            c = IngameFacts(present=c.present, trainer_skill=None)
+        out[sid] = c
+    return out
+
+
 # --- resolution --------------------------------------------------------------------
 
 def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | None",
             cross_oranges: "Sequence[tuple[str, int]] | None",
             cross_trainer: "CrossTrainer | None" = None, *,
             manual_difficulty: "dict | None" = None,
-            trainer_review: "str | None" = None) -> Resolution:
+            trainer_review: "str | None" = None,
+            guide: "GuideFacts | None" = None,
+            cross_learned: "Sequence[tuple[str, int]]" = ()) -> Resolution:
     """Decide in game, then skill-up, then the orange, then the source, in that order.
 
     wiki is the match_wiki result. cross_oranges holds (bucket name, orange) per cross
@@ -313,23 +402,51 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
     the cross bucket's trainer evidence, already checked by the caller. manual_difficulty
     is a hand-aligned (certainty MANUAL) difficulty the recipe already has: no orange is
     chosen, it comes back unchanged, and only the source is resolved. trainer_review is
-    the trainer_ambiguities reason for this spell, if any.
+    the trainer_ambiguities reason for this spell, if any. guide holds the Wowhead guide
+    facts of this spell. cross_learned holds (bucket name, skill) for a cross bucket whose
+    Wowhead record says the unchanged recipe is learned above this build's yellow; such a
+    skill counts only when a second source gives the same number.
     """
     # In game first: a recipe the game does not have must not count toward coverage, so it
     # is reported as such whatever else is wrong with it.
     if ingame is not None and ingame.present is False:
         return Resolution(None, None, NOT_IN_GAME)
+    notes: list[str] = []
+    # DB2's own signs that a recipe is not in game rank below the capture: a recipe the
+    # owner saw in the recipe list, or at a trainer when no recipe list was captured, is
+    # in game whatever the tables say (kept as a note). The trainer entry is this spell's
+    # own: release_trainer_entries took it away where a spell DB2 does have shares it.
+    absent = db2_absence(facts)
+    if absent is not None:
+        seen = ingame is not None and (
+            ingame.present is True
+            or (ingame.present is None and ingame.trainer_skill is not None))
+        if not seen:
+            return Resolution(None, None, f"not in game: {absent}")
+        notes.append(f"in-game capture has it; {absent}")
+    elif facts.created_missing:
+        # Outside a leftover category the guides list such recipes as current ones
+        # (measured 2026-11-22: 47 of them), so the missing item data is only noted.
+        notes.append(f"created item {facts.created_item} has no data in this build")
     # A recipe that is gray from the start gives no skill-up (camping crafts).
     if facts.yellow >= facts.gray:
         reason = (NO_SKILL_UP if facts.yellow == facts.gray
                   else f"no skill-up: yellow {facts.yellow} above gray {facts.gray}")
-        return Resolution(None, None, reason)
+        return Resolution(None, None, reason, tuple(notes))
     if trainer_review is not None:
         # After the two checks above, so a recipe the game lacks or one without a skill-up
         # keeps that reason; before every source rule, because the trainer entry would win
         # them all for a spell it may not teach.
-        return Resolution(None, None, trainer_review)
-    notes: list[str] = []
+        return Resolution(None, None, trainer_review, tuple(notes))
+    if guide is not None:
+        if (guide.creates is not None and facts.created_item is not None
+                and str(guide.creates) != facts.created_item):
+            # The guide's own created item is the one check a hand-written row allows.
+            notes.append(f"guide row describes another item (creates {guide.creates}, DB2 "
+                         f"{facts.created_item}); ignored")
+            guide = None
+        else:
+            notes.extend(guide.notes)
     row = wiki if isinstance(wiki, WikiRow) else None
     trainer_skill = ingame.trainer_skill if ingame is not None else None
     trainer_cost = ingame.trainer_cost if ingame is not None else None
@@ -338,16 +455,19 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
         # Hand-verified state wins over any automatic value (as a MANUAL source does in the
         # enrich step); what disagrees with it is kept visible as a note.
         _manual_notes(facts, manual_difficulty, trainer_skill, notes)
-        source = _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes)
+        source = _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer,
+                         guide, notes)
         if isinstance(source, str):
             return Resolution(None, None, source, tuple(notes))
         return Resolution(source, manual_difficulty, None, tuple(notes))
 
-    orange = _orange(facts, wiki, row, trainer_skill, cross_oranges or (), notes)
+    orange = _orange(facts, wiki, row, trainer_skill, cross_oranges or (), guide,
+                     cross_learned or (), notes)
     if isinstance(orange, str):
         return Resolution(None, None, orange, tuple(notes))
     value, origin = orange
-    source = _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes)
+    source = _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, guide,
+                     notes)
     if isinstance(source, str):
         return Resolution(None, None, source, tuple(notes))
     difficulty = {
@@ -363,6 +483,31 @@ def resolve(facts: RecipeFacts, wiki: "WikiRow | str", ingame: "IngameFacts | No
     return Resolution(source, difficulty, None, tuple(notes))
 
 
+def earliest_learn_skill(facts: RecipeFacts, wiki: "WikiRow | str",
+                         ingame: "IngameFacts | None", cross_skills: "Sequence[int]",
+                         guide_skills: "Sequence[int]") -> "int | None":
+    """The smallest learn skill any source gives for a recipe; None when none gives one.
+
+    For a recipe under review: the coverage gate counts a skill point as a gap only where
+    an excluded recipe could give a skill-up, and "could" starts at this number (at 1 when
+    it is None). Deliberately every source, verified or not, and the smallest of them: a
+    hint that is too early only makes the gate stricter. cross_skills are the cross
+    buckets' oranges and learnedAt values for the same recipe, guide_skills every number
+    its guide rows give.
+    """
+    hints = [*cross_skills, *guide_skills]
+    if ingame is not None and ingame.trainer_skill is not None:
+        hints.append(ingame.trainer_skill)
+    if facts.acquire == ACQUIRE_AUTO:
+        hints.append(facts.min_rank)
+    if facts.teaching_item is not None:
+        hints.append(facts.rsr)
+    if isinstance(wiki, WikiRow) and wiki.skill is not None:
+        hints.append(wiki.skill)
+    hints = [h for h in hints if type(h) is int and h >= 1]   # 0 is no learn skill
+    return min(hints) if hints else None
+
+
 def _manual_notes(facts, manual, trainer_skill, notes):
     yg = (manual.get("yellow"), manual.get("gray"))
     if yg != (facts.yellow, facts.gray):
@@ -374,33 +519,99 @@ def _manual_notes(facts, manual, trainer_skill, notes):
                      f"{manual.get('orange')}")
 
 
-def _orange(facts, wiki, row, trainer_skill, cross_oranges, notes):
-    """(orange, orangeFrom), strongest evidence first, or a review reason."""
-    yellow = facts.yellow
-    # INGAME first: the trainer's skill requirement is the game itself. Not checked
-    # against lower tiers; out of 1..yellow it is a contradiction for a human (the
-    # generator asserts orange <= yellow), never a reason to take a weaker value.
+def _orange(facts, wiki, row, trainer_skill, cross_oranges, guide, cross_learned, notes):
+    """(orange, orangeFrom), strongest evidence first, or a review reason.
+
+    A learn skill L above yellow and below gray is a true state of the game (the recipe is
+    yellow from the moment it is learned), so it is accepted from the in-game trainer,
+    MinSkillLineRank and the teaching item's rank. The hand-written sources (guide, wiki)
+    and a cross bucket's learnedAt give such an L only when two of them agree. L at or
+    above gray means the recipe is gray when it can first be learned: no skill-up.
+    """
+    yellow, gray = facts.yellow, facts.gray
+    # INGAME first: the trainer's skill requirement is the game itself. Never traded for a
+    # weaker value: below 1 it is a contradiction for a human to look at.
     if trainer_skill is not None:
         if row is None:
             # The trainer decides even an unmatched recipe; keep why the wiki could not
             # (a stale alias or an ambiguity stays visible in REVIEW.md).
             notes.append(f"in-game trainer decides it; wiki: {wiki}")
-        if not 1 <= trainer_skill <= yellow:
-            return f"no learn skill: in-game trainer skill {trainer_skill} outside 1-{yellow}"
+        if trainer_skill >= gray:
+            return _learned_gray(trainer_skill, gray)
+        if trainer_skill < 1:
+            return (f"no learn skill: in-game trainer skill {trainer_skill} outside "
+                    f"1-{gray - 1}")
+        if trainer_skill > yellow:
+            notes.append(_above_yellow(trainer_skill, yellow, "in-game trainer"))
         if row is not None and row.skill is not None and row.skill != trainer_skill:
             # Where in-game and the wiki disagree, in-game wins and the note lists the
             # recipe in REVIEW.md.
             notes.append(f"in-game trainer skill {trainer_skill} differs from wiki skill "
                          f"{row.skill}")
+        _note_guide_skill(guide, trainer_skill, "INGAME", notes)
         return trainer_skill, "INGAME"
-    # ITEM next: the teaching item's RequiredSkillRank was <= yellow on every item
-    # recipe measured; one above yellow is not a learn skill the thresholds allow.
+    # AUTO: DB2 says the recipe is learned by itself once the skill reaches
+    # MinSkillLineRank (1 on every such Forever recipe measured). 0 is no learn skill.
+    if facts.acquire == ACQUIRE_AUTO and facts.min_rank >= 1:
+        rank = facts.min_rank
+        if rank >= gray:
+            return _learned_gray(rank, gray)
+        if rank > yellow:
+            notes.append(_above_yellow(rank, yellow, "DB2 MinSkillLineRank"))
+        _note_wiki_skill(row, rank, "AUTO", notes)
+        _note_guide_skill(guide, rank, "AUTO", notes)
+        return rank, "AUTO"
+    # ITEM: the teaching item cannot be used below its RequiredSkillRank.
     if facts.teaching_item is not None and facts.rsr > 0:
-        if facts.rsr <= yellow:
-            _note_wiki_skill(row, facts.rsr, "ITEM", notes)
-            return facts.rsr, "ITEM"
-        notes.append(f"teaching item {facts.teaching_item} RequiredSkillRank {facts.rsr} "
-                     f"above yellow {yellow} ignored")
+        rank = facts.rsr
+        if rank >= gray:
+            return _learned_gray(rank, gray)
+        if rank > yellow:
+            notes.append(_above_yellow(rank, yellow, f"teaching item {facts.teaching_item} "
+                                                     f"RequiredSkillRank"))
+        _note_wiki_skill(row, rank, "ITEM", notes)
+        _note_guide_skill(guide, rank, "ITEM", notes)
+        return rank, "ITEM"
+    wiki_skill = row.skill if row is not None else None
+    # GUIDE before CROSS: the guide describes Forever itself, a cross bucket another client.
+    # Where both give a usable number and differ, the later one is used (see below).
+    if guide is not None and guide.skill is not None:
+        skill = guide.skill
+        accepted = 1 <= skill <= yellow
+        if yellow < skill < gray:
+            backers = [f"{bucket} learnedAt" for bucket, learned in cross_learned
+                       if learned == skill][:1]
+            if wiki_skill == skill:
+                backers.append("wiki")
+            if backers:
+                notes.append(_above_yellow(skill, yellow, f"guide and {backers[0]} agree"))
+                accepted = True
+            else:
+                notes.append(f"guide skill {skill} above yellow {yellow} ignored: nothing "
+                             f"else gives {skill}")
+        elif skill >= gray:
+            # A hand-written number alone never removes a recipe as "no skill-up".
+            notes.append(f"guide skill {skill} at or above gray {gray} ignored")
+        elif skill < 1:
+            notes.append(f"guide skill {skill} below 1 ignored")
+        if accepted:
+            # The first usable cross orange, as the CROSS rule below would pick it.
+            rival = next(((b, c) for b, c in cross_oranges if 0 < c <= yellow), None)
+            if rival is not None and rival[1] > skill:
+                # WHY the later of the two: neither is verified for this client. Measured
+                # 2026-11-22, the guide is later on 12 Classic trainer recipes (it repeats
+                # yellow) and earlier on 11 (one number for a whole specialization). A
+                # learn skill that is too late costs a few points of path; one that is too
+                # early offers a recipe the player cannot learn yet.
+                _note_guide_decides(wiki, row, notes)
+                _note_wiki_skill(row, rival[1], "CROSS", notes)
+                _note_guide_skill(guide, rival[1], "CROSS", notes)
+                return rival[1], "CROSS"
+            _note_guide_decides(wiki, row, notes)
+            if rival is not None and rival[1] != skill:
+                notes.append(f"{rival[0]} orange {rival[1]} differs from GUIDE orange {skill}")
+            _note_wiki_skill(row, skill, "GUIDE", notes)
+            return skill, "GUIDE"
     # CROSS before WIKI: on unchanged recipes (same yellow and gray) the wiki skill
     # disagreed with the Wowhead-verified Vanilla orange on most of them. 0 is the
     # "learned at 0" convention (ADR-005), not a learn skill to copy; an unusable orange
@@ -411,6 +622,10 @@ def _orange(facts, wiki, row, trainer_skill, cross_oranges, notes):
             return cross, "CROSS"
         if cross > yellow:
             notes.append(f"{bucket} orange {cross} above yellow {yellow} ignored")
+    for bucket, learned in cross_learned:
+        if yellow < learned < gray and wiki_skill == learned:
+            notes.append(_above_yellow(learned, yellow, f"{bucket} learnedAt and wiki agree"))
+            return learned, "CROSS"
     if row is None:
         # No matched row: the failed match is the root cause to report.
         return wiki
@@ -426,6 +641,14 @@ def _orange(facts, wiki, row, trainer_skill, cross_oranges, notes):
     return skill, "WIKI"
 
 
+def _learned_gray(skill, gray):
+    return f"no skill-up: learned at {skill}, gray {gray}"
+
+
+def _above_yellow(skill, yellow, by):
+    return f"learn skill {skill} above yellow {yellow}: {by}"
+
+
 def _note_wiki_skill(row, orange, origin, notes):
     # WHY: the row is matched by name only, so a recipe renamed or reworked on Forever can
     # match another recipe's row; its source would then be that recipe's. A skill that
@@ -434,23 +657,179 @@ def _note_wiki_skill(row, orange, origin, notes):
         notes.append(f"wiki row skill {row.skill} differs from {origin} orange {orange}")
 
 
-def _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, notes):
-    """The source dict (from the in-game trainer, the wiki row, or a cross bucket's trainer
-    where the wiki leaves it open), or a review reason."""
+def _note_guide_skill(guide, orange, origin, notes):
+    if guide is not None and guide.skill is not None and guide.skill != orange:
+        notes.append(f"guide skill {guide.skill} differs from {origin} orange {orange}")
+
+
+def _note_guide_decides(wiki, row, notes):
+    # Only a match that failed for a reason worth a look (ambiguous, taken, bad alias): a
+    # plain missing row is no disagreement, and the guide names the spell by id.
+    if row is None and wiki != NO_WIKI_ROW:
+        note = f"guide decides it; wiki: {wiki}"
+        if note not in notes:
+            notes.append(note)
+
+
+def _source(facts, wiki, row, trainer_skill, trainer_cost, cross_trainer, guide, notes):
+    """The source dict, or a review reason. In order: the in-game trainer, DB2's
+    auto-learned mark, the guide (typing the DB2 teaching item, or a trainer / automatic
+    row when there is none), then the wiki row and a cross bucket's trainer."""
     item = int(facts.teaching_item) if facts.teaching_item is not None else None
-    # The in-game trainer list wins over every wiki kind and over a DB2 teaching item:
+    auto = facts.acquire == ACQUIRE_AUTO
+    # The in-game trainer list wins over every other source and over a DB2 teaching item:
     # the owner saw a trainer teach it. Disagreements are kept as notes (REVIEW.md).
     if trainer_skill is not None:
         if row is not None and row.kind != "TRAINER":
             notes.append(f"in-game trainer teaches it; wiki source '{row.raw_source}'")
         if item is not None:
             notes.append(f"in-game trainer teaches it; DB2 also has teaching item {item}")
+        if auto:
+            notes.append(f"in-game trainer teaches it; {AUTO_LEARNED}")
+        if guide is not None and guide.kind not in (None, "TRAINER", "SPECIAL_TRAINER"):
+            notes.append(f"in-game trainer teaches it; guide says {guide.kind}")
         source = {"type": "TRAINER", "certainty": "INGAME"}
         # Only a positive price: 0 would read as a free recipe and None is an unread one
         # (the probe printed nil); type() is int also rejects a JSON true.
         if type(trainer_cost) is int and trainer_cost > 0:
             source["trainingCost"] = trainer_cost
         return source
+    if auto:
+        # AcquireMethod 1 matched the wiki's "Automatic" on all 14 recipes that had one,
+        # and the Classic starter recipes (measured 2026-11-22).
+        if item is not None:
+            notes.append(f"{AUTO_LEARNED}; DB2 also has teaching item {item}")
+        if row is not None and row.kind in _CLAIM_KINDS and row.kind != "STARTER":
+            notes.append(f"{AUTO_LEARNED}; wiki source '{row.raw_source}'")
+        if guide is not None and guide.kind not in (None, "STARTER"):
+            notes.append(f"{AUTO_LEARNED}; guide says {guide.kind}")
+        return {"type": "STARTER", "certainty": "DB2"}
+    if guide is not None:
+        source = _guide_source(facts, item, guide, wiki, row, notes)
+        if source is not None:
+            return source
+    return _wiki_source(facts, wiki, row, item, cross_trainer, notes)
+
+
+def _same_kind(a, b):
+    trainer = ("TRAINER", "SPECIAL_TRAINER")
+    return a == b or (a in trainer and b in trainer)
+
+
+def _note_guide_kind(kind, row, notes):
+    # The wiki row is matched by name and the guide row by spell id; where both say how
+    # the recipe is learned and differ, the guide wins and the row is listed.
+    if row is not None and row.kind in _CLAIM_KINDS and not _same_kind(kind, row.kind):
+        notes.append(f"guide says {kind}; wiki source '{row.raw_source}'")
+
+
+def _sold(facts, item, price, notes):
+    """A guide-typed vendor source for the DB2 teaching item: REPUTATION when the item
+    carries a DB2 faction, else VENDOR; or the review reason when the faction is unnamed."""
+    if facts.min_faction > 0:
+        if not facts.faction_name or not facts.rep_level:
+            return f"reputation faction {facts.min_faction} without a DB2 name or level"
+        return {"type": "REPUTATION", "certainty": "GUIDE", "itemId": item,
+                "factionId": facts.min_faction, "factionName": facts.faction_name,
+                "level": facts.rep_level, **price}
+    return {"type": "VENDOR", "certainty": "GUIDE", "itemId": item, **price}
+
+
+def _guide_source(facts, item, guide, wiki, row, notes):
+    """The source the guide establishes, a review reason, or None when it settles nothing
+    and the wiki rules decide as before."""
+    kind = guide.kind
+    if item is None:
+        # A guide row naming a recipe item that DB2 links to this spell but has no data for
+        # (so it was never the chosen teaching item): the link is DB2's, the kind the guide's.
+        linked = next((i for i in guide.items if str(i) in facts.unlisted_items), None)
+        if linked is not None and kind in _TRAINER_KINDS:
+            # The keyword says how the recipe is learned; an item the build has no data
+            # for does not make it item-taught against that.
+            notes.append(f"guide says {kind}; it also names item {linked}, which DB2 links "
+                         f"to the spell without data")
+            linked = None
+        if linked is not None:
+            notes.append(f"teaching item {linked} named by the guide has no data in this build")
+            _note_guide_decides(wiki, row, notes)
+            if guide.currency is not None:
+                return {"type": "VENDOR", "certainty": "GUIDE", "itemId": linked,
+                        "currency": {"name": CURRENCY_NAME, "amount": guide.currency}}
+            if kind in ("DROP", "QUEST"):
+                return {"type": kind, "certainty": "GUIDE", "itemId": linked}
+            return {"type": "UNKNOWN", "certainty": "GUIDE", "itemId": linked}
+        if kind is None:
+            return None
+        _note_guide_kind(kind, row, notes)
+        if kind in ("VENDOR", "DROP"):
+            # Neither can be emitted without the item that is bought or dropped. With a
+            # wiki row, the wiki rules decide (the difference is noted above). Without
+            # one, a cross bucket's trainer must not type a recipe the guide says is
+            # bought or dropped on this client: a review, not a weaker source's value.
+            if row is None and wiki == NO_WIKI_ROW:
+                return f"{kind.lower()} per guide but DB2 has no teaching item"
+            return None
+        _note_guide_decides(wiki, row, notes)
+        if kind == "STARTER":
+            return {"type": "STARTER", "certainty": "GUIDE"}
+        if kind == "QUEST":
+            return {"type": "QUEST", "certainty": "GUIDE"}
+        source = {"type": "TRAINER", "certainty": "GUIDE"}
+        if kind == "SPECIAL_TRAINER":
+            source["npcName"] = "Special trainer"
+        return source
+
+    # DB2 has a teaching item: the recipe is item-taught, and the guide says which kind.
+    if kind in _TRAINER_KINDS:
+        notes.append(f"guide says {kind}; DB2 has teaching item {item}")
+        return None
+    if guide.currency is not None:
+        # A Merchant's Favor amount is a vendor price whatever keyword stands next to it,
+        # and it wins over BuyPrice: a currency recipe has no gold price.
+        _note_guide_kind("VENDOR", row, notes)
+        if row is not None and row.currency is not None and row.currency != guide.currency:
+            notes.append(f"wiki price {row.currency} {CURRENCY_NAME} differs from the "
+                         f"guide's {guide.currency}")
+        _note_guide_decides(wiki, row, notes)
+        return _sold(facts, item, {"currency": {"name": CURRENCY_NAME,
+                                                "amount": guide.currency}}, notes)
+    if guide.currency_unsettled:
+        # Known to be sold for Merchant's Favor, amount not settled: BuyPrice must not
+        # stand in as a gold price. A wiki row with one amount may still give it.
+        if row is not None and row.currency is not None and row.currency > 0:
+            return None
+        notes.append("guide gives more than one Merchant's Favor price; none is used")
+        _note_guide_decides(wiki, row, notes)
+        return {"type": "UNKNOWN", "certainty": "GUIDE", "itemId": item}
+    if kind in ("DROP", "QUEST"):
+        _note_guide_kind(kind, row, notes)
+        if facts.min_faction > 0:
+            notes.append(f"DB2 faction {facts.min_faction} {facts.faction_name} "
+                         f"{facts.rep_level} on teaching item {item}; guide says {kind}")
+        _note_guide_decides(wiki, row, notes)
+        return {"type": kind, "certainty": "GUIDE", "itemId": item}
+    if kind == "VENDOR":
+        if row is not None and row.kind == "VENDOR":
+            return None   # the same claim; the wiki row may carry the price
+        _note_guide_kind(kind, row, notes)
+        _note_guide_decides(wiki, row, notes)
+        if facts.buy_price > 0:
+            # BuyPrice alone never proves a vendor; the guide saying so does, and
+            # BuyPrice is then the price.
+            return _sold(facts, item, {"cost": facts.buy_price}, notes)
+        notes.append("guide says vendor; price not in DB2 or the guide")
+        return {"type": "UNKNOWN", "certainty": "GUIDE", "itemId": item}
+    if row is None:
+        # The guide lists the spell but not where its recipe item comes from. UNKNOWN with
+        # the item makes no claim, and the recipe stays usable for a player who owns it.
+        notes.append(f"guide lists it without a source; wiki: {wiki}")
+        return {"type": "UNKNOWN", "certainty": "GUIDE", "itemId": item}
+    return None
+
+
+def _wiki_source(facts, wiki, row, item, cross_trainer, notes):
+    """The source from the wiki row (with the DB2 teaching item and faction), or a cross
+    bucket's trainer where the wiki leaves it open, or a review reason."""
     if row is None:
         # A cross bucket's trainer only for a recipe the wiki does not list at all. A row
         # taken by another spell or an ambiguous one marks an old/revised pair, where the

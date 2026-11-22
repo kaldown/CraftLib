@@ -1,21 +1,21 @@
 {
   "profession": "cooking",
   "version": "1.60.1.71037",
-  "generated": "2026-11-21",
+  "generated": "2026-11-22",
   "recipes": {
     "2538": {
       "name": "Charred Wolf Meat",
       "source": {
         "type": "STARTER",
-        "certainty": "WIKI"
+        "certainty": "DB2"
       },
       "difficulty": {
         "orange": 1,
         "yellow": 45,
         "green": 65,
         "gray": 85,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
       }
     },
     "2539": {
@@ -37,15 +37,15 @@
       "name": "Roasted Boar Meat",
       "source": {
         "type": "STARTER",
-        "certainty": "WIKI"
+        "certainty": "DB2"
       },
       "difficulty": {
         "orange": 1,
         "yellow": 45,
         "green": 65,
         "gray": 85,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
       }
     },
     "2541": {
@@ -728,15 +728,15 @@
       "name": "Herb Baked Egg",
       "source": {
         "type": "STARTER",
-        "certainty": "WIKI"
+        "certainty": "DB2"
       },
       "difficulty": {
         "orange": 1,
         "yellow": 45,
         "green": 65,
         "gray": 85,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
       }
     },
     "8607": {
@@ -783,7 +783,8 @@
       "forever": {
         "notes": [
           "wiki row skill 215 differs from CROSS orange 175"
-        ]
+        ],
+        "learnFrom": 175
       }
     },
     "15935": {
@@ -979,7 +980,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "no wiki row"
+        "reviewReason": "not in game: DB2 marks it never learned (AcquireMethod 3)"
+      },
+      "forever": {
+        "learnFrom": 25
       }
     },
     "18239": {
@@ -1296,7 +1300,8 @@
       "forever": {
         "notes": [
           "wiki row skill 325 differs from CROSS orange 285"
-        ]
+        ],
+        "learnFrom": 285
       }
     },
     "25659": {
@@ -1467,15 +1472,21 @@
       "name": "Basic Campfire",
       "source": {
         "type": "STARTER",
-        "certainty": "WIKI"
+        "certainty": "DB2"
       },
       "difficulty": {
         "orange": 1,
         "yellow": 1,
         "green": 3,
         "gray": 5,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 20 differs from AUTO orange 1",
+          "DB2 marks it learned automatically; guide says TRAINER"
+        ]
       }
     },
     "1247741": {
@@ -1485,13 +1496,16 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "learnFrom": 210
       }
     },
     "1249957": {
       "name": "Peace Tea",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249879
       },
       "difficulty": {
@@ -1507,7 +1521,7 @@
       "name": "Royal Tea",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249880
       },
       "difficulty": {
@@ -1523,7 +1537,7 @@
       "name": "Root Tea",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249881
       },
       "difficulty": {
@@ -1538,8 +1552,8 @@
     "1249960": {
       "name": "Triage Tea",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 249882
       },
       "difficulty": {
@@ -1554,8 +1568,8 @@
     "1249961": {
       "name": "Sunny Tea",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 249883
       },
       "difficulty": {
@@ -1570,8 +1584,8 @@
     "1249962": {
       "name": "Sage's Tea",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 249884
       },
       "difficulty": {
@@ -1587,7 +1601,7 @@
       "name": "Venomous Smoothie",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249885,
         "currency": {
           "name": "Merchant's Favor",
@@ -1607,7 +1621,7 @@
       "name": "Slimy Smoothie",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249886,
         "currency": {
           "name": "Merchant's Favor",
@@ -1627,7 +1641,7 @@
       "name": "Mrrggl Smrrthle",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249887,
         "currency": {
           "name": "Merchant's Favor",
@@ -1661,13 +1675,18 @@
         "gray": 195,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "guide rows disagree on price: 30, 60"
+        ]
       }
     },
     "1249967": {
       "name": "Spicy Smoothie",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249889,
         "currency": {
           "name": "Merchant's Favor",
@@ -1687,7 +1706,7 @@
       "name": "Wicked Smoothie",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249890,
         "currency": {
           "name": "Merchant's Favor",
@@ -1706,9 +1725,10 @@
     "1250142": {
       "name": "Savory Stag Sliders",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
-        "itemId": 250173
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 250173,
+        "cost": 20000
       },
       "difficulty": {
         "orange": 225,
@@ -1738,8 +1758,8 @@
     "1250144": {
       "name": "Bat Hachee",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 250175
       },
       "difficulty": {
@@ -1754,8 +1774,8 @@
     "1250145": {
       "name": "Savory Turtle Stew",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 250176
       },
       "difficulty": {
@@ -1770,8 +1790,8 @@
     "1250146": {
       "name": "Flank au Poivre",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 250177
       },
       "difficulty": {
@@ -1786,8 +1806,8 @@
     "1250147": {
       "name": "Bear Bruscitti",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 250178
       },
       "difficulty": {
@@ -1802,8 +1822,8 @@
     "1250148": {
       "name": "Steaming Stag Steak",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "QUEST",
+        "certainty": "GUIDE",
         "itemId": 250179
       },
       "difficulty": {
@@ -1818,8 +1838,8 @@
     "1250149": {
       "name": "Swiftstrike Steak",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 250180
       },
       "difficulty": {
@@ -1834,8 +1854,8 @@
     "1250150": {
       "name": "Raging Raptor Ribs",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 250181
       },
       "difficulty": {
@@ -1845,13 +1865,18 @@
         "gray": 310,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 275 differs from ITEM orange 180"
+        ]
       }
     },
     "1250151": {
       "name": "Bear Brisket",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250182
       },
       "difficulty": {
@@ -1882,8 +1907,8 @@
     "1250153": {
       "name": "Raptor Rouladen",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 250184
       },
       "difficulty": {
@@ -1914,8 +1939,8 @@
     "1250155": {
       "name": "Giant Scrambled Eggs",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 250186
       },
       "difficulty": {
@@ -1931,7 +1956,7 @@
       "name": "Tasty Raptor Bites",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250187
       },
       "difficulty": {
@@ -1947,7 +1972,7 @@
       "name": "Breakfast Omelette",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 250188
       },
       "difficulty": {
@@ -1962,8 +1987,8 @@
     "1250158": {
       "name": "Clam Linguine",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 250189
       },
       "difficulty": {
@@ -1982,6 +2007,11 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "notes": [
+          "created item 252683 has no data in this build"
+        ]
       }
     },
     "1270632": {
@@ -1991,13 +2021,19 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "notes": [
+          "created item 263507 has no data in this build"
+        ],
+        "learnFrom": 80
       }
     },
     "1270633": {
       "name": "Skywall Souffle",
       "source": {
         "type": "QUEST",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 263511
       },
       "difficulty": {
@@ -2012,10 +2048,9 @@
     "1270635": {
       "name": "Pincer Bites",
       "source": {
-        "type": "VENDOR",
-        "certainty": "WIKI",
-        "itemId": 263513,
-        "cost": 200
+        "type": "QUEST",
+        "certainty": "GUIDE",
+        "itemId": 263513
       },
       "difficulty": {
         "orange": 35,
@@ -2024,6 +2059,11 @@
         "gray": 55,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "guide says QUEST; wiki source 'Vendor'"
+        ]
       }
     },
     "1262978": {
@@ -2034,6 +2074,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273102
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1263067": {
@@ -2044,6 +2087,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273115
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "1283400": {
@@ -2054,6 +2100,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273087
+      },
+      "forever": {
+        "learnFrom": 90
       }
     },
     "1291341": {
@@ -2064,6 +2113,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273101
+      },
+      "forever": {
+        "learnFrom": 200
       }
     },
     "1294014": {
@@ -2120,7 +2172,7 @@
       "name": "Savory Whimsyfin Delight",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 251526
       },
       "difficulty": {

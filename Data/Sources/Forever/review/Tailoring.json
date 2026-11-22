@@ -3,35 +3,20 @@
     "cap": 300,
     "floor": 0.75,
     "gap": null,
-    "inGame": 429,
-    "knownSource": 327,
-    "knownSourceShare": 0.7622,
+    "inGame": 379,
+    "knownSource": 314,
+    "knownSourceShare": 0.8285,
     "maxGap": 0,
     "maxGapAllowed": 10,
     "passes": true,
-    "share": 0.8695,
-    "shipped": 373
+    "share": 0.9525,
+    "shipped": 361
   },
   "excluded": [
-    [
-      2387,
-      "Linen Cloak",
-      "unknown source and no teaching item"
-    ],
-    [
-      2963,
-      "Bolt of Linen Cloth",
-      "unknown source and no teaching item"
-    ],
     [
       3861,
       "Long Silken Cloak",
       "ambiguous: wiki row 'long silken cloak' matches spells 3861, 439094"
-    ],
-    [
-      3915,
-      "Brown Linen Shirt",
-      "unknown source and no teaching item"
     ],
     [
       7636,
@@ -54,11 +39,6 @@
       "no wiki row"
     ],
     [
-      12044,
-      "Simple Linen Pants",
-      "unknown source and no teaching item"
-    ],
-    [
       12048,
       "Black Mageweave Vest",
       "ambiguous: wiki row 'black mageweave vest' matches spells 12048, 439086"
@@ -71,11 +51,6 @@
     [
       12062,
       "Stormcloth Pants",
-      "no wiki row"
-    ],
-    [
-      12063,
-      "Stormcloth Gloves",
       "no wiki row"
     ],
     [
@@ -97,11 +72,6 @@
       12090,
       "Stormcloth Boots",
       "no wiki row"
-    ],
-    [
-      18455,
-      "Bottomless Bag",
-      "ambiguous: wiki row 'bottomless bag' matches spells 18455, 463972"
     ],
     [
       22813,
@@ -136,162 +106,252 @@
     [
       429351,
       "Extraplanar Spidersilk Boots",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 210795 not in this build"
     ],
     [
       435610,
       "Gneuro-Linked Arcano-Filament Monocle",
-      "reagent 213372 has no name in this build"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215111 not in this build"
+    ],
+    [
+      439085,
+      "Crimson Silk Robe",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217245 not in this build"
     ],
     [
       439086,
       "Black Mageweave Vest",
-      "ambiguous: wiki row 'black mageweave vest' matches spells 12048, 439086"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217246 not in this build"
     ],
     [
       439088,
       "Black Mageweave Leggings",
-      "ambiguous: wiki row 'black mageweave leggings' matches spells 12049, 439088"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217247 not in this build"
+    ],
+    [
+      439091,
+      "Earthen Silk Belt",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217248 not in this build"
+    ],
+    [
+      439093,
+      "Crimson Silk Shoulders",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217250 not in this build"
     ],
     [
       439094,
       "Long Silken Cloak",
-      "ambiguous: wiki row 'long silken cloak' matches spells 3861, 439094"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217252 not in this build"
+    ],
+    [
+      439097,
+      "Boots of the Enchanter",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217253 not in this build"
     ],
     [
       439098,
       "Crimson Silk Belt",
-      "ambiguous: wiki row 'crimson silk belt' matches spells 8772, 439098"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217255 not in this build"
     ],
     [
       439100,
       "Earthen Vest",
-      "ambiguous: wiki row 'earthen vest' matches spells 8764, 439100"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217256 not in this build"
+    ],
+    [
+      439102,
+      "Enchanter's Cowl",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217257 not in this build"
     ],
     [
       446193,
       "Fractured Mind Pauldrons",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220750 not in this build"
     ],
     [
       446194,
       "Mantle of Insanity",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220749 not in this build"
     ],
     [
       446195,
       "Shoulderpads of the Deranged",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220751 not in this build"
     ],
     [
       461692,
       "Synthetic Gordok Ogre Suit",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227855 not in this build"
+    ],
+    [
+      461708,
+      "Incandescent Mooncloth Robe",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227861 not in this build"
+    ],
+    [
+      461747,
+      "Incandescent Mooncloth Vest",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227860 not in this build"
+    ],
+    [
+      461750,
+      "Incandescent Mooncloth Circlet",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227863 not in this build"
+    ],
+    [
+      461752,
+      "Incandescent Mooncloth Leggings",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227864 not in this build"
+    ],
+    [
+      462282,
+      "Embroidered Belt of the Archmage",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 228476 not in this build"
     ],
     [
       463972,
       "Bottomless Bag",
-      "ambiguous: wiki row 'bottomless bag' matches spells 18455, 463972"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 228994 not in this build"
     ],
     [
       1213527,
       "Vampiric Cowl",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233826 not in this build"
     ],
     [
       1213530,
       "Vampiric Shawl",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233833 not in this build"
     ],
     [
       1213532,
       "Vampiric Robe",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233837 not in this build"
     ],
     [
       1213534,
       "Qiraji Silk Scarf",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233956 not in this build"
     ],
     [
       1213536,
       "Qiraji Silk Cape",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233958 not in this build"
     ],
     [
       1213538,
       "Qiraji Silk Cloak",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233959 not in this build"
     ],
     [
       1213540,
       "Qiraji Silk Drape",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233960 not in this build"
     ],
     [
       1213740,
       "Sylvan Shoulders",
-      "ambiguous: wiki row 'sylvan shoulders' matches spells 28482, 1213740"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234312 not in this build"
     ],
     [
       1213742,
       "Sylvan Crown",
-      "ambiguous: wiki row 'sylvan crown' matches spells 28481, 1213742"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234315 not in this build"
     ],
     [
       1213744,
       "Sylvan Vest",
-      "ambiguous: wiki row 'sylvan vest' matches spells 28480, 1213744"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234317 not in this build"
     ],
     [
       1214173,
       "Bolt of Qiraji Silk",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234009 not in this build"
     ],
     [
       1214306,
       "Dreamscale Bracers",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234484 not in this build"
     ],
     [
       1214307,
       "Dreamscale Mitts",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234485 not in this build"
     ],
     [
       1223760,
       "Glacial Vest",
-      "ambiguous: wiki row 'glacial vest' matches spells 28207, 1223760"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236694 not in this build"
     ],
     [
       1223762,
       "Glacial Cloak",
-      "ambiguous: wiki row 'glacial cloak' matches spells 28208, 1223762"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236690 not in this build"
     ],
     [
       1223764,
       "Glacial Gloves",
-      "ambiguous: wiki row 'glacial gloves' matches spells 28205, 1223764"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236692 not in this build"
     ],
     [
       1223766,
       "Glacial Wrists",
-      "ambiguous: wiki row 'glacial wrists' matches spells 28209, 1223766"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236693 not in this build"
     ],
     [
       1223768,
       "Frosty Vest",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236706 not in this build"
     ],
     [
       1223770,
       "Frosty Gloves",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236705 not in this build"
     ],
     [
       1223772,
       "Frosty Wrists",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236704 not in this build"
+    ],
+    [
+      1224607,
+      "Scarlet Augur's Hood",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238264 not in this build"
+    ],
+    [
+      1224608,
+      "Scarlet Augur's Mantle",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238265 not in this build"
+    ],
+    [
+      1224609,
+      "Scarlet Augur's Vestments",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238266 not in this build"
+    ],
+    [
+      1224610,
+      "Scarlet Augur's Cuffs",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238267 not in this build"
+    ],
+    [
+      1224611,
+      "Scarlet Augur's Mitts",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238268 not in this build"
+    ],
+    [
+      1224612,
+      "Scarlet Augur's Strap",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238269 not in this build"
+    ],
+    [
+      1224613,
+      "Scarlet Augur's Leggings",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238270 not in this build"
+    ],
+    [
+      1224614,
+      "Scarlet Augur's Soles",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238271 not in this build"
     ],
     [
       1229504,
@@ -509,17 +569,37 @@
     [
       2387,
       "Linen Cloak",
-      "wiki row skill 35 differs from CROSS orange 1"
+      "wiki row skill 35 differs from AUTO orange 1"
     ],
     [
       2963,
       "Bolt of Linen Cloth",
-      "wiki row skill 25 differs from CROSS orange 1"
+      "wiki row skill 25 differs from AUTO orange 1"
+    ],
+    [
+      3755,
+      "Linen Bag",
+      "DB2 marks it learned automatically; wiki source 'Trainer'"
+    ],
+    [
+      3755,
+      "Linen Bag",
+      "wiki row skill 5 differs from AUTO orange 1"
     ],
     [
       3915,
       "Brown Linen Shirt",
-      "wiki row skill 35 differs from CROSS orange 1"
+      "wiki row skill 35 differs from AUTO orange 1"
+    ],
+    [
+      12044,
+      "Simple Linen Pants",
+      "wiki row skill 40 differs from AUTO orange 1"
+    ],
+    [
+      12063,
+      "Stormcloth Gloves",
+      "guide lists it without a source; wiki: no wiki row"
     ],
     [
       12081,
@@ -535,6 +615,11 @@
       18422,
       "Cloak of Fire",
       "wiki row skill 275 differs from ITEM orange 235"
+    ],
+    [
+      18455,
+      "Bottomless Bag",
+      "guide decides it; wiki: ambiguous: wiki row 'bottomless bag' matches spells 18455, 463972"
     ],
     [
       23664,
@@ -562,9 +647,19 @@
       "wiki says vendor; price not in DB2 or wiki"
     ],
     [
+      1257436,
+      "Gilded Handwraps",
+      "guide says TRAINER; DB2 has teaching item 254022"
+    ],
+    [
       1257492,
       "Mooncloth Reagent Bag",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292941,
+      "Manaflare Pants",
+      "created item 273904 has no data in this build"
     ],
     [
       1292941,
@@ -574,7 +669,17 @@
     [
       1292942,
       "Manaflare Gloves",
+      "created item 273905 has no data in this build"
+    ],
+    [
+      1292942,
+      "Manaflare Gloves",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292943,
+      "Manaflare Mantle",
+      "created item 273906 has no data in this build"
     ],
     [
       1292943,
@@ -584,7 +689,17 @@
     [
       1292944,
       "Manaflare Boots",
+      "created item 273907 has no data in this build"
+    ],
+    [
+      1292944,
+      "Manaflare Boots",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292957,
+      "Pants of Conviction",
+      "created item 273920 has no data in this build"
     ],
     [
       1292957,
@@ -594,7 +709,17 @@
     [
       1292958,
       "Gloves of Conviction",
+      "created item 273921 has no data in this build"
+    ],
+    [
+      1292958,
+      "Gloves of Conviction",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292959,
+      "Mantle of Conviction",
+      "created item 273922 has no data in this build"
     ],
     [
       1292959,
@@ -604,7 +729,17 @@
     [
       1292960,
       "Treads of Conviction",
+      "created item 273923 has no data in this build"
+    ],
+    [
+      1292960,
+      "Treads of Conviction",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292961,
+      "Leggings of Conviction",
+      "created item 273924 has no data in this build"
     ],
     [
       1292961,
@@ -614,7 +749,17 @@
     [
       1292962,
       "Handguards of Conviction",
+      "created item 273925 has no data in this build"
+    ],
+    [
+      1292962,
+      "Handguards of Conviction",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292963,
+      "Pauldrons of Conviction",
+      "created item 273926 has no data in this build"
     ],
     [
       1292963,
@@ -624,7 +769,17 @@
     [
       1292964,
       "Boots of Conviction",
+      "created item 273927 has no data in this build"
+    ],
+    [
+      1292964,
+      "Boots of Conviction",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292977,
+      "Demonheart Leggings",
+      "created item 273940 has no data in this build"
     ],
     [
       1292977,
@@ -634,7 +789,17 @@
     [
       1292978,
       "Demonheart Gloves",
+      "created item 273941 has no data in this build"
+    ],
+    [
+      1292978,
+      "Demonheart Gloves",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292979,
+      "Demonheart Spaulders",
+      "created item 273942 has no data in this build"
     ],
     [
       1292979,
@@ -644,23 +809,34 @@
     [
       1292980,
       "Demonheart Boots",
+      "created item 273943 has no data in this build"
+    ],
+    [
+      1292980,
+      "Demonheart Boots",
       "wiki says vendor; price not in DB2 or wiki"
     ]
   ],
   "orangeFrom": {
+    "AUTO": 5,
     "CROSS": 4,
-    "ITEM": 300,
-    "WIKI": 69
+    "ITEM": 284,
+    "WIKI": 68
   },
   "sourceTypes": {
-    "DROP": 104,
+    "DROP": 90,
     "QUEST": 5,
     "REPUTATION": 39,
-    "TRAINER": 72,
-    "UNKNOWN": 46,
-    "VENDOR": 107
+    "STARTER": 5,
+    "TRAINER": 71,
+    "UNKNOWN": 47,
+    "VENDOR": 104
   },
   "unknownSource": [
+    [
+      12063,
+      "Stormcloth Gloves"
+    ],
     [
       44950,
       "Green Winter Clothes"

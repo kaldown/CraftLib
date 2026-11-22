@@ -33,7 +33,7 @@ def _edit(src, change):
 
 
 def _diff(orange, yellow, gray, origin):
-    certainty = {"ITEM": "DB2"}.get(origin, origin)
+    certainty = {"ITEM": "DB2", "AUTO": "DB2"}.get(origin, origin)
     return {"orange": orange, "yellow": yellow, "green": (yellow + gray) // 2, "gray": gray,
             "certainty": certainty, "orangeFrom": origin}
 
@@ -532,3 +532,211 @@ def test_manual_difficulty_counts_in_the_summary(tmp_path, capsys):
     assert fw.main(forever_enrich_argv(art, src)) == 0
     err = capsys.readouterr().err
     assert "orangeFrom MANUAL: 1" in err and "orangeFrom ITEM: 1" in err
+
+
+# --- DB2 facts beyond thresholds and teaching items --------------------------------------
+
+NEVER = "not in game: DB2 marks it never learned (AcquireMethod 3)"
+
+
+def _reason(src, spell):
+    return _recipes(src)[spell]["source"].get("reviewReason")
+
+
+def test_auto_learned_recipe_becomes_a_db2_starter(tmp_path, capsys):
+    # 1004 has no wiki row: AcquireMethod 1 alone establishes it.
+    rc, _art, src = _run(tmp_path, acquire={1004: (1, 1)})
+    assert rc == 0
+    r = _recipes(src)["1004"]
+    assert r["source"] == {"type": "STARTER", "certainty": "DB2"}
+    assert r["difficulty"] == _diff(1, 60, 100, "AUTO")
+    assert r["forever"]["notes"] == [
+        "DB2 marks it learned automatically; DB2 also has teaching item 6004"]
+    assert "orangeFrom AUTO: 1" in capsys.readouterr().err
+
+
+def test_never_learned_recipe_is_not_in_game(tmp_path):
+    rc, _art, src = _run(tmp_path, acquire={1001: (3, 1)})
+    assert rc == 0
+    assert _reason(src, "1001") == NEVER
+    assert "difficulty" not in _recipes(src)["1001"]
+
+
+def test_leftover_category_recipe_without_item_data_is_not_in_game(tmp_path):
+    rc, _art, src = _run(tmp_path, categories={1001: 2592}, omit_items=frozenset({5001}))
+    assert rc == 0
+    assert _reason(src, "1001") == ("not in game: DB2 category 'SEASON OF DISCOVERY', "
+                                    "created item 5001 not in this build")
+
+
+def test_leftover_category_recipe_with_item_data_resolves(tmp_path):
+    rc, _art, src = _run(tmp_path, categories={1001: 2592})
+    assert rc == 0
+    assert _recipes(src)["1001"]["source"] == {"type": "TRAINER", "certainty": "WIKI"}
+
+
+def test_missing_created_item_in_another_category_is_only_a_note(tmp_path):
+    # Category 2000 ("Cloth") is no leftover category: the recipe stays in game. Its item
+    # has no name to match the wiki by, so it is a review, with the note kept next to it.
+    rc, _art, src = _run(tmp_path, categories={1001: 2000}, omit_items=frozenset({5001}))
+    assert rc == 0
+    r = _recipes(src)["1001"]
+    assert r["source"]["reviewReason"] == "no wiki row"
+    assert r["forever"]["notes"] == ["created item 5001 has no data in this build"]
+
+
+def test_recipe_facts_carry_the_db2_evidence(tmp_path):
+    import extract_db2_sources as extract
+    from buckets import get_bucket
+    from tests.fixture_build import write_build
+    forever = get_bucket("forever")
+    # 7001 teaches Fixture Bolt (1001) in the link table but has no ItemSparse row.
+    art = write_build(tmp_path / "art", join="xitem", acquire={1001: (1, 1)},
+                      categories={1001: 2592}, omit_items=frozenset({5001}),
+                      extra_teaching=((1001, 7001),))
+    indexes = extract.build_indexes(art / FIXTURE_VERSION, forever)
+    prof = forever.profession("Tailoring")
+    ability = fw.ability_facts(indexes, forever, prof, {"1001", "1002"})
+    assert ability == {"1001": (1, 1, "SEASON OF DISCOVERY"), "1002": (0, 1, None)}
+    f = fw.recipe_facts("1001", "Fixture Bolt", (10, 40), indexes, ability["1001"])
+    assert (f.acquire, f.min_rank, f.leftover_category) == (1, 1, "SEASON OF DISCOVERY")
+    assert (f.created_item, f.created_missing) == ("5001", True)
+    assert f.teaching_item is None and f.unlisted_items == ("7001",)
+    g = fw.recipe_facts("1002", "Fixture Vest", (20, 60), indexes, ability["1002"])
+    assert (g.created_item, g.created_missing, g.unlisted_items) == ("5002", False, ())
+    assert (g.acquire, g.leftover_category) == (0, None)
+
+
+@pytest.mark.parametrize("recipe, expected", [
+    pytest.param({"difficulty": {"yellow": 0, "gray": 75, "certainty": "WOWHEAD"},
+                  "wowhead": {"learnedAt": 65}}, 65, id="wowhead-prints-yellow-0"),
+    pytest.param({"difficulty": {"yellow": 50, "gray": 75, "certainty": "WOWHEAD"},
+                  "wowhead": {"learnedAt": 65}}, 65, id="same-yellow"),
+    pytest.param({"difficulty": {"yellow": 0, "gray": 80, "certainty": "WOWHEAD"},
+                  "wowhead": {"learnedAt": 65}}, None, id="gray-differs"),
+    pytest.param({"difficulty": {"yellow": 40, "gray": 75, "certainty": "WOWHEAD"},
+                  "wowhead": {"learnedAt": 65}}, None, id="yellow-differs"),
+    pytest.param({"difficulty": {"yellow": 0, "gray": 75, "certainty": "DB2"},
+                  "wowhead": {"learnedAt": 65}}, None, id="not-wowhead"),
+    pytest.param({"difficulty": {"yellow": 0, "gray": 75, "certainty": "WOWHEAD"},
+                  "wowhead": {"learnedAt": 50}}, None, id="not-above-yellow"),
+    pytest.param({"difficulty": {"yellow": 0, "gray": 75, "certainty": "WOWHEAD"},
+                  "wowhead": {"learnedAt": 75}}, None, id="at-gray"),
+    pytest.param({"difficulty": {"yellow": 0, "gray": 75, "certainty": "WOWHEAD"}}, None,
+                 id="no-learned-at"),
+    pytest.param(None, None, id="no-twin"),
+])
+def test_cross_learned_only_for_the_unchanged_recipe(recipe, expected):
+    # Forever: yellow 50, gray 75 (Smelt Tin).
+    assert fw.cross_learned(recipe, 50, 75) == expected
+
+
+# --- Wowhead guide facts ------------------------------------------------------------------
+
+def _guide_row(**kw):
+    base = {"skill": None, "kind": None, "items": [], "npcs": [], "currency": None,
+            "creates": None, "page": "guide/x"}
+    base.update(kw)
+    return base
+
+
+def _write_guide_facts(src, spells=None, items=None, smelts=None):
+    doc = {"pages": {"guide/x": {"fetched": "2026-11-22", "rows": 1}},
+           "spells": spells or {}, "items": items or {}, "smelts": smelts or {}}
+    (src / "Forever" / "guide_facts.json").write_text(json.dumps(doc), encoding="utf-8")
+
+
+def test_guide_facts_resolve_a_recipe_the_wiki_does_not_list(tmp_path, capsys):
+    # 1004 Fixture Boots: no wiki row; DB2 teaching item 6004 without a rank or a price.
+    # The guide's spell row gives the skill, its commerce row (found through the DB2
+    # teaching item) the Merchant's Favor price.
+    art, src = write_forever_tree(tmp_path)
+    _write_guide_facts(
+        src, spells={"1004": [_guide_row(skill=55, items=[6004], creates=5004)]},
+        items={"6004": [_guide_row(skill=55, kind="VENDOR", items=[6004], currency=45)]})
+    assert fw.main(forever_enrich_argv(art, src)) == 0
+    r = _recipes(src)["1004"]
+    assert r["source"] == {"type": "VENDOR", "certainty": "GUIDE", "itemId": 6004,
+                           "currency": {"name": "Merchant's Favor", "amount": 45}}
+    assert r["difficulty"] == _diff(55, 60, 100, "GUIDE")
+    err = capsys.readouterr().err
+    assert "orangeFrom GUIDE: 1" in err and "Reviews: 0" in err
+    assert "Guide rows: 1 of 4 recipes" in err
+
+
+def test_guide_row_for_another_created_item_is_ignored_and_noted(tmp_path):
+    art, src = write_forever_tree(tmp_path)
+    _write_guide_facts(src, spells={"1001": [_guide_row(skill=5, kind="STARTER",
+                                                        creates=5999)]})
+    assert fw.main(forever_enrich_argv(art, src)) == 0
+    r = _recipes(src)["1001"]
+    assert r["source"] == {"type": "TRAINER", "certainty": "WIKI"}
+    assert r["forever"]["notes"] == [
+        "guide row describes another item (creates 5999, DB2 5001); ignored"]
+
+
+def test_malformed_guide_facts_exit_2(tmp_path, capsys):
+    art, src = write_forever_tree(tmp_path)
+    (src / "Forever" / "guide_facts.json").write_text('{"spells": []}', encoding="utf-8")
+    assert fw.main(forever_enrich_argv(art, src)) == 2
+    assert "guide facts" in capsys.readouterr().err
+
+
+@pytest.mark.parametrize("recipe, expected", [
+    # Wowhead prints yellow 0 for a recipe learned at or above it (Smelt Tin, learned at
+    # 65): unchanged when the gray matches and it is learned at or above this yellow.
+    pytest.param({"source": {"type": "TRAINER", "certainty": "WOWHEAD", "trainingCost": 50},
+                  "difficulty": {"orange": 0, "yellow": 0, "green": 65, "gray": 75,
+                                 "certainty": "WOWHEAD"},
+                  "wowhead": {"learnedAt": 65}}, "WOWHEAD", id="yellow-0-learned-above"),
+    pytest.param({"source": {"type": "TRAINER", "certainty": "WOWHEAD"},
+                  "difficulty": {"orange": 0, "yellow": 0, "green": 65, "gray": 75},
+                  "wowhead": {"learnedAt": 40}}, None, id="yellow-0-learned-below"),
+    pytest.param({"source": {"type": "TRAINER", "certainty": "WOWHEAD"},
+                  "difficulty": {"orange": 0, "yellow": 0, "green": 65, "gray": 80},
+                  "wowhead": {"learnedAt": 65}}, None, id="gray-differs"),
+    pytest.param({"source": {"type": "TRAINER", "certainty": "WOWHEAD"},
+                  "difficulty": {"orange": 0, "yellow": 0, "green": 65, "gray": 75}},
+                 None, id="no-learned-at"),
+    pytest.param({"source": {"type": "TRAINER", "certainty": "WOWHEAD"},
+                  "difficulty": {"orange": 30, "yellow": 50, "green": 62, "gray": 75}},
+                 "WOWHEAD", id="same-thresholds-as-before"),
+])
+def test_cross_trainer_counts_a_recipe_learned_above_yellow_as_unchanged(recipe, expected):
+    # Forever: yellow 50, gray 75.
+    assert fw.cross_trainer(recipe, 50, 75) == expected
+
+
+# --- the earliest learn skill kept on a review (the coverage gate reads it) ---------------
+
+def test_review_keeps_the_earliest_learn_skill_any_source_gives(tmp_path):
+    # 1004 (yellow 60, gray 100) has no wiki row. Vanilla teaches the same recipe (same
+    # gray) at 45, a guide row says 50: the smaller one is kept.
+    twin = {"1004": {"name": "Fixture Boots", "source": {"type": "TRAINER", "certainty": "DB2"},
+                     "difficulty": {"orange": 0, "yellow": 0, "green": 80, "gray": 100,
+                                    "certainty": "WOWHEAD"},
+                     "wowhead": {"learnedAt": 45}}}
+    art, src = write_forever_tree(tmp_path, vanilla_recipes=twin)
+    _write_guide_facts(src, spells={"1004": [_guide_row(skill=50), _guide_row(skill=70)]})
+    assert fw.main(forever_enrich_argv(art, src)) == 0
+    r = _recipes(src)["1004"]
+    assert r["source"]["needsReview"] is True
+    assert r["forever"]["learnFrom"] == 45
+
+
+def test_review_without_any_hint_keeps_none_and_a_resolved_recipe_never_does(tmp_path):
+    rc, _art, src = _run(tmp_path)
+    assert rc == 0
+    r = _recipes(src)
+    assert "forever" not in r["1004"]          # a review without a hint or a note
+    assert all("learnFrom" not in (x.get("forever") or {}) for x in r.values())
+
+
+def test_cross_hint_needs_the_same_gray(tmp_path):
+    twin = {"1004": {"name": "Fixture Boots", "source": {"type": "TRAINER", "certainty": "DB2"},
+                     "difficulty": {"orange": 0, "yellow": 0, "green": 80, "gray": 120,
+                                    "certainty": "WOWHEAD"},
+                     "wowhead": {"learnedAt": 45}}}
+    art, src = write_forever_tree(tmp_path, vanilla_recipes=twin)
+    assert fw.main(forever_enrich_argv(art, src)) == 0
+    assert "forever" not in _recipes(src)["1004"]

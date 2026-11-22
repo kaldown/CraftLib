@@ -68,7 +68,7 @@ One install serves every live Classic-family client - CraftLib detects which one
 - Season of Discovery
 - The Burning Crusade Classic
 - Wrath of the Lich King Classic, including the Titan (3.80) seasonal WotLK client (includes Inscription, skill cap 450)
-- WoW Forever (1.60) - seven professions so far; Engineering and Mining follow once confirmed in game
+- WoW Forever (1.60) - nine professions (Mining covers smelting)
 - Hardcore (Classic Era data)
 
 ## Addons Using CraftLib

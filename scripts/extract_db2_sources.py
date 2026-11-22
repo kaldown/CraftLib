@@ -6,6 +6,8 @@ Identifies sources with certainty from DB2:
   db2.teaching_items)
 - REPUTATION: MinFactionID > 0 on recipe item
 - QUEST: BuyPrice=0 AND SellPrice=0 on recipe item
+- STARTER: SkillLineAbility.AcquireMethod 1 (learned automatically), on a bucket whose
+  registry entry reads that column (Forever)
 
 Marks uncertain sources as PENDING for Wowhead verification:
 - Recipe item exists with BuyPrice > 0 (could be VENDOR or DROP)
@@ -116,11 +118,20 @@ def build_indexes(data_dir: Path, bucket, check: bool = True) -> dict:
         data_dir, bucket, indexes["skill_line_abilities"],
         {PROFESSIONS[f].skill_line for f in bucket.professions})
     indexes["recipe_items"] = {}
-    for spell_id, candidates in db2.teaching_items(data_dir, bucket).items():
+    # Every link, chosen or not: the wiki enrich step reports items the build links to a
+    # spell but has no data for (they can never be the chosen teaching item).
+    indexes["teaching_links"] = db2.teaching_items(data_dir, bucket)
+    for spell_id, candidates in indexes["teaching_links"].items():
         item_id = db2.choose_teaching_item(bucket, candidates, indexes["item_details"],
                                            spell_lines.get(spell_id, frozenset()))
         if item_id is not None:
             indexes["recipe_items"][spell_id] = item_id
+
+    # TradeSkillCategory id -> name of the registry's leftover categories ({} and the
+    # table unread for a bucket that names none).
+    indexes["leftover_categories"] = db2.leftover_category_ids(data_dir, bucket)
+    # Whether SkillLineAbility.AcquireMethod is read (the column is in the bucket's contract).
+    indexes["acquire_method"] = bucket.acquire_method
 
     indexes["recipe_items_fallback"] = {}
     indexes["item_details_fallback"] = {}
@@ -160,13 +171,20 @@ def add_fallback_indexes(indexes: dict, fallback_dir: Path) -> None:
     indexes["recipe_items_fallback"] = fb
 
 
-def detect_source(spell_id: str, indexes: dict) -> dict:
+def detect_source(spell_id: str, indexes: dict, auto_learned: bool = False) -> dict:
     """Detect recipe source from DB2 data.
 
     Returns source dict with 'certainty' field:
     - DB2: Source is certain from game data
     - PENDING: Needs Wowhead verification (VENDOR vs DROP ambiguous)
+
+    auto_learned: the recipe's SkillLineAbility row says it is learned by itself
+    (AcquireMethod 1); only a bucket whose registry entry reads that column passes it.
     """
+    if auto_learned:
+        # The same value the wiki enrich step resolves to, so a re-extract of resolved
+        # sources changes nothing (DB2 certainty is otherwise recomputed here).
+        return {"type": "STARTER", "certainty": "DB2"}
     recipe_item_id = indexes["recipe_items"].get(spell_id)
 
     # No recipe item in this build: consult the fallback build's ItemEffect before
@@ -294,7 +312,8 @@ def extract_profession_sources(
         if prev is not None and preserve_source(prev.get("source")):
             detected = prev["source"]
         else:
-            detected = detect_source(spell_id, indexes)
+            auto = bool(indexes.get("acquire_method")) and row.get("AcquireMethod") == "1"
+            detected = detect_source(spell_id, indexes, auto_learned=auto)
         recipes[spell_id] = merge_recipe(prev, name, detected)
 
     orphans = [sid for sid in old_recipes if sid not in recipes]

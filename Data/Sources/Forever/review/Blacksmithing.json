@@ -3,35 +3,20 @@
     "cap": 300,
     "floor": 0.75,
     "gap": null,
-    "inGame": 470,
-    "knownSource": 326,
-    "knownSourceShare": 0.6936,
+    "inGame": 407,
+    "knownSource": 315,
+    "knownSourceShare": 0.774,
     "maxGap": 0,
     "maxGapAllowed": 10,
     "passes": true,
-    "share": 0.8234,
-    "shipped": 387
+    "share": 0.9386,
+    "shipped": 382
   },
   "excluded": [
-    [
-      2660,
-      "Rough Sharpening Stone",
-      "unknown source and no teaching item"
-    ],
-    [
-      2663,
-      "Copper Bracers",
-      "unknown source and no teaching item"
-    ],
     [
       2671,
       "Rough Bronze Bracers",
       "no wiki row"
-    ],
-    [
-      3115,
-      "Rough Weightstone",
-      "unknown source and no teaching item"
     ],
     [
       3496,
@@ -124,18 +109,8 @@
       "no wiki row: row 'golden scale gauntlets' taken by spell 439120"
     ],
     [
-      12260,
-      "Rough Copper Vest",
-      "unknown source and no teaching item"
-    ],
-    [
       16960,
       "Thorium Greatsword",
-      "no wiki row"
-    ],
-    [
-      16965,
-      "Bleakwood Hew",
       "no wiki row"
     ],
     [
@@ -149,49 +124,9 @@
       "no wiki row"
     ],
     [
-      16986,
-      "Blood Talon",
-      "no wiki row"
-    ],
-    [
-      16987,
-      "Darkspear",
-      "no wiki row"
-    ],
-    [
-      16991,
-      "Annihilator",
-      "no learn skill: wiki skill 300 above yellow 295"
-    ],
-    [
-      21161,
-      "Sulfuron Hammer",
-      "ambiguous: wiki row 'sulfuron hammer' matches spells 21161, 460460"
-    ],
-    [
       22757,
       "Elemental Sharpening Stone",
-      "no learn skill: wiki skill 300 above yellow 275"
-    ],
-    [
-      23650,
-      "Ebon Hand",
-      "no learn skill: wiki skill 300 above yellow 295"
-    ],
-    [
-      23652,
-      "Blackguard",
-      "no learn skill: wiki skill 300 above yellow 295"
-    ],
-    [
-      23653,
-      "Nightfall",
-      "no learn skill: wiki skill 300 above yellow 295"
-    ],
-    [
-      27585,
-      "Heavy Obsidian Belt",
-      "ambiguous: wiki row 'heavy obsidian belt' matches spells 27585, 1213746"
+      "no skill-up: learned at 300, gray 295"
     ],
     [
       27588,
@@ -199,34 +134,29 @@
       "ambiguous: wiki row 'light obsidian belt' matches spells 27588, 1213748"
     ],
     [
-      28461,
-      "Ironvine Breastplate",
-      "ambiguous: wiki row 'ironvine breastplate' matches spells 28461, 1213715"
-    ],
-    [
-      28462,
-      "Ironvine Gloves",
-      "ambiguous: wiki row 'ironvine gloves' matches spells 28462, 1213711"
-    ],
-    [
-      28463,
-      "Ironvine Belt",
-      "ambiguous: wiki row 'ironvine belt' matches spells 28463, 1213709"
-    ],
-    [
       427061,
       "Mantle of the Second War",
-      "no learn skill: wiki skill 150 above yellow 140"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 210773 not in this build"
     ],
     [
       429348,
       "Shifting Silver Breastplate",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 210794 not in this build"
     ],
     [
       430397,
       "Blackfathom Sharpening Stone",
       "unknown source and no teaching item"
+    ],
+    [
+      435906,
+      "Reflective Truesilver Braincage",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215167 not in this build"
+    ],
+    [
+      435908,
+      "Tempered Interference-Negating Helmet",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215161 not in this build"
     ],
     [
       439120,
@@ -236,202 +166,297 @@
     [
       439122,
       "Golden Scale Boots",
-      "ambiguous: 2 wiki rows named 'golden scale boots'"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217275 not in this build"
     ],
     [
       439124,
       "Golden Scale Cuirass",
-      "ambiguous: 2 wiki rows named 'golden scale cuirass'"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217277 not in this build"
     ],
     [
       439126,
       "Golden Scale Coif",
-      "ambiguous: 2 wiki rows named 'golden scale coif'"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217279 not in this build"
     ],
     [
       439128,
       "Moonsteel Broadsword",
-      "ambiguous: 2 wiki rows named 'moonsteel broadsword'"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217281 not in this build"
     ],
     [
       439130,
       "Golden Scale Shoulders",
-      "ambiguous: 2 wiki rows named 'golden scale shoulders'"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217283 not in this build"
     ],
     [
       439132,
       "Golden Scale Leggings",
-      "ambiguous: 2 wiki rows named 'golden scale leggings'"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217285 not in this build"
     ],
     [
       446179,
       "Shoulderplates of Dread",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220738 not in this build"
     ],
     [
       446188,
       "Fearmonger's Shoulderguards",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220740 not in this build"
     ],
     [
       446191,
       "Baleful Pauldrons",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220739 not in this build"
     ],
     [
       460460,
       "Sulfuron Hammer",
-      "ambiguous: wiki row 'sulfuron hammer' matches spells 21161, 460460"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227684 not in this build"
+    ],
+    [
+      461647,
+      "Skyrider's Masterwork Stormhammer",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227886 not in this build"
+    ],
+    [
+      461651,
+      "Fiery Plate Gauntlets of the Hidden Technique",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227865 not in this build"
+    ],
+    [
+      461667,
+      "Tempered Dark Iron Plate",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227871 not in this build"
+    ],
+    [
+      461669,
+      "Refined Arcanite Champion",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 228125 not in this build"
+    ],
+    [
+      461671,
+      "Stronger-hold Gauntlets",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227885 not in this build"
+    ],
+    [
+      461675,
+      "Refined Arcanite Reaper",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227845 not in this build"
     ],
     [
       461712,
       "Refined Hammer of the Titans",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 228230 not in this build"
     ],
     [
       461714,
       "Desecration",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227857 not in this build"
     ],
     [
       461716,
       "Deadly Heartseeker",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227884 not in this build"
     ],
     [
       461718,
       "Tranquility",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227881 not in this build"
+    ],
+    [
+      461730,
+      "Hardened Frostguard",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227887 not in this build"
+    ],
+    [
+      461733,
+      "Finely-Enchanted Battlehammer",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227880 not in this build"
+    ],
+    [
+      461735,
+      "Invincible Mail",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227876 not in this build"
+    ],
+    [
+      461737,
+      "Tempest Gauntlets",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227870 not in this build"
+    ],
+    [
+      461739,
+      "Warcrest of the Great Chief",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227872 not in this build"
+    ],
+    [
+      461743,
+      "Sageblade of the Archmagus",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227850 not in this build"
     ],
     [
       1213481,
       "Razorspike Headcage",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233795 not in this build"
     ],
     [
       1213484,
       "Razorspike Shoulderplate",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233793 not in this build"
     ],
     [
       1213490,
       "Razorspike Battleplate",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233492 not in this build"
     ],
     [
       1213492,
       "Obsidian Reaver",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233491 not in this build"
     ],
     [
       1213498,
       "Obsidian Champion",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233490 not in this build"
     ],
     [
       1213500,
       "Obsidian Destroyer",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233796 not in this build"
     ],
     [
       1213502,
       "Obsidian Stormhammer",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233797 not in this build"
     ],
     [
       1213504,
       "Obsidian Sageblade",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233798 not in this build"
     ],
     [
       1213506,
       "Obsidian Defender",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233801 not in this build"
     ],
     [
       1213643,
       "Obsidian Grinding Stone",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234004 not in this build"
     ],
     [
       1213709,
       "Ironvine Belt",
-      "ambiguous: wiki row 'ironvine belt' matches spells 28463, 1213709"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234288 not in this build"
     ],
     [
       1213711,
       "Ironvine Gloves",
-      "ambiguous: wiki row 'ironvine gloves' matches spells 28462, 1213711"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234290 not in this build"
     ],
     [
       1213715,
       "Ironvine Breastplate",
-      "ambiguous: wiki row 'ironvine breastplate' matches spells 28461, 1213715"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234292 not in this build"
     ],
     [
       1213746,
       "Heavy Obsidian Belt",
-      "ambiguous: wiki row 'heavy obsidian belt' matches spells 27585, 1213746"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234319 not in this build"
     ],
     [
       1213748,
       "Light Obsidian Belt",
-      "ambiguous: wiki row 'light obsidian belt' matches spells 27588, 1213748"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234321 not in this build"
     ],
     [
       1214137,
       "Obsidian Heartseeker",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234428 not in this build"
     ],
     [
       1214257,
       "Black Grasp of the Destroyer",
-      "ambiguous: wiki row 'black grasp of the destroyer' matches spells 27589, 1214257"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234086 not in this build"
     ],
     [
       1214270,
       "Jagged Obsidian Shield",
-      "ambiguous: wiki row 'jagged obsidian shield' matches spells 27586, 1214270"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234459 not in this build"
     ],
     [
       1214274,
       "Obsidian Mail Tunic",
-      "ambiguous: wiki row 'obsidian mail tunic' matches spells 27590, 1214274"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234460 not in this build"
     ],
     [
       1214309,
       "Dreamscale Visor",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234487 not in this build"
     ],
     [
       1215507,
       "Thick Obsidian Breastplate",
-      "ambiguous: wiki row 'thick obsidian breastplate' matches spells 27587, 1215507"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 235040 not in this build"
     ],
     [
       1223787,
       "Icebane Breastplate",
-      "ambiguous: wiki row 'icebane breastplate' matches spells 28242, 1223787"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236695 not in this build"
     ],
     [
       1223789,
       "Icebane Gauntlets",
-      "ambiguous: wiki row 'icebane gauntlets' matches spells 28243, 1223789"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236697 not in this build"
     ],
     [
       1223791,
       "Icebane Bracers",
-      "ambiguous: wiki row 'icebane bracers' matches spells 28244, 1223791"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236696 not in this build"
+    ],
+    [
+      1224631,
+      "Scarlet Soldier's Helmet",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238288 not in this build"
+    ],
+    [
+      1224632,
+      "Scarlet Soldier's Spaulders",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238289 not in this build"
+    ],
+    [
+      1224633,
+      "Scarlet Soldier's Chestplate",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238290 not in this build"
+    ],
+    [
+      1224635,
+      "Scarlet Soldier's Protectors",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238291 not in this build"
+    ],
+    [
+      1224636,
+      "Scarlet Soldier's Grips",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238292 not in this build"
+    ],
+    [
+      1224637,
+      "Scarlet Soldier's Waistguard",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238293 not in this build"
+    ],
+    [
+      1224638,
+      "Scarlet Soldier's Legplates",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238294 not in this build"
+    ],
+    [
+      1224639,
+      "Scarlet Soldier's Stompers",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238295 not in this build"
     ],
     [
       1230171,
       "Sharpening Wheel",
       "no skill-up: yellow == gray"
-    ],
-    [
-      1245287,
-      "Copper Rod",
-      "unknown source and no teaching item"
     ],
     [
       1252229,
@@ -619,7 +644,7 @@
     [
       2663,
       "Copper Bracers",
-      "wiki row skill 20 differs from CROSS orange 1"
+      "wiki row skill 20 differs from AUTO orange 1"
     ],
     [
       2667,
@@ -634,7 +659,7 @@
     [
       3115,
       "Rough Weightstone",
-      "wiki row skill 15 differs from CROSS orange 1"
+      "wiki row skill 15 differs from AUTO orange 1"
     ],
     [
       3295,
@@ -974,6 +999,11 @@
     [
       16667,
       "Demon Forged Breastplate",
+      "created item 12628 has no data in this build"
+    ],
+    [
+      16667,
+      "Demon Forged Breastplate",
       "wiki row skill 285 differs from ITEM orange 260"
     ],
     [
@@ -1007,6 +1037,11 @@
       "wiki row skill 300 differs from ITEM orange 285"
     ],
     [
+      16965,
+      "Bleakwood Hew",
+      "teaching item 12817 named by the guide has no data in this build"
+    ],
+    [
       16969,
       "Ornate Thorium Handaxe",
       "wiki row skill 275 differs from ITEM orange 250"
@@ -1032,6 +1067,11 @@
       "wiki row skill 280 differs from ITEM orange 255"
     ],
     [
+      16980,
+      "Rune Edge",
+      "created item 12779 has no data in this build"
+    ],
+    [
       16983,
       "Serenity",
       "wiki row skill 285 differs from ITEM orange 260"
@@ -1047,9 +1087,19 @@
       "wiki row skill 290 differs from ITEM orange 265"
     ],
     [
+      16986,
+      "Blood Talon",
+      "teaching item 12831 named by the guide has no data in this build"
+    ],
+    [
+      16987,
+      "Darkspear",
+      "teaching item 12832 named by the guide has no data in this build"
+    ],
+    [
       16991,
       "Annihilator",
-      "teaching item 12835 RequiredSkillRank 300 above yellow 295 ignored"
+      "learn skill 300 above yellow 295: teaching item 12835 RequiredSkillRank"
     ],
     [
       20872,
@@ -1062,14 +1112,14 @@
       "wiki row skill 295 differs from ITEM orange 270"
     ],
     [
+      21161,
+      "Sulfuron Hammer",
+      "guide lists it without a source; wiki: ambiguous: wiki row 'sulfuron hammer' matches spells 21161, 460460"
+    ],
+    [
       21913,
       "Edge of Winter",
       "wiki row skill 190 differs from ITEM orange 165"
-    ],
-    [
-      22757,
-      "Elemental Sharpening Stone",
-      "teaching item 18264 RequiredSkillRank 300 above yellow 275 ignored"
     ],
     [
       23632,
@@ -1079,17 +1129,27 @@
     [
       23650,
       "Ebon Hand",
-      "teaching item 19210 RequiredSkillRank 300 above yellow 295 ignored"
+      "learn skill 300 above yellow 295: teaching item 19210 RequiredSkillRank"
     ],
     [
       23652,
       "Blackguard",
-      "teaching item 19211 RequiredSkillRank 300 above yellow 295 ignored"
+      "learn skill 300 above yellow 295: teaching item 19211 RequiredSkillRank"
     ],
     [
       23653,
       "Nightfall",
-      "teaching item 19212 RequiredSkillRank 300 above yellow 295 ignored"
+      "learn skill 300 above yellow 295: teaching item 19212 RequiredSkillRank"
+    ],
+    [
+      27585,
+      "Heavy Obsidian Belt",
+      "guide decides it; wiki: ambiguous: wiki row 'heavy obsidian belt' matches spells 27585, 1213746"
+    ],
+    [
+      27585,
+      "Heavy Obsidian Belt",
+      "teaching item 22209 named by the guide has no data in this build"
     ],
     [
       28242,
@@ -1107,9 +1167,124 @@
       "DB2 faction 749 Hydraxian Waterlords Revered on teaching item 22705; wiki source '?'"
     ],
     [
-      427061,
-      "Mantle of the Second War",
-      "teaching item 210779 RequiredSkillRank 150 above yellow 140 ignored"
+      28461,
+      "Ironvine Breastplate",
+      "created item 22762 has no data in this build"
+    ],
+    [
+      28461,
+      "Ironvine Breastplate",
+      "guide decides it; wiki: ambiguous: wiki row 'ironvine breastplate' matches spells 28461, 1213715"
+    ],
+    [
+      28461,
+      "Ironvine Breastplate",
+      "teaching item 22766 named by the guide has no data in this build"
+    ],
+    [
+      28462,
+      "Ironvine Gloves",
+      "created item 22763 has no data in this build"
+    ],
+    [
+      28462,
+      "Ironvine Gloves",
+      "guide decides it; wiki: ambiguous: wiki row 'ironvine gloves' matches spells 28462, 1213711"
+    ],
+    [
+      28462,
+      "Ironvine Gloves",
+      "teaching item 22767 named by the guide has no data in this build"
+    ],
+    [
+      28463,
+      "Ironvine Belt",
+      "created item 22764 has no data in this build"
+    ],
+    [
+      28463,
+      "Ironvine Belt",
+      "guide decides it; wiki: ambiguous: wiki row 'ironvine belt' matches spells 28463, 1213709"
+    ],
+    [
+      28463,
+      "Ironvine Belt",
+      "teaching item 22768 named by the guide has no data in this build"
+    ],
+    [
+      1252257,
+      "Veteran's Gloves",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252258,
+      "Guard's Gloves",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252259,
+      "Protector's Gloves",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252260,
+      "Acolyte's Gloves",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252261,
+      "Crusader's Gloves",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252272,
+      "Veteran's Silvered Chain Leggings",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252273,
+      "Guard's Silvered Chain Leggings",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252274,
+      "Protector's Silvered Chain Leggings",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252275,
+      "Acolyte's Silvered Chain Leggings",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252276,
+      "Crusader's Silvered Chain Leggings",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252277,
+      "Veteran's Silvered Chain Helm",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252278,
+      "Guard's Silvered Chain Helm",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252279,
+      "Protector's Silvered Chain Helm",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252280,
+      "Acolyte's Silvered Chain Helm",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1252281,
+      "Crusader's Silvered Chain Helm",
+      "guide says VENDOR; wiki source 'Drop'"
     ],
     [
       1252292,
@@ -1134,7 +1309,17 @@
     [
       1292945,
       "Justice Leggings",
+      "created item 273908 has no data in this build"
+    ],
+    [
+      1292945,
+      "Justice Leggings",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292946,
+      "Justice Gauntlets",
+      "created item 273909 has no data in this build"
     ],
     [
       1292946,
@@ -1144,7 +1329,17 @@
     [
       1292947,
       "Justice Spaulders",
+      "created item 273910 has no data in this build"
+    ],
+    [
+      1292947,
+      "Justice Spaulders",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292948,
+      "Justice Greaves",
+      "created item 273911 has no data in this build"
     ],
     [
       1292948,
@@ -1154,7 +1349,17 @@
     [
       1292949,
       "Justice Legplates",
+      "created item 273912 has no data in this build"
+    ],
+    [
+      1292949,
+      "Justice Legplates",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292950,
+      "Justice Gloves",
+      "created item 273913 has no data in this build"
     ],
     [
       1292950,
@@ -1164,7 +1369,17 @@
     [
       1292951,
       "Justice Epaulets",
+      "created item 273914 has no data in this build"
+    ],
+    [
+      1292951,
+      "Justice Epaulets",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292952,
+      "Justice Treads",
+      "created item 273915 has no data in this build"
     ],
     [
       1292952,
@@ -1174,7 +1389,17 @@
     [
       1292953,
       "Justice Legguards",
+      "created item 273916 has no data in this build"
+    ],
+    [
+      1292953,
+      "Justice Legguards",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292954,
+      "Justice Handguards",
+      "created item 273917 has no data in this build"
     ],
     [
       1292954,
@@ -1184,7 +1409,17 @@
     [
       1292955,
       "Justice Pauldrons",
+      "created item 273918 has no data in this build"
+    ],
+    [
+      1292955,
+      "Justice Pauldrons",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292956,
+      "Justice Sabatons",
+      "created item 273919 has no data in this build"
     ],
     [
       1292956,
@@ -1194,7 +1429,17 @@
     [
       1292981,
       "Legplates of Glory",
+      "created item 273944 has no data in this build"
+    ],
+    [
+      1292981,
+      "Legplates of Glory",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292982,
+      "Gauntlets of Glory",
+      "created item 273945 has no data in this build"
     ],
     [
       1292982,
@@ -1204,7 +1449,17 @@
     [
       1292983,
       "Shoulders of Glory",
+      "created item 273946 has no data in this build"
+    ],
+    [
+      1292983,
+      "Shoulders of Glory",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292984,
+      "Greaves of Glory",
+      "created item 273947 has no data in this build"
     ],
     [
       1292984,
@@ -1214,7 +1469,17 @@
     [
       1292985,
       "Legguards of Glory",
+      "created item 273948 has no data in this build"
+    ],
+    [
+      1292985,
+      "Legguards of Glory",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292986,
+      "Handguards of Glory",
+      "created item 273949 has no data in this build"
     ],
     [
       1292986,
@@ -1224,7 +1489,17 @@
     [
       1292987,
       "Pauldrons of Glory",
+      "created item 273950 has no data in this build"
+    ],
+    [
+      1292987,
+      "Pauldrons of Glory",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292988,
+      "Sabatons of Glory",
+      "created item 273951 has no data in this build"
     ],
     [
       1292988,
@@ -1233,22 +1508,45 @@
     ]
   ],
   "orangeFrom": {
+    "AUTO": 5,
     "CROSS": 7,
-    "ITEM": 314,
+    "GUIDE": 7,
+    "ITEM": 297,
     "WIKI": 66
   },
   "sourceTypes": {
-    "DROP": 124,
+    "DROP": 92,
     "QUEST": 27,
-    "REPUTATION": 44,
+    "REPUTATION": 47,
+    "STARTER": 5,
     "TRAINER": 73,
-    "UNKNOWN": 61,
-    "VENDOR": 58
+    "UNKNOWN": 67,
+    "VENDOR": 71
   },
   "unknownSource": [
     [
       9957,
       "Orcish War Leggings"
+    ],
+    [
+      16965,
+      "Bleakwood Hew"
+    ],
+    [
+      16986,
+      "Blood Talon"
+    ],
+    [
+      16987,
+      "Darkspear"
+    ],
+    [
+      21161,
+      "Sulfuron Hammer"
+    ],
+    [
+      27585,
+      "Heavy Obsidian Belt"
     ],
     [
       28242,
@@ -1263,12 +1561,16 @@
       "Icebane Bracers"
     ],
     [
-      461651,
-      "Fiery Plate Gauntlets of the Hidden Technique"
+      28461,
+      "Ironvine Breastplate"
     ],
     [
-      461733,
-      "Finely-Enchanted Battlehammer"
+      28462,
+      "Ironvine Gloves"
+    ],
+    [
+      28463,
+      "Ironvine Belt"
     ],
     [
       1252284,

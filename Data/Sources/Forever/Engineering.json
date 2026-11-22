@@ -1,38 +1,61 @@
 {
   "profession": "engineering",
   "version": "1.60.1.71037",
-  "generated": "2026-11-21",
+  "generated": "2026-11-22",
   "recipes": {
     "3918": {
       "name": "Rough Blasting Powder",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "type": "STARTER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 20,
+        "green": 30,
+        "gray": 40,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
       }
     },
     "3919": {
       "name": "Rough Dynamite",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "type": "STARTER",
+        "certainty": "DB2"
       },
       "forever": {
         "notes": [
-          "wiki row skill 30 differs from CROSS orange 1"
+          "wiki row skill 30 differs from AUTO orange 1"
         ]
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 30,
+        "green": 45,
+        "gray": 60,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
       }
     },
     "3920": {
       "name": "Crafted Light Shot",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "type": "STARTER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 30,
+        "green": 45,
+        "gray": 60,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 30 differs from AUTO orange 1"
+        ]
       }
     },
     "3922": {
@@ -84,30 +107,42 @@
       "name": "Rough Boomstick",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 50,
+        "orange": 80,
         "yellow": 80,
         "green": 95,
         "gray": 110,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 50 differs from GUIDE orange 80",
+          "wiki row skill 50 differs from GUIDE orange 80"
+        ]
       }
     },
     "3977": {
       "name": "Crude Scope",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 60,
+        "orange": 90,
         "yellow": 90,
         "green": 105,
         "gray": 120,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 60 differs from GUIDE orange 90",
+          "wiki row skill 60 differs from GUIDE orange 90"
+        ]
       }
     },
     "3973": {
@@ -175,15 +210,21 @@
       "name": "Crafted Heavy Shot",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 75,
+        "orange": 85,
         "yellow": 85,
         "green": 90,
         "gray": 95,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 75 differs from GUIDE orange 85",
+          "wiki row skill 75 differs from GUIDE orange 85"
+        ]
       }
     },
     "3931": {
@@ -251,15 +292,21 @@
       "name": "Deadly Blunderbuss",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 105,
+        "orange": 130,
         "yellow": 130,
         "green": 142,
         "gray": 155,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 105 differs from GUIDE orange 130",
+          "wiki row skill 105 differs from GUIDE orange 130"
+        ]
       }
     },
     "3937": {
@@ -296,15 +343,21 @@
       "name": "Standard Scope",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 110,
+        "orange": 135,
         "yellow": 135,
         "green": 147,
         "gray": 160,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 110 differs from GUIDE orange 135",
+          "wiki row skill 110 differs from GUIDE orange 135"
+        ]
       }
     },
     "3939": {
@@ -420,30 +473,36 @@
       "name": "Crafted Solid Shot",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 125,
         "yellow": 125,
         "green": 135,
         "gray": 145,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "3949": {
       "name": "Silver-plated Shotgun",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 130,
+        "orange": 155,
         "yellow": 155,
         "green": 167,
         "gray": 180,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 130 differs from GUIDE orange 155",
+          "wiki row skill 130 differs from GUIDE orange 155"
+        ]
       }
     },
     "3950": {
@@ -907,16 +966,22 @@
     "9273": {
       "name": "Goblin Jumper Cables",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "no learn skill: wiki skill 165 above yellow 160",
+        "type": "DROP",
+        "certainty": "WIKI",
         "itemId": 7561
       },
       "forever": {
         "notes": [
-          "teaching item 7561 RequiredSkillRank 165 above yellow 160 ignored"
+          "learn skill 165 above yellow 160: teaching item 7561 RequiredSkillRank"
         ]
+      },
+      "difficulty": {
+        "orange": 165,
+        "yellow": 160,
+        "green": 180,
+        "gray": 200,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
       }
     },
     "12584": {
@@ -1044,30 +1109,36 @@
       "name": "Mithril Blunderbuss",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 205,
+        "orange": 225,
         "yellow": 225,
         "green": 235,
         "gray": 245,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 205 differs from GUIDE orange 225",
+          "wiki row skill 205 differs from GUIDE orange 225"
+        ]
       }
     },
     "12596": {
       "name": "Hi-Impact Mithril Slugs",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 210,
         "yellow": 210,
         "green": 230,
         "gray": 250,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "12597": {
@@ -1248,15 +1319,15 @@
       "name": "Mithril Gyro-Shot",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 245,
         "yellow": 245,
         "green": 265,
         "gray": 285,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "12622": {
@@ -1298,6 +1369,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 205
       }
     },
     "12716": {
@@ -1307,6 +1381,12 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "ambiguous: wiki row 'goblin mortar' matches spells 12716, 13240"
+      },
+      "forever": {
+        "notes": [
+          "guide decides it; wiki: ambiguous: wiki row 'goblin mortar' matches spells 12716, 13240"
+        ],
+        "learnFrom": 205
       }
     },
     "12717": {
@@ -1333,40 +1413,58 @@
     "12718": {
       "name": "Goblin Construction Helmet",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221335
       },
       "difficulty": {
         "orange": 205,
         "yellow": 225,
         "green": 235,
         "gray": 245,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "teaching item 221335 named by the guide has no data in this build"
+        ]
       }
     },
     "12760": {
       "name": "Goblin Sapper Charge",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221338
       },
       "difficulty": {
         "orange": 205,
         "yellow": 205,
         "green": 225,
         "gray": 245,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "teaching item 221338 named by the guide has no data in this build"
+        ]
       }
     },
     "12719": {
       "name": "Explosive Arrow",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "no wiki row"
+        "type": "TRAINER",
+        "certainty": "GUIDE"
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 210,
+        "green": 230,
+        "gray": 250,
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "12720": {
@@ -1376,6 +1474,11 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no wiki row"
+      },
+      "forever": {
+        "notes": [
+          "created item 10580 has no data in this build"
+        ]
       }
     },
     "12722": {
@@ -1385,13 +1488,19 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no wiki row"
+      },
+      "forever": {
+        "notes": [
+          "created item 10585 has no data in this build"
+        ]
       }
     },
     "12755": {
       "name": "Goblin Bomb Dispenser",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221340
       },
       "difficulty": {
         "orange": 230,
@@ -1400,13 +1509,20 @@
         "gray": 270,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 205 differs from CROSS orange 230",
+          "teaching item 221340 named by the guide has no data in this build"
+        ]
       }
     },
     "12754": {
       "name": "The Big One",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221341
       },
       "difficulty": {
         "orange": 235,
@@ -1415,13 +1531,20 @@
         "gray": 275,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 205 differs from CROSS orange 235",
+          "teaching item 221341 named by the guide has no data in this build"
+        ]
       }
     },
     "12759": {
       "name": "Gnomish Death Ray",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221334
       },
       "difficulty": {
         "orange": 240,
@@ -1430,13 +1553,20 @@
         "gray": 280,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 205 differs from CROSS orange 240",
+          "teaching item 221334 named by the guide has no data in this build"
+        ]
       }
     },
     "12758": {
       "name": "Goblin Rocket Helmet",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221343
       },
       "difficulty": {
         "orange": 245,
@@ -1445,6 +1575,12 @@
         "gray": 285,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 205 differs from CROSS orange 245",
+          "teaching item 221343 named by the guide has no data in this build"
+        ]
       }
     },
     "12895": {
@@ -1454,13 +1590,17 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 205
       }
     },
     "12897": {
       "name": "Gnomish Goggles",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221328
       },
       "difficulty": {
         "orange": 210,
@@ -1469,21 +1609,33 @@
         "gray": 250,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 205 differs from CROSS orange 210",
+          "teaching item 221328 named by the guide has no data in this build"
+        ]
       }
     },
     "12899": {
       "name": "Gnomish Shrink Ray",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221327
       },
       "difficulty": {
         "orange": 205,
         "yellow": 225,
         "green": 235,
         "gray": 245,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "teaching item 221327 named by the guide has no data in this build"
+        ]
       }
     },
     "12900": {
@@ -1498,8 +1650,9 @@
     "12902": {
       "name": "Gnomish Net-o-Matic Projector",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221329
       },
       "difficulty": {
         "orange": 210,
@@ -1508,13 +1661,20 @@
         "gray": 250,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 205 differs from CROSS orange 210",
+          "teaching item 221329 named by the guide has no data in this build"
+        ]
       }
     },
     "12903": {
       "name": "Gnomish Harm Prevention Belt",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221330
       },
       "difficulty": {
         "orange": 215,
@@ -1523,6 +1683,12 @@
         "gray": 255,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 205 differs from CROSS orange 215",
+          "teaching item 221330 named by the guide has no data in this build"
+        ]
       }
     },
     "12904": {
@@ -1532,13 +1698,19 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no wiki row"
+      },
+      "forever": {
+        "notes": [
+          "created item 10723 has no data in this build"
+        ]
       }
     },
     "12905": {
       "name": "Gnomish Rocket Boots",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221331
       },
       "difficulty": {
         "orange": 225,
@@ -1547,13 +1719,20 @@
         "gray": 265,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 205 differs from CROSS orange 225",
+          "teaching item 221331 named by the guide has no data in this build"
+        ]
       }
     },
     "12906": {
       "name": "Gnomish Battle Chicken",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221332
       },
       "difficulty": {
         "orange": 230,
@@ -1562,13 +1741,20 @@
         "gray": 270,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 205 differs from CROSS orange 230",
+          "teaching item 221332 named by the guide has no data in this build"
+        ]
       }
     },
     "12907": {
       "name": "Gnomish Mind Control Cap",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221333
       },
       "difficulty": {
         "orange": 235,
@@ -1577,13 +1763,20 @@
         "gray": 275,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 205 differs from CROSS orange 235",
+          "teaching item 221333 named by the guide has no data in this build"
+        ]
       }
     },
     "12908": {
       "name": "Goblin Dragon Gun",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
+        "itemId": 221342
       },
       "difficulty": {
         "orange": 240,
@@ -1592,6 +1785,12 @@
         "gray": 280,
         "certainty": "CROSS",
         "orangeFrom": "CROSS"
+      },
+      "forever": {
+        "notes": [
+          "guide skill 205 differs from CROSS orange 240",
+          "teaching item 221342 named by the guide has no data in this build"
+        ]
       }
     },
     "13240": {
@@ -1601,6 +1800,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 205
       }
     },
     "15255": {
@@ -1626,6 +1828,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 11827
+      },
+      "forever": {
+        "learnFrom": 205
       }
     },
     "15628": {
@@ -2248,19 +2453,31 @@
     "23489": {
       "name": "Ultrasafe Transporter - Gadgetzan",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "type": "TRAINER",
+        "certainty": "GUIDE"
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "23486": {
       "name": "Dimensional Ripper - Everlook",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "type": "TRAINER",
+        "certainty": "GUIDE"
+      },
+      "difficulty": {
+        "orange": 285,
+        "yellow": 285,
+        "green": 295,
+        "gray": 305,
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "23507": {
@@ -2331,7 +2548,8 @@
       "forever": {
         "notes": [
           "wiki row skill 320 differs from CROSS orange 250"
-        ]
+        ],
+        "learnFrom": 250
       }
     },
     "26416": {
@@ -2627,69 +2845,53 @@
     "435966": {
       "name": "Ez-Thro Radiation Bomb",
       "source": {
-        "type": "VENDOR",
-        "certainty": "WIKI",
-        "itemId": 215432,
-        "cost": 50000
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215168 not in this build",
+        "itemId": 215432
       },
-      "difficulty": {
-        "orange": 225,
-        "yellow": 225,
-        "green": 230,
-        "gray": 235,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 225
       }
     },
     "435958": {
       "name": "Whirling Truesilver Gearwall",
       "source": {
-        "type": "VENDOR",
-        "certainty": "WIKI",
-        "itemId": 215153,
-        "cost": 50000
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 213390 not in this build",
+        "itemId": 215153
       },
-      "difficulty": {
-        "orange": 225,
-        "yellow": 225,
-        "green": 232,
-        "gray": 240,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 225
       }
     },
     "435964": {
       "name": "High-Yield Radiation Bomb",
       "source": {
-        "type": "VENDOR",
-        "certainty": "WIKI",
-        "itemId": 215431,
-        "cost": 50000
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215127 not in this build",
+        "itemId": 215431
       },
-      "difficulty": {
-        "orange": 225,
-        "yellow": 225,
-        "green": 230,
-        "gray": 235,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 225
       }
     },
     "435960": {
       "name": "Hyperconductive Goldwap",
       "source": {
-        "type": "VENDOR",
-        "certainty": "WIKI",
-        "itemId": 215156,
-        "cost": 50000
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215115 not in this build",
+        "itemId": 215156
       },
-      "difficulty": {
-        "orange": 225,
-        "yellow": 225,
-        "green": 230,
-        "gray": 235,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 225
       }
     },
     "446236": {
@@ -2698,7 +2900,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221025 not in this build"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "446238": {
@@ -2707,7 +2912,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221027 not in this build"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "446237": {
@@ -2716,7 +2924,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221026 not in this build"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "461710": {
@@ -2725,7 +2936,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227849 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213573": {
@@ -2734,7 +2948,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233984 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213576": {
@@ -2743,7 +2960,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233985 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213578": {
@@ -2752,7 +2972,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233986 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213586": {
@@ -2761,7 +2984,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233987 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213588": {
@@ -2770,7 +2996,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233988 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213646": {
@@ -2779,7 +3008,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234005 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1214145": {
@@ -2788,7 +3020,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234434 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1217207": {
@@ -2797,23 +3032,23 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 235529 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1221012": {
       "name": "Creepy Censor Sensors",
       "source": {
-        "type": "UNKNOWN",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236871 not in this build",
         "itemId": 236872
       },
-      "difficulty": {
-        "orange": 250,
-        "yellow": 275,
-        "green": 277,
-        "gray": 280,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 250
       }
     },
     "1226206": {
@@ -2822,7 +3057,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238737 not in this build"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "1226207": {
@@ -2831,7 +3069,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238734 not in this build"
+      },
+      "forever": {
+        "learnFrom": 260
       }
     },
     "1226208": {
@@ -2840,7 +3081,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238735 not in this build"
+      },
+      "forever": {
+        "learnFrom": 260
       }
     },
     "1226209": {
@@ -2849,7 +3093,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238736 not in this build"
+      },
+      "forever": {
+        "learnFrom": 260
       }
     },
     "1226210": {
@@ -2859,6 +3106,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "learnFrom": 280
       }
     },
     "1226211": {
@@ -2868,6 +3118,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "learnFrom": 280
       }
     },
     "1226212": {
@@ -2877,6 +3130,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "learnFrom": 280
       }
     },
     "1226213": {
@@ -2885,8 +3141,11 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "no skill-up: yellow == gray",
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238781 not in this build",
         "itemId": 238789
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "1228088": {
@@ -2912,6 +3171,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 20
       }
     },
     "1249634": {
@@ -2933,9 +3195,12 @@
       "name": "SAF-T Tabs",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264201,
-        "cost": 625
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 25,
@@ -2950,9 +3215,12 @@
       "name": "SAF-T Dynamite",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264202,
-        "cost": 625
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 25,
@@ -2967,9 +3235,12 @@
       "name": "SAF-T Copper Bomb",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264203,
-        "cost": 1375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 55,
@@ -2984,9 +3255,12 @@
       "name": "EZ-Thro Wrap",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264204,
-        "cost": 2500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 100,
@@ -3001,9 +3275,12 @@
       "name": "EZ-Thro Copper Bomb XL",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264205,
-        "cost": 3250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 130,
@@ -3018,9 +3295,12 @@
       "name": "No Slip SAF-T Padding",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264206,
-        "cost": 3625
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 145,
@@ -3067,9 +3347,12 @@
       "name": "SAF-T Bell",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264209,
-        "cost": 4375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 175,
@@ -3100,9 +3383,12 @@
       "name": "EZ-Thro Fireproof Fuse",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264211,
-        "cost": 4750
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 190,
@@ -3181,9 +3467,12 @@
       "name": "Emergency Field Cloak",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264216,
-        "cost": 5625
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 270
+        }
       },
       "difficulty": {
         "orange": 225,
@@ -3198,9 +3487,12 @@
       "name": "Compact Critter Carrier",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264217,
-        "cost": 5625
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 270
+        }
       },
       "difficulty": {
         "orange": 225,
@@ -3247,9 +3539,12 @@
       "name": "SAF-T Disposable Parachute",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264220,
-        "cost": 6250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 270
+        }
       },
       "difficulty": {
         "orange": 250,
@@ -3264,9 +3559,12 @@
       "name": "Gnomish Army Knife",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264221,
-        "cost": 6250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 270
+        }
       },
       "difficulty": {
         "orange": 250,
@@ -3281,9 +3579,12 @@
       "name": "Loot-A-Rang",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264222,
-        "cost": 6875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 270
+        }
       },
       "difficulty": {
         "orange": 275,
@@ -3442,9 +3743,12 @@
       "name": "Ultrasafe Rechargeable Battery",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264232,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 360
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3476,9 +3780,12 @@
       "name": "Gnomish Poultryizer",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264234,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 360
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3493,9 +3800,12 @@
       "name": "Ultralight Goblin Glider",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264235,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 360
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3526,9 +3836,12 @@
       "name": "Stealthman 52",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 264237,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 360
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3595,6 +3908,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273092
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1263083": {
@@ -3605,6 +3921,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273117
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "1286796": {
@@ -3646,6 +3965,12 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "drop per wiki but DB2 has no teaching item"
+      },
+      "forever": {
+        "notes": [
+          "created item 274048 has no data in this build"
+        ],
+        "learnFrom": 125
       }
     },
     "1293849": {
@@ -3732,9 +4057,12 @@
       "name": "Whimsical Waistwrap",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 280321,
-        "cost": 4375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 175,
@@ -3749,9 +4077,12 @@
       "name": "Gizmo Girdle",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 280322,
-        "cost": 4375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 175,
@@ -3766,9 +4097,12 @@
       "name": "Clanking Cord",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 280323,
-        "cost": 4375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 175,
@@ -3793,15 +4127,23 @@
         "gray": 185,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "created item 280309 has no data in this build"
+        ]
       }
     },
     "1308183": {
       "name": "Floppy Goggles",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 280325,
-        "cost": 5000
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 200,
@@ -3816,9 +4158,12 @@
       "name": "Bent Goggles",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 280326,
-        "cost": 5000
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 200,
@@ -3833,9 +4178,12 @@
       "name": "Stuckbutton Goggles",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 280327,
-        "cost": 5000
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 200,
@@ -3850,9 +4198,12 @@
       "name": "Dented Goggles",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 280328,
-        "cost": 5000
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 200,
@@ -3883,9 +4234,12 @@
       "name": "Satchel of Copper Bombs",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 285285,
-        "cost": 5000
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 85,
@@ -3900,9 +4254,12 @@
       "name": "Satchel of Bronze Bombs",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 285286,
-        "cost": 5000
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 165,
@@ -3917,9 +4274,12 @@
       "name": "Satchel of Iron Bombs",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 285287,
-        "cost": 5000
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 270
+        }
       },
       "difficulty": {
         "orange": 230,
@@ -3934,9 +4294,12 @@
       "name": "Satchel of Dark Iron Bombs",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 285288,
-        "cost": 5000
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 270
+        }
       },
       "difficulty": {
         "orange": 285,

@@ -120,17 +120,24 @@ def test_forever_entry_values():
         "ItemEffect": ("ID", "SpellID"),
         "ItemSparse": ("ID", "Display_lang", "BuyPrice", "SellPrice", "MinFactionID",
                        "MinReputation", "VendorStackCount", "RequiredSkillRank",
-                       "RequiredSkill")}
+                       "RequiredSkill"),
+        "SkillLineAbility": ("SkillLine", "Spell", "TrivialSkillLineRankLow",
+                             "TrivialSkillLineRankHigh", "AcquireMethod",
+                             "MinSkillLineRank", "TradeSkillCategoryID")}
     assert (f.item_effect_join, f.has_tools) == ("xitem", True)
     # MANUAL: a hand-aligned value, listed in REVIEW.md like the others.
-    assert f.difficulty_certainties == ("INGAME", "DB2", "CROSS", "WIKI", "MANUAL")
+    assert f.difficulty_certainties == ("INGAME", "DB2", "GUIDE", "CROSS", "WIKI", "MANUAL")
+    assert f.acquire_method and f.gap_skill_up_only
+    assert f.leftover_categories == ("SEASON OF DISCOVERY",)
+    assert len(f.wowhead_guides) == 13
+    assert all(g.startswith("guide/") for g in f.wowhead_guides)
     assert (f.review_policy, f.allow_unknown_source, f.strict_difficulty) == ("exclude", True, True)
     assert not f.milestones_verified
     # Floor 0.75 (first set at 0.90), the gap check unchanged.
     assert (f.coverage_floor, f.coverage_max_gap) == (0.75, 10)
     assert f.cross_orange_buckets == ("vanilla", "sod")
-    # Measured 2026-11-21: both fail the coverage gate until an in-game capture.
-    assert f.held_back == ("Engineering", "Mining")
+    # Engineering and Mining were held back until 2026-11-22; both pass the gate now.
+    assert f.held_back == ()
     assert f.cross_source_bucket == "sod"           # SoD's verified trainer sources
     assert f.allow_currency_cost and f.reject_zero_cost
     assert f.vendor_explicit_scope and f.shipped
@@ -155,6 +162,23 @@ def test_existing_buckets_keep_defaults():
         assert not b.has_tools and b.held_back == () and not b.wiki_pages
         assert b.cross_orange_buckets == () and b.cross_source_bucket is None
         assert not b.allow_currency_cost and not b.reject_zero_cost
+        assert not b.acquire_method and not b.gap_skill_up_only
+        assert b.leftover_categories == () and b.wowhead_guides == ()
+        assert "SkillLineAbility" not in b.column_overrides
+
+
+@pytest.mark.parametrize("field, value, match", [
+    ("leftover_categories", "SEASON OF DISCOVERY", "leftover_categories must be a tuple"),
+    ("leftover_categories", ("A", "A"), "lists an entry twice"),
+    ("wowhead_guides", ("https://www.wowhead.com/forever/guide/x",), "must be a path"),
+    ("wowhead_guides", ("/guide/x",), "must be a path"),
+    ("wowhead_guides", ("guide/x", ""), "tuple of non-empty strings"),
+])
+def test_registry_rejects_malformed_evidence_fields(field, value, match):
+    bad = dataclasses.replace(get_bucket("forever"), **{field: value})
+    with pytest.raises(RegistryError, match=match):
+        _validate_registry({"forever": bad, "vanilla": get_bucket("vanilla"),
+                            "sod": get_bucket("sod")})
 
 
 def test_registry_rejects_wiki_pages_for_professions_outside_the_bucket():

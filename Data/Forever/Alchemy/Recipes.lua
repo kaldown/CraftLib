@@ -1,6 +1,6 @@
 -- Data/Forever/Alchemy/Recipes.lua
 -- Alchemy recipes for WoW Forever
--- Generated from DB2 data and the Warcraft Wiki recipe tables
+-- Generated from DB2 data, Wowhead guide tables and the Warcraft Wiki recipe tables
 local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
@@ -321,6 +321,24 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
+    -- Lesser Discolored Healing Potion (55)
+    {
+        id = 1244645,
+        name = "Lesser Discolored Healing Potion",
+        itemId = 247239,
+        skillRequired = 55,
+        skillRange = { orange = 55, yellow = 85, green = 105, gray = 125 },
+        reagents = {
+            { itemId = 3371, name = "Empty Vial", count = 1 },
+            { itemId = 2450, name = "Briarthorn", count = 1 },
+            { itemId = 730, name = "Murloc Eye", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Special trainer",
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Swiftness Potion (60)
     {
         id = 2335,
@@ -427,24 +445,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 250989,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Lesser Discolored Healing Potion (85)
-    {
-        id = 1244645,
-        name = "Lesser Discolored Healing Potion",
-        itemId = 247239,
-        skillRequired = 85,
-        skillRange = { orange = 85, yellow = 85, green = 105, gray = 125 },
-        reagents = {
-            { itemId = 3371, name = "Empty Vial", count = 1 },
-            { itemId = 2450, name = "Briarthorn", count = 1 },
-            { itemId = 730, name = "Murloc Eye", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Special trainer",
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -650,6 +650,24 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
+    -- Discolored Healing Potion (110)
+    {
+        id = 1244646,
+        name = "Discolored Healing Potion",
+        itemId = 247240,
+        skillRequired = 110,
+        skillRange = { orange = 110, yellow = 135, green = 155, gray = 175 },
+        reagents = {
+            { itemId = 3372, name = "Leaded Vial", count = 1 },
+            { itemId = 2453, name = "Bruiseweed", count = 1 },
+            { itemId = 730, name = "Murloc Eye", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Special trainer",
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Elixir of Spirit (115)
     {
         id = 1250795,
@@ -809,24 +827,6 @@ local recipes = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 6054,
             cost = 900,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Discolored Healing Potion (135)
-    {
-        id = 1244646,
-        name = "Discolored Healing Potion",
-        itemId = 247240,
-        skillRequired = 135,
-        skillRange = { orange = 135, yellow = 135, green = 155, gray = 175 },
-        reagents = {
-            { itemId = 3372, name = "Leaded Vial", count = 1 },
-            { itemId = 2453, name = "Bruiseweed", count = 1 },
-            { itemId = 730, name = "Murloc Eye", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Special trainer",
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1011,6 +1011,24 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
+    -- Greater Discolored Healing Potion (155)
+    {
+        id = 1244647,
+        name = "Greater Discolored Healing Potion",
+        itemId = 247241,
+        skillRequired = 155,
+        skillRange = { orange = 155, yellow = 175, green = 195, gray = 215 },
+        reagents = {
+            { itemId = 3372, name = "Leaded Vial", count = 1 },
+            { itemId = 3356, name = "Kingsblood", count = 1 },
+            { itemId = 730, name = "Murloc Eye", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Special trainer",
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Mana Potion (160)
     {
         id = 3452,
@@ -1098,8 +1116,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250383,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1122,24 +1141,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Greater Discolored Healing Potion (175)
-    {
-        id = 1244647,
-        name = "Greater Discolored Healing Potion",
-        itemId = 247241,
-        skillRequired = 175,
-        skillRange = { orange = 175, yellow = 175, green = 195, gray = 215 },
-        reagents = {
-            { itemId = 3372, name = "Leaded Vial", count = 1 },
-            { itemId = 3356, name = "Kingsblood", count = 1 },
-            { itemId = 730, name = "Murloc Eye", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Special trainer",
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Greater Mageblood Elixir (175)
     {
         id = 1250790,
@@ -1153,8 +1154,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250377,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1354,8 +1356,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250369,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1396,24 +1399,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Insulating Gniodine (200)
-    {
-        id = 435969,
-        name = "Insulating Gniodine",
-        itemId = 213372,
-        skillRequired = 200,
-        skillRange = { orange = 200, yellow = 200, green = 210, gray = 220 },
-        reagents = {
-            { itemId = 3372, name = "Leaded Vial", count = 1 },
-            { itemId = 213371, name = "Crate of Tainted Gniodine Solution", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 215433,
-            cost = 25000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Elixir of Greater Fortitude (200)
     {
         id = 1250784,
@@ -1426,8 +1411,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250371,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1521,13 +1507,31 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Viridian Dye (215)
+    -- Superior Discolored Healing Potion (215)
+    {
+        id = 1244648,
+        name = "Superior Discolored Healing Potion",
+        itemId = 247242,
+        skillRequired = 215,
+        skillRange = { orange = 215, yellow = 230, green = 250, gray = 270 },
+        reagents = {
+            { itemId = 8925, name = "Crystal Vial", count = 1 },
+            { itemId = 8838, name = "Sungrass", count = 1 },
+            { itemId = 730, name = "Murloc Eye", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.TRAINER,
+            npcName = "Special trainer",
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Viridian Dye (220)
     {
         id = 1249632,
         name = "Viridian Dye",
         itemId = 249431,
-        skillRequired = 215,
-        skillRange = { orange = 215, yellow = 230, green = 250, gray = 270 },
+        skillRequired = 220,
+        skillRange = { orange = 220, yellow = 230, green = 250, gray = 270 },
         reagents = {
             { itemId = 249274, name = "Stranglevine", count = 2 },
             { itemId = 8925, name = "Crystal Vial", count = 1 },
@@ -1612,26 +1616,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Mildly Irradiated Rejuvenation Potion (225)
-    {
-        id = 435971,
-        name = "Mildly Irradiated Rejuvenation Potion",
-        itemId = 215162,
-        skillRequired = 225,
-        skillRange = { orange = 225, yellow = 225, green = 230, gray = 235 },
-        reagents = {
-            { itemId = 213371, name = "Crate of Tainted Gniodine Solution", count = 1 },
-            { itemId = 2456, name = "Minor Rejuvenation Potion", count = 1 },
-            { itemId = 215430, name = "Gnomeregan Fallout", count = 3 },
-            { itemId = 8925, name = "Crystal Vial", count = 5 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 215163,
-            cost = 50000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Draught of Detect Undead (230)
     {
         id = 11460,
@@ -1663,24 +1647,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Alchemy Trainer",
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Superior Discolored Healing Potion (230)
-    {
-        id = 1244648,
-        name = "Superior Discolored Healing Potion",
-        itemId = 247242,
-        skillRequired = 230,
-        skillRange = { orange = 230, yellow = 230, green = 250, gray = 270 },
-        reagents = {
-            { itemId = 8925, name = "Crystal Vial", count = 1 },
-            { itemId = 8838, name = "Sungrass", count = 1 },
-            { itemId = 730, name = "Murloc Eye", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Special trainer",
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1895,8 +1861,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250997,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2038,8 +2005,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250365,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2111,8 +2079,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250995,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2398,8 +2367,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250364,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2416,8 +2386,9 @@ local recipes = {
             { itemId = 18256, name = "Imbued Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250374,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2434,8 +2405,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250384,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2452,8 +2424,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250386,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2470,8 +2443,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250994,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2542,8 +2516,9 @@ local recipes = {
             { itemId = 18256, name = "Imbued Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250373,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2560,8 +2535,9 @@ local recipes = {
             { itemId = 18256, name = "Imbued Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250993,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2578,8 +2554,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250998,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2598,24 +2575,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 250999,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Purification Potion (285)
-    {
-        id = 17572,
-        name = "Purification Potion",
-        itemId = 13462,
-        skillRequired = 285,
-        skillRange = { orange = 285, yellow = 300, green = 320, gray = 340 },
-        reagents = {
-            { itemId = 13467, name = "Icecap", count = 2 },
-            { itemId = 13466, name = "Plaguebloom", count = 2 },
-            { itemId = 8925, name = "Crystal Vial", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 13492,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2673,8 +2632,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250372,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2691,8 +2651,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250379,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2709,8 +2670,9 @@ local recipes = {
             { itemId = 18256, name = "Imbued Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250981,
+            currency = { name = "Merchant's Favor", amount = 180 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2839,8 +2801,9 @@ local recipes = {
             { itemId = 18256, name = "Imbued Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250987,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3011,8 +2974,9 @@ local recipes = {
             { itemId = 8925, name = "Crystal Vial", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250387,
+            currency = { name = "Merchant's Favor", amount = 240 },
         },
         expansion = C.EXPANSION.FOREVER,
     },

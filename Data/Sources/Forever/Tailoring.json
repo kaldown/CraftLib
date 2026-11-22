@@ -1,34 +1,46 @@
 {
   "profession": "tailoring",
   "version": "1.60.1.71037",
-  "generated": "2026-11-21",
+  "generated": "2026-11-22",
   "recipes": {
     "2963": {
       "name": "Bolt of Linen Cloth",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "type": "STARTER",
+        "certainty": "DB2"
       },
       "forever": {
         "notes": [
-          "wiki row skill 25 differs from CROSS orange 1"
+          "wiki row skill 25 differs from AUTO orange 1"
         ]
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 25,
+        "green": 37,
+        "gray": 50,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
       }
     },
     "2387": {
       "name": "Linen Cloak",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "type": "STARTER",
+        "certainty": "DB2"
       },
       "forever": {
         "notes": [
-          "wiki row skill 35 differs from CROSS orange 1"
+          "wiki row skill 35 differs from AUTO orange 1"
         ]
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 35,
+        "green": 47,
+        "gray": 60,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
       }
     },
     "2385": {
@@ -50,7 +62,7 @@
       "name": "Red Linen Robe",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 2598
       },
       "difficulty": {
@@ -231,7 +243,7 @@
       "name": "Gray Woolen Robe",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 2601
       },
       "difficulty": {
@@ -352,7 +364,7 @@
       "name": "Heavy Woolen Cloak",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4346
       },
       "difficulty": {
@@ -383,7 +395,7 @@
       "name": "Red Woolen Boots",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4345
       },
       "difficulty": {
@@ -414,7 +426,7 @@
       "name": "Reinforced Woolen Shoulders",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4347
       },
       "difficulty": {
@@ -445,7 +457,7 @@
       "name": "Phoenix Pants",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4349
       },
       "difficulty": {
@@ -508,7 +520,7 @@
       "name": "Spider Silk Slippers",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4350
       },
       "difficulty": {
@@ -541,7 +553,7 @@
       "name": "Shadow Hood",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4351
       },
       "difficulty": {
@@ -572,7 +584,7 @@
       "name": "Boots of the Enchanter",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4352
       },
       "difficulty": {
@@ -614,7 +626,7 @@
       "name": "Spider Belt",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4353
       },
       "difficulty": {
@@ -630,7 +642,7 @@
       "name": "Star Belt",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4356
       },
       "difficulty": {
@@ -661,7 +673,7 @@
       "name": "Phoenix Gloves",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4348
       },
       "difficulty": {
@@ -726,7 +738,7 @@
       "name": "Rich Purple Silk Shirt",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4354
       },
       "difficulty": {
@@ -773,15 +785,21 @@
     "3915": {
       "name": "Brown Linen Shirt",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "type": "STARTER",
+        "certainty": "DB2"
       },
       "forever": {
         "notes": [
-          "wiki row skill 35 differs from CROSS orange 1"
+          "wiki row skill 35 differs from AUTO orange 1"
         ]
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 35,
+        "green": 47,
+        "gray": 60,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
       }
     },
     "6521": {
@@ -803,7 +821,7 @@
       "name": "Green Woolen Bag",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 4292
       },
       "difficulty": {
@@ -818,16 +836,22 @@
     "3755": {
       "name": "Linen Bag",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "STARTER",
+        "certainty": "DB2"
       },
       "difficulty": {
-        "orange": 5,
+        "orange": 1,
         "yellow": 30,
         "green": 47,
         "gray": 65,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 5 differs from AUTO orange 1",
+          "DB2 marks it learned automatically; wiki source 'Trainer'"
+        ]
       }
     },
     "3757": {
@@ -911,7 +935,7 @@
       "name": "Robes of Arcana",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 5773
       },
       "difficulty": {
@@ -927,7 +951,7 @@
       "name": "Green Silk Pack",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 5774
       },
       "difficulty": {
@@ -943,7 +967,7 @@
       "name": "Black Silk Pack",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 5775
       },
       "difficulty": {
@@ -1006,7 +1030,7 @@
       "name": "Red Linen Vest",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 6271
       },
       "difficulty": {
@@ -1082,7 +1106,7 @@
       "name": "Stylish Blue Shirt",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 6390
       },
       "difficulty": {
@@ -1098,7 +1122,7 @@
       "name": "Stylish Green Shirt",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 6391
       },
       "difficulty": {
@@ -1306,7 +1330,7 @@
       "name": "Hands of Darkness",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 7092
       },
       "difficulty": {
@@ -1322,7 +1346,7 @@
       "name": "Truefaith Gloves",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 7091
       },
       "difficulty": {
@@ -1338,7 +1362,7 @@
       "name": "Green Silk Armor",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 7090
       },
       "difficulty": {
@@ -1403,7 +1427,7 @@
       "name": "Crimson Silk Shoulders",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 7084
       },
       "difficulty": {
@@ -1419,7 +1443,7 @@
       "name": "Azure Shoulders",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 7085
       },
       "difficulty": {
@@ -1435,7 +1459,7 @@
       "name": "Earthen Silk Belt",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 7086
       },
       "difficulty": {
@@ -1497,10 +1521,21 @@
     "12044": {
       "name": "Simple Linen Pants",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "type": "STARTER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 40,
+        "green": 50,
+        "gray": 60,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 40 differs from AUTO orange 1"
+        ]
       }
     },
     "12045": {
@@ -1537,7 +1572,7 @@
       "name": "Colorful Kilt",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 10316
       },
       "difficulty": {
@@ -1631,7 +1666,7 @@
       "name": "Red Mageweave Vest",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 10300
       },
       "difficulty": {
@@ -1647,7 +1682,7 @@
       "name": "White Bandit Mask",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 10301
       },
       "difficulty": {
@@ -1663,7 +1698,7 @@
       "name": "Red Mageweave Pants",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 10302
       },
       "difficulty": {
@@ -1698,16 +1733,30 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 254681
+      },
+      "forever": {
+        "learnFrom": 185
       }
     },
     "12063": {
       "name": "Stormcloth Gloves",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "no wiki row",
+        "type": "UNKNOWN",
+        "certainty": "GUIDE",
         "itemId": 254682
+      },
+      "difficulty": {
+        "orange": 185,
+        "yellow": 200,
+        "green": 215,
+        "gray": 230,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "guide lists it without a source; wiki: no wiki row"
+        ]
       }
     },
     "12064": {
@@ -1746,7 +1795,7 @@
       "name": "Red Mageweave Gloves",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 10312
       },
       "difficulty": {
@@ -1781,6 +1830,9 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 254683
+      },
+      "forever": {
+        "learnFrom": 190
       }
     },
     "12069": {
@@ -1924,7 +1976,7 @@
       "name": "Red Mageweave Shoulders",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 10315
       },
       "difficulty": {
@@ -2013,13 +2065,16 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 254684
+      },
+      "forever": {
+        "learnFrom": 200
       }
     },
     "12084": {
       "name": "Red Mageweave Headband",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 10320
       },
       "difficulty": {
@@ -2077,6 +2132,9 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 254685
+      },
+      "forever": {
+        "learnFrom": 200
       }
     },
     "12088": {
@@ -2119,6 +2177,9 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 254686
+      },
+      "forever": {
+        "learnFrom": 205
       }
     },
     "12091": {
@@ -2204,7 +2265,7 @@
       "name": "Frostweave Tunic",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14466
       },
       "difficulty": {
@@ -2220,7 +2281,7 @@
       "name": "Frostweave Robe",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14467
       },
       "difficulty": {
@@ -2270,7 +2331,7 @@
       "name": "Runecloth Tunic",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14470
       },
       "difficulty": {
@@ -2335,7 +2396,7 @@
       "name": "Frostweave Gloves",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14474
       },
       "difficulty": {
@@ -2367,7 +2428,7 @@
       "name": "Brightcloth Gloves",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14479
       },
       "difficulty": {
@@ -2383,7 +2444,7 @@
       "name": "Ghostweave Gloves",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14477
       },
       "difficulty": {
@@ -2399,7 +2460,7 @@
       "name": "Brightcloth Robe",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14478
       },
       "difficulty": {
@@ -2481,7 +2542,7 @@
       "name": "Brightcloth Cloak",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14484
       },
       "difficulty": {
@@ -2551,7 +2612,7 @@
       "name": "Frostweave Pants",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14489
       },
       "difficulty": {
@@ -2599,7 +2660,7 @@
       "name": "Felcloth Boots",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14492
       },
       "difficulty": {
@@ -2615,7 +2676,7 @@
       "name": "Runecloth Pants",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14491
       },
       "difficulty": {
@@ -2631,7 +2692,7 @@
       "name": "Brightcloth Pants",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14494
       },
       "difficulty": {
@@ -2647,7 +2708,7 @@
       "name": "Mooncloth Leggings",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14497
       },
       "difficulty": {
@@ -2679,7 +2740,7 @@
       "name": "Felcloth Hood",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14496
       },
       "difficulty": {
@@ -2695,7 +2756,7 @@
       "name": "Runecloth Headband",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14498
       },
       "difficulty": {
@@ -2711,7 +2772,7 @@
       "name": "Mooncloth Bag",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14499
       },
       "difficulty": {
@@ -2743,7 +2804,7 @@
       "name": "Mooncloth Vest",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14501
       },
       "difficulty": {
@@ -2759,7 +2820,7 @@
       "name": "Mooncloth Shoulders",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14507
       },
       "difficulty": {
@@ -2775,7 +2836,7 @@
       "name": "Runecloth Shoulders",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14504
       },
       "difficulty": {
@@ -2807,7 +2868,7 @@
       "name": "Felcloth Robe",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14506
       },
       "difficulty": {
@@ -2823,7 +2884,7 @@
       "name": "Mooncloth Circlet",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14509
       },
       "difficulty": {
@@ -2839,7 +2900,7 @@
       "name": "Felcloth Shoulders",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14508
       },
       "difficulty": {
@@ -2855,7 +2916,7 @@
       "name": "Gloves of Spell Mastery",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14511
       },
       "difficulty": {
@@ -2870,18 +2931,29 @@
     "18455": {
       "name": "Bottomless Bag",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'bottomless bag' matches spells 18455, 463972",
+        "type": "DROP",
+        "certainty": "GUIDE",
         "itemId": 14510
+      },
+      "difficulty": {
+        "orange": 300,
+        "yellow": 315,
+        "green": 330,
+        "gray": 345,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "guide decides it; wiki: ambiguous: wiki row 'bottomless bag' matches spells 18455, 463972"
+        ]
       }
     },
     "18456": {
       "name": "Truefaith Vestments",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 14512
       },
       "difficulty": {
@@ -3001,7 +3073,7 @@
       "name": "Green Holiday Shirt",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 17724
       },
       "difficulty": {
@@ -3017,7 +3089,7 @@
       "name": "Flarecore Wraps",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 18265
       },
       "difficulty": {
@@ -3036,6 +3108,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "learnFrom": 285
       }
     },
     "22866": {
@@ -3397,13 +3472,16 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no learn skill: wiki skill 285 above yellow 260"
+      },
+      "forever": {
+        "learnFrom": 285
       }
     },
     "26087": {
       "name": "Core Felcloth Bag",
       "source": {
         "type": "DROP",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 21371
       },
       "difficulty": {
@@ -3574,6 +3652,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "ambiguous: wiki row 'glacial cloak' matches spells 28208, 1223762"
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "28205": {
@@ -3583,6 +3664,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "ambiguous: wiki row 'glacial gloves' matches spells 28205, 1223764"
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "28207": {
@@ -3592,6 +3676,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "ambiguous: wiki row 'glacial vest' matches spells 28207, 1223760"
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "28209": {
@@ -3601,6 +3688,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "ambiguous: wiki row 'glacial wrists' matches spells 28209, 1223766"
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "28481": {
@@ -3686,7 +3776,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 210795 not in this build"
+      },
+      "forever": {
+        "learnFrom": 150
       }
     },
     "435827": {
@@ -3741,35 +3834,27 @@
     "435610": {
       "name": "Gneuro-Linked Arcano-Filament Monocle",
       "source": {
-        "type": "VENDOR",
-        "certainty": "WIKI",
-        "itemId": 215149,
-        "cost": 50000
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215111 not in this build",
+        "itemId": 215149
       },
-      "difficulty": {
-        "orange": 225,
-        "yellow": 225,
-        "green": 230,
-        "gray": 235,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 225
       }
     },
     "439085": {
       "name": "Crimson Silk Robe",
       "source": {
-        "type": "VENDOR",
-        "certainty": "WIKI",
-        "itemId": 217244,
-        "cost": 5000
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217245 not in this build",
+        "itemId": 217244
       },
-      "difficulty": {
-        "orange": 205,
-        "yellow": 220,
-        "green": 235,
-        "gray": 250,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 205
       }
     },
     "439086": {
@@ -3778,7 +3863,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'black mageweave vest' matches spells 12048, 439086"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217246 not in this build"
+      },
+      "forever": {
+        "learnFrom": 205
       }
     },
     "439088": {
@@ -3787,39 +3875,36 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'black mageweave leggings' matches spells 12049, 439088"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217247 not in this build"
+      },
+      "forever": {
+        "learnFrom": 205
       }
     },
     "439091": {
       "name": "Earthen Silk Belt",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217248 not in this build",
         "itemId": 217249
       },
-      "difficulty": {
-        "orange": 195,
-        "yellow": 215,
-        "green": 230,
-        "gray": 245,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 195
       }
     },
     "439093": {
       "name": "Crimson Silk Shoulders",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217250 not in this build",
         "itemId": 217251
       },
-      "difficulty": {
-        "orange": 190,
-        "yellow": 210,
-        "green": 225,
-        "gray": 240,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 190
       }
     },
     "439094": {
@@ -3828,23 +3913,23 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'long silken cloak' matches spells 3861, 439094"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217252 not in this build"
+      },
+      "forever": {
+        "learnFrom": 185
       }
     },
     "439097": {
       "name": "Boots of the Enchanter",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217253 not in this build",
         "itemId": 217254
       },
-      "difficulty": {
-        "orange": 175,
-        "yellow": 195,
-        "green": 210,
-        "gray": 225,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 175
       }
     },
     "439098": {
@@ -3853,7 +3938,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'crimson silk belt' matches spells 8772, 439098"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217255 not in this build"
+      },
+      "forever": {
+        "learnFrom": 175
       }
     },
     "439100": {
@@ -3862,24 +3950,23 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'earthen vest' matches spells 8764, 439100"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217256 not in this build"
+      },
+      "forever": {
+        "learnFrom": 170
       }
     },
     "439102": {
       "name": "Enchanter's Cowl",
       "source": {
-        "type": "VENDOR",
-        "certainty": "WIKI",
-        "itemId": 217258,
-        "cost": 1000
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217257 not in this build",
+        "itemId": 217258
       },
-      "difficulty": {
-        "orange": 165,
-        "yellow": 185,
-        "green": 200,
-        "gray": 215,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 165
       }
     },
     "446193": {
@@ -3888,7 +3975,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220750 not in this build"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "446194": {
@@ -3897,7 +3987,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220749 not in this build"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "446195": {
@@ -3906,7 +3999,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220751 not in this build"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "461692": {
@@ -3915,24 +4011,23 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227855 not in this build"
+      },
+      "forever": {
+        "learnFrom": 285
       }
     },
     "461708": {
       "name": "Incandescent Mooncloth Robe",
       "source": {
-        "type": "VENDOR",
-        "certainty": "WIKI",
-        "itemId": 228303,
-        "cost": 40000
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227861 not in this build",
+        "itemId": 228303
       },
-      "difficulty": {
-        "orange": 300,
-        "yellow": 315,
-        "green": 330,
-        "gray": 345,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 300
       }
     },
     "461727": {
@@ -3959,49 +4054,40 @@
     "461747": {
       "name": "Incandescent Mooncloth Vest",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227860 not in this build",
         "itemId": 228316
       },
-      "difficulty": {
-        "orange": 300,
-        "yellow": 315,
-        "green": 330,
-        "gray": 345,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 300
       }
     },
     "461750": {
       "name": "Incandescent Mooncloth Circlet",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227863 not in this build",
         "itemId": 228317
       },
-      "difficulty": {
-        "orange": 300,
-        "yellow": 315,
-        "green": 330,
-        "gray": 345,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 300
       }
     },
     "461752": {
       "name": "Incandescent Mooncloth Leggings",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227864 not in this build",
         "itemId": 228318
       },
-      "difficulty": {
-        "orange": 290,
-        "yellow": 305,
-        "green": 320,
-        "gray": 335,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 290
       }
     },
     "463972": {
@@ -4010,24 +4096,24 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'bottomless bag' matches spells 18455, 463972",
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 228994 not in this build",
         "itemId": 228993
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "462282": {
       "name": "Embroidered Belt of the Archmage",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 228476 not in this build",
         "itemId": 228477
       },
-      "difficulty": {
-        "orange": 300,
-        "yellow": 315,
-        "green": 330,
-        "gray": 345,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 300
       }
     },
     "1213740": {
@@ -4036,7 +4122,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'sylvan shoulders' matches spells 28482, 1213740"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234312 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213742": {
@@ -4045,7 +4134,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'sylvan crown' matches spells 28481, 1213742"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234315 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213744": {
@@ -4054,7 +4146,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'sylvan vest' matches spells 28480, 1213744"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234317 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213532": {
@@ -4063,7 +4158,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233837 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213530": {
@@ -4072,7 +4170,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233833 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213527": {
@@ -4081,7 +4182,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233826 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1213536": {
@@ -4090,7 +4194,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233958 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213538": {
@@ -4099,7 +4206,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233959 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213540": {
@@ -4108,7 +4218,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233960 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213534": {
@@ -4117,7 +4230,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233956 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1214173": {
@@ -4126,7 +4242,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234009 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1214306": {
@@ -4135,7 +4254,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234484 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1214307": {
@@ -4144,7 +4266,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234485 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1223760": {
@@ -4153,7 +4278,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'glacial vest' matches spells 28207, 1223760"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236694 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1223762": {
@@ -4162,7 +4290,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'glacial cloak' matches spells 28208, 1223762"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236690 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1223764": {
@@ -4171,7 +4302,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'glacial gloves' matches spells 28205, 1223764"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236692 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1223766": {
@@ -4180,7 +4314,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'glacial wrists' matches spells 28209, 1223766"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236693 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1223768": {
@@ -4189,7 +4326,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236706 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1223770": {
@@ -4198,7 +4338,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236705 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1223772": {
@@ -4207,135 +4350,114 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236704 not in this build"
+      },
+      "forever": {
+        "learnFrom": 315
       }
     },
     "1224607": {
       "name": "Scarlet Augur's Hood",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238264 not in this build",
         "itemId": 238298
       },
-      "difficulty": {
-        "orange": 280,
-        "yellow": 285,
-        "green": 295,
-        "gray": 305,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 280
       }
     },
     "1224608": {
       "name": "Scarlet Augur's Mantle",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238265 not in this build",
         "itemId": 238299
       },
-      "difficulty": {
-        "orange": 280,
-        "yellow": 285,
-        "green": 295,
-        "gray": 305,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 280
       }
     },
     "1224609": {
       "name": "Scarlet Augur's Vestments",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238266 not in this build",
         "itemId": 238300
       },
-      "difficulty": {
-        "orange": 280,
-        "yellow": 285,
-        "green": 295,
-        "gray": 305,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 280
       }
     },
     "1224610": {
       "name": "Scarlet Augur's Cuffs",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238267 not in this build",
         "itemId": 238301
       },
-      "difficulty": {
-        "orange": 250,
-        "yellow": 260,
-        "green": 282,
-        "gray": 305,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 250
       }
     },
     "1224611": {
       "name": "Scarlet Augur's Mitts",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238268 not in this build",
         "itemId": 238302
       },
-      "difficulty": {
-        "orange": 260,
-        "yellow": 270,
-        "green": 287,
-        "gray": 305,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 260
       }
     },
     "1224612": {
       "name": "Scarlet Augur's Strap",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238269 not in this build",
         "itemId": 238303
       },
-      "difficulty": {
-        "orange": 250,
-        "yellow": 260,
-        "green": 282,
-        "gray": 305,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 250
       }
     },
     "1224613": {
       "name": "Scarlet Augur's Leggings",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238270 not in this build",
         "itemId": 238304
       },
-      "difficulty": {
-        "orange": 270,
-        "yellow": 280,
-        "green": 292,
-        "gray": 305,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 270
       }
     },
     "1224614": {
       "name": "Scarlet Augur's Soles",
       "source": {
-        "type": "DROP",
-        "certainty": "WIKI",
+        "type": "UNRESOLVED",
+        "certainty": "REVIEW",
+        "needsReview": true,
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238271 not in this build",
         "itemId": 238305
       },
-      "difficulty": {
-        "orange": 260,
-        "yellow": 270,
-        "green": 287,
-        "gray": 305,
-        "certainty": "DB2",
-        "orangeFrom": "ITEM"
+      "forever": {
+        "learnFrom": 260
       }
     },
     "1227723": {
@@ -4377,6 +4499,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 20
       }
     },
     "1257013": {
@@ -4421,6 +4546,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253886
+      },
+      "forever": {
+        "learnFrom": 35
       }
     },
     "1257369": {
@@ -4431,15 +4559,21 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253888
+      },
+      "forever": {
+        "learnFrom": 35
       }
     },
     "1257370": {
       "name": "Pristine Boots",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253890,
-        "cost": 1500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 60,
@@ -4454,9 +4588,12 @@
       "name": "Silky Boots",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253892,
-        "cost": 1500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 60,
@@ -4471,9 +4608,12 @@
       "name": "Flame Boots",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253894,
-        "cost": 1500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 60,
@@ -4488,9 +4628,12 @@
       "name": "Shadow Boots",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253896,
-        "cost": 1500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 60,
@@ -4505,9 +4648,12 @@
       "name": "Pearly Boots",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253898,
-        "cost": 1500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 60,
@@ -4522,9 +4668,12 @@
       "name": "Shining Boots",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253900,
-        "cost": 1500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 60,
@@ -4543,6 +4692,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253902
+      },
+      "forever": {
+        "learnFrom": 75
       }
     },
     "1257377": {
@@ -4553,6 +4705,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253904
+      },
+      "forever": {
+        "learnFrom": 75
       }
     },
     "1257378": {
@@ -4563,6 +4718,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253906
+      },
+      "forever": {
+        "learnFrom": 75
       }
     },
     "1257379": {
@@ -4573,6 +4731,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253908
+      },
+      "forever": {
+        "learnFrom": 75
       }
     },
     "1257380": {
@@ -4583,6 +4744,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253910
+      },
+      "forever": {
+        "learnFrom": 75
       }
     },
     "1257381": {
@@ -4593,15 +4757,21 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253912
+      },
+      "forever": {
+        "learnFrom": 75
       }
     },
     "1257382": {
       "name": "Pristine Gloves",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253914,
-        "cost": 1875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 75,
@@ -4616,9 +4786,12 @@
       "name": "Silky Gloves",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253916,
-        "cost": 1875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 75,
@@ -4633,9 +4806,12 @@
       "name": "Flame Gloves",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253918,
-        "cost": 1875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 75,
@@ -4650,9 +4826,12 @@
       "name": "Shadow Gloves",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253920,
-        "cost": 1875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 75,
@@ -4667,9 +4846,12 @@
       "name": "Pearly Gloves",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253922,
-        "cost": 1875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 75,
@@ -4684,9 +4866,12 @@
       "name": "Shining Gloves",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253924,
-        "cost": 1875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 75,
@@ -4701,9 +4886,12 @@
       "name": "Pristine Sash",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253926,
-        "cost": 2125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 85,
@@ -4718,9 +4906,12 @@
       "name": "Silky Sash",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253928,
-        "cost": 2125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 85,
@@ -4735,9 +4926,12 @@
       "name": "Flame Sash",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253930,
-        "cost": 2125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 85,
@@ -4752,9 +4946,12 @@
       "name": "Shadow Sash",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253932,
-        "cost": 2125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 85,
@@ -4769,9 +4966,12 @@
       "name": "Pearly Sash",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253934,
-        "cost": 2125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 85,
@@ -4786,9 +4986,12 @@
       "name": "Shining Sash",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253936,
-        "cost": 2125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 85,
@@ -4807,6 +5010,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253938
+      },
+      "forever": {
+        "learnFrom": 100
       }
     },
     "1257395": {
@@ -4817,6 +5023,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253940
+      },
+      "forever": {
+        "learnFrom": 100
       }
     },
     "1257396": {
@@ -4827,6 +5036,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253942
+      },
+      "forever": {
+        "learnFrom": 100
       }
     },
     "1257397": {
@@ -4837,6 +5049,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253944
+      },
+      "forever": {
+        "learnFrom": 100
       }
     },
     "1257398": {
@@ -4847,6 +5062,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253946
+      },
+      "forever": {
+        "learnFrom": 100
       }
     },
     "1257399": {
@@ -4857,15 +5075,21 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253948
+      },
+      "forever": {
+        "learnFrom": 100
       }
     },
     "1257400": {
       "name": "Pristine Circlet",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253950,
-        "cost": 2500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 100,
@@ -4880,9 +5104,12 @@
       "name": "Silky Circlet",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253952,
-        "cost": 2500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 100,
@@ -4897,9 +5124,12 @@
       "name": "Flame Circlet",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253954,
-        "cost": 2500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 100,
@@ -4914,9 +5144,12 @@
       "name": "Shadow Circlet",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253956,
-        "cost": 2500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 100,
@@ -4931,9 +5164,12 @@
       "name": "Pearly Circlet",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253958,
-        "cost": 2500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 100,
@@ -4948,9 +5184,12 @@
       "name": "Shining Circlet",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253960,
-        "cost": 2500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 100,
@@ -4965,9 +5204,12 @@
       "name": "Pristine Gown",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253962,
-        "cost": 2750
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 110,
@@ -4982,9 +5224,12 @@
       "name": "Silky Gown",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253964,
-        "cost": 2750
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 110,
@@ -4999,9 +5244,12 @@
       "name": "Flame Gown",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253966,
-        "cost": 2750
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 110,
@@ -5016,9 +5264,12 @@
       "name": "Shadow Gown",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253968,
-        "cost": 2750
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 110,
@@ -5033,9 +5284,12 @@
       "name": "Pearly Gown",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253970,
-        "cost": 2750
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 110,
@@ -5050,9 +5304,12 @@
       "name": "Shining Gown",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253972,
-        "cost": 2750
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 110,
@@ -5087,6 +5344,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253976
+      },
+      "forever": {
+        "learnFrom": 125
       }
     },
     "1257414": {
@@ -5097,6 +5357,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253978
+      },
+      "forever": {
+        "learnFrom": 125
       }
     },
     "1257415": {
@@ -5107,6 +5370,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253980
+      },
+      "forever": {
+        "learnFrom": 125
       }
     },
     "1257416": {
@@ -5117,6 +5383,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253982
+      },
+      "forever": {
+        "learnFrom": 125
       }
     },
     "1257417": {
@@ -5127,6 +5396,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253984
+      },
+      "forever": {
+        "learnFrom": 125
       }
     },
     "1257418": {
@@ -5137,15 +5409,21 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 253986
+      },
+      "forever": {
+        "learnFrom": 125
       }
     },
     "1257419": {
       "name": "Pristine Leggings",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253988,
-        "cost": 3125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 125,
@@ -5160,9 +5438,12 @@
       "name": "Silky Leggings",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253990,
-        "cost": 3125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 125,
@@ -5177,9 +5458,12 @@
       "name": "Flame Leggings",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253992,
-        "cost": 3125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 125,
@@ -5194,9 +5478,12 @@
       "name": "Shadow Leggings",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253994,
-        "cost": 3125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 125,
@@ -5211,9 +5498,12 @@
       "name": "Pearly Leggings",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253996,
-        "cost": 3125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 125,
@@ -5228,9 +5518,12 @@
       "name": "Shining Leggings",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 253998,
-        "cost": 3125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 30
+        }
       },
       "difficulty": {
         "orange": 125,
@@ -5265,6 +5558,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254002
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1257427": {
@@ -5275,6 +5571,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254004
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1257428": {
@@ -5285,6 +5584,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254006
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1257429": {
@@ -5295,6 +5597,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254008
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1257430": {
@@ -5305,6 +5610,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254010
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1257431": {
@@ -5315,6 +5623,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254012
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1257432": {
@@ -5395,15 +5706,23 @@
         "gray": 215,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "guide says TRAINER; DB2 has teaching item 254022"
+        ]
       }
     },
     "1257437": {
       "name": "Frothing Handwraps",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254024,
-        "cost": 4125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 165,
@@ -5418,9 +5737,12 @@
       "name": "Fiery Handwraps",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254026,
-        "cost": 4125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 165,
@@ -5435,9 +5757,12 @@
       "name": "Black Handwraps",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254028,
-        "cost": 4125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 165,
@@ -5452,9 +5777,12 @@
       "name": "Golden Handwraps",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254030,
-        "cost": 4125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 165,
@@ -5469,9 +5797,12 @@
       "name": "Radiant Handwraps",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254032,
-        "cost": 4125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 165,
@@ -5502,9 +5833,12 @@
       "name": "Mageweave Reagent Bag",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254036,
-        "cost": 4750
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 190,
@@ -5523,6 +5857,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254038
+      },
+      "forever": {
+        "learnFrom": 190
       }
     },
     "1257445": {
@@ -5533,6 +5870,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254040
+      },
+      "forever": {
+        "learnFrom": 190
       }
     },
     "1257446": {
@@ -5543,6 +5883,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254042
+      },
+      "forever": {
+        "learnFrom": 190
       }
     },
     "1257447": {
@@ -5553,6 +5896,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254044
+      },
+      "forever": {
+        "learnFrom": 190
       }
     },
     "1257448": {
@@ -5563,6 +5909,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254046
+      },
+      "forever": {
+        "learnFrom": 190
       }
     },
     "1257449": {
@@ -5573,15 +5922,21 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254048
+      },
+      "forever": {
+        "learnFrom": 190
       }
     },
     "1257450": {
       "name": "Nethergeld Shoulders",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254050,
-        "cost": 4875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 195,
@@ -5596,9 +5951,12 @@
       "name": "Netherfroth Shoulders",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254052,
-        "cost": 4875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 195,
@@ -5613,9 +5971,12 @@
       "name": "Netherflame Shoulders",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254054,
-        "cost": 4875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 195,
@@ -5630,9 +5991,12 @@
       "name": "Netherpearl Shoulders",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254056,
-        "cost": 4875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 195,
@@ -5647,9 +6011,12 @@
       "name": "Nethershine Shoulders",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254058,
-        "cost": 4875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 195,
@@ -5664,9 +6031,12 @@
       "name": "Netherlight Shoulders",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254060,
-        "cost": 4875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 195,
@@ -5681,9 +6051,12 @@
       "name": "Nethergeld Cuffs",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254062,
-        "cost": 5125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 205,
@@ -5698,9 +6071,12 @@
       "name": "Netherfroth Cuffs",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254064,
-        "cost": 5125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 205,
@@ -5715,9 +6091,12 @@
       "name": "Netherflame Cuffs",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254066,
-        "cost": 5125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 205,
@@ -5732,9 +6111,12 @@
       "name": "Netherpearl Cuffs",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254068,
-        "cost": 5125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 205,
@@ -5749,9 +6131,12 @@
       "name": "Nethershine Cuffs",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254070,
-        "cost": 5125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 205,
@@ -5766,9 +6151,12 @@
       "name": "Netherlight Cuffs",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254072,
-        "cost": 5125
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 205,
@@ -5831,9 +6219,12 @@
       "name": "Runecloth Reagent Bag",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254080,
-        "cost": 5375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 215,
@@ -5848,9 +6239,12 @@
       "name": "Gilded Waistcord",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254082,
-        "cost": 5375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 215,
@@ -5865,9 +6259,12 @@
       "name": "Frothing Waistcord",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254084,
-        "cost": 5375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 215,
@@ -5882,9 +6279,12 @@
       "name": "Fiery Waistcord",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254086,
-        "cost": 5375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 215,
@@ -5899,9 +6299,12 @@
       "name": "Black Waistcord",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254088,
-        "cost": 5375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 215,
@@ -5916,9 +6319,12 @@
       "name": "Golden Waistcord",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254090,
-        "cost": 5375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 215,
@@ -5933,9 +6339,12 @@
       "name": "Radiant Waistcord",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254092,
-        "cost": 5375
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 60
+        }
       },
       "difficulty": {
         "orange": 215,
@@ -5970,6 +6379,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254096
+      },
+      "forever": {
+        "learnFrom": 235
       }
     },
     "1257474": {
@@ -5980,6 +6392,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254098
+      },
+      "forever": {
+        "learnFrom": 235
       }
     },
     "1257475": {
@@ -5990,6 +6405,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254100
+      },
+      "forever": {
+        "learnFrom": 235
       }
     },
     "1257476": {
@@ -6000,6 +6418,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254102
+      },
+      "forever": {
+        "learnFrom": 235
       }
     },
     "1257477": {
@@ -6010,6 +6431,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254104
+      },
+      "forever": {
+        "learnFrom": 235
       }
     },
     "1257478": {
@@ -6020,15 +6444,21 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 254106
+      },
+      "forever": {
+        "learnFrom": 235
       }
     },
     "1257479": {
       "name": "Gilded Sandals",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254108,
-        "cost": 5875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 90
+        }
       },
       "difficulty": {
         "orange": 235,
@@ -6043,9 +6473,12 @@
       "name": "Frothing Sandals",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254110,
-        "cost": 5875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 90
+        }
       },
       "difficulty": {
         "orange": 235,
@@ -6060,9 +6493,12 @@
       "name": "Fiery Sandals",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254112,
-        "cost": 5875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 90
+        }
       },
       "difficulty": {
         "orange": 235,
@@ -6077,9 +6513,12 @@
       "name": "Black Sandals",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254114,
-        "cost": 5875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 90
+        }
       },
       "difficulty": {
         "orange": 235,
@@ -6094,9 +6533,12 @@
       "name": "Golden Sandals",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254116,
-        "cost": 5875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 90
+        }
       },
       "difficulty": {
         "orange": 235,
@@ -6111,9 +6553,12 @@
       "name": "Radiant Sandals",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 254118,
-        "cost": 5875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 90
+        }
       },
       "difficulty": {
         "orange": 235,
@@ -6313,6 +6758,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 20
       }
     },
     "1263032": {
@@ -6323,6 +6771,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273099
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1263080": {
@@ -6333,6 +6784,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273124
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "1292944": {
@@ -6352,6 +6806,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273907 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6373,6 +6828,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273905 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6394,6 +6850,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273906 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6415,6 +6872,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273904 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6436,6 +6894,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273923 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6457,6 +6916,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273921 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6478,6 +6938,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273922 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6499,6 +6960,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273920 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6520,6 +6982,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273927 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6541,6 +7004,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273925 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6562,6 +7026,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273926 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6583,6 +7048,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273924 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6604,6 +7070,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273943 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6625,6 +7092,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273941 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6646,6 +7114,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273942 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }
@@ -6667,6 +7136,7 @@
       },
       "forever": {
         "notes": [
+          "created item 273940 has no data in this build",
           "wiki says vendor; price not in DB2 or wiki"
         ]
       }

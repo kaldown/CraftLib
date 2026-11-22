@@ -46,14 +46,45 @@ def counts_in_game(reason: str) -> bool:
     return not reason.startswith(NOT_IN_GAME_PREFIXES)
 
 
+def skill_up_ranges(excluded: "list[tuple[str, str, str]]", sources: "dict | None",
+                    ranks: "dict | None", cap: int) -> "list[tuple[int, int]]":
+    """(start, gray) per excluded in-game recipe: the skill points at which it could give
+    a skill-up, for coverage()'s `possible`.
+
+    start is the earliest learn skill any source gives for it (forever.learnFrom, kept by
+    the enrich step), 1 when none does: an excluded recipe is assumed learnable from the
+    start unless something says otherwise, so the gate errs on the strict side. It is never
+    later than DB2's yellow: a hint may be too late (a cross bucket's learnedAt repeats
+    yellow for a recipe it has no learn skill for), and from yellow on the recipe gives
+    skill-ups whenever it was learned. gray is DB2's (ranks: spell id -> (yellow, gray)),
+    the cap for a recipe without thresholds.
+    """
+    out = []
+    for sid, _name, reason in excluded:
+        if not counts_in_game(reason):
+            continue
+        recipe = (sources or {}).get(str(sid)) or {}
+        hint = (recipe.get("forever") or {}).get("learnFrom")
+        start = hint if type(hint) is int and hint >= 1 else 1
+        yellow, gray = (ranks or {}).get(str(sid), (None, cap))
+        if type(yellow) is int and yellow >= 1:
+            start = min(start, yellow)
+        out.append((start, gray))
+    return out
+
+
 def coverage(shipped: "list[dict]", excluded: "list[tuple[str, str, str]]",
-             cap: int) -> Coverage:
+             cap: int, possible: "list[tuple[int, int]] | None" = None) -> Coverage:
     """Coverage numbers for one profession: shipped, in game, share and the largest gap.
 
     shipped: the generator's recipe dicts (skillRequired, skillRange.gray, source.type).
     excluded: (spell id, name, reason) of every recipe the generator left out.
     A point p in 1..cap-1 is covered when a shipped recipe has skillRequired <= p < gray:
     a player at p can learn it and still gets skill-ups from it.
+    possible: None counts every uncovered point as a gap. A list (skill_up_ranges) counts
+    an uncovered point only when an excluded in-game recipe could give a skill-up there
+    (start <= p < gray of one of the ranges): where the game itself has no recipe
+    (Mining at 185-299: no smelt gives a skill-up) nothing is missing from the data.
     """
     in_game = len(shipped) + sum(1 for _sid, _name, reason in excluded if counts_in_game(reason))
     share = len(shipped) / in_game if in_game else 0.0
@@ -64,9 +95,13 @@ def coverage(shipped: "list[dict]", excluded: "list[tuple[str, str, str]]",
         # covers nothing.
         for p in range(max(1, r["skillRequired"]), min(cap, r["skillRange"]["gray"])):
             covered[p] = True
+    counted = [possible is None] * cap
+    for first, gray in possible or ():
+        for p in range(max(1, first), min(cap, gray)):
+            counted[p] = True
     best, best_run, start = 0, None, None
     for p in range(1, cap):
-        if covered[p]:
+        if covered[p] or not counted[p]:
             start = None
             continue
         start = p if start is None else start
@@ -239,6 +274,10 @@ def render(review_dir: Path, bucket) -> str:
     gate = (f"share >= {bucket.coverage_floor:.2f} and largest gap <= {bucket.coverage_max_gap}"
             if bucket.coverage_floor is not None else "none")
     cap = max(bucket.milestones)
+    # The second half of the gap definition, only for a bucket that uses it.
+    gap_scope = (" and an excluded in-game recipe could give a skill-up (from the earliest "
+                 "learn skill any source gives for it, 1 when none does, up to its gray)"
+                 if bucket.gap_skill_up_only else "")
     out = [
         f"# {bucket.folder} recipe review",
         "",
@@ -251,7 +290,7 @@ def render(review_dir: Path, bucket) -> str:
         "counts shipped plus excluded recipes, except those excluded as `not in game:` or "
         "`no skill-up:`. Share is shipped / in game; known-source share is shipped with a "
         f"known source / in game. Largest gap is the longest run of skill points in 1-{cap - 1} "
-        "where no shipped recipe has skillRequired <= p < gray. "
+        f"where no shipped recipe has skillRequired <= p < gray{gap_scope}. "
         f"Coverage gate: {gate}; a held-back profession is not written. Notes are what the "
         "resolver recorded about a recipe (shipped or excluded) for a human to check.",
         "",

@@ -2,40 +2,17 @@
   "coverage": {
     "cap": 300,
     "floor": 0.75,
-    "gap": [
-      1,
-      24
-    ],
-    "inGame": 267,
-    "knownSource": 178,
-    "knownSourceShare": 0.6667,
-    "maxGap": 24,
+    "gap": null,
+    "inGame": 246,
+    "knownSource": 167,
+    "knownSourceShare": 0.6789,
+    "maxGap": 0,
     "maxGapAllowed": 10,
-    "passes": false,
-    "share": 0.8652,
-    "shipped": 231
+    "passes": true,
+    "share": 0.9472,
+    "shipped": 233
   },
   "excluded": [
-    [
-      3918,
-      "Rough Blasting Powder",
-      "unknown source and no teaching item"
-    ],
-    [
-      3919,
-      "Rough Dynamite",
-      "unknown source and no teaching item"
-    ],
-    [
-      3920,
-      "Crafted Light Shot",
-      "unknown source and no teaching item"
-    ],
-    [
-      9273,
-      "Goblin Jumper Cables",
-      "no learn skill: wiki skill 165 above yellow 160"
-    ],
     [
       12715,
       "Goblin Rocket Fuel Recipe",
@@ -45,11 +22,6 @@
       12716,
       "Goblin Mortar",
       "ambiguous: wiki row 'goblin mortar' matches spells 12716, 13240"
-    ],
-    [
-      12719,
-      "Explosive Arrow",
-      "no wiki row"
     ],
     [
       12720,
@@ -87,99 +59,114 @@
       "no skill-up: yellow == gray"
     ],
     [
-      23486,
-      "Dimensional Ripper - Everlook",
-      "unknown source and no teaching item"
-    ],
-    [
-      23489,
-      "Ultrasafe Transporter - Gadgetzan",
-      "unknown source and no teaching item"
-    ],
-    [
       26011,
       "Tranquil Mechanical Yeti",
       "unknown source and no teaching item"
     ],
     [
+      435958,
+      "Whirling Truesilver Gearwall",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 213390 not in this build"
+    ],
+    [
+      435960,
+      "Hyperconductive Goldwap",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215115 not in this build"
+    ],
+    [
+      435964,
+      "High-Yield Radiation Bomb",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215127 not in this build"
+    ],
+    [
+      435966,
+      "Ez-Thro Radiation Bomb",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215168 not in this build"
+    ],
+    [
       446236,
       "Void-Powered Invoker's Vambraces",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221025 not in this build"
     ],
     [
       446237,
       "Void-Powered Slayer's Vambraces",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221026 not in this build"
     ],
     [
       446238,
       "Void-Powered Protector's Vambraces",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221027 not in this build"
     ],
     [
       461710,
       "Fiery Core Sharpshooter Rifle",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227849 not in this build"
     ],
     [
       1213573,
       "Arcane Megabomb",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233984 not in this build"
     ],
     [
       1213576,
       "The Fumigator",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233985 not in this build"
     ],
     [
       1213578,
       "Obsidian Bomb",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233986 not in this build"
     ],
     [
       1213586,
       "G00 DV-1B3 Generator",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233987 not in this build"
     ],
     [
       1213588,
       "Tuned Force Reactive Disk",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233988 not in this build"
     ],
     [
       1213646,
       "Obsidian Blasting Powder",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234005 not in this build"
     ],
     [
       1214145,
       "Obsidian Shotgun",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234434 not in this build"
     ],
     [
       1217207,
       "Obsidian Scope",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 235529 not in this build"
+    ],
+    [
+      1221012,
+      "Creepy Censor Sensors",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236871 not in this build"
     ],
     [
       1226206,
       "Tinkerbox",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238737 not in this build"
     ],
     [
       1226207,
       "Tinkerbox: Teleport",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238734 not in this build"
     ],
     [
       1226208,
       "Tinkerbox: Nitro Boosts",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238735 not in this build"
     ],
     [
       1226209,
       "Tinkerbox: Magnetic Displacement",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238736 not in this build"
     ],
     [
       1226210,
@@ -199,7 +186,7 @@
     [
       1226213,
       "Semisafe Transporter: New Avalon",
-      "no skill-up: yellow == gray"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238781 not in this build"
     ],
     [
       1230656,
@@ -237,12 +224,77 @@
       "drop per wiki but DB2 has no teaching item"
     ]
   ],
-  "heldBack": true,
+  "heldBack": false,
   "notes": [
     [
       3919,
       "Rough Dynamite",
-      "wiki row skill 30 differs from CROSS orange 1"
+      "wiki row skill 30 differs from AUTO orange 1"
+    ],
+    [
+      3920,
+      "Crafted Light Shot",
+      "wiki row skill 30 differs from AUTO orange 1"
+    ],
+    [
+      3925,
+      "Rough Boomstick",
+      "Vanilla orange 50 differs from GUIDE orange 80"
+    ],
+    [
+      3925,
+      "Rough Boomstick",
+      "wiki row skill 50 differs from GUIDE orange 80"
+    ],
+    [
+      3930,
+      "Crafted Heavy Shot",
+      "Vanilla orange 75 differs from GUIDE orange 85"
+    ],
+    [
+      3930,
+      "Crafted Heavy Shot",
+      "wiki row skill 75 differs from GUIDE orange 85"
+    ],
+    [
+      3936,
+      "Deadly Blunderbuss",
+      "Vanilla orange 105 differs from GUIDE orange 130"
+    ],
+    [
+      3936,
+      "Deadly Blunderbuss",
+      "wiki row skill 105 differs from GUIDE orange 130"
+    ],
+    [
+      3949,
+      "Silver-plated Shotgun",
+      "Vanilla orange 130 differs from GUIDE orange 155"
+    ],
+    [
+      3949,
+      "Silver-plated Shotgun",
+      "wiki row skill 130 differs from GUIDE orange 155"
+    ],
+    [
+      3977,
+      "Crude Scope",
+      "Vanilla orange 60 differs from GUIDE orange 90"
+    ],
+    [
+      3977,
+      "Crude Scope",
+      "wiki row skill 60 differs from GUIDE orange 90"
+    ],
+    [
+      3978,
+      "Standard Scope",
+      "Vanilla orange 110 differs from GUIDE orange 135"
+    ],
+    [
+      3978,
+      "Standard Scope",
+      "wiki row skill 110 differs from GUIDE orange 135"
     ],
     [
       8895,
@@ -252,7 +304,22 @@
     [
       9273,
       "Goblin Jumper Cables",
-      "teaching item 7561 RequiredSkillRank 165 above yellow 160 ignored"
+      "learn skill 165 above yellow 160: teaching item 7561 RequiredSkillRank"
+    ],
+    [
+      12595,
+      "Mithril Blunderbuss",
+      "Vanilla orange 205 differs from GUIDE orange 225"
+    ],
+    [
+      12595,
+      "Mithril Blunderbuss",
+      "wiki row skill 205 differs from GUIDE orange 225"
+    ],
+    [
+      12716,
+      "Goblin Mortar",
+      "guide decides it; wiki: ambiguous: wiki row 'goblin mortar' matches spells 12716, 13240"
     ],
     [
       12717,
@@ -260,28 +327,237 @@
       "wiki says vendor; price not in DB2 or wiki"
     ],
     [
+      12718,
+      "Goblin Construction Helmet",
+      "teaching item 221335 named by the guide has no data in this build"
+    ],
+    [
+      12720,
+      "Goblin \"Boom\" Box",
+      "created item 10580 has no data in this build"
+    ],
+    [
+      12722,
+      "Goblin Radio",
+      "created item 10585 has no data in this build"
+    ],
+    [
+      12754,
+      "The Big One",
+      "guide skill 205 differs from CROSS orange 235"
+    ],
+    [
+      12754,
+      "The Big One",
+      "teaching item 221341 named by the guide has no data in this build"
+    ],
+    [
+      12755,
+      "Goblin Bomb Dispenser",
+      "guide skill 205 differs from CROSS orange 230"
+    ],
+    [
+      12755,
+      "Goblin Bomb Dispenser",
+      "teaching item 221340 named by the guide has no data in this build"
+    ],
+    [
+      12758,
+      "Goblin Rocket Helmet",
+      "guide skill 205 differs from CROSS orange 245"
+    ],
+    [
+      12758,
+      "Goblin Rocket Helmet",
+      "teaching item 221343 named by the guide has no data in this build"
+    ],
+    [
+      12759,
+      "Gnomish Death Ray",
+      "guide skill 205 differs from CROSS orange 240"
+    ],
+    [
+      12759,
+      "Gnomish Death Ray",
+      "teaching item 221334 named by the guide has no data in this build"
+    ],
+    [
+      12760,
+      "Goblin Sapper Charge",
+      "teaching item 221338 named by the guide has no data in this build"
+    ],
+    [
+      12897,
+      "Gnomish Goggles",
+      "guide skill 205 differs from CROSS orange 210"
+    ],
+    [
+      12897,
+      "Gnomish Goggles",
+      "teaching item 221328 named by the guide has no data in this build"
+    ],
+    [
+      12899,
+      "Gnomish Shrink Ray",
+      "teaching item 221327 named by the guide has no data in this build"
+    ],
+    [
+      12902,
+      "Gnomish Net-o-Matic Projector",
+      "guide skill 205 differs from CROSS orange 210"
+    ],
+    [
+      12902,
+      "Gnomish Net-o-Matic Projector",
+      "teaching item 221329 named by the guide has no data in this build"
+    ],
+    [
+      12903,
+      "Gnomish Harm Prevention Belt",
+      "guide skill 205 differs from CROSS orange 215"
+    ],
+    [
+      12903,
+      "Gnomish Harm Prevention Belt",
+      "teaching item 221330 named by the guide has no data in this build"
+    ],
+    [
+      12904,
+      "Gnomish Ham Radio",
+      "created item 10723 has no data in this build"
+    ],
+    [
+      12905,
+      "Gnomish Rocket Boots",
+      "guide skill 205 differs from CROSS orange 225"
+    ],
+    [
+      12905,
+      "Gnomish Rocket Boots",
+      "teaching item 221331 named by the guide has no data in this build"
+    ],
+    [
+      12906,
+      "Gnomish Battle Chicken",
+      "guide skill 205 differs from CROSS orange 230"
+    ],
+    [
+      12906,
+      "Gnomish Battle Chicken",
+      "teaching item 221332 named by the guide has no data in this build"
+    ],
+    [
+      12907,
+      "Gnomish Mind Control Cap",
+      "guide skill 205 differs from CROSS orange 235"
+    ],
+    [
+      12907,
+      "Gnomish Mind Control Cap",
+      "teaching item 221333 named by the guide has no data in this build"
+    ],
+    [
+      12908,
+      "Goblin Dragon Gun",
+      "guide skill 205 differs from CROSS orange 240"
+    ],
+    [
+      12908,
+      "Goblin Dragon Gun",
+      "teaching item 221342 named by the guide has no data in this build"
+    ],
+    [
       26011,
       "Tranquil Mechanical Yeti",
       "wiki row skill 320 differs from CROSS orange 250"
+    ],
+    [
+      1293088,
+      "9-60 Battery Pack",
+      "created item 274048 has no data in this build"
+    ],
+    [
+      1308182,
+      "Serrated Strap",
+      "created item 280309 has no data in this build"
     ]
   ],
   "orangeFrom": {
-    "CROSS": 69,
-    "ITEM": 161,
+    "AUTO": 3,
+    "CROSS": 56,
+    "GUIDE": 16,
+    "ITEM": 157,
     "WIKI": 1
   },
   "sourceTypes": {
-    "DROP": 46,
+    "DROP": 47,
     "QUEST": 5,
     "REPUTATION": 2,
-    "TRAINER": 70,
-    "UNKNOWN": 53,
-    "VENDOR": 55
+    "STARTER": 3,
+    "TRAINER": 59,
+    "UNKNOWN": 66,
+    "VENDOR": 51
   },
   "unknownSource": [
     [
       12717,
       "Goblin Mining Helmet"
+    ],
+    [
+      12718,
+      "Goblin Construction Helmet"
+    ],
+    [
+      12754,
+      "The Big One"
+    ],
+    [
+      12755,
+      "Goblin Bomb Dispenser"
+    ],
+    [
+      12758,
+      "Goblin Rocket Helmet"
+    ],
+    [
+      12759,
+      "Gnomish Death Ray"
+    ],
+    [
+      12760,
+      "Goblin Sapper Charge"
+    ],
+    [
+      12897,
+      "Gnomish Goggles"
+    ],
+    [
+      12899,
+      "Gnomish Shrink Ray"
+    ],
+    [
+      12902,
+      "Gnomish Net-o-Matic Projector"
+    ],
+    [
+      12903,
+      "Gnomish Harm Prevention Belt"
+    ],
+    [
+      12905,
+      "Gnomish Rocket Boots"
+    ],
+    [
+      12906,
+      "Gnomish Battle Chicken"
+    ],
+    [
+      12907,
+      "Gnomish Mind Control Cap"
+    ],
+    [
+      12908,
+      "Goblin Dragon Gun"
     ],
     [
       15628,
@@ -338,10 +614,6 @@
     [
       26428,
       "Large Red Rocket Cluster"
-    ],
-    [
-      1221012,
-      "Creepy Censor Sensors"
     ],
     [
       1228088,

@@ -1,10 +1,25 @@
 -- Data/Forever/Blacksmithing/Recipes.lua
 -- Blacksmithing recipes for WoW Forever
--- Generated from DB2 data and the Warcraft Wiki recipe tables
+-- Generated from DB2 data, Wowhead guide tables and the Warcraft Wiki recipe tables
 local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
 local recipes = {
+    -- Rough Sharpening Stone (1)
+    {
+        id = 2660,
+        name = "Rough Sharpening Stone",
+        itemId = 2862,
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 15, green = 35, gray = 55 },
+        reagents = {
+            { itemId = 2835, name = "Rough Stone", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.STARTER,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Copper Chain Pants (1)
     {
         id = 2662,
@@ -19,6 +34,69 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Copper Bracers (1)
+    {
+        id = 2663,
+        name = "Copper Bracers",
+        itemId = 2853,
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 20, green = 40, gray = 60 },
+        reagents = {
+            { itemId = 2840, name = "Copper Bar", count = 2 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.STARTER,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Rough Weightstone (1)
+    {
+        id = 3115,
+        name = "Rough Weightstone",
+        itemId = 3239,
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 15, green = 35, gray = 55 },
+        reagents = {
+            { itemId = 2835, name = "Rough Stone", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.STARTER,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Rough Copper Vest (1)
+    {
+        id = 12260,
+        name = "Rough Copper Vest",
+        itemId = 10421,
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 15, green = 35, gray = 55 },
+        reagents = {
+            { itemId = 2840, name = "Copper Bar", count = 4 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.STARTER,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Copper Rod (1)
+    {
+        id = 1245287,
+        name = "Copper Rod",
+        itemId = 6217,
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 10, green = 12, gray = 15 },
+        reagents = {
+            { itemId = 2840, name = "Copper Bar", count = 1 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.STARTER,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -371,7 +449,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251365,
-            cost = 1125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -392,7 +470,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251366,
-            cost = 1125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -413,7 +491,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251367,
-            cost = 1125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -434,7 +512,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251368,
-            cost = 1125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -455,7 +533,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251369,
-            cost = 1125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -928,8 +1006,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251360,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -948,8 +1027,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251361,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -968,8 +1048,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251362,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -988,8 +1069,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251363,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1008,8 +1090,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251364,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1109,7 +1192,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251355,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1130,7 +1213,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251356,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1151,7 +1234,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251357,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1172,7 +1255,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251358,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1193,7 +1276,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251359,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1269,8 +1352,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251380,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1290,8 +1374,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251381,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1311,8 +1396,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251382,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1332,8 +1418,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251383,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1353,8 +1440,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251384,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1698,7 +1786,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251370,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1720,7 +1808,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251371,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1742,7 +1830,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251372,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1764,7 +1852,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251373,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1786,7 +1874,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251374,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2037,8 +2125,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251375,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2058,8 +2147,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251376,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2079,8 +2169,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251377,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2100,8 +2191,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251378,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2121,8 +2213,9 @@ local recipes = {
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 251379,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2945,7 +3038,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251418,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2967,7 +3060,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251419,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2989,7 +3082,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251420,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3011,7 +3104,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251421,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3033,7 +3126,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251422,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3724,7 +3817,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251428,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3747,7 +3840,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251429,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3770,7 +3863,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251430,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3793,7 +3886,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251431,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3816,7 +3909,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251432,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4086,48 +4179,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Reflective Truesilver Braincage (225)
-    {
-        id = 435906,
-        name = "Reflective Truesilver Braincage",
-        itemId = 215167,
-        skillRequired = 225,
-        skillRange = { orange = 225, yellow = 225, green = 230, gray = 235 },
-        reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 25 },
-            { itemId = 213376, name = "Low-Background Truesilver Plates", count = 4 },
-            { itemId = 213379, name = "Hyperconductive Arcano-Filament", count = 2 },
-            { itemId = 213383, name = "Polished Truesilver Gears", count = 1 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 215383,
-            cost = 50000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Tempered Interference-Negating Helmet (225)
-    {
-        id = 435908,
-        name = "Tempered Interference-Negating Helmet",
-        itemId = 215161,
-        skillRequired = 225,
-        skillRange = { orange = 225, yellow = 225, green = 230, gray = 235 },
-        reagents = {
-            { itemId = 3860, name = "Mithril Bar", count = 25 },
-            { itemId = 213376, name = "Low-Background Truesilver Plates", count = 4 },
-            { itemId = 213379, name = "Hyperconductive Arcano-Filament", count = 1 },
-            { itemId = 213369, name = "Faintly Glowing Leather", count = 2 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 215155,
-            cost = 50000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Officer's Wristguards (225)
     {
         id = 1252330,
@@ -4147,7 +4198,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251433,
-            cost = 5625,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4170,7 +4221,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251434,
-            cost = 5625,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4193,7 +4244,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251435,
-            cost = 5625,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4216,7 +4267,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251436,
-            cost = 5625,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4239,7 +4290,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251437,
-            cost = 5625,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4376,7 +4427,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251413,
-            cost = 6000,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4399,7 +4450,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251414,
-            cost = 6000,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4422,7 +4473,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251415,
-            cost = 6000,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4445,7 +4496,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251416,
-            cost = 6000,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4468,7 +4519,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251417,
-            cost = 6000,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4699,41 +4750,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Scarlet Soldier's Protectors (250)
-    {
-        id = 1224635,
-        name = "Scarlet Soldier's Protectors",
-        itemId = 238291,
-        skillRequired = 250,
-        skillRange = { orange = 250, yellow = 260, green = 282, gray = 305 },
-        reagents = {
-            { itemId = 12359, name = "Thorium Bar", count = 16 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238325,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Soldier's Waistguard (250)
-    {
-        id = 1224637,
-        name = "Scarlet Soldier's Waistguard",
-        itemId = 238293,
-        skillRequired = 250,
-        skillRange = { orange = 250, yellow = 260, green = 282, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 12359, name = "Thorium Bar", count = 20 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238327,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Officer's Waistguard (250)
     {
         id = 1252320,
@@ -4752,7 +4768,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251423,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4774,7 +4790,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251424,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4796,7 +4812,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251425,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4818,7 +4834,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251426,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4840,7 +4856,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251427,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4862,7 +4878,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251465,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4884,7 +4900,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251466,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5120,42 +5136,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Scarlet Soldier's Grips (260)
-    {
-        id = 1224636,
-        name = "Scarlet Soldier's Grips",
-        itemId = 238292,
-        skillRequired = 260,
-        skillRange = { orange = 260, yellow = 270, green = 287, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 12359, name = "Thorium Bar", count = 20 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238326,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Soldier's Stompers (260)
-    {
-        id = 1224639,
-        name = "Scarlet Soldier's Stompers",
-        itemId = 238295,
-        skillRequired = 260,
-        skillRange = { orange = 260, yellow = 270, green = 287, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 12359, name = "Thorium Bar", count = 20 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238329,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Thorium Poleaxe (260)
     {
         id = 1252364,
@@ -5360,6 +5340,28 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
+    -- Bleakwood Hew (270)
+    {
+        id = 16965,
+        name = "Bleakwood Hew",
+        itemId = 12769,
+        skillRequired = 270,
+        skillRange = { orange = 270, yellow = 270, green = 282, gray = 295 },
+        reagents = {
+            { itemId = 12359, name = "Thorium Bar", count = 30 },
+            { itemId = 12803, name = "Living Essence", count = 6 },
+            { itemId = 8153, name = "Wildvine", count = 6 },
+            { itemId = 12799, name = "Large Opal", count = 6 },
+            { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
+            { itemId = 8170, name = "Rugged Leather", count = 8 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.UNKNOWN,
+            itemId = 12817,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Fiery Chain Girdle (270)
     {
         id = 20872,
@@ -5403,25 +5405,6 @@ local recipes = {
             level = "Friendly",
             itemId = 17051,
             cost = 70000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Soldier's Legplates (270)
-    {
-        id = 1224638,
-        name = "Scarlet Soldier's Legplates",
-        itemId = 238294,
-        skillRequired = 270,
-        skillRange = { orange = 270, yellow = 280, green = 292, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 12359, name = "Thorium Bar", count = 20 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238328,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5650,83 +5633,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Finely-Enchanted Battlehammer (280)
-    {
-        id = 461733,
-        name = "Finely-Enchanted Battlehammer",
-        itemId = 227880,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 305, green = 317, gray = 330 },
-        reagents = {
-            { itemId = 12359, name = "Thorium Bar", count = 20 },
-            { itemId = 12655, name = "Enchanted Thorium Bar", count = 6 },
-            { itemId = 12364, name = "Huge Emerald", count = 2 },
-            { itemId = 12804, name = "Powerful Mojo", count = 4 },
-            { itemId = 8170, name = "Rugged Leather", count = 4 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
-            itemId = 228311,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Soldier's Helmet (280)
-    {
-        id = 1224631,
-        name = "Scarlet Soldier's Helmet",
-        itemId = 238288,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 2 },
-            { itemId = 12359, name = "Thorium Bar", count = 24 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238322,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Soldier's Spaulders (280)
-    {
-        id = 1224632,
-        name = "Scarlet Soldier's Spaulders",
-        itemId = 238289,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 12359, name = "Thorium Bar", count = 20 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238323,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Soldier's Chestplate (280)
-    {
-        id = 1224633,
-        name = "Scarlet Soldier's Chestplate",
-        itemId = 238290,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 12359, name = "Thorium Bar", count = 24 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238324,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Blessed Plate Chest (280)
     {
         id = 1252343,
@@ -5780,24 +5686,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12719,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Tempered Dark Iron Plate (285)
-    {
-        id = 461667,
-        name = "Tempered Dark Iron Plate",
-        itemId = 227871,
-        skillRequired = 285,
-        skillRange = { orange = 285, yellow = 305, green = 315, gray = 325 },
-        reagents = {
-            { itemId = 11371, name = "Dark Iron Bar", count = 20 },
-            { itemId = 7077, name = "Heart of Fire", count = 8 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 227901,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5870,26 +5758,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Fiery Plate Gauntlets of the Hidden Technique (290)
-    {
-        id = 461651,
-        name = "Fiery Plate Gauntlets of the Hidden Technique",
-        itemId = 227865,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 310, green = 320, gray = 330 },
-        reagents = {
-            { itemId = 12359, name = "Thorium Bar", count = 20 },
-            { itemId = 12655, name = "Enchanted Thorium Bar", count = 6 },
-            { itemId = 7078, name = "Essence of Fire", count = 2 },
-            { itemId = 7910, name = "Star Ruby", count = 4 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
-            itemId = 227909,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Goregasher Support (290)
     {
         id = 1297139,
@@ -5935,26 +5803,6 @@ local recipes = {
             level = "Honored",
             itemId = 275602,
             cost = 75000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Tempest Gauntlets (295)
-    {
-        id = 461737,
-        name = "Tempest Gauntlets",
-        itemId = 227870,
-        skillRequired = 295,
-        skillRange = { orange = 295, yellow = 315, green = 325, gray = 335 },
-        reagents = {
-            { itemId = 12359, name = "Thorium Bar", count = 20 },
-            { itemId = 12655, name = "Enchanted Thorium Bar", count = 4 },
-            { itemId = 7080, name = "Essence of Water", count = 4 },
-            { itemId = 12361, name = "Blue Sapphire", count = 4 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228313,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -6112,6 +5960,48 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
+    -- Blood Talon (300)
+    {
+        id = 16986,
+        name = "Blood Talon",
+        itemId = 12795,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 325, green = 337, gray = 350 },
+        reagents = {
+            { itemId = 12655, name = "Enchanted Thorium Bar", count = 10 },
+            { itemId = 12360, name = "Arcanite Bar", count = 10 },
+            { itemId = 12662, name = "Demonic Rune", count = 8 },
+            { itemId = 7910, name = "Star Ruby", count = 10 },
+            { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.UNKNOWN,
+            itemId = 12831,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Darkspear (300)
+    {
+        id = 16987,
+        name = "Darkspear",
+        itemId = 12802,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 325, green = 337, gray = 350 },
+        reagents = {
+            { itemId = 12655, name = "Enchanted Thorium Bar", count = 20 },
+            { itemId = 12804, name = "Powerful Mojo", count = 20 },
+            { itemId = 12364, name = "Huge Emerald", count = 2 },
+            { itemId = 12800, name = "Azerothian Diamond", count = 2 },
+            { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.UNKNOWN,
+            itemId = 12832,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Hammer of the Titans (300)
     {
         id = 16988,
@@ -6152,6 +6042,28 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12834,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Annihilator (300)
+    {
+        id = 16991,
+        name = "Annihilator",
+        itemId = 12798,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 295, green = 305, gray = 315 },
+        reagents = {
+            { itemId = 12359, name = "Thorium Bar", count = 40 },
+            { itemId = 12360, name = "Arcanite Bar", count = 12 },
+            { itemId = 12808, name = "Essence of Undeath", count = 10 },
+            { itemId = 12364, name = "Huge Emerald", count = 8 },
+            { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
+            { itemId = 12810, name = "Enchanted Leather", count = 4 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 12835,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -6334,6 +6246,29 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
+    -- Sulfuron Hammer (300)
+    {
+        id = 21161,
+        name = "Sulfuron Hammer",
+        itemId = 17193,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 325, green = 337, gray = 350 },
+        reagents = {
+            { itemId = 17203, name = "Sulfuron Ingot", count = 8 },
+            { itemId = 11371, name = "Dark Iron Bar", count = 20 },
+            { itemId = 12360, name = "Arcanite Bar", count = 50 },
+            { itemId = 7078, name = "Essence of Fire", count = 25 },
+            { itemId = 11382, name = "Blood of the Mountain", count = 10 },
+            { itemId = 17011, name = "Lava Core", count = 10 },
+            { itemId = 17010, name = "Fiery Core", count = 10 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.UNKNOWN,
+            itemId = 18592,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Gloves of the Dawn (300)
     {
         id = 23633,
@@ -6451,6 +6386,81 @@ local recipes = {
             level = "Revered",
             itemId = 19209,
             cost = 70000,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Ebon Hand (300)
+    {
+        id = 23650,
+        name = "Ebon Hand",
+        itemId = 19170,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 295, green = 305, gray = 315 },
+        reagents = {
+            { itemId = 17011, name = "Lava Core", count = 4 },
+            { itemId = 17010, name = "Fiery Core", count = 7 },
+            { itemId = 12360, name = "Arcanite Bar", count = 12 },
+            { itemId = 11371, name = "Dark Iron Bar", count = 8 },
+            { itemId = 12800, name = "Azerothian Diamond", count = 4 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 59,
+            factionName = "Thorium Brotherhood",
+            level = "Exalted",
+            itemId = 19210,
+            cost = 120000,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Blackguard (300)
+    {
+        id = 23652,
+        name = "Blackguard",
+        itemId = 19168,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 295, green = 305, gray = 315 },
+        reagents = {
+            { itemId = 17011, name = "Lava Core", count = 6 },
+            { itemId = 17010, name = "Fiery Core", count = 6 },
+            { itemId = 12360, name = "Arcanite Bar", count = 10 },
+            { itemId = 11371, name = "Dark Iron Bar", count = 6 },
+            { itemId = 12809, name = "Guardian Stone", count = 12 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 59,
+            factionName = "Thorium Brotherhood",
+            level = "Exalted",
+            itemId = 19211,
+            cost = 120000,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Nightfall (300)
+    {
+        id = 23653,
+        name = "Nightfall",
+        itemId = 19169,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 295, green = 305, gray = 315 },
+        reagents = {
+            { itemId = 17011, name = "Lava Core", count = 8 },
+            { itemId = 17010, name = "Fiery Core", count = 5 },
+            { itemId = 12360, name = "Arcanite Bar", count = 10 },
+            { itemId = 11371, name = "Dark Iron Bar", count = 12 },
+            { itemId = 12364, name = "Huge Emerald", count = 4 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.REPUTATION,
+            factionId = 59,
+            factionName = "Thorium Brotherhood",
+            level = "Exalted",
+            itemId = 19212,
+            cost = 120000,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -6678,6 +6688,25 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
+    -- Heavy Obsidian Belt (300)
+    {
+        id = 27585,
+        name = "Heavy Obsidian Belt",
+        itemId = 22197,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
+        reagents = {
+            { itemId = 22202, name = "Small Obsidian Shard", count = 14 },
+            { itemId = 12655, name = "Enchanted Thorium Bar", count = 4 },
+            { itemId = 7076, name = "Essence of Earth", count = 2 },
+        },
+        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        source = {
+            type = C.SOURCE_TYPE.UNKNOWN,
+            itemId = 22209,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- Jagged Obsidian Shield (300)
     {
         id = 27586,
@@ -6890,158 +6919,60 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Skyrider's Masterwork Stormhammer (300)
+    -- Ironvine Breastplate (300)
     {
-        id = 461647,
-        name = "Skyrider's Masterwork Stormhammer",
-        itemId = 227886,
+        id = 28461,
+        name = "Ironvine Breastplate",
+        itemId = 22762,
         skillRequired = 300,
         skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
         reagents = {
-            { itemId = 12794, name = "Masterwork Stormhammer", count = 1 },
-            { itemId = 18262, name = "Elemental Sharpening Stone", count = 10 },
-            { itemId = 12360, name = "Arcanite Bar", count = 15 },
+            { itemId = 12655, name = "Enchanted Thorium Bar", count = 12 },
+            { itemId = 19726, name = "Bloodvine", count = 2 },
+            { itemId = 12360, name = "Arcanite Bar", count = 2 },
+            { itemId = 12803, name = "Living Essence", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 227905,
+            type = C.SOURCE_TYPE.UNKNOWN,
+            itemId = 22766,
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Refined Arcanite Champion (300)
+    -- Ironvine Gloves (300)
     {
-        id = 461669,
-        name = "Refined Arcanite Champion",
-        itemId = 228125,
+        id = 28462,
+        name = "Ironvine Gloves",
+        itemId = 22763,
         skillRequired = 300,
         skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
         reagents = {
-            { itemId = 12790, name = "Arcanite Champion", count = 1 },
-            { itemId = 18262, name = "Elemental Sharpening Stone", count = 10 },
+            { itemId = 12655, name = "Enchanted Thorium Bar", count = 8 },
+            { itemId = 19726, name = "Bloodvine", count = 1 },
+            { itemId = 12803, name = "Living Essence", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228117,
+            type = C.SOURCE_TYPE.UNKNOWN,
+            itemId = 22767,
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Stronger-hold Gauntlets (300)
+    -- Ironvine Belt (300)
     {
-        id = 461671,
-        name = "Stronger-hold Gauntlets",
-        itemId = 227885,
+        id = 28463,
+        name = "Ironvine Belt",
+        itemId = 22764,
         skillRequired = 300,
         skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
         reagents = {
-            { itemId = 12360, name = "Arcanite Bar", count = 15 },
-            { itemId = 12655, name = "Enchanted Thorium Bar", count = 20 },
-            { itemId = 7076, name = "Essence of Earth", count = 10 },
-            { itemId = 12361, name = "Blue Sapphire", count = 4 },
-            { itemId = 12799, name = "Large Opal", count = 4 },
+            { itemId = 12655, name = "Enchanted Thorium Bar", count = 6 },
+            { itemId = 12803, name = "Living Essence", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228250,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Refined Arcanite Reaper (300)
-    {
-        id = 461675,
-        name = "Refined Arcanite Reaper",
-        itemId = 227845,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 12784, name = "Arcanite Reaper", count = 1 },
-            { itemId = 18262, name = "Elemental Sharpening Stone", count = 10 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228114,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Hardened Frostguard (300)
-    {
-        id = 461730,
-        name = "Hardened Frostguard",
-        itemId = 227887,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 12797, name = "Frostguard", count = 1 },
-            { itemId = 18262, name = "Elemental Sharpening Stone", count = 10 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228310,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Invincible Mail (300)
-    {
-        id = 461735,
-        name = "Invincible Mail",
-        itemId = 227876,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 12360, name = "Arcanite Bar", count = 30 },
-            { itemId = 12655, name = "Enchanted Thorium Bar", count = 30 },
-            { itemId = 12364, name = "Huge Emerald", count = 6 },
-            { itemId = 12800, name = "Azerothian Diamond", count = 6 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228312,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Warcrest of the Great Chief (300)
-    {
-        id = 461739,
-        name = "Warcrest of the Great Chief",
-        itemId = 227872,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 12359, name = "Thorium Bar", count = 40 },
-            { itemId = 12655, name = "Enchanted Thorium Bar", count = 4 },
-            { itemId = 8168, name = "Jet Black Feather", count = 60 },
-            { itemId = 12799, name = "Large Opal", count = 6 },
-            { itemId = 12364, name = "Huge Emerald", count = 2 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228314,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Sageblade of the Archmagus (300)
-    {
-        id = 461743,
-        name = "Sageblade of the Archmagus",
-        itemId = 227850,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 12360, name = "Arcanite Bar", count = 12 },
-            { itemId = 20725, name = "Nexus Crystal", count = 2 },
-            { itemId = 13512, name = "Flask of Supreme Power", count = 2 },
-            { itemId = 12810, name = "Enchanted Leather", count = 4 },
-        },
-        tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228315,
+            type = C.SOURCE_TYPE.UNKNOWN,
+            itemId = 22768,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -7063,7 +6994,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251447,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -7084,7 +7015,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251448,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -7105,7 +7036,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251449,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -7249,7 +7180,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 251471,
-            cost = 7500,
+            currency = { name = "Merchant's Favor", amount = 120 },
         },
         expansion = C.EXPANSION.FOREVER,
     },

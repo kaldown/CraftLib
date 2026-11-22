@@ -1,10 +1,26 @@
 -- Data/Forever/Tailoring/Recipes.lua
 -- Tailoring recipes for WoW Forever
--- Generated from DB2 data and the Warcraft Wiki recipe tables
+-- Generated from DB2 data, Wowhead guide tables and the Warcraft Wiki recipe tables
 local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
 local recipes = {
+    -- Linen Cloak (1)
+    {
+        id = 2387,
+        name = "Linen Cloak",
+        itemId = 2570,
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 35, green = 47, gray = 60 },
+        reagents = {
+            { itemId = 2996, name = "Bolt of Linen Cloth", count = 1 },
+            { itemId = 2320, name = "Coarse Thread", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.STARTER,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
     -- White Linen Shirt (1)
     {
         id = 2393,
@@ -23,20 +39,66 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Linen Bag (5)
+    -- Bolt of Linen Cloth (1)
+    {
+        id = 2963,
+        name = "Bolt of Linen Cloth",
+        itemId = 2996,
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 25, green = 37, gray = 50 },
+        reagents = {
+            { itemId = 2589, name = "Linen Cloth", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.STARTER,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Linen Bag (1)
     {
         id = 3755,
         name = "Linen Bag",
         itemId = 4238,
-        skillRequired = 5,
-        skillRange = { orange = 5, yellow = 30, green = 47, gray = 65 },
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 30, green = 47, gray = 65 },
         reagents = {
             { itemId = 2996, name = "Bolt of Linen Cloth", count = 3 },
             { itemId = 2320, name = "Coarse Thread", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.TRAINER,
-            npcName = "Any Tailoring Trainer",
+            type = C.SOURCE_TYPE.STARTER,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Brown Linen Shirt (1)
+    {
+        id = 3915,
+        name = "Brown Linen Shirt",
+        itemId = 4344,
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 35, green = 47, gray = 60 },
+        reagents = {
+            { itemId = 2996, name = "Bolt of Linen Cloth", count = 1 },
+            { itemId = 2320, name = "Coarse Thread", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.STARTER,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Simple Linen Pants (1)
+    {
+        id = 12044,
+        name = "Simple Linen Pants",
+        itemId = 10045,
+        skillRequired = 1,
+        skillRange = { orange = 1, yellow = 40, green = 50, gray = 60 },
+        reagents = {
+            { itemId = 2996, name = "Bolt of Linen Cloth", count = 1 },
+            { itemId = 2320, name = "Coarse Thread", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.STARTER,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -736,7 +798,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253890,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -756,7 +818,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253892,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -776,7 +838,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253894,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -796,7 +858,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253896,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -816,7 +878,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253898,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -836,7 +898,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253900,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1069,7 +1131,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253914,
-            cost = 1875,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1089,7 +1151,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253916,
-            cost = 1875,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1109,7 +1171,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253918,
-            cost = 1875,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1129,7 +1191,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253920,
-            cost = 1875,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1149,7 +1211,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253922,
-            cost = 1875,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1169,7 +1231,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253924,
-            cost = 1875,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1313,7 +1375,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253926,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1333,7 +1395,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253928,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1353,7 +1415,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253930,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1373,7 +1435,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253932,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1393,7 +1455,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253934,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1413,7 +1475,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253936,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1600,7 +1662,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253950,
-            cost = 2500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1622,7 +1684,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253952,
-            cost = 2500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1644,7 +1706,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253954,
-            cost = 2500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1666,7 +1728,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253956,
-            cost = 2500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1688,7 +1750,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253958,
-            cost = 2500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1710,7 +1772,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253960,
-            cost = 2500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1787,7 +1849,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253962,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1809,7 +1871,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253964,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1831,7 +1893,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253966,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1853,7 +1915,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253968,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1875,7 +1937,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253970,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1897,7 +1959,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253972,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2176,7 +2238,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253988,
-            cost = 3125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2198,7 +2260,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253990,
-            cost = 3125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2220,7 +2282,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253992,
-            cost = 3125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2242,7 +2304,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253994,
-            cost = 3125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2264,7 +2326,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253996,
-            cost = 3125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2286,7 +2348,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 253998,
-            cost = 3125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2922,25 +2984,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Enchanter's Cowl (165)
-    {
-        id = 439102,
-        name = "Enchanter's Cowl",
-        itemId = 217257,
-        skillRequired = 165,
-        skillRange = { orange = 165, yellow = 185, green = 200, gray = 215 },
-        reagents = {
-            { itemId = 4305, name = "Bolt of Silk Cloth", count = 3 },
-            { itemId = 2321, name = "Fine Thread", count = 2 },
-            { itemId = 4337, name = "Thick Spider's Silk", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 217258,
-            cost = 1000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Earthen Silk Cuffs (165)
     {
         id = 1257435,
@@ -2996,7 +3039,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254024,
-            cost = 4125,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3017,7 +3060,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254026,
-            cost = 4125,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3038,7 +3081,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254028,
-            cost = 4125,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3059,7 +3102,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254030,
-            cost = 4125,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3080,7 +3123,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254032,
-            cost = 4125,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3176,24 +3219,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Boots of the Enchanter (175)
-    {
-        id = 439097,
-        name = "Boots of the Enchanter",
-        itemId = 217253,
-        skillRequired = 175,
-        skillRange = { orange = 175, yellow = 195, green = 210, gray = 225 },
-        reagents = {
-            { itemId = 4305, name = "Bolt of Silk Cloth", count = 4 },
-            { itemId = 4291, name = "Silken Thread", count = 1 },
-            { itemId = 4337, name = "Thick Spider's Silk", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 217254,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3393,6 +3418,24 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Tailoring Trainer",
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Stormcloth Gloves (185)
+    {
+        id = 12063,
+        name = "Stormcloth Gloves",
+        itemId = 10011,
+        skillRequired = 185,
+        skillRange = { orange = 185, yellow = 200, green = 215, gray = 230 },
+        reagents = {
+            { itemId = 4339, name = "Bolt of Mageweave", count = 3 },
+            { itemId = 7079, name = "Globe of Water", count = 2 },
+            { itemId = 8343, name = "Heavy Silken Thread", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.UNKNOWN,
+            itemId = 254682,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3614,25 +3657,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Crimson Silk Shoulders (190)
-    {
-        id = 439093,
-        name = "Crimson Silk Shoulders",
-        itemId = 217250,
-        skillRequired = 190,
-        skillRange = { orange = 190, yellow = 210, green = 225, gray = 240 },
-        reagents = {
-            { itemId = 4305, name = "Bolt of Silk Cloth", count = 5 },
-            { itemId = 6371, name = "Fire Oil", count = 2 },
-            { itemId = 2604, name = "Red Dye", count = 2 },
-            { itemId = 4291, name = "Silken Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 217251,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Mageweave Reagent Bag (190)
     {
         id = 1257443,
@@ -3649,7 +3673,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254036,
-            cost = 4750,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3745,26 +3769,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Earthen Silk Belt (195)
-    {
-        id = 439091,
-        name = "Earthen Silk Belt",
-        itemId = 217248,
-        skillRequired = 195,
-        skillRange = { orange = 195, yellow = 215, green = 230, gray = 245 },
-        reagents = {
-            { itemId = 4305, name = "Bolt of Silk Cloth", count = 5 },
-            { itemId = 7067, name = "Elemental Earth", count = 4 },
-            { itemId = 4234, name = "Heavy Leather", count = 4 },
-            { itemId = 7071, name = "Iron Buckle", count = 1 },
-            { itemId = 4291, name = "Silken Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 217249,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Nethergeld Shoulders (195)
     {
         id = 1257450,
@@ -3783,7 +3787,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254050,
-            cost = 4875,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3805,7 +3809,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254052,
-            cost = 4875,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3827,7 +3831,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254054,
-            cost = 4875,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3849,7 +3853,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254056,
-            cost = 4875,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3871,7 +3875,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254058,
-            cost = 4875,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3893,7 +3897,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254060,
-            cost = 4875,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4102,27 +4106,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Crimson Silk Robe (205)
-    {
-        id = 439085,
-        name = "Crimson Silk Robe",
-        itemId = 217245,
-        skillRequired = 205,
-        skillRange = { orange = 205, yellow = 220, green = 235, gray = 250 },
-        reagents = {
-            { itemId = 4305, name = "Bolt of Silk Cloth", count = 8 },
-            { itemId = 7068, name = "Elemental Fire", count = 4 },
-            { itemId = 3827, name = "Mana Potion", count = 2 },
-            { itemId = 2604, name = "Red Dye", count = 4 },
-            { itemId = 4291, name = "Silken Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 217244,
-            cost = 5000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Nethergeld Cuffs (205)
     {
         id = 1257456,
@@ -4141,7 +4124,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254062,
-            cost = 5125,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4163,7 +4146,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254064,
-            cost = 5125,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4185,7 +4168,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254066,
-            cost = 5125,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4207,7 +4190,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254068,
-            cost = 5125,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4229,7 +4212,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254070,
-            cost = 5125,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4251,7 +4234,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254072,
-            cost = 5125,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4493,7 +4476,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254080,
-            cost = 5375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4514,7 +4497,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254082,
-            cost = 5375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4535,7 +4518,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254084,
-            cost = 5375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4556,7 +4539,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254086,
-            cost = 5375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4577,7 +4560,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254088,
-            cost = 5375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4598,7 +4581,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254090,
-            cost = 5375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4619,7 +4602,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254092,
-            cost = 5375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5017,7 +5000,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254108,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5039,7 +5022,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254110,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5061,7 +5044,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254112,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5083,7 +5066,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254114,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5105,7 +5088,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254116,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5127,7 +5110,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 254118,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5350,39 +5333,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 34319,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Augur's Cuffs (250)
-    {
-        id = 1224610,
-        name = "Scarlet Augur's Cuffs",
-        itemId = 238267,
-        skillRequired = 250,
-        skillRange = { orange = 250, yellow = 260, green = 282, gray = 305 },
-        reagents = {
-            { itemId = 14048, name = "Bolt of Runecloth", count = 8 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238301,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Augur's Strap (250)
-    {
-        id = 1224612,
-        name = "Scarlet Augur's Strap",
-        itemId = 238269,
-        skillRequired = 250,
-        skillRange = { orange = 250, yellow = 260, green = 282, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 14048, name = "Bolt of Runecloth", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238303,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5705,40 +5655,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Scarlet Augur's Mitts (260)
-    {
-        id = 1224611,
-        name = "Scarlet Augur's Mitts",
-        itemId = 238268,
-        skillRequired = 260,
-        skillRange = { orange = 260, yellow = 270, green = 287, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 14048, name = "Bolt of Runecloth", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238302,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Augur's Soles (260)
-    {
-        id = 1224614,
-        name = "Scarlet Augur's Soles",
-        itemId = 238271,
-        skillRequired = 260,
-        skillRange = { orange = 260, yellow = 270, green = 287, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 14048, name = "Bolt of Runecloth", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238305,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Ghostweave Hood (260)
     {
         id = 1257493,
@@ -5811,24 +5727,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 14501,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Augur's Leggings (270)
-    {
-        id = 1224613,
-        name = "Scarlet Augur's Leggings",
-        itemId = 238270,
-        skillRequired = 270,
-        skillRange = { orange = 270, yellow = 280, green = 292, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 14048, name = "Bolt of Runecloth", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238304,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5964,59 +5862,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18418,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Augur's Hood (280)
-    {
-        id = 1224607,
-        name = "Scarlet Augur's Hood",
-        itemId = 238264,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 2 },
-            { itemId = 14048, name = "Bolt of Runecloth", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238298,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Augur's Mantle (280)
-    {
-        id = 1224608,
-        name = "Scarlet Augur's Mantle",
-        itemId = 238265,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 14048, name = "Bolt of Runecloth", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238299,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Augur's Vestments (280)
-    {
-        id = 1224609,
-        name = "Scarlet Augur's Vestments",
-        itemId = 238266,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 14048, name = "Bolt of Runecloth", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238300,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -6185,24 +6030,6 @@ local recipes = {
             level = "Revered",
             itemId = 19217,
             cost = 40000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Incandescent Mooncloth Leggings (290)
-    {
-        id = 461752,
-        name = "Incandescent Mooncloth Leggings",
-        itemId = 227864,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 305, green = 320, gray = 335 },
-        reagents = {
-            { itemId = 14048, name = "Bolt of Runecloth", count = 6 },
-            { itemId = 14342, name = "Mooncloth", count = 4 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228318,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -6427,6 +6254,28 @@ local recipes = {
             level = "Honored",
             itemId = 275585,
             cost = 75000,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Bottomless Bag (300)
+    {
+        id = 18455,
+        name = "Bottomless Bag",
+        itemId = 14156,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 315, green = 330, gray = 345 },
+        reagents = {
+            { itemId = 14048, name = "Bolt of Runecloth", count = 8 },
+            { itemId = 14342, name = "Mooncloth", count = 12 },
+            { itemId = 14344, name = "Large Brilliant Shard", count = 2 },
+            { itemId = 249429, name = "Pristine Scale", count = 5 },
+            { itemId = 249428, name = "Pristine Hide", count = 5 },
+            { itemId = 249431, name = "Viridian Dye", count = 8 },
+            { itemId = 14341, name = "Rune Thread", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.DROP,
+            itemId = 14510,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -6729,26 +6578,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Incandescent Mooncloth Robe (300)
-    {
-        id = 461708,
-        name = "Incandescent Mooncloth Robe",
-        itemId = 227861,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 315, green = 330, gray = 345 },
-        reagents = {
-            { itemId = 14048, name = "Bolt of Runecloth", count = 6 },
-            { itemId = 14342, name = "Mooncloth", count = 4 },
-            { itemId = 13926, name = "Golden Pearl", count = 2 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 228303,
-            cost = 40000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Leather-Reinforced Runecloth Bag (300)
     {
         id = 461727,
@@ -6765,66 +6594,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 228121,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Incandescent Mooncloth Vest (300)
-    {
-        id = 461747,
-        name = "Incandescent Mooncloth Vest",
-        itemId = 227860,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 315, green = 330, gray = 345 },
-        reagents = {
-            { itemId = 14048, name = "Bolt of Runecloth", count = 6 },
-            { itemId = 14342, name = "Mooncloth", count = 4 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228316,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Incandescent Mooncloth Circlet (300)
-    {
-        id = 461750,
-        name = "Incandescent Mooncloth Circlet",
-        itemId = 227863,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 315, green = 330, gray = 345 },
-        reagents = {
-            { itemId = 14048, name = "Bolt of Runecloth", count = 4 },
-            { itemId = 14342, name = "Mooncloth", count = 6 },
-            { itemId = 12800, name = "Azerothian Diamond", count = 1 },
-            { itemId = 12810, name = "Enchanted Leather", count = 2 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228317,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Embroidered Belt of the Archmage (300)
-    {
-        id = 462282,
-        name = "Embroidered Belt of the Archmage",
-        itemId = 228476,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 315, green = 330, gray = 345 },
-        reagents = {
-            { itemId = 14048, name = "Bolt of Runecloth", count = 16 },
-            { itemId = 9210, name = "Ghost Dye", count = 10 },
-            { itemId = 14342, name = "Mooncloth", count = 10 },
-            { itemId = 7080, name = "Essence of Water", count = 12 },
-            { itemId = 7078, name = "Essence of Fire", count = 12 },
-            { itemId = 14344, name = "Large Brilliant Shard", count = 6 },
-            { itemId = 14341, name = "Rune Thread", count = 6 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228477,
         },
         expansion = C.EXPANSION.FOREVER,
     },

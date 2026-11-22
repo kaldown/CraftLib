@@ -2,30 +2,17 @@
   "coverage": {
     "cap": 300,
     "floor": 0.75,
-    "gap": [
-      185,
-      299
-    ],
+    "gap": null,
     "inGame": 9,
-    "knownSource": 4,
-    "knownSourceShare": 0.4444,
-    "maxGap": 115,
+    "knownSource": 7,
+    "knownSourceShare": 0.7778,
+    "maxGap": 0,
     "maxGapAllowed": 10,
-    "passes": false,
-    "share": 0.4444,
-    "shipped": 4
+    "passes": true,
+    "share": 0.7778,
+    "shipped": 7
   },
   "excluded": [
-    [
-      2657,
-      "Smelt Copper",
-      "no wiki row"
-    ],
-    [
-      3304,
-      "Smelt Tin",
-      "no wiki row"
-    ],
     [
       3569,
       "Smelt Steel",
@@ -80,14 +67,9 @@
       1263071,
       "Molten Foundry",
       "no skill-up: yellow == gray"
-    ],
-    [
-      1306126,
-      "Smelt Heavy Thorium",
-      "no wiki row"
     ]
   ],
-  "heldBack": true,
+  "heldBack": false,
   "notes": [
     [
       2658,
@@ -100,6 +82,16 @@
       "trainer per SoD (WOWHEAD); no wiki row"
     ],
     [
+      3304,
+      "Smelt Tin",
+      "learn skill 65 above yellow 50: guide and Vanilla learnedAt agree"
+    ],
+    [
+      3304,
+      "Smelt Tin",
+      "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
       3307,
       "Smelt Iron",
       "trainer per SoD (WOWHEAD); no wiki row"
@@ -108,13 +100,20 @@
       3308,
       "Smelt Gold",
       "trainer per SoD (WOWHEAD); no wiki row"
+    ],
+    [
+      1213638,
+      "Smelt Obsidian-Infused Thorium Bar",
+      "created item 234003 has no data in this build"
     ]
   ],
   "orangeFrom": {
-    "CROSS": 4
+    "AUTO": 1,
+    "GUIDE": 6
   },
   "sourceTypes": {
-    "TRAINER": 4
+    "STARTER": 1,
+    "TRAINER": 6
   },
   "unknownSource": []
 }

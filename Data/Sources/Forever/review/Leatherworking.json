@@ -3,14 +3,14 @@
     "cap": 300,
     "floor": 0.75,
     "gap": null,
-    "inGame": 539,
-    "knownSource": 367,
-    "knownSourceShare": 0.6809,
+    "inGame": 461,
+    "knownSource": 336,
+    "knownSourceShare": 0.7289,
     "maxGap": 0,
     "maxGapAllowed": 10,
     "passes": true,
-    "share": 0.8664,
-    "shipped": 467
+    "share": 0.9414,
+    "shipped": 434
   },
   "excluded": [
     [
@@ -64,19 +64,9 @@
       "no learn skill: wiki skill 255 above yellow 250"
     ],
     [
-      19048,
-      "Heavy Scorpid Bracers",
-      "no learn skill: wiki skill 255 above yellow 250"
-    ],
-    [
       19093,
       "Onyxia Scale Cloak",
       "unknown source and no teaching item"
-    ],
-    [
-      19106,
-      "Onyxia Scale Breastplate",
-      "no wiki row"
     ],
     [
       22331,
@@ -92,11 +82,6 @@
       24655,
       "Green Dragonscale Gauntlets",
       "no learn skill: wiki skill 280 above yellow 275"
-    ],
-    [
-      24703,
-      "Dreamscale Breastplate",
-      "ambiguous: wiki row 'dreamscale breastplate' matches spells 24703, 1213751"
     ],
     [
       24846,
@@ -181,192 +166,392 @@
     [
       429354,
       "Void-Touched Leather Gloves",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 211423 not in this build"
     ],
     [
       429869,
       "Void-Touched Leather Gauntlets",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 211502 not in this build"
+    ],
+    [
+      435904,
+      "Glowing Gneuro-Linked Cowl",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215166 not in this build"
     ],
     [
       435949,
       "Glowing Hyperconductive Scale Coif",
-      "reagent 213372 has no name in this build"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215114 not in this build"
     ],
     [
       435951,
       "Gneuro-Conductive Channeler's Hood",
-      "reagent 213372 has no name in this build"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215381 not in this build"
     ],
     [
       435953,
       "Rad-Resistant Scale Hood",
-      "reagent 213372 has no name in this build"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 215382 not in this build"
+    ],
+    [
+      439105,
+      "Big Voodoo Mask",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217259 not in this build"
+    ],
+    [
+      439108,
+      "Big Voodoo Robe",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217261 not in this build"
+    ],
+    [
+      439110,
+      "Guardian Leather Bracers",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217263 not in this build"
+    ],
+    [
+      439112,
+      "Guardian Belt",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217265 not in this build"
     ],
     [
       439114,
       "Guardian Pants",
-      "ambiguous: wiki row 'guardian pants' matches spells 7147, 439114"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217267 not in this build"
     ],
     [
       439116,
       "Turtle Scale Breastplate",
-      "ambiguous: wiki row 'turtle scale breastplate' matches spells 10511, 439116"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 217268 not in this build"
     ],
     [
       446183,
       "Paranoia Mantle",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220747 not in this build"
     ],
     [
       446185,
       "Shrieking Spaulders",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220742 not in this build"
     ],
     [
       446186,
       "Cacophonous Chain Shoulderguards",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220743 not in this build"
     ],
     [
       446189,
       "Shoulderpads of Obsession",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220748 not in this build"
     ],
     [
       446190,
       "Wailing Chain Mantle",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220744 not in this build"
     ],
     [
       446192,
       "Membrane of Dark Neurosis",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220745 not in this build"
     ],
     [
       451706,
       "Screaming Chain Pauldrons",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 220741 not in this build"
+    ],
+    [
+      461645,
+      "Honed Blue Dragonscale Shoulders",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227873 not in this build"
+    ],
+    [
+      461649,
+      "Living Green Dragonscale Leggings",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227877 not in this build"
+    ],
+    [
+      461653,
+      "Brilliant Chromatic Cloak",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227869 not in this build"
+    ],
+    [
+      461655,
+      "Hardened Black Dragonscale Breastplate",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227851 not in this build"
+    ],
+    [
+      461657,
+      "Hardened Black Dragonscale Leggings",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227852 not in this build"
+    ],
+    [
+      461659,
+      "Hardened Black Dragonscale Shoulders",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227853 not in this build"
+    ],
+    [
+      461661,
+      "Masterwork Volcanic Breastplate",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227868 not in this build"
+    ],
+    [
+      461663,
+      "Masterwork Volcanic Shoulders",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227866 not in this build"
+    ],
+    [
+      461665,
+      "Masterwork Volcanic Leggings",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227867 not in this build"
+    ],
+    [
+      461673,
+      "Honed Blue Dragonscale Breastplate",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227875 not in this build"
+    ],
+    [
+      461677,
+      "Living Green Dragonscale Gauntlets",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227878 not in this build"
+    ],
+    [
+      461690,
+      "Mastercrafted Shifting Cloak",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227854 not in this build"
     ],
     [
       461692,
       "Synthetic Gordok Ogre Suit",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227855 not in this build"
+    ],
+    [
+      461706,
+      "Swift Flight Vambraces",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227883 not in this build"
+    ],
+    [
+      461720,
+      "Living Green Dragonscale Breastplate",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227879 not in this build"
+    ],
+    [
+      461722,
+      "Devilcore Gauntlets",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227848 not in this build"
+    ],
+    [
+      461724,
+      "Devilcore Leggings",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227847 not in this build"
+    ],
+    [
+      461754,
+      "Girdle of Arcane Insight",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227882 not in this build"
     ],
     [
       462227,
       "Honed Blue Dragonscale Leggings",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 227874 not in this build"
     ],
     [
       1213513,
       "Glowing Chitin Armor Kit",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233802 not in this build"
     ],
     [
       1213519,
       "Sharpened Chitin Armor Kit",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233803 not in this build"
     ],
     [
       1213521,
       "Razorbramble Cowl",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233808 not in this build"
     ],
     [
       1213523,
       "Razorbramble Shoulderpads",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233804 not in this build"
     ],
     [
       1213525,
       "Razorbramble Leathers",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233813 not in this build"
     ],
     [
       1213717,
       "Sandstalker Bracers",
-      "ambiguous: wiki row 'sandstalker bracers' matches spells 24849, 1213717"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234294 not in this build"
     ],
     [
       1213720,
       "Sandstalker Gauntlets",
-      "ambiguous: wiki row 'sandstalker gauntlets' matches spells 24850, 1213720"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234296 not in this build"
     ],
     [
       1213723,
       "Sandstalker Breastplate",
-      "ambiguous: wiki row 'sandstalker breastplate' matches spells 24851, 1213723"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234298 not in this build"
     ],
     [
       1213726,
       "Spitfire Bracers",
-      "ambiguous: wiki row 'spitfire bracers' matches spells 24846, 1213726"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234300 not in this build"
     ],
     [
       1213728,
       "Spitfire Gauntlets",
-      "ambiguous: wiki row 'spitfire gauntlets' matches spells 24847, 1213728"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234302 not in this build"
     ],
     [
       1213731,
       "Spitfire Breastplate",
-      "ambiguous: wiki row 'spitfire breastplate' matches spells 24848, 1213731"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234304 not in this build"
     ],
     [
       1213734,
       "Bramblewood Belt",
-      "ambiguous: wiki row 'bramblewood belt' matches spells 28474, 1213734"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234306 not in this build"
     ],
     [
       1213736,
       "Bramblewood Boots",
-      "ambiguous: wiki row 'bramblewood boots' matches spells 28473, 1213736"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234308 not in this build"
     ],
     [
       1213738,
       "Bramblewood Helm",
-      "ambiguous: wiki row 'bramblewood helm' matches spells 28472, 1213738"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234310 not in this build"
     ],
     [
       1213751,
       "Dreamscale Breastplate",
-      "ambiguous: wiki row 'dreamscale breastplate' matches spells 24703, 1213751"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234324 not in this build"
     ],
     [
       1214303,
       "Dreamscale Kilt",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234482 not in this build"
     ],
     [
       1223774,
       "Icy Scale Breastplate",
-      "ambiguous: wiki row 'icy scale breastplate' matches spells 28222, 1223774"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236699 not in this build"
     ],
     [
       1223776,
       "Icy Scale Gauntlets",
-      "ambiguous: wiki row 'icy scale gauntlets' matches spells 28223, 1223776"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236700 not in this build"
     ],
     [
       1223778,
       "Icy Scale Bracers",
-      "ambiguous: wiki row 'icy scale bracers' matches spells 28224, 1223778"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236698 not in this build"
     ],
     [
       1223780,
       "Polar Tunic",
-      "ambiguous: wiki row 'polar tunic' matches spells 28219, 1223780"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236702 not in this build"
     ],
     [
       1223782,
       "Polar Gloves",
-      "ambiguous: wiki row 'polar gloves' matches spells 28220, 1223782"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236703 not in this build"
     ],
     [
       1223784,
       "Polar Bracers",
-      "ambiguous: wiki row 'polar bracers' matches spells 28221, 1223784"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 236701 not in this build"
+    ],
+    [
+      1224615,
+      "Scarlet Infiltrator's Bandana",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238272 not in this build"
+    ],
+    [
+      1224616,
+      "Scarlet Infiltrator's Shoulderpads",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238273 not in this build"
+    ],
+    [
+      1224617,
+      "Scarlet Infiltrator's Vest",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238274 not in this build"
+    ],
+    [
+      1224618,
+      "Scarlet Infiltrator's Bracers",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238275 not in this build"
+    ],
+    [
+      1224619,
+      "Scarlet Infiltrator's Gloves",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238276 not in this build"
+    ],
+    [
+      1224620,
+      "Scarlet Infiltrator's Belt",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238277 not in this build"
+    ],
+    [
+      1224621,
+      "Scarlet Infiltrator's Trousers",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238278 not in this build"
+    ],
+    [
+      1224622,
+      "Scarlet Infiltrator's Shoes",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238279 not in this build"
+    ],
+    [
+      1224623,
+      "Scarlet Huntsman's Coif",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238280 not in this build"
+    ],
+    [
+      1224624,
+      "Scarlet Huntsman's Pauldrons",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238281 not in this build"
+    ],
+    [
+      1224625,
+      "Scarlet Huntsman's Chain",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238282 not in this build"
+    ],
+    [
+      1224626,
+      "Scarlet Huntsman's Wristguards",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238283 not in this build"
+    ],
+    [
+      1224627,
+      "Scarlet Huntsman's Handguards",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238284 not in this build"
+    ],
+    [
+      1224628,
+      "Scarlet Huntsman's Clasp",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238285 not in this build"
+    ],
+    [
+      1224629,
+      "Scarlet Huntsman's Legguards",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238286 not in this build"
+    ],
+    [
+      1224630,
+      "Scarlet Huntsman's Boots",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238287 not in this build"
+    ],
+    [
+      1226689,
+      "Scarlet Quiver",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238925 not in this build"
+    ],
+    [
+      1226690,
+      "Scarlet Ammo Pouch",
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 238926 not in this build"
     ],
     [
       1229432,
@@ -392,26 +577,6 @@
       1254989,
       "Stalker's Mail Gauntlets",
       "no skill-up: yellow == gray"
-    ],
-    [
-      1255000,
-      "Mender's Mail Bracers",
-      "no learn skill: wiki skill 225 above yellow 220"
-    ],
-    [
-      1255001,
-      "Skirmisher's Mail Bracers",
-      "no learn skill: wiki skill 225 above yellow 220"
-    ],
-    [
-      1255002,
-      "Skycaller's Mail Bracers",
-      "no learn skill: wiki skill 225 above yellow 220"
-    ],
-    [
-      1255003,
-      "Stalker's Mail Bracers",
-      "no learn skill: wiki skill 225 above yellow 220"
     ],
     [
       1255008,
@@ -664,12 +829,17 @@
     [
       19048,
       "Heavy Scorpid Bracers",
-      "teaching item 15724 RequiredSkillRank 255 above yellow 250 ignored"
+      "learn skill 255 above yellow 250: teaching item 15724 RequiredSkillRank"
     ],
     [
       19093,
       "Onyxia Scale Cloak",
       "wiki row skill 320 differs from CROSS orange 300"
+    ],
+    [
+      19106,
+      "Onyxia Scale Breastplate",
+      "teaching item 15780 named by the guide has no data in this build"
     ],
     [
       23190,
@@ -692,24 +862,399 @@
       "wiki row skill 300 differs from ITEM orange 295"
     ],
     [
+      24703,
+      "Dreamscale Breastplate",
+      "guide decides it; wiki: ambiguous: wiki row 'dreamscale breastplate' matches spells 24703, 1213751"
+    ],
+    [
+      24703,
+      "Dreamscale Breastplate",
+      "teaching item 20382 named by the guide has no data in this build"
+    ],
+    [
+      1254982,
+      "Mender's Mail Belt",
+      "guide rows disagree on skill: 225, 250"
+    ],
+    [
+      1254983,
+      "Skirmisher's Mail Belt",
+      "guide rows disagree on skill: 225, 250"
+    ],
+    [
+      1254984,
+      "Skycaller's Mail Belt",
+      "guide rows disagree on skill: 225, 250"
+    ],
+    [
+      1254985,
+      "Stalker's Mail Belt",
+      "guide rows disagree on skill: 225, 250"
+    ],
+    [
       1255000,
       "Mender's Mail Bracers",
-      "teaching item 252907 RequiredSkillRank 225 above yellow 220 ignored"
+      "guide rows disagree on skill: 220, 225"
+    ],
+    [
+      1255000,
+      "Mender's Mail Bracers",
+      "learn skill 225 above yellow 220: teaching item 252907 RequiredSkillRank"
     ],
     [
       1255001,
       "Skirmisher's Mail Bracers",
-      "teaching item 252906 RequiredSkillRank 225 above yellow 220 ignored"
+      "guide rows disagree on skill: 220, 225"
+    ],
+    [
+      1255001,
+      "Skirmisher's Mail Bracers",
+      "learn skill 225 above yellow 220: teaching item 252906 RequiredSkillRank"
     ],
     [
       1255002,
       "Skycaller's Mail Bracers",
-      "teaching item 252905 RequiredSkillRank 225 above yellow 220 ignored"
+      "guide rows disagree on skill: 220, 225"
+    ],
+    [
+      1255002,
+      "Skycaller's Mail Bracers",
+      "learn skill 225 above yellow 220: teaching item 252905 RequiredSkillRank"
     ],
     [
       1255003,
       "Stalker's Mail Bracers",
-      "teaching item 252904 RequiredSkillRank 225 above yellow 220 ignored"
+      "guide rows disagree on skill: 220, 225"
+    ],
+    [
+      1255003,
+      "Stalker's Mail Bracers",
+      "learn skill 225 above yellow 220: teaching item 252904 RequiredSkillRank"
+    ],
+    [
+      1255031,
+      "Mender's Leather Waistguard",
+      "guide rows disagree on skill: 225, 250"
+    ],
+    [
+      1255032,
+      "Skycaller's Leather Waistguard",
+      "guide rows disagree on skill: 225, 250"
+    ],
+    [
+      1255033,
+      "Warden's Leather Waistguard",
+      "guide rows disagree on skill: 225, 250"
+    ],
+    [
+      1255034,
+      "Skulker's Leather Waistguard",
+      "guide rows disagree on skill: 225, 250"
+    ],
+    [
+      1255035,
+      "Prowler's Leather Waistguard",
+      "guide rows disagree on skill: 225, 250"
+    ],
+    [
+      1255050,
+      "Mender's Leather Bracers",
+      "guide rows disagree on skill: 220, 225"
+    ],
+    [
+      1255051,
+      "Skycaller's Leather Bracers",
+      "guide rows disagree on skill: 220, 225"
+    ],
+    [
+      1255052,
+      "Warden's Leather Bracers",
+      "guide rows disagree on skill: 220, 225"
+    ],
+    [
+      1255053,
+      "Skulker's Leather Bracers",
+      "guide rows disagree on skill: 220, 225"
+    ],
+    [
+      1255054,
+      "Prowler's Leather Bracers",
+      "guide rows disagree on skill: 220, 225"
+    ],
+    [
+      1255065,
+      "Mender's Leather Gloves",
+      "guide rows disagree on skill: 175, 200"
+    ],
+    [
+      1255066,
+      "Skycaller's Leather Gloves",
+      "guide rows disagree on skill: 175, 200"
+    ],
+    [
+      1255068,
+      "Warden's Leather Gloves",
+      "guide rows disagree on skill: 175, 200"
+    ],
+    [
+      1255069,
+      "Stalker's Leather Gloves",
+      "guide rows disagree on skill: 175, 200"
+    ],
+    [
+      1255070,
+      "Skulker's Leather Gloves",
+      "guide rows disagree on skill: 175, 200"
+    ],
+    [
+      1255071,
+      "Prowler's Leather Gloves",
+      "guide rows disagree on skill: 175, 200"
+    ],
+    [
+      1255082,
+      "Wisdom's Leather Leggings",
+      "guide rows disagree on skill: 100, 125"
+    ],
+    [
+      1255082,
+      "Wisdom's Leather Leggings",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255083,
+      "Stormrider's Leather Kilt",
+      "guide rows disagree on skill: 100, 125"
+    ],
+    [
+      1255083,
+      "Stormrider's Leather Kilt",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255084,
+      "Totemic Leather Leggings",
+      "guide rows disagree on skill: 100, 125"
+    ],
+    [
+      1255084,
+      "Totemic Leather Leggings",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255085,
+      "Defender's Leather Kilt",
+      "guide rows disagree on skill: 100, 125"
+    ],
+    [
+      1255085,
+      "Defender's Leather Kilt",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255086,
+      "Trapper's Leather Legguards",
+      "guide rows disagree on skill: 100, 125"
+    ],
+    [
+      1255086,
+      "Trapper's Leather Legguards",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255087,
+      "Brawler's Leather Legguards",
+      "guide rows disagree on skill: 100, 125"
+    ],
+    [
+      1255087,
+      "Brawler's Leather Legguards",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255097,
+      "Wisdom's Leather Tunic",
+      "guide rows disagree on skill: 110, 80"
+    ],
+    [
+      1255098,
+      "Stormrider's Leather Tunic",
+      "guide rows disagree on skill: 110, 80"
+    ],
+    [
+      1255099,
+      "Totemic Leather Tunic",
+      "guide rows disagree on skill: 110, 80"
+    ],
+    [
+      1255100,
+      "Defender's Leather Tunic",
+      "guide rows disagree on skill: 110, 80"
+    ],
+    [
+      1255101,
+      "Trapper's Leather Tunic",
+      "guide rows disagree on skill: 110, 80"
+    ],
+    [
+      1255102,
+      "Brawler's Leather Tunic",
+      "guide rows disagree on skill: 110, 80"
+    ],
+    [
+      1255104,
+      "Wisdom's Leather Hood",
+      "guide rows disagree on skill: 100, 110"
+    ],
+    [
+      1255104,
+      "Wisdom's Leather Hood",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255105,
+      "Stormrider's Leather Hood",
+      "guide rows disagree on skill: 100, 110"
+    ],
+    [
+      1255105,
+      "Stormrider's Leather Hood",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255106,
+      "Totemic Leather Hood",
+      "guide rows disagree on skill: 100, 110"
+    ],
+    [
+      1255106,
+      "Totemic Leather Hood",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255107,
+      "Defender's Leather Hood",
+      "guide rows disagree on skill: 100, 110"
+    ],
+    [
+      1255107,
+      "Defender's Leather Hood",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255108,
+      "Trapper's Leather Hood",
+      "guide rows disagree on skill: 100, 110"
+    ],
+    [
+      1255108,
+      "Trapper's Leather Hood",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255109,
+      "Brawler's Leather Hood",
+      "guide rows disagree on skill: 100, 110"
+    ],
+    [
+      1255109,
+      "Brawler's Leather Hood",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255116,
+      "Wisdom's Leather Boots",
+      "guide rows disagree on skill: 70, 85"
+    ],
+    [
+      1255117,
+      "Stormrider's Leather Boots",
+      "guide rows disagree on skill: 70, 85"
+    ],
+    [
+      1255118,
+      "Totemic Leather Boots",
+      "guide rows disagree on skill: 70, 85"
+    ],
+    [
+      1255119,
+      "Defender's Leather Boots",
+      "guide rows disagree on skill: 70, 85"
+    ],
+    [
+      1255120,
+      "Trapper's Leather Boots",
+      "guide rows disagree on skill: 70, 85"
+    ],
+    [
+      1255121,
+      "Brawler's Leather Boots",
+      "guide rows disagree on skill: 70, 85"
+    ],
+    [
+      1255125,
+      "Wisdom's Leather Gloves",
+      "guide rows disagree on skill: 75, 90"
+    ],
+    [
+      1255125,
+      "Wisdom's Leather Gloves",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255126,
+      "Stormrider's Leather Gloves",
+      "guide rows disagree on skill: 75, 90"
+    ],
+    [
+      1255126,
+      "Stormrider's Leather Gloves",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255127,
+      "Totemic Leather Gloves",
+      "guide rows disagree on skill: 75, 90"
+    ],
+    [
+      1255127,
+      "Totemic Leather Gloves",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255128,
+      "Defender's Leather Gloves",
+      "guide rows disagree on skill: 75, 90"
+    ],
+    [
+      1255128,
+      "Defender's Leather Gloves",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255129,
+      "Trapper's Leather Gloves",
+      "guide rows disagree on skill: 75, 90"
+    ],
+    [
+      1255129,
+      "Trapper's Leather Gloves",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1255130,
+      "Brawler's Leather Gloves",
+      "guide rows disagree on skill: 75, 90"
+    ],
+    [
+      1255130,
+      "Brawler's Leather Gloves",
+      "guide says VENDOR; wiki source 'Drop'"
+    ],
+    [
+      1292920,
+      "Grovekeeper Trousers",
+      "created item 273884 has no data in this build"
     ],
     [
       1292920,
@@ -719,7 +1264,17 @@
     [
       1292921,
       "Grovekeeper Grips",
+      "created item 273885 has no data in this build"
+    ],
+    [
+      1292921,
+      "Grovekeeper Grips",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292923,
+      "Grovekeeper Shoulderpads",
+      "created item 273886 has no data in this build"
     ],
     [
       1292923,
@@ -729,7 +1284,17 @@
     [
       1292924,
       "Grovekeeper Stompers",
+      "created item 273887 has no data in this build"
+    ],
+    [
+      1292924,
+      "Grovekeeper Stompers",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292925,
+      "Grovekeeper Kilt",
+      "created item 273888 has no data in this build"
     ],
     [
       1292925,
@@ -739,7 +1304,17 @@
     [
       1292926,
       "Grovekeeper Mitts",
+      "created item 273889 has no data in this build"
+    ],
+    [
+      1292926,
+      "Grovekeeper Mitts",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292927,
+      "Grovekeeper Mantle",
+      "created item 273890 has no data in this build"
     ],
     [
       1292927,
@@ -749,7 +1324,17 @@
     [
       1292928,
       "Grovekeeper Sandals",
+      "created item 273891 has no data in this build"
+    ],
+    [
+      1292928,
+      "Grovekeeper Sandals",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292929,
+      "Grovekeeper Legguards",
+      "created item 273892 has no data in this build"
     ],
     [
       1292929,
@@ -759,7 +1344,17 @@
     [
       1292930,
       "Grovekeeper Handguards",
+      "created item 273893 has no data in this build"
+    ],
+    [
+      1292930,
+      "Grovekeeper Handguards",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292931,
+      "Grovekeeper Pauldrons",
+      "created item 273894 has no data in this build"
     ],
     [
       1292931,
@@ -769,7 +1364,17 @@
     [
       1292932,
       "Grovekeeper Boots",
+      "created item 273895 has no data in this build"
+    ],
+    [
+      1292932,
+      "Grovekeeper Boots",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292933,
+      "Grovekeeper Leggings",
+      "created item 273896 has no data in this build"
     ],
     [
       1292933,
@@ -779,7 +1384,17 @@
     [
       1292934,
       "Grovekeeper Gauntlets",
+      "created item 273897 has no data in this build"
+    ],
+    [
+      1292934,
+      "Grovekeeper Gauntlets",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292935,
+      "Grovekeeper Spaulders",
+      "created item 273898 has no data in this build"
     ],
     [
       1292935,
@@ -789,7 +1404,17 @@
     [
       1292936,
       "Grovekeeper Treads",
+      "created item 273899 has no data in this build"
+    ],
+    [
+      1292936,
+      "Grovekeeper Treads",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292937,
+      "Wildstalker's Legguards",
+      "created item 273900 has no data in this build"
     ],
     [
       1292937,
@@ -799,7 +1424,17 @@
     [
       1292938,
       "Wildstalker's Gauntlets",
+      "created item 273901 has no data in this build"
+    ],
+    [
+      1292938,
+      "Wildstalker's Gauntlets",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292939,
+      "Wildstalker's Spaulders",
+      "created item 273902 has no data in this build"
     ],
     [
       1292939,
@@ -809,7 +1444,17 @@
     [
       1292940,
       "Wildstalker's Greaves",
+      "created item 273903 has no data in this build"
+    ],
+    [
+      1292940,
+      "Wildstalker's Greaves",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292965,
+      "Grimstitch Pants",
+      "created item 273928 has no data in this build"
     ],
     [
       1292965,
@@ -819,7 +1464,17 @@
     [
       1292966,
       "Grimstitch Gloves",
+      "created item 273929 has no data in this build"
+    ],
+    [
+      1292966,
+      "Grimstitch Gloves",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292967,
+      "Grimstitch Spaulders",
+      "created item 273930 has no data in this build"
     ],
     [
       1292967,
@@ -829,7 +1484,17 @@
     [
       1292968,
       "Grimstitch Boots",
+      "created item 273931 has no data in this build"
+    ],
+    [
+      1292968,
+      "Grimstitch Boots",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292969,
+      "Spiritcaller Leggings",
+      "created item 273932 has no data in this build"
     ],
     [
       1292969,
@@ -839,7 +1504,17 @@
     [
       1292970,
       "Spiritcaller Grips",
+      "created item 273933 has no data in this build"
+    ],
+    [
+      1292970,
+      "Spiritcaller Grips",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292971,
+      "Spiritcaller Spaulders",
+      "created item 273934 has no data in this build"
     ],
     [
       1292971,
@@ -849,7 +1524,17 @@
     [
       1292972,
       "Spiritcaller Treads",
+      "created item 273935 has no data in this build"
+    ],
+    [
+      1292972,
+      "Spiritcaller Treads",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292973,
+      "Spiritcaller Pants",
+      "created item 273936 has no data in this build"
     ],
     [
       1292973,
@@ -859,12 +1544,27 @@
     [
       1292974,
       "Spiritcaller Gauntlets",
+      "created item 273937 has no data in this build"
+    ],
+    [
+      1292974,
+      "Spiritcaller Gauntlets",
       "wiki says vendor; price not in DB2 or wiki"
     ],
     [
       1292975,
       "Spiritcaller Epaulets",
+      "created item 273938 has no data in this build"
+    ],
+    [
+      1292975,
+      "Spiritcaller Epaulets",
       "wiki says vendor; price not in DB2 or wiki"
+    ],
+    [
+      1292976,
+      "Spiritcaller Greaves",
+      "created item 273939 has no data in this build"
     ],
     [
       1292976,
@@ -953,35 +1653,29 @@
     ]
   ],
   "orangeFrom": {
-    "CROSS": 8,
-    "ITEM": 404,
+    "AUTO": 6,
+    "CROSS": 2,
+    "GUIDE": 2,
+    "ITEM": 369,
     "WIKI": 55
   },
   "sourceTypes": {
-    "DROP": 148,
+    "DROP": 98,
     "QUEST": 12,
     "REPUTATION": 51,
     "STARTER": 6,
     "TRAINER": 57,
-    "UNKNOWN": 100,
-    "VENDOR": 93
+    "UNKNOWN": 98,
+    "VENDOR": 112
   },
   "unknownSource": [
     [
-      461649,
-      "Living Green Dragonscale Leggings"
+      19106,
+      "Onyxia Scale Breastplate"
     ],
     [
-      461677,
-      "Living Green Dragonscale Gauntlets"
-    ],
-    [
-      1226689,
-      "Scarlet Quiver"
-    ],
-    [
-      1226690,
-      "Scarlet Ammo Pouch"
+      24703,
+      "Dreamscale Breastplate"
     ],
     [
       1254967,

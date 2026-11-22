@@ -1,15 +1,26 @@
 {
   "profession": "enchanting",
   "version": "1.60.1.71037",
-  "generated": "2026-11-21",
+  "generated": "2026-11-22",
   "recipes": {
     "7418": {
       "name": "Enchant Bracer - Inferior Stamina",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "type": "STARTER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 20,
+        "green": 22,
+        "gray": 25,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 20 differs from AUTO orange 1"
+        ]
       }
     },
     "7420": {
@@ -30,16 +41,21 @@
     "7421": {
       "name": "Runed Copper Rod",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "STARTER",
+        "certainty": "DB2"
       },
       "difficulty": {
         "orange": 1,
         "yellow": 5,
         "green": 7,
         "gray": 10,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
+      },
+      "forever": {
+        "notes": [
+          "DB2 marks it learned automatically; wiki source 'Trainer'"
+        ]
       }
     },
     "7426": {
@@ -60,10 +76,21 @@
     "7428": {
       "name": "Enchant Bracer - Minor Deflect",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "type": "STARTER",
+        "certainty": "DB2"
+      },
+      "difficulty": {
+        "orange": 1,
+        "yellow": 80,
+        "green": 100,
+        "gray": 120,
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
+      },
+      "forever": {
+        "notes": [
+          "wiki row skill 80 differs from AUTO orange 1"
+        ]
       }
     },
     "7443": {
@@ -155,7 +182,8 @@
       "forever": {
         "notes": [
           "wiki row skill 70 differs from ITEM orange 90"
-        ]
+        ],
+        "learnFrom": 70
       }
     },
     "7776": {
@@ -272,15 +300,21 @@
       "name": "Runed Silver Rod",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 100,
+        "orange": 130,
         "yellow": 130,
         "green": 150,
         "gray": 170,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 100 differs from GUIDE orange 130",
+          "wiki row skill 100 differs from GUIDE orange 130"
+        ]
       }
     },
     "7857": {
@@ -337,6 +371,9 @@
         "needsReview": true,
         "reviewReason": "trainer per wiki but DB2 has teaching item 6376",
         "itemId": 6376
+      },
+      "forever": {
+        "learnFrom": 125
       }
     },
     "7867": {
@@ -639,15 +676,21 @@
       "name": "Runed Golden Rod",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 150,
+        "orange": 175,
         "yellow": 175,
         "green": 195,
         "gray": 215,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 150 differs from GUIDE orange 175",
+          "wiki row skill 150 differs from GUIDE orange 175"
+        ]
       }
     },
     "13631": {
@@ -961,15 +1004,21 @@
       "name": "Runed Truesilver Rod",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 200,
+        "orange": 220,
         "yellow": 220,
         "green": 240,
         "gray": 260,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 200 differs from GUIDE orange 220",
+          "wiki row skill 200 differs from GUIDE orange 220"
+        ]
       }
     },
     "13746": {
@@ -1134,6 +1183,9 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 11206
+      },
+      "forever": {
+        "learnFrom": 225
       }
     },
     "13887": {
@@ -1387,54 +1439,78 @@
       "name": "Lesser Magic Wand",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 10,
         "yellow": 75,
         "green": 95,
         "gray": 115,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "14807": {
       "name": "Greater Magic Wand",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 70,
+        "orange": 110,
         "yellow": 110,
         "green": 130,
         "gray": 150,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 70 differs from GUIDE orange 110",
+          "wiki row skill 70 differs from GUIDE orange 110"
+        ]
       }
     },
     "14809": {
       "name": "Lesser Mystic Wand",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
-        "orange": 155,
+        "orange": 175,
         "yellow": 175,
         "green": 195,
         "gray": 215,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "Vanilla orange 155 differs from GUIDE orange 175",
+          "wiki row skill 155 differs from GUIDE orange 175"
+        ]
       }
     },
     "14810": {
       "name": "Greater Mystic Wand",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "ambiguous: wiki row 'greater mystic wand' matches spells 14810, 439134"
+        "type": "TRAINER",
+        "certainty": "GUIDE"
+      },
+      "difficulty": {
+        "orange": 195,
+        "yellow": 195,
+        "green": 215,
+        "gray": 235,
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
+      },
+      "forever": {
+        "notes": [
+          "guide decides it; wiki: ambiguous: wiki row 'greater mystic wand' matches spells 14810, 439134",
+          "Vanilla orange 175 differs from GUIDE orange 195"
+        ]
       }
     },
     "15596": {
@@ -1451,36 +1527,41 @@
         "gray": 325,
         "certainty": "DB2",
         "orangeFrom": "ITEM"
+      },
+      "forever": {
+        "notes": [
+          "created item 11811 has no data in this build"
+        ]
       }
     },
     "17181": {
       "name": "Enchanted Leather",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 250,
         "yellow": 250,
         "green": 255,
         "gray": 260,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "17180": {
       "name": "Enchanted Thorium",
       "source": {
         "type": "TRAINER",
-        "certainty": "WIKI"
+        "certainty": "GUIDE"
       },
       "difficulty": {
         "orange": 250,
         "yellow": 250,
         "green": 255,
         "gray": 260,
-        "certainty": "CROSS",
-        "orangeFrom": "CROSS"
+        "certainty": "GUIDE",
+        "orangeFrom": "GUIDE"
       }
     },
     "20008": {
@@ -2396,37 +2477,54 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 211848 not in this build"
+      },
+      "forever": {
+        "learnFrom": 100
       }
     },
     "435481": {
       "name": "Enchant Weapon - Dismantle",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "no learn skill: wiki skill 225 above yellow 200",
-        "itemId": 215129
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 215129,
+        "cost": 50000
       },
       "forever": {
         "notes": [
-          "teaching item 215129 RequiredSkillRank 225 above yellow 200 ignored"
+          "learn skill 225 above yellow 200: teaching item 215129 RequiredSkillRank"
         ]
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 200,
+        "green": 217,
+        "gray": 235,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
       }
     },
     "435903": {
       "name": "Enchant Chest - Retricutioner",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "no learn skill: wiki skill 225 above yellow 200",
-        "itemId": 215138
+        "type": "VENDOR",
+        "certainty": "WIKI",
+        "itemId": 215138,
+        "cost": 50000
       },
       "forever": {
         "notes": [
-          "teaching item 215138 RequiredSkillRank 225 above yellow 200 ignored"
+          "learn skill 225 above yellow 200: teaching item 215138 RequiredSkillRank"
         ]
+      },
+      "difficulty": {
+        "orange": 225,
+        "yellow": 200,
+        "green": 220,
+        "gray": 240,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
       }
     },
     "439134": {
@@ -2436,6 +2534,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "ambiguous: wiki row 'greater mystic wand' matches spells 14810, 439134"
+      },
+      "forever": {
+        "learnFrom": 175
       }
     },
     "439156": {
@@ -2461,7 +2562,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221028 not in this build"
+      },
+      "forever": {
+        "learnFrom": 250
       }
     },
     "448624": {
@@ -2563,7 +2667,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233990 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213595": {
@@ -2572,7 +2679,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233991 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213598": {
@@ -2581,7 +2691,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233992 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213600": {
@@ -2590,7 +2703,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233993 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213603": {
@@ -2599,7 +2715,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233994 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213607": {
@@ -2608,7 +2727,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "drop per wiki but DB2 has no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233995 not in this build"
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "1213610": {
@@ -2617,7 +2739,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "vendor per wiki but DB2 has no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233996 not in this build"
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "1213616": {
@@ -2627,15 +2752,21 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213622": {
       "name": "Enchant Gloves - Holy Power",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249536,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -2650,9 +2781,12 @@
       "name": "Enchant Gloves - Arcane Power",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249534,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -2669,7 +2803,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234000 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213633": {
@@ -2678,7 +2815,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234001 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1213635": {
@@ -2687,7 +2827,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234002 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1216005": {
@@ -2696,7 +2839,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234477 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1216007": {
@@ -2705,7 +2851,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234475 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1216010": {
@@ -2714,7 +2863,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234476 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1216014": {
@@ -2723,7 +2875,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234480 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1216016": {
@@ -2732,7 +2887,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234478 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1216018": {
@@ -2741,7 +2899,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234479 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1216020": {
@@ -2750,7 +2911,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234474 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1216022": {
@@ -2759,7 +2923,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234469 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1216024": {
@@ -2768,7 +2935,10 @@
         "type": "UNRESOLVED",
         "certainty": "REVIEW",
         "needsReview": true,
-        "reviewReason": "unknown source and no teaching item"
+        "reviewReason": "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234468 not in this build"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1217189": {
@@ -2778,6 +2948,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "unknown source and no teaching item"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1217203": {
@@ -2787,6 +2960,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "ambiguous: wiki row 'enchant bracer - agility' matches spells 1217203, 1248497"
+      },
+      "forever": {
+        "learnFrom": 320
       }
     },
     "1219577": {
@@ -2825,9 +3001,12 @@
       "name": "Enchant Off-Hand - Wisdom",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 274393,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -2842,9 +3021,12 @@
       "name": "Enchant 2H Weapon - Spellblasting",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 274394,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -2891,9 +3073,12 @@
       "name": "Enchant Bracer - Greater Spellpower",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 274401,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -2908,9 +3093,12 @@
       "name": "Enchant Cloak - Agility",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 274399,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -2928,6 +3116,9 @@
         "certainty": "REVIEW",
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray"
+      },
+      "forever": {
+        "learnFrom": 20
       }
     },
     "1231128": {
@@ -2938,6 +3129,9 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 241191
+      },
+      "forever": {
+        "learnFrom": 280
       }
     },
     "1231139": {
@@ -2964,6 +3158,9 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 241201
+      },
+      "forever": {
+        "learnFrom": 280
       }
     },
     "1232172": {
@@ -2985,31 +3182,41 @@
     "1245320": {
       "name": "Dust to Motes",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "STARTER",
+        "certainty": "DB2"
       },
       "difficulty": {
         "orange": 1,
         "yellow": 10,
         "green": 12,
         "gray": 15,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
+      },
+      "forever": {
+        "notes": [
+          "DB2 marks it learned automatically; wiki source 'Trainer'"
+        ]
       }
     },
     "1245321": {
       "name": "Novice's Practice Wand",
       "source": {
-        "type": "TRAINER",
-        "certainty": "WIKI"
+        "type": "STARTER",
+        "certainty": "DB2"
       },
       "difficulty": {
         "orange": 1,
         "yellow": 10,
         "green": 12,
         "gray": 15,
-        "certainty": "WIKI",
-        "orangeFrom": "WIKI"
+        "certainty": "DB2",
+        "orangeFrom": "AUTO"
+      },
+      "forever": {
+        "notes": [
+          "DB2 marks it learned automatically; wiki source 'Trainer'"
+        ]
       }
     },
     "1248458": {
@@ -3047,20 +3254,33 @@
     "1248752": {
       "name": "Mystic Mushroom",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "no wiki row",
-        "itemId": 249476
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 249476,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
+      },
+      "difficulty": {
+        "orange": 130,
+        "yellow": 140,
+        "green": 160,
+        "gray": 180,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
       }
     },
     "1248754": {
       "name": "Tenets of the Silver Hand",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249477,
-        "cost": 3250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 130,
@@ -3075,9 +3295,12 @@
       "name": "Polished Driftwood Icon",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249478,
-        "cost": 3250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 130,
@@ -3092,9 +3315,12 @@
       "name": "Enchant Weapon - Insight",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249479,
-        "cost": 3500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 140,
@@ -3109,9 +3335,12 @@
       "name": "Enchant Weapon - Recovery",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249480,
-        "cost": 3500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 140,
@@ -3126,9 +3355,12 @@
       "name": "Enchant Weapon - Revelation",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249481,
-        "cost": 3500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 140,
@@ -3143,9 +3375,12 @@
       "name": "Glimmering Staff",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249482,
-        "cost": 3500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 140,
@@ -3160,9 +3395,12 @@
       "name": "Soulstaff",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249483,
-        "cost": 3500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 140,
@@ -3177,9 +3415,12 @@
       "name": "Orb of Mystic Insight",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249484,
-        "cost": 3500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 140,
@@ -3194,9 +3435,12 @@
       "name": "Orb of Souls",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249485,
-        "cost": 3500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 45
+        }
       },
       "difficulty": {
         "orange": 140,
@@ -3243,9 +3487,12 @@
       "name": "Talons of Wrath",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249493,
-        "cost": 5250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 210,
@@ -3259,20 +3506,33 @@
     "1249006": {
       "name": "Libram of Invocation",
       "source": {
-        "type": "UNRESOLVED",
-        "certainty": "REVIEW",
-        "needsReview": true,
-        "reviewReason": "no wiki row",
-        "itemId": 249494
+        "type": "VENDOR",
+        "certainty": "GUIDE",
+        "itemId": 249494,
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
+      },
+      "difficulty": {
+        "orange": 210,
+        "yellow": 225,
+        "green": 245,
+        "gray": 265,
+        "certainty": "DB2",
+        "orangeFrom": "ITEM"
       }
     },
     "1249015": {
       "name": "Totem of Ancestral Protection",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249495,
-        "cost": 5250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 210,
@@ -3287,9 +3547,12 @@
       "name": "Enchant Necklace - Strength",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249496,
-        "cost": 5250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 210,
@@ -3304,9 +3567,12 @@
       "name": "Enchant Necklace - Spell Power",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249502,
-        "cost": 5250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 210,
@@ -3321,9 +3587,12 @@
       "name": "Enchant Necklace - Healing Power",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249503,
-        "cost": 5250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 210,
@@ -3338,9 +3607,12 @@
       "name": "Enchant Necklace - Agility",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249504,
-        "cost": 5250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 210,
@@ -3355,9 +3627,12 @@
       "name": "Enchant Necklace - Deflection",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249505,
-        "cost": 5250
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 210,
@@ -3372,9 +3647,12 @@
       "name": "Radiant Staff",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249506,
-        "cost": 5500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 220,
@@ -3389,9 +3667,12 @@
       "name": "Dreamstaff",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249507,
-        "cost": 5500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 220,
@@ -3406,9 +3687,12 @@
       "name": "Truesilver Conduit",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249508,
-        "cost": 5500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 220,
@@ -3423,9 +3707,12 @@
       "name": "Twisting Essence Jar",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249509,
-        "cost": 5500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 220,
@@ -3440,9 +3727,12 @@
       "name": "Enchant Chest - Absorption",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249510,
-        "cost": 5500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 120
+        }
       },
       "difficulty": {
         "orange": 220,
@@ -3566,7 +3856,8 @@
       },
       "forever": {
         "notes": [
-          "wiki row skill 285 differs from ITEM orange 265"
+          "wiki row skill 285 differs from ITEM orange 265",
+          "guide skill 285 differs from ITEM orange 265"
         ]
       }
     },
@@ -3587,7 +3878,8 @@
       },
       "forever": {
         "notes": [
-          "wiki row skill 285 differs from ITEM orange 265"
+          "wiki row skill 285 differs from ITEM orange 265",
+          "guide skill 285 differs from ITEM orange 265"
         ]
       }
     },
@@ -3608,7 +3900,8 @@
       },
       "forever": {
         "notes": [
-          "wiki row skill 285 differs from ITEM orange 265"
+          "wiki row skill 285 differs from ITEM orange 265",
+          "guide skill 285 differs from ITEM orange 265"
         ]
       }
     },
@@ -3648,9 +3941,12 @@
       "name": "Enchant 2H Weapon - Mighty Spell Power",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249525,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3665,9 +3961,12 @@
       "name": "Enchant 2H Weapon - Mighty Healing Power",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249526,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3682,9 +3981,12 @@
       "name": "Idol of the Dream",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249529,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3699,9 +4001,12 @@
       "name": "Libram of Holy Alacrity",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249530,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3716,9 +4021,12 @@
       "name": "Totem of Thunder",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249532,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3733,9 +4041,12 @@
       "name": "Enchant Gloves - Natural Power",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249535,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3750,9 +4061,12 @@
       "name": "Brilliant Wand",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249537,
-        "cost": 6875
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 180
+        }
       },
       "difficulty": {
         "orange": 275,
@@ -3767,9 +4081,12 @@
       "name": "Enchant Bracer - Superior Intellect",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249538,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3784,9 +4101,12 @@
       "name": "Enchant Bracer - Superior Deflection",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 249539,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3833,9 +4153,12 @@
       "name": "Enchant Gloves - Superior Strength",
       "source": {
         "type": "VENDOR",
-        "certainty": "WIKI",
+        "certainty": "GUIDE",
         "itemId": 274398,
-        "cost": 7500
+        "currency": {
+          "name": "Merchant's Favor",
+          "amount": 240
+        }
       },
       "difficulty": {
         "orange": 300,
@@ -3854,6 +4177,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273103
+      },
+      "forever": {
+        "learnFrom": 140
       }
     },
     "1263082": {
@@ -3864,6 +4190,9 @@
         "needsReview": true,
         "reviewReason": "no skill-up: yellow == gray",
         "itemId": 273116
+      },
+      "forever": {
+        "learnFrom": 300
       }
     },
     "1294054": {
@@ -4008,6 +4337,9 @@
         "needsReview": true,
         "reviewReason": "no wiki row",
         "itemId": 289560
+      },
+      "forever": {
+        "learnFrom": 280
       }
     }
   }

@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- WoW Forever: Engineering (233 recipes) and Mining (7 smelting recipes) are now included; all nine professions load on Forever.
+- WoW Forever recipes now also draw on the game data's own marks for recipes learned automatically and on Wowhead's Forever guide tables. 1,961 recipes ship (was 1,767 in seven professions), 78.8% of the in-game recipes with a known source (was 71.2% across the same nine professions). Per profession, shipped and known-source share: Alchemy 166 (87.6%), Blacksmithing 382 (77.4%), Enchanting 228 (83.2%), Engineering 233 (67.9%), Leatherworking 434 (72.9%), Tailoring 361 (82.8%), Cooking 122 (89.0%), First Aid 28 (96.6%), Mining 7 (77.8%).
+- Maintainer tooling: `scripts/fetch_wowhead_guides.py` (guide tables to `Data/Sources/Forever/guide_facts.json`, with an on-disk page cache and `--inspect`), a listview `--inspect` mode in `scripts/fetch_wowhead_sources.py`, and `OFFLINE=1`, `FORCE=1`, `PAGES=<dir>` for `make forever-all`.
+
+### Changed
+- WoW Forever: 246 recipes left over from Season of Discovery (their created items do not exist in the Forever game data) are no longer treated as in-game recipes; 82 of them were shipped in 0.11.0 (Leatherworking 40, Blacksmithing 22, Tailoring 18, Alchemy 2). Purification Potion, marked as never learned in the game data, is no longer shipped either.
+- WoW Forever: 19 recipes the game teaches automatically (for example Rough Blasting Powder, Smelt Copper, Linen Cloak) are now `starter` recipes available from skill 1; 15 of them could not be shipped before and four were listed as trainer recipes.
+- WoW Forever: 209 recipes sold for Merchant's Favor that the wiki only called "Vendor" now carry the currency price instead of a copper price taken from the item data.
+- WoW Forever: on 12 trainer recipes whose Classic learn skill is lower than the one the Forever guides give (for example Runed Silver Rod 100 / 130), the later value is used until an in-game trainer capture settles it.
+- WoW Forever: a recipe's `skillRange.orange` (the skill it is learned at) may now be above `yellow` for the few recipes learned after their yellow threshold (for example Smelt Tin: learned at 65, yellow 50). Such a recipe is yellow or green from the moment it is learned.
+- The coverage check that decides whether a Forever profession ships no longer counts skill points at which the game has no skill-up recipe at all (smelting between 185 and 299).
+
+### Known limits
+- WoW Forever: 113 recipes that exist in game are still left out because a learn skill or a source could not be established: no wiki row (39), two recipes sharing one name (31), no source and no teaching item (21), a wiki learn skill above the yellow threshold (11), other (11). Each is listed with its reason in `Data/Sources/Forever/REVIEW.md`.
+- WoW Forever: learn skills and sources taken from guide tables are not confirmed in game yet.
+
 ## [0.11.0] - 2026-11-22
 
 ### Added

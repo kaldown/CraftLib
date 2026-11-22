@@ -5,9 +5,11 @@ verify_trainers), so a bucket cannot drift from what the Makefile runs. The old
 Makefile chained stages with ';' so a failed gate never stopped the run; here the
 first non-zero exit stops everything and is returned as the exit code.
 
-Step order for `all`: fetch; then per profession extract, [reconcile], enrich,
-[verify-trainers], assert-no-pending, assert-no-unaligned; then the audit; then
-generate for every profession; then vendor-prices. No Lua file is rewritten until
+Step order for `all`: fetch; [guides] (once, for a bucket naming Wowhead guide pages);
+then per profession extract, [reconcile], enrich, [verify-trainers], assert-no-pending,
+assert-no-unaligned; then the audit; then generate for every profession; then
+vendor-prices. --offline (wiki-enriched buckets) drops the DB2 download and makes the
+guides and enrich steps read only what is already on disk. No Lua file is rewritten until
 the per-profession gates and the audit have passed for the whole bucket. The
 generator's own checks still run one profession at a time, so a generator failure
 can leave earlier professions already rewritten.
@@ -42,7 +44,7 @@ SCRIPTS = REPO_ROOT / "scripts"
 DB2_DIR = REPO_ROOT / "vendor" / "db2-parser"
 
 # Execution order of `all` (see the module docstring for why the audit precedes generate).
-STEP_NAMES = ("fetch", "extract", "reconcile", "enrich", "verify-trainers",
+STEP_NAMES = ("fetch", "guides", "extract", "reconcile", "enrich", "verify-trainers",
               "assert-no-pending", "assert-no-unaligned", "audit", "generate", "vendor-prices")
 
 # Steps that hit Wowhead (or the wiki): only these need the politeness delay between professions.
@@ -63,6 +65,9 @@ class Options:
     sources_dir: Path
     output_dir: Path
     steps: frozenset | None = None
+    offline: bool = False            # no download, no page or wiki request
+    force: bool = False              # request cached Wowhead pages again
+    pages_dir: Path | None = None    # Wowhead pages saved from a browser
 
 
 def _script(name: str, bucket: Bucket, prof: Profession | None = None) -> list:
@@ -81,7 +86,17 @@ def plan_all(bucket: Bucket, professions: list, opts: Options) -> list:
     src = ["--sources-dir", str(opts.sources_dir)]
     gen = ["--version", opts.version, "--data-dir", str(opts.data_dir), *src,
            "--output-dir", str(opts.output_dir)]
-    steps = [fetch_step(opts.version)]
+    # Offline: the build must already be in the cache; a download is the one thing asked
+    # not to happen.
+    steps = [] if opts.offline else [fetch_step(opts.version)]
+    if bucket.wowhead_guides:
+        # Once per bucket, before any enrich: every profession's wiki step reads the facts
+        # file this writes. It keeps its own pause between requests and its own page cache.
+        guides = _script("fetch_wowhead_guides", bucket) + src
+        guides += ["--offline"] if opts.offline else []
+        guides += ["--force"] if opts.force else []
+        guides += ["--pages-dir", str(opts.pages_dir)] if opts.pages_dir else []
+        steps.append(Step("guides", guides, None))
     for p in professions:
         n = p.folder
         steps.append(Step("extract", _script("extract_db2_sources", bucket, p) + [
@@ -97,6 +112,7 @@ def plan_all(bucket: Bucket, professions: list, opts: Options) -> list:
             # WHY the build here too: the wiki step resolves from DB2 facts (yellow, gray,
             # teaching item), so it must read the same build extract just read.
             enrich += ["--version", opts.version, "--data-dir", str(opts.data_dir)]
+            enrich += ["--offline"] if opts.offline else []
         steps.append(Step("enrich", enrich, n))
         if bucket.verify_trainers:
             # WHY --on-block exit: under a persistent Wowhead block the default "sleep"
@@ -146,7 +162,9 @@ def _add_dirs(p) -> None:
 
 def _opts(bucket: Bucket, a, steps=None) -> Options:
     return Options(version=a.version or bucket.build, data_dir=a.data_dir,
-                   sources_dir=a.sources_dir, output_dir=a.output_dir, steps=steps)
+                   sources_dir=a.sources_dir, output_dir=a.output_dir, steps=steps,
+                   offline=getattr(a, "offline", False), force=getattr(a, "force", False),
+                   pages_dir=getattr(a, "pages_dir", None))
 
 
 def _execute(steps, dry_run: bool, delay: float = 2.0) -> int:
@@ -203,6 +221,16 @@ def _dispatch(a) -> int:
     profs = _profs(bucket, a.profession)
     if a.cmd == "generate":
         return _execute(plan_all(bucket, profs, _opts(bucket, a, _OFFLINE_GENERATE)), a.dry_run)
+    if a.offline and bucket.enrich != "wiki":
+        # Its enrich step IS the network (Wowhead); "offline" there would quietly run it.
+        print(f"--offline is not supported for bucket '{bucket.key}': its enrich step "
+              f"('{bucket.enrich}') needs the network; use the generate command for an "
+              f"offline regeneration", file=sys.stderr)
+        return 2
+    if (a.force or a.pages_dir) and not bucket.wowhead_guides:
+        print(f"--force and --pages-dir apply to Wowhead guide pages, and bucket "
+              f"'{bucket.key}' names no guide pages", file=sys.stderr)
+        return 2
     wanted = None
     if a.steps is not None:
         wanted, err = _parse_steps(a.steps)
@@ -229,6 +257,12 @@ def main(argv: list | None = None) -> int:
     al.add_argument("--steps", help="comma-separated subset of: " + ",".join(STEP_NAMES))
     al.add_argument("--delay", type=float, default=2.0)
     al.add_argument("--dry-run", action="store_true")
+    al.add_argument("--offline", action="store_true",
+                    help="no DB2 download and no page or wiki request: disk only")
+    al.add_argument("--force", action="store_true",
+                    help="request Wowhead guide pages again even when cached")
+    al.add_argument("--pages-dir", type=Path,
+                    help="folder of Wowhead pages saved from a browser")
     _add_dirs(al)
 
     ge = sub.add_parser("generate")

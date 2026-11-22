@@ -84,6 +84,75 @@ def test_no_gate_without_a_floor():
     assert rr.gate_failures(cov, get_bucket("tbc")) == []
 
 
+# --- the gap counted only where the game has a skill-up recipe -------------------------
+
+def test_points_no_excluded_recipe_could_cover_are_no_gap():
+    # Mining's shape: smelts cover 1-139 and 155-184; nothing in the game gives a skill-up
+    # at 140-154 or 185-299, and the one excluded recipe is learned at 310.
+    shipped = [_r(1, 1, 140), _r(2, 155, 185)]
+    cov = rr.coverage(shipped, [("9", "Elementium", "no wiki row")], 300,
+                      possible=[(310, 320)])
+    assert (cov.max_gap, cov.gap) == (0, None)
+    # Every point counted (the first definition): the same data fails.
+    assert rr.coverage(shipped, [("9", "Elementium", "no wiki row")], 300).max_gap == 115
+
+
+def test_points_an_excluded_recipe_could_cover_are_a_gap():
+    # Engineering's old shape: nothing shipped at 1-24 while an excluded recipe, learnable
+    # from skill 1 for all the evidence says, gives skill-ups up to 40.
+    cov = rr.coverage([_r(1, 25, 300)], [("9", "Powder", "unknown source")], 300,
+                      possible=[(1, 40)])
+    assert (cov.max_gap, cov.gap) == (24, (1, 24))
+    assert rr.gate_failures(cov, FOREVER)
+
+
+def test_gap_run_is_broken_by_points_nothing_could_cover():
+    # Uncovered 100-199; excluded recipes could cover 100-104 and 150-162 only.
+    cov = rr.coverage([_r(1, 1, 100), _r(2, 200, 300)], [], 300,
+                      possible=[(100, 105), (150, 163)])
+    assert (cov.max_gap, cov.gap) == (13, (150, 162))
+
+
+def test_possible_range_above_the_cap_or_empty_marks_no_point():
+    # Shipped covers 1-99 only. A range above the cap, an empty one and one inside the
+    # covered points leave 100-299 uncounted: no gap.
+    cov = rr.coverage([_r(1, 1, 100)], [], 300, possible=[(310, 320), (150, 150), (0, 5)])
+    assert (cov.max_gap, cov.gap) == (0, None)
+    assert rr.coverage([_r(1, 1, 100)], [], 300, possible=[(150, 151)]).gap == (150, 150)
+
+
+def test_skill_up_ranges_per_excluded_in_game_recipe():
+    excluded = [("101", "a", "no wiki row"), ("102", "b", "no wiki row"),
+                ("103", "c", "no wiki row"), ("104", "d", "no wiki row"),
+                ("105", "e", "not in game: absent from the in-game recipe list"),
+                ("106", "f", "no skill-up: yellow == gray")]
+    sources = {"101": {"forever": {"learnFrom": 45}},      # a hint below yellow: used
+               "102": {"forever": {"learnFrom": 95}},      # later than yellow: not believed
+               "103": {},                                  # no hint: from skill 1
+               "105": {"forever": {"learnFrom": 10}}, "106": {"forever": {"learnFrom": 10}}}
+    ranks = {"101": (60, 100), "102": (60, 100), "103": (60, 100), "105": (5, 50),
+             "106": (40, 40)}
+    assert rr.skill_up_ranges(excluded, sources, ranks, 300) == [
+        (45, 100), (60, 100), (1, 100), (1, 300)]     # 104: no thresholds -> 1 to the cap
+
+
+def test_no_possible_ranges_means_no_gap_at_all():
+    # Nothing excluded in game: every uncovered point is the game's own.
+    cov = rr.coverage([_r(1, 1, 50)], [], 300, possible=[])
+    assert cov.max_gap == 0
+
+
+def test_review_text_says_which_gap_definition_applies(tmp_path):
+    review_dir = tmp_path / "review"
+    data = _data()
+    rr.write_profession(review_dir, "Tailoring", data)
+    counted = rr.render(review_dir, FOREVER)
+    assert "an excluded in-game recipe could give a skill-up" in counted
+    every = rr.render(review_dir, dataclasses.replace(FOREVER, gap_skill_up_only=False))
+    assert "an excluded in-game recipe could give a skill-up" not in every
+    assert "where no shipped recipe has skillRequired <= p < gray." in every
+
+
 # --- review/<Prof>.json and REVIEW.md ----------------------------------------------
 
 def _data(held=False, excluded=None, shipped=None, notes=()):

@@ -3,20 +3,20 @@
     "cap": 300,
     "floor": 0.75,
     "gap": null,
-    "inGame": 128,
-    "knownSource": 99,
-    "knownSourceShare": 0.7734,
+    "inGame": 127,
+    "knownSource": 113,
+    "knownSourceShare": 0.8898,
     "maxGap": 0,
     "maxGapAllowed": 10,
     "passes": true,
-    "share": 0.9531,
+    "share": 0.9606,
     "shipped": 122
   },
   "excluded": [
     [
       818,
       "Basic Campfire",
-      "no wiki row"
+      "not in game: DB2 marks it never learned (AcquireMethod 3)"
     ],
     [
       13028,
@@ -90,19 +90,54 @@
       24801,
       "Smoked Desert Dumplings",
       "wiki row skill 325 differs from CROSS orange 285"
+    ],
+    [
+      1229737,
+      "Basic Campfire",
+      "DB2 marks it learned automatically; guide says TRAINER"
+    ],
+    [
+      1229737,
+      "Basic Campfire",
+      "guide skill 20 differs from AUTO orange 1"
+    ],
+    [
+      1249966,
+      "Calcified Smoothie",
+      "guide rows disagree on price: 30, 60"
+    ],
+    [
+      1250150,
+      "Raging Raptor Ribs",
+      "guide skill 275 differs from ITEM orange 180"
+    ],
+    [
+      1255241,
+      "Cleansing Stew",
+      "created item 252683 has no data in this build"
+    ],
+    [
+      1270632,
+      "Critter Cookie",
+      "created item 263507 has no data in this build"
+    ],
+    [
+      1270635,
+      "Pincer Bites",
+      "guide says QUEST; wiki source 'Vendor'"
     ]
   ],
   "orangeFrom": {
-    "CROSS": 8,
-    "ITEM": 111,
-    "WIKI": 3
+    "AUTO": 4,
+    "CROSS": 7,
+    "ITEM": 111
   },
   "sourceTypes": {
-    "DROP": 10,
-    "QUEST": 23,
+    "DROP": 22,
+    "QUEST": 25,
     "STARTER": 4,
     "TRAINER": 7,
-    "UNKNOWN": 23,
+    "UNKNOWN": 9,
     "VENDOR": 55
   },
   "unknownSource": [
@@ -127,68 +162,12 @@
       "Grand Lobster Banquet"
     ],
     [
-      1249960,
-      "Triage Tea"
-    ],
-    [
-      1249961,
-      "Sunny Tea"
-    ],
-    [
-      1249962,
-      "Sage's Tea"
-    ],
-    [
-      1250142,
-      "Savory Stag Sliders"
-    ],
-    [
       1250143,
       "Soaring Pamplona"
     ],
     [
-      1250144,
-      "Bat Hachee"
-    ],
-    [
-      1250145,
-      "Savory Turtle Stew"
-    ],
-    [
-      1250146,
-      "Flank au Poivre"
-    ],
-    [
-      1250147,
-      "Bear Bruscitti"
-    ],
-    [
-      1250148,
-      "Steaming Stag Steak"
-    ],
-    [
-      1250149,
-      "Swiftstrike Steak"
-    ],
-    [
-      1250150,
-      "Raging Raptor Ribs"
-    ],
-    [
       1250152,
       "Prehistoric Pulled Raptor"
-    ],
-    [
-      1250153,
-      "Raptor Rouladen"
-    ],
-    [
-      1250155,
-      "Giant Scrambled Eggs"
-    ],
-    [
-      1250158,
-      "Clam Linguine"
     ],
     [
       1295805,

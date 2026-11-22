@@ -125,3 +125,33 @@ def test_teaching_parent_generate_unfiltered_extract_filtered(tmp_path):
     assert ex.build_indexes(build_dir, TBC)["recipe_items"]["1002"] == "6002"
     gen_ix = gen.build_indexes(gen.load_all_data(build_dir, TBC), TBC)
     assert gen_ix["recipe_items"]["1002"] == "9999"
+
+
+def test_auto_learned_recipe_is_extracted_as_a_db2_starter(tmp_path):
+    # AcquireMethod 1 on Fixture Boots (which also has a teaching item): the same source
+    # the wiki step resolves to, so re-extracting resolved sources is a no-op.
+    import extract_db2_sources as extract
+    from pipeline_io import load_json
+    from tests.fixture_build import FIXTURE_VERSION, write_build
+    art = write_build(tmp_path / "art", join="xitem", acquire={1004: (1, 1)})
+    argv = ["--bucket", "forever", "--profession", "Tailoring", "--version", FIXTURE_VERSION,
+            "--data-dir", str(art), "--output-dir", str(tmp_path / "src")]
+    assert extract.main(argv) == 0
+    recipes = load_json(tmp_path / "src" / "Forever" / "Tailoring.json")["recipes"]
+    assert recipes["1004"]["source"] == {"type": "STARTER", "certainty": "DB2"}
+    assert recipes["1001"]["source"] == {"type": "TRAINER", "certainty": "DB2"}
+
+
+def test_classic_extract_never_reads_acquire_method(tmp_path):
+    # The Classic contract has no AcquireMethod column; a "1" in it must change nothing.
+    import extract_db2_sources as extract
+    from buckets import get_bucket
+    from tests.fixture_build import FIXTURE_VERSION, write_build
+    art = write_build(tmp_path / "art")
+    indexes = extract.build_indexes(art / FIXTURE_VERSION, get_bucket("tbc"))
+    assert indexes["acquire_method"] is False
+    for row in indexes["skill_line_abilities"]:
+        row["AcquireMethod"] = "1"
+    doc, _ = extract.extract_profession_sources(
+        get_bucket("tbc").profession("Tailoring"), indexes, FIXTURE_VERSION, None)
+    assert all(r["source"]["type"] != "STARTER" for r in doc["recipes"].values())

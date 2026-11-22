@@ -494,7 +494,14 @@ def price_lines(where: str, source: dict, bucket) -> list[str]:
 
 def check_strict_difficulty(where: str, difficulty: dict) -> None:
     """Thresholds a learn skill and DB2's yellow/gray can both be true of: orange 1 or
-    more and at most yellow, green the midpoint of yellow and gray."""
+    more and below gray, green the midpoint of yellow and gray.
+
+    WHY orange may exceed yellow: orange is the skill the recipe is learned at, and some
+    recipes are learned after their yellow threshold (a teaching item whose required rank
+    is 165 for yellow 160, Smelt Tin at 65 for yellow 50). Such a recipe is yellow from the
+    moment it is learned; at or above gray it would give no skill-up and is excluded
+    before it gets here.
+    """
     values = [difficulty.get(k) for k in ("orange", "yellow", "green", "gray")]
     if any(type(v) is not int for v in values):
         raise GenerateError(f"{where} fails the strict difficulty check: thresholds {values} "
@@ -502,11 +509,11 @@ def check_strict_difficulty(where: str, difficulty: dict) -> None:
     orange, yellow, green, gray = values
     # green = floor((yellow + gray) / 2) is how the Forever step derives it (DB2 has no
     # green column), so any other value means the difficulty was edited or mixed up.
-    if not (1 <= orange <= yellow <= green <= gray) or green != (yellow + gray) // 2:
+    if not (1 <= orange < gray and yellow <= green <= gray) or green != (yellow + gray) // 2:
         raise GenerateError(
             f"{where} fails the strict difficulty check: orange {orange}, yellow {yellow}, "
-            f"green {green}, gray {gray} (needs 1 <= orange <= yellow <= green <= gray and "
-            f"green == (yellow + gray) // 2)")
+            f"green {green}, gray {gray} (needs 1 <= orange < gray, yellow <= green <= gray "
+            f"and green == (yellow + gray) // 2)")
 
 
 def extract_recipes(
@@ -779,6 +786,14 @@ def extract_recipes(
     return recipes, skipped_recipes
 
 
+def _generated_from(bucket) -> str:
+    if bucket.enrich != "wiki":
+        return "-- Generated from DB2 data"
+    if bucket.wowhead_guides:
+        return "-- Generated from DB2 data, Wowhead guide tables and the Warcraft Wiki recipe tables"
+    return "-- Generated from DB2 data and the Warcraft Wiki recipe tables"
+
+
 def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
     """Generate Lua code for recipes."""
     profile = bucket.profile
@@ -790,10 +805,10 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
     lines = [
         f"-- Data/{exp_name}/{prof_name.replace(' ', '')}/Recipes.lua",
         f"-- {prof_name} recipes for {bucket.client_name or f'{exp_name} Classic'}",
-        # A wiki-enriched bucket takes sources and some learn skills from the wiki tables;
-        # the Classic headers stay as they are (byte-for-byte baseline).
-        "-- Generated from DB2 data and the Warcraft Wiki recipe tables"
-        if bucket.enrich == "wiki" else "-- Generated from DB2 data",
+        # A wiki-enriched bucket takes sources and some learn skills from the wiki tables,
+        # and from Wowhead guide tables where the registry names guide pages; the Classic
+        # headers stay as they are (byte-for-byte baseline).
+        _generated_from(bucket),
         "local ADDON_NAME, CraftLib = ...",
         "local C = CraftLib.Constants",
         "",
@@ -917,17 +932,22 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
 
 def gate_profession(recipes: list[dict], skipped: list[dict], profession: Profession, bucket,
                     bucket_sources: Path, output_file: Path,
-                    sources: dict | None = None) -> bool:
+                    sources: dict | None = None, ranks: dict | None = None) -> bool:
     """Review report + coverage gate; True when the Lua is to be written.
 
     sources: the profession's sources, whose resolver notes the review lists.
+    ranks: spell id -> DB2 (yellow, gray), for the gap check of a bucket that counts only
+    the skill points an excluded recipe could cover (gap_skill_up_only).
     WHY the review files are written before the gate raises: a failing profession is
     exactly the one whose excluded recipes a human has to read.
     """
     if bucket.review_policy != "exclude" and bucket.coverage_floor is None:
         return True   # the Classic buckets: no review report, no gate
     excluded = [(r["id"], r["name"], r.get("reason", "unknown")) for r in skipped]
-    cov = review_report.coverage(recipes, excluded, max(bucket.milestones))
+    cap = max(bucket.milestones)
+    possible = (review_report.skill_up_ranges(excluded, sources, ranks, cap)
+                if bucket.gap_skill_up_only else None)
+    cov = review_report.coverage(recipes, excluded, cap, possible)
     held = profession.folder in bucket.held_back
     if bucket.review_policy == "exclude":
         review_dir = bucket_sources / "review"
@@ -1059,7 +1079,7 @@ def main(argv: list[str] | None = None) -> int:
 
             output_file = args.output_dir / bucket.folder / profession.folder / "Recipes.lua"
             if not gate_profession(recipes, skipped, profession, bucket, bucket_sources,
-                                   output_file, verified_sources):
+                                   output_file, verified_sources, indexes["trivial_ranks"]):
                 continue
 
             if not recipes:

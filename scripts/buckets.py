@@ -118,6 +118,18 @@ class Bucket:
     # The client the generated Lua headers name; None = "<folder> Classic" (the Classic
     # buckets' wording, kept byte for byte).
     client_name: str | None = None
+    # Read SkillLineAbility.AcquireMethod / MinSkillLineRank: 1 = learned automatically at
+    # that rank (a STARTER source), 3 = never learned (not in game).
+    acquire_method: bool = False
+    # TradeSkillCategory names (as DB2 spells them) holding recipes left over from another
+    # client: a recipe in one whose created item the build has no data for is not in game.
+    leftover_categories: tuple[str, ...] = ()
+    # The largest-gap check counts only skill points at which the game has a skill-up
+    # recipe at all (False = every point of 1..cap-1, as first built).
+    gap_skill_up_only: bool = False
+    # Wowhead guide pages (paths under the bucket's wowhead_subdomain) whose recipe tables
+    # are read as evidence by fetch_wowhead_guides.py.
+    wowhead_guides: tuple[str, ...] = ()
 
     def profession(self, name: str) -> Profession:
         """Resolve a profession by folder/key/display name, ignoring case and spaces."""
@@ -148,6 +160,25 @@ _FOREVER_WIKI_PAGES = MappingProxyType({
     "Engineering": "Forever engineering schematics",
     "Enchanting": "Forever enchanting formulas",
 })
+
+# Wowhead guide pages carrying Forever recipe tables (the guides index, 2026-11-22):
+# one or two per profession, the two commerce-faction pages (recipes sold for Merchant's
+# Favor) and the writs page.
+_FOREVER_GUIDES = (
+    "guide/professions/alchemy-overview-trainer-locations-recipes",
+    "guide/professions/alchemy/leveling-1-300",
+    "guide/professions/blacksmithing/overview",
+    "guide/professions/enchanting/overview",
+    "guide/professions/engineering-overview-trainer-locations-recipes",
+    "guide/professions/leatherworking-overview-trainer-locations-recipes",
+    "guide/professions/tailoring-overview-trainer-locations-recipes",
+    "guide/professions/cooking/overview-leveling",
+    "guide/professions/first-aid/overview",
+    "guide/professions/mining/overview-leveling",
+    "guide/azeroth-commerce-authority-reputation-professions",
+    "guide/durotar-supply-and-logistics-reputation-professions",
+    "guide/professions/craftsmans-writs-overview-recipes-rewards",
+)
 
 _VANILLA_MILESTONES = (75, 150, 225, 300)
 
@@ -225,10 +256,16 @@ BUCKETS: dict[str, Bucket] = {
             "ItemSparse": ("ID", "Display_lang", "BuyPrice", "SellPrice", "MinFactionID",
                            "MinReputation", "VendorStackCount", "RequiredSkillRank",
                            "RequiredSkill"),
+            # AcquireMethod / MinSkillLineRank (acquire_method) and the recipe's category
+            # (leftover_categories), next to the columns every bucket reads.
+            "SkillLineAbility": ("SkillLine", "Spell", "TrivialSkillLineRankLow",
+                                 "TrivialSkillLineRankHigh", "AcquireMethod",
+                                 "MinSkillLineRank", "TradeSkillCategoryID"),
         }),
         item_effect_join="xitem", has_tools=True,
         # MANUAL: a hand-aligned value; REVIEW.md counts it like the other origins.
-        difficulty_certainties=("INGAME", "DB2", "CROSS", "WIKI", "MANUAL"),
+        # GUIDE: a learn skill from a Wowhead guide table (hand-written, below DB2).
+        difficulty_certainties=("INGAME", "DB2", "GUIDE", "CROSS", "WIKI", "MANUAL"),
         review_policy="exclude", allow_unknown_source=True, strict_difficulty=True,
         # Floor 0.75 (first set at 0.90): measured 2026-11-21, only Cooking and First Aid
         # reached 0.90. Each shipped recipe is established on its own, so
@@ -248,21 +285,28 @@ BUCKETS: dict[str, Bucket] = {
         # Merchant's Favor prices (a currency, no copper cost); with a currency field, cost 0
         # is never a price.
         allow_currency_cost=True, reject_zero_cost=True,
-        # WHY held back (coverage gate; DB2 1.60.1.71037 and the wiki of 2026-11-21):
-        # - Engineering ships 231/267 (86.5%) but nothing at skill 1-24 (gap 24 > 10):
-        #   Rough Blasting Powder, Rough Dynamite and Crafted Light Shot have a '?' wiki
-        #   source and only flagged SoD trainer records.
-        # - Mining ships 4/9 (44.4% < 75%) with a gap of 115 (185-299). Its thresholds
-        #   equal Vanilla 1.15.8's (all 16 shared spells), but its wiki page has no recipe
-        #   table, so only SoD's trainer source can type a smelt: Silver, Bronze, Iron
-        #   and Gold ship that way. Copper and Elementium/Obsidian-Infused Thorium
-        #   (Classic trainer source not Wowhead-verified), Tin (Classic yellow 0, DB2 50)
-        #   and Heavy Thorium (Forever only) get "no wiki row". The other 9 give no
-        #   skill-up (yellow == gray): the Classic smelts Steel, Mithril, Truesilver, Dark
-        #   Iron and Thorium, and the Forever-only rows.
-        # An in-game trainer/recipe capture (scripts/import_probe.py) releases both.
-        held_back=("Engineering", "Mining"), vendor_explicit_scope=True,
-        shipped=True, client_name="WoW Forever"),
+        # Nothing held back since 2026-11-22. Engineering and Mining failed the gate on the
+        # wiki alone (Engineering: nothing at skill 1-24; Mining: 4 of 9 and no recipe table
+        # on its wiki page). DB2's auto-learned mark, the Wowhead guide tables and the
+        # cross-bucket rule for a recipe learned above yellow (Smelt Tin) fill both:
+        # Engineering ships 233 of 246, Mining 7 of 9. Mining's run without a shipped
+        # recipe at 185-299 is the game's (gap_skill_up_only below).
+        held_back=(), vendor_explicit_scope=True,
+        shipped=True, client_name="WoW Forever",
+        # Measured 2026-11-22 on 1.60.1.71037. AcquireMethod 1 matched the wiki's
+        # "Automatic" on all 14 recipes that had one and types 17 recipes nothing else
+        # could; 3 marks Basic Campfire (old spell), Potion of Poison Cleansing and
+        # Purification Potion.
+        acquire_method=True,
+        # 246 recipes sit in the seven categories named "SEASON OF DISCOVERY" and create an
+        # item this build has no data for; the Forever guides mention 2 of them. Owner
+        # decision 2026-11-22: not in game. () ships them again as before.
+        leftover_categories=("SEASON OF DISCOVERY",),
+        # Owner decision 2026-11-22: no smelt gives a skill-up at 185-299, on Forever or in
+        # Classic, so that run is the game's, not missing data. False restores the first
+        # definition (every skill point counts).
+        gap_skill_up_only=True,
+        wowhead_guides=_FOREVER_GUIDES),
 }
 
 
@@ -314,6 +358,18 @@ def _validate_registry(buckets: Mapping[str, Bucket]) -> None:
         if b.cross_source_bucket is not None and (
                 b.cross_source_bucket not in buckets or b.cross_source_bucket == k):
             bad(f"invalid cross_source_bucket '{b.cross_source_bucket}'")
+        for name in ("leftover_categories", "wowhead_guides"):
+            value = getattr(b, name)
+            # A bare string would iterate as its letters: require the tuple.
+            if not isinstance(value, tuple) or not all(isinstance(v, str) and v.strip()
+                                                       for v in value):
+                bad(f"{name} must be a tuple of non-empty strings, not {value!r}")
+            if len(set(value)) != len(value):
+                bad(f"{name} lists an entry twice: {value}")
+        for path in b.wowhead_guides:
+            # A full URL or a leading slash would build a wrong address silently.
+            if not path.startswith("guide/") or "://" in path:
+                bad(f"wowhead_guides entry '{path}' must be a path starting with 'guide/'")
         stray = [p for p in b.held_back if p not in b.professions]
         if stray:
             bad(f"held_back names professions not in the bucket: {stray}")

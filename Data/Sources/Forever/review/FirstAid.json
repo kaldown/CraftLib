@@ -4,8 +4,8 @@
     "floor": 0.75,
     "gap": null,
     "inGame": 29,
-    "knownSource": 23,
-    "knownSourceShare": 0.7931,
+    "knownSource": 28,
+    "knownSourceShare": 0.9655,
     "maxGap": 0,
     "maxGapAllowed": 10,
     "passes": true,
@@ -83,38 +83,18 @@
     ]
   ],
   "orangeFrom": {
-    "CROSS": 9,
-    "ITEM": 14,
-    "WIKI": 5
+    "AUTO": 1,
+    "CROSS": 8,
+    "GUIDE": 5,
+    "ITEM": 14
   },
   "sourceTypes": {
-    "DROP": 4,
+    "DROP": 8,
+    "QUEST": 1,
     "REPUTATION": 1,
     "STARTER": 1,
     "TRAINER": 13,
-    "UNKNOWN": 5,
     "VENDOR": 4
   },
-  "unknownSource": [
-    [
-      1244435,
-      "Superior Healing Potion"
-    ],
-    [
-      1259344,
-      "Superior Poultice"
-    ],
-    [
-      1259345,
-      "Powerful Poultice"
-    ],
-    [
-      1259348,
-      "Leather Tourniquet"
-    ],
-    [
-      1259349,
-      "Surgical Tourniquet"
-    ]
-  ]
+  "unknownSource": []
 }

@@ -127,8 +127,8 @@ def test_currency_source_has_no_cost_key():
 # (extra facts, wiki skill, in-game trainer skill, cross orange, expected orange, orangeFrom, certainty)
 ORANGE_CASES = [
     pytest.param(dict(rsr=55, **ITEM), 80, None, None, 55, "ITEM", "DB2", id="item-beats-wiki"),
-    pytest.param(dict(rsr=120, **ITEM), 40, None, None, 40, "WIKI", "WIKI",
-                 id="rsr-above-yellow-ignored"),
+    pytest.param(dict(rsr=120, **ITEM), 40, None, None, 120, "ITEM", "DB2",
+                 id="rsr-above-yellow-below-gray-is-the-learn-skill"),
     pytest.param(dict(rsr=55, **ITEM), 80, 40, None, 40, "INGAME", "INGAME",
                  id="ingame-beats-item"),
     pytest.param(dict(yellow=50, gray=70, **ITEM), 15, None, 1, 1, "CROSS", "CROSS",
@@ -202,12 +202,13 @@ def test_wiki_skill_unusable_and_nothing_else(skill, reason):
     assert res.source is None and res.difficulty is None
 
 
-@pytest.mark.parametrize("trainer", [96, 0])
+@pytest.mark.parametrize("trainer", [0, -5])
 def test_ingame_trainer_skill_outside_range_is_review_not_fallback(trainer):
     # In-game is the strongest evidence; falling back to the wiki would ship a value
-    # the in-game capture contradicts.
+    # the in-game capture contradicts. (Above yellow and below gray it is a learn skill;
+    # at or above gray there is no skill-up: test_forever_db2_rules.py.)
     res = resolve(facts(), row("TRAINER", skill=40), IngameFacts(True, trainer), None)
-    assert res.review == f"no learn skill: in-game trainer skill {trainer} outside 1-95"
+    assert res.review == f"no learn skill: in-game trainer skill {trainer} outside 1-134"
 
 
 def test_not_in_game():
@@ -543,8 +544,8 @@ def test_ingame_decision_keeps_failed_match_as_note(failed):
 
 
 def test_rejected_ingame_skill_keeps_failed_match_as_note():
-    res = resolve(facts(), "no wiki row", IngameFacts(present=True, trainer_skill=96), None)
-    assert res.review == "no learn skill: in-game trainer skill 96 outside 1-95"
+    res = resolve(facts(), "no wiki row", IngameFacts(present=True, trainer_skill=0), None)
+    assert res.review == "no learn skill: in-game trainer skill 0 outside 1-134"
     assert res.notes == ("in-game trainer decides it; wiki: no wiki row",)
 
 

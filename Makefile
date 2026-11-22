@@ -15,6 +15,10 @@ endif
 # targets, where it is REQUIRED; OUT=Data rewrites the shipped files).
 PROF_ARG = $(if $(PROFESSION),--profession "$(PROFESSION)")
 OUT_ARG = $(if $(OUT),--output-dir $(OUT))
+# Knobs of <bucket>-all for a bucket that reads Wowhead guide pages (forever): OFFLINE=1
+# (disk only: no DB2 download, no page or wiki request), FORCE=1 (request cached pages
+# again), PAGES=<dir> (pages saved from a browser, used before the cache).
+PAGE_ARGS = $(if $(OFFLINE),--offline) $(if $(FORCE),--force) $(if $(PAGES),--pages-dir "$(PAGES)")
 
 # WHY OUT is required for the offline targets: regenerating into the shipped Data/ is
 # not a no-op (the tracked sources can drift from the shipped Lua), so overwriting it
@@ -38,6 +42,7 @@ help:
 	@echo "  PROFESSION=<name> limits a bucket target to one profession; ARGS=... passes pipeline flags"
 	@echo "  OUT is required by the offline targets; OUT=Data rewrites the shipped files deliberately."
 	@echo "  -all and -fetch reject OUT (-all rewrites Data/ in place, -fetch only the DB2 cache; use ARGS for other dirs)."
+	@echo "  forever-all also takes OFFLINE=1 (disk only), FORCE=1 (refetch cached pages), PAGES=<dir> (pages saved from a browser)."
 	@echo "Other:"
 	@echo "  fetch-data [BUCKET=b]    fetch DB2 builds (all buckets by default)"
 	@echo "  vendor-prices OUT=<dir> [BUCKET=b]"
@@ -45,7 +50,7 @@ help:
 
 # A failing step makes pipeline.py exit non-zero, which stops make: gates are real gates.
 $(addsuffix -all,$(BUCKETS)): %-all:
-	$(reject_out)@$(PIPELINE) all --bucket $* $(PROF_ARG) $(ARGS)
+	$(reject_out)@$(PIPELINE) all --bucket $* $(PROF_ARG) $(PAGE_ARGS) $(ARGS)
 
 $(addsuffix -fetch,$(BUCKETS)): %-fetch:
 	$(reject_out)@$(PIPELINE) fetch --bucket $*

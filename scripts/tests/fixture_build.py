@@ -74,8 +74,18 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
                 extra_items: dict[int, tuple[str, int, int]] | None = None,
                 spell_totems: list[dict] | None = None,
                 totem_categories: list[dict] | None = None,
-                spell_names: dict[int, str] | None = None) -> Path:
+                spell_names: dict[int, str] | None = None,
+                acquire: dict[int, tuple[int, int]] | None = None,
+                categories: dict[int, int] | None = None,
+                trade_skill_categories: list[dict] | None = None,
+                omit_items: frozenset = frozenset()) -> Path:
     """extra_teaching: (spell, item) links appended after the regular ones, in order.
+    acquire: spell -> (AcquireMethod, MinSkillLineRank); unlisted spells get (0, 1), what
+    the real build carries on a recipe learned from a trainer or an item.
+    categories: spell -> TradeSkillCategoryID (0 unlisted); trade_skill_categories (xitem
+    only) replaces the default rows (2592 "SEASON OF DISCOVERY", 2000 "Cloth").
+    omit_items: item ids left out of ItemSparse (a created or teaching item the build
+    links but has no data for).
     spell_names: spell id -> a SpellName replacing the fixture's (e.g. two spells sharing
     one name, like an old and a revised recipe).
     extra_items: item id -> (name, RequiredSkill, RequiredSkillRank), extra ItemSparse
@@ -95,8 +105,13 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
     sla, names, effects, reagents, links = [], [], [], [], []
     for n, (spell, (name, creates, regs, (lo, hi), item)) in enumerate(_SPELLS.items(), start=1):
         sid = str(spell)
+        method, min_rank = (acquire or {}).get(spell, (0, 1))
+        # The three extra columns exist only in the xitem (Forever) contract; the writer
+        # drops them for the Classic shape.
         sla.append({"ID": n, "SkillLine": 197, "Spell": spell,
-                    "TrivialSkillLineRankLow": lo, "TrivialSkillLineRankHigh": hi})
+                    "TrivialSkillLineRankLow": lo, "TrivialSkillLineRankHigh": hi,
+                    "AcquireMethod": method, "MinSkillLineRank": min_rank,
+                    "TradeSkillCategoryID": (categories or {}).get(spell, 0)})
         if sid not in omit_spell_names:
             names.append({"ID": spell, "Name_lang": (spell_names or {}).get(spell, name)})
         if creates is not None:
@@ -128,6 +143,10 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
         tables["TotemCategory"] = (totem_categories if totem_categories is not None
                                    else [{"ID": 162, "Name_lang": "Blacksmith Hammer"}])
         tables["SkillLine"] = [{"ID": k, "ParentSkillLineID": v} for k, v in _SKILL_LINES.items()]
+        tables["TradeSkillCategory"] = (
+            trade_skill_categories if trade_skill_categories is not None
+            else [{"ID": 2592, "Name_lang": "SEASON OF DISCOVERY"},
+                  {"ID": 2000, "Name_lang": "Cloth"}])
     teaching_ids = {item for *_, item in _SPELLS.values() if item is not None}
     items = [{"ID": i, "Display_lang": "" if str(i) in omit_item_names else v[0],
               "BuyPrice": v[1], "SellPrice": v[2], "MinFactionID": v[3],
@@ -135,7 +154,7 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
               # Dropped by the writer (extrasaction="ignore") when the shape has no such column.
               "RequiredSkillRank": _RSR.get(i, 0),
               "RequiredSkill": _TEACHING_SKILL if i in teaching_ids else 0}
-             for i, v in _ITEMS.items()]
+             for i, v in _ITEMS.items() if i not in omit_items]
     items += [{"ID": i, "Display_lang": name, "BuyPrice": 100, "SellPrice": 25,
                "MinFactionID": 0, "MinReputation": 0, "VendorStackCount": 1,
                "RequiredSkillRank": rank, "RequiredSkill": skill}

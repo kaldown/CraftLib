@@ -3,26 +3,16 @@
     "cap": 300,
     "floor": 0.75,
     "gap": null,
-    "inGame": 259,
-    "knownSource": 191,
-    "knownSourceShare": 0.7375,
+    "inGame": 238,
+    "knownSource": 198,
+    "knownSourceShare": 0.8319,
     "maxGap": 0,
     "maxGapAllowed": 10,
     "passes": true,
-    "share": 0.8533,
-    "shipped": 221
+    "share": 0.958,
+    "shipped": 228
   },
   "excluded": [
-    [
-      7418,
-      "Enchant Bracer - Inferior Stamina",
-      "unknown source and no teaching item"
-    ],
-    [
-      7428,
-      "Enchant Bracer - Minor Deflect",
-      "unknown source and no teaching item"
-    ],
     [
       7771,
       "Enchant Cloak - Minor Protection",
@@ -39,24 +29,9 @@
       "no wiki row"
     ],
     [
-      14810,
-      "Greater Mystic Wand",
-      "ambiguous: wiki row 'greater mystic wand' matches spells 14810, 439134"
-    ],
-    [
       430409,
       "Blackfathom Mana Oil",
-      "unknown source and no teaching item"
-    ],
-    [
-      435481,
-      "Enchant Weapon - Dismantle",
-      "no learn skill: wiki skill 225 above yellow 200"
-    ],
-    [
-      435903,
-      "Enchant Chest - Retricutioner",
-      "no learn skill: wiki skill 225 above yellow 200"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 211848 not in this build"
     ],
     [
       439134,
@@ -66,42 +41,42 @@
     [
       446243,
       "Sigil of Living Dreams",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 221028 not in this build"
     ],
     [
       1213593,
       "Speedstone",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233990 not in this build"
     ],
     [
       1213595,
       "Tear of the Dreamer",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233991 not in this build"
     ],
     [
       1213598,
       "Lodestone of Retaliation",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233992 not in this build"
     ],
     [
       1213600,
       "Enchanted Stopwatch",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233993 not in this build"
     ],
     [
       1213603,
       "Ruby-Encrusted Broach",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233994 not in this build"
     ],
     [
       1213607,
       "Scroll: Wrath of the Swarm",
-      "drop per wiki but DB2 has no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233995 not in this build"
     ],
     [
       1213610,
       "Enchanted Repellent",
-      "vendor per wiki but DB2 has no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 233996 not in this build"
     ],
     [
       1213616,
@@ -111,62 +86,62 @@
     [
       1213628,
       "Enchanted Prayer Tome",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234000 not in this build"
     ],
     [
       1213633,
       "Enchanted Totem",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234001 not in this build"
     ],
     [
       1213635,
       "Enchanted Mushroom",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234002 not in this build"
     ],
     [
       1216005,
       "Libram of Righteousness",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234477 not in this build"
     ],
     [
       1216007,
       "Libram of the Exorcist",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234475 not in this build"
     ],
     [
       1216010,
       "Libram of Sanctity",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234476 not in this build"
     ],
     [
       1216014,
       "Totem of Pyroclastic Thunder",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234480 not in this build"
     ],
     [
       1216016,
       "Totem of Thunderous Strikes",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234478 not in this build"
     ],
     [
       1216018,
       "Totem of Flowing Magma",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234479 not in this build"
     ],
     [
       1216020,
       "Idol of Sidereal Wrath",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234474 not in this build"
     ],
     [
       1216022,
       "Idol of Feline Ferocity",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234469 not in this build"
     ],
     [
       1216024,
       "Idol of Ursin Power",
-      "unknown source and no teaching item"
+      "not in game: DB2 category 'SEASON OF DISCOVERY', created item 234468 not in this build"
     ],
     [
       1217189,
@@ -194,16 +169,6 @@
       "no wiki row"
     ],
     [
-      1248752,
-      "Mystic Mushroom",
-      "no wiki row"
-    ],
-    [
-      1249006,
-      "Libram of Invocation",
-      "no wiki row"
-    ],
-    [
       1263056,
       "Arcane Salvager",
       "no skill-up: yellow == gray"
@@ -222,9 +187,89 @@
   "heldBack": false,
   "notes": [
     [
+      7418,
+      "Enchant Bracer - Inferior Stamina",
+      "wiki row skill 20 differs from AUTO orange 1"
+    ],
+    [
+      7421,
+      "Runed Copper Rod",
+      "DB2 marks it learned automatically; wiki source 'Trainer'"
+    ],
+    [
+      7428,
+      "Enchant Bracer - Minor Deflect",
+      "wiki row skill 80 differs from AUTO orange 1"
+    ],
+    [
       7771,
       "Enchant Cloak - Minor Protection",
       "wiki row skill 70 differs from ITEM orange 90"
+    ],
+    [
+      7795,
+      "Runed Silver Rod",
+      "Vanilla orange 100 differs from GUIDE orange 130"
+    ],
+    [
+      7795,
+      "Runed Silver Rod",
+      "wiki row skill 100 differs from GUIDE orange 130"
+    ],
+    [
+      13628,
+      "Runed Golden Rod",
+      "Vanilla orange 150 differs from GUIDE orange 175"
+    ],
+    [
+      13628,
+      "Runed Golden Rod",
+      "wiki row skill 150 differs from GUIDE orange 175"
+    ],
+    [
+      13702,
+      "Runed Truesilver Rod",
+      "Vanilla orange 200 differs from GUIDE orange 220"
+    ],
+    [
+      13702,
+      "Runed Truesilver Rod",
+      "wiki row skill 200 differs from GUIDE orange 220"
+    ],
+    [
+      14807,
+      "Greater Magic Wand",
+      "Vanilla orange 70 differs from GUIDE orange 110"
+    ],
+    [
+      14807,
+      "Greater Magic Wand",
+      "wiki row skill 70 differs from GUIDE orange 110"
+    ],
+    [
+      14809,
+      "Lesser Mystic Wand",
+      "Vanilla orange 155 differs from GUIDE orange 175"
+    ],
+    [
+      14809,
+      "Lesser Mystic Wand",
+      "wiki row skill 155 differs from GUIDE orange 175"
+    ],
+    [
+      14810,
+      "Greater Mystic Wand",
+      "Vanilla orange 175 differs from GUIDE orange 195"
+    ],
+    [
+      14810,
+      "Greater Mystic Wand",
+      "guide decides it; wiki: ambiguous: wiki row 'greater mystic wand' matches spells 14810, 439134"
+    ],
+    [
+      15596,
+      "Smoking Heart of the Mountain",
+      "created item 11811 has no data in this build"
     ],
     [
       23803,
@@ -239,12 +284,27 @@
     [
       435481,
       "Enchant Weapon - Dismantle",
-      "teaching item 215129 RequiredSkillRank 225 above yellow 200 ignored"
+      "learn skill 225 above yellow 200: teaching item 215129 RequiredSkillRank"
     ],
     [
       435903,
       "Enchant Chest - Retricutioner",
-      "teaching item 215138 RequiredSkillRank 225 above yellow 200 ignored"
+      "learn skill 225 above yellow 200: teaching item 215138 RequiredSkillRank"
+    ],
+    [
+      1245320,
+      "Dust to Motes",
+      "DB2 marks it learned automatically; wiki source 'Trainer'"
+    ],
+    [
+      1245321,
+      "Novice's Practice Wand",
+      "DB2 marks it learned automatically; wiki source 'Trainer'"
+    ],
+    [
+      1249107,
+      "Frozen Heart of the Mountain",
+      "guide skill 285 differs from ITEM orange 265"
     ],
     [
       1249107,
@@ -254,7 +314,17 @@
     [
       1249112,
       "Molten Heart of the Mountain",
+      "guide skill 285 differs from ITEM orange 265"
+    ],
+    [
+      1249112,
+      "Molten Heart of the Mountain",
       "wiki row skill 285 differs from ITEM orange 265"
+    ],
+    [
+      1249114,
+      "Dormant Heart of the Mountain",
+      "guide skill 285 differs from ITEM orange 265"
     ],
     [
       1249114,
@@ -268,17 +338,19 @@
     ]
   ],
   "orangeFrom": {
-    "CROSS": 59,
-    "ITEM": 160,
-    "WIKI": 2
+    "AUTO": 5,
+    "CROSS": 50,
+    "GUIDE": 9,
+    "ITEM": 164
   },
   "sourceTypes": {
     "DROP": 61,
     "QUEST": 2,
     "REPUTATION": 13,
-    "TRAINER": 61,
+    "STARTER": 5,
+    "TRAINER": 59,
     "UNKNOWN": 30,
-    "VENDOR": 54
+    "VENDOR": 58
   },
   "unknownSource": [
     [

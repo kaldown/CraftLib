@@ -1,6 +1,6 @@
 -- Data/Forever/Cooking/Recipes.lua
 -- Cooking recipes for WoW Forever
--- Generated from DB2 data and the Warcraft Wiki recipe tables
+-- Generated from DB2 data, Wowhead guide tables and the Warcraft Wiki recipe tables
 local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
@@ -324,9 +324,8 @@ local recipes = {
             { itemId = 10284, name = "Simple Flour", count = 1 },
         },
         source = {
-            type = C.SOURCE_TYPE.VENDOR,
+            type = C.SOURCE_TYPE.QUEST,
             itemId = 263513,
-            cost = 200,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1299,7 +1298,7 @@ local recipes = {
             { itemId = 2692, name = "Hot Spices", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 250186,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -1316,7 +1315,7 @@ local recipes = {
             { itemId = 3818, name = "Fadeleaf", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 249882,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -1352,7 +1351,7 @@ local recipes = {
             { itemId = 2692, name = "Hot Spices", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 250181,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -1441,7 +1440,7 @@ local recipes = {
             { itemId = 8838, name = "Sungrass", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 249883,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -1620,8 +1619,9 @@ local recipes = {
             { itemId = 2692, name = "Hot Spices", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 250173,
+            cost = 20000,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1637,7 +1637,7 @@ local recipes = {
             { itemId = 2692, name = "Hot Spices", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 250184,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -1793,7 +1793,7 @@ local recipes = {
             { itemId = 13465, name = "Mountain Silversage", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 249884,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -1918,7 +1918,7 @@ local recipes = {
             { itemId = 3713, name = "Soothing Spices", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 250175,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -1935,7 +1935,7 @@ local recipes = {
             { itemId = 3713, name = "Soothing Spices", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 250176,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -1952,7 +1952,7 @@ local recipes = {
             { itemId = 3713, name = "Soothing Spices", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 250177,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -1969,7 +1969,7 @@ local recipes = {
             { itemId = 3713, name = "Soothing Spices", count = 3 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 250178,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -1986,7 +1986,7 @@ local recipes = {
             { itemId = 3713, name = "Soothing Spices", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.QUEST,
             itemId = 250179,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -2003,7 +2003,7 @@ local recipes = {
             { itemId = 3713, name = "Soothing Spices", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 250180,
         },
         expansion = C.EXPANSION.FOREVER,
@@ -2037,7 +2037,7 @@ local recipes = {
             { itemId = 3713, name = "Soothing Spices", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
+            type = C.SOURCE_TYPE.DROP,
             itemId = 250189,
         },
         expansion = C.EXPANSION.FOREVER,

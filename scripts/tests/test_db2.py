@@ -303,3 +303,32 @@ def test_measure_canaries_forever_fixture(tmp_path):
 def test_check_canaries_forever_names_link_table():
     with pytest.raises(CanaryError, match="ItemXItemEffect"):
         check_canaries(FOREVER, CanaryResult(4, 1.0, 0.0), "x")
+
+
+# --- leftover trade-skill categories ----------------------------------------------------
+
+def test_leftover_category_ids_by_name(tmp_path):
+    from tests.fixture_build import write_build
+    art = write_build(tmp_path, join="xitem", trade_skill_categories=[
+        {"ID": 2592, "Name_lang": "SEASON OF DISCOVERY"},
+        {"ID": 2593, "Name_lang": "Season of Discovery "},
+        {"ID": 2000, "Name_lang": "Cloth"}])
+    ids = db2.leftover_category_ids(art / FIXTURE_VERSION, FOREVER)
+    assert ids == {"2592": "SEASON OF DISCOVERY", "2593": "Season of Discovery "}
+
+
+def test_leftover_category_name_absent_from_the_build_fails_loud(tmp_path):
+    from tests.fixture_build import write_build
+    art = write_build(tmp_path, join="xitem",
+                      trade_skill_categories=[{"ID": 2000, "Name_lang": "Cloth"}])
+    with pytest.raises(db2.CanaryError, match="SEASON OF DISCOVERY"):
+        db2.leftover_category_ids(art / FIXTURE_VERSION, FOREVER)
+
+
+def test_buckets_without_leftover_categories_never_read_the_table(tmp_path):
+    # No TradeSkillCategory.csv in a Classic-shaped build: reading it would raise.
+    from tests.fixture_build import write_build
+    art = write_build(tmp_path)
+    assert db2.leftover_category_ids(art / FIXTURE_VERSION, TBC) == {}
+    assert "TradeSkillCategory" not in db2.bucket_tables(TBC)
+    assert "TradeSkillCategory" in db2.bucket_tables(FOREVER)

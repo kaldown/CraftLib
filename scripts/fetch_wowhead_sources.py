@@ -12,9 +12,13 @@ Usage:
     python fetch_wowhead_sources.py --bucket tbc --profession Engineering --dry-run
     python fetch_wowhead_sources.py --bucket tbc --profession Engineering --spells 3922 3923
     python fetch_wowhead_sources.py --bucket tbc --profession Engineering --force
+    python fetch_wowhead_sources.py --bucket forever --profession Mining --inspect
+        [--pages-dir <folder>] [--offline] [--refetch]
 
 The bucket registry decides the route: listview buckets fetch one profession
-page, per-spell buckets fetch every spell page.
+page, per-spell buckets fetch every spell page. A wiki-enriched bucket (Forever) is never
+written by this command: --inspect only prints what its listview page carries next to the
+resolved sources (see inspect_listview), reading the page through wowhead.PageStore.
 """
 
 import argparse
@@ -47,7 +51,15 @@ def _fetch_page(url: str, retries: int = 3) -> str | None:
                 body = response.read()
                 if (response.headers.get("Content-Encoding") or "") == "gzip":
                     body = gzip.decompress(body)
-                return body.decode("utf-8")
+                text = body.decode("utf-8")
+                if wowhead.is_challenge(text):
+                    # WHY: urllib reports the challenge's HTTP 202 as success, and its body
+                    # would parse as a page without any recipe. Never retried or worked
+                    # around; save the page from a browser instead.
+                    print(f"  {url} answered with a JavaScript challenge, not the page",
+                          file=sys.stderr)
+                    return None
+                return text
         except urllib.error.HTTPError as e:
             if e.code in (403, 503) and attempt < retries - 1:
                 time.sleep(2 * (attempt + 1))  # back off; Wowhead WAF cold-start
@@ -565,6 +577,98 @@ def process_profession(
     return 0
 
 
+def _ids(ids, limit: int = 12) -> str:
+    ids = sorted(ids, key=int)
+    more = f", +{len(ids) - limit} more" if len(ids) > limit else ""
+    return ", ".join(str(i) for i in ids[:limit]) + more
+
+
+def inspect_listview(sources_file: Path, profession, bucket, store) -> int:
+    """Print what the profession's listview page carries, next to the sources; write nothing.
+
+    For a bucket whose sources are resolved without Wowhead (Forever), this is the check
+    to run before anything relies on listview facts: whether the page has the profession's
+    recipes, whether its thresholds equal DB2's, and what `learnedat` means there. It
+    equals the teaching item's rank on item-taught recipes if it is a learn skill at all;
+    on trainer recipes a value below yellow is real trainer data, while one equal to
+    yellow everywhere is only the first threshold repeated.
+    """
+    url = wowhead.listview_url(bucket, profession)
+    page = store.get(url)
+    if page is None:
+        why = ("it answered with a JavaScript challenge" if store.challenged
+               else store.failed.get(wowhead.page_key(url))
+               or "not saved or cached, and --offline was given")
+        print(f"ERROR: bucket '{bucket.key}': no page for {url}: {why}. Save it from a "
+              f"browser and pass --pages-dir <folder>.", file=sys.stderr)
+        return 2
+    if wowhead.is_challenge(page.text):
+        print(f"ERROR: bucket '{bucket.key}': the {page.origin} copy of {url} is a "
+              f"JavaScript challenge page, not the listview", file=sys.stderr)
+        return 2
+    rows = _extract_listview_spells(page.text)
+    if not rows:
+        print(f"ERROR: bucket '{bucket.key}': no listview (var listviewspells) in the "
+              f"{page.origin} copy of {url}; the page format may have changed", file=sys.stderr)
+        return 2
+
+    recipes = load_json(sources_file)["recipes"]
+    have = lambda key: sum(1 for r in rows.values() if key in r)   # noqa: E731
+    print(f"{url} [{page.origin}, {page.fetched}]")
+    print(f"  rows {len(rows)}: colors {have('colors')}, learnedat {have('learnedat')}, "
+          f"source {have('source')}, trainingcost {have('trainingcost')}, "
+          f"creates {have('creates')}")
+    on_page = [sid for sid in recipes if int(sid) in rows]
+    missing = [sid for sid in recipes if int(sid) not in rows]
+    print(f"  recipes in the sources {len(recipes)}: on the page {len(on_page)}, not on the "
+          f"page {len(missing)}" + (f" ({_ids(missing)})" if missing else ""))
+    extra = [sid for sid in rows if str(sid) not in recipes and "colors" in rows[sid]]
+    print(f"  on the page but not in the sources: {len(extra)}"
+          + (f" ({_ids(extra)})" if extra else ""))
+
+    thresholds, item_equal, item_differ = [], [], []
+    below = equal = above = 0
+    compared = 0
+    for sid in on_page:
+        row, recipe = rows[int(sid)], recipes[sid]
+        difficulty = recipe.get("difficulty") or {}
+        source = recipe.get("source") or {}
+        colors = row.get("colors")
+        if not difficulty or not isinstance(colors, list) or len(colors) != 4:
+            continue
+        compared += 1
+        if (colors[1], colors[3]) != (difficulty.get("yellow"), difficulty.get("gray")):
+            thresholds.append(f"{sid} {colors[1]}/{colors[3]} vs "
+                              f"{difficulty.get('yellow')}/{difficulty.get('gray')}")
+        learned = row.get("learnedat")
+        if type(learned) is not int:
+            continue
+        if difficulty.get("orangeFrom") == "ITEM":
+            if learned == difficulty["orange"]:
+                item_equal.append(sid)
+            else:
+                item_differ.append(f"{sid} {learned} vs {difficulty['orange']}")
+        elif source.get("type") in ("TRAINER", "STARTER"):
+            yellow = difficulty.get("yellow")
+            below, equal, above = (below + (learned < yellow), equal + (learned == yellow),
+                                   above + (learned > yellow))
+    print(f"  yellow/gray equal to DB2 on {compared - len(thresholds)} of {compared}"
+          + (f" (differs: {'; '.join(thresholds[:12])})" if thresholds else ""))
+    items = len(item_equal) + len(item_differ)
+    print(f"  item-taught, learn skill from the item rank: learnedat equal on "
+          f"{len(item_equal)} of {items}"
+          + (f" (differs: {'; '.join(item_differ[:12])})" if item_differ else ""))
+    print(f"  trainer or automatic: learnedat below yellow {below}, equal to yellow {equal}, "
+          f"above {above}")
+    codes: dict[int, int] = {}
+    for sid in on_page:
+        for code in rows[int(sid)].get("source") or ():
+            codes[code] = codes.get(code, 0) + 1
+    print("  source codes: " + (", ".join(f"{c} x{n}" for c, n in sorted(codes.items()))
+                                or "none"))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Fetch recipe data from Wowhead (single-pass: difficulty + source + trainer audit)"
@@ -576,6 +680,16 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--dry-run", action="store_true", help="Show what would be fetched")
     parser.add_argument("--spells", type=int, nargs="+", help="Specific spell IDs to fetch")
     parser.add_argument("--force", action="store_true", help="Re-fetch all recipes even if already verified")
+    parser.add_argument("--inspect", action="store_true",
+                        help="print what the profession's listview page carries next to the "
+                             "sources and write nothing (the page: --pages-dir, else the "
+                             "page cache, else one polite request)")
+    parser.add_argument("--pages-dir", type=Path,
+                        help="with --inspect: folder of pages saved from a browser")
+    parser.add_argument("--offline", action="store_true",
+                        help="with --inspect: never request; saved and cached pages only")
+    parser.add_argument("--refetch", action="store_true",
+                        help="with --inspect: request the page again even when it is cached")
     return parser
 
 
@@ -595,7 +709,30 @@ def main(argv: list[str] | None = None) -> int:
         print("Run extract_db2_sources.py first.", file=sys.stderr)
         return 2
 
+    if not args.inspect and (args.pages_dir or args.offline or args.refetch):
+        # The fetch routes below do not read pages through the store: silently ignoring
+        # --offline would fetch and rewrite the sources anyway.
+        print("ERROR: --pages-dir, --offline and --refetch only apply with --inspect",
+              file=sys.stderr)
+        return 1
+
     try:
+        if args.inspect:
+            try:
+                wowhead.profession_slug(profession)
+                store = wowhead.PageStore(
+                    args.sources_dir / bucket.folder / ".wowhead_cache",
+                    saved_dir=args.pages_dir, offline=args.offline, force=args.refetch)
+            except (ValueError, FileNotFoundError) as e:
+                print(f"ERROR: bucket '{bucket.key}': {e}", file=sys.stderr)
+                return 1
+            return inspect_listview(sources_file, profession, bucket, store)
+        if bucket.enrich == "wiki":
+            # Its sources are resolved by the wiki step (DB2, guides, wiki, captures); the
+            # routes below would overwrite every source and difficulty with Wowhead's.
+            print(f"ERROR: bucket '{bucket.key}' is resolved by fetch_wiki_sources.py; this "
+                  f"command only inspects its listview pages (--inspect)", file=sys.stderr)
+            return 1
         if bucket.enrich == "wowhead-listview":
             try:
                 wowhead.profession_slug(profession)

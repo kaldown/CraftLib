@@ -1,6 +1,6 @@
 -- Data/Forever/Leatherworking/Recipes.lua
 -- Leatherworking recipes for WoW Forever
--- Generated from DB2 data and the Warcraft Wiki recipe tables
+-- Generated from DB2 data, Wowhead guide tables and the Warcraft Wiki recipe tables
 local ADDON_NAME, CraftLib = ...
 local C = CraftLib.Constants
 
@@ -781,7 +781,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252770,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -802,7 +802,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252769,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -823,7 +823,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252768,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -844,7 +844,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252767,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -865,7 +865,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252766,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -886,7 +886,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252765,
-            cost = 1500,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1328,8 +1328,9 @@ local recipes = {
             { itemId = 5498, name = "Small Lustrous Pearl", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252782,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1348,8 +1349,9 @@ local recipes = {
             { itemId = 249409, name = "Cerulean Dye", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252781,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1368,8 +1370,9 @@ local recipes = {
             { itemId = 249410, name = "Sulfuric Acid", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252780,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1388,8 +1391,9 @@ local recipes = {
             { itemId = 2458, name = "Elixir of Minor Fortitude", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252779,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1408,8 +1412,9 @@ local recipes = {
             { itemId = 6470, name = "Deviate Scale", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252778,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1428,8 +1433,9 @@ local recipes = {
             { itemId = 1210, name = "Shadowgem", count = 2 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252777,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1543,7 +1549,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252791,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1564,7 +1570,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252790,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1585,7 +1591,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252789,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1606,7 +1612,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252788,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1627,7 +1633,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252787,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1648,7 +1654,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252786,
-            cost = 2125,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1831,8 +1837,9 @@ local recipes = {
             { itemId = 5498, name = "Small Lustrous Pearl", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252803,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1851,8 +1858,9 @@ local recipes = {
             { itemId = 249409, name = "Cerulean Dye", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252802,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1871,8 +1879,9 @@ local recipes = {
             { itemId = 249410, name = "Sulfuric Acid", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252801,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1891,8 +1900,9 @@ local recipes = {
             { itemId = 2458, name = "Elixir of Minor Fortitude", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252800,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1911,8 +1921,9 @@ local recipes = {
             { itemId = 6470, name = "Deviate Scale", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252799,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -1931,8 +1942,9 @@ local recipes = {
             { itemId = 1210, name = "Shadowgem", count = 4 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252798,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2028,7 +2040,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252810,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2049,7 +2061,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252809,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2070,7 +2082,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252808,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2091,7 +2103,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252807,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2112,7 +2124,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252806,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2133,7 +2145,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252805,
-            cost = 2750,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2380,8 +2392,9 @@ local recipes = {
             { itemId = 5498, name = "Small Lustrous Pearl", count = 8 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252825,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2400,8 +2413,9 @@ local recipes = {
             { itemId = 249409, name = "Cerulean Dye", count = 8 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252824,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2420,8 +2434,9 @@ local recipes = {
             { itemId = 249410, name = "Sulfuric Acid", count = 8 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252823,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2440,8 +2455,9 @@ local recipes = {
             { itemId = 2458, name = "Elixir of Minor Fortitude", count = 8 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252822,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2460,8 +2476,9 @@ local recipes = {
             { itemId = 6470, name = "Deviate Scale", count = 8 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252821,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2480,8 +2497,9 @@ local recipes = {
             { itemId = 1210, name = "Shadowgem", count = 8 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
+            type = C.SOURCE_TYPE.VENDOR,
             itemId = 252820,
+            currency = { name = "Merchant's Favor", amount = 30 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -2990,25 +3008,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Guardian Belt (170)
-    {
-        id = 439112,
-        name = "Guardian Belt",
-        itemId = 217265,
-        skillRequired = 170,
-        skillRange = { orange = 170, yellow = 190, green = 200, gray = 210 },
-        reagents = {
-            { itemId = 4236, name = "Cured Heavy Hide", count = 2 },
-            { itemId = 4234, name = "Heavy Leather", count = 4 },
-            { itemId = 2321, name = "Fine Thread", count = 1 },
-            { itemId = 7071, name = "Iron Buckle", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 217266,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Barbaric Belt (175)
     {
         id = 3779,
@@ -3159,7 +3158,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252842,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3181,7 +3180,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252841,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3203,7 +3202,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252840,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3225,7 +3224,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252839,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3247,7 +3246,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252838,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3269,7 +3268,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252837,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3291,7 +3290,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252836,
-            cost = 4375,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3583,7 +3582,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252834,
-            cost = 4625,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3692,24 +3691,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 8397,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Guardian Leather Bracers (195)
-    {
-        id = 439110,
-        name = "Guardian Leather Bracers",
-        itemId = 217263,
-        skillRequired = 195,
-        skillRange = { orange = 195, yellow = 215, green = 225, gray = 235 },
-        reagents = {
-            { itemId = 4234, name = "Heavy Leather", count = 6 },
-            { itemId = 4236, name = "Cured Heavy Hide", count = 2 },
-            { itemId = 4291, name = "Silken Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 217264,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3947,7 +3928,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252903,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3969,7 +3950,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252902,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -3991,7 +3972,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252901,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4013,7 +3994,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252900,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4035,7 +4016,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252852,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4057,7 +4038,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252851,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4079,7 +4060,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252850,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4101,7 +4082,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252849,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4123,7 +4104,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252848,
-            cost = 5250,
+            currency = { name = "Merchant's Favor", amount = 60 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4181,24 +4162,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Big Voodoo Robe (215)
-    {
-        id = 439108,
-        name = "Big Voodoo Robe",
-        itemId = 217261,
-        skillRequired = 215,
-        skillRange = { orange = 215, yellow = 235, green = 245, gray = 255 },
-        reagents = {
-            { itemId = 4304, name = "Thick Leather", count = 10 },
-            { itemId = 8151, name = "Flask of Mojo", count = 4 },
-            { itemId = 8343, name = "Heavy Silken Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 217262,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Wild Leather Boots (220)
     {
         id = 10566,
@@ -4232,24 +4195,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 8401,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Big Voodoo Mask (220)
-    {
-        id = 439105,
-        name = "Big Voodoo Mask",
-        itemId = 217259,
-        skillRequired = 220,
-        skillRange = { orange = 220, yellow = 240, green = 250, gray = 260 },
-        reagents = {
-            { itemId = 4304, name = "Thick Leather", count = 8 },
-            { itemId = 8151, name = "Flask of Mojo", count = 6 },
-            { itemId = 8343, name = "Heavy Silken Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 217260,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4340,23 +4285,91 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Glowing Gneuro-Linked Cowl (225)
+    -- Mender's Mail Bracers (225)
     {
-        id = 435904,
-        name = "Glowing Gneuro-Linked Cowl",
-        itemId = 215166,
+        id = 1255000,
+        name = "Mender's Mail Bracers",
+        itemId = 252573,
         skillRequired = 225,
-        skillRange = { orange = 225, yellow = 225, green = 230, gray = 235 },
+        skillRange = { orange = 225, yellow = 220, green = 230, gray = 240 },
         reagents = {
-            { itemId = 213379, name = "Hyperconductive Arcano-Filament", count = 1 },
-            { itemId = 8172, name = "Cured Thick Hide", count = 5 },
-            { itemId = 4291, name = "Silken Thread", count = 2 },
-            { itemId = 213369, name = "Faintly Glowing Leather", count = 5 },
+            { itemId = 4304, name = "Thick Leather", count = 12 },
+            { itemId = 4236, name = "Cured Heavy Hide", count = 4 },
+            { itemId = 249428, name = "Pristine Hide", count = 6 },
+            { itemId = 8343, name = "Heavy Silken Thread", count = 2 },
+            { itemId = 5500, name = "Iridescent Pearl", count = 4 },
+            { itemId = 249427, name = "Pristine Leather", count = 3 },
         },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
-            itemId = 215152,
-            cost = 50000,
+            itemId = 252907,
+            currency = { name = "Merchant's Favor", amount = 90 },
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Skirmisher's Mail Bracers (225)
+    {
+        id = 1255001,
+        name = "Skirmisher's Mail Bracers",
+        itemId = 252572,
+        skillRequired = 225,
+        skillRange = { orange = 225, yellow = 220, green = 230, gray = 240 },
+        reagents = {
+            { itemId = 4304, name = "Thick Leather", count = 12 },
+            { itemId = 4236, name = "Cured Heavy Hide", count = 4 },
+            { itemId = 249428, name = "Pristine Hide", count = 6 },
+            { itemId = 8343, name = "Heavy Silken Thread", count = 2 },
+            { itemId = 3864, name = "Citrine", count = 4 },
+            { itemId = 249427, name = "Pristine Leather", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 252906,
+            currency = { name = "Merchant's Favor", amount = 90 },
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Skycaller's Mail Bracers (225)
+    {
+        id = 1255002,
+        name = "Skycaller's Mail Bracers",
+        itemId = 252571,
+        skillRequired = 225,
+        skillRange = { orange = 225, yellow = 220, green = 230, gray = 240 },
+        reagents = {
+            { itemId = 4304, name = "Thick Leather", count = 12 },
+            { itemId = 4236, name = "Cured Heavy Hide", count = 4 },
+            { itemId = 249428, name = "Pristine Hide", count = 6 },
+            { itemId = 8343, name = "Heavy Silken Thread", count = 2 },
+            { itemId = 7070, name = "Elemental Water", count = 4 },
+            { itemId = 249427, name = "Pristine Leather", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 252905,
+            currency = { name = "Merchant's Favor", amount = 90 },
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Stalker's Mail Bracers (225)
+    {
+        id = 1255003,
+        name = "Stalker's Mail Bracers",
+        itemId = 252570,
+        skillRequired = 225,
+        skillRange = { orange = 225, yellow = 220, green = 230, gray = 240 },
+        reagents = {
+            { itemId = 4304, name = "Thick Leather", count = 12 },
+            { itemId = 4236, name = "Cured Heavy Hide", count = 4 },
+            { itemId = 249428, name = "Pristine Hide", count = 6 },
+            { itemId = 8343, name = "Heavy Silken Thread", count = 2 },
+            { itemId = 7069, name = "Elemental Air", count = 4 },
+            { itemId = 249427, name = "Pristine Leather", count = 3 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 252904,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4378,7 +4391,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252857,
-            cost = 5625,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4400,7 +4413,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252856,
-            cost = 5625,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4422,7 +4435,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252855,
-            cost = 5625,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4444,7 +4457,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252854,
-            cost = 5625,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4466,7 +4479,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252853,
-            cost = 5625,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4582,7 +4595,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252941,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4604,7 +4617,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252913,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4626,7 +4639,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252912,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4648,7 +4661,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252911,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4670,7 +4683,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252910,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4692,7 +4705,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252864,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4714,7 +4727,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252863,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4736,7 +4749,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252862,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4758,7 +4771,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252861,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -4780,7 +4793,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252860,
-            cost = 5875,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5175,72 +5188,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Scarlet Infiltrator's Bracers (250)
-    {
-        id = 1224618,
-        name = "Scarlet Infiltrator's Bracers",
-        itemId = 238275,
-        skillRequired = 250,
-        skillRange = { orange = 250, yellow = 260, green = 282, gray = 305 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 8 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238309,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Infiltrator's Belt (250)
-    {
-        id = 1224620,
-        name = "Scarlet Infiltrator's Belt",
-        itemId = 238277,
-        skillRequired = 250,
-        skillRange = { orange = 250, yellow = 260, green = 282, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 8170, name = "Rugged Leather", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238311,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Huntsman's Wristguards (250)
-    {
-        id = 1224626,
-        name = "Scarlet Huntsman's Wristguards",
-        itemId = 238283,
-        skillRequired = 250,
-        skillRange = { orange = 250, yellow = 260, green = 282, gray = 305 },
-        reagents = {
-            { itemId = 15408, name = "Heavy Scorpid Scale", count = 8 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238317,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Huntsman's Clasp (250)
-    {
-        id = 1224628,
-        name = "Scarlet Huntsman's Clasp",
-        itemId = 238285,
-        skillRequired = 250,
-        skillRange = { orange = 250, yellow = 260, green = 282, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 15408, name = "Heavy Scorpid Scale", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238319,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Mender's Mail Belt (250)
     {
         id = 1254982,
@@ -5259,7 +5206,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252925,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5281,7 +5228,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252924,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5303,7 +5250,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252923,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5325,7 +5272,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252922,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5384,7 +5331,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252876,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5406,7 +5353,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252875,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5428,7 +5375,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252874,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5450,7 +5397,7 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252873,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5472,7 +5419,26 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 252872,
-            cost = 6250,
+            currency = { name = "Merchant's Favor", amount = 90 },
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Heavy Scorpid Bracers (255)
+    {
+        id = 19048,
+        name = "Heavy Scorpid Bracers",
+        itemId = 15077,
+        skillRequired = 255,
+        skillRange = { orange = 255, yellow = 250, green = 260, gray = 270 },
+        reagents = {
+            { itemId = 8170, name = "Rugged Leather", count = 4 },
+            { itemId = 15408, name = "Heavy Scorpid Scale", count = 4 },
+            { itemId = 14341, name = "Rune Thread", count = 1 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.VENDOR,
+            itemId = 15724,
+            cost = 12000,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -5813,93 +5779,6 @@ local recipes = {
             level = "Friendly",
             itemId = 20254,
             cost = 20000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Living Green Dragonscale Breastplate (260)
-    {
-        id = 461720,
-        name = "Living Green Dragonscale Breastplate",
-        itemId = 227879,
-        skillRequired = 260,
-        skillRange = { orange = 260, yellow = 280, green = 290, gray = 300 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 20 },
-            { itemId = 15412, name = "Green Dragonscale", count = 25 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 228309,
-            cost = 12000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Infiltrator's Gloves (260)
-    {
-        id = 1224619,
-        name = "Scarlet Infiltrator's Gloves",
-        itemId = 238276,
-        skillRequired = 260,
-        skillRange = { orange = 260, yellow = 270, green = 287, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 8170, name = "Rugged Leather", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238310,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Infiltrator's Shoes (260)
-    {
-        id = 1224622,
-        name = "Scarlet Infiltrator's Shoes",
-        itemId = 238279,
-        skillRequired = 260,
-        skillRange = { orange = 260, yellow = 270, green = 287, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 8170, name = "Rugged Leather", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238313,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Huntsman's Handguards (260)
-    {
-        id = 1224627,
-        name = "Scarlet Huntsman's Handguards",
-        itemId = 238284,
-        skillRequired = 260,
-        skillRange = { orange = 260, yellow = 270, green = 287, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 15408, name = "Heavy Scorpid Scale", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238318,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Huntsman's Boots (260)
-    {
-        id = 1224630,
-        name = "Scarlet Huntsman's Boots",
-        itemId = 238287,
-        skillRequired = 260,
-        skillRange = { orange = 260, yellow = 270, green = 287, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 15408, name = "Heavy Scorpid Scale", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238321,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -6336,97 +6215,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Living Green Dragonscale Leggings (270)
-    {
-        id = 461649,
-        name = "Living Green Dragonscale Leggings",
-        itemId = 227877,
-        skillRequired = 270,
-        skillRange = { orange = 270, yellow = 290, green = 300, gray = 310 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 20 },
-            { itemId = 15412, name = "Green Dragonscale", count = 25 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
-            itemId = 227900,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Masterwork Volcanic Leggings (270)
-    {
-        id = 461665,
-        name = "Masterwork Volcanic Leggings",
-        itemId = 227867,
-        skillRequired = 270,
-        skillRange = { orange = 270, yellow = 290, green = 300, gray = 310 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 6 },
-            { itemId = 7078, name = "Essence of Fire", count = 1 },
-            { itemId = 7075, name = "Core of Earth", count = 1 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 227908,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Living Green Dragonscale Gauntlets (270)
-    {
-        id = 461677,
-        name = "Living Green Dragonscale Gauntlets",
-        itemId = 227878,
-        skillRequired = 270,
-        skillRange = { orange = 270, yellow = 300, green = 310, gray = 320 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 20 },
-            { itemId = 15412, name = "Green Dragonscale", count = 25 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
-            itemId = 228251,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Infiltrator's Trousers (270)
-    {
-        id = 1224621,
-        name = "Scarlet Infiltrator's Trousers",
-        itemId = 238278,
-        skillRequired = 270,
-        skillRange = { orange = 270, yellow = 280, green = 292, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 8170, name = "Rugged Leather", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238312,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Huntsman's Legguards (270)
-    {
-        id = 1224629,
-        name = "Scarlet Huntsman's Legguards",
-        itemId = 238286,
-        skillRequired = 270,
-        skillRange = { orange = 270, yellow = 280, green = 292, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 15408, name = "Heavy Scorpid Scale", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238320,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Charged Scorpid Leggings (270)
     {
         id = 1254973,
@@ -6557,42 +6345,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Scarlet Quiver (275)
-    {
-        id = 1226689,
-        name = "Scarlet Quiver",
-        itemId = 238925,
-        skillRequired = 275,
-        skillRange = { orange = 275, yellow = 280, green = 285, gray = 290 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 8170, name = "Rugged Leather", count = 24 },
-            { itemId = 15407, name = "Cured Rugged Hide", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
-            itemId = 238927,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Ammo Pouch (275)
-    {
-        id = 1226690,
-        name = "Scarlet Ammo Pouch",
-        itemId = 238926,
-        skillRequired = 275,
-        skillRange = { orange = 275, yellow = 280, green = 285, gray = 290 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 15408, name = "Heavy Scorpid Scale", count = 24 },
-            { itemId = 15407, name = "Cured Rugged Hide", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.UNKNOWN,
-            itemId = 238928,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Blue Suede Bracers (275)
     {
         id = 1255019,
@@ -6685,112 +6437,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15775,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Infiltrator's Bandana (280)
-    {
-        id = 1224615,
-        name = "Scarlet Infiltrator's Bandana",
-        itemId = 238272,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 2 },
-            { itemId = 8170, name = "Rugged Leather", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238306,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Infiltrator's Shoulderpads (280)
-    {
-        id = 1224616,
-        name = "Scarlet Infiltrator's Shoulderpads",
-        itemId = 238273,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 8170, name = "Rugged Leather", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238307,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Infiltrator's Vest (280)
-    {
-        id = 1224617,
-        name = "Scarlet Infiltrator's Vest",
-        itemId = 238274,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 8170, name = "Rugged Leather", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238308,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Huntsman's Coif (280)
-    {
-        id = 1224623,
-        name = "Scarlet Huntsman's Coif",
-        itemId = 238280,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 2 },
-            { itemId = 15408, name = "Heavy Scorpid Scale", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238314,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Huntsman's Pauldrons (280)
-    {
-        id = 1224624,
-        name = "Scarlet Huntsman's Pauldrons",
-        itemId = 238281,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 15408, name = "Heavy Scorpid Scale", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238315,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Scarlet Huntsman's Chain (280)
-    {
-        id = 1224625,
-        name = "Scarlet Huntsman's Chain",
-        itemId = 238282,
-        skillRequired = 280,
-        skillRange = { orange = 280, yellow = 285, green = 295, gray = 305 },
-        reagents = {
-            { itemId = 12938, name = "Blood of Heroes", count = 1 },
-            { itemId = 12811, name = "Righteous Orb", count = 1 },
-            { itemId = 15408, name = "Heavy Scorpid Scale", count = 12 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 238316,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -6905,45 +6551,6 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15777,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Masterwork Volcanic Breastplate (285)
-    {
-        id = 461661,
-        name = "Masterwork Volcanic Breastplate",
-        itemId = 227868,
-        skillRequired = 285,
-        skillRange = { orange = 285, yellow = 305, green = 315, gray = 325 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 8 },
-            { itemId = 7078, name = "Essence of Fire", count = 1 },
-            { itemId = 7076, name = "Essence of Earth", count = 1 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 227906,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Honed Blue Dragonscale Breastplate (285)
-    {
-        id = 461673,
-        name = "Honed Blue Dragonscale Breastplate",
-        itemId = 227875,
-        skillRequired = 285,
-        skillRange = { orange = 285, yellow = 305, green = 315, gray = 325 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 28 },
-            { itemId = 15415, name = "Blue Dragonscale", count = 30 },
-            { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 227898,
-            cost = 20000,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -7219,45 +6826,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Hardened Black Dragonscale Breastplate (290)
-    {
-        id = 461655,
-        name = "Hardened Black Dragonscale Breastplate",
-        itemId = 227851,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 310, green = 320, gray = 330 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 40 },
-            { itemId = 15416, name = "Black Dragonscale", count = 60 },
-            { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.VENDOR,
-            itemId = 227902,
-            cost = 22000,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Devilcore Gauntlets (290)
-    {
-        id = 461722,
-        name = "Devilcore Gauntlets",
-        itemId = 227848,
-        skillRequired = 290,
-        skillRange = { orange = 290, yellow = 310, green = 320, gray = 330 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 30 },
-            { itemId = 15417, name = "Devilsaur Leather", count = 8 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-            { itemId = 7078, name = "Essence of Fire", count = 8 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228119,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Bileblister Girdle (290)
     {
         id = 1297127,
@@ -7449,26 +7017,6 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Honed Blue Dragonscale Shoulders (295)
-    {
-        id = 461645,
-        name = "Honed Blue Dragonscale Shoulders",
-        itemId = 227873,
-        skillRequired = 295,
-        skillRange = { orange = 295, yellow = 315, green = 325, gray = 335 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 28 },
-            { itemId = 15415, name = "Blue Dragonscale", count = 30 },
-            { itemId = 12810, name = "Enchanted Leather", count = 2 },
-            { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 227899,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
     -- Bileblister Boots (295)
     {
         id = 1297128,
@@ -7542,6 +7090,25 @@ local recipes = {
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 275597,
+        },
+        expansion = C.EXPANSION.FOREVER,
+    },
+    -- Onyxia Scale Breastplate (300)
+    {
+        id = 19106,
+        name = "Onyxia Scale Breastplate",
+        itemId = 15141,
+        skillRequired = 300,
+        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
+        reagents = {
+            { itemId = 8170, name = "Rugged Leather", count = 40 },
+            { itemId = 15410, name = "Scale of Onyxia", count = 12 },
+            { itemId = 15416, name = "Black Dragonscale", count = 60 },
+            { itemId = 14341, name = "Rune Thread", count = 2 },
+        },
+        source = {
+            type = C.SOURCE_TYPE.UNKNOWN,
+            itemId = 15780,
         },
         expansion = C.EXPANSION.FOREVER,
     },
@@ -7901,163 +7468,23 @@ local recipes = {
         },
         expansion = C.EXPANSION.FOREVER,
     },
-    -- Brilliant Chromatic Cloak (300)
+    -- Dreamscale Breastplate (300)
     {
-        id = 461653,
-        name = "Brilliant Chromatic Cloak",
-        itemId = 227869,
+        id = 24703,
+        name = "Dreamscale Breastplate",
+        itemId = 20380,
         skillRequired = 300,
         skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
         reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 30 },
-            { itemId = 12607, name = "Brilliant Chromatic Scale", count = 12 },
-            { itemId = 15416, name = "Black Dragonscale", count = 30 },
-            { itemId = 15414, name = "Red Dragonscale", count = 30 },
-            { itemId = 15407, name = "Cured Rugged Hide", count = 5 },
-            { itemId = 14341, name = "Rune Thread", count = 8 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 227910,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Hardened Black Dragonscale Leggings (300)
-    {
-        id = 461657,
-        name = "Hardened Black Dragonscale Leggings",
-        itemId = 227852,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 40 },
-            { itemId = 15416, name = "Black Dragonscale", count = 60 },
-            { itemId = 12810, name = "Enchanted Leather", count = 4 },
-            { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 227903,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Hardened Black Dragonscale Shoulders (300)
-    {
-        id = 461659,
-        name = "Hardened Black Dragonscale Shoulders",
-        itemId = 227853,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 44 },
-            { itemId = 15416, name = "Black Dragonscale", count = 45 },
-            { itemId = 12810, name = "Enchanted Leather", count = 2 },
-            { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 227904,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Masterwork Volcanic Shoulders (300)
-    {
-        id = 461663,
-        name = "Masterwork Volcanic Shoulders",
-        itemId = 227866,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 10 },
-            { itemId = 7078, name = "Essence of Fire", count = 1 },
-            { itemId = 7076, name = "Essence of Earth", count = 1 },
-            { itemId = 14341, name = "Rune Thread", count = 2 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 227907,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Mastercrafted Shifting Cloak (300)
-    {
-        id = 461690,
-        name = "Mastercrafted Shifting Cloak",
-        itemId = 227854,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 30 },
-            { itemId = 7082, name = "Essence of Air", count = 12 },
-            { itemId = 12753, name = "Skin of Shadow", count = 4 },
-            { itemId = 12809, name = "Guardian Stone", count = 8 },
+            { itemId = 12810, name = "Enchanted Leather", count = 12 },
+            { itemId = 20381, name = "Dreamscale", count = 6 },
+            { itemId = 12803, name = "Living Essence", count = 4 },
             { itemId = 15407, name = "Cured Rugged Hide", count = 4 },
-            { itemId = 14341, name = "Rune Thread", count = 8 },
+            { itemId = 14227, name = "Ironweb Spider Silk", count = 6 },
         },
         source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228276,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Swift Flight Vambraces (300)
-    {
-        id = 461706,
-        name = "Swift Flight Vambraces",
-        itemId = 227883,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 12 },
-            { itemId = 18512, name = "Larval Acid", count = 8 },
-            { itemId = 15420, name = "Ironfeather", count = 60 },
-            { itemId = 15407, name = "Cured Rugged Hide", count = 4 },
-            { itemId = 14341, name = "Rune Thread", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228301,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Devilcore Leggings (300)
-    {
-        id = 461724,
-        name = "Devilcore Leggings",
-        itemId = 227847,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 30 },
-            { itemId = 15417, name = "Devilsaur Leather", count = 20 },
-            { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
-            { itemId = 14341, name = "Rune Thread", count = 1 },
-            { itemId = 7078, name = "Essence of Fire", count = 10 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228120,
-        },
-        expansion = C.EXPANSION.FOREVER,
-    },
-    -- Girdle of Arcane Insight (300)
-    {
-        id = 461754,
-        name = "Girdle of Arcane Insight",
-        itemId = 227882,
-        skillRequired = 300,
-        skillRange = { orange = 300, yellow = 320, green = 330, gray = 340 },
-        reagents = {
-            { itemId = 8170, name = "Rugged Leather", count = 12 },
-            { itemId = 12804, name = "Powerful Mojo", count = 12 },
-            { itemId = 15407, name = "Cured Rugged Hide", count = 2 },
-            { itemId = 14341, name = "Rune Thread", count = 4 },
-        },
-        source = {
-            type = C.SOURCE_TYPE.DROP,
-            itemId = 228319,
+            type = C.SOURCE_TYPE.UNKNOWN,
+            itemId = 20382,
         },
         expansion = C.EXPANSION.FOREVER,
     },
