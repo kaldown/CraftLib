@@ -120,7 +120,7 @@ def test_forever_entry_values():
         "ItemEffect": ("ID", "SpellID"),
         "ItemSparse": ("ID", "Display_lang", "BuyPrice", "SellPrice", "MinFactionID",
                        "MinReputation", "VendorStackCount", "RequiredSkillRank",
-                       "RequiredSkill"),
+                       "RequiredSkill", "RequiredAbility"),
         "SkillLineAbility": ("SkillLine", "Spell", "TrivialSkillLineRankLow",
                              "TrivialSkillLineRankHigh", "AcquireMethod",
                              "MinSkillLineRank", "TradeSkillCategoryID")}
@@ -128,6 +128,7 @@ def test_forever_entry_values():
     # MANUAL: a hand-aligned value, listed in REVIEW.md like the others.
     assert f.difficulty_certainties == ("INGAME", "DB2", "GUIDE", "CROSS", "WIKI", "MANUAL")
     assert f.acquire_method and f.gap_skill_up_only
+    assert f.specialization_facts == "Forever/specialization_facts.json"
     assert f.leftover_categories == ("SEASON OF DISCOVERY",)
     assert len(f.wowhead_guides) == 13
     assert all(g.startswith("guide/") for g in f.wowhead_guides)

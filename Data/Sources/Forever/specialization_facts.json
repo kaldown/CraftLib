@@ -1,0 +1,4 @@
+{
+  "_note": "Which specialization a teaching item requires, for teaching items the pinned build has no ItemSparse row for (23 on 1.60.1.71037). Read from the item's tooltip in game. items: \"<itemId>\": {\"spellId\": <the specialization's spell id, 0 for none>, \"evidence\": \"<where and when it was read>\"}. A fact never overrides the build: when the build gains the row, the generator warns that the fact is no longer needed, and fails if they disagree.",
+  "items": {}
+}

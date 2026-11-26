@@ -374,7 +374,115 @@ def build_indexes(data: dict, bucket) -> dict:
                                   for row in data["TotemCategory"] if row.get("Name_lang")}
         indexes["spell_tools"] = build_spell_tools(data["SpellTotems"])
 
+    # item -> the spell a character must know to use it ("0" = none). On a teaching item
+    # that is how the game says a recipe needs a specialization (Pattern: Chimeric Boots
+    # requires 10660 Tribal Leatherworking).
+    indexes["required_ability"] = {row["ID"]: (row.get("RequiredAbility") or "0").strip() or "0"
+                                   for row in data["ItemSparse"]}
+    # spell -> the skill lines it is an ability of (recipe_specialization below).
+    spell_lines: dict[str, set[str]] = {}
+    for row in data["SkillLineAbility"]:
+        if row.get("Spell"):
+            spell_lines.setdefault(row["Spell"], set()).add(row.get("SkillLine", ""))
+    indexes["spell_lines"] = {spell: frozenset(lines) for spell, lines in spell_lines.items()}
+
     return indexes
+
+
+SPECIALIZATION_FACTS_NAME = "specialization_facts.json"
+
+
+def load_specialization_facts(sources_dir: Path, bucket) -> dict[str, str]:
+    """item id -> the spell id its tooltip names ("0" = no specialization), for teaching
+    items this build has no ItemSparse row for; {} when the bucket names no facts file.
+
+    Shape: {"_note": "...", "items": {"<itemId>": {"spellId": <int, 0 = none>,
+    "evidence": "<where it was read>"}}}. A fact without evidence is refused: it would be
+    a guess with nothing to check it against.
+    """
+    if bucket.specialization_facts is None:
+        return {}
+    path = Path(sources_dir) / bucket.specialization_facts
+    if not path.is_file():
+        # The registry names it, so a missing file is a config error, not "no facts".
+        raise FileNotFoundError(f"bucket '{bucket.key}': {bucket.specialization_facts} not found at {path}")
+    doc = load_json(path)
+    items = doc.get("items") if isinstance(doc, dict) else None
+    if not isinstance(items, dict):
+        raise GenerateError(f"bucket '{bucket.key}': {path}: expected an object with \"items\"")
+    facts = {}
+    for item, fact in items.items():
+        where = f"bucket '{bucket.key}': {SPECIALIZATION_FACTS_NAME} item {item}"
+        if not str(item).isdigit() or not isinstance(fact, dict):
+            raise GenerateError(f"{where}: expected a numeric item id and an object")
+        spell = fact.get("spellId")
+        if isinstance(spell, bool) or not isinstance(spell, int) or spell < 0:
+            raise GenerateError(f"{where}: spellId must be a spell id, or 0 for none")
+        if not isinstance(fact.get("evidence"), str) or not fact["evidence"].strip():
+            raise GenerateError(f"{where}: no evidence; say where the fact was read")
+        facts[str(item)] = str(spell)
+    return facts
+
+
+def recipe_specialization(where: str, source: dict, profession: Profession,
+                          indexes: dict) -> dict | None:
+    """The specialization a recipe can only be learned with, from its teaching item.
+
+    None: the data says none is needed (RequiredAbility 0, or a spell outside the
+    profession's line, e.g. a riding skill), or there is no teaching item (a trainer
+    recipe: item data cannot say, the known gap). {"unknown": True}: the item has no
+    ItemSparse row in this build and no fact settles it. Never "none" for "not known".
+
+    WHY source.itemId and not the DB2 teaching join (recipe_item): it is the item a
+    consumer finds in the bags or buys, so it is the one whose requirement matters. On the
+    Classic parent join, recipe_item can be a retired item without an ItemSparse row next
+    to a trainer recipe (TBC Knothide Ammo Pouch, measured 2026-11-26); judging it would
+    mark that trainer recipe unknown and take it out of every path.
+    """
+    item = source.get("itemId")
+    if item is None:
+        return None
+    item = str(item)
+    facts = indexes.get("specialization_facts", {})
+    line = str(profession.skill_line)
+    in_build = item in indexes["required_ability"]
+
+    def spec_of(spell: str) -> dict | None:
+        if spell in ("", "0") or line not in indexes["spell_lines"].get(spell, ()):
+            return None
+        name = indexes["spell_names"].get(spell)
+        if not name:
+            raise GenerateError(f"{where}: specialization spell {spell} has no name in SpellName")
+        return {"spellId": int(spell), "name": name}
+
+    if in_build:
+        spec = spec_of(indexes["required_ability"][item])
+        if item in facts:
+            if spec_of(facts[item]) != spec:
+                raise GenerateError(
+                    f"{where}: {SPECIALIZATION_FACTS_NAME} item {item} says spell {facts[item]}, "
+                    f"the build says {indexes['required_ability'][item]}; fix the fact")
+            print(f"WARNING: {SPECIALIZATION_FACTS_NAME} item {item} is no longer needed "
+                  f"(the build has its row)", file=sys.stderr)
+        return spec
+    if item in facts:
+        spell = facts[item]
+        if spell != "0" and line not in indexes["spell_lines"].get(spell, ()):
+            raise GenerateError(
+                f"{where}: {SPECIALIZATION_FACTS_NAME} item {item} names spell {spell}, "
+                f"which is not an ability of the {profession.name} line {line}")
+        return spec_of(spell)
+    return {"unknown": True}
+
+
+def profession_specializations(recipes: list[dict]) -> list[dict]:
+    """The distinct specializations the recipes need, by spell id (unknowns name none)."""
+    seen: dict[int, dict] = {}
+    for recipe in recipes:
+        spec = recipe.get("specialization")
+        if spec and "spellId" in spec:
+            seen.setdefault(spec["spellId"], {"spellId": spec["spellId"], "name": spec["name"]})
+    return [seen[k] for k in sorted(seen)]
 
 
 def build_spell_tools(rows: list[dict]) -> dict[str, tuple[list[str], list[str]]]:
@@ -776,6 +884,12 @@ def extract_recipes(
             recipe["itemId"] = int(item_id)
             recipe["itemName"] = indexes["item_names"].get(item_id, f"Unknown-{item_id}")
 
+        # WHY only when set: most recipes need no specialization, and the absent field
+        # already says so (an unknown requirement is written, never left out).
+        specialization = recipe_specialization(where, source, profession, indexes)
+        if specialization is not None:
+            recipe["specialization"] = specialization
+
         recipe["source"] = source
 
         recipes.append(recipe)
@@ -792,6 +906,12 @@ def _generated_from(bucket) -> str:
     if bucket.wowhead_guides:
         return "-- Generated from DB2 data, Wowhead guide tables and the Warcraft Wiki recipe tables"
     return "-- Generated from DB2 data and the Warcraft Wiki recipe tables"
+
+
+def _specialization_lua(spec: dict) -> str:
+    if spec.get("unknown"):
+        return "{ unknown = true }"
+    return f'{{ spellId = {spec["spellId"]}, name = "{escape_lua_string(spec["name"])}" }}'
 
 
 def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
@@ -900,6 +1020,8 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
                 f'{{ itemId = {t["itemId"]}, name = "{escape_lua_string(t["name"])}" }}'
                 for t in recipe["tools"])
             lines.append(f"        tools = {{ {tools} }},")
+        if recipe.get("specialization"):
+            lines.append(f"        specialization = {_specialization_lua(recipe['specialization'])},")
         lines.append("        source = {")
         lines.append(source_str)
         lines.append("        },")
@@ -923,6 +1045,10 @@ def generate_lua(recipes: list[dict], profession: Profession, bucket) -> str:
     lines.append(f"    expansion = C.EXPANSION.{max_exp},")
     lines.append(f'    profile = "{profile}",')  # runtime load-guard tag; generalizes the old SoD-only flavor field
     lines.append(f"    milestones = {milestones},")
+    specializations = profession_specializations(recipes)
+    if specializations:
+        listed = ", ".join(_specialization_lua(s) for s in specializations)
+        lines.append(f"    specializations = {{ {listed} }},")
     lines.append("    recipes = recipes,")
     lines.append("})")
     lines.append("")
@@ -1023,6 +1149,7 @@ def main(argv: list[str] | None = None) -> int:
         data = load_all_data(data_dir, bucket)
         indexes = build_indexes(data, bucket)
         indexes["trivial_ranks"] = build_trivial_ranks(data)
+        indexes["specialization_facts"] = load_specialization_facts(args.sources_dir, bucket)
         print(f"Built indexes: {len(indexes['spell_names'])} spells, "
               f"{len(indexes['item_names'])} items, "
               f"{len(indexes['recipe_items'])} recipe items", file=sys.stderr)
