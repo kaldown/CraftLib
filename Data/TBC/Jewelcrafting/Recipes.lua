@@ -3107,6 +3107,7 @@ local recipes = {
         reagents = {
             { itemId = 23436, name = "Living Ruby", count = 1 },
         },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 33145,

@@ -114,6 +114,10 @@ Excluded: 30.
 - 1251740 Major Frenzy Potion: wiki price 180 Merchant's Favor differs from the guide's 240
 - 1251744 Greater Mender's Potion: guide says TRAINER; DB2 has teaching item 250991
 
+### Specialization (0)
+
+none
+
 ## Blacksmithing
 
 Orange from: AUTO 5, CROSS 7, GUIDE 7, ITEM 297, WIKI 66. Sources: DROP 92, QUEST 27, REPUTATION 47, STARTER 5, TRAINER 73, UNKNOWN 67, VENDOR 71.
@@ -515,6 +519,57 @@ Excluded: 124.
 - 1292988 Sabatons of Glory: created item 273951 has no data in this build
 - 1292988 Sabatons of Glory: wiki says vendor; price not in DB2 or wiki
 
+### Specialization (48)
+
+- 15292 Dark Iron Pulverizer: Weaponsmith
+- 15294 Dark Iron Sunderer: Weaponsmith
+- 15296 Dark Iron Plate: Armorsmith
+- 16655 Fiery Plate Gauntlets: Armorsmith
+- 16660 Dawnbringer Shoulders: Armorsmith
+- 16667 Demon Forged Breastplate: Armorsmith
+- 16724 Whitesoul Helm: Armorsmith
+- 16729 Lionheart Helm: Armorsmith
+- 16741 Stronghold Gauntlets: Armorsmith
+- 16742 Enchanted Thorium Helm: Armorsmith
+- 16744 Enchanted Thorium Leggings: Armorsmith
+- 16745 Enchanted Thorium Breastplate: Armorsmith
+- 16965 Bleakwood Hew: unknown (teaching item not in this build)
+- 16970 Dawn's Edge: Master Axesmith
+- 16973 Enchanted Battlehammer: Master Hammersmith
+- 16978 Blazing Rapier: Master Swordsmith
+- 16983 Serenity: Master Hammersmith
+- 16985 Corruption: Master Swordsmith
+- 16986 Blood Talon: unknown (teaching item not in this build)
+- 16987 Darkspear: unknown (teaching item not in this build)
+- 16988 Hammer of the Titans: Master Hammersmith
+- 16990 Arcanite Champion: Master Swordsmith
+- 16991 Annihilator: Master Axesmith
+- 16992 Frostguard: Master Swordsmith
+- 16993 Masterwork Stormhammer: Master Hammersmith
+- 16994 Arcanite Reaper: Master Axesmith
+- 16995 Heartseeker: Weaponsmith
+- 20872 Fiery Chain Girdle: Armorsmith
+- 20873 Fiery Chain Shoulders: Armorsmith
+- 20874 Dark Iron Bracers: Armorsmith
+- 20876 Dark Iron Leggings: Armorsmith
+- 20890 Dark Iron Reaver: Master Swordsmith
+- 20897 Dark Iron Destroyer: Master Axesmith
+- 23636 Dark Iron Helm: Armorsmith
+- 23637 Dark Iron Gauntlets: Armorsmith
+- 23638 Black Amnesty: Weaponsmith
+- 23639 Blackfury: Weaponsmith
+- 23650 Ebon Hand: Master Hammersmith
+- 23652 Blackguard: Master Swordsmith
+- 23653 Nightfall: Master Axesmith
+- 24399 Dark Iron Boots: Armorsmith
+- 27585 Heavy Obsidian Belt: unknown (teaching item not in this build)
+- 27829 Titanic Leggings: Armorsmith
+- 27830 Persuader: Master Hammersmith
+- 27832 Sageblade: Master Swordsmith
+- 28461 Ironvine Breastplate: unknown (teaching item not in this build)
+- 28462 Ironvine Gloves: unknown (teaching item not in this build)
+- 28463 Ironvine Belt: unknown (teaching item not in this build)
+
 ## Enchanting
 
 Orange from: AUTO 5, CROSS 50, GUIDE 9, ITEM 164. Sources: DROP 61, QUEST 2, REPUTATION 13, STARTER 5, TRAINER 59, UNKNOWN 30, VENDOR 58.
@@ -638,6 +693,10 @@ Excluded: 34.
 - 1249114 Dormant Heart of the Mountain: guide skill 285 differs from ITEM orange 265
 - 1249114 Dormant Heart of the Mountain: wiki row skill 285 differs from ITEM orange 265
 - 1294054 Enchant Gloves - Lotus Claw: wiki row skill 290 differs from ITEM orange 295
+
+### Specialization (0)
+
+none
 
 ## Engineering
 
@@ -830,6 +889,26 @@ Excluded: 42.
 - 26011 Tranquil Mechanical Yeti: wiki row skill 320 differs from CROSS orange 250
 - 1293088 9-60 Battery Pack: created item 274048 has no data in this build
 - 1308182 Serrated Strap: created item 280309 has no data in this build
+
+### Specialization (17)
+
+- 12718 Goblin Construction Helmet: unknown (teaching item not in this build)
+- 12754 The Big One: unknown (teaching item not in this build)
+- 12755 Goblin Bomb Dispenser: unknown (teaching item not in this build)
+- 12758 Goblin Rocket Helmet: unknown (teaching item not in this build)
+- 12759 Gnomish Death Ray: unknown (teaching item not in this build)
+- 12760 Goblin Sapper Charge: unknown (teaching item not in this build)
+- 12897 Gnomish Goggles: unknown (teaching item not in this build)
+- 12899 Gnomish Shrink Ray: unknown (teaching item not in this build)
+- 12902 Gnomish Net-o-Matic Projector: unknown (teaching item not in this build)
+- 12903 Gnomish Harm Prevention Belt: unknown (teaching item not in this build)
+- 12905 Gnomish Rocket Boots: unknown (teaching item not in this build)
+- 12906 Gnomish Battle Chicken: unknown (teaching item not in this build)
+- 12907 Gnomish Mind Control Cap: unknown (teaching item not in this build)
+- 12908 Goblin Dragon Gun: unknown (teaching item not in this build)
+- 23078 Goblin Jumper Cables XL: Goblin Engineer
+- 23096 Alarm-O-Bot: Gnomish Engineer
+- 23129 World Enlarger: Gnomish Engineer
 
 ## Leatherworking
 
@@ -1286,6 +1365,56 @@ Excluded: 158.
 - 1299916 Spiritcaller Mantle: wiki says vendor; price not in DB2 or wiki
 - 1299917 Spiritcaller Boots: wiki says vendor; price not in DB2 or wiki
 
+### Specialization (47)
+
+- 16650 Wildthorn Mail: Tribal Leatherworking
+- 16661 Storm Gauntlets: Elemental Leatherworking
+- 16728 Helm of the Great Chief: Tribal Leatherworking
+- 16746 Invulnerable Mail: Elemental Leatherworking
+- 19050 Green Dragonscale Breastplate: Dragonscale Leatherworking
+- 19053 Chimeric Gloves: Tribal Leatherworking
+- 19054 Red Dragonscale Breastplate: Dragonscale Leatherworking
+- 19059 Volcanic Leggings: Elemental Leatherworking
+- 19060 Green Dragonscale Leggings: Dragonscale Leatherworking
+- 19061 Living Shoulders: Elemental Leatherworking
+- 19062 Ironfeather Shoulders: Tribal Leatherworking
+- 19063 Chimeric Boots: Tribal Leatherworking
+- 19066 Frostsaber Boots: Tribal Leatherworking
+- 19067 Stormshroud Pants: Elemental Leatherworking
+- 19068 Warbear Harness: Tribal Leatherworking
+- 19073 Chimeric Leggings: Tribal Leatherworking
+- 19074 Frostsaber Leggings: Tribal Leatherworking
+- 19076 Volcanic Breastplate: Elemental Leatherworking
+- 19077 Blue Dragonscale Breastplate: Dragonscale Leatherworking
+- 19078 Living Leggings: Elemental Leatherworking
+- 19079 Stormshroud Armor: Elemental Leatherworking
+- 19080 Warbear Woolies: Tribal Leatherworking
+- 19081 Chimeric Vest: Tribal Leatherworking
+- 19084 Devilsaur Gauntlets: Tribal Leatherworking
+- 19085 Black Dragonscale Breastplate: Dragonscale Leatherworking
+- 19086 Ironfeather Breastplate: Tribal Leatherworking
+- 19087 Frostsaber Gloves: Tribal Leatherworking
+- 19089 Blue Dragonscale Shoulders: Dragonscale Leatherworking
+- 19090 Stormshroud Shoulders: Elemental Leatherworking
+- 19094 Black Dragonscale Shoulders: Dragonscale Leatherworking
+- 19095 Living Breastplate: Elemental Leatherworking
+- 19097 Devilsaur Leggings: Tribal Leatherworking
+- 19101 Volcanic Shoulders: Elemental Leatherworking
+- 19104 Frostsaber Tunic: Tribal Leatherworking
+- 19106 Onyxia Scale Breastplate: unknown (teaching item not in this build)
+- 19107 Black Dragonscale Leggings: Dragonscale Leatherworking
+- 20853 Corehound Boots: Tribal Leatherworking
+- 20854 Molten Helm: Elemental Leatherworking
+- 20855 Black Dragonscale Boots: Dragonscale Leatherworking
+- 22926 Chromatic Cloak: Dragonscale Leatherworking
+- 22927 Hide of the Wild: Tribal Leatherworking
+- 22928 Shifting Cloak: Elemental Leatherworking
+- 23708 Chromatic Gauntlets: Dragonscale Leatherworking
+- 23709 Corehound Belt: Tribal Leatherworking
+- 23710 Molten Belt: Elemental Leatherworking
+- 24703 Dreamscale Breastplate: unknown (teaching item not in this build)
+- 26279 Stormshroud Gloves: Elemental Leatherworking
+
 ## Tailoring
 
 Orange from: AUTO 5, CROSS 4, ITEM 284, WIKI 68. Sources: DROP 90, QUEST 5, REPUTATION 39, STARTER 5, TRAINER 71, UNKNOWN 47, VENDOR 104.
@@ -1523,6 +1652,10 @@ Excluded: 110.
 - 1292980 Demonheart Boots: created item 273943 has no data in this build
 - 1292980 Demonheart Boots: wiki says vendor; price not in DB2 or wiki
 
+### Specialization (0)
+
+none
+
 ## Cooking
 
 Orange from: AUTO 4, CROSS 7, ITEM 111. Sources: DROP 22, QUEST 25, STARTER 4, TRAINER 7, UNKNOWN 9, VENDOR 55.
@@ -1578,6 +1711,10 @@ Excluded: 11.
 - 1270632 Critter Cookie: created item 263507 has no data in this build
 - 1270635 Pincer Bites: guide says QUEST; wiki source 'Vendor'
 
+### Specialization (0)
+
+none
+
 ## FirstAid
 
 Orange from: AUTO 1, CROSS 8, GUIDE 5, ITEM 14. Sources: DROP 8, QUEST 1, REPUTATION 1, STARTER 1, TRAINER 13, VENDOR 4.
@@ -1609,6 +1746,10 @@ none
 - 1259345 Powerful Poultice: wiki row skill 295 differs from ITEM orange 280
 - 1259348 Leather Tourniquet: wiki row skill 220 differs from ITEM orange 200
 - 1259349 Surgical Tourniquet: wiki row skill 280 differs from ITEM orange 265
+
+### Specialization (0)
+
+none
 
 ## Mining
 
@@ -1646,3 +1787,7 @@ none
 - 3307 Smelt Iron: trainer per SoD (WOWHEAD); no wiki row
 - 3308 Smelt Gold: trainer per SoD (WOWHEAD); no wiki row
 - 1213638 Smelt Obsidian-Infused Thorium Bar: created item 234003 has no data in this build
+
+### Specialization (0)
+
+none

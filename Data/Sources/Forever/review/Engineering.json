@@ -498,6 +498,110 @@
     "UNKNOWN": 66,
     "VENDOR": 51
   },
+  "specializations": [
+    [
+      12718,
+      "Goblin Construction Helmet",
+      0,
+      "unknown"
+    ],
+    [
+      12754,
+      "The Big One",
+      0,
+      "unknown"
+    ],
+    [
+      12755,
+      "Goblin Bomb Dispenser",
+      0,
+      "unknown"
+    ],
+    [
+      12758,
+      "Goblin Rocket Helmet",
+      0,
+      "unknown"
+    ],
+    [
+      12759,
+      "Gnomish Death Ray",
+      0,
+      "unknown"
+    ],
+    [
+      12760,
+      "Goblin Sapper Charge",
+      0,
+      "unknown"
+    ],
+    [
+      12897,
+      "Gnomish Goggles",
+      0,
+      "unknown"
+    ],
+    [
+      12899,
+      "Gnomish Shrink Ray",
+      0,
+      "unknown"
+    ],
+    [
+      12902,
+      "Gnomish Net-o-Matic Projector",
+      0,
+      "unknown"
+    ],
+    [
+      12903,
+      "Gnomish Harm Prevention Belt",
+      0,
+      "unknown"
+    ],
+    [
+      12905,
+      "Gnomish Rocket Boots",
+      0,
+      "unknown"
+    ],
+    [
+      12906,
+      "Gnomish Battle Chicken",
+      0,
+      "unknown"
+    ],
+    [
+      12907,
+      "Gnomish Mind Control Cap",
+      0,
+      "unknown"
+    ],
+    [
+      12908,
+      "Goblin Dragon Gun",
+      0,
+      "unknown"
+    ],
+    [
+      23078,
+      "Goblin Jumper Cables XL",
+      20222,
+      "Goblin Engineer"
+    ],
+    [
+      23096,
+      "Alarm-O-Bot",
+      20219,
+      "Gnomish Engineer"
+    ],
+    [
+      23129,
+      "World Enlarger",
+      20219,
+      "Gnomish Engineer"
+    ]
+  ],
   "unknownSource": [
     [
       12717,

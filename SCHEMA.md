@@ -89,6 +89,7 @@ How the table is built (build-time, not shipped):
     expansion = 2,                -- Highest expansion in data (see EXPANSION constants)
     milestones = { 75, 150, ... },-- Skill cap breakpoints
     recipes = { ... },            -- Array of Recipe objects
+    specializations = { ... },    -- Optional: the specializations its recipes need (see Specializations)
 }
 ```
 
@@ -112,6 +113,7 @@ How the table is built (build-time, not shipped):
     },
     source = { ... },             -- How to obtain recipe (see Source Object below)
     tools = { ... },              -- Optional, Forever only: required tools (see Tools below)
+    specialization = { ... },     -- Optional: the specialization needed to learn it (see Specializations)
     expansion = 1,                -- Which expansion added this
 }
 ```
@@ -208,6 +210,33 @@ tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { itemId = 2901, nam
 ```
 A `categoryId` entry is satisfied by any item of that category. To find the recipe that makes a tool
 item, use `CraftLib:GetRecipeByProduct(itemId)`. The Classic buckets do not carry tools yet.
+
+### Specializations
+
+Some recipes can only be learned by a character that knows a specialization of the profession
+(Tribal Leatherworking, Armorsmith, Gnomish Engineer, ...). The game says so on the teaching item:
+its required spell (`ItemSparse.RequiredAbility`) is a spell of the profession's own skill line.
+`recipe.specialization` has one of three states:
+
+```lua
+specialization = { spellId = 10660, name = "Tribal Leatherworking" }, -- needs that spell
+specialization = { unknown = true },  -- the build has no data for the teaching item: not known
+-- no field: the data says no specialization is needed
+```
+
+`unknown` is not "none": a consumer that cannot tell should treat the recipe as not learnable
+until known (or learned). No field also covers recipes taught by a trainer: the data has no
+teaching item to read, so a trainer recipe that needs a specialization carries none.
+The requirement is read from the teaching item a source names (`source.itemId`).
+
+A profession lists the specializations its recipes need, sorted by spell id:
+```lua
+specializations = { { spellId = 10656, name = "Dragonscale Leatherworking" }, { spellId = 10658, name = "Elemental Leatherworking" } }
+```
+Which buckets carry it depends on what their build's item data says: on Forever, Leatherworking,
+Blacksmithing and Engineering; on Season of Discovery the same; on TBC and WotLK, Tailoring and
+Engineering (the TBC build dropped the requirement from the old patterns); none on Vanilla, whose
+sources name no teaching item.
 
 ### Reagent Object
 

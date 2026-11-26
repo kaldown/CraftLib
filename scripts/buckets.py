@@ -130,6 +130,9 @@ class Bucket:
     # Wowhead guide pages (paths under the bucket's wowhead_subdomain) whose recipe tables
     # are read as evidence by fetch_wowhead_guides.py.
     wowhead_guides: tuple[str, ...] = ()
+    # Facts about teaching items this build has no ItemSparse row for: which specialization
+    # each requires, read from the game (path under the sources dir; None = no such file).
+    specialization_facts: str | None = None
 
     def profession(self, name: str) -> Profession:
         """Resolve a profession by folder/key/display name, ignoring case and spaces."""
@@ -255,7 +258,7 @@ BUCKETS: dict[str, Bucket] = {
             "ItemEffect": ("ID", "SpellID"),
             "ItemSparse": ("ID", "Display_lang", "BuyPrice", "SellPrice", "MinFactionID",
                            "MinReputation", "VendorStackCount", "RequiredSkillRank",
-                           "RequiredSkill"),
+                           "RequiredSkill", "RequiredAbility"),
             # AcquireMethod / MinSkillLineRank (acquire_method) and the recipe's category
             # (leftover_categories), next to the columns every bucket reads.
             "SkillLineAbility": ("SkillLine", "Spell", "TrivialSkillLineRankLow",
@@ -306,7 +309,11 @@ BUCKETS: dict[str, Bucket] = {
         # Classic, so that run is the game's, not missing data. False restores the first
         # definition (every skill point counts).
         gap_skill_up_only=True,
-        wowhead_guides=_FOREVER_GUIDES),
+        wowhead_guides=_FOREVER_GUIDES,
+        # 23 teaching items have an Item row and no ItemSparse row on 1.60.1.71037, so the
+        # build cannot say which specialization they need; the facts come from their
+        # tooltips in game (LazyProf's /lp diag spec).
+        specialization_facts="Forever/specialization_facts.json"),
 }
 
 

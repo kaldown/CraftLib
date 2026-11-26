@@ -78,7 +78,9 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
                 acquire: dict[int, tuple[int, int]] | None = None,
                 categories: dict[int, int] | None = None,
                 trade_skill_categories: list[dict] | None = None,
-                omit_items: frozenset = frozenset()) -> Path:
+                omit_items: frozenset = frozenset(),
+                required_ability: dict[int, int] | None = None,
+                extra_abilities: dict[int, tuple[str, int]] | None = None) -> Path:
     """extra_teaching: (spell, item) links appended after the regular ones, in order.
     acquire: spell -> (AcquireMethod, MinSkillLineRank); unlisted spells get (0, 1), what
     the real build carries on a recipe learned from a trainer or an item.
@@ -92,6 +94,11 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
     rows (buy 100, sell 25, no faction) for the items extra_teaching links to.
     spell_totems / totem_categories (xitem only) replace the default tool rows: Fixture
     Vest (1002) needs a Blacksmith Hammer (category 162).
+    required_ability: item id -> ItemSparse.RequiredAbility (0 unlisted), the spell a
+    character must know to use the item.
+    extra_abilities: spell id -> (name, skill line), extra SkillLineAbility + SpellName rows
+    for spells that are no recipe (a specialization in its profession's line, a riding skill
+    in its own line).
     """
     if join not in ("parent", "xitem"):
         raise ValueError(f"unknown join '{join}'")
@@ -125,6 +132,12 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
         if item is not None:
             links.append((spell, 0 if teaching_parent_zero else item))
     links.extend(extra_teaching)
+    for spell, (name, line) in (extra_abilities or {}).items():
+        sla.append({"ID": len(sla) + 1, "SkillLine": line, "Spell": spell,
+                    "TrivialSkillLineRankLow": 0, "TrivialSkillLineRankHigh": 0,
+                    "AcquireMethod": 0, "MinSkillLineRank": 1, "TradeSkillCategoryID": 0})
+        if str(spell) not in omit_spell_names:
+            names.append({"ID": spell, "Name_lang": name})
 
     tables = {}
     if join == "parent":
@@ -153,11 +166,13 @@ def write_build(root: Path, version: str = FIXTURE_VERSION, *,
               "MinReputation": v[4], "VendorStackCount": 1,
               # Dropped by the writer (extrasaction="ignore") when the shape has no such column.
               "RequiredSkillRank": _RSR.get(i, 0),
-              "RequiredSkill": _TEACHING_SKILL if i in teaching_ids else 0}
+              "RequiredSkill": _TEACHING_SKILL if i in teaching_ids else 0,
+              "RequiredAbility": (required_ability or {}).get(i, 0)}
              for i, v in _ITEMS.items() if i not in omit_items]
     items += [{"ID": i, "Display_lang": name, "BuyPrice": 100, "SellPrice": 25,
                "MinFactionID": 0, "MinReputation": 0, "VendorStackCount": 1,
-               "RequiredSkillRank": rank, "RequiredSkill": skill}
+               "RequiredSkillRank": rank, "RequiredSkill": skill,
+               "RequiredAbility": (required_ability or {}).get(i, 0)}
               for i, (name, skill, rank) in (extra_items or {}).items()]
 
     tables.update({"SkillLineAbility": sla, "SpellName": names, "SpellEffect": effects,
@@ -261,6 +276,9 @@ def write_forever_tree(root: Path, *, wikitext: str = FOREVER_WIKITEXT,
     if rc != 0:
         raise RuntimeError(f"fixture extract failed with exit {rc}")
     write_wiki_cache(src, wikitext)
+    # The registry names the Forever facts file; none of the fixture's items needs a fact.
+    (src / "Forever" / "specialization_facts.json").write_text(
+        json.dumps({"_note": "fixture", "items": {}}), encoding="utf-8")
     for folder, recipes in (("Vanilla", vanilla_recipes), ("SoD", sod_recipes)):
         twin = src / folder
         twin.mkdir(parents=True, exist_ok=True)

@@ -198,6 +198,12 @@ def profession_data(cov: Coverage, held_back: bool, shipped: "list[dict]",
         "notes": [[int(sid), name, note] for sid, name, note in notes],
         "unknownSource": [[r["id"], r["name"]] for r in shipped
                           if r["source"]["type"] == "UNKNOWN"],
+        # [id, name, spell id, specialization] per shipped recipe that needs one; 0 and
+        # "unknown" when the build has no data for its teaching item.
+        "specializations": [[r["id"], r["name"],
+                             r["specialization"].get("spellId", 0),
+                             r["specialization"].get("name", "unknown")]
+                            for r in shipped if r.get("specialization")],
         "orangeFrom": dict(Counter(r.get("difficultyOrigin") or "?" for r in shipped)),
         "sourceTypes": dict(Counter(r["source"]["type"] for r in shipped)),
     }
@@ -212,6 +218,9 @@ def write_profession(review_dir: Path, folder: str, data: dict) -> Path:
                                    key=lambda e: e[0])
     data["notes"] = sorted(([int(e[0]), e[1], e[2]] for e in data["notes"]),
                            key=lambda e: (e[0], e[2]))
+    if "specializations" in data:
+        data["specializations"] = sorted(([int(e[0]), e[1], int(e[2]), e[3]]
+                                          for e in data["specializations"]), key=lambda e: e[0])
     review_dir = Path(review_dir)
     review_dir.mkdir(parents=True, exist_ok=True)
     path = review_dir / f"{folder}.json"
@@ -221,8 +230,8 @@ def write_profession(review_dir: Path, folder: str, data: dict) -> Path:
 
 def load_profession(path: Path) -> dict:
     data = load_json(path)
-    # "notes" is not required: a file written before notes existed stays readable, and
-    # render says its notes were not recorded (generating one profession re-renders
+    # "notes" and "specializations" are not required: a file written before they existed
+    # stays readable, and render says they were not recorded (generating one profession re-renders
     # REVIEW.md from every file, so a strict check would stop the run that updates it).
     keys = ("coverage", "heldBack", "excluded", "unknownSource", "orangeFrom", "sourceTypes")
     if not isinstance(data, dict) or any(k not in data for k in keys):
@@ -338,5 +347,14 @@ def render(review_dir: Path, bucket) -> str:
         else:
             out += ["", f"### Notes ({len(notes)})", ""]
             out += [f"- {sid} {name}: {note}" for sid, name, note in notes] or ["none"]
+        specs = data.get("specializations")
+        if specs is None:
+            out += ["", "### Specialization (not recorded)", "",
+                    f"This review file predates specializations; regenerate {prof}."]
+        else:
+            out += ["", f"### Specialization ({len(specs)})", ""]
+            out += [f"- {sid} {name}: "
+                    + (spec if spell else "unknown (teaching item not in this build)")
+                    for sid, name, spell, spec in specs] or ["none"]
     out.append("")
     return "\n".join(out)

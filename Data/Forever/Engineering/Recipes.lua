@@ -2177,6 +2177,7 @@ local recipes = {
             { itemId = 7068, name = "Elemental Fire", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221335,
@@ -2195,6 +2196,7 @@ local recipes = {
             { itemId = 10505, name = "Solid Blasting Powder", count = 3 },
             { itemId = 10560, name = "Unstable Trigger", count = 1 },
         },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221338,
@@ -2216,6 +2218,7 @@ local recipes = {
             { itemId = 1529, name = "Jade", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221327,
@@ -2334,6 +2337,7 @@ local recipes = {
             { itemId = 4234, name = "Heavy Leather", count = 2 },
         },
         tools = { { categoryId = 14, name = "Arclight Spanner" }, { categoryId = 15, name = "Gyromatic Micro-Adjustor" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221328,
@@ -2355,6 +2359,7 @@ local recipes = {
             { itemId = 3860, name = "Mithril Bar", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221329,
@@ -2412,6 +2417,7 @@ local recipes = {
             { itemId = 7909, name = "Aquamarine", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221330,
@@ -2570,6 +2576,7 @@ local recipes = {
             { itemId = 4389, name = "Gyrochronatom", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221331,
@@ -2792,6 +2799,7 @@ local recipes = {
             { itemId = 4407, name = "Accurate Scope", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221340,
@@ -2814,6 +2822,7 @@ local recipes = {
             { itemId = 1529, name = "Jade", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221332,
@@ -2872,6 +2881,7 @@ local recipes = {
             { itemId = 10560, name = "Unstable Trigger", count = 1 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221341,
@@ -2893,6 +2903,7 @@ local recipes = {
             { itemId = 4338, name = "Mageweave Cloth", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221333,
@@ -2933,6 +2944,7 @@ local recipes = {
             { itemId = 9060, name = "Inlaid Mithril Cylinder", count = 1 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221334,
@@ -2954,6 +2966,7 @@ local recipes = {
             { itemId = 10560, name = "Unstable Trigger", count = 1 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221342,
@@ -3050,6 +3063,7 @@ local recipes = {
             { itemId = 10560, name = "Unstable Trigger", count = 1 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 221343,
@@ -3328,6 +3342,7 @@ local recipes = {
             { itemId = 3864, name = "Citrine", count = 1 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18661,
@@ -3388,6 +3403,7 @@ local recipes = {
             { itemId = 14227, name = "Ironweb Spider Silk", count = 2 },
             { itemId = 7910, name = "Star Ruby", count = 2 },
         },
+        specialization = { spellId = 20222, name = "Goblin Engineer" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18653,
@@ -3409,6 +3425,7 @@ local recipes = {
             { itemId = 7191, name = "Fused Wiring", count = 1 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18654,
@@ -4477,5 +4494,6 @@ CraftLib:RegisterProfession("engineering", {
     expansion = C.EXPANSION.FOREVER,
     profile = "FOREVER",
     milestones = { 75, 150, 225, 300 },
+    specializations = { { spellId = 20219, name = "Gnomish Engineer" }, { spellId = 20222, name = "Goblin Engineer" } },
     recipes = recipes,
 })

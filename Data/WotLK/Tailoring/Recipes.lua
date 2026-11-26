@@ -5097,6 +5097,7 @@ local recipes = {
             { itemId = 21884, name = "Primal Fire", count = 10 },
             { itemId = 21881, name = "Netherweb Spider Silk", count = 2 },
         },
+        specialization = { spellId = 26797, name = "Spellfire Tailoring" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 21908,
@@ -5116,6 +5117,7 @@ local recipes = {
             { itemId = 21885, name = "Primal Water", count = 10 },
             { itemId = 21881, name = "Netherweb Spider Silk", count = 2 },
         },
+        specialization = { spellId = 26801, name = "Shadoweave Tailoring" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 21912,
@@ -5135,6 +5137,7 @@ local recipes = {
             { itemId = 21881, name = "Netherweb Spider Silk", count = 2 },
             { itemId = 21886, name = "Primal Life", count = 8 },
         },
+        specialization = { spellId = 26798, name = "Mooncloth Tailoring" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 21916,
@@ -5304,6 +5307,7 @@ local recipes = {
             { itemId = 21884, name = "Primal Fire", count = 12 },
             { itemId = 21881, name = "Netherweb Spider Silk", count = 4 },
         },
+        specialization = { spellId = 26797, name = "Spellfire Tailoring" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 21909,
@@ -5323,6 +5327,7 @@ local recipes = {
             { itemId = 21885, name = "Primal Water", count = 12 },
             { itemId = 21881, name = "Netherweb Spider Silk", count = 2 },
         },
+        specialization = { spellId = 26801, name = "Shadoweave Tailoring" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 21914,
@@ -5342,6 +5347,7 @@ local recipes = {
             { itemId = 21881, name = "Netherweb Spider Silk", count = 2 },
             { itemId = 21886, name = "Primal Life", count = 8 },
         },
+        specialization = { spellId = 26798, name = "Mooncloth Tailoring" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 21918,
@@ -5616,6 +5622,7 @@ local recipes = {
             { itemId = 21884, name = "Primal Fire", count = 16 },
             { itemId = 21881, name = "Netherweb Spider Silk", count = 4 },
         },
+        specialization = { spellId = 26797, name = "Spellfire Tailoring" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 21910,
@@ -5654,6 +5661,7 @@ local recipes = {
             { itemId = 21885, name = "Primal Water", count = 16 },
             { itemId = 21881, name = "Netherweb Spider Silk", count = 4 },
         },
+        specialization = { spellId = 26801, name = "Shadoweave Tailoring" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 21913,
@@ -5691,6 +5699,7 @@ local recipes = {
             { itemId = 22457, name = "Primal Mana", count = 12 },
             { itemId = 21881, name = "Netherweb Spider Silk", count = 4 },
         },
+        specialization = { spellId = 26798, name = "Mooncloth Tailoring" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 21917,
@@ -7917,5 +7926,6 @@ CraftLib:RegisterProfession("tailoring", {
     expansion = C.EXPANSION.WOTLK,
     profile = "WOTLK",
     milestones = { 75, 150, 225, 300, 375, 450 },
+    specializations = { { spellId = 26797, name = "Spellfire Tailoring" }, { spellId = 26798, name = "Mooncloth Tailoring" }, { spellId = 26801, name = "Shadoweave Tailoring" } },
     recipes = recipes,
 })

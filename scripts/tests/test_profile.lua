@@ -113,6 +113,11 @@ check("16001 GetActiveFlavor DEFAULT", f:GetActiveFlavor() == "DEFAULT")
 f:RegisterProfession("fv", { id = 7, name = "F", profile = "FOREVER", milestones = {75}, recipes = {} })
 f:RegisterProfession("vanilla", { id = 1, name = "V", profile = "VANILLA", milestones = {75}, recipes = {} })
 check("FOREVER dataset registers on Forever", f:GetProfession("fv") ~= nil)
+check("no specializations list -> nil", f:GetProfession("fv").specializations == nil)
+f:RegisterProfession("fvlw", { id = 8, name = "FL", profile = "FOREVER", milestones = {75}, recipes = {},
+    specializations = { { spellId = 10656, name = "Dragonscale Leatherworking" } } })
+check("specializations kept",
+    f:GetProfession("fvlw").specializations and f:GetProfession("fvlw").specializations[1].spellId == 10656)
 check("VANILLA dataset skipped on Forever", f:GetProfession("vanilla") == nil)
 local fs = (function()
     _G.C_Seasons = nil

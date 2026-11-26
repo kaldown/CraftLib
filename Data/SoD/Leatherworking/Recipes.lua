@@ -3005,6 +3005,7 @@ local recipes = {
             { itemId = 15412, name = "Green Dragonscale", count = 25 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 15726,
@@ -3126,6 +3127,7 @@ local recipes = {
             { itemId = 15423, name = "Chimera Leather", count = 6 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 15729,
@@ -3164,6 +3166,7 @@ local recipes = {
             { itemId = 7075, name = "Core of Earth", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15732,
@@ -3182,6 +3185,7 @@ local recipes = {
             { itemId = 15412, name = "Green Dragonscale", count = 25 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15733,
@@ -3200,6 +3204,7 @@ local recipes = {
             { itemId = 12803, name = "Living Essence", count = 4 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 15734,
@@ -3220,6 +3225,7 @@ local recipes = {
             { itemId = 1529, name = "Jade", count = 2 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 15735,
@@ -3307,6 +3313,7 @@ local recipes = {
             { itemId = 15423, name = "Chimera Leather", count = 8 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15737,
@@ -3362,6 +3369,7 @@ local recipes = {
             { itemId = 15422, name = "Frostsaber Leather", count = 6 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 15740,
@@ -3382,6 +3390,7 @@ local recipes = {
             { itemId = 7082, name = "Essence of Air", count = 2 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 15741,
@@ -3401,6 +3410,7 @@ local recipes = {
             { itemId = 15419, name = "Warbear Leather", count = 12 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15742,
@@ -3473,6 +3483,7 @@ local recipes = {
             { itemId = 15423, name = "Chimera Leather", count = 8 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15746,
@@ -3601,6 +3612,7 @@ local recipes = {
             { itemId = 15422, name = "Frostsaber Leather", count = 8 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15747,
@@ -3638,6 +3650,7 @@ local recipes = {
             { itemId = 7076, name = "Essence of Earth", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15749,
@@ -3657,6 +3670,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 15751,
@@ -3677,6 +3691,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15752,
@@ -3697,6 +3712,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15753,
@@ -3715,6 +3731,7 @@ local recipes = {
             { itemId = 15419, name = "Warbear Leather", count = 14 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15754,
@@ -3877,6 +3894,7 @@ local recipes = {
             { itemId = 15423, name = "Chimera Leather", count = 10 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15755,
@@ -3932,6 +3950,7 @@ local recipes = {
             { itemId = 15417, name = "Devilsaur Leather", count = 8 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 15758,
@@ -3952,6 +3971,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 15759,
@@ -3973,6 +3993,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15760,
@@ -4076,6 +4097,7 @@ local recipes = {
             { itemId = 15422, name = "Frostsaber Leather", count = 10 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15761,
@@ -4116,6 +4138,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15763,
@@ -4136,6 +4159,7 @@ local recipes = {
             { itemId = 12810, name = "Enchanted Leather", count = 2 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15764,
@@ -4155,6 +4179,7 @@ local recipes = {
             { itemId = 17011, name = "Lava Core", count = 2 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 17022,
@@ -4174,6 +4199,7 @@ local recipes = {
             { itemId = 15414, name = "Red Dragonscale", count = 30 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15730,
@@ -4249,6 +4275,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15770,
@@ -4269,6 +4296,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15771,
@@ -4288,6 +4316,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15772,
@@ -4346,6 +4375,7 @@ local recipes = {
             { itemId = 7076, name = "Essence of Earth", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15775,
@@ -4405,6 +4435,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15779,
@@ -4425,6 +4456,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 1 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 15781,
@@ -4444,6 +4476,7 @@ local recipes = {
             { itemId = 17011, name = "Lava Core", count = 6 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 17023,
@@ -4465,6 +4498,7 @@ local recipes = {
             { itemId = 17011, name = "Lava Core", count = 3 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 17025,
@@ -4563,6 +4597,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 5 },
             { itemId = 14341, name = "Rune Thread", count = 8 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18517,
@@ -4584,6 +4619,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 3 },
             { itemId = 14341, name = "Rune Thread", count = 8 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18518,
@@ -4605,6 +4641,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 4 },
             { itemId = 14341, name = "Rune Thread", count = 8 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18519,
@@ -4693,6 +4730,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 4 },
             { itemId = 14227, name = "Ironweb Spider Silk", count = 4 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 19331,
@@ -4714,6 +4752,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 4 },
             { itemId = 14227, name = "Ironweb Spider Silk", count = 4 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 19332,
@@ -4735,6 +4774,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 4 },
             { itemId = 14227, name = "Ironweb Spider Silk", count = 4 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.VENDOR,
             itemId = 19333,
@@ -4891,6 +4931,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 4 },
             { itemId = 14227, name = "Ironweb Spider Silk", count = 6 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 609,
@@ -5051,6 +5092,7 @@ local recipes = {
             { itemId = 15407, name = "Cured Rugged Hide", count = 2 },
             { itemId = 14227, name = "Ironweb Spider Silk", count = 2 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 21548,
@@ -5999,5 +6041,6 @@ CraftLib:RegisterProfession("leatherworking", {
     expansion = C.EXPANSION.SOD,
     flavor = "SOD",
     milestones = { 75, 150, 225, 300 },
+    specializations = { { spellId = 10656, name = "Dragonscale Leatherworking" }, { spellId = 10658, name = "Elemental Leatherworking" }, { spellId = 10660, name = "Tribal Leatherworking" } },
     recipes = recipes,
 })

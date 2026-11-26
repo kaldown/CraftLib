@@ -37,8 +37,10 @@ REQUIRED_COLUMNS: dict[str, tuple[str, ...]] = {
     "SpellEffect": ("SpellID", "Effect", "EffectItemType"),
     "ItemEffect": ("SpellID", "ParentItemID"),
     "ItemXItemEffect": ("ItemEffectID", "ItemID"),
+    # RequiredAbility: the spell a character must know to use the item; on a teaching
+    # item, the profession specialization it needs (generate_recipes.recipe_specialization).
     "ItemSparse": ("ID", "Display_lang", "BuyPrice", "SellPrice", "MinFactionID",
-                   "MinReputation", "VendorStackCount"),
+                   "MinReputation", "VendorStackCount", "RequiredAbility"),
     "SpellName": ("ID", "Name_lang"),
     "Faction": ("ID", "Name_lang"),
     "SkillLine": ("ID", "ParentSkillLineID"),
