@@ -145,6 +145,9 @@ function CraftLib:RegisterProfession(professionKey, data)
             expansion = data.expansion,
             milestones = data.milestones or {},
             recipes = data.recipes or {},
+            -- The specializations the recipes need ({ spellId, name } each); nil when none
+            -- does, or the data predates the field.
+            specializations = data.specializations,
         }
     end
 
