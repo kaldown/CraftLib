@@ -2503,6 +2503,7 @@ local recipes = {
             { itemId = 10560, name = "Unstable Trigger", count = 1 },
             { itemId = 3864, name = "Citrine", count = 1 },
         },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18661,
@@ -2542,6 +2543,7 @@ local recipes = {
             { itemId = 14227, name = "Ironweb Spider Silk", count = 2 },
             { itemId = 7910, name = "Star Ruby", count = 2 },
         },
+        specialization = { spellId = 20222, name = "Goblin Engineer" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18653,
@@ -2559,6 +2561,7 @@ local recipes = {
             { itemId = 12359, name = "Thorium Bar", count = 4 },
             { itemId = 7191, name = "Fused Wiring", count = 1 },
         },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 18654,
@@ -5602,6 +5605,7 @@ local recipes = {
         reagents = {
             { itemId = 37701, name = "Crystallized Earth", count = 2 },
         },
+        specialization = { spellId = 20222, name = "Goblin Engineer" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 1156,
@@ -5622,6 +5626,7 @@ local recipes = {
         reagents = {
             { itemId = 37703, name = "Crystallized Shadow", count = 2 },
         },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 1156,
@@ -5640,5 +5645,6 @@ CraftLib:RegisterProfession("engineering", {
     expansion = C.EXPANSION.WOTLK,
     profile = "WOTLK",
     milestones = { 75, 150, 225, 300, 375, 450 },
+    specializations = { { spellId = 20219, name = "Gnomish Engineer" }, { spellId = 20222, name = "Goblin Engineer" } },
     recipes = recipes,
 })

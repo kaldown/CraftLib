@@ -1523,6 +1523,296 @@
     "UNKNOWN": 67,
     "VENDOR": 71
   },
+  "specializations": [
+    [
+      15292,
+      "Dark Iron Pulverizer",
+      9787,
+      "Weaponsmith"
+    ],
+    [
+      15294,
+      "Dark Iron Sunderer",
+      9787,
+      "Weaponsmith"
+    ],
+    [
+      15296,
+      "Dark Iron Plate",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      16655,
+      "Fiery Plate Gauntlets",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      16660,
+      "Dawnbringer Shoulders",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      16667,
+      "Demon Forged Breastplate",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      16724,
+      "Whitesoul Helm",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      16729,
+      "Lionheart Helm",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      16741,
+      "Stronghold Gauntlets",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      16742,
+      "Enchanted Thorium Helm",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      16744,
+      "Enchanted Thorium Leggings",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      16745,
+      "Enchanted Thorium Breastplate",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      16965,
+      "Bleakwood Hew",
+      0,
+      "unknown"
+    ],
+    [
+      16970,
+      "Dawn's Edge",
+      17041,
+      "Master Axesmith"
+    ],
+    [
+      16973,
+      "Enchanted Battlehammer",
+      17040,
+      "Master Hammersmith"
+    ],
+    [
+      16978,
+      "Blazing Rapier",
+      17039,
+      "Master Swordsmith"
+    ],
+    [
+      16983,
+      "Serenity",
+      17040,
+      "Master Hammersmith"
+    ],
+    [
+      16985,
+      "Corruption",
+      17039,
+      "Master Swordsmith"
+    ],
+    [
+      16986,
+      "Blood Talon",
+      0,
+      "unknown"
+    ],
+    [
+      16987,
+      "Darkspear",
+      0,
+      "unknown"
+    ],
+    [
+      16988,
+      "Hammer of the Titans",
+      17040,
+      "Master Hammersmith"
+    ],
+    [
+      16990,
+      "Arcanite Champion",
+      17039,
+      "Master Swordsmith"
+    ],
+    [
+      16991,
+      "Annihilator",
+      17041,
+      "Master Axesmith"
+    ],
+    [
+      16992,
+      "Frostguard",
+      17039,
+      "Master Swordsmith"
+    ],
+    [
+      16993,
+      "Masterwork Stormhammer",
+      17040,
+      "Master Hammersmith"
+    ],
+    [
+      16994,
+      "Arcanite Reaper",
+      17041,
+      "Master Axesmith"
+    ],
+    [
+      16995,
+      "Heartseeker",
+      9787,
+      "Weaponsmith"
+    ],
+    [
+      20872,
+      "Fiery Chain Girdle",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      20873,
+      "Fiery Chain Shoulders",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      20874,
+      "Dark Iron Bracers",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      20876,
+      "Dark Iron Leggings",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      20890,
+      "Dark Iron Reaver",
+      17039,
+      "Master Swordsmith"
+    ],
+    [
+      20897,
+      "Dark Iron Destroyer",
+      17041,
+      "Master Axesmith"
+    ],
+    [
+      23636,
+      "Dark Iron Helm",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      23637,
+      "Dark Iron Gauntlets",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      23638,
+      "Black Amnesty",
+      9787,
+      "Weaponsmith"
+    ],
+    [
+      23639,
+      "Blackfury",
+      9787,
+      "Weaponsmith"
+    ],
+    [
+      23650,
+      "Ebon Hand",
+      17040,
+      "Master Hammersmith"
+    ],
+    [
+      23652,
+      "Blackguard",
+      17039,
+      "Master Swordsmith"
+    ],
+    [
+      23653,
+      "Nightfall",
+      17041,
+      "Master Axesmith"
+    ],
+    [
+      24399,
+      "Dark Iron Boots",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      27585,
+      "Heavy Obsidian Belt",
+      0,
+      "unknown"
+    ],
+    [
+      27829,
+      "Titanic Leggings",
+      9788,
+      "Armorsmith"
+    ],
+    [
+      27830,
+      "Persuader",
+      17040,
+      "Master Hammersmith"
+    ],
+    [
+      27832,
+      "Sageblade",
+      17039,
+      "Master Swordsmith"
+    ],
+    [
+      28461,
+      "Ironvine Breastplate",
+      0,
+      "unknown"
+    ],
+    [
+      28462,
+      "Ironvine Gloves",
+      0,
+      "unknown"
+    ],
+    [
+      28463,
+      "Ironvine Belt",
+      0,
+      "unknown"
+    ]
+  ],
   "unknownSource": [
     [
       9957,

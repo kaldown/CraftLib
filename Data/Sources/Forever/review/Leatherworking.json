@@ -1668,6 +1668,290 @@
     "UNKNOWN": 98,
     "VENDOR": 112
   },
+  "specializations": [
+    [
+      16650,
+      "Wildthorn Mail",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      16661,
+      "Storm Gauntlets",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      16728,
+      "Helm of the Great Chief",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      16746,
+      "Invulnerable Mail",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      19050,
+      "Green Dragonscale Breastplate",
+      10656,
+      "Dragonscale Leatherworking"
+    ],
+    [
+      19053,
+      "Chimeric Gloves",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19054,
+      "Red Dragonscale Breastplate",
+      10656,
+      "Dragonscale Leatherworking"
+    ],
+    [
+      19059,
+      "Volcanic Leggings",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      19060,
+      "Green Dragonscale Leggings",
+      10656,
+      "Dragonscale Leatherworking"
+    ],
+    [
+      19061,
+      "Living Shoulders",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      19062,
+      "Ironfeather Shoulders",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19063,
+      "Chimeric Boots",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19066,
+      "Frostsaber Boots",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19067,
+      "Stormshroud Pants",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      19068,
+      "Warbear Harness",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19073,
+      "Chimeric Leggings",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19074,
+      "Frostsaber Leggings",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19076,
+      "Volcanic Breastplate",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      19077,
+      "Blue Dragonscale Breastplate",
+      10656,
+      "Dragonscale Leatherworking"
+    ],
+    [
+      19078,
+      "Living Leggings",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      19079,
+      "Stormshroud Armor",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      19080,
+      "Warbear Woolies",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19081,
+      "Chimeric Vest",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19084,
+      "Devilsaur Gauntlets",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19085,
+      "Black Dragonscale Breastplate",
+      10656,
+      "Dragonscale Leatherworking"
+    ],
+    [
+      19086,
+      "Ironfeather Breastplate",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19087,
+      "Frostsaber Gloves",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19089,
+      "Blue Dragonscale Shoulders",
+      10656,
+      "Dragonscale Leatherworking"
+    ],
+    [
+      19090,
+      "Stormshroud Shoulders",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      19094,
+      "Black Dragonscale Shoulders",
+      10656,
+      "Dragonscale Leatherworking"
+    ],
+    [
+      19095,
+      "Living Breastplate",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      19097,
+      "Devilsaur Leggings",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19101,
+      "Volcanic Shoulders",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      19104,
+      "Frostsaber Tunic",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      19106,
+      "Onyxia Scale Breastplate",
+      0,
+      "unknown"
+    ],
+    [
+      19107,
+      "Black Dragonscale Leggings",
+      10656,
+      "Dragonscale Leatherworking"
+    ],
+    [
+      20853,
+      "Corehound Boots",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      20854,
+      "Molten Helm",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      20855,
+      "Black Dragonscale Boots",
+      10656,
+      "Dragonscale Leatherworking"
+    ],
+    [
+      22926,
+      "Chromatic Cloak",
+      10656,
+      "Dragonscale Leatherworking"
+    ],
+    [
+      22927,
+      "Hide of the Wild",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      22928,
+      "Shifting Cloak",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      23708,
+      "Chromatic Gauntlets",
+      10656,
+      "Dragonscale Leatherworking"
+    ],
+    [
+      23709,
+      "Corehound Belt",
+      10660,
+      "Tribal Leatherworking"
+    ],
+    [
+      23710,
+      "Molten Belt",
+      10658,
+      "Elemental Leatherworking"
+    ],
+    [
+      24703,
+      "Dreamscale Breastplate",
+      0,
+      "unknown"
+    ],
+    [
+      26279,
+      "Stormshroud Gloves",
+      10658,
+      "Elemental Leatherworking"
+    ]
+  ],
   "unknownSource": [
     [
       19106,

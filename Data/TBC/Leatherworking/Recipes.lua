@@ -6482,6 +6482,7 @@ local recipes = {
             { itemId = 23571, name = "Primal Might", count = 8 },
             { itemId = 34664, name = "Sunmote", count = 6 },
         },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 35547,
@@ -6522,6 +6523,7 @@ local recipes = {
             { itemId = 23571, name = "Primal Might", count = 8 },
             { itemId = 34664, name = "Sunmote", count = 6 },
         },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 35543,

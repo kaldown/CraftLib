@@ -4364,6 +4364,7 @@ local recipes = {
             { itemId = 7077, name = "Heart of Fire", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9787, name = "Weaponsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 11610,
@@ -4646,6 +4647,7 @@ local recipes = {
             { itemId = 7077, name = "Heart of Fire", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9787, name = "Weaponsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 11611,
@@ -4708,6 +4710,7 @@ local recipes = {
             { itemId = 8170, name = "Rugged Leather", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 12821,
@@ -4995,6 +4998,7 @@ local recipes = {
             { itemId = 8170, name = "Rugged Leather", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 12824,
@@ -5016,6 +5020,7 @@ local recipes = {
             { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 12825,
@@ -5070,6 +5075,7 @@ local recipes = {
             { itemId = 7077, name = "Heart of Fire", count = 8 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 11612,
@@ -5108,6 +5114,7 @@ local recipes = {
             { itemId = 7910, name = "Star Ruby", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 12696,
@@ -5130,6 +5137,7 @@ local recipes = {
             { itemId = 12364, name = "Huge Emerald", count = 1 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12827,
@@ -5171,6 +5179,7 @@ local recipes = {
             { itemId = 7910, name = "Star Ruby", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 12699,
@@ -5209,6 +5218,7 @@ local recipes = {
             { itemId = 7080, name = "Essence of Water", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 529,
@@ -5256,6 +5266,7 @@ local recipes = {
             { itemId = 8170, name = "Rugged Leather", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12830,
@@ -5356,6 +5367,7 @@ local recipes = {
             { itemId = 8170, name = "Rugged Leather", count = 8 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 12817,
@@ -5375,6 +5387,7 @@ local recipes = {
             { itemId = 17011, name = "Lava Core", count = 3 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -5398,6 +5411,7 @@ local recipes = {
             { itemId = 17011, name = "Lava Core", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -5752,6 +5766,7 @@ local recipes = {
             { itemId = 12800, name = "Azerothian Diamond", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12711,
@@ -5869,6 +5884,7 @@ local recipes = {
             { itemId = 12800, name = "Azerothian Diamond", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12717,
@@ -5890,6 +5906,7 @@ local recipes = {
             { itemId = 12799, name = "Large Opal", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12720,
@@ -5911,6 +5928,7 @@ local recipes = {
             { itemId = 12800, name = "Azerothian Diamond", count = 1 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 12725,
@@ -5932,6 +5950,7 @@ local recipes = {
             { itemId = 12364, name = "Huge Emerald", count = 1 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 12726,
@@ -5954,6 +5973,7 @@ local recipes = {
             { itemId = 12800, name = "Azerothian Diamond", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.QUEST,
             itemId = 12727,
@@ -5975,6 +5995,7 @@ local recipes = {
             { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 12831,
@@ -5996,6 +6017,7 @@ local recipes = {
             { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 12832,
@@ -6017,6 +6039,7 @@ local recipes = {
             { itemId = 7076, name = "Essence of Earth", count = 10 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12833,
@@ -6039,6 +6062,7 @@ local recipes = {
             { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12834,
@@ -6061,6 +6085,7 @@ local recipes = {
             { itemId = 12810, name = "Enchanted Leather", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12835,
@@ -6083,6 +6108,7 @@ local recipes = {
             { itemId = 12810, name = "Enchanted Leather", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12836,
@@ -6104,6 +6130,7 @@ local recipes = {
             { itemId = 12810, name = "Enchanted Leather", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12837,
@@ -6123,6 +6150,7 @@ local recipes = {
             { itemId = 12644, name = "Dense Grinding Stone", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12838,
@@ -6146,6 +6174,7 @@ local recipes = {
             { itemId = 12644, name = "Dense Grinding Stone", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9787, name = "Weaponsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 12839,
@@ -6165,6 +6194,7 @@ local recipes = {
             { itemId = 17011, name = "Lava Core", count = 5 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6188,6 +6218,7 @@ local recipes = {
             { itemId = 17011, name = "Lava Core", count = 6 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6212,6 +6243,7 @@ local recipes = {
             { itemId = 12810, name = "Enchanted Leather", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6236,6 +6268,7 @@ local recipes = {
             { itemId = 12810, name = "Enchanted Leather", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6305,6 +6338,7 @@ local recipes = {
             { itemId = 11371, name = "Dark Iron Bar", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6330,6 +6364,7 @@ local recipes = {
             { itemId = 11382, name = "Blood of the Mountain", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6355,6 +6390,7 @@ local recipes = {
             { itemId = 11371, name = "Dark Iron Bar", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9787, name = "Weaponsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6379,6 +6415,7 @@ local recipes = {
             { itemId = 11371, name = "Dark Iron Bar", count = 6 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9787, name = "Weaponsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6404,6 +6441,7 @@ local recipes = {
             { itemId = 12800, name = "Azerothian Diamond", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6429,6 +6467,7 @@ local recipes = {
             { itemId = 12809, name = "Guardian Stone", count = 12 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6454,6 +6493,7 @@ local recipes = {
             { itemId = 12364, name = "Huge Emerald", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6619,6 +6659,7 @@ local recipes = {
             { itemId = 11371, name = "Dark Iron Bar", count = 6 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.REPUTATION,
             factionId = 59,
@@ -6701,6 +6742,7 @@ local recipes = {
             { itemId = 7076, name = "Essence of Earth", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 22209,
@@ -6811,6 +6853,7 @@ local recipes = {
             { itemId = 13510, name = "Flask of the Titans", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 22388,
@@ -6833,6 +6876,7 @@ local recipes = {
             { itemId = 12753, name = "Skin of Shadow", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 22390,
@@ -6853,6 +6897,7 @@ local recipes = {
             { itemId = 12810, name = "Enchanted Leather", count = 4 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.DROP,
             itemId = 22389,
@@ -6933,6 +6978,7 @@ local recipes = {
             { itemId = 12803, name = "Living Essence", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 22766,
@@ -6952,6 +6998,7 @@ local recipes = {
             { itemId = 12803, name = "Living Essence", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 22767,
@@ -6970,6 +7017,7 @@ local recipes = {
             { itemId = 12803, name = "Living Essence", count = 2 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" } },
+        specialization = { unknown = true },
         source = {
             type = C.SOURCE_TYPE.UNKNOWN,
             itemId = 22768,
@@ -7725,5 +7773,6 @@ CraftLib:RegisterProfession("blacksmithing", {
     expansion = C.EXPANSION.FOREVER,
     profile = "FOREVER",
     milestones = { 75, 150, 225, 300 },
+    specializations = { { spellId = 9787, name = "Weaponsmith" }, { spellId = 9788, name = "Armorsmith" }, { spellId = 17039, name = "Master Swordsmith" }, { spellId = 17040, name = "Master Hammersmith" }, { spellId = 17041, name = "Master Axesmith" } },
     recipes = recipes,
 })
