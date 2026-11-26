@@ -890,7 +890,7 @@ Excluded: 42.
 - 1293088 9-60 Battery Pack: created item 274048 has no data in this build
 - 1308182 Serrated Strap: created item 280309 has no data in this build
 
-### Specialization (17)
+### Specialization (19)
 
 - 12718 Goblin Construction Helmet: unknown (teaching item not in this build)
 - 12754 The Big One: unknown (teaching item not in this build)
@@ -909,6 +909,8 @@ Excluded: 42.
 - 23078 Goblin Jumper Cables XL: Goblin Engineer
 - 23096 Alarm-O-Bot: Gnomish Engineer
 - 23129 World Enlarger: Gnomish Engineer
+- 23486 Dimensional Ripper - Everlook: Goblin Engineer
+- 23489 Ultrasafe Transporter - Gadgetzan: Gnomish Engineer
 
 ## Leatherworking
 

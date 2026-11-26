@@ -2656,6 +2656,7 @@ local recipes = {
             { itemId = 3860, name = "Mithril Bar", count = 16 },
             { itemId = 7075, name = "Core of Earth", count = 2 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -2674,6 +2675,7 @@ local recipes = {
             { itemId = 3860, name = "Mithril Bar", count = 16 },
             { itemId = 7081, name = "Breath of Wind", count = 2 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -2692,6 +2694,7 @@ local recipes = {
             { itemId = 3860, name = "Mithril Bar", count = 12 },
             { itemId = 7075, name = "Core of Earth", count = 4 },
         },
+        specialization = { spellId = 9787, name = "Weaponsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -2710,6 +2713,7 @@ local recipes = {
             { itemId = 3860, name = "Mithril Bar", count = 12 },
             { itemId = 7081, name = "Breath of Wind", count = 4 },
         },
+        specialization = { spellId = 9787, name = "Weaponsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -2728,6 +2732,7 @@ local recipes = {
             { itemId = 3860, name = "Mithril Bar", count = 12 },
             { itemId = 7077, name = "Heart of Fire", count = 4 },
         },
+        specialization = { spellId = 9787, name = "Weaponsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5053,6 +5058,7 @@ local recipes = {
             { itemId = 23446, name = "Adamantite Bar", count = 8 },
             { itemId = 22452, name = "Primal Earth", count = 4 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5072,6 +5078,7 @@ local recipes = {
             { itemId = 21885, name = "Primal Water", count = 2 },
             { itemId = 22451, name = "Primal Air", count = 2 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5090,6 +5097,7 @@ local recipes = {
             { itemId = 23446, name = "Adamantite Bar", count = 6 },
             { itemId = 22451, name = "Primal Air", count = 6 },
         },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5108,6 +5116,7 @@ local recipes = {
             { itemId = 23446, name = "Adamantite Bar", count = 10 },
             { itemId = 22452, name = "Primal Earth", count = 6 },
         },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5127,6 +5136,7 @@ local recipes = {
             { itemId = 21885, name = "Primal Water", count = 3 },
             { itemId = 22451, name = "Primal Air", count = 3 },
         },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5145,6 +5155,7 @@ local recipes = {
             { itemId = 23446, name = "Adamantite Bar", count = 10 },
             { itemId = 22451, name = "Primal Air", count = 6 },
         },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5163,6 +5174,7 @@ local recipes = {
             { itemId = 23446, name = "Adamantite Bar", count = 8 },
             { itemId = 21884, name = "Primal Fire", count = 6 },
         },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5181,6 +5193,7 @@ local recipes = {
             { itemId = 23446, name = "Adamantite Bar", count = 12 },
             { itemId = 22452, name = "Primal Earth", count = 6 },
         },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5391,6 +5404,7 @@ local recipes = {
             { itemId = 23448, name = "Felsteel Bar", count = 4 },
             { itemId = 23449, name = "Khorium Bar", count = 8 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5411,6 +5425,7 @@ local recipes = {
             { itemId = 23447, name = "Eternium Bar", count = 6 },
             { itemId = 23449, name = "Khorium Bar", count = 8 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5430,6 +5445,7 @@ local recipes = {
             { itemId = 22457, name = "Primal Mana", count = 20 },
             { itemId = 23448, name = "Felsteel Bar", count = 14 },
         },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5449,6 +5465,7 @@ local recipes = {
             { itemId = 23449, name = "Khorium Bar", count = 14 },
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 6 },
         },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5469,6 +5486,7 @@ local recipes = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 2 },
             { itemId = 23448, name = "Felsteel Bar", count = 12 },
         },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5489,6 +5507,7 @@ local recipes = {
             { itemId = 23571, name = "Primal Might", count = 4 },
             { itemId = 23447, name = "Eternium Bar", count = 22 },
         },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5509,6 +5528,7 @@ local recipes = {
             { itemId = 23447, name = "Eternium Bar", count = 12 },
             { itemId = 23449, name = "Khorium Bar", count = 8 },
         },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -5529,6 +5549,7 @@ local recipes = {
             { itemId = 23573, name = "Hardened Adamantite Bar", count = 6 },
             { itemId = 23449, name = "Khorium Bar", count = 12 },
         },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6604,6 +6625,7 @@ local recipes = {
             { itemId = 23572, name = "Primal Nether", count = 10 },
             { itemId = 22457, name = "Primal Mana", count = 10 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6623,6 +6645,7 @@ local recipes = {
             { itemId = 23572, name = "Primal Nether", count = 10 },
             { itemId = 22457, name = "Primal Mana", count = 10 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6642,6 +6665,7 @@ local recipes = {
             { itemId = 23572, name = "Primal Nether", count = 8 },
             { itemId = 22451, name = "Primal Air", count = 10 },
         },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6661,6 +6685,7 @@ local recipes = {
             { itemId = 23572, name = "Primal Nether", count = 8 },
             { itemId = 23571, name = "Primal Might", count = 2 },
         },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6680,6 +6705,7 @@ local recipes = {
             { itemId = 23572, name = "Primal Nether", count = 8 },
             { itemId = 23448, name = "Felsteel Bar", count = 6 },
         },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6699,6 +6725,7 @@ local recipes = {
             { itemId = 23572, name = "Primal Nether", count = 8 },
             { itemId = 22457, name = "Primal Mana", count = 10 },
         },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6718,6 +6745,7 @@ local recipes = {
             { itemId = 23572, name = "Primal Nether", count = 8 },
             { itemId = 23571, name = "Primal Might", count = 2 },
         },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6737,6 +6765,7 @@ local recipes = {
             { itemId = 23572, name = "Primal Nether", count = 8 },
             { itemId = 22457, name = "Primal Mana", count = 10 },
         },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6755,6 +6784,7 @@ local recipes = {
             { itemId = 23564, name = "Twisting Nether Chain Shirt", count = 1 },
             { itemId = 30183, name = "Nether Vortex", count = 2 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6773,6 +6803,7 @@ local recipes = {
             { itemId = 28484, name = "Bulwark of Kings", count = 1 },
             { itemId = 30183, name = "Nether Vortex", count = 2 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6791,6 +6822,7 @@ local recipes = {
             { itemId = 28426, name = "Blazeguard", count = 1 },
             { itemId = 30183, name = "Nether Vortex", count = 5 },
         },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6809,6 +6841,7 @@ local recipes = {
             { itemId = 28429, name = "Lionheart Champion", count = 1 },
             { itemId = 30183, name = "Nether Vortex", count = 5 },
         },
+        specialization = { spellId = 17039, name = "Master Swordsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6827,6 +6860,7 @@ local recipes = {
             { itemId = 28432, name = "Black Planar Edge", count = 1 },
             { itemId = 30183, name = "Nether Vortex", count = 5 },
         },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6845,6 +6879,7 @@ local recipes = {
             { itemId = 28435, name = "Mooncleaver", count = 1 },
             { itemId = 30183, name = "Nether Vortex", count = 5 },
         },
+        specialization = { spellId = 17041, name = "Master Axesmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6863,6 +6898,7 @@ local recipes = {
             { itemId = 28438, name = "Dragonmaw", count = 1 },
             { itemId = 30183, name = "Nether Vortex", count = 5 },
         },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -6881,6 +6917,7 @@ local recipes = {
             { itemId = 28441, name = "Deep Thunder", count = 1 },
             { itemId = 30183, name = "Nether Vortex", count = 5 },
         },
+        specialization = { spellId = 17040, name = "Master Hammersmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -8107,6 +8144,7 @@ local recipes = {
             { itemId = 36913, name = "Saronite Bar", count = 16 },
             { itemId = 37702, name = "Crystallized Fire", count = 1 },
         },
+        specialization = { spellId = 9787, name = "Weaponsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -8125,6 +8163,7 @@ local recipes = {
             { itemId = 36913, name = "Saronite Bar", count = 14 },
             { itemId = 37702, name = "Crystallized Fire", count = 1 },
         },
+        specialization = { spellId = 9787, name = "Weaponsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -8143,6 +8182,7 @@ local recipes = {
             { itemId = 36913, name = "Saronite Bar", count = 20 },
             { itemId = 37702, name = "Crystallized Fire", count = 2 },
         },
+        specialization = { spellId = 9787, name = "Weaponsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -8161,6 +8201,7 @@ local recipes = {
             { itemId = 36913, name = "Saronite Bar", count = 14 },
             { itemId = 37701, name = "Crystallized Earth", count = 2 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -8179,6 +8220,7 @@ local recipes = {
             { itemId = 36913, name = "Saronite Bar", count = 13 },
             { itemId = 37701, name = "Crystallized Earth", count = 2 },
         },
+        specialization = { spellId = 9788, name = "Armorsmith" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Blacksmithing Trainer",
@@ -9462,5 +9504,6 @@ CraftLib:RegisterProfession("blacksmithing", {
     expansion = C.EXPANSION.WOTLK,
     profile = "WOTLK",
     milestones = { 75, 150, 225, 300, 375, 450 },
+    specializations = { { spellId = 9787, name = "Weaponsmith" }, { spellId = 9788, name = "Armorsmith" }, { spellId = 17039, name = "Master Swordsmith" }, { spellId = 17040, name = "Master Hammersmith" }, { spellId = 17041, name = "Master Axesmith" } },
     recipes = recipes,
 })

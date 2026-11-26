@@ -2843,6 +2843,7 @@ local recipes = {
             { itemId = 7910, name = "Star Ruby", count = 2 },
             { itemId = 10586, name = "The Big One", count = 1 },
         },
+        specialization = { spellId = 20222, name = "Goblin Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
@@ -2864,6 +2865,7 @@ local recipes = {
             { itemId = 7909, name = "Aquamarine", count = 4 },
             { itemId = 9060, name = "Inlaid Mithril Cylinder", count = 1 },
         },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
@@ -3667,6 +3669,7 @@ local recipes = {
             { itemId = 22445, name = "Arcane Dust", count = 10 },
             { itemId = 22449, name = "Large Prismatic Shard", count = 2 },
         },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
@@ -3769,6 +3772,7 @@ local recipes = {
             { itemId = 22452, name = "Primal Earth", count = 6 },
             { itemId = 16006, name = "Delicate Arcanite Converter", count = 2 },
         },
+        specialization = { spellId = 20222, name = "Goblin Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
@@ -3811,6 +3815,7 @@ local recipes = {
             { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
             { itemId = 23786, name = "Khorium Power Core", count = 1 },
         },
+        specialization = { spellId = 20222, name = "Goblin Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
@@ -3831,6 +3836,7 @@ local recipes = {
             { itemId = 23783, name = "Handful of Fel Iron Bolts", count = 4 },
             { itemId = 23786, name = "Khorium Power Core", count = 1 },
         },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
@@ -4261,6 +4267,7 @@ local recipes = {
             { itemId = 22457, name = "Primal Mana", count = 12 },
             { itemId = 22451, name = "Primal Air", count = 12 },
         },
+        specialization = { spellId = 20222, name = "Goblin Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
@@ -4280,6 +4287,7 @@ local recipes = {
             { itemId = 22452, name = "Primal Earth", count = 12 },
             { itemId = 21884, name = "Primal Fire", count = 12 },
         },
+        specialization = { spellId = 20222, name = "Goblin Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
@@ -4302,6 +4310,7 @@ local recipes = {
             { itemId = 21885, name = "Primal Water", count = 8 },
             { itemId = 23437, name = "Talasite", count = 2 },
         },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
@@ -4323,6 +4332,7 @@ local recipes = {
             { itemId = 21884, name = "Primal Fire", count = 12 },
             { itemId = 23436, name = "Living Ruby", count = 2 },
         },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",

@@ -3821,6 +3821,7 @@ local recipes = {
             { itemId = 10586, name = "The Big One", count = 1 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { spellId = 20222, name = "Goblin Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
@@ -3843,6 +3844,7 @@ local recipes = {
             { itemId = 9060, name = "Inlaid Mithril Cylinder", count = 1 },
         },
         tools = { { categoryId = 162, name = "Blacksmith Hammer" }, { categoryId = 14, name = "Arclight Spanner" } },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",

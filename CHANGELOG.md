@@ -9,11 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Recipes that can only be learned with a profession specialization now say so: `recipe.specialization = { spellId, name }` (for example Chimeric Boots needs Tribal Leatherworking), read from the teaching item in the game data. A profession lists the specializations its recipes need in `specializations`. See SCHEMA.md, "Specializations".
-- Per client: WoW Forever 89 recipes (Leatherworking 45, Blacksmithing 41, Engineering 3); Season of Discovery 90 (Blacksmithing 45, Leatherworking 42, Engineering 3); TBC 12 (Tailoring 9, Engineering 3); WotLK 14 (Tailoring 9, Engineering 5). The Vanilla data names no teaching items, so it carries none.
+- A recipe taught by a trainer is judged by the item it crafts: when only a specialist can use that item (Dimensional Ripper - Everlook needs Goblin Engineer), the recipe needs the specialization too.
+- Per client: WoW Forever 91 recipes (Leatherworking 45, Blacksmithing 41, Engineering 5); Season of Discovery 92; TBC 77; WotLK 86; Vanilla 3 (the trainer-taught Goblin and Gnomish devices).
 
 ### Known limits
 - WoW Forever: 23 recipes are marked `specialization = { unknown = true }` because the game data has no entry for their teaching item: 14 Gnomish and Goblin schematics, 7 Blacksmithing plans (Bleakwood Hew, Blood Talon, Darkspear, Heavy Obsidian Belt, three Ironvine pieces) and 2 Leatherworking patterns (Onyxia Scale Breastplate, Dreamscale Breastplate). TBC: 3 (Don Julio's Heart, Leather Gauntlets of the Sun, Gloves of Immortal Dusk).
-- Recipes taught by a trainer carry no specialization: the data has no teaching item to read it from.
+- A recipe taught by a trainer whose crafted item names no specialization carries none, even if the trainer asks for one.
 
 ## [0.12.0] - 2026-11-22
 
