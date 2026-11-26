@@ -425,13 +425,22 @@ def load_specialization_facts(sources_dir: Path, bucket) -> dict[str, str]:
 
 
 def recipe_specialization(where: str, source: dict, profession: Profession,
-                          indexes: dict) -> dict | None:
+                          indexes: dict, crafted_item: str | int | None = None) -> dict | None:
     """The specialization a recipe can only be learned with, from its teaching item.
 
     None: the data says none is needed (RequiredAbility 0, or a spell outside the
-    profession's line, e.g. a riding skill), or there is no teaching item (a trainer
-    recipe: item data cannot say, the known gap). {"unknown": True}: the item has no
+    profession's line, e.g. a riding skill). {"unknown": True}: the teaching item has no
     ItemSparse row in this build and no fact settles it. Never "none" for "not known".
+
+    A recipe without a teaching item (a trainer recipe) is judged by the item it crafts:
+    its RequiredAbility, when that is a spell of the profession's line (Dimensional
+    Ripper - Everlook: item 18984 requires Goblin Engineer). WHY this is data, not a
+    guess (ruling P126): measured 2026-11-26 on the Forever, SoD, TBC and WotLK builds,
+    wherever a recipe has both a teaching item and a crafted item naming a specialization
+    they name the same one (22 recipes, no disagreement), and no crafted item names one
+    where the teaching item names none. The teaching item wins when there is one: it is
+    the requirement to learn, and a product only a specialist can use still gives
+    skill-ups to anyone who can learn the recipe.
 
     WHY source.itemId and not the DB2 teaching join (recipe_item): it is the item a
     consumer finds in the bags or buys, so it is the one whose requirement matters. On the
@@ -439,13 +448,8 @@ def recipe_specialization(where: str, source: dict, profession: Profession,
     to a trainer recipe (TBC Knothide Ammo Pouch, measured 2026-11-26); judging it would
     mark that trainer recipe unknown and take it out of every path.
     """
-    item = source.get("itemId")
-    if item is None:
-        return None
-    item = str(item)
     facts = indexes.get("specialization_facts", {})
     line = str(profession.skill_line)
-    in_build = item in indexes["required_ability"]
 
     def spec_of(spell: str) -> dict | None:
         if spell in ("", "0") or line not in indexes["spell_lines"].get(spell, ()):
@@ -454,6 +458,15 @@ def recipe_specialization(where: str, source: dict, profession: Profession,
         if not name:
             raise GenerateError(f"{where}: specialization spell {spell} has no name in SpellName")
         return {"spellId": int(spell), "name": name}
+
+    item = source.get("itemId")
+    if item is None:
+        if crafted_item is None:
+            return None
+        # A crafted item the build has no row for says nothing: no field, as before.
+        return spec_of(indexes["required_ability"].get(str(crafted_item), "0"))
+    item = str(item)
+    in_build = item in indexes["required_ability"]
 
     if in_build:
         spec = spec_of(indexes["required_ability"][item])
@@ -473,6 +486,23 @@ def recipe_specialization(where: str, source: dict, profession: Profession,
                 f"which is not an ability of the {profession.name} line {line}")
         return spec_of(spell)
     return {"unknown": True}
+
+
+def warn_unused_facts(facts: dict[str, str], bucket_sources: Path, bucket) -> None:
+    """Warn about a fact whose item no recipe source of the bucket names (a typo, or a
+    recipe that left the data): it would otherwise sit there unnoticed. All professions'
+    sources are read, so a one-profession run does not warn about the others' facts."""
+    if not facts:
+        return
+    taught = set()
+    for folder in bucket.professions:
+        for entry in (load_verified_sources(bucket_sources, PROFESSIONS[folder].name) or {}).values():
+            item = ((entry or {}).get("source") or {}).get("itemId")
+            if item is not None:
+                taught.add(str(item))
+    for item in sorted(set(facts) - taught, key=int):
+        print(f"WARNING: {SPECIALIZATION_FACTS_NAME} item {item} is used by no recipe of bucket "
+              f"'{bucket.key}'", file=sys.stderr)
 
 
 def profession_specializations(recipes: list[dict]) -> list[dict]:
@@ -886,7 +916,7 @@ def extract_recipes(
 
         # WHY only when set: most recipes need no specialization, and the absent field
         # already says so (an unknown requirement is written, never left out).
-        specialization = recipe_specialization(where, source, profession, indexes)
+        specialization = recipe_specialization(where, source, profession, indexes, item_id)
         if specialization is not None:
             recipe["specialization"] = specialization
 
@@ -1150,6 +1180,7 @@ def main(argv: list[str] | None = None) -> int:
         indexes = build_indexes(data, bucket)
         indexes["trivial_ranks"] = build_trivial_ranks(data)
         indexes["specialization_facts"] = load_specialization_facts(args.sources_dir, bucket)
+        warn_unused_facts(indexes["specialization_facts"], args.sources_dir / bucket.folder, bucket)
         print(f"Built indexes: {len(indexes['spell_names'])} spells, "
               f"{len(indexes['item_names'])} items, "
               f"{len(indexes['recipe_items'])} recipe items", file=sys.stderr)

@@ -167,3 +167,40 @@ def test_named_facts_file_missing_exits_2(tmp_path, monkeypatch, capsys):
         buckets.BUCKETS["tbc"], specialization_facts=FACTS))
     rc, lua = _run(tmp_path)
     _fails(capsys, rc, lua, "specialization_facts.json", "not found")
+
+
+# --- recipes without a teaching item: the crafted item's requirement (ruling P126) ----
+# Fixture Bolt (1001) is a trainer recipe that creates item 5001.
+
+def test_trainer_recipe_takes_crafted_item_requirement(tmp_path):
+    rc, lua = _run(tmp_path, required_ability={5001: MOONCLOTH})
+    assert rc == 0
+    assert SPEC_LINE in _block(lua, 1001)
+    assert "specializations = { { spellId = 26798" in lua
+
+
+def test_crafted_item_riding_requirement_ignored(tmp_path):
+    rc, lua = _run(tmp_path, required_ability={5001: RIDING})
+    assert rc == 0
+    assert "specialization" not in lua
+
+
+def test_teaching_item_wins_over_crafted_item(tmp_path):
+    # The teaching item is the requirement to learn; a product only a specialist can
+    # use still gives skill-ups to anyone who can learn the recipe.
+    rc, lua = _run(tmp_path, required_ability={5002: MOONCLOTH})
+    assert rc == 0
+    assert "specialization" not in _block(lua, 1002)
+
+
+def test_unknown_teaching_item_stays_unknown_whatever_the_crafted_item(tmp_path):
+    rc, lua = _run(tmp_path, omit_items=frozenset({6004}), required_ability={5004: MOONCLOTH})
+    assert rc == 0
+    assert "        specialization = { unknown = true }," in _block(lua, 1004)
+
+
+def test_unused_fact_warns(tmp_path, monkeypatch, capsys):
+    facts = {"_note": "test", "items": {"6999": {"spellId": MOONCLOTH, "evidence": "tooltip"}}}
+    rc, _lua = _run(tmp_path, monkeypatch, facts=facts)
+    assert rc == 0
+    assert "specialization_facts.json item 6999 is used by no recipe" in capsys.readouterr().err
