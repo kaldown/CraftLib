@@ -57,6 +57,9 @@ def _make_data_and_indexes(spell_ids):
         "item_details": {},
         "recipe_items": {},
         "trivial_ranks": {},
+        # What build_indexes adds for recipe_specialization: no item requires a spell here.
+        "required_ability": {},
+        "spell_lines": {},
     }
     return data, indexes
 

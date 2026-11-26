@@ -2635,6 +2635,7 @@ local recipes = {
             { itemId = 8172, name = "Cured Thick Hide", count = 2 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -2656,6 +2657,7 @@ local recipes = {
             { itemId = 8172, name = "Cured Thick Hide", count = 2 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -2677,6 +2679,7 @@ local recipes = {
             { itemId = 8172, name = "Cured Thick Hide", count = 2 },
             { itemId = 14341, name = "Rune Thread", count = 1 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -5029,6 +5032,7 @@ local recipes = {
             { itemId = 22452, name = "Primal Earth", count = 2 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -5049,6 +5053,7 @@ local recipes = {
             { itemId = 21886, name = "Primal Life", count = 3 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -5069,6 +5074,7 @@ local recipes = {
             { itemId = 21884, name = "Primal Fire", count = 3 },
             { itemId = 14341, name = "Rune Thread", count = 2 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6703,6 +6709,7 @@ local recipes = {
             { itemId = 22456, name = "Primal Shadow", count = 16 },
             { itemId = 23572, name = "Primal Nether", count = 2 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6724,6 +6731,7 @@ local recipes = {
             { itemId = 22456, name = "Primal Shadow", count = 12 },
             { itemId = 23572, name = "Primal Nether", count = 1 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6744,6 +6752,7 @@ local recipes = {
             { itemId = 21884, name = "Primal Fire", count = 8 },
             { itemId = 22456, name = "Primal Shadow", count = 8 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6765,6 +6774,7 @@ local recipes = {
             { itemId = 22451, name = "Primal Air", count = 16 },
             { itemId = 23572, name = "Primal Nether", count = 2 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6786,6 +6796,7 @@ local recipes = {
             { itemId = 22451, name = "Primal Air", count = 12 },
             { itemId = 23572, name = "Primal Nether", count = 1 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6806,6 +6817,7 @@ local recipes = {
             { itemId = 22457, name = "Primal Mana", count = 8 },
             { itemId = 22451, name = "Primal Air", count = 8 },
         },
+        specialization = { spellId = 10656, name = "Dragonscale Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6827,6 +6839,7 @@ local recipes = {
             { itemId = 23571, name = "Primal Might", count = 3 },
             { itemId = 23572, name = "Primal Nether", count = 2 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6848,6 +6861,7 @@ local recipes = {
             { itemId = 23571, name = "Primal Might", count = 2 },
             { itemId = 23572, name = "Primal Nether", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6868,6 +6882,7 @@ local recipes = {
             { itemId = 22451, name = "Primal Air", count = 8 },
             { itemId = 23571, name = "Primal Might", count = 1 },
         },
+        specialization = { spellId = 10660, name = "Tribal Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6887,6 +6902,7 @@ local recipes = {
             { itemId = 23571, name = "Primal Might", count = 6 },
             { itemId = 23572, name = "Primal Nether", count = 2 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6906,6 +6922,7 @@ local recipes = {
             { itemId = 23571, name = "Primal Might", count = 5 },
             { itemId = 23572, name = "Primal Nether", count = 1 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -6924,6 +6941,7 @@ local recipes = {
             { itemId = 23793, name = "Heavy Knothide Leather", count = 4 },
             { itemId = 23571, name = "Primal Might", count = 3 },
         },
+        specialization = { spellId = 10658, name = "Elemental Leatherworking" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Leatherworking Trainer",
@@ -7443,5 +7461,6 @@ CraftLib:RegisterProfession("leatherworking", {
     expansion = C.EXPANSION.TBC,
     profile = "TBC",
     milestones = { 75, 150, 225, 300, 375 },
+    specializations = { { spellId = 10656, name = "Dragonscale Leatherworking" }, { spellId = 10658, name = "Elemental Leatherworking" }, { spellId = 10660, name = "Tribal Leatherworking" } },
     recipes = recipes,
 })

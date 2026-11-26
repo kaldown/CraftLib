@@ -3145,6 +3145,7 @@ local recipes = {
             { itemId = 7910, name = "Star Ruby", count = 2 },
             { itemId = 10586, name = "The Big One", count = 1 },
         },
+        specialization = { spellId = 20222, name = "Goblin Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",
@@ -3166,6 +3167,7 @@ local recipes = {
             { itemId = 7909, name = "Aquamarine", count = 4 },
             { itemId = 9060, name = "Inlaid Mithril Cylinder", count = 1 },
         },
+        specialization = { spellId = 20219, name = "Gnomish Engineer" },
         source = {
             type = C.SOURCE_TYPE.TRAINER,
             npcName = "Any Engineering Trainer",

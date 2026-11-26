@@ -225,18 +225,23 @@ specialization = { unknown = true },  -- the build has no data for the teaching 
 ```
 
 `unknown` is not "none": a consumer that cannot tell should treat the recipe as not learnable
-until known (or learned). No field also covers recipes taught by a trainer: the data has no
-teaching item to read, so a trainer recipe that needs a specialization carries none.
-The requirement is read from the teaching item a source names (`source.itemId`).
+until known (or learned). The requirement is read from the teaching item a source names
+(`source.itemId`). A recipe without one (taught by a trainer) is judged by the item it crafts: when
+that item can only be used with a specialization of the profession, the recipe carries it (in every
+build where both items name one, they name the same). A trainer recipe whose crafted item names none
+carries no field.
 
 A profession lists the specializations its recipes need, sorted by spell id:
 ```lua
 specializations = { { spellId = 10656, name = "Dragonscale Leatherworking" }, { spellId = 10658, name = "Elemental Leatherworking" } }
 ```
-Which buckets carry it depends on what their build's item data says: on Forever, Leatherworking,
-Blacksmithing and Engineering; on Season of Discovery the same; on TBC and WotLK, Tailoring and
-Engineering (the TBC build dropped the requirement from the old patterns); none on Vanilla, whose
-sources name no teaching item.
+Which buckets carry it depends on what their build's item data says: on Forever and Season of
+Discovery, Leatherworking, Blacksmithing and Engineering (the patterns and plans, and the Goblin /
+Gnomish teleporters taught by trainers); on TBC and WotLK, Blacksmithing, Leatherworking, Tailoring and
+Engineering (the TBC build dropped the requirement from the old Classic patterns; the TBC
+specialization recipes taught by trainers carry it through their crafted items); on Vanilla, the three
+trainer-taught Goblin / Gnomish devices (its sources name no teaching items). Recipes marked `unknown`:
+23 on Forever, 3 on TBC (Leatherworking and Jewelcrafting).
 
 ### Reagent Object
 
