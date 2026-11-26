@@ -338,3 +338,45 @@ def test_render_held_back_but_passing_says_so(tmp_path):
     md = rr.render(review, FOREVER)
     assert "Held back (not shipped): passes the coverage gate" in _section(md, "Alchemy")
     assert "Held back" not in _section(md, "Tailoring")
+
+
+# --- specializations -----------------------------------------------------------------
+
+def _spec_shipped():
+    tribal = dict(_r(19063, 250, 290), name="Chimeric Boots",
+                  specialization={"spellId": 10660, "name": "Tribal Leatherworking"})
+    onyxia = dict(_r(19106, 300, 320), name="Onyxia Scale Breastplate",
+                  specialization={"unknown": True})
+    scale = dict(_r(10650, 255, 295), name="Dragonscale Breastplate",
+                 specialization={"spellId": 10656, "name": "Dragonscale Leatherworking"})
+    return [onyxia, _r(5, 1, 300), tribal, scale]
+
+
+def test_specializations_are_stored_sorted(tmp_path):
+    path = rr.write_profession(tmp_path / "review", "Leatherworking", _data(shipped=_spec_shipped()))
+    assert rr.load_profession(path)["specializations"] == [
+        [10650, "Dragonscale Breastplate", 10656, "Dragonscale Leatherworking"],
+        [19063, "Chimeric Boots", 10660, "Tribal Leatherworking"],
+        [19106, "Onyxia Scale Breastplate", 0, "unknown"]]
+
+
+def test_render_lists_the_specializations(tmp_path):
+    review = tmp_path / "review"
+    rr.write_profession(review, "Leatherworking", _data(shipped=_spec_shipped()))
+    rr.write_profession(review, "Alchemy", _data())
+    md = rr.render(review, FOREVER)
+    lw = _section(md, "Leatherworking")
+    assert ("### Specialization (3)\n\n"
+            "- 10650 Dragonscale Breastplate: Dragonscale Leatherworking\n"
+            "- 19063 Chimeric Boots: Tribal Leatherworking\n"
+            "- 19106 Onyxia Scale Breastplate: unknown (teaching item not in this build)") in lw
+    assert "### Specialization (0)\n\nnone" in _section(md, "Alchemy")
+
+
+def test_review_file_from_before_specializations_says_so(tmp_path):
+    review = tmp_path / "review"
+    path = rr.write_profession(review, "Leatherworking", _data(shipped=_spec_shipped()))
+    data = rr.load_profession(path)
+    del data["specializations"]
+    path.write_text(__import__("json").dumps(data), encoding="utf-8")
+    assert "### Specialization (not recorded)" in _section(rr.render(review, FOREVER), "Leatherworking")
