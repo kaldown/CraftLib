@@ -7,13 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-11-27
+
 ### Added
 - Recipes that can only be learned with a profession specialization now say so: `recipe.specialization = { spellId, name }` (for example Chimeric Boots needs Tribal Leatherworking), read from the teaching item in the game data. A profession lists the specializations its recipes need in `specializations`. See SCHEMA.md, "Specializations".
 - A recipe taught by a trainer is judged by the item it crafts: when only a specialist can use that item (Dimensional Ripper - Everlook needs Goblin Engineer), the recipe needs the specialization too.
 - Per client: WoW Forever 91 recipes (Leatherworking 45, Blacksmithing 41, Engineering 5); Season of Discovery 92; TBC 77; WotLK 86; Vanilla 3 (the trainer-taught Goblin and Gnomish devices).
 
 ### Known limits
-- WoW Forever: 23 recipes are marked `specialization = { unknown = true }` because the game data has no entry for their teaching item: 14 Gnomish and Goblin schematics, 7 Blacksmithing plans (Bleakwood Hew, Blood Talon, Darkspear, Heavy Obsidian Belt, three Ironvine pieces) and 2 Leatherworking patterns (Onyxia Scale Breastplate, Dreamscale Breastplate). TBC: 3 (Don Julio's Heart, Leather Gauntlets of the Sun, Gloves of Immortal Dusk).
+- WoW Forever: 23 recipes are marked `specialization = { unknown = true }` because the game data has no entry for their teaching item: 14 Gnomish and Goblin schematics, 7 Blacksmithing plans (Bleakwood Hew, Blood Talon, Darkspear, Heavy Obsidian Belt, three Ironvine pieces) and 2 Leatherworking patterns (Onyxia Scale Breastplate, Dreamscale Breastplate). Checked in game: the game does not provide these items at present, so they cannot be obtained there; the recipes return with their requirement once a later game build contains the items. TBC: 3 (Don Julio's Heart, Leather Gauntlets of the Sun, Gloves of Immortal Dusk).
 - A recipe taught by a trainer whose crafted item names no specialization carries none, even if the trainer asks for one.
 
 ## [0.12.0] - 2026-11-22
